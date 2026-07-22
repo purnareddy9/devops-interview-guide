@@ -1,0 +1,76 @@
+<aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    {% for item in site.nav_guide %}
+    {% assign is_active = false %}
+    {% if page.url == item.url or page.url == item.url | append: '/' %}
+      {% assign is_active = true %}
+    {% elsif item.url != '/' and page.url contains item.url %}
+      {% assign is_active = true %}
+    {% endif %}
+    <a href="{{ item.url | relative_url }}"
+       class="sidebar-link{% if is_active %} active{% endif %}"
+       {% if is_active %}aria-current="page"{% endif %}>
+      <span class="sidebar-icon" aria-hidden="true">{{ item.icon }}</span>
+      {{ item.title }}
+    </a>
+    {% endfor %}
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    {% for item in site.nav_ocp %}
+    {% assign is_active = false %}
+    {% if page.url == item.url or page.url == item.url | append: '/' %}
+      {% assign is_active = true %}
+    {% elsif item.url != '/' and page.url contains item.url %}
+      {% assign is_active = true %}
+    {% endif %}
+    <a href="{{ item.url | relative_url }}"
+       class="sidebar-link{% if is_active %} active{% endif %}"
+       {% if is_active %}aria-current="page"{% endif %}>
+      {{ item.title }}
+      {% if item.badge %}
+      <span class="badge badge-{{ item.color | default: 'blue' }}" aria-label="{{ item.badge }} questions">{{ item.badge }}</span>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>

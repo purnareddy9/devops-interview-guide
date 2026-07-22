@@ -1,0 +1,220 @@
+<script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>

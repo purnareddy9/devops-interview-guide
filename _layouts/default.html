@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+
+  {% include topbar.html %}
+
+  <div class="layout">
+
+    {% include sidebar.html %}
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        {% unless page.url == '/' %}
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          {% assign parts = page.url | remove_first: '/' | split: '/' %}
+          {% for part in parts %}
+            {% unless forloop.last %}
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span class="breadcrumb-part">{{ part | replace: '-', ' ' | capitalize }}</span>
+            {% endunless %}
+          {% endfor %}
+          {% if page.title %}
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">{{ page.title | truncate: 50 }}</span>
+          {% endif %}
+        </nav>
+        {% endunless %}
+
+        <!-- Article -->
+        <article class="markdown-body">
+          {{ content }}
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© {{ 'now' | date: '%Y' }} DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  {% include scripts.html %}
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+title: "DevOps Interview Guide"
+description: "A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers."
+url: ""                        # set to https://<your-github-username>.github.io once you know it
+baseurl: "/devops-interview-guide"   # repo name — change if different
+
+# ── Author ───────────────────────────────────────────────
+author:
+  name: "DevOps Interview Guide"
+
+# ── Jekyll build ─────────────────────────────────────────
+theme: null                    # using fully custom layout — no gem theme
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    block:
+      line_numbers: false
+
+# ── Plugins ──────────────────────────────────────────────
+plugins:
+  - jekyll-relative-links
+  - jekyll-seo-tag
+
+# ── Collections ──────────────────────────────────────────
+collections:
+  modules:
+    output: true
+    permalink: /:collection/:name/
+
+# ── Defaults ─────────────────────────────────────────────
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "jd-openshift-k8s-engineer"
+    values:
+      layout: default
+      section: "OpenShift & Kubernetes Engineer"
+
+# ── Exclusions ───────────────────────────────────────────
+exclude:
+  - "*.sh"
+  - "node_modules"
+  - "vendor"
+  - Gemfile
+  - Gemfile.lock
+
+# ── Navigation ────────────────────────────────────────────
+nav_main:
+  - title: "Home"
+    url: "/"
+  - title: "📚 Full Guide"
+    url: "/README"
+  - title: "🎯 OpenShift & K8s Engineer"
+    url: "/jd-openshift-k8s-engineer/README"
+
+nav_guide:
+  - title: "Overview"
+    url: "/README"
+    icon: "🏠"
+  - title: "Linux"
+    url: "/Linux"
+    icon: "🐧"
+  - title: "Networking"
+    url: "/Networking"
+    icon: "🌐"
+  - title: "Git"
+    url: "/Git"
+    icon: "🔀"
+  - title: "Docker"
+    url: "/Docker"
+    icon: "🐳"
+  - title: "Kubernetes"
+    url: "/Kubernetes"
+    icon: "☸️"
+  - title: "Jenkins"
+    url: "/Jenkins"
+    icon: "🏗️"
+  - title: "Terraform"
+    url: "/Terraform"
+    icon: "🏔️"
+  - title: "Ansible"
+    url: "/Ansible"
+    icon: "⚙️"
+  - title: "AWS"
+    url: "/AWS"
+    icon: "☁️"
+  - title: "Azure"
+    url: "/Azure"
+    icon: "🔷"
+  - title: "GCP"
+    url: "/GCP"
+    icon: "🟡"
+  - title: "CI/CD"
+    url: "/CICD"
+    icon: "🔄"
+  - title: "Monitoring"
+    url: "/Monitoring"
+    icon: "📊"
+  - title: "Logging"
+    url: "/Logging"
+    icon: "📋"
+  - title: "Security"
+    url: "/Security"
+    icon: "🔒"
+  - title: "SRE"
+    url: "/SRE"
+    icon: "🛡️"
+  - title: "System Design"
+    url: "/SystemDesign"
+    icon: "🏛️"
+  - title: "Behavioral"
+    url: "/Behavioral"
+    icon: "🗣️"
+  - title: "OpenShift"
+    url: "/OpenShift"
+    icon: "🔴"
+  - title: "Cheat Sheets"
+    url: "/CheatSheets"
+    icon: "📌"
+
+nav_ocp:
+  - title: "📋 Overview"
+    url: "/jd-openshift-k8s-engineer/README"
+  - title: "01 · OpenShift & K8s Core"
+    url: "/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+    badge: "25"
+    color: "red"
+  - title: "02 · CI/CD Pipelines"
+    url: "/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+    badge: "24"
+    color: "blue"
+  - title: "03 · Security & Compliance"
+    url: "/jd-openshift-k8s-engineer/03-Security-Compliance"
+    badge: "18"
+    color: "orange"
+  - title: "04 · Monitoring & Troubleshooting"
+    url: "/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+    badge: "18"
+    color: "green"
+  - title: "05 · Infrastructure & Automation"
+    url: "/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+    badge: "18"
+    color: "purple"
+  - title: "06 · Scenario-Based"
+    url: "/jd-openshift-k8s-engineer/06-Scenario-Based"
+    badge: "15"
+    color: "teal"
+  - title: "07 · Behavioral"
+    url: "/jd-openshift-k8s-engineer/07-Behavioral"
+    badge: "14"
+    color: "pink"
+  - title: "08 · Python Scripting"
+    url: "/jd-openshift-k8s-engineer/08-Python-Scripting"
+    badge: "20"
+    color: "yellow"
+  - title: "09 · AI for DevOps"
+    url: "/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+    badge: "15"
+    color: "indigo"
