@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>Home · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="Home · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="Home · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Home | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/" />
+<meta property="og:url" content="/devops-interview-guide/" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"Home","name":"DevOps Interview Guide","url":"/devops-interview-guide/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         aria-current="page">
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <div class="hero">
+  <div class="hero-emoji">🚀</div>
+  <h1>DevOps Interview Guide</h1>
+  <p>A comprehensive, battle-tested reference covering 500+ interview questions with full answers — from Linux fundamentals to AI-powered DevOps.</p>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Questions</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">21</div>
+      <div class="stat-label">Topics</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">9</div>
+      <div class="stat-label">JD Modules</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">167</div>
+      <div class="stat-label">OCP Questions</div>
+    </div>
+  </div>
+
+  <div class="hero-cta">
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README" class="btn btn-primary">
+      🎯 OpenShift JD Prep
+    </a>
+    <a href="/devops-interview-guide/README" class="btn btn-secondary">
+      📚 Browse Full Guide
+    </a>
+  </div>
+</div>
+
+<hr />
+
+<div class="section-header">
+  <h2>🎯 OpenShift &amp; Kubernetes Engineer — Interview Modules</h2>
+  <div class="section-divider"></div>
+</div>
+
+<div class="module-grid">
+
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core" class="module-card card-red">
+    <div class="module-card-icon">☸️</div>
+    <div class="module-card-title">OpenShift &amp; Kubernetes Core</div>
+    <div class="module-card-desc">Architecture, workloads, networking, storage, SCC, RBAC, and cluster operations.</div>
+    <div class="module-card-meta">
+      <span class="module-card-count">25 questions</span>
+      <span class="module-card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines" class="module-card card-blue">
+    <div class="module-card-icon">🔄</div>
+    <div class="module-card-title">CI/CD Pipelines</div>
+    <div class="module-card-desc">Jenkins, GitLab CI, GitHub Actions, Tekton, GitOps, and ArgoCD in production.</div>
+    <div class="module-card-meta">
+      <span class="module-card-count">24 questions</span>
+      <span class="module-card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance" class="module-card card-orange">
+    <div class="module-card-icon">🔒</div>
+    <div class="module-card-title">Security &amp; Compliance</div>
+    <div class="module-card-desc">SCC, RBAC, secrets management, DevSecOps, network policies, and compliance gates.</div>
+    <div class="module-card-meta">
+      <span class="module-card-count">18 questions</span>
+      <span class="module-card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting" class="module-card card-green">
+    <div class="module-card-icon">📊</div>
+    <div class="module-card-title">Monitoring &amp; Troubleshooting</div>
+    <div class="module-card-desc">Prometheus, Grafana, structured logging, alerting, and incident response playbooks.</div>
+    <div class="module-card-meta">
+      <span class="module-card-count">18 questions</span>
+      <span class="module-card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation" class="module-card card-purple">
+    <div class="module-card-icon">⚙️</div>
+    <div class="module-card-title">Infrastructure &amp; Automation</div>
+    <div class="module-card-desc">Terraform, Ansible, Helm, Kustomize, GitOps at scale, and OpenShift cluster provisioning.</div>
+    <div class="module-card-meta">
+      <span class="module-card-count">18 questions</span>
+      <span class="module-card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based" class="module-card card-teal">
+    <div class="module-card-icon">🔵</div>
+    <div class="module-card-title">Scenario-Based Questions</div>
+    <div class="module-card-desc">Real-world production problems end-to-end — the toughest interview questions with full walkthroughs.</div>
+    <div class="module-card-meta">
+      <span class="module-card-count">15 questions</span>
+      <span class="module-card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral" class="module-card card-pink">
+    <div class="module-card-icon">🗣️</div>
+    <div class="module-card-title">Behavioral Questions</div>
+    <div class="module-card-desc">STAR-method answers aligned to the JD — leadership, conflict resolution, and impact stories.</div>
+    <div class="module-card-meta">
+      <span class="module-card-count">14 questions</span>
+      <span class="module-card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting" class="module-card card-yellow">
+    <div class="module-card-icon">🐍</div>
+    <div class="module-card-title">Python Scripting</div>
+    <div class="module-card-desc">K8s SDK automation, CLI tools with Click, subprocess safety, retry patterns, and unit testing.</div>
+    <div class="module-card-meta">
+      <span class="module-card-count">20 questions</span>
+      <span class="module-card-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps" class="module-card card-indigo">
+    <div class="module-card-icon">🤖</div>
+    <div class="module-card-title">AI for DevOps</div>
+    <div class="module-card-desc">AIOps, LLM-powered pipelines, anomaly detection, MLOps on OpenShift, and AI incident response.</div>
+    <div class="module-card-meta">
+      <span class="module-card-count">15 questions</span>
+      <span class="module-card-arrow">→</span>
+    </div>
+  </a>
+
+</div>
+
+<div class="section-header">
+  <h2>📚 Full DevOps Topic Guide</h2>
+  <div class="section-divider"></div>
+</div>
+
+<div class="module-grid">
+
+  <a href="/devops-interview-guide/Linux" class="module-card card-green">
+    <div class="module-card-icon">🐧</div>
+    <div class="module-card-title">Linux</div>
+    <div class="module-card-desc">File system, processes, networking, shell scripting, and performance tuning.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/Networking" class="module-card card-blue">
+    <div class="module-card-icon">🌐</div>
+    <div class="module-card-title">Networking</div>
+    <div class="module-card-desc">OSI model, TCP/IP, DNS, HTTP/S, load balancing, and firewall rules.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/Docker" class="module-card card-teal">
+    <div class="module-card-icon">🐳</div>
+    <div class="module-card-title">Docker</div>
+    <div class="module-card-desc">Images, containers, Dockerfile best practices, networking, volumes, Compose.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/Kubernetes" class="module-card card-red">
+    <div class="module-card-icon">☸️</div>
+    <div class="module-card-title">Kubernetes</div>
+    <div class="module-card-desc">Pods, deployments, services, RBAC, Helm, autoscaling, and troubleshooting.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/Terraform" class="module-card card-purple">
+    <div class="module-card-icon">🏔️</div>
+    <div class="module-card-title">Terraform</div>
+    <div class="module-card-desc">HCL, state management, modules, workspaces, providers, and best practices.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/Ansible" class="module-card card-orange">
+    <div class="module-card-icon">⚙️</div>
+    <div class="module-card-title">Ansible</div>
+    <div class="module-card-desc">Playbooks, roles, inventory, variables, Vault, and dynamic inventory.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/AWS" class="module-card card-yellow">
+    <div class="module-card-icon">☁️</div>
+    <div class="module-card-title">AWS</div>
+    <div class="module-card-desc">EC2, S3, VPC, IAM, EKS, Lambda, RDS, CloudFormation, and Well-Architected.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/Monitoring" class="module-card card-green">
+    <div class="module-card-icon">📊</div>
+    <div class="module-card-title">Monitoring</div>
+    <div class="module-card-desc">Prometheus, Grafana, alerting, SLOs, dashboards, and observability patterns.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/Security" class="module-card card-orange">
+    <div class="module-card-icon">🔒</div>
+    <div class="module-card-title">Security</div>
+    <div class="module-card-desc">DevSecOps, SAST/DAST, secrets management, RBAC, zero-trust, and compliance.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/SRE" class="module-card card-indigo">
+    <div class="module-card-icon">🛡️</div>
+    <div class="module-card-title">SRE</div>
+    <div class="module-card-desc">SLIs/SLOs/SLAs, error budgets, toil reduction, and incident management.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/SystemDesign" class="module-card card-blue">
+    <div class="module-card-icon">🏛️</div>
+    <div class="module-card-title">System Design</div>
+    <div class="module-card-desc">Scalability, availability, microservices, caching, messaging, and resilience patterns.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+  <a href="/devops-interview-guide/CheatSheets" class="module-card card-pink">
+    <div class="module-card-icon">📌</div>
+    <div class="module-card-title">Cheat Sheets</div>
+    <div class="module-card-desc">Quick reference for kubectl, docker, git, terraform, ansible, and more — bookmark for interview day.</div>
+    <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
+  </a>
+
+</div>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

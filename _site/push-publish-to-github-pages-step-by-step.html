@@ -1,0 +1,332 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Deploy Steps</title>
+<style>
+  :root {
+    --bg:#0f1117; --surface:#161b27; --card:#1c2333; --border:#2a3250;
+    --text:#e2e8f0; --muted:#8892aa; --dim:#5a6580;
+    --accent:#6366f1; --cyan:#22d3ee; --green:#34d399;
+    --yellow:#fbbf24; --red:#f87171; --orange:#fb923c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.65;padding:24px}
+  .wrap{max-width:760px;margin:0 auto}
+
+  h1{font-size:1.4rem;font-weight:800;background:linear-gradient(120deg,var(--text),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+  .subtitle{color:var(--muted);font-size:.85rem;margin-bottom:32px}
+
+  /* Phase headers */
+  .phase{margin:28px 0 12px;display:flex;align-items:center;gap:10px}
+  .phase-badge{background:var(--accent);color:#fff;font-size:.7rem;font-weight:800;padding:3px 9px;border-radius:99px;letter-spacing:.05em;white-space:nowrap}
+  .phase h2{font-size:1rem;font-weight:700;color:var(--text)}
+
+  /* Step cards */
+  .step{background:var(--card);border:1px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  .step-header{display:flex;align-items:flex-start;gap:12px;padding:14px 16px}
+  .step-num{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;flex-shrink:0;margin-top:1px}
+  .num-blue  {background:rgba(96,165,250,.2);color:#60a5fa}
+  .num-green {background:rgba(52,211,153,.2);color:var(--green)}
+  .num-orange{background:rgba(251,146,60,.2);color:var(--orange)}
+  .num-cyan  {background:rgba(34,211,238,.2);color:var(--cyan)}
+  .num-purple{background:rgba(99,102,241,.2);color:#818cf8}
+  .step-body{flex:1}
+  .step-title{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:4px}
+  .step-desc{font-size:.8rem;color:var(--muted);line-height:1.55}
+  .step-desc strong{color:var(--text)}
+  .step-desc a{color:var(--cyan)}
+
+  /* Code blocks */
+  .code-block{background:#0d1117;border-top:1px solid var(--border);padding:12px 16px;font-family:'Consolas','Fira Code',monospace;font-size:.8rem;line-height:1.7;overflow-x:auto;position:relative}
+  .code-block::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--cyan))}
+  .cmd{color:#e6edf3;display:block}
+  .cmt{color:#8b949e;font-style:italic;display:block}
+  .hl{color:var(--cyan)}
+  .warn-box{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.25);border-radius:8px;padding:10px 14px;font-size:.8rem;color:#fbbf24;margin:8px 0 0;display:flex;gap:8px;align-items:flex-start}
+  .info-box{background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.2);border-radius:8px;padding:10px 14px;font-size:.8rem;color:var(--muted);margin:8px 0 0;display:flex;gap:8px;align-items:flex-start}
+  .info-box strong,.warn-box strong{color:var(--text)}
+  .icon{flex-shrink:0;font-size:.9rem;margin-top:1px}
+
+  /* Screenshot hints */
+  .screenshot{background:var(--surface);border:1px dashed var(--border);border-radius:8px;padding:10px 14px;font-size:.78rem;color:var(--dim);margin-top:8px;display:flex;gap:8px;align-items:center}
+
+  /* Summary bar */
+  .summary{background:linear-gradient(135deg,rgba(99,102,241,.15),rgba(34,211,238,.1));border:1px solid rgba(99,102,241,.3);border-radius:10px;padding:16px 20px;margin-top:28px}
+  .summary h3{font-size:.85rem;font-weight:700;color:var(--cyan);margin-bottom:8px}
+  .summary-row{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted);margin:4px 0}
+  .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+  .dot-green{background:var(--green)}
+  .dot-blue{background:#60a5fa}
+
+  footer{margin-top:28px;padding-top:12px;border-top:1px solid var(--border);text-align:center;font-size:.72rem;color:var(--dim)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>🚀 Push &amp; Publish to GitHub Pages</h1>
+<p class="subtitle">From your local folder → live website in ~5 minutes</p>
+
+
+<div class="phase">
+  <span class="phase-badge">PHASE 1</span>
+  <h2>Create a GitHub Repository</h2>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-blue">1</div>
+    <div class="step-body">
+      <div class="step-title">Go to GitHub and create a new repo</div>
+      <div class="step-desc">
+        Open <a href="https://github.com/new" target="_blank">github.com/new</a><br />
+        • <strong>Repository name:</strong> <code style="background:rgba(99,102,241,.15);color:var(--cyan);padding:1px 5px;border-radius:3px">devops-interview-guide</code><br />
+        • <strong>Visibility:</strong> Public (required for free GitHub Pages)<br />
+        • <strong>Do NOT</strong> tick "Add a README" — your local files already have one<br />
+        • Click <strong>Create repository</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="phase">
+  <span class="phase-badge">PHASE 2</span>
+  <h2>Connect &amp; Push from Your Machine</h2>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-blue">2</div>
+    <div class="step-body">
+      <div class="step-title">Open a terminal in the repo folder</div>
+      <div class="step-desc">
+        In <strong>VS Code</strong>: open the folder, then press <kbd style="background:var(--card);border:1px solid var(--border);border-radius:3px;padding:1px 5px;font-size:.78rem">Ctrl + `</kbd> to open the terminal.<br />
+        Or open <strong>PowerShell</strong> and navigate there:
+      </div>
+    </div>
+  </div>
+  <div class="code-block">
+    <span class="cmd">cd <span class="hl">C:\Users\PoornaGottimukkula\Documents\new-nob\devops-interview-guide</span></span>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-blue">3</div>
+    <div class="step-body">
+      <div class="step-title">Check git is initialised (it should be)</div>
+    </div>
+  </div>
+  <div class="code-block">
+    <span class="cmd">git status</span>
+    <span class="cmt"># Should show: On branch main — with untracked/modified files</span>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-blue">4</div>
+    <div class="step-body">
+      <div class="step-title">Add your GitHub repo as the remote</div>
+      <div class="step-desc">Replace <strong>your-username</strong> with your actual GitHub username:</div>
+    </div>
+  </div>
+  <div class="code-block">
+    <span class="cmd">git remote add origin https://github.com/<span class="hl">your-username</span>/devops-interview-guide.git</span>
+    <span class="cmt"># If remote already exists, update it instead:</span>
+    <span class="cmd">git remote set-url origin https://github.com/<span class="hl">your-username</span>/devops-interview-guide.git</span>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-blue">5</div>
+    <div class="step-body">
+      <div class="step-title">Stage all files, commit, and push</div>
+    </div>
+  </div>
+  <div class="code-block">
+    <span class="cmd">git add .</span>
+    <span class="cmd">git commit -m "feat: add GitHub Pages site with Jekyll theme"</span>
+    <span class="cmd">git branch -M main</span>
+    <span class="cmd">git push -u origin main</span>
+  </div>
+  <div style="padding:0 16px 12px">
+    <div class="info-box"><span class="icon">💡</span><div>If prompted for credentials, enter your GitHub username and a <strong>Personal Access Token</strong> (not your password). Create one at <a href="https://github.com/settings/tokens" target="_blank" style="color:var(--cyan)">github.com/settings/tokens</a> → <em>Classic token</em> → tick <strong>repo</strong> scope.</div></div>
+  </div>
+</div>
+
+
+<div class="phase">
+  <span class="phase-badge">PHASE 3</span>
+  <h2>Enable GitHub Pages</h2>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-green">6</div>
+    <div class="step-body">
+      <div class="step-title">Open repo Settings → Pages</div>
+      <div class="step-desc">
+        In your browser go to:<br />
+        <code style="background:rgba(99,102,241,.15);color:var(--cyan);padding:2px 6px;border-radius:3px">https://github.com/your-username/devops-interview-guide/settings/pages</code>
+      </div>
+      <div class="screenshot">📸 Settings → Pages (left sidebar under "Code and automation")</div>
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-green">7</div>
+    <div class="step-body">
+      <div class="step-title">Set Source to "GitHub Actions"</div>
+      <div class="step-desc">
+        Under <strong>Build and deployment → Source</strong>:<br />
+        Select <strong>GitHub Actions</strong> from the dropdown (not "Deploy from a branch")<br />
+        Click <strong>Save</strong>
+      </div>
+      <div class="screenshot">📸 Source dropdown → GitHub Actions → Save</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="phase">
+  <span class="phase-badge">PHASE 4</span>
+  <h2>Update Your Site URL in _config.yml</h2>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-orange">8</div>
+    <div class="step-body">
+      <div class="step-title">Edit _config.yml with your real GitHub username</div>
+      <div class="step-desc">Open <strong>devops-interview-guide/_config.yml</strong> and change these two lines:</div>
+    </div>
+  </div>
+  <div class="code-block">
+    <span class="cmt"># Change these two lines:</span>
+    <span class="cmd">url: <span class="hl">"https://your-username.github.io"</span></span>
+    <span class="cmd">baseurl: <span class="hl">"/devops-interview-guide"</span></span>
+    <span class="cmt"># Also add (optional but useful):</span>
+    <span class="cmd">github_username: <span class="hl">your-username</span></span>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-orange">9</div>
+    <div class="step-body">
+      <div class="step-title">Commit and push the config change</div>
+    </div>
+  </div>
+  <div class="code-block">
+    <span class="cmd">git add _config.yml</span>
+    <span class="cmd">git commit -m "config: set GitHub Pages URL"</span>
+    <span class="cmd">git push</span>
+  </div>
+</div>
+
+
+<div class="phase">
+  <span class="phase-badge">PHASE 5</span>
+  <h2>Watch It Deploy &amp; Go Live</h2>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-cyan">10</div>
+    <div class="step-body">
+      <div class="step-title">Watch the Actions workflow run</div>
+      <div class="step-desc">
+        Go to your repo → <strong>Actions</strong> tab<br />
+        You'll see <strong>"Deploy GitHub Pages"</strong> workflow running (~60 seconds)<br />
+        ✅ Green tick = deploy succeeded
+      </div>
+      <div class="screenshot">📸 Actions → Deploy GitHub Pages → green ✓</div>
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-cyan">11</div>
+    <div class="step-body">
+      <div class="step-title">Open your live site 🎉</div>
+      <div class="step-desc">Your site is now live at:</div>
+    </div>
+  </div>
+  <div class="code-block">
+    <span class="hl">https://your-username.github.io/devops-interview-guide</span>
+  </div>
+  <div style="padding:0 16px 12px">
+    <div class="info-box"><span class="icon">🔄</span><div>Every future <strong>git push to main</strong> automatically rebuilds and redeploys the site. No manual steps needed after this.</div></div>
+  </div>
+</div>
+
+
+<div class="phase">
+  <span class="phase-badge" style="background:var(--red)">HELP</span>
+  <h2>Common Issues</h2>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-purple">?</div>
+    <div class="step-body">
+      <div class="step-title">Actions workflow fails with "bundler error"</div>
+      <div class="step-desc">Run locally first to check Gemfile is valid:</div>
+    </div>
+  </div>
+  <div class="code-block">
+    <span class="cmt"># Install Ruby first if needed: https://rubyinstaller.org</span>
+    <span class="cmd">gem install bundler</span>
+    <span class="cmd">bundle install</span>
+    <span class="cmd">bundle exec jekyll build</span>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-purple">?</div>
+    <div class="step-body">
+      <div class="step-title">Site loads but CSS is missing / links broken</div>
+      <div class="step-desc">Make sure <strong>baseurl</strong> in <code style="background:rgba(99,102,241,.15);color:var(--cyan);padding:1px 5px;border-radius:3px">_config.yml</code> exactly matches your repo name (case-sensitive).</div>
+    </div>
+  </div>
+  <div class="code-block">
+    <span class="cmt"># Repo name is "devops-interview-guide" → baseurl must be:</span>
+    <span class="cmd">baseurl: "/devops-interview-guide"</span>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num num-purple">?</div>
+    <div class="step-body">
+      <div class="step-title">"Permission denied" on git push</div>
+      <div class="step-desc">You need a Personal Access Token. Create one at <a href="https://github.com/settings/tokens/new" target="_blank" style="color:var(--cyan)">github.com/settings/tokens/new</a> → Classic → tick <strong>repo</strong> → copy the token → use it as your password when pushing.</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="summary">
+  <h3>📋 Quick Reference — Commands to Run</h3>
+  <div class="summary-row"><div class="dot dot-blue"></div><code style="color:var(--cyan);font-family:monospace;font-size:.8rem">cd C:\Users\PoornaGottimukkula\Documents\new-nob\devops-interview-guide</code></div>
+  <div class="summary-row"><div class="dot dot-blue"></div><code style="color:var(--cyan);font-family:monospace;font-size:.8rem">git remote add origin https://github.com/YOUR-USERNAME/devops-interview-guide.git</code></div>
+  <div class="summary-row"><div class="dot dot-blue"></div><code style="color:var(--cyan);font-family:monospace;font-size:.8rem">git add . &amp;&amp; git commit -m "feat: add GitHub Pages site"</code></div>
+  <div class="summary-row"><div class="dot dot-blue"></div><code style="color:var(--cyan);font-family:monospace;font-size:.8rem">git branch -M main &amp;&amp; git push -u origin main</code></div>
+  <div class="summary-row"><div class="dot dot-green"></div><span style="color:var(--muted)">GitHub → Settings → Pages → Source: <strong style="color:var(--text)">GitHub Actions</strong></span></div>
+  <div class="summary-row"><div class="dot dot-green"></div><span style="color:var(--muted)">Edit <strong style="color:var(--text)">_config.yml</strong> → set url + baseurl → push again</span></div>
+  <div class="summary-row"><div class="dot dot-green"></div><span style="color:var(--muted)">Wait ~60s → visit <strong style="color:var(--cyan)">https://your-username.github.io/devops-interview-guide</strong></span></div>
+</div>
+
+<footer>Made with IBM Bob</footer>
+</div>
+</body>
+</html>
