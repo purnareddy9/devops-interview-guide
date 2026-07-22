@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🔴 OpenShift — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # 🔴 OpenShift — DevOps Interview Guide

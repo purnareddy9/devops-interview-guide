@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🐧 Linux — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # 🐧 Linux — DevOps Interview Guide

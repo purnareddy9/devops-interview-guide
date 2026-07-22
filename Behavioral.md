@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "💬 Behavioral Interview Guide — DevOps"
-render_with_liquid: false
 ---
 
 # 💬 Behavioral Interview Guide — DevOps

@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🔴 Module 1 — OpenShift & Kubernetes Core"
-render_with_liquid: false
 ---
 
 # 🔴 Module 1 — OpenShift & Kubernetes Core

@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🔧 Jenkins — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # 🔧 Jenkins — DevOps Interview Guide

@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🐳 Docker — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # 🐳 Docker — DevOps Interview Guide

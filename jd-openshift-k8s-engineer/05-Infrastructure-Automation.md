@@ -1,8 +1,8 @@
 ---
+render_with_liquid: false
 layout: default
 title: "⚙️ Module 5 — Infrastructure & Automation"
 
-render_with_liquid: false
 ---
 
 {% raw %}

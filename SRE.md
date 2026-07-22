@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🎯 SRE — Site Reliability Engineering Interview Guide"
-render_with_liquid: false
 ---
 
 # 🎯 SRE — Site Reliability Engineering Interview Guide

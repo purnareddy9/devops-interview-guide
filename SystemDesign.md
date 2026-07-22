@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🏛️ System Design — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # 🏛️ System Design — DevOps Interview Guide

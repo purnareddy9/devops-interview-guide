@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🐍 Module 8 — Python Scripting for DevOps"
-render_with_liquid: false
 ---
 
 # 🐍 Module 8 — Python Scripting for DevOps

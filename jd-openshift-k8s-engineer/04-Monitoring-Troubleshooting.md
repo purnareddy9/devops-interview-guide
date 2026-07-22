@@ -1,8 +1,8 @@
 ---
+render_with_liquid: false
 layout: default
 title: "📊 Module 4 — Monitoring & Troubleshooting"
 
-render_with_liquid: false
 ---
 
 {% raw %}

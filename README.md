@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🚀 DevOps Interview Preparation Guide"
-render_with_liquid: false
 ---
 
 # 🚀 DevOps Interview Preparation Guide

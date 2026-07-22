@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🟦 GCP — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # 🟦 GCP — DevOps Interview Guide

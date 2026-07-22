@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "📝 Logging — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # 📝 Logging — DevOps Interview Guide

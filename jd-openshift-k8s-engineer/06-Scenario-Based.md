@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🔵 Module 6 — Scenario-Based Questions"
-render_with_liquid: false
 ---
 
 # 🔵 Module 6 — Scenario-Based Questions

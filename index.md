@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: Home
-render_with_liquid: false
 ---
 
 <div class="hero">
@@ -29,10 +29,10 @@ render_with_liquid: false
   </div>
 
   <div class="hero-cta">
-    <a href="{{ '/jd-openshift-k8s-engineer/README' | relative_url }}" class="btn btn-primary">
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README" class="btn btn-primary">
       🎯 OpenShift JD Prep
     </a>
-    <a href="{{ '/README' | relative_url }}" class="btn btn-secondary">
+    <a href="/devops-interview-guide/README" class="btn btn-secondary">
       📚 Browse Full Guide
     </a>
   </div>
@@ -47,7 +47,7 @@ render_with_liquid: false
 
 <div class="module-grid">
 
-  <a href="{{ '/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core' | relative_url }}" class="module-card card-red">
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core" class="module-card card-red">
     <div class="module-card-icon">☸️</div>
     <div class="module-card-title">OpenShift &amp; Kubernetes Core</div>
     <div class="module-card-desc">Architecture, workloads, networking, storage, SCC, RBAC, and cluster operations.</div>
@@ -57,7 +57,7 @@ render_with_liquid: false
     </div>
   </a>
 
-  <a href="{{ '/jd-openshift-k8s-engineer/02-CICD-Pipelines' | relative_url }}" class="module-card card-blue">
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines" class="module-card card-blue">
     <div class="module-card-icon">🔄</div>
     <div class="module-card-title">CI/CD Pipelines</div>
     <div class="module-card-desc">Jenkins, GitLab CI, GitHub Actions, Tekton, GitOps, and ArgoCD in production.</div>
@@ -67,7 +67,7 @@ render_with_liquid: false
     </div>
   </a>
 
-  <a href="{{ '/jd-openshift-k8s-engineer/03-Security-Compliance' | relative_url }}" class="module-card card-orange">
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance" class="module-card card-orange">
     <div class="module-card-icon">🔒</div>
     <div class="module-card-title">Security &amp; Compliance</div>
     <div class="module-card-desc">SCC, RBAC, secrets management, DevSecOps, network policies, and compliance gates.</div>
@@ -77,7 +77,7 @@ render_with_liquid: false
     </div>
   </a>
 
-  <a href="{{ '/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting' | relative_url }}" class="module-card card-green">
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting" class="module-card card-green">
     <div class="module-card-icon">📊</div>
     <div class="module-card-title">Monitoring &amp; Troubleshooting</div>
     <div class="module-card-desc">Prometheus, Grafana, structured logging, alerting, and incident response playbooks.</div>
@@ -87,7 +87,7 @@ render_with_liquid: false
     </div>
   </a>
 
-  <a href="{{ '/jd-openshift-k8s-engineer/05-Infrastructure-Automation' | relative_url }}" class="module-card card-purple">
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation" class="module-card card-purple">
     <div class="module-card-icon">⚙️</div>
     <div class="module-card-title">Infrastructure &amp; Automation</div>
     <div class="module-card-desc">Terraform, Ansible, Helm, Kustomize, GitOps at scale, and OpenShift cluster provisioning.</div>
@@ -97,7 +97,7 @@ render_with_liquid: false
     </div>
   </a>
 
-  <a href="{{ '/jd-openshift-k8s-engineer/06-Scenario-Based' | relative_url }}" class="module-card card-teal">
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based" class="module-card card-teal">
     <div class="module-card-icon">🔵</div>
     <div class="module-card-title">Scenario-Based Questions</div>
     <div class="module-card-desc">Real-world production problems end-to-end — the toughest interview questions with full walkthroughs.</div>
@@ -107,7 +107,7 @@ render_with_liquid: false
     </div>
   </a>
 
-  <a href="{{ '/jd-openshift-k8s-engineer/07-Behavioral' | relative_url }}" class="module-card card-pink">
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral" class="module-card card-pink">
     <div class="module-card-icon">🗣️</div>
     <div class="module-card-title">Behavioral Questions</div>
     <div class="module-card-desc">STAR-method answers aligned to the JD — leadership, conflict resolution, and impact stories.</div>
@@ -117,7 +117,7 @@ render_with_liquid: false
     </div>
   </a>
 
-  <a href="{{ '/jd-openshift-k8s-engineer/08-Python-Scripting' | relative_url }}" class="module-card card-yellow">
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting" class="module-card card-yellow">
     <div class="module-card-icon">🐍</div>
     <div class="module-card-title">Python Scripting</div>
     <div class="module-card-desc">K8s SDK automation, CLI tools with Click, subprocess safety, retry patterns, and unit testing.</div>
@@ -127,7 +127,7 @@ render_with_liquid: false
     </div>
   </a>
 
-  <a href="{{ '/jd-openshift-k8s-engineer/09-AI-for-DevOps' | relative_url }}" class="module-card card-indigo">
+  <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps" class="module-card card-indigo">
     <div class="module-card-icon">🤖</div>
     <div class="module-card-title">AI for DevOps</div>
     <div class="module-card-desc">AIOps, LLM-powered pipelines, anomaly detection, MLOps on OpenShift, and AI incident response.</div>

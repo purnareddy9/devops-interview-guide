@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "📘 DevOps Interview Handbook — Complete Question Bank"
-render_with_liquid: false
 ---
 
 # 📘 DevOps Interview Handbook — Complete Question Bank

@@ -1,8 +1,8 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🔒 Module 3 — Security & Compliance"
 
-render_with_liquid: false
 ---
 
 {% raw %}

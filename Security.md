@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🔐 Security — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # 🔐 Security — DevOps Interview Guide

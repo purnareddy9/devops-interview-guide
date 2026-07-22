@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "☸️ Kubernetes — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # ☸️ Kubernetes — DevOps Interview Guide

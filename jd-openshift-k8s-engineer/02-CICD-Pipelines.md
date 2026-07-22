@@ -1,8 +1,8 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🔄 Module 2 — CI/CD Pipelines"
 
-render_with_liquid: false
 ---
 
 {% raw %}

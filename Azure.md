@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🔷 Azure — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # 🔷 Azure — DevOps Interview Guide

@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🔄 CI/CD — DevOps Interview Guide"
-render_with_liquid: false
 ---
 
 # 🔄 CI/CD — DevOps Interview Guide

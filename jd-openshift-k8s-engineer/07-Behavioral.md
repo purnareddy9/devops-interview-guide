@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🟣 Module 7 — Behavioral Questions"
-render_with_liquid: false
 ---
 
 # 🟣 Module 7 — Behavioral Questions

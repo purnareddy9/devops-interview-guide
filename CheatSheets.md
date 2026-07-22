@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "⚡ Cheat Sheets — DevOps Quick Reference"
-render_with_liquid: false
 ---
 
 # ⚡ Cheat Sheets — DevOps Quick Reference

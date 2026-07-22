@@ -1,7 +1,7 @@
 ---
+render_with_liquid: false
 layout: default
 title: "🎯 Interview Prep — DevOps Engineer (OpenShift & Kubernetes)"
-render_with_liquid: false
 ---
 
 # 🎯 Interview Prep — DevOps Engineer (OpenShift & Kubernetes)
