@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>⚙️ Ansible — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="⚙️ Ansible — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Ansible.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="⚙️ Ansible — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>⚙️ Ansible — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="⚙️ Ansible — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Ansible.html" />
+<meta property="og:url" content="/devops-interview-guide/Ansible.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="⚙️ Ansible — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"⚙️ Ansible — DevOps Interview Guide","url":"/devops-interview-guide/Ansible.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">⚙️ Ansible — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="️-ansible--devops-interview-guide">⚙️ Ansible — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Terraform.html">← Terraform</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/AWS.html">AWS →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#core-concepts">Core Concepts</a></li>
+  <li><a href="#inventory">Inventory</a></li>
+  <li><a href="#playbooks">Playbooks</a></li>
+  <li><a href="#roles">Roles</a></li>
+  <li><a href="#variables--templates">Variables &amp; Templates</a></li>
+  <li><a href="#ansible-vault">Ansible Vault</a></li>
+  <li><a href="#dynamic-inventory">Dynamic Inventory</a></li>
+  <li><a href="#error-handling">Error Handling</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="core-concepts">Core Concepts</h2>
+
+<h3 id="how-ansible-works">How Ansible Works</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Control Node                  Managed Nodes
+(your laptop/CI)              (servers to configure)
+
+  ┌─────────────┐
+  │  Inventory  │──── SSH / WinRM ────&gt; Node 1 (web01)
+  │  Playbooks  │──── SSH / WinRM ────&gt; Node 2 (web02)
+  │  Roles      │──── SSH / WinRM ────&gt; Node 3 (db01)
+  └─────────────┘
+        │
+   Python + SSH
+   No agent needed!
+   Idempotent tasks
+</code></pre></div></div>
+
+<h3 id="key-principles">Key Principles</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Principle</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Agentless</strong></td>
+      <td>Uses SSH/WinRM, no agent installed on nodes</td>
+    </tr>
+    <tr>
+      <td><strong>Idempotent</strong></td>
+      <td>Running a playbook multiple times = same result</td>
+    </tr>
+    <tr>
+      <td><strong>Declarative</strong></td>
+      <td>Describe desired state; Ansible figures out how</td>
+    </tr>
+    <tr>
+      <td><strong>Push-based</strong></td>
+      <td>Control node pushes to managed nodes</td>
+    </tr>
+    <tr>
+      <td><strong>YAML-based</strong></td>
+      <td>Human-readable configuration</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="inventory">Inventory</h2>
+
+<h3 id="static-inventory">Static Inventory</h3>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># inventory/hosts.ini
+</span><span class="nn">[webservers]</span><span class="w">
+</span><span class="na">web01.example.com</span><span class="w">
+</span><span class="na">web02.example.com</span><span class="w"> </span><span class="py">ansible_host</span><span class="p">=</span><span class="s">10.0.1.12</span>
+<span class="w">
+</span><span class="nn">[dbservers]</span><span class="w">
+</span><span class="na">db01.example.com</span><span class="w"> </span><span class="py">ansible_host</span><span class="p">=</span><span class="s">10.0.2.10 ansible_user=ubuntu</span>
+<span class="w">
+</span><span class="nn">[loadbalancers]</span><span class="w">
+</span><span class="na">lb01.example.com</span><span class="w">
+
+</span><span class="c"># Group of groups
+</span><span class="nn">[production:children]</span><span class="w">
+</span><span class="na">webservers</span><span class="w">
+</span><span class="na">dbservers</span><span class="w">
+</span><span class="na">loadbalancers</span><span class="w">
+
+</span><span class="nn">[production:vars]</span><span class="w">
+</span><span class="py">ansible_user</span><span class="p">=</span><span class="s">deploy</span>
+<span class="py">ansible_ssh_private_key_file</span><span class="p">=</span><span class="s">~/.ssh/deploy_key</span>
+<span class="py">ansible_python_interpreter</span><span class="p">=</span><span class="s">/usr/bin/python3</span>
+<span class="w">
+</span><span class="nn">[webservers:vars]</span><span class="w">
+</span><span class="py">http_port</span><span class="p">=</span><span class="s">80</span>
+<span class="py">max_connections</span><span class="p">=</span><span class="s">200</span>
+</code></pre></div></div>
+
+<h3 id="yaml-inventory">YAML Inventory</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># inventory/hosts.yml</span>
+<span class="na">all</span><span class="pi">:</span>
+  <span class="na">vars</span><span class="pi">:</span>
+    <span class="na">ansible_user</span><span class="pi">:</span> <span class="s">deploy</span>
+    <span class="na">ansible_ssh_private_key_file</span><span class="pi">:</span> <span class="s">~/.ssh/deploy_key</span>
+
+  <span class="na">children</span><span class="pi">:</span>
+    <span class="na">webservers</span><span class="pi">:</span>
+      <span class="na">hosts</span><span class="pi">:</span>
+        <span class="na">web01</span><span class="pi">:</span>
+          <span class="na">ansible_host</span><span class="pi">:</span> <span class="s">10.0.1.11</span>
+        <span class="na">web02</span><span class="pi">:</span>
+          <span class="na">ansible_host</span><span class="pi">:</span> <span class="s">10.0.1.12</span>
+      <span class="na">vars</span><span class="pi">:</span>
+        <span class="na">http_port</span><span class="pi">:</span> <span class="m">80</span>
+
+    <span class="na">dbservers</span><span class="pi">:</span>
+      <span class="na">hosts</span><span class="pi">:</span>
+        <span class="na">db01</span><span class="pi">:</span>
+          <span class="na">ansible_host</span><span class="pi">:</span> <span class="s">10.0.2.10</span>
+          <span class="na">db_port</span><span class="pi">:</span> <span class="m">5432</span>
+        <span class="na">db02</span><span class="pi">:</span>
+          <span class="na">ansible_host</span><span class="pi">:</span> <span class="s">10.0.2.11</span>
+          <span class="na">db_port</span><span class="pi">:</span> <span class="m">5432</span>
+
+    <span class="na">staging</span><span class="pi">:</span>
+      <span class="na">children</span><span class="pi">:</span>
+        <span class="na">webservers</span><span class="pi">:</span>
+        <span class="na">dbservers</span><span class="pi">:</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="playbooks">Playbooks</h2>
+
+<h3 id="production-grade-playbook">Production-Grade Playbook</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="c1"># site.yml — Main playbook</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure and deploy web application</span>
+  <span class="na">hosts</span><span class="pi">:</span> <span class="s">webservers</span>
+  <span class="na">become</span><span class="pi">:</span> <span class="s">yes</span>
+  <span class="na">gather_facts</span><span class="pi">:</span> <span class="s">yes</span>
+  <span class="na">serial</span><span class="pi">:</span> <span class="s2">"</span><span class="s">25%"</span>          <span class="c1"># Rolling update: 25% of hosts at a time</span>
+
+  <span class="na">pre_tasks</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Notify monitoring — start maintenance window</span>
+      <span class="na">uri</span><span class="pi">:</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://monitoring.example.com/api/maintenance"</span>
+        <span class="na">method</span><span class="pi">:</span> <span class="s">POST</span>
+        <span class="na">body_format</span><span class="pi">:</span> <span class="s">json</span>
+        <span class="na">body</span><span class="pi">:</span>
+          <span class="na">host</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">inventory_hostname</span><span class="nv"> </span><span class="s">}}"</span>
+          <span class="na">duration</span><span class="pi">:</span> <span class="m">600</span>
+        <span class="na">headers</span><span class="pi">:</span>
+          <span class="na">Authorization</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Bearer</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">monitoring_api_token</span><span class="nv"> </span><span class="s">}}"</span>
+      <span class="na">delegate_to</span><span class="pi">:</span> <span class="s">localhost</span>
+      <span class="na">run_once</span><span class="pi">:</span> <span class="kc">false</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Wait for server to be reachable</span>
+      <span class="na">wait_for_connection</span><span class="pi">:</span>
+        <span class="na">timeout</span><span class="pi">:</span> <span class="m">60</span>
+
+  <span class="na">roles</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">common</span>
+    <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">nginx</span>
+      <span class="na">vars</span><span class="pi">:</span>
+        <span class="na">nginx_worker_processes</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">ansible_processor_vcpus</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">app_deploy</span>
+      <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">deploy</span><span class="pi">]</span>
+
+  <span class="na">post_tasks</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Verify application health</span>
+      <span class="na">uri</span><span class="pi">:</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://{{</span><span class="nv"> </span><span class="s">ansible_host</span><span class="nv"> </span><span class="s">}}/health"</span>
+        <span class="na">status_code</span><span class="pi">:</span> <span class="m">200</span>
+      <span class="na">register</span><span class="pi">:</span> <span class="s">health_check</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">5</span>
+      <span class="na">delay</span><span class="pi">:</span> <span class="m">10</span>
+      <span class="na">until</span><span class="pi">:</span> <span class="s">health_check.status == </span><span class="m">200</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Remove from maintenance window</span>
+      <span class="na">uri</span><span class="pi">:</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://monitoring.example.com/api/maintenance/{{</span><span class="nv"> </span><span class="s">inventory_hostname</span><span class="nv"> </span><span class="s">}}"</span>
+        <span class="na">method</span><span class="pi">:</span> <span class="s">DELETE</span>
+        <span class="na">headers</span><span class="pi">:</span>
+          <span class="na">Authorization</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Bearer</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">monitoring_api_token</span><span class="nv"> </span><span class="s">}}"</span>
+      <span class="na">delegate_to</span><span class="pi">:</span> <span class="s">localhost</span>
+
+  <span class="na">handlers</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Restart nginx</span>
+      <span class="na">service</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
+        <span class="na">state</span><span class="pi">:</span> <span class="s">restarted</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Reload nginx</span>
+      <span class="na">service</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
+        <span class="na">state</span><span class="pi">:</span> <span class="s">reloaded</span>
+</code></pre></div></div>
+
+<h3 id="common-modules">Common Modules</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Package management</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install packages</span>
+  <span class="na">package</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">nginx</span>
+      <span class="pi">-</span> <span class="s">python3-pip</span>
+      <span class="pi">-</span> <span class="s">git</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+    <span class="na">update_cache</span><span class="pi">:</span> <span class="s">yes</span>
+
+<span class="c1"># Service management</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Start and enable nginx</span>
+  <span class="na">service</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">started</span>
+    <span class="na">enabled</span><span class="pi">:</span> <span class="s">yes</span>
+
+<span class="c1"># File operations</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create config directory</span>
+  <span class="na">file</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">/etc/myapp</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">directory</span>
+    <span class="na">owner</span><span class="pi">:</span> <span class="s">www-data</span>
+    <span class="na">group</span><span class="pi">:</span> <span class="s">www-data</span>
+    <span class="na">mode</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0750'</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Copy config file</span>
+  <span class="na">copy</span><span class="pi">:</span>
+    <span class="na">src</span><span class="pi">:</span> <span class="s">files/nginx.conf</span>
+    <span class="na">dest</span><span class="pi">:</span> <span class="s">/etc/nginx/nginx.conf</span>
+    <span class="na">owner</span><span class="pi">:</span> <span class="s">root</span>
+    <span class="na">group</span><span class="pi">:</span> <span class="s">root</span>
+    <span class="na">mode</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0644'</span>
+    <span class="na">backup</span><span class="pi">:</span> <span class="s">yes</span>
+  <span class="na">notify</span><span class="pi">:</span> <span class="s">Reload nginx</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Render template</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">src</span><span class="pi">:</span> <span class="s">templates/app.conf.j2</span>
+    <span class="na">dest</span><span class="pi">:</span> <span class="s">/etc/myapp/app.conf</span>
+    <span class="na">owner</span><span class="pi">:</span> <span class="s">www-data</span>
+    <span class="na">mode</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0640'</span>
+  <span class="na">notify</span><span class="pi">:</span> <span class="s">Restart app</span>
+
+<span class="c1"># User management</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create deploy user</span>
+  <span class="na">user</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">deploy</span>
+    <span class="na">shell</span><span class="pi">:</span> <span class="s">/bin/bash</span>
+    <span class="na">groups</span><span class="pi">:</span> <span class="s">docker</span>
+    <span class="na">append</span><span class="pi">:</span> <span class="s">yes</span>
+    <span class="na">create_home</span><span class="pi">:</span> <span class="s">yes</span>
+
+<span class="c1"># SSH authorized key</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Add deploy SSH key</span>
+  <span class="na">authorized_key</span><span class="pi">:</span>
+    <span class="na">user</span><span class="pi">:</span> <span class="s">deploy</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+    <span class="na">key</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">deploy_public_key</span><span class="nv"> </span><span class="s">}}"</span>
+
+<span class="c1"># Execute commands</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run database migrations</span>
+  <span class="na">command</span><span class="pi">:</span> <span class="s">/app/bin/migrate</span>
+  <span class="na">args</span><span class="pi">:</span>
+    <span class="na">chdir</span><span class="pi">:</span> <span class="s">/app</span>
+  <span class="na">environment</span><span class="pi">:</span>
+    <span class="na">DATABASE_URL</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">db_url</span><span class="nv"> </span><span class="s">}}"</span>
+  <span class="na">register</span><span class="pi">:</span> <span class="s">migration_output</span>
+  <span class="na">changed_when</span><span class="pi">:</span> <span class="s2">"</span><span class="s">'Nothing</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">migrate'</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">migration_output.stdout"</span>
+
+<span class="c1"># Git clone/pull</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Clone application repository</span>
+  <span class="na">git</span><span class="pi">:</span>
+    <span class="na">repo</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://github.com/org/myapp.git"</span>
+    <span class="na">dest</span><span class="pi">:</span> <span class="s">/app</span>
+    <span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">app_version</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="na">force</span><span class="pi">:</span> <span class="s">yes</span>
+
+<span class="c1"># Systemd unit</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create systemd service</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">src</span><span class="pi">:</span> <span class="s">templates/myapp.service.j2</span>
+    <span class="na">dest</span><span class="pi">:</span> <span class="s">/etc/systemd/system/myapp.service</span>
+  <span class="na">notify</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">Reload systemd</span>
+    <span class="pi">-</span> <span class="s">Restart myapp</span>
+
+<span class="c1"># Wait for port</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Wait for app to start</span>
+  <span class="na">wait_for</span><span class="pi">:</span>
+    <span class="na">port</span><span class="pi">:</span> <span class="m">8080</span>
+    <span class="na">host</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">ansible_host</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="na">timeout</span><span class="pi">:</span> <span class="m">60</span>
+
+<span class="c1"># Lineinfile</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Update sshd config</span>
+  <span class="na">lineinfile</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">/etc/ssh/sshd_config</span>
+    <span class="na">regexp</span><span class="pi">:</span> <span class="s1">'</span><span class="s">^PermitRootLogin'</span>
+    <span class="na">line</span><span class="pi">:</span> <span class="s1">'</span><span class="s">PermitRootLogin</span><span class="nv"> </span><span class="s">no'</span>
+    <span class="na">validate</span><span class="pi">:</span> <span class="s">/usr/sbin/sshd -t -f %s</span>
+  <span class="na">notify</span><span class="pi">:</span> <span class="s">Restart sshd</span>
+
+<span class="c1"># Blockinfile</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Add Nginx virtual host</span>
+  <span class="na">blockinfile</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">/etc/nginx/sites-available/myapp</span>
+    <span class="na">block</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">server {</span>
+          <span class="s">listen 80;</span>
+          <span class="s">server_name {{ domain_name }};</span>
+          <span class="s">root /var/www/{{ app_name }};</span>
+      <span class="s">}</span>
+    <span class="na">create</span><span class="pi">:</span> <span class="s">yes</span>
+    <span class="na">marker</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#</span><span class="nv"> </span><span class="s">{mark}</span><span class="nv"> </span><span class="s">ANSIBLE</span><span class="nv"> </span><span class="s">MANAGED</span><span class="nv"> </span><span class="s">BLOCK"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="roles">Roles</h2>
+
+<h3 id="role-structure">Role Structure</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roles/
+└── nginx/
+    ├── tasks/
+    │   ├── main.yml          # Entry point for tasks
+    │   ├── install.yml       # Installation tasks
+    │   └── configure.yml     # Configuration tasks
+    ├── handlers/
+    │   └── main.yml          # Handlers (triggered by notify)
+    ├── templates/
+    │   └── nginx.conf.j2     # Jinja2 templates
+    ├── files/
+    │   └── htpasswd          # Static files
+    ├── vars/
+    │   └── main.yml          # Role variables (high priority)
+    ├── defaults/
+    │   └── main.yml          # Default variables (lowest priority)
+    ├── meta/
+    │   └── main.yml          # Role metadata + dependencies
+    └── README.md
+</code></pre></div></div>
+
+<h3 id="rolesnginxtasksmainyml">roles/nginx/tasks/main.yml</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install nginx</span>
+  <span class="na">package</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+  <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">install</span><span class="pi">]</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create nginx directories</span>
+  <span class="na">file</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">directory</span>
+    <span class="na">owner</span><span class="pi">:</span> <span class="s">root</span>
+    <span class="na">group</span><span class="pi">:</span> <span class="s">root</span>
+    <span class="na">mode</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0755'</span>
+  <span class="na">loop</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">/etc/nginx/sites-available</span>
+    <span class="pi">-</span> <span class="s">/etc/nginx/sites-enabled</span>
+    <span class="pi">-</span> <span class="s">/var/log/nginx</span>
+  <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">configure</span><span class="pi">]</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy nginx configuration</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">src</span><span class="pi">:</span> <span class="s">nginx.conf.j2</span>
+    <span class="na">dest</span><span class="pi">:</span> <span class="s">/etc/nginx/nginx.conf</span>
+    <span class="na">owner</span><span class="pi">:</span> <span class="s">root</span>
+    <span class="na">mode</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0644'</span>
+    <span class="na">validate</span><span class="pi">:</span> <span class="s">nginx -t -c %s</span>
+  <span class="na">notify</span><span class="pi">:</span> <span class="s">Reload nginx</span>
+  <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">configure</span><span class="pi">]</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Enable and start nginx</span>
+  <span class="na">service</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">started</span>
+    <span class="na">enabled</span><span class="pi">:</span> <span class="s">yes</span>
+  <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">service</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<h3 id="rolesnginxdefaultsmainyml">roles/nginx/defaults/main.yml</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">nginx_worker_processes</span><span class="pi">:</span> <span class="s">auto</span>
+<span class="na">nginx_worker_connections</span><span class="pi">:</span> <span class="m">1024</span>
+<span class="na">nginx_keepalive_timeout</span><span class="pi">:</span> <span class="m">65</span>
+<span class="na">nginx_client_max_body_size</span><span class="pi">:</span> <span class="s">10m</span>
+<span class="na">nginx_log_format</span><span class="pi">:</span> <span class="s">combined</span>
+<span class="na">nginx_access_log</span><span class="pi">:</span> <span class="s">/var/log/nginx/access.log</span>
+<span class="na">nginx_error_log</span><span class="pi">:</span> <span class="s">/var/log/nginx/error.log</span>
+<span class="na">nginx_gzip</span><span class="pi">:</span> <span class="s">yes</span>
+<span class="na">nginx_server_names_hash_bucket_size</span><span class="pi">:</span> <span class="m">64</span>
+</code></pre></div></div>
+
+<h3 id="rolesnginxtemplatesnginxconfj2">roles/nginx/templates/nginx.conf.j2</h3>
+
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">user</span> <span class="s">www-data</span><span class="p">;</span>
+<span class="k">worker_processes</span> <span class="p">{</span><span class="err">{</span> <span class="kn">nginx_worker_processes</span> <span class="err">}}</span><span class="p">;</span>
+<span class="kn">error_log</span> <span class="p">{</span><span class="err">{</span> <span class="kn">nginx_error_log</span> <span class="err">}}</span> <span class="s">warn</span><span class="p">;</span>
+<span class="kn">pid</span> <span class="n">/run/nginx.pid</span><span class="p">;</span>
+
+<span class="kn">events</span> <span class="p">{</span>
+    <span class="kn">worker_connections</span> <span class="p">{</span><span class="err">{</span> <span class="kn">nginx_worker_connections</span> <span class="err">}}</span><span class="p">;</span>
+    <span class="kn">multi_accept</span> <span class="no">on</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kn">http</span> <span class="p">{</span>
+    <span class="kn">include</span> <span class="n">/etc/nginx/mime.types</span><span class="p">;</span>
+    <span class="kn">default_type</span> <span class="nc">application/octet-stream</span><span class="p">;</span>
+
+    <span class="kn">log_format</span> <span class="s">main</span> <span class="s">'</span><span class="nv">$remote_addr</span> <span class="s">-</span> <span class="nv">$remote_user</span> <span class="s">[</span><span class="nv">$time_local</span><span class="s">]</span> <span class="s">"</span><span class="nv">$request</span><span class="s">"</span> <span class="s">'</span>
+                    <span class="s">'</span><span class="nv">$status</span> <span class="nv">$body_bytes_sent</span> <span class="s">"</span><span class="nv">$http_referer</span><span class="s">"</span> <span class="s">'</span>
+                    <span class="s">'"</span><span class="nv">$http_user_agent</span><span class="s">"'</span><span class="p">;</span>
+
+    <span class="kn">access_log</span> <span class="p">{</span><span class="err">{</span> <span class="kn">nginx_access_log</span> <span class="err">}}</span> <span class="s">main</span><span class="p">;</span>
+    <span class="kn">keepalive_timeout</span> <span class="p">{</span><span class="err">{</span> <span class="kn">nginx_keepalive_timeout</span> <span class="err">}}</span><span class="p">;</span>
+
+<span class="err">{</span><span class="kn">%</span> <span class="s">if</span> <span class="s">nginx_gzip</span> <span class="s">%</span><span class="err">}</span>
+    <span class="s">gzip</span> <span class="no">on</span><span class="p">;</span>
+    <span class="kn">gzip_vary</span> <span class="no">on</span><span class="p">;</span>
+    <span class="kn">gzip_proxied</span> <span class="s">any</span><span class="p">;</span>
+    <span class="kn">gzip_comp_level</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="kn">gzip_types</span> <span class="nc">text/plain</span> <span class="nc">text/css</span> <span class="nc">application/json</span> <span class="nc">application/javascript</span><span class="p">;</span>
+<span class="err">{</span><span class="kn">%</span> <span class="s">endif</span> <span class="s">%</span><span class="err">}</span>
+
+    <span class="s">include</span> <span class="n">/etc/nginx/conf.d/*.conf</span><span class="p">;</span>
+    <span class="kn">include</span> <span class="n">/etc/nginx/sites-enabled/*</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="variables--templates">Variables &amp; Templates</h2>
+
+<h3 id="variable-precedence-highest--lowest">Variable Precedence (highest → lowest)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  Extra vars: -e key=value
+2.  task vars (in task)
+3.  block vars
+4.  role and include vars
+5.  play vars_files
+6.  play vars_prompt
+7.  play vars
+8.  set_facts / registered vars
+9.  host facts
+10. playbook host_vars/*
+11. playbook group_vars/*
+12. inventory host_vars/*
+13. inventory group_vars/*
+14. inventory group_vars/all
+15. playbook group_vars/all
+16. role defaults
+17. command line values (lowest)
+</code></pre></div></div>
+
+<h3 id="jinja2-template-features">Jinja2 Template Features</h3>
+
+<pre><code class="language-jinja2">{# Comment #}
+{{ variable }}                        {# Variable output #}
+{{ variable | default('fallback') }}  {# Default filter #}
+{{ variable | upper }}                {# Uppercase filter #}
+{{ list | join(', ') }}               {# Join list #}
+{{ dict | to_json }}                  {# Serialize to JSON #}
+{{ "hello" | hash('sha1') }}          {# Hash #}
+
+{# Conditionals #}
+{% if ansible_os_family == 'Debian' %}
+apt-get install -y nginx
+{% elif ansible_os_family == 'RedHat' %}
+yum install -y nginx
+{% endif %}
+
+{# Loops #}
+{% for server in groups['webservers'] %}
+server {{ hostvars[server]['ansible_host'] }};
+{% endfor %}
+
+{# Set variables #}
+{% set workers = ansible_processor_vcpus * 2 %}
+worker_processes {{ workers }};
+</code></pre>
+
+<hr />
+
+<h2 id="ansible-vault">Ansible Vault</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Encrypt a file</span>
+ansible-vault encrypt secrets.yml
+ansible-vault encrypt_string <span class="s1">'mysecret'</span> <span class="nt">--name</span> <span class="s1">'db_password'</span>
+
+<span class="c"># Edit encrypted file</span>
+ansible-vault edit secrets.yml
+
+<span class="c"># View encrypted file</span>
+ansible-vault view secrets.yml
+
+<span class="c"># Decrypt file</span>
+ansible-vault decrypt secrets.yml
+
+<span class="c"># Rekey (change password)</span>
+ansible-vault rekey secrets.yml
+
+<span class="c"># Run playbook with vault</span>
+ansible-playbook site.yml <span class="nt">--ask-vault-pass</span>
+ansible-playbook site.yml <span class="nt">--vault-password-file</span> .vault_pass
+ansible-playbook site.yml <span class="nt">--vault-id</span> prod@.vault_pass_prod
+
+<span class="c"># Multiple vault IDs</span>
+ansible-playbook site.yml <span class="se">\</span>
+  <span class="nt">--vault-id</span> staging@staging-pass.txt <span class="se">\</span>
+  <span class="nt">--vault-id</span> production@production-pass.txt
+
+<span class="c"># Encrypted vars in group_vars/all/vault.yml</span>
+<span class="nv">$ANSIBLE_VAULT</span><span class="p">;</span>1.1<span class="p">;</span>AES256
+66386439653236336462626566653065326...
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="dynamic-inventory">Dynamic Inventory</h2>
+
+<h3 id="aws-ec2-dynamic-inventory">AWS EC2 Dynamic Inventory</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># inventory/aws_ec2.yml</span>
+<span class="na">plugin</span><span class="pi">:</span> <span class="s">amazon.aws.aws_ec2</span>
+<span class="na">regions</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">us-east-1</span>
+  <span class="pi">-</span> <span class="s">eu-west-1</span>
+<span class="na">filters</span><span class="pi">:</span>
+  <span class="na">instance-state-name</span><span class="pi">:</span> <span class="s">running</span>
+  <span class="na">tag:Environment</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">keyed_groups</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">key</span><span class="pi">:</span> <span class="s">tags.Role</span>
+    <span class="na">prefix</span><span class="pi">:</span> <span class="s">role</span>
+  <span class="pi">-</span> <span class="na">key</span><span class="pi">:</span> <span class="s">tags.Environment</span>
+    <span class="na">prefix</span><span class="pi">:</span> <span class="s">env</span>
+  <span class="pi">-</span> <span class="na">key</span><span class="pi">:</span> <span class="s">placement.availability_zone</span>
+<span class="na">hostnames</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">private-ip-address</span>
+<span class="na">compose</span><span class="pi">:</span>
+  <span class="na">ansible_host</span><span class="pi">:</span> <span class="s">private_ip_address</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Test dynamic inventory</span>
+ansible-inventory <span class="nt">-i</span> inventory/aws_ec2.yml <span class="nt">--list</span>
+ansible-inventory <span class="nt">-i</span> inventory/aws_ec2.yml <span class="nt">--graph</span>
+
+<span class="c"># Use in playbook</span>
+ansible-playbook <span class="nt">-i</span> inventory/aws_ec2.yml site.yml
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="error-handling">Error Handling</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ignore_errors — continue despite failure</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Stop old service (may not exist)</span>
+  <span class="na">service</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">old-service</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">stopped</span>
+  <span class="na">ignore_errors</span><span class="pi">:</span> <span class="s">yes</span>
+
+<span class="c1"># failed_when — custom failure condition</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run health check</span>
+  <span class="na">command</span><span class="pi">:</span> <span class="s">/opt/app/health-check.sh</span>
+  <span class="na">register</span><span class="pi">:</span> <span class="s">health</span>
+  <span class="na">failed_when</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">health.rc != </span><span class="m">0</span>
+    <span class="pi">-</span> <span class="s2">"</span><span class="s">'WARNING'</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">health.stdout"</span>
+
+<span class="c1"># changed_when — control when changed is reported</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Check git status</span>
+  <span class="na">command</span><span class="pi">:</span> <span class="s">git status --porcelain</span>
+  <span class="na">register</span><span class="pi">:</span> <span class="s">git_status</span>
+  <span class="na">changed_when</span><span class="pi">:</span> <span class="s">git_status.stdout != ""</span>
+
+<span class="c1"># block / rescue / always (try/catch/finally)</span>
+<span class="pi">-</span> <span class="na">block</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Attempt risky operation</span>
+      <span class="na">command</span><span class="pi">:</span> <span class="s">/opt/migrate.sh</span>
+      <span class="na">register</span><span class="pi">:</span> <span class="s">migration</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Verify migration</span>
+      <span class="na">command</span><span class="pi">:</span> <span class="s">/opt/verify.sh</span>
+
+  <span class="na">rescue</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Rollback migration</span>
+      <span class="na">command</span><span class="pi">:</span> <span class="s">/opt/rollback.sh</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Alert team</span>
+      <span class="na">mail</span><span class="pi">:</span>
+        <span class="na">to</span><span class="pi">:</span> <span class="s2">"</span><span class="s">ops@example.com"</span>
+        <span class="na">subject</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Migration</span><span class="nv"> </span><span class="s">FAILED</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">inventory_hostname</span><span class="nv"> </span><span class="s">}}"</span>
+        <span class="na">body</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">migration.stderr</span><span class="nv"> </span><span class="s">}}"</span>
+
+  <span class="na">always</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Remove migration lock file</span>
+      <span class="na">file</span><span class="pi">:</span>
+        <span class="na">path</span><span class="pi">:</span> <span class="s">/tmp/migration.lock</span>
+        <span class="na">state</span><span class="pi">:</span> <span class="s">absent</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between Ansible and Terraform?</strong></p>
+
+<blockquote>
+  <p><strong>Ansible</strong> is a <strong>configuration management</strong> and <strong>application deployment</strong> tool — it configures what’s <em>inside</em> servers (packages, files, services, users). <strong>Terraform</strong> is <strong>infrastructure provisioning</strong> — it creates the servers, networks, and cloud resources themselves. They’re complementary: Terraform provisions the EC2 instance; Ansible configures nginx and deploys the app onto it. Terraform is declarative with state; Ansible is procedural (tasks run in order) but idempotent.</p>
+</blockquote>
+
+<p><strong>Q2: What is idempotency in Ansible?</strong></p>
+
+<blockquote>
+  <p>An operation is idempotent if running it multiple times produces the same result as running it once. Ansible modules are designed to be idempotent: <code class="language-plaintext highlighter-rouge">package: state=present</code> checks if the package is installed; if yes, does nothing; if no, installs it. This means you can safely re-run playbooks for drift correction or new servers without causing unintended side effects.</p>
+</blockquote>
+
+<p><strong>Q3: What is the difference between <code class="language-plaintext highlighter-rouge">vars</code> and <code class="language-plaintext highlighter-rouge">defaults</code> in a role?</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">defaults/main.yml</code> has the <strong>lowest priority</strong> — easily overridden by inventory vars, playbook vars, or extra vars. Use for sensible defaults users might want to change. <code class="language-plaintext highlighter-rouge">vars/main.yml</code> has <strong>higher priority</strong> — harder to override, not intended for user customization. Use for role-internal constants.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: How do handlers work in Ansible?</strong></p>
+
+<blockquote>
+  <p>Handlers are tasks that run only when <strong>notified</strong> by other tasks, and only <strong>once</strong> at the end of the play even if notified multiple times. Use case: restart nginx only after any config change, not after every individual config task. Handlers run in the order they are defined, not in the order they are notified. <code class="language-plaintext highlighter-rouge">meta: flush_handlers</code> forces handlers to run immediately.</p>
+</blockquote>
+
+<p><strong>Q5: Explain Ansible facts and how to use them.</strong></p>
+
+<blockquote>
+  <p>Facts are variables automatically gathered about managed nodes by the <code class="language-plaintext highlighter-rouge">setup</code> module (runs implicitly at play start via <code class="language-plaintext highlighter-rouge">gather_facts: yes</code>). They include: OS family, distribution, hostname, IPs, CPU count, memory, disk info, etc. Access via <code class="language-plaintext highlighter-rouge">ansible_*</code> variables: <code class="language-plaintext highlighter-rouge">{{ ansible_os_family }}</code>, <code class="language-plaintext highlighter-rouge">{{ ansible_processor_vcpus }}</code>. Use <code class="language-plaintext highlighter-rouge">set_fact</code> to create custom facts. Cache facts with <code class="language-plaintext highlighter-rouge">fact_caching = jsonfile</code> in <code class="language-plaintext highlighter-rouge">ansible.cfg</code> for performance.</p>
+</blockquote>
+
+<p><strong>Q6: What is <code class="language-plaintext highlighter-rouge">delegate_to</code> and when would you use it?</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">delegate_to</code> runs a task on a different host than the current play target. Common uses:</p>
+  <ul>
+    <li>Remove a host from a load balancer before updating it (run on LB or localhost)</li>
+    <li>Register a DNS record via API from localhost</li>
+    <li>Add/remove from monitoring from a monitoring host</li>
+    <li><code class="language-plaintext highlighter-rouge">run_once: true</code> + <code class="language-plaintext highlighter-rouge">delegate_to: localhost</code> = run exactly once on control node</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: How would you test Ansible roles?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Molecule</strong>: Framework for testing Ansible roles. Creates instances (Docker, Vagrant, cloud), runs the role, runs <code class="language-plaintext highlighter-rouge">verifier</code> tests (TestInfra, Goss, Ansible assert), destroys instances.
+      <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>molecule init role myrole
+molecule <span class="nb">test</span>    <span class="c"># full cycle: create, converge, verify, destroy</span>
+molecule converge  <span class="c"># just apply role</span>
+molecule verify    <span class="c"># just run tests</span>
+</code></pre></div>      </div>
+    </li>
+    <li><strong>Ansible-lint</strong>: Static analysis of playbooks/roles for best practices</li>
+    <li><strong>yamllint</strong>: YAML syntax validation</li>
+    <li>CI: Run molecule in Docker executor in Jenkins/GitHub Actions</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q8: How do you optimize Ansible playbook performance?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">gather_facts: no</code> when facts not needed (saves ~1-2s per host)</li>
+    <li><code class="language-plaintext highlighter-rouge">fact_caching = jsonfile</code> — cache facts between runs</li>
+    <li>Increase <code class="language-plaintext highlighter-rouge">forks</code> in <code class="language-plaintext highlighter-rouge">ansible.cfg</code> (default 5, try 20-50)</li>
+    <li><code class="language-plaintext highlighter-rouge">pipelining = True</code> — reduces SSH connections per task</li>
+    <li>Use <code class="language-plaintext highlighter-rouge">async</code> + <code class="language-plaintext highlighter-rouge">poll</code> for long-running tasks (parallel execution)</li>
+    <li><code class="language-plaintext highlighter-rouge">strategy: free</code> — hosts don’t wait for each other between tasks</li>
+    <li>Avoid <code class="language-plaintext highlighter-rouge">command</code>/<code class="language-plaintext highlighter-rouge">shell</code> modules when idempotent modules exist</li>
+    <li>Use <code class="language-plaintext highlighter-rouge">delegate_to: localhost</code> for API calls instead of per-host</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-rolling-update-with-zero-downtime">🔵 Scenario 1: Rolling Update with Zero Downtime</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># playbook: rolling_deploy.yml</span>
+<span class="pi">-</span> <span class="na">hosts</span><span class="pi">:</span> <span class="s">webservers</span>
+  <span class="na">serial</span><span class="pi">:</span> <span class="m">1</span>              <span class="c1"># One server at a time</span>
+  <span class="na">max_fail_percentage</span><span class="pi">:</span> <span class="m">0</span> <span class="c1"># Abort if any server fails</span>
+
+  <span class="na">pre_tasks</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Disable in HAProxy</span>
+      <span class="na">haproxy</span><span class="pi">:</span>
+        <span class="na">state</span><span class="pi">:</span> <span class="s">disabled</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">inventory_hostname</span><span class="nv"> </span><span class="s">}}"</span>
+        <span class="na">socket</span><span class="pi">:</span> <span class="s">/run/haproxy/admin.sock</span>
+      <span class="na">delegate_to</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">groups['loadbalancers'][0]</span><span class="nv"> </span><span class="s">}}"</span>
+
+  <span class="na">roles</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">app_deploy</span>
+
+  <span class="na">post_tasks</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Verify app is healthy</span>
+      <span class="na">uri</span><span class="pi">:</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://{{</span><span class="nv"> </span><span class="s">ansible_host</span><span class="nv"> </span><span class="s">}}:8080/health"</span>
+        <span class="na">status_code</span><span class="pi">:</span> <span class="m">200</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">6</span>
+      <span class="na">delay</span><span class="pi">:</span> <span class="m">10</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Re-enable in HAProxy</span>
+      <span class="na">haproxy</span><span class="pi">:</span>
+        <span class="na">state</span><span class="pi">:</span> <span class="s">enabled</span>
+        <span class="na">host</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">inventory_hostname</span><span class="nv"> </span><span class="s">}}"</span>
+        <span class="na">socket</span><span class="pi">:</span> <span class="s">/run/haproxy/admin.sock</span>
+      <span class="na">delegate_to</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">groups['loadbalancers'][0]</span><span class="nv"> </span><span class="s">}}"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-install-and-configure-nginx">Lab 1: Install and Configure NGINX</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install Ansible</span>
+pip <span class="nb">install </span>ansible
+
+<span class="c"># Create project structure</span>
+<span class="nb">mkdir </span>ansible-lab <span class="o">&amp;&amp;</span> <span class="nb">cd </span>ansible-lab
+<span class="nb">mkdir</span> <span class="nt">-p</span> <span class="o">{</span>roles/nginx/<span class="o">{</span>tasks,handlers,templates,defaults<span class="o">}</span>,inventory<span class="o">}</span>
+
+<span class="c"># inventory/hosts.ini</span>
+<span class="nb">cat</span> <span class="o">&gt;</span> inventory/hosts.ini <span class="o">&lt;&lt;</span> <span class="sh">'</span><span class="no">EOF</span><span class="sh">'
+[webservers]
+localhost ansible_connection=local
+</span><span class="no">EOF
+
+</span><span class="c"># roles/nginx/tasks/main.yml</span>
+<span class="nb">cat</span> <span class="o">&gt;</span> roles/nginx/tasks/main.yml <span class="o">&lt;&lt;</span> <span class="sh">'</span><span class="no">EOF</span><span class="sh">'
+---
+- name: Install nginx
+  package:
+    name: nginx
+    state: present
+
+- name: Start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+</span><span class="no">EOF
+
+</span><span class="c"># site.yml</span>
+<span class="nb">cat</span> <span class="o">&gt;</span> site.yml <span class="o">&lt;&lt;</span> <span class="sh">'</span><span class="no">EOF</span><span class="sh">'
+---
+- hosts: webservers
+  become: yes
+  roles:
+    - nginx
+</span><span class="no">EOF
+
+</span><span class="c"># Run</span>
+ansible-playbook <span class="nt">-i</span> inventory/hosts.ini site.yml
+ansible-playbook <span class="nt">-i</span> inventory/hosts.ini site.yml  <span class="c"># Run again — should show 0 changes</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── AD-HOC COMMANDS ──────────────────────────────────</span>
+ansible all <span class="nt">-m</span> ping
+ansible webservers <span class="nt">-m</span> setup                    <span class="c"># Gather facts</span>
+ansible webservers <span class="nt">-m</span> service <span class="nt">-a</span> <span class="s2">"name=nginx state=restarted"</span> <span class="nt">--become</span>
+ansible all <span class="nt">-m</span> shell <span class="nt">-a</span> <span class="s2">"df -h"</span>
+ansible all <span class="nt">-m</span> copy <span class="nt">-a</span> <span class="s2">"src=file dest=/tmp/file"</span>
+
+<span class="c"># ─── PLAYBOOK ─────────────────────────────────────────</span>
+ansible-playbook site.yml
+ansible-playbook site.yml <span class="nt">-i</span> inventory/prod
+ansible-playbook site.yml <span class="nt">--tags</span> deploy
+ansible-playbook site.yml <span class="nt">--skip-tags</span> <span class="nb">test
+</span>ansible-playbook site.yml <span class="nt">--limit</span> webservers
+ansible-playbook site.yml <span class="nt">--check</span>            <span class="c"># Dry run</span>
+ansible-playbook site.yml <span class="nt">--diff</span>             <span class="c"># Show file diffs</span>
+ansible-playbook site.yml <span class="nt">-e</span> <span class="s2">"version=2.0"</span>  <span class="c"># Extra vars</span>
+ansible-playbook site.yml <span class="nt">-v</span>/-vv/-vvv        <span class="c"># Verbosity</span>
+
+<span class="c"># ─── INVENTORY ────────────────────────────────────────</span>
+ansible-inventory <span class="nt">--list</span>
+ansible-inventory <span class="nt">--graph</span>
+ansible-inventory <span class="nt">-i</span> aws_ec2.yml <span class="nt">--list</span>
+
+<span class="c"># ─── VAULT ────────────────────────────────────────────</span>
+ansible-vault encrypt vars/secrets.yml
+ansible-vault edit vars/secrets.yml
+ansible-playbook site.yml <span class="nt">--vault-password-file</span> .vault_pass
+
+<span class="c"># ─── GALAXY ───────────────────────────────────────────</span>
+ansible-galaxy role init myrole
+ansible-galaxy <span class="nb">install </span>geerlingguy.nginx
+ansible-galaxy collection <span class="nb">install </span>community.docker
+ansible-galaxy <span class="nb">install</span> <span class="nt">-r</span> requirements.yml
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Terraform.html">← Terraform</a></td>
+        <td><a href="/devops-interview-guide/AWS.html">AWS →</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">CI/CD (Ansible in pipelines) →</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security (hardening with Ansible) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

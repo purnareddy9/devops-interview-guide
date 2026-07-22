@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🔐 Security — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🔐 Security — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Security.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🔐 Security — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🔐 Security — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🔐 Security — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Security.html" />
+<meta property="og:url" content="/devops-interview-guide/Security.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🔐 Security — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🔐 Security — DevOps Interview Guide","url":"/devops-interview-guide/Security.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🔐 Security — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-security--devops-interview-guide">🔐 Security — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Logging.html">← Logging</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/SRE.html">SRE →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#devsecops-fundamentals">DevSecOps Fundamentals</a></li>
+  <li><a href="#sast--dast">SAST &amp; DAST</a></li>
+  <li><a href="#container-security">Container Security</a></li>
+  <li><a href="#kubernetes-security">Kubernetes Security</a></li>
+  <li><a href="#secrets-management">Secrets Management</a></li>
+  <li><a href="#network-security">Network Security</a></li>
+  <li><a href="#compliance--audit">Compliance &amp; Audit</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="devsecops-fundamentals">DevSecOps Fundamentals</h2>
+
+<h3 id="shift-left-security">Shift Left Security</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traditional:  Code → Build → Test → Deploy → Security Audit (too late!)
+Shift Left:   Security checks at every stage
+
+Dev Phase:
+  - Pre-commit hooks (detect-secrets, git-secrets)
+  - IDE plugins (SonarLint, Snyk)
+  - Dependency scanning (Dependabot, Renovate)
+
+CI Phase:
+  - SAST (SonarQube, Semgrep, CodeQL)
+  - Dependency audit (npm audit, OWASP Dependency Check)
+  - Container scanning (Trivy, Snyk Container)
+  - SBOM generation (Syft, Docker Scout)
+  - Secret scanning (truffleHog, Gitleaks)
+
+CD Phase:
+  - Infrastructure scanning (tfsec, checkov, kics)
+  - Container signing (Cosign)
+  - Policy enforcement (OPA/Gatekeeper)
+
+Runtime:
+  - Runtime threat detection (Falco)
+  - Network policies
+  - RBAC audit
+  - Vulnerability management
+</code></pre></div></div>
+
+<h3 id="security-in-cicd-pipeline">Security in CI/CD Pipeline</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># GitHub Actions security pipeline</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run Gitleaks (secret scanning)</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">gitleaks/gitleaks-action@v2</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">SAST with CodeQL</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">github/codeql-action/analyze@v3</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Dependency scan</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">npm audit --audit-level=high</span>
+    <span class="s"># or</span>
+    <span class="s">pip-audit --requirement requirements.txt</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Container scan with Trivy</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">aquasecurity/trivy-action@master</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">image-ref</span><span class="pi">:</span> <span class="s">myapp:${{ github.sha }}</span>
+    <span class="na">exit-code</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+    <span class="na">severity</span><span class="pi">:</span> <span class="s">CRITICAL,HIGH</span>
+    <span class="na">format</span><span class="pi">:</span> <span class="s">sarif</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="s">trivy-results.sarif</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Infrastructure scan with Checkov</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">bridgecrewio/checkov-action@v12</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">directory</span><span class="pi">:</span> <span class="s">.</span>
+    <span class="na">framework</span><span class="pi">:</span> <span class="s">terraform,dockerfile,kubernetes</span>
+    <span class="na">soft_fail_on</span><span class="pi">:</span> <span class="s">LOW,MEDIUM</span>
+    <span class="na">hard_fail_on</span><span class="pi">:</span> <span class="s">HIGH,CRITICAL</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Sign image with Cosign</span>
+  <span class="na">env</span><span class="pi">:</span>
+    <span class="na">COSIGN_PRIVATE_KEY</span><span class="pi">:</span> <span class="s">${{ secrets.COSIGN_PRIVATE_KEY }}</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">cosign sign --key env://COSIGN_PRIVATE_KEY \</span>
+      <span class="s">ghcr.io/org/myapp:${{ github.sha }}</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Generate SBOM</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">anchore/sbom-action@v0</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">myapp:${{ github.sha }}</span>
+    <span class="na">format</span><span class="pi">:</span> <span class="s">spdx-json</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="sast--dast">SAST &amp; DAST</h2>
+
+<h3 id="sast-static-application-security-testing">SAST (Static Application Security Testing)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Languages</th>
+      <th>Integration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Semgrep</strong></td>
+      <td>30+ languages</td>
+      <td>CLI, CI, IDE</td>
+    </tr>
+    <tr>
+      <td><strong>CodeQL</strong></td>
+      <td>10+ languages</td>
+      <td>GitHub Actions native</td>
+    </tr>
+    <tr>
+      <td><strong>SonarQube</strong></td>
+      <td>30+ languages</td>
+      <td>Jenkins, GitHub, GitLab</td>
+    </tr>
+    <tr>
+      <td><strong>Bandit</strong></td>
+      <td>Python</td>
+      <td>pip install</td>
+    </tr>
+    <tr>
+      <td><strong>gosec</strong></td>
+      <td>Go</td>
+      <td>go install</td>
+    </tr>
+    <tr>
+      <td><strong>ESLint security plugins</strong></td>
+      <td>JavaScript</td>
+      <td>npm</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Semgrep — fast, customizable SAST</span>
+semgrep <span class="nt">--config</span><span class="o">=</span>auto <span class="nb">.</span>                          <span class="c"># Auto-detect language</span>
+semgrep <span class="nt">--config</span><span class="o">=</span>p/owasp-top-ten <span class="nb">.</span>             <span class="c"># OWASP Top 10 rules</span>
+semgrep <span class="nt">--config</span><span class="o">=</span>p/python <span class="nb">.</span>                    <span class="c"># Python-specific rules</span>
+semgrep <span class="nt">--config</span><span class="o">=</span>custom-rules.yaml <span class="nb">.</span>          <span class="c"># Custom rules</span>
+
+<span class="c"># Custom Semgrep rule</span>
+<span class="nb">cat</span> <span class="o">&gt;</span> no-hardcoded-secrets.yaml <span class="o">&lt;&lt;</span> <span class="sh">'</span><span class="no">EOF</span><span class="sh">'
+rules:
+  - id: hardcoded-api-key
+    patterns:
+      - pattern: </span><span class="nv">$KEY</span><span class="sh"> = "..."
+    pattern-filter:
+      - metavariable-regex:
+          metavariable: </span><span class="nv">$KEY</span><span class="sh">
+          regex: (api_key|secret|password|token)
+    message: "Potential hardcoded secret in </span><span class="nv">$KEY</span><span class="sh">"
+    severity: ERROR
+    languages: [python, javascript, go]
+</span><span class="no">EOF
+</span></code></pre></div></div>
+
+<h3 id="dast-dynamic-application-security-testing">DAST (Dynamic Application Security Testing)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># OWASP ZAP — active scanning against running app</span>
+docker run <span class="nt">-t</span> owasp/zap2docker-stable zap-api-scan.py <span class="se">\</span>
+  <span class="nt">-t</span> https://api.example.com/openapi.json <span class="se">\</span>
+  <span class="nt">-f</span> openapi <span class="se">\</span>
+  <span class="nt">-r</span> zap-report.html <span class="se">\</span>
+  <span class="nt">--hook</span><span class="o">=</span>/zap/auth_hook.py
+
+<span class="c"># Passive scan (proxy mode)</span>
+docker run <span class="nt">-d</span> <span class="nt">--name</span> zap <span class="nt">-p</span> 8080:8080 <span class="se">\</span>
+  owasp/zap2docker-stable zap.sh <span class="nt">-daemon</span> <span class="nt">-port</span> 8080
+
+<span class="c"># Nuclei — fast vulnerability scanner</span>
+nuclei <span class="nt">-u</span> https://myapp.example.com <span class="se">\</span>
+  <span class="nt">-t</span> cves/ <span class="se">\</span>
+  <span class="nt">-t</span> exposures/ <span class="se">\</span>
+  <span class="nt">-severity</span> critical,high
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="container-security">Container Security</h2>
+
+<h3 id="docker-security-best-practices">Docker Security Best Practices</h3>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── SECURE DOCKERFILE ────────────────────────────────</span>
+<span class="k">FROM</span><span class="s"> node:20-alpine</span>
+
+<span class="c"># 1. Run as non-root user</span>
+<span class="k">RUN </span>addgroup <span class="nt">--system</span> appgroup <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    adduser <span class="nt">--system</span> <span class="nt">--ingroup</span> appgroup appuser
+
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+
+<span class="c"># 2. Copy with correct ownership</span>
+<span class="k">COPY</span><span class="s"> --chown=appuser:appgroup package*.json ./</span>
+<span class="k">RUN </span>npm ci <span class="nt">--only</span><span class="o">=</span>production <span class="o">&amp;&amp;</span> npm cache clean <span class="nt">--force</span>
+
+<span class="k">COPY</span><span class="s"> --chown=appuser:appgroup . .</span>
+
+<span class="c"># 3. Switch to non-root</span>
+<span class="k">USER</span><span class="s"> appuser</span>
+
+<span class="c"># 4. Drop all capabilities (set in docker run or K8s)</span>
+<span class="k">EXPOSE</span><span class="s"> 3000</span>
+
+<span class="c"># 5. Read-only filesystem (set in docker run)</span>
+<span class="c"># docker run --read-only --tmpfs /tmp myapp</span>
+
+<span class="c"># 6. HEALTHCHECK</span>
+<span class="k">HEALTHCHECK</span><span class="s"> --interval=30s --timeout=5s --start-period=10s --retries=3 \</span>
+  CMD wget -qO- http://localhost:3000/health || exit 1
+
+<span class="k">ENTRYPOINT</span><span class="s"> ["node", "server.js"]</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Run container with security hardening</span>
+docker run <span class="nt">-d</span> <span class="se">\</span>
+  <span class="nt">--name</span> myapp <span class="se">\</span>
+  <span class="nt">--read-only</span> <span class="se">\</span>
+  <span class="nt">--tmpfs</span> /tmp:rw,noexec,nosuid,size<span class="o">=</span>100m <span class="se">\</span>
+  <span class="nt">--cap-drop</span><span class="o">=</span>ALL <span class="se">\</span>
+  <span class="nt">--cap-add</span><span class="o">=</span>NET_BIND_SERVICE <span class="se">\</span>
+  <span class="nt">--security-opt</span><span class="o">=</span>no-new-privileges:true <span class="se">\</span>
+  <span class="nt">--security-opt</span><span class="o">=</span><span class="s2">"seccomp=seccomp-profile.json"</span> <span class="se">\</span>
+  <span class="nt">--pids-limit</span><span class="o">=</span>100 <span class="se">\</span>
+  <span class="nt">--memory</span><span class="o">=</span>512m <span class="se">\</span>
+  <span class="nt">--cpus</span><span class="o">=</span><span class="s2">"0.5"</span> <span class="se">\</span>
+  myapp:latest
+</code></pre></div></div>
+
+<h3 id="image-scanning">Image Scanning</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Trivy — comprehensive vulnerability scanner</span>
+trivy image nginx:latest
+trivy image <span class="nt">--severity</span> HIGH,CRITICAL myapp:latest
+trivy image <span class="nt">--format</span> sarif myapp:latest <span class="o">&gt;</span> results.sarif
+trivy fs <span class="nb">.</span>           <span class="c"># Scan filesystem/repo</span>
+trivy k8s <span class="nt">--report</span> all cluster  <span class="c"># Scan K8s cluster</span>
+
+<span class="c"># Snyk Container</span>
+snyk container <span class="nb">test </span>myapp:latest
+snyk container monitor myapp:latest
+
+<span class="c"># Docker Scout</span>
+docker scout cves myapp:latest
+docker scout recommendations myapp:latest
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="kubernetes-security">Kubernetes Security</h2>
+
+<h3 id="pod-security-standards">Pod Security Standards</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Apply Pod Security Standards at namespace level</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Namespace</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">production</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">pod-security.kubernetes.io/enforce</span><span class="pi">:</span> <span class="s">restricted</span>
+    <span class="na">pod-security.kubernetes.io/audit</span><span class="pi">:</span> <span class="s">restricted</span>
+    <span class="na">pod-security.kubernetes.io/warn</span><span class="pi">:</span> <span class="s">restricted</span>
+</code></pre></div></div>
+
+<h3 id="security-context">Security Context</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Hardened Pod spec</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">securityContext</span><span class="pi">:</span>
+    <span class="na">runAsNonRoot</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">runAsUser</span><span class="pi">:</span> <span class="m">10001</span>
+    <span class="na">runAsGroup</span><span class="pi">:</span> <span class="m">10001</span>
+    <span class="na">fsGroup</span><span class="pi">:</span> <span class="m">10001</span>
+    <span class="na">seccompProfile</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">RuntimeDefault</span>
+    <span class="na">supplementalGroups</span><span class="pi">:</span> <span class="pi">[]</span>
+    <span class="na">sysctls</span><span class="pi">:</span> <span class="pi">[]</span>
+
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">app</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">myapp:latest</span>
+    <span class="na">securityContext</span><span class="pi">:</span>
+      <span class="na">allowPrivilegeEscalation</span><span class="pi">:</span> <span class="kc">false</span>
+      <span class="na">readOnlyRootFilesystem</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">runAsNonRoot</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">capabilities</span><span class="pi">:</span>
+        <span class="na">drop</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">ALL"</span><span class="pi">]</span>
+        <span class="na">add</span><span class="pi">:</span> <span class="pi">[]</span>     <span class="c1"># Only add what's absolutely needed</span>
+    <span class="na">volumeMounts</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">tmp</span>
+      <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/tmp</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">cache</span>
+      <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/app/cache</span>
+
+  <span class="na">volumes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">tmp</span>
+    <span class="na">emptyDir</span><span class="pi">:</span> <span class="pi">{}</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">cache</span>
+    <span class="na">emptyDir</span><span class="pi">:</span> <span class="pi">{}</span>
+</code></pre></div></div>
+
+<h3 id="opa--gatekeeper-policy-as-code">OPA / Gatekeeper (Policy as Code)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ConstraintTemplate — define a policy</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">templates.gatekeeper.sh/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ConstraintTemplate</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">k8srequiredlabels</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">crd</span><span class="pi">:</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">names</span><span class="pi">:</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">K8sRequiredLabels</span>
+  <span class="na">targets</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">target</span><span class="pi">:</span> <span class="s">admission.k8s.gatekeeper.sh</span>
+      <span class="na">rego</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">package k8srequiredlabels</span>
+        <span class="s">violation[{"msg": msg, "details": {"missing_labels": missing}}] {</span>
+          <span class="s">provided := {label | input.review.object.metadata.labels[label]}</span>
+          <span class="s">required := {label | label := input.parameters.labels[_]}</span>
+          <span class="s">missing := required - provided</span>
+          <span class="s">count(missing) &gt; 0</span>
+          <span class="s">msg := sprintf("Missing required labels: %v", [missing])</span>
+        <span class="s">}</span>
+
+<span class="s">---</span>
+<span class="c1"># Constraint — apply the policy</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">constraints.gatekeeper.sh/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">K8sRequiredLabels</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">require-app-labels</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">match</span><span class="pi">:</span>
+    <span class="na">kinds</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">apiGroups</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">apps"</span><span class="pi">]</span>
+        <span class="na">kinds</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">Deployment"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">StatefulSet"</span><span class="pi">]</span>
+    <span class="na">namespaces</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">production"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">staging"</span><span class="pi">]</span>
+  <span class="na">parameters</span><span class="pi">:</span>
+    <span class="na">labels</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">app"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">version"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">team"</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<h3 id="falco-runtime-threat-detection">Falco (Runtime Threat Detection)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># falco-rules.yaml — custom rules</span>
+<span class="pi">-</span> <span class="na">rule</span><span class="pi">:</span> <span class="s">Sensitive File Read</span>
+  <span class="na">desc</span><span class="pi">:</span> <span class="s">Detect reads of sensitive files</span>
+  <span class="na">condition</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">open_read and</span>
+    <span class="s">fd.name in (/etc/shadow, /etc/passwd, /root/.ssh/id_rsa) and</span>
+    <span class="s">not proc.name in (authorized-processes)</span>
+  <span class="na">output</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">Sensitive file read (user=%user.name command=%proc.cmdline</span>
+    <span class="s">file=%fd.name container=%container.name k8s_pod=%k8s.pod.name)</span>
+  <span class="na">priority</span><span class="pi">:</span> <span class="s">WARNING</span>
+  <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">filesystem</span><span class="pi">,</span> <span class="nv">security</span><span class="pi">]</span>
+
+<span class="pi">-</span> <span class="na">rule</span><span class="pi">:</span> <span class="s">Shell in Container</span>
+  <span class="na">desc</span><span class="pi">:</span> <span class="s">Detect shell spawn in container</span>
+  <span class="na">condition</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">spawned_process and</span>
+    <span class="s">container and</span>
+    <span class="s">proc.name in (shell_binaries) and</span>
+    <span class="s">not proc.pname in (allowed_parents)</span>
+  <span class="na">output</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">Shell spawned in container (user=%user.name container=%container.name</span>
+    <span class="s">shell=%proc.name parent=%proc.pname)</span>
+  <span class="na">priority</span><span class="pi">:</span> <span class="s">WARNING</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="secrets-management">Secrets Management</h2>
+
+<h3 id="hashicorp-vault">HashiCorp Vault</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Start Vault dev server</span>
+vault server <span class="nt">-dev</span>
+
+<span class="c"># Basic operations</span>
+<span class="nb">export </span><span class="nv">VAULT_ADDR</span><span class="o">=</span><span class="s1">'http://127.0.0.1:8200'</span>
+vault auth <span class="nt">-method</span><span class="o">=</span>token <span class="nv">token</span><span class="o">=</span>root
+
+<span class="c"># Write and read secrets</span>
+vault kv put secret/myapp <span class="se">\</span>
+  <span class="nv">db_password</span><span class="o">=</span><span class="s2">"supersecret"</span> <span class="se">\</span>
+  <span class="nv">api_key</span><span class="o">=</span><span class="s2">"key123"</span>
+
+vault kv get secret/myapp
+vault kv get <span class="nt">-field</span><span class="o">=</span>db_password secret/myapp
+
+<span class="c"># Dynamic secrets (database)</span>
+vault secrets <span class="nb">enable </span>database
+vault write database/config/postgres <span class="se">\</span>
+  <span class="nv">plugin_name</span><span class="o">=</span>postgresql-database-plugin <span class="se">\</span>
+  <span class="nv">allowed_roles</span><span class="o">=</span><span class="s2">"myapp-role"</span> <span class="se">\</span>
+  <span class="nv">connection_url</span><span class="o">=</span><span class="s2">"postgresql://{{username}}:{{password}}@postgres:5432/mydb"</span> <span class="se">\</span>
+  <span class="nv">username</span><span class="o">=</span><span class="s2">"vault_admin"</span> <span class="se">\</span>
+  <span class="nv">password</span><span class="o">=</span><span class="s2">"vault_password"</span>
+
+vault write database/roles/myapp-role <span class="se">\</span>
+  <span class="nv">db_name</span><span class="o">=</span>postgres <span class="se">\</span>
+  <span class="nv">creation_statements</span><span class="o">=</span><span class="s2">"CREATE ROLE '{{name}}' WITH LOGIN PASSWORD '{{password}}' VALID UNTIL '{{expiration}}'; GRANT SELECT ON ALL TABLES IN SCHEMA public TO '{{name}}';"</span> <span class="se">\</span>
+  <span class="nv">default_ttl</span><span class="o">=</span><span class="s2">"1h"</span> <span class="se">\</span>
+  <span class="nv">max_ttl</span><span class="o">=</span><span class="s2">"24h"</span>
+
+<span class="c"># Get dynamic credentials</span>
+vault <span class="nb">read </span>database/creds/myapp-role
+</code></pre></div></div>
+
+<h3 id="vault-in-kubernetes-vault-agent">Vault in Kubernetes (Vault Agent)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Inject secrets into pods via annotations</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">annotations</span><span class="pi">:</span>
+        <span class="na">vault.hashicorp.com/agent-inject</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+        <span class="na">vault.hashicorp.com/role</span><span class="pi">:</span> <span class="s2">"</span><span class="s">myapp"</span>
+        <span class="na">vault.hashicorp.com/agent-inject-secret-config.env</span><span class="pi">:</span> <span class="s2">"</span><span class="s">secret/data/myapp"</span>
+        <span class="na">vault.hashicorp.com/agent-inject-template-config.env</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">{{ with secret "secret/data/myapp" }}</span>
+          <span class="s">export DB_PASSWORD="{{ .Data.data.db_password }}"</span>
+          <span class="s">export API_KEY="{{ .Data.data.api_key }}"</span>
+          <span class="s">{{ end }}</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">serviceAccountName</span><span class="pi">:</span> <span class="s">myapp</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+        <span class="na">command</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">sh"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">-c"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">.</span><span class="nv"> </span><span class="s">/vault/secrets/config.env</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">node</span><span class="nv"> </span><span class="s">server.js"</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<h3 id="external-secrets-operator-kubernetes">External Secrets Operator (Kubernetes)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># SecretStore — connect to AWS Secrets Manager</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">external-secrets.io/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">SecretStore</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">aws-secretsmanager</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">provider</span><span class="pi">:</span>
+    <span class="na">aws</span><span class="pi">:</span>
+      <span class="na">service</span><span class="pi">:</span> <span class="s">SecretsManager</span>
+      <span class="na">region</span><span class="pi">:</span> <span class="s">us-east-1</span>
+      <span class="na">auth</span><span class="pi">:</span>
+        <span class="na">jwt</span><span class="pi">:</span>
+          <span class="na">serviceAccountRef</span><span class="pi">:</span>
+            <span class="na">name</span><span class="pi">:</span> <span class="s">external-secrets-sa</span>
+
+<span class="nn">---</span>
+<span class="c1"># ExternalSecret — sync to Kubernetes Secret</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">external-secrets.io/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ExternalSecret</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-secrets</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">refreshInterval</span><span class="pi">:</span> <span class="s">1h</span>
+  <span class="na">secretStoreRef</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">aws-secretsmanager</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">SecretStore</span>
+  <span class="na">target</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-secret</span>        <span class="c1"># Creates this K8s Secret</span>
+    <span class="na">creationPolicy</span><span class="pi">:</span> <span class="s">Owner</span>
+  <span class="na">data</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">secretKey</span><span class="pi">:</span> <span class="s">db_password</span>    <span class="c1"># K8s secret key</span>
+    <span class="na">remoteRef</span><span class="pi">:</span>
+      <span class="na">key</span><span class="pi">:</span> <span class="s">production/myapp</span>   <span class="c1"># AWS Secrets Manager path</span>
+      <span class="na">property</span><span class="pi">:</span> <span class="s">db_password</span>   <span class="c1"># JSON property within secret</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="network-security">Network Security</h2>
+
+<h3 id="zero-trust-networking">Zero Trust Networking</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traditional: Trust internal network, block external
+Zero Trust:  Never trust, always verify — even internal traffic
+
+Principles:
+1. Verify explicitly (authenticate and authorize every request)
+2. Use least privilege access
+3. Assume breach (isolate systems, encrypt traffic, monitor)
+
+Kubernetes implementation:
+- NetworkPolicies: default-deny, explicit allow
+- mTLS: service mesh (Istio, Linkerd) encrypts all service traffic
+- OPA: policy enforcement on every request
+- Audit logging: every action logged
+</code></pre></div></div>
+
+<h3 id="network-policy-zero-trust">Network Policy (Zero Trust)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Default deny all ingress/egress</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">default-deny-all</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span> <span class="pi">{}</span>     <span class="c1"># Applies to all pods in namespace</span>
+  <span class="na">policyTypes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">Ingress</span>
+  <span class="pi">-</span> <span class="s">Egress</span>
+
+<span class="nn">---</span>
+<span class="c1"># Allow specific traffic</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">allow-api-ingress</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">api</span>
+  <span class="na">policyTypes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">Ingress</span>
+  <span class="pi">-</span> <span class="s">Egress</span>
+  <span class="na">ingress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">from</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">namespaceSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">ingress-nginx</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">8080</span>
+  <span class="na">egress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">to</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">podSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">app</span><span class="pi">:</span> <span class="s">postgres</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">5432</span>
+  <span class="pi">-</span> <span class="na">to</span><span class="pi">:</span>                    <span class="c1"># Allow DNS</span>
+    <span class="pi">-</span> <span class="na">namespaceSelector</span><span class="pi">:</span> <span class="pi">{}</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">protocol</span><span class="pi">:</span> <span class="s">UDP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">53</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the OWASP Top 10?</strong></p>
+
+<blockquote>
+  <p>The OWASP Top 10 is a standard awareness document for web application security. The current top issues include:</p>
+  <ol>
+    <li>Broken Access Control</li>
+    <li>Cryptographic Failures</li>
+    <li>Injection (SQL, NoSQL, Command)</li>
+    <li>Insecure Design</li>
+    <li>Security Misconfiguration</li>
+    <li>Vulnerable and Outdated Components</li>
+    <li>Identification and Authentication Failures</li>
+    <li>Software and Data Integrity Failures</li>
+    <li>Security Logging and Monitoring Failures</li>
+    <li>Server-Side Request Forgery (SSRF)</li>
+  </ol>
+</blockquote>
+
+<p><strong>Q2: What is the principle of least privilege?</strong></p>
+
+<blockquote>
+  <p><strong>Least privilege</strong> means granting the minimum permissions necessary for a subject (user, service, process) to perform its function — nothing more. In DevOps: a deployment service account only needs permissions to update specific K8s deployments, not cluster-admin. A Lambda function only needs the S3 bucket it reads from. A database user only has SELECT on tables it queries. This limits the blast radius if a credential is compromised.</p>
+</blockquote>
+
+<p><strong>Q3: What is the difference between authentication and authorization?</strong></p>
+
+<blockquote>
+  <p><strong>Authentication (AuthN)</strong>: “Who are you?” — verifying identity (username/password, certificate, token, biometrics). <strong>Authorization (AuthZ)</strong>: “What can you do?” — determining permissions after identity is confirmed (RBAC, ABAC, policies). Example: a user authenticated with valid credentials (AuthN) but only has read access to specific resources (AuthZ).</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: How do you store and manage secrets in Kubernetes?</strong></p>
+
+<blockquote>
+  <p>Built-in Kubernetes Secrets are base64-encoded (not encrypted) — insufficient for production. Better approaches:</p>
+  <ul>
+    <li><strong>External Secrets Operator</strong>: sync secrets from AWS Secrets Manager, Vault, GCP Secret Manager into K8s Secrets automatically</li>
+    <li><strong>Vault Agent Sidecar / CSI Driver</strong>: inject secrets directly into pods as files or env vars</li>
+    <li><strong>Sealed Secrets (Bitnami)</strong>: encrypt Secrets with a cluster-specific key, store encrypted form in Git</li>
+    <li><strong>Never</strong>: store plaintext secrets in ConfigMaps, env vars in Dockerfiles, or commit <code class="language-plaintext highlighter-rouge">.env</code> files</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q5: What is SAST vs DAST?</strong></p>
+
+<blockquote>
+  <p><strong>SAST (Static Application Security Testing)</strong>: analyzes source code or binary without running the application. Catches: SQL injection patterns, hardcoded secrets, insecure dependencies, known vulnerability patterns. Fast, runs in CI. Tools: Semgrep, CodeQL, Bandit. <strong>DAST (Dynamic Application Security Testing)</strong>: tests a running application by sending malicious inputs. Catches: runtime vulnerabilities, authentication issues, business logic flaws. Slower, needs a running environment. Tools: OWASP ZAP, Nuclei.</p>
+</blockquote>
+
+<p><strong>Q6: What is supply chain security?</strong></p>
+
+<blockquote>
+  <p>Supply chain security protects the entire software delivery pipeline from code to deployment:</p>
+  <ul>
+    <li><strong>SBOM</strong> (Software Bill of Materials): inventory of all components and dependencies</li>
+    <li><strong>Dependency signing</strong>: verify package integrity (npm integrity hashes, PyPI hash checking)</li>
+    <li><strong>Image signing</strong>: Cosign signs container images; OPA/Gatekeeper verifies signatures before deploying</li>
+    <li><strong>Provenance attestation</strong>: SLSA framework documents how artifacts were built</li>
+    <li><strong>Pin dependencies</strong>: use exact versions or digests, not floating tags</li>
+    <li><strong>Action pinning</strong>: pin GitHub Actions to full SHA, not tag</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: Describe a security incident response process for a Kubernetes cluster.</strong></p>
+
+<blockquote>
+  <p><strong>Detection</strong>: Falco alert or unusual activity in audit logs.
+<strong>Isolation</strong>: Cordon and drain affected node; apply NetworkPolicy to isolate compromised pod.
+<strong>Investigation</strong>: <code class="language-plaintext highlighter-rouge">kubectl exec</code> or forensic container; review audit logs (<code class="language-plaintext highlighter-rouge">kubectl get events</code>, Cloud audit logs); check for abnormal API calls.
+<strong>Containment</strong>: Force-delete compromised pods; revoke service account credentials; rotate affected secrets.
+<strong>Remediation</strong>: Patch vulnerability; update container images; apply missing security policies.
+<strong>Recovery</strong>: Redeploy clean workloads from GitOps source; verify no persistence mechanisms.
+<strong>Post-incident</strong>: Write incident report; improve detection rules; update RBAC/NetworkPolicy.</p>
+</blockquote>
+
+<p><strong>Q8: How does mTLS work in a service mesh?</strong></p>
+
+<blockquote>
+  <p><strong>mTLS (Mutual TLS)</strong>: both client and server authenticate each other with certificates. In Istio/Linkerd: each pod gets a sidecar proxy (Envoy) and a workload certificate issued by the mesh’s certificate authority. All service-to-service traffic is encrypted and authenticated at the proxy level — the application doesn’t need to implement TLS. This enables: encryption in transit, service identity (not just IP-based), and access policies based on service identity.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-exposed-secret-in-git">🔵 Scenario 1: Exposed Secret in Git</h3>
+
+<p><em>“A developer accidentally committed an AWS access key to a public GitHub repository.”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. IMMEDIATE: Deactivate the key (don't wait!)</span>
+aws iam delete-access-key <span class="nt">--access-key-id</span> AKIAXXXXXXXX <span class="nt">--user-name</span> ci-user
+<span class="c"># Or from AWS Console: IAM → Users → Security credentials → Deactivate key</span>
+
+<span class="c"># 2. Rotate: create new key for legitimate use</span>
+aws iam create-access-key <span class="nt">--user-name</span> ci-user
+
+<span class="c"># 3. Check for unauthorized usage (within 10 min is critical)</span>
+aws cloudtrail lookup-events <span class="se">\</span>
+  <span class="nt">--lookup-attributes</span> <span class="nv">AttributeKey</span><span class="o">=</span>AccessKeyId,AttributeValue<span class="o">=</span>AKIAXXXXXXXX <span class="se">\</span>
+  <span class="nt">--start-time</span> 2024-01-01T00:00:00Z
+
+<span class="c"># 4. Remove from Git history</span>
+git filter-repo <span class="nt">--path-glob</span> <span class="s2">"*.env"</span> <span class="nt">--invert-paths</span>
+<span class="c"># Or use BFG Repo Cleaner</span>
+
+<span class="c"># 5. Force push</span>
+git push origin <span class="nt">--force</span> <span class="nt">--all</span>
+git push origin <span class="nt">--force</span> <span class="nt">--tags</span>
+
+<span class="c"># 6. Prevention:</span>
+<span class="c"># - Add .gitignore entries</span>
+<span class="c"># - Install pre-commit hooks (detect-secrets, gitleaks)</span>
+<span class="c"># - Enable GitHub Secret Scanning</span>
+<span class="c"># - Enable Dependabot alerts</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── IMAGE SCANNING ───────────────────────────────────</span>
+trivy image <span class="nt">--severity</span> HIGH,CRITICAL myapp:latest
+docker scout cves myapp:latest
+snyk container <span class="nb">test </span>myapp:latest
+
+<span class="c"># ─── SECRET SCANNING ──────────────────────────────────</span>
+gitleaks detect <span class="nt">--source</span> <span class="nb">.</span>
+detect-secrets scan <span class="o">&gt;</span> .secrets.baseline
+trufflehog git https://github.com/org/repo
+
+<span class="c"># ─── INFRASTRUCTURE SCANNING ──────────────────────────</span>
+checkov <span class="nt">-d</span> <span class="nb">.</span> <span class="nt">--framework</span> terraform
+tfsec <span class="nb">.</span>
+kics scan <span class="nt">-p</span> <span class="nb">.</span>
+
+<span class="c"># ─── K8S SECURITY ─────────────────────────────────────</span>
+kubectl auth can-i <span class="nt">--list</span>                    <span class="c"># What can I do?</span>
+kubectl auth can-i get pods <span class="nt">--as</span><span class="o">=</span>serviceaccount
+kubesec scan pod.yaml                        <span class="c"># Pod security score</span>
+kube-bench run <span class="nt">--targets</span> node               <span class="c"># CIS benchmark</span>
+kubectl get rolebindings,clusterrolebindings <span class="nt">-A</span> <span class="nt">-o</span> wide
+
+<span class="c"># ─── VAULT ────────────────────────────────────────────</span>
+vault kv get secret/myapp
+vault kv put secret/myapp <span class="nv">key</span><span class="o">=</span>value
+vault token lookup
+vault auth list
+vault policy list
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Logging.html">← Logging</a></td>
+        <td><a href="/devops-interview-guide/SRE.html">SRE →</a></td>
+        <td><a href="/devops-interview-guide/Kubernetes.html">Kubernetes (K8s security) →</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">CI/CD (pipeline security) →</a></td>
+        <td><a href="/devops-interview-guide/AWS.html">AWS (IAM, KMS) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

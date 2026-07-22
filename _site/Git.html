@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🔀 Git — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🔀 Git — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Git.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🔀 Git — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🔀 Git — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🔀 Git — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Git.html" />
+<meta property="og:url" content="/devops-interview-guide/Git.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🔀 Git — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🔀 Git — DevOps Interview Guide","url":"/devops-interview-guide/Git.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🔀 Git — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-git--devops-interview-guide">🔀 Git — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Networking.html">← Networking</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Docker.html">Docker →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#git-internals">Git Internals</a></li>
+  <li><a href="#core-operations">Core Operations</a></li>
+  <li><a href="#branching--merging">Branching &amp; Merging</a></li>
+  <li><a href="#rebasing">Rebasing</a></li>
+  <li><a href="#git-workflows">Git Workflows</a></li>
+  <li><a href="#git-hooks">Git Hooks</a></li>
+  <li><a href="#advanced-operations">Advanced Operations</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="git-internals">Git Internals</h2>
+
+<h3 id="how-git-stores-data">How Git Stores Data</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Working Directory  →  Staging Area (Index)  →  Repository (.git/)
+                   git add                  git commit
+
+.git/
+├── HEAD           → Points to current branch ref
+├── config         → Repository configuration
+├── objects/       → All content (blobs, trees, commits, tags)
+│   ├── ab/        → First 2 chars of SHA-1 hash
+│   │   └── cd1234...  → Object file
+│   ├── pack/      → Packed objects (compressed)
+├── refs/
+│   ├── heads/     → Branch references
+│   └── tags/      → Tag references
+└── COMMIT_EDITMSG → Last commit message
+</code></pre></div></div>
+
+<h3 id="git-object-types">Git Object Types</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Object</th>
+      <th>Description</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Blob</strong></td>
+      <td>File content</td>
+      <td>Raw file data</td>
+    </tr>
+    <tr>
+      <td><strong>Tree</strong></td>
+      <td>Directory structure</td>
+      <td>List of blobs + trees with names</td>
+    </tr>
+    <tr>
+      <td><strong>Commit</strong></td>
+      <td>Snapshot pointer</td>
+      <td>Tree hash, parent(s), author, message</td>
+    </tr>
+    <tr>
+      <td><strong>Tag</strong></td>
+      <td>Named ref</td>
+      <td>Points to a commit with metadata</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Inspect git objects</span>
+git cat-file <span class="nt">-t</span> abc1234    <span class="c"># Type of object</span>
+git cat-file <span class="nt">-p</span> abc1234    <span class="c"># Content of object</span>
+git log <span class="nt">--oneline</span>          <span class="c"># Short commit hashes</span>
+git show HEAD:path/to/file <span class="c"># File content at HEAD</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="core-operations">Core Operations</h2>
+
+<h3 id="essential-commands">Essential Commands</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Initialize</span>
+git init                          <span class="c"># New repo</span>
+git clone https://github.com/... <span class="c"># Clone remote</span>
+
+<span class="c"># Status &amp; inspection</span>
+git status                        <span class="c"># Working tree status</span>
+git diff                          <span class="c"># Unstaged changes</span>
+git diff <span class="nt">--staged</span>                 <span class="c"># Staged vs last commit</span>
+git log <span class="nt">--oneline</span> <span class="nt">--graph</span> <span class="nt">--all</span>   <span class="c"># Visual branch history</span>
+git log <span class="nt">--author</span><span class="o">=</span><span class="s2">"Alice"</span> <span class="nt">--since</span><span class="o">=</span><span class="s2">"2 weeks ago"</span>
+git blame file.py                 <span class="c"># Who changed each line</span>
+
+<span class="c"># Staging</span>
+git add file.py                   <span class="c"># Stage specific file</span>
+git add <span class="nt">-p</span>                        <span class="c"># Interactive hunk staging</span>
+git add <span class="nb">.</span>                         <span class="c"># Stage all changes</span>
+git reset HEAD file.py            <span class="c"># Unstage (keep changes)</span>
+
+<span class="c"># Committing</span>
+git commit <span class="nt">-m</span> <span class="s2">"feat: add user auth"</span>
+git commit <span class="nt">--amend</span>                <span class="c"># Modify last commit</span>
+git commit <span class="nt">--amend</span> <span class="nt">--no-edit</span>      <span class="c"># Add to last commit silently</span>
+
+<span class="c"># Remote operations</span>
+git remote add origin https://...
+git fetch origin                  <span class="c"># Download, don't merge</span>
+git pull origin main              <span class="c"># fetch + merge</span>
+git pull <span class="nt">--rebase</span> origin main     <span class="c"># fetch + rebase</span>
+git push origin feature-branch
+git push <span class="nt">--force-with-lease</span>       <span class="c"># Safe force push</span>
+
+<span class="c"># Undoing changes</span>
+git restore file.py               <span class="c"># Discard working dir changes</span>
+git restore <span class="nt">--staged</span> file.py      <span class="c"># Unstage</span>
+git revert abc1234                <span class="c"># Create new commit undoing</span>
+git reset <span class="nt">--soft</span> HEAD~1           <span class="c"># Undo commit, keep staged</span>
+git reset <span class="nt">--mixed</span> HEAD~1          <span class="c"># Undo commit, keep unstaged</span>
+git reset <span class="nt">--hard</span> HEAD~1           <span class="c"># Undo commit, discard changes</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="branching--merging">Branching &amp; Merging</h2>
+
+<h3 id="branch-operations">Branch Operations</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create &amp; switch</span>
+git branch feature/login          <span class="c"># Create branch</span>
+git checkout feature/login        <span class="c"># Switch to branch</span>
+git checkout <span class="nt">-b</span> feature/login     <span class="c"># Create + switch (classic)</span>
+git switch <span class="nt">-c</span> feature/login       <span class="c"># Create + switch (modern)</span>
+
+<span class="c"># List branches</span>
+git branch <span class="nt">-a</span>                     <span class="c"># All (local + remote)</span>
+git branch <span class="nt">-v</span>                     <span class="c"># With last commit</span>
+git branch <span class="nt">--merged</span>               <span class="c"># Branches merged into current</span>
+git branch <span class="nt">--no-merged</span>            <span class="c"># Unmerged branches</span>
+
+<span class="c"># Delete</span>
+git branch <span class="nt">-d</span> feature/login       <span class="c"># Delete (safe)</span>
+git branch <span class="nt">-D</span> feature/login       <span class="c"># Force delete</span>
+git push origin <span class="nt">--delete</span> feature/login  <span class="c"># Delete remote</span>
+
+<span class="c"># Rename</span>
+git branch <span class="nt">-m</span> old-name new-name
+</code></pre></div></div>
+
+<h3 id="merge-strategies">Merge Strategies</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Fast-forward merge (clean, linear history)</span>
+git merge feature/login
+<span class="c"># If possible, just moves pointer forward</span>
+
+<span class="c"># No-fast-forward (preserves merge commit)</span>
+git merge <span class="nt">--no-ff</span> feature/login
+
+<span class="c"># Squash merge (all commits → one commit)</span>
+git merge <span class="nt">--squash</span> feature/login
+git commit <span class="nt">-m</span> <span class="s2">"feat: add login feature"</span>
+
+<span class="c"># Merge with message</span>
+git merge feature/login <span class="nt">-m</span> <span class="s2">"Merge feature/login into main"</span>
+
+<span class="c"># Abort a merge conflict</span>
+git merge <span class="nt">--abort</span>
+
+<span class="c"># Resolving conflicts</span>
+git status                        <span class="c"># See conflicted files</span>
+<span class="c"># Edit files to resolve &lt;&lt;&lt;&lt; ==== &gt;&gt;&gt;&gt; markers</span>
+git add resolved_file.py
+git commit                        <span class="c"># Complete the merge</span>
+</code></pre></div></div>
+
+<h3 id="conflict-markers">Conflict Markers</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> <span class="n">HEAD</span>
+<span class="k">def</span> <span class="nf">authenticate</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nf">check_ldap</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>  <span class="c1"># Our version
+</span><span class="o">=======</span>
+<span class="k">def</span> <span class="nf">authenticate</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nf">check_database</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>  <span class="c1"># Their version
+</span><span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="n">feature</span><span class="o">/</span><span class="n">login</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="rebasing">Rebasing</h2>
+
+<h3 id="rebase-vs-merge">Rebase vs Merge</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Before:
+  A - B - C  (main)
+       \
+        D - E  (feature)
+
+After merge:
+  A - B - C - M  (main, M = merge commit)
+       \       /
+        D - E
+
+After rebase:
+  A - B - C - D' - E'  (feature rebased onto main)
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Rebase feature onto main</span>
+git checkout feature/login
+git rebase main
+
+<span class="c"># Interactive rebase (last 4 commits)</span>
+git rebase <span class="nt">-i</span> HEAD~4
+<span class="c"># Commands: pick, reword, edit, squash, fixup, drop</span>
+
+<span class="c"># Squash commits during rebase</span>
+<span class="c"># Change 'pick' to 'squash' for commits to combine</span>
+
+<span class="c"># Rebase onto specific branch</span>
+git rebase origin/main
+
+<span class="c"># Continue after resolving conflict</span>
+git rebase <span class="nt">--continue</span>
+
+<span class="c"># Abort rebase</span>
+git rebase <span class="nt">--abort</span>
+</code></pre></div></div>
+
+<h3 id="interactive-rebase-example">Interactive Rebase Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pick abc123 feat: add login form
+squash def456 fix: login form styles
+squash ghi789 fix: typo in login
+reword jkl012 refactor: extract auth logic
+drop mno345 WIP: debugging
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="git-workflows">Git Workflows</h2>
+
+<h3 id="gitflow">GitFlow</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main         ──────●────────────────────────●──
+                   │                        │
+develop      ──────●────●────●────●─────────●──
+                        │    │    │
+feature           ──────●    │    │
+                             │    │
+release                 ─────●    │
+                                  │
+hotfix                       ─────●
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># GitFlow commands</span>
+git flow init
+git flow feature start user-auth
+git flow feature finish user-auth
+git flow release start 1.2.0
+git flow release finish 1.2.0
+git flow hotfix start critical-bug
+git flow hotfix finish critical-bug
+</code></pre></div></div>
+
+<h3 id="trunk-based-development">Trunk-Based Development</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main  ─────●─────●─────●─────●─────●────&gt;
+           │     │     │     │
+        short  short  short  short
+        lived  lived  lived  lived
+</code></pre></div></div>
+
+<ul>
+  <li>Feature flags to hide incomplete features</li>
+  <li>Short-lived branches (&lt; 1 day ideally)</li>
+  <li>CI runs on every commit to main</li>
+  <li>Continuous deployment</li>
+</ul>
+
+<h3 id="github-flow-simplified">GitHub Flow (simplified)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Create branch from main
+2. Add commits
+3. Open Pull Request
+4. Review &amp; discuss
+5. Deploy to test environment
+6. Merge to main
+7. Deploy main to production
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="git-hooks">Git Hooks</h2>
+
+<h3 id="common-hooks">Common Hooks</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hook</th>
+      <th>Trigger</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pre-commit</code></td>
+      <td>Before commit created</td>
+      <td>Lint, format, unit tests</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">commit-msg</code></td>
+      <td>After commit message written</td>
+      <td>Enforce message format</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pre-push</code></td>
+      <td>Before push to remote</td>
+      <td>Run full test suite</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">post-merge</code></td>
+      <td>After successful merge</td>
+      <td>Update dependencies</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pre-receive</code></td>
+      <td>Server-side: before push accepted</td>
+      <td>Policy enforcement</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">post-receive</code></td>
+      <td>Server-side: after push accepted</td>
+      <td>Trigger CI/CD, notify</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="pre-commit-hook-example">Pre-commit Hook Example</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># .git/hooks/pre-commit (chmod +x)</span>
+
+<span class="c"># Run linter</span>
+<span class="nb">echo</span> <span class="s2">"Running flake8..."</span>
+<span class="k">if</span> <span class="o">!</span> flake8 .<span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Linting failed! Commit aborted."</span>
+    <span class="nb">exit </span>1
+<span class="k">fi</span>
+
+<span class="c"># Check for debug statements</span>
+<span class="k">if </span><span class="nb">grep</span> <span class="nt">-rn</span> <span class="s2">"debugger</span><span class="se">\|</span><span class="s2">console.log</span><span class="se">\|</span><span class="s2">pdb.set_trace"</span> <span class="nt">--include</span><span class="o">=</span><span class="s2">"*.py"</span> <span class="nt">--include</span><span class="o">=</span><span class="s2">"*.js"</span> .<span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Found debug statements! Remove before committing."</span>
+    <span class="nb">exit </span>1
+<span class="k">fi</span>
+
+<span class="c"># Run tests</span>
+<span class="nb">echo</span> <span class="s2">"Running tests..."</span>
+<span class="k">if</span> <span class="o">!</span> python <span class="nt">-m</span> pytest tests/ <span class="nt">-q</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Tests failed! Commit aborted."</span>
+    <span class="nb">exit </span>1
+<span class="k">fi
+
+</span><span class="nb">echo</span> <span class="s2">"All checks passed!"</span>
+</code></pre></div></div>
+
+<h3 id="commit-message-hook">Commit Message Hook</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># .git/hooks/commit-msg</span>
+
+<span class="nv">COMMIT_MSG_FILE</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+<span class="nv">COMMIT_MSG</span><span class="o">=</span><span class="si">$(</span><span class="nb">cat</span> <span class="s2">"</span><span class="nv">$COMMIT_MSG_FILE</span><span class="s2">"</span><span class="si">)</span>
+
+<span class="c"># Enforce Conventional Commits format</span>
+<span class="nv">PATTERN</span><span class="o">=</span><span class="s2">"^(feat|fix|docs|style|refactor|test|chore|ci)(</span><span class="se">\(</span><span class="s2">.+</span><span class="se">\)</span><span class="s2">)?: .{1,100}$"</span>
+
+<span class="k">if</span> <span class="o">!</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$COMMIT_MSG</span><span class="s2">"</span> | <span class="nb">grep</span> <span class="nt">-qE</span> <span class="s2">"</span><span class="nv">$PATTERN</span><span class="s2">"</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Invalid commit message format!"</span>
+    <span class="nb">echo</span> <span class="s2">"Expected: type(scope): description"</span>
+    <span class="nb">echo</span> <span class="s2">"Types: feat, fix, docs, style, refactor, test, chore, ci"</span>
+    <span class="nb">echo</span> <span class="s2">"Example: feat(auth): add JWT token validation"</span>
+    <span class="nb">exit </span>1
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="advanced-operations">Advanced Operations</h2>
+
+<h3 id="cherry-pick">Cherry-Pick</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Apply a specific commit to current branch</span>
+git cherry-pick abc1234
+
+<span class="c"># Cherry-pick a range</span>
+git cherry-pick abc1234..def5678
+
+<span class="c"># Cherry-pick without committing</span>
+git cherry-pick <span class="nt">-n</span> abc1234
+
+<span class="c"># Cherry-pick with merge commit</span>
+git cherry-pick <span class="nt">-m</span> 1 abc1234
+</code></pre></div></div>
+
+<h3 id="stash">Stash</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git stash                         <span class="c"># Stash changes</span>
+git stash push <span class="nt">-m</span> <span class="s2">"WIP: login"</span>    <span class="c"># Named stash</span>
+git stash list                    <span class="c"># List stashes</span>
+git stash apply stash@<span class="o">{</span>1<span class="o">}</span>         <span class="c"># Apply specific stash</span>
+git stash pop                     <span class="c"># Apply + remove top stash</span>
+git stash drop stash@<span class="o">{</span>1<span class="o">}</span>          <span class="c"># Delete specific stash</span>
+git stash branch feature/branch   <span class="c"># Create branch from stash</span>
+</code></pre></div></div>
+
+<h3 id="tags">Tags</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git tag v1.2.0                    <span class="c"># Lightweight tag</span>
+git tag <span class="nt">-a</span> v1.2.0 <span class="nt">-m</span> <span class="s2">"Release 1.2.0"</span>  <span class="c"># Annotated tag</span>
+git push origin v1.2.0            <span class="c"># Push tag</span>
+git push origin <span class="nt">--tags</span>            <span class="c"># Push all tags</span>
+git tag <span class="nt">-d</span> v1.2.0                 <span class="c"># Delete local tag</span>
+git push origin <span class="nt">--delete</span> v1.2.0  <span class="c"># Delete remote tag</span>
+</code></pre></div></div>
+
+<h3 id="submodules">Submodules</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git submodule add https://github.com/... path/to/sub
+git submodule init
+git submodule update
+git submodule update <span class="nt">--init</span> <span class="nt">--recursive</span>  <span class="c"># Deep init</span>
+git submodule foreach git pull origin main
+</code></pre></div></div>
+
+<h3 id="bisect-bug-finding">Bisect (Bug Finding)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git bisect start
+git bisect bad                    <span class="c"># Current commit is broken</span>
+git bisect good v1.0.0            <span class="c"># This commit was good</span>
+<span class="c"># Git checks out middle commit; test it</span>
+git bisect bad                    <span class="c"># Or: git bisect good</span>
+<span class="c"># Repeat until first bad commit found</span>
+git bisect reset                  <span class="c"># Exit bisect</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between <code class="language-plaintext highlighter-rouge">git pull</code> and <code class="language-plaintext highlighter-rouge">git fetch</code>?</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">git fetch</code> downloads changes from remote but does NOT merge them — your working branch is unchanged. You can review changes with <code class="language-plaintext highlighter-rouge">git diff origin/main</code>. <code class="language-plaintext highlighter-rouge">git pull</code> = <code class="language-plaintext highlighter-rouge">git fetch</code> + <code class="language-plaintext highlighter-rouge">git merge</code> (or <code class="language-plaintext highlighter-rouge">git rebase</code> with <code class="language-plaintext highlighter-rouge">--rebase</code> flag). Best practice: use <code class="language-plaintext highlighter-rouge">git fetch</code> then review, then merge manually.</p>
+</blockquote>
+
+<p><strong>Q2: Explain <code class="language-plaintext highlighter-rouge">git rebase</code> vs <code class="language-plaintext highlighter-rouge">git merge</code>.</strong></p>
+
+<blockquote>
+  <p>Both integrate changes from one branch to another.</p>
+  <ul>
+    <li><strong>Merge</strong> preserves history as-is, creates a merge commit, non-destructive</li>
+    <li><strong>Rebase</strong> rewrites commit history by replaying commits on top of another branch, creates cleaner linear history</li>
+    <li><strong>Rule</strong>: Never rebase public/shared branches (rewrites history others depend on). Rebase private feature branches before merging.</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q3: What does <code class="language-plaintext highlighter-rouge">git reset --hard</code> do?</strong></p>
+
+<blockquote>
+  <p>Moves the current branch pointer AND updates the staging area AND working directory to match the specified commit. <strong>All uncommitted changes are lost.</strong> Dangerous: you cannot recover with Git unless you know the previous commit SHA (check <code class="language-plaintext highlighter-rouge">git reflog</code> within ~30 days).</p>
+</blockquote>
+
+<p><strong>Q4: How do you undo a commit that has already been pushed?</strong></p>
+
+<blockquote>
+  <p>Use <code class="language-plaintext highlighter-rouge">git revert &lt;commit-sha&gt;</code> — this creates a new commit that undoes the changes, preserving history. This is safe for shared branches. <strong>Never</strong> use <code class="language-plaintext highlighter-rouge">git reset --hard</code> on public branches as it rewrites history and will break other developers’ local repos.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q5: Explain GitFlow and when you’d use it vs Trunk-Based Development.</strong></p>
+
+<blockquote>
+  <p><strong>GitFlow</strong> has <code class="language-plaintext highlighter-rouge">main</code>, <code class="language-plaintext highlighter-rouge">develop</code>, <code class="language-plaintext highlighter-rouge">feature/*</code>, <code class="language-plaintext highlighter-rouge">release/*</code>, <code class="language-plaintext highlighter-rouge">hotfix/*</code> branches. Good for:</p>
+  <ul>
+    <li>Scheduled release cycles (e.g., ship every 2 weeks)</li>
+    <li>Multiple versions in production simultaneously</li>
+    <li>Teams that need explicit release preparation</li>
+  </ul>
+
+  <p><strong>Trunk-Based Development</strong> — everyone commits to <code class="language-plaintext highlighter-rouge">main</code> frequently with short-lived branches.Good for:</p>
+  <ul>
+    <li>Continuous deployment pipelines</li>
+    <li>Teams practicing CI/CD properly</li>
+    <li>Modern microservice architectures</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q6: What is a <code class="language-plaintext highlighter-rouge">detached HEAD</code> state?</strong></p>
+
+<blockquote>
+  <p>Normally HEAD points to a branch name (which points to a commit). In detached HEAD, HEAD points directly to a commit SHA — not a branch. Any commits you make here are “orphaned” and not reachable from any branch (garbage collected eventually). Happens when: <code class="language-plaintext highlighter-rouge">git checkout &lt;commit-sha&gt;</code>, <code class="language-plaintext highlighter-rouge">git checkout v1.0 (tag)</code>. Fix: <code class="language-plaintext highlighter-rouge">git checkout main</code> or create a branch: <code class="language-plaintext highlighter-rouge">git checkout -b my-branch</code>.</p>
+</blockquote>
+
+<p><strong>Q7: How would you find a commit that introduced a bug?</strong></p>
+
+<blockquote>
+  <p>Use <code class="language-plaintext highlighter-rouge">git bisect</code> — binary search through commit history:</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git bisect start
+git bisect bad HEAD           <span class="c"># Current is broken</span>
+git bisect good v1.2.0        <span class="c"># This version was fine</span>
+<span class="c"># Git checks out middle commit</span>
+<span class="c"># Test the code</span>
+git bisect good/bad           <span class="c"># Tell git the result</span>
+<span class="c"># Repeat ~ log2(n) times</span>
+git bisect reset
+</code></pre></div>  </div>
+  <p>Can also automate: <code class="language-plaintext highlighter-rouge">git bisect run pytest tests/test_feature.py</code></p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q8: Explain how <code class="language-plaintext highlighter-rouge">git reflog</code> saves you from disaster.</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">git reflog</code> is a local log of all HEAD movements — every checkout, commit, reset, merge. It’s the “undo history” of your Git operations. If you accidentally <code class="language-plaintext highlighter-rouge">git reset --hard HEAD~5</code>, use <code class="language-plaintext highlighter-rouge">git reflog</code> to find the SHA before the reset, then <code class="language-plaintext highlighter-rouge">git reset --hard &lt;sha&gt;</code> to recover. The reflog is local-only and expires after ~90 days.</p>
+</blockquote>
+
+<p><strong>Q9: How does Git handle merge conflicts at a low level?</strong></p>
+
+<blockquote>
+  <p>Git uses a <strong>3-way merge</strong>: it compares the two branch tips (ours/theirs) with their <strong>merge base</strong> (common ancestor). If both sides changed the same region from the base, it’s a conflict. Git marks conflicting sections with <code class="language-plaintext highlighter-rouge">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code class="language-plaintext highlighter-rouge">=======</code>, <code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> markers. Tools: <code class="language-plaintext highlighter-rouge">git mergetool</code> (vimdiff, kdiff3), or <code class="language-plaintext highlighter-rouge">git checkout --ours/--theirs file</code> to choose one side entirely.</p>
+</blockquote>
+
+<p><strong>Q10: What is <code class="language-plaintext highlighter-rouge">git worktree</code> and when is it useful?</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">git worktree</code> allows multiple working directories from the same repo, each checked out at a different branch. Useful when:</p>
+  <ul>
+    <li>You need to fix a hotfix while mid-feature without stashing</li>
+    <li>Running tests on multiple branches simultaneously
+      <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git worktree add ../hotfix-dir hotfix/critical
+git worktree list
+git worktree remove ../hotfix-dir
+</code></pre></div>      </div>
+    </li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-accidentally-committed-secrets">🔵 Scenario 1: Accidentally Committed Secrets</h3>
+
+<p><em>“A developer pushed an API key to the main branch. What do you do?”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># IMMEDIATE: Revoke the API key (most important!)</span>
+<span class="c"># Then remove from history:</span>
+
+<span class="c"># 1. Use git filter-repo (modern, preferred)</span>
+pip <span class="nb">install </span>git-filter-repo
+git filter-repo <span class="nt">--path-glob</span> <span class="s1">'*.env'</span> <span class="nt">--invert-paths</span>
+
+<span class="c"># 2. Or BFG Repo Cleaner (easier)</span>
+java <span class="nt">-jar</span> bfg.jar <span class="nt">--replace-text</span> secrets.txt my-repo.git
+
+<span class="c"># 3. Force push all branches</span>
+git push origin <span class="nt">--force</span> <span class="nt">--all</span>
+git push origin <span class="nt">--force</span> <span class="nt">--tags</span>
+
+<span class="c"># 4. All collaborators must re-clone or:</span>
+git fetch <span class="nt">--all</span>
+git reset <span class="nt">--hard</span> origin/main
+
+<span class="c"># 5. Add to .gitignore immediately</span>
+<span class="nb">echo</span> <span class="s2">".env"</span> <span class="o">&gt;&gt;</span> .gitignore
+<span class="nb">echo</span> <span class="s2">"*.pem"</span> <span class="o">&gt;&gt;</span> .gitignore
+
+<span class="c"># 6. Set up git-secrets or truffleHog pre-commit hook</span>
+pip <span class="nb">install </span>detect-secrets
+detect-secrets scan <span class="o">&gt;</span> .secrets.baseline
+</code></pre></div></div>
+
+<h3 id="-scenario-2-merge-conflict-in-ci-pipeline">🔵 Scenario 2: Merge Conflict in CI Pipeline</h3>
+
+<p><em>“Your CI pipeline fails on merge conflicts. How do you set up a process to prevent this?”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Enforce branch freshness</span>
+<span class="c"># Add to PR requirements: branch must be up-to-date with main</span>
+
+<span class="c"># 2. Rebase workflow</span>
+git fetch origin
+git rebase origin/main
+<span class="c"># Resolve conflicts locally, then push</span>
+
+<span class="c"># 3. Automated merge conflict detection</span>
+<span class="c"># In CI:</span>
+git merge <span class="nt">--no-commit</span> <span class="nt">--no-ff</span> origin/main
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Merge conflict detected"</span>
+    git merge <span class="nt">--abort</span>
+    <span class="nb">exit </span>1
+<span class="k">fi
+</span>git merge <span class="nt">--abort</span>  <span class="c"># Don't actually merge</span>
+
+<span class="c"># 4. Use GitHub/GitLab "Merge Queue" feature</span>
+<span class="c"># Serializes merges, ensures each PR merges cleanly</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-interactive-rebase-practice">Lab 1: Interactive Rebase Practice</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create a test repo with messy history</span>
+<span class="nb">mkdir </span>git-lab <span class="o">&amp;&amp;</span> <span class="nb">cd </span>git-lab
+git init
+<span class="k">for </span>i <span class="k">in </span>1 2 3 4 5<span class="p">;</span> <span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"Content </span><span class="nv">$i</span><span class="s2">"</span> <span class="o">&gt;</span> file<span class="nv">$i</span>.txt
+    git add <span class="nb">.</span>
+    git commit <span class="nt">-m</span> <span class="s2">"WIP commit </span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
+
+<span class="c"># Now clean up with interactive rebase</span>
+git log <span class="nt">--oneline</span>
+
+<span class="c"># Squash all into one meaningful commit</span>
+git rebase <span class="nt">-i</span> HEAD~5
+<span class="c"># Change all but first 'pick' to 'squash'</span>
+<span class="c"># Write a good commit message</span>
+git log <span class="nt">--oneline</span>  <span class="c"># Should be one clean commit</span>
+</code></pre></div></div>
+
+<h3 id="lab-2-bisect-automation">Lab 2: Bisect Automation</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Simulate a regression</span>
+git init bisect-lab <span class="o">&amp;&amp;</span> <span class="nb">cd </span>bisect-lab
+<span class="k">for </span>i <span class="k">in</span> <span class="si">$(</span><span class="nb">seq </span>1 20<span class="si">)</span><span class="p">;</span> <span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"feature </span><span class="nv">$i</span><span class="s2">"</span> <span class="o">&gt;</span> app.py
+    <span class="o">[[</span> <span class="nv">$i</span> <span class="nt">-eq</span> 14 <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"BUG_INTRODUCED=1"</span> <span class="o">&gt;&gt;</span> app.py
+    git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"commit </span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
+
+<span class="c"># Bisect with a test script</span>
+git bisect start
+git bisect bad HEAD
+git bisect good HEAD~19
+git bisect run bash <span class="nt">-c</span> <span class="s1">'grep -q BUG_INTRODUCED app.py &amp;&amp; exit 1 || exit 0'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── SETUP ───────────────────────────────────────────</span>
+git config <span class="nt">--global</span> user.name  <span class="s2">"Your Name"</span>
+git config <span class="nt">--global</span> user.email <span class="s2">"you@example.com"</span>
+git config <span class="nt">--global</span> core.editor <span class="s2">"vim"</span>
+git config <span class="nt">--global</span> pull.rebase <span class="nb">true</span>
+
+<span class="c"># ─── SNAPSHOT ────────────────────────────────────────</span>
+git status <span class="nt">-s</span>            <span class="c"># Short status</span>
+git diff HEAD            <span class="c"># All changes since last commit</span>
+git log <span class="nt">--oneline</span> <span class="nt">-10</span>    <span class="c"># Last 10 commits</span>
+
+<span class="c"># ─── BRANCH SHORTCUTS ────────────────────────────────</span>
+git switch <span class="nt">-c</span> feature    <span class="c"># New branch</span>
+git switch main          <span class="c"># Switch to main</span>
+git branch <span class="nt">-D</span> feature    <span class="c"># Force delete</span>
+
+<span class="c"># ─── COMMON ALIASES ──────────────────────────────────</span>
+git config <span class="nt">--global</span> alias.st   status
+git config <span class="nt">--global</span> alias.lg   <span class="s2">"log --oneline --graph --all"</span>
+git config <span class="nt">--global</span> alias.undo <span class="s2">"reset --soft HEAD~1"</span>
+git config <span class="nt">--global</span> alias.discard <span class="s2">"restore ."</span>
+
+<span class="c"># ─── COLLABORATION ───────────────────────────────────</span>
+git fetch <span class="nt">--prune</span>           <span class="c"># Fetch + remove stale remote refs</span>
+git remote <span class="nt">-v</span>               <span class="c"># List remotes</span>
+git remote set-url origin https://new-url
+
+<span class="c"># ─── EMERGENCY RECOVERY ──────────────────────────────</span>
+git reflog                  <span class="c"># All recent HEAD movements</span>
+git fsck <span class="nt">--lost-found</span>       <span class="c"># Find dangling objects</span>
+git stash list              <span class="c"># List all stashes</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Networking.html">← Networking</a></td>
+        <td><a href="/devops-interview-guide/Docker.html">Docker →</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">CI/CD (Git-based workflows) →</a></td>
+        <td><a href="/devops-interview-guide/Jenkins.html">Jenkins (uses Git) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

@@ -1,3 +1,12 @@
+---
+layout: default
+title: "🔄 Module 2 — CI/CD Pipelines"
+
+render_with_liquid: false
+---
+
+{% raw %}
+
 # 🔄 Module 2 — CI/CD Pipelines
 
 > **JD Alignment:** "Design, implement and maintain CI/CD pipelines for automated application deployment. Build and manage CI/CD pipelines using tools such as Jenkins, GitLab CI or similar."
@@ -1569,3 +1578,5 @@ cosign verify \
 ---
 
 > **Next:** [Security & Compliance →](./03-Security-Compliance.md)
+
+{% endraw %}

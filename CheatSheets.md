@@ -1,3 +1,9 @@
+---
+layout: default
+title: "⚡ Cheat Sheets — DevOps Quick Reference"
+render_with_liquid: false
+---
+
 # ⚡ Cheat Sheets — DevOps Quick Reference
 
 > [← Learning Roadmap](./LearningRoadmap.md) | [Main Index](./README.md)

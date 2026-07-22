@@ -1,3 +1,12 @@
+---
+layout: default
+title: "⚙️ Module 5 — Infrastructure & Automation"
+
+render_with_liquid: false
+---
+
+{% raw %}
+
 # ⚙️ Module 5 — Infrastructure & Automation
 
 > **JD Alignment:** "Automate infrastructure provisioning and configuration management. Collaborate with cross-functional teams to integrate DevOps best practices. Maintain documentation related to deployment processes and system architecture."
@@ -1291,3 +1300,5 @@ velero restore create --from-backup my-app-backup
 ---
 
 > **Next:** [Scenario-Based Questions →](./06-Scenario-Based.md)
+
+{% endraw %}

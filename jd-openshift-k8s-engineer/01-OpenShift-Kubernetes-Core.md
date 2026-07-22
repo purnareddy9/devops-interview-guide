@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🔴 Module 1 — OpenShift & Kubernetes Core"
+render_with_liquid: false
+---
+
 # 🔴 Module 1 — OpenShift & Kubernetes Core
 
 > **JD Alignment:** "Develop and maintain OpenShift and Kubernetes infrastructure to support application deployment. Configure and optimize container orchestration for performance and reliability."

@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🔵 Module 6 — Scenario-Based Questions · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🔵 Module 6 — Scenario-Based Questions · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🔵 Module 6 — Scenario-Based Questions · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🔵 Module 6 — Scenario-Based Questions | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🔵 Module 6 — Scenario-Based Questions" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based.html" />
+<meta property="og:url" content="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🔵 Module 6 — Scenario-Based Questions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🔵 Module 6 — Scenario-Based Questions","url":"/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         aria-current="page">
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link active"
+       aria-current="page">
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span class="breadcrumb-part">Jd openshift k8s engineer</span>
+            
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🔵 Module 6 — Scenario-Based Questions</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-module-6--scenario-based-questions">🔵 Module 6 — Scenario-Based Questions</h1>
+
+<blockquote>
+  <p><strong>JD Alignment:</strong> Real-world production problems spanning all JD areas — CI/CD, OpenShift/K8s operations, security, monitoring, automation, and cross-team collaboration.</p>
+</blockquote>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation.html">← Infrastructure &amp; Automation</a></td>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/README.html">README</a></td>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral.html">Behavioral →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="how-to-use-this-module">How to Use This Module</h2>
+
+<p>These questions simulate real interview scenarios. <strong>Before reading the answer:</strong></p>
+<ol>
+  <li>Speak your approach out loud for 2–3 minutes.</li>
+  <li>Think: what would you check first? What commands would you run?</li>
+  <li>Then compare with the full answer.</li>
+</ol>
+
+<hr />
+
+<h2 id="scenarios">Scenarios</h2>
+
+<hr />
+
+<h3 id="-scenario-1-production-deployment-is-failing--diagnose-and-fix">🔵 Scenario 1: Production Deployment is Failing — Diagnose and Fix</h3>
+
+<p><em>“Your team just deployed a new version of the payment service to production. The deployment is stuck, 50% of pods are in CrashLoopBackOff. Customers are being impacted. What do you do?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Immediate actions (0–2 min) — stop the bleeding:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Immediately rollback — restore service first, investigate second</span>
+oc rollout undo deployment/payment-service <span class="nt">-n</span> production
+oc rollout status deployment/payment-service <span class="nt">-n</span> production
+<span class="c"># Confirm old pods are Running and serving traffic</span>
+</code></pre></div></div>
+
+<p><strong>Investigation after service is restored (2–15 min):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 2. Get crash logs from the failed pods (they may still exist briefly)</span>
+oc get pods <span class="nt">-n</span> production | <span class="nb">grep </span>payment
+oc logs payment-service-&lt;new-hash&gt;-&lt;pod&gt; <span class="nt">--previous</span> <span class="nt">-n</span> production
+
+<span class="c"># Common findings:</span>
+<span class="c"># Exit code 1: Application failed to start — check logs for config errors</span>
+<span class="c"># Exit code 137: OOMKilled — memory limit too low for new version</span>
+<span class="c"># Exit code 132: SIGILL — binary incompatibility</span>
+
+<span class="c"># 3. Check events</span>
+oc get events <span class="nt">-n</span> production <span class="nt">--sort-by</span><span class="o">=</span><span class="s1">'.lastTimestamp'</span> | <span class="nb">grep </span>payment
+
+<span class="c"># 4. Describe failing pod</span>
+oc describe pod payment-service-&lt;new-hash&gt;-&lt;pod&gt; <span class="nt">-n</span> production
+</code></pre></div></div>
+
+<p><strong>Root cause analysis:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check what changed between old and new version</span>
+oc rollout <span class="nb">history </span>deployment/payment-service <span class="nt">-n</span> production
+oc rollout <span class="nb">history </span>deployment/payment-service <span class="nt">--revision</span><span class="o">=</span>5 <span class="nt">-n</span> production
+
+<span class="c"># Compare env vars (maybe a new required env var is missing)</span>
+oc get deployment payment-service <span class="nt">-n</span> production <span class="nt">-o</span> yaml | <span class="nb">grep</span> <span class="nt">-A</span> 30 <span class="nb">env</span>
+
+<span class="c"># Test the new image locally / in a debug pod</span>
+oc run test-pod <span class="nt">--rm</span> <span class="nt">-it</span> <span class="se">\</span>
+  <span class="nt">--image</span><span class="o">=</span>image-registry.openshift-image-registry.svc:5000/production/payment-service:v2.0 <span class="se">\</span>
+  <span class="nt">--overrides</span><span class="o">=</span><span class="s1">'{"spec":{"serviceAccountName":"payment-sa"}}'</span> <span class="se">\</span>
+  <span class="nt">--</span> /bin/sh
+</code></pre></div></div>
+
+<p><strong>Post-incident:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Fix the root cause (e.g., add missing env var)</span>
+oc <span class="nb">set env </span>deployment/payment-service <span class="nv">NEW_VAR</span><span class="o">=</span>value <span class="nt">-n</span> production
+
+<span class="c"># Re-deploy with monitoring</span>
+oc <span class="nb">set </span>image deployment/payment-service <span class="nv">app</span><span class="o">=</span>payment-service:v2.0 <span class="nt">-n</span> production
+watch oc get pods <span class="nt">-n</span> production    <span class="c"># Watch rollout</span>
+
+<span class="c"># Add automated smoke test to CI pipeline to prevent recurrence</span>
+</code></pre></div></div>
+
+<p><strong>Communication:</strong> Notify stakeholders immediately. Open incident ticket. Post a post-mortem in 48h.</p>
+
+<hr />
+
+<h3 id="-scenario-2-pipeline-fails-only-in-production--not-in-staging">🔵 Scenario 2: Pipeline Fails Only in Production — Not in Staging</h3>
+
+<p><em>“Your Jenkins pipeline succeeds in staging but fails in production at the deploy step with: ‘Error from server (Forbidden): deployments.apps is forbidden’. How do you debug this?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Diagnosis:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># The error is RBAC-related — the CI service account lacks permission in production</span>
+
+<span class="c"># 1. Identify which service account the pipeline uses</span>
+<span class="c"># In Jenkins pipeline, check: withCredentials, oc login, SA mounting</span>
+
+<span class="c"># 2. Check what SA is used in production</span>
+oc get sa <span class="nt">-n</span> production | <span class="nb">grep </span>jenkins
+oc get rolebindings <span class="nt">-n</span> production | <span class="nb">grep </span>jenkins
+
+<span class="c"># 3. Check exact permissions</span>
+oc auth can-i update deployments <span class="se">\</span>
+  <span class="nt">--as</span><span class="o">=</span>system:serviceaccount:ci-cd:jenkins-sa <span class="se">\</span>
+  <span class="nt">-n</span> production
+<span class="c"># Expected current result: no</span>
+
+<span class="c"># Compare with staging</span>
+oc auth can-i update deployments <span class="se">\</span>
+  <span class="nt">--as</span><span class="o">=</span>system:serviceaccount:ci-cd:jenkins-sa <span class="se">\</span>
+  <span class="nt">-n</span> staging
+<span class="c"># Expected: yes</span>
+
+<span class="c"># 4. List what the SA CAN do in production</span>
+oc auth can-i <span class="nt">--list</span> <span class="se">\</span>
+  <span class="nt">--as</span><span class="o">=</span>system:serviceaccount:ci-cd:jenkins-sa <span class="se">\</span>
+  <span class="nt">-n</span> production
+</code></pre></div></div>
+
+<p><strong>Root cause:</strong> The RoleBinding for the CI service account exists in staging but was never created in production.</p>
+
+<p><strong>Fix:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create the missing RoleBinding in production</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">rbac.authorization.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">RoleBinding</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">jenkins-deployer</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">subjects</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">kind</span><span class="pi">:</span> <span class="s">ServiceAccount</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">jenkins-sa</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">ci-cd</span>
+<span class="na">roleRef</span><span class="pi">:</span>
+  <span class="na">kind</span><span class="pi">:</span> <span class="s">Role</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">deployer-role</span>
+  <span class="na">apiGroup</span><span class="pi">:</span> <span class="s">rbac.authorization.k8s.io</span>
+</code></pre></div></div>
+
+<p><strong>Prevention:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Add this to onboarding automation — create RoleBindings in ALL target namespaces</span>
+<span class="c"># Add RBAC check to pipeline before deploy:</span>
+oc auth can-i update deployments <span class="se">\</span>
+  <span class="nt">--as</span><span class="o">=</span>system:serviceaccount:ci-cd:jenkins-sa <span class="se">\</span>
+  <span class="nt">-n</span> <span class="k">${</span><span class="nv">TARGET_NS</span><span class="k">}</span> <span class="o">||</span> <span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">"ERROR: Missing RBAC in </span><span class="k">${</span><span class="nv">TARGET_NS</span><span class="k">}</span><span class="s2">. Notify platform team."</span>
+    <span class="nb">exit </span>1
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-scenario-3-node-is-under-memory-pressure--pods-being-evicted">🔵 Scenario 3: Node is Under Memory Pressure — Pods Being Evicted</h3>
+
+<p><em>“You get a PagerDuty alert: multiple pods in the production namespace have been evicted. You check and see a node has MemoryPressure=True. Walk through your response.”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Check which node is under pressure</span>
+oc get nodes
+oc describe node worker-3 | <span class="nb">grep</span> <span class="nt">-A</span> 5 <span class="s2">"Conditions:"</span>
+<span class="c"># MemoryPressure: True</span>
+
+<span class="c"># 2. Check what's running on this node</span>
+oc get pods <span class="nt">--all-namespaces</span> <span class="se">\</span>
+  <span class="nt">-o</span> wide | <span class="nb">grep </span>worker-3 | <span class="nb">sort</span> <span class="nt">-k5</span>
+
+<span class="c"># 3. Check actual memory usage</span>
+oc adm top node worker-3
+oc adm top pods <span class="nt">--all-namespaces</span> <span class="nt">--sort-by</span><span class="o">=</span>memory | <span class="nb">head</span> <span class="nt">-20</span>
+
+<span class="c"># 4. Find the memory hog</span>
+<span class="c"># OOMKilled pods recently?</span>
+oc get events <span class="nt">--all-namespaces</span> <span class="se">\</span>
+  <span class="nt">--sort-by</span><span class="o">=</span><span class="s1">'.lastTimestamp'</span> | <span class="nb">grep</span> <span class="nt">-i</span> <span class="s2">"oom</span><span class="se">\|</span><span class="s2">evict</span><span class="se">\|</span><span class="s2">memory"</span> | <span class="nb">tail</span> <span class="nt">-30</span>
+
+<span class="c"># 5. Identify pod consuming most memory</span>
+oc adm top pods <span class="nt">-n</span> production <span class="se">\</span>
+  <span class="nt">--sort-by</span><span class="o">=</span>memory | <span class="nb">head</span> <span class="nt">-10</span>
+
+<span class="c"># 6. Immediate remediation options:</span>
+
+<span class="c"># Option A: Evict the heavy pod gracefully from this node</span>
+oc adm drain worker-3 <span class="nt">--ignore-daemonsets</span> <span class="se">\</span>
+  <span class="nt">--pod-selector</span><span class="o">=</span><span class="s2">"app=memory-heavy-app"</span> <span class="se">\</span>
+  <span class="nt">--delete-emptydir-data</span>
+
+<span class="c"># Option B: Temporarily scale up to add capacity</span>
+oc scale deployment/memory-heavy-app <span class="nt">--replicas</span><span class="o">=</span>5 <span class="nt">-n</span> production
+<span class="c"># Other replicas land on other nodes, relieving pressure</span>
+
+<span class="c"># Option C: If the app has a memory leak — restart it</span>
+oc rollout restart deployment/memory-heavy-app <span class="nt">-n</span> production
+
+<span class="c"># 7. Root cause: check if limits are too low</span>
+oc get deployment memory-heavy-app <span class="nt">-n</span> production <span class="se">\</span>
+  <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.template.spec.containers[0].resources}'</span>
+
+<span class="c"># 8. Set proper limits</span>
+oc <span class="nb">set </span>resources deployment/memory-heavy-app <span class="se">\</span>
+  <span class="nt">--requests</span><span class="o">=</span><span class="nv">memory</span><span class="o">=</span>512Mi <span class="se">\</span>
+  <span class="nt">--limits</span><span class="o">=</span><span class="nv">memory</span><span class="o">=</span>1Gi
+</code></pre></div></div>
+
+<p><strong>Prevention:</strong></p>
+<ul>
+  <li>Set <code class="language-plaintext highlighter-rouge">LimitRange</code> defaults in the namespace.</li>
+  <li>Create a <code class="language-plaintext highlighter-rouge">MemoryPressure</code> alert for each node.</li>
+  <li>PDB to prevent all pods from being on the same node.</li>
+</ul>
+
+<hr />
+
+<h3 id="-scenario-4-security-incident--suspicious-pod-activity-detected">🔵 Scenario 4: Security Incident — Suspicious Pod Activity Detected</h3>
+
+<p><em>“Falco alerts: ‘Shell spawned in production container’. How do you respond?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Phase 1 — Contain (0–5 min):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Identify the pod</span>
+<span class="nv">ALERT_POD</span><span class="o">=</span><span class="s2">"payment-service-abc123-xyz"</span>
+<span class="nv">ALERT_NS</span><span class="o">=</span><span class="s2">"production"</span>
+
+<span class="c"># 2. Take a snapshot — capture forensic data before touching anything</span>
+oc describe pod <span class="k">${</span><span class="nv">ALERT_POD</span><span class="k">}</span> <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span> <span class="o">&gt;</span> /tmp/pod-snapshot.txt
+oc logs <span class="k">${</span><span class="nv">ALERT_POD</span><span class="k">}</span> <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span> <span class="o">&gt;</span> /tmp/pod-logs.txt
+oc get pod <span class="k">${</span><span class="nv">ALERT_POD</span><span class="k">}</span> <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span> <span class="nt">-o</span> yaml <span class="o">&gt;</span> /tmp/pod-full.yaml
+
+<span class="c"># 3. Isolate: apply a deny-all NetworkPolicy to this pod</span>
+kubectl label pod <span class="k">${</span><span class="nv">ALERT_POD</span><span class="k">}</span> <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span> <span class="nv">quarantine</span><span class="o">=</span><span class="nb">true
+</span>oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: quarantine-pod
+  namespace: </span><span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span><span class="sh">
+spec:
+  podSelector:
+    matchLabels:
+      quarantine: "true"
+  policyTypes:
+  - Ingress
+  - Egress
+  # No ingress/egress rules = deny all
+</span><span class="no">EOF
+
+</span><span class="c"># 4. Cordon the node if you suspect node compromise</span>
+oc adm cordon <span class="si">$(</span>oc get pod <span class="k">${</span><span class="nv">ALERT_POD</span><span class="k">}</span> <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span> <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.nodeName}'</span><span class="si">)</span>
+</code></pre></div></div>
+
+<p><strong>Phase 2 — Investigate (5–30 min):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 5. What process was spawned?</span>
+<span class="c"># Check Falco alert details — it includes the exact command</span>
+
+<span class="c"># 6. Check audit logs for the pod's service account</span>
+oc adm node-logs <span class="nt">--role</span><span class="o">=</span>master <span class="se">\</span>
+  <span class="nt">--path</span><span class="o">=</span>openshift-apiserver/audit.log | <span class="se">\</span>
+  jq <span class="s2">"select(.user.username | contains(</span><span class="se">\"</span><span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span><span class="s2">:</span><span class="k">${</span><span class="nv">ALERT_POD</span><span class="k">}</span><span class="se">\"</span><span class="s2">))"</span> | <span class="nb">head</span> <span class="nt">-50</span>
+
+<span class="c"># 7. Check for new files created</span>
+oc <span class="nb">exec</span> <span class="k">${</span><span class="nv">ALERT_POD</span><span class="k">}</span> <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span> <span class="nt">--</span> find / <span class="se">\</span>
+  <span class="nt">-newer</span> /proc/1 <span class="nt">-not</span> <span class="nt">-path</span> /proc <span class="nt">-not</span> <span class="nt">-path</span> /sys 2&gt;/dev/null
+
+<span class="c"># 8. Check network connections from the pod (if not yet isolated)</span>
+oc <span class="nb">exec</span> <span class="k">${</span><span class="nv">ALERT_POD</span><span class="k">}</span> <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span> <span class="nt">--</span> ss <span class="nt">-tulnp</span>
+oc <span class="nb">exec</span> <span class="k">${</span><span class="nv">ALERT_POD</span><span class="k">}</span> <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span> <span class="nt">--</span> <span class="nb">cat</span> /etc/hosts
+</code></pre></div></div>
+
+<p><strong>Phase 3 — Remediate:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 9. Kill the compromised pod (new pod starts clean from image)</span>
+oc delete pod <span class="k">${</span><span class="nv">ALERT_POD</span><span class="k">}</span> <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span>
+
+<span class="c"># 10. Force restart all pods in the deployment (in case others are affected)</span>
+oc rollout restart deployment/payment-service <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span>
+
+<span class="c"># 11. Review and tighten SCC</span>
+oc adm policy scc-subject-review <span class="nt">-f</span> payment-pod.yaml
+<span class="c"># Ensure readOnlyRootFilesystem: true to prevent file writes</span>
+
+<span class="c"># 12. Remove quarantine NetworkPolicy after confirming new pods are clean</span>
+oc delete networkpolicy quarantine-pod <span class="nt">-n</span> <span class="k">${</span><span class="nv">ALERT_NS</span><span class="k">}</span>
+</code></pre></div></div>
+
+<p><strong>Post-incident:</strong> Conduct forensics on the captured snapshot. Determine how the shell was spawned (exec from CI/CD? RCE exploit?). File security incident report.</p>
+
+<hr />
+
+<h3 id="-scenario-5-cluster-upgrade-gone-wrong">🔵 Scenario 5: Cluster Upgrade Gone Wrong</h3>
+
+<p><em>“During a cluster upgrade from 4.13 to 4.14, the upgrade stalls at 60% and cluster operators show Degraded=True. How do you troubleshoot?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Check upgrade status</span>
+oc get clusterversion
+oc describe clusterversion version
+<span class="c"># Look for: "Progressing: True" message — what's blocking it?</span>
+
+<span class="c"># 2. Find degraded cluster operators</span>
+oc get co | <span class="nb">grep</span> <span class="nt">-v</span> <span class="s2">"True.*False.*False"</span>
+<span class="c"># Output shows which operators are not healthy</span>
+
+<span class="c"># 3. Investigate the degraded operator</span>
+oc describe co authentication
+<span class="c"># Look for Events and Status conditions</span>
+
+<span class="c"># 4. Check the operator's pods</span>
+oc get pods <span class="nt">-n</span> openshift-authentication
+oc logs <span class="nt">-n</span> openshift-authentication oauth-openshift-&lt;pod&gt; <span class="nt">--previous</span>
+
+<span class="c"># 5. Common stall causes and fixes:</span>
+
+<span class="c"># Cause A: PodDisruptionBudget blocking node drain</span>
+oc get pdb <span class="nt">--all-namespaces</span>
+<span class="c"># Check: minAvailable == current replicas → can't drain</span>
+<span class="c"># Temporary fix: lower minAvailable during upgrade window</span>
+oc patch pdb my-pdb <span class="nt">-n</span> my-app <span class="nt">-p</span> <span class="s1">'{"spec":{"minAvailable":1}}'</span>
+
+<span class="c"># Cause B: Unhealthy etcd member</span>
+oc get etcd <span class="nt">-o</span> wide
+oc rsh <span class="nt">-n</span> openshift-etcd etcd-master-0 <span class="nt">--</span> <span class="se">\</span>
+  etcdctl member list <span class="nt">--write-out</span><span class="o">=</span>table
+
+<span class="c"># Cause C: Node not draining (pod stuck in Terminating)</span>
+oc get pods <span class="nt">--all-namespaces</span> | <span class="nb">grep </span>Terminating
+oc delete pod stuck-pod <span class="nt">-n</span> my-app <span class="nt">--force</span> <span class="nt">--grace-period</span><span class="o">=</span>0
+
+<span class="c"># Cause D: Cluster operator has a broken dependency</span>
+oc logs deployment/cluster-version-operator <span class="nt">-n</span> openshift-cluster-version
+oc get co network <span class="nt">-o</span> yaml | <span class="nb">grep</span> <span class="nt">-A</span> 20 conditions
+
+<span class="c"># 6. If safe to force-proceed (rare, only if you understand the risk)</span>
+<span class="c"># First: resolve the underlying issue, then let CVO retry automatically</span>
+<span class="c"># CVO retries every few minutes — don't force if unsure</span>
+
+<span class="c"># 7. Contact Red Hat Support</span>
+oc adm must-gather
+<span class="c"># Upload to Red Hat Customer Portal → open a support case</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-scenario-6-100-cpu-throttling-on-a-critical-microservice">🔵 Scenario 6: 100% CPU Throttling on a Critical Microservice</h3>
+
+<p><em>“Grafana shows your checkout service is CPU-throttled 90% of the time. Latency has spiked to 3s P99. What do you do?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Understanding CPU throttling:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CPU request = scheduler guarantee (node allocates this)
+CPU limit = hard cap — kernel throttles the container when it tries to exceed this
+Throttling % = time spent waiting due to CPU limit / total time
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Confirm via PromQL</span>
+<span class="c"># container_cpu_cfs_throttled_periods_total / container_cpu_cfs_periods_total * 100</span>
+<span class="c"># If this &gt; 50% → heavily throttled</span>
+
+<span class="c"># 2. Check current limits</span>
+oc get deployment checkout <span class="nt">-n</span> production <span class="se">\</span>
+  <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.template.spec.containers[0].resources}'</span>
+
+<span class="c"># Example: requests=100m, limits=200m — but actual usage is 400m → heavily throttled</span>
+
+<span class="c"># 3. Check actual CPU usage</span>
+oc adm top pods <span class="nt">-n</span> production | <span class="nb">grep </span>checkout
+<span class="c"># Shows: 180m used (close to 200m limit)</span>
+</code></pre></div></div>
+
+<p><strong>Immediate fix:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Increase CPU limit</span>
+oc <span class="nb">set </span>resources deployment/checkout <span class="se">\</span>
+  <span class="nt">--requests</span><span class="o">=</span><span class="nv">cpu</span><span class="o">=</span>200m <span class="se">\</span>
+  <span class="nt">--limits</span><span class="o">=</span><span class="nv">cpu</span><span class="o">=</span>1 <span class="se">\</span>
+  <span class="nt">-n</span> production
+
+<span class="c"># Watch latency recover in Grafana</span>
+</code></pre></div></div>
+
+<p><strong>Deeper optimization:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Option 1: Remove CPU limit entirely (Kubernetes best practice for latency-sensitive apps)</span>
+<span class="c"># With CPU limit removed, container can burst beyond request during idle periods</span>
+<span class="c"># Node still protected by requests</span>
+
+oc patch deployment checkout <span class="nt">-n</span> production <span class="nt">--type</span><span class="o">=</span><span class="s1">'json'</span> <span class="nt">-p</span><span class="o">=</span><span class="s1">'[
+  {"op": "remove", "path": "/spec/template/spec/containers/0/resources/limits/cpu"}
+]'</span>
+
+<span class="c"># Option 2: Use VPA to auto-right-size</span>
+kubectl apply <span class="nt">-f</span> vpa-checkout.yaml
+<span class="c"># VPA observes and recommends: set request=400m, limit=800m</span>
+
+<span class="c"># Option 3: Profile the app</span>
+<span class="c"># High CPU usage in checkout could be a code issue (N+1 queries, inefficient algorithms)</span>
+<span class="c"># Add CPU profiling: node --prof / pprof / async-profiler</span>
+
+<span class="c"># Option 4: Scale horizontally (HPA on CPU)</span>
+oc autoscale deployment/checkout <span class="se">\</span>
+  <span class="nt">--min</span><span class="o">=</span>3 <span class="nt">--max</span><span class="o">=</span>10 <span class="se">\</span>
+  <span class="nt">--cpu-percent</span><span class="o">=</span>60 <span class="se">\</span>
+  <span class="nt">-n</span> production
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-scenario-7-route-is-returning-503-service-unavailable">🔵 Scenario 7: Route is Returning 503 Service Unavailable</h3>
+
+<p><em>“Your application Route returns HTTP 503 intermittently in production. Debug it end-to-end.”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 503 from OpenShift Route = HAProxy can't connect to any backend pod</span>
+
+<span class="c"># Step 1: Check pods are running and ready</span>
+oc get pods <span class="nt">-n</span> production <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>myapp
+<span class="c"># All Running? Check READY column — 1/1 required</span>
+
+<span class="c"># Step 2: Check Service endpoints (most common cause: 0 endpoints)</span>
+oc get endpoints myapp-svc <span class="nt">-n</span> production
+<span class="c"># If ENDPOINTS shows &lt;none&gt; → label selector mismatch</span>
+
+<span class="c"># Fix label selector mismatch:</span>
+oc describe svc myapp-svc | <span class="nb">grep </span>Selector
+oc get pods <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>myapp <span class="nt">-n</span> production <span class="nt">--show-labels</span>
+<span class="c"># Selectors must match</span>
+
+<span class="c"># Step 3: Check Route target</span>
+oc describe route myapp <span class="nt">-n</span> production
+<span class="c"># Verify: "to: Service myapp-svc weight=100"</span>
+<span class="c"># Verify: port matches</span>
+
+<span class="c"># Step 4: Check readiness probe — pods might be Running but not Ready</span>
+oc describe pod myapp-abc <span class="nt">-n</span> production | <span class="nb">grep</span> <span class="nt">-A</span> 10 Readiness
+oc get events <span class="nt">-n</span> production | <span class="nb">grep </span>Readiness
+
+<span class="c"># If readiness probe is too strict → adjust</span>
+oc patch deployment myapp <span class="nt">-n</span> production <span class="nt">--type</span><span class="o">=</span><span class="s1">'json'</span> <span class="nt">-p</span><span class="o">=</span><span class="s1">'[
+  {
+    "op": "replace",
+    "path": "/spec/template/spec/containers/0/readinessProbe/failureThreshold",
+    "value": 5
+  }
+]'</span>
+
+<span class="c"># Step 5: Check HAProxy router logs</span>
+oc logs <span class="nt">-n</span> openshift-ingress <span class="se">\</span>
+  <span class="nt">-l</span> ingresscontroller.operator.openshift.io/deployment-ingresscontroller<span class="o">=</span>default <span class="se">\</span>
+  <span class="nt">--tail</span><span class="o">=</span>100 | <span class="nb">grep</span> <span class="s2">"503</span><span class="se">\|</span><span class="s2">myapp"</span>
+
+<span class="c"># Step 6: Check if router has enough capacity</span>
+oc get pods <span class="nt">-n</span> openshift-ingress <span class="nt">-o</span> wide
+oc adm top pods <span class="nt">-n</span> openshift-ingress
+
+<span class="c"># Step 7: Test direct pod access (bypass Service and Route)</span>
+<span class="nv">POD_IP</span><span class="o">=</span><span class="si">$(</span>oc get pod myapp-abc <span class="nt">-n</span> production <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.podIP}'</span><span class="si">)</span>
+oc run debug <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">--image</span><span class="o">=</span>curlimages/curl <span class="nt">--</span> curl http://<span class="k">${</span><span class="nv">POD_IP</span><span class="k">}</span>:8080/health
+
+<span class="c"># Step 8: Check if issue is connection reset during rolling deployment</span>
+<span class="c"># Add preStop hook + terminationGracePeriodSeconds to drain connections</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-scenario-8-team-wants-faster-feedback--optimize-ci-pipeline-from-45-min-to--15-min">🔵 Scenario 8: Team Wants Faster Feedback — Optimize CI Pipeline from 45 min to &lt; 15 min</h3>
+
+<p><em>“The development team says the CI pipeline takes 45 minutes. They’re losing productivity. How do you analyze and optimize it?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Step 1 — Profile the pipeline:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Collect timing data for each stage (Jenkins: Blue Ocean view)</span>
+<span class="c"># Or instrument with timestamps:</span>
+<span class="nb">time </span>npm ci                    <span class="c"># How long is npm install?</span>
+<span class="nb">time </span>npm <span class="nb">test</span>                  <span class="c"># How long are tests?</span>
+<span class="nb">time </span>docker build <span class="nb">.</span>            <span class="c"># How long is image build?</span>
+</code></pre></div></div>
+
+<p><strong>Step 2 — Identify biggest bottlenecks</strong> (typical findings):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Before</th>
+      <th>After</th>
+      <th>Technique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">npm install</code></td>
+      <td>8 min</td>
+      <td>30 sec</td>
+      <td>Cache <code class="language-plaintext highlighter-rouge">node_modules</code> in PVC or layer cache</td>
+    </tr>
+    <tr>
+      <td>Unit tests</td>
+      <td>12 min</td>
+      <td>3 min</td>
+      <td>Parallelize test suites</td>
+    </tr>
+    <tr>
+      <td>Image build</td>
+      <td>15 min</td>
+      <td>2 min</td>
+      <td>Layer caching + smaller base image</td>
+    </tr>
+    <tr>
+      <td>Security scan</td>
+      <td>8 min</td>
+      <td>2 min</td>
+      <td>Scan only changed layers (incremental)</td>
+    </tr>
+    <tr>
+      <td>Deploy</td>
+      <td>5 min</td>
+      <td>1 min</td>
+      <td>Pre-pull images, parallel rollout</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Optimization techniques:</strong></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 1. Parallel test execution (Jenkins)</span>
+<span class="n">stage</span><span class="o">(</span><span class="s1">'Tests'</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">parallel</span> <span class="o">{</span>
+        <span class="s1">'Unit Tests'</span><span class="o">:</span> <span class="o">{</span>
+            <span class="n">sh</span> <span class="s1">'npm run test:unit'</span>
+        <span class="o">},</span>
+        <span class="s1">'Integration Tests'</span><span class="o">:</span> <span class="o">{</span>
+            <span class="n">sh</span> <span class="s1">'npm run test:integration'</span>
+        <span class="o">},</span>
+        <span class="s1">'Linting'</span><span class="o">:</span> <span class="o">{</span>
+            <span class="n">sh</span> <span class="s1">'npm run lint'</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 2. GitLab CI parallel matrix</span>
+<span class="na">test</span><span class="pi">:</span>
+  <span class="na">parallel</span><span class="pi">:</span>
+    <span class="na">matrix</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">TEST_SUITE</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">unit</span><span class="pi">,</span> <span class="nv">integration</span><span class="pi">,</span> <span class="nv">e2e</span><span class="pi">,</span> <span class="nv">security</span><span class="pi">]</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">npm run test:$TEST_SUITE</span>
+</code></pre></div></div>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 3. Dockerfile layer caching — install dependencies before copying source</span>
+<span class="k">FROM</span><span class="s"> node:18-alpine</span>
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+
+<span class="c"># Dependencies layer (only rebuilds if package.json changes)</span>
+<span class="k">COPY</span><span class="s"> package*.json ./</span>
+<span class="k">RUN </span>npm ci <span class="nt">--only</span><span class="o">=</span>production
+
+<span class="c"># Source layer (rebuilds on any source change)</span>
+<span class="k">COPY</span><span class="s"> . .</span>
+<span class="k">CMD</span><span class="s"> ["node", "server.js"]</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 4. Kubernetes pipeline pod with PVC for cache</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">volumes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">npm-cache</span>
+    <span class="na">persistentVolumeClaim</span><span class="pi">:</span>
+      <span class="na">claimName</span><span class="pi">:</span> <span class="s">npm-cache-pvc</span>    <span class="c1"># Shared across builds</span>
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">builder</span>
+    <span class="na">volumeMounts</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">npm-cache</span>
+      <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/root/.npm</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 5. Buildah with layer cache registry</span>
+buildah bud <span class="se">\</span>
+  <span class="nt">--cache-from</span><span class="o">=</span>registry/myapp-cache:latest <span class="se">\</span>
+  <span class="nt">--cache-to</span><span class="o">=</span>registry/myapp-cache:latest <span class="se">\</span>
+  <span class="nt">-t</span> myapp:<span class="k">${</span><span class="nv">SHA</span><span class="k">}</span> <span class="nb">.</span>
+</code></pre></div></div>
+
+<p><strong>Result:</strong> 45 min → 12 min through parallelization + caching.</p>
+
+<hr />
+
+<h3 id="-scenario-9-multi-tenant-namespace-isolation--developer-complaint">🔵 Scenario 9: Multi-Tenant Namespace Isolation — Developer Complaint</h3>
+
+<p><em>“A developer reports they can curl pods in another team’s namespace from their own pod. How do you fix this without breaking legitimate communication?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Diagnosis:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Verify the issue</span>
+oc <span class="nb">exec</span> <span class="nt">-it</span> myapp-pod <span class="nt">-n</span> team-alpha <span class="nt">--</span> <span class="se">\</span>
+  curl http://team-beta-service.team-beta.svc.cluster.local
+<span class="c"># If this succeeds → no NetworkPolicy isolation</span>
+
+oc get networkpolicies <span class="nt">-n</span> team-alpha   <span class="c"># Likely: empty</span>
+oc get networkpolicies <span class="nt">-n</span> team-beta    <span class="c"># Likely: empty</span>
+</code></pre></div></div>
+
+<p><strong>Fix — apply micro-segmentation without breaking monitoring/pipelines:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Step 1: Default deny all inter-namespace traffic</span>
+<span class="c1"># Apply to BOTH namespaces</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">deny-from-other-namespaces</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">team-beta</span>       <span class="c1"># Protect team-beta</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span> <span class="pi">{}</span>
+  <span class="na">ingress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">from</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">podSelector</span><span class="pi">:</span> <span class="pi">{}</span>        <span class="c1"># Allow from pods IN SAME namespace only</span>
+
+<span class="nn">---</span>
+<span class="c1"># Step 2: Allow monitoring scrape (don't break Prometheus)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">allow-monitoring</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">team-beta</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span> <span class="pi">{}</span>
+  <span class="na">ingress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">from</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">namespaceSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">kubernetes.io/metadata.name</span><span class="pi">:</span> <span class="s">openshift-monitoring</span>
+    <span class="pi">-</span> <span class="na">namespaceSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">kubernetes.io/metadata.name</span><span class="pi">:</span> <span class="s">openshift-user-workload-monitoring</span>
+
+<span class="nn">---</span>
+<span class="c1"># Step 3: Allow Route/HAProxy traffic</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">allow-from-router</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">team-beta</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span> <span class="pi">{}</span>
+  <span class="na">ingress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">from</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">namespaceSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">network.openshift.io/policy-group</span><span class="pi">:</span> <span class="s">ingress</span>
+
+<span class="nn">---</span>
+<span class="c1"># Step 4: Allow explicit cross-namespace communication (if team-alpha needs to call team-beta API)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">allow-from-team-alpha</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">team-beta</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">team-beta-public-api</span>    <span class="c1"># Only specific service</span>
+  <span class="na">ingress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">from</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">namespaceSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">kubernetes.io/metadata.name</span><span class="pi">:</span> <span class="s">team-alpha</span>
+      <span class="na">podSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">app</span><span class="pi">:</span> <span class="s">team-alpha-consumer</span>  <span class="c1"># Only specific pod</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">8080</span>
+</code></pre></div></div>
+
+<p><strong>Verify fix:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oc <span class="nb">exec</span> <span class="nt">-it</span> myapp-pod <span class="nt">-n</span> team-alpha <span class="nt">--</span> <span class="se">\</span>
+  curl http://team-beta-service.team-beta.svc.cluster.local
+<span class="c"># Expected: connection refused / timeout → isolation working</span>
+
+<span class="c"># Test monitoring still works</span>
+oc <span class="nb">exec</span> <span class="nt">-it</span> prometheus-0 <span class="nt">-n</span> openshift-user-workload-monitoring <span class="nt">--</span> <span class="se">\</span>
+  curl http://team-beta-service.team-beta.svc.cluster.local:8080/metrics
+<span class="c"># Expected: metrics response → monitoring still works</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-scenario-10-automated-compliance-audit-request">🔵 Scenario 10: Automated Compliance Audit Request</h3>
+
+<p><em>“Management requests a compliance report showing all production workloads comply with the company security policy: no root containers, all images from approved registries, all containers have resource limits. How do you automate this?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Option 1: Manual audit commands (for one-time check)</span>
+
+<span class="c"># Check 1: Pods running as root</span>
+oc get pods <span class="nt">--all-namespaces</span> <span class="se">\</span>
+  <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[?(@.spec.securityContext.runAsUser==0)]}{.metadata.namespace}{"\t"}{.metadata.name}{"\n"}{end}'</span>
+
+<span class="c"># Check 2: Pods using unapproved registries</span>
+oc get pods <span class="nt">--all-namespaces</span> <span class="se">\</span>
+  <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*]}{.metadata.namespace}{"\t"}{.metadata.name}{"\t"}{.spec.containers[*].image}{"\n"}{end}'</span> | <span class="se">\</span>
+  <span class="nb">grep</span> <span class="nt">-v</span> <span class="s2">"image-registry.openshift-image-registry</span><span class="se">\|</span><span class="s2">registry.redhat.io"</span>
+
+<span class="c"># Check 3: Containers without resource limits</span>
+oc get pods <span class="nt">--all-namespaces</span> <span class="se">\</span>
+  <span class="nt">-o</span> json | jq <span class="nt">-r</span> <span class="s1">'
+    .items[] |
+    .metadata.namespace as $ns |
+    .metadata.name as $pod |
+    .spec.containers[] |
+    select(.resources.limits == null or .resources.limits == {}) |
+    [$ns, $pod, .name] | join("\t")
+  '</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Option 2: Kyverno PolicyReport (continuous, automated)</span>
+<span class="c1"># Kyverno runs in audit mode and generates PolicyReports</span>
+
+<span class="c1"># View compliance report</span>
+<span class="s">kubectl get policyreport -n production</span>
+<span class="s">kubectl get clusterpolicyreport</span>
+
+<span class="c1"># Detailed view</span>
+<span class="s">kubectl get policyreport -n production -o json | jq '</span>
+  <span class="s">.results[] |</span>
+  <span class="s">select(.result == "fail") |</span>
+  <span class="s">{policy</span><span class="err">:</span> <span class="s">.policy, resource</span><span class="err">:</span> <span class="s">.resources[0].name, message</span><span class="err">:</span> <span class="s">.message}</span>
+<span class="s1">'</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Option 3: kube-bench for CIS benchmark compliance</span>
+oc apply <span class="nt">-f</span> kube-bench-job-openshift.yaml
+oc logs job/kube-bench | <span class="nb">grep</span> <span class="nt">-E</span> <span class="s2">"^</span><span class="se">\[</span><span class="s2">FAIL</span><span class="se">\]</span><span class="s2">"</span> | <span class="nb">sort</span> | <span class="nb">uniq</span>
+
+<span class="c"># Option 4: OpenShift Compliance Operator</span>
+oc get compliancecheckresult <span class="nt">-n</span> openshift-compliance <span class="se">\</span>
+  <span class="nt">-l</span> compliance.openshift.io/check-status<span class="o">=</span>FAIL <span class="se">\</span>
+  <span class="nt">-o</span> custom-columns<span class="o">=</span><span class="s1">'RULE:.metadata.name,SEVERITY:.metadata.labels.severity,DESC:.description'</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Scheduled reporting: export to CSV for management</span>
+<span class="c">#!/bin/bash</span>
+<span class="c"># compliance-report.sh — runs daily, sends report to management</span>
+
+<span class="nv">DATE</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> +%Y-%m-%d<span class="si">)</span>
+<span class="nv">REPORT_FILE</span><span class="o">=</span><span class="s2">"compliance-report-</span><span class="k">${</span><span class="nv">DATE</span><span class="k">}</span><span class="s2">.csv"</span>
+
+<span class="nb">echo</span> <span class="s2">"Namespace,Pod,Container,Issue"</span> <span class="o">&gt;</span> <span class="k">${</span><span class="nv">REPORT_FILE</span><span class="k">}</span>
+
+<span class="c"># No resource limits</span>
+oc get pods <span class="nt">--all-namespaces</span> <span class="nt">-o</span> json | jq <span class="nt">-r</span> <span class="s1">'
+  .items[] |
+  .metadata.namespace as $ns |
+  .metadata.name as $pod |
+  .spec.containers[] |
+  select(.resources.limits == null) |
+  [$ns, $pod, .name, "Missing resource limits"] | @csv
+'</span> <span class="o">&gt;&gt;</span> <span class="k">${</span><span class="nv">REPORT_FILE</span><span class="k">}</span>
+
+<span class="c"># Email or upload to S3</span>
+aws s3 <span class="nb">cp</span> <span class="k">${</span><span class="nv">REPORT_FILE</span><span class="k">}</span> s3://compliance-reports/
+curl <span class="nt">-X</span> POST <span class="s2">"</span><span class="k">${</span><span class="nv">SLACK_WEBHOOK</span><span class="k">}</span><span class="s2">"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s2">"{</span><span class="se">\"</span><span class="s2">text</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">Daily compliance report uploaded: </span><span class="k">${</span><span class="nv">REPORT_FILE</span><span class="k">}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-scenario-11-onboarding-a-development-team--from-zero-to-cicd-in-a-day">🔵 Scenario 11: Onboarding a Development Team — From Zero to CI/CD in a Day</h3>
+
+<p><em>“A new development team joins. They have a Node.js microservice in GitHub. They need a complete setup: namespace, CI/CD, monitoring, and GitOps by end of day. Walk me through your plan.”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Morning: Infrastructure (1–2 hours)</span>
+
+<span class="c"># 1. Run onboarding Ansible playbook</span>
+ansible-playbook onboard-team.yml <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">team_name</span><span class="o">=</span><span class="s2">"inventory-team"</span> <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">app_namespace</span><span class="o">=</span><span class="s2">"inventory"</span> <span class="se">\</span>
+  <span class="nt">-e</span> <span class="s2">"team_admins=['alice','bob']"</span>
+
+<span class="c"># This creates:</span>
+<span class="c"># - Project: inventory</span>
+<span class="c"># - ResourceQuota + LimitRange</span>
+<span class="c"># - Service accounts: app-sa, pipeline-sa</span>
+<span class="c"># - RBAC: alice/bob as admin</span>
+<span class="c"># - NetworkPolicies: deny-others, allow-router, allow-monitoring</span>
+<span class="c"># - SCC grant: restricted-v2 (default, no change needed)</span>
+
+<span class="c"># Midmorning: CI/CD Setup (1–2 hours)</span>
+
+<span class="c"># 2. Create BuildConfig for S2I</span>
+oc new-app nodejs:18-ubi8~https://github.com/myorg/inventory-service.git <span class="se">\</span>
+  <span class="nt">--name</span><span class="o">=</span>inventory-service <span class="se">\</span>
+  <span class="nt">--env</span><span class="o">=</span><span class="nv">NODE_ENV</span><span class="o">=</span>production <span class="se">\</span>
+  <span class="nt">-n</span> inventory
+
+<span class="c"># 3. Watch first build</span>
+oc logs <span class="nt">-f</span> bc/inventory-service <span class="nt">-n</span> inventory
+
+<span class="c"># 4. Expose via Route</span>
+oc expose svc/inventory-service <span class="nt">-n</span> inventory
+oc get route <span class="nt">-n</span> inventory
+
+<span class="c"># 5. Set up GitLab CI runner (or Jenkins config) with:</span>
+<span class="c"># - OCP token for pipeline-sa</span>
+<span class="c"># - Image push permissions</span>
+oc policy add-role-to-user registry-editor <span class="se">\</span>
+  <span class="nt">-z</span> pipeline-sa <span class="nt">-n</span> inventory
+
+<span class="c"># Afternoon: GitOps + Monitoring (2 hours)</span>
+
+<span class="c"># 6. Set up ArgoCD Application</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: inventory-service
+  namespace: openshift-gitops
+spec:
+  source:
+    repoURL: https://github.com/myorg/gitops-config.git
+    path: apps/inventory-service/overlays/production
+    targetRevision: main
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: inventory
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+</span><span class="no">EOF
+
+</span><span class="c"># 7. Enable user workload monitoring for the namespace</span>
+oc label namespace inventory openshift.io/user-monitoring<span class="o">=</span><span class="nb">true</span>
+
+<span class="c"># 8. Create ServiceMonitor (team adds /metrics to their app)</span>
+oc apply <span class="nt">-f</span> serviceMonitor-inventory.yaml <span class="nt">-n</span> inventory
+
+<span class="c"># 9. Import standard Grafana dashboard</span>
+oc apply <span class="nt">-f</span> configmap-dashboard.yaml <span class="nt">-n</span> inventory
+
+<span class="c"># 10. Add basic alert</span>
+oc apply <span class="nt">-f</span> prometheusrule-inventory.yaml <span class="nt">-n</span> inventory
+
+<span class="c"># End of day: Handoff</span>
+<span class="c"># - Send team: cluster URL, namespace, oc login command</span>
+<span class="c"># - Share runbook link</span>
+<span class="c"># - Confirm first automated deploy works via GitOps</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-scenario-12-stateful-database-migration--zero-downtime">🔵 Scenario 12: Stateful Database Migration — Zero Downtime</h3>
+
+<p><em>“You need to migrate a PostgreSQL database StatefulSet from one StorageClass to another (gp2 → gp3) without application downtime. How do you do it?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Problem: PVCs cannot change StorageClass in place</span>
+<span class="c"># Strategy: Blue/Green StatefulSet migration</span>
+
+<span class="c"># Step 1: Scale up a new StatefulSet with the new StorageClass</span>
+<span class="c"># (Run alongside existing — use different service for new SS)</span>
+
+<span class="c"># Step 2: Stream data from old to new using pg_basebackup or logical replication</span>
+<span class="c"># For PostgreSQL: use logical replication slot</span>
+
+<span class="c"># Connect to OLD postgres</span>
+oc <span class="nb">exec</span> <span class="nt">-it</span> postgres-old-0 <span class="nt">-n</span> my-app <span class="nt">--</span> psql <span class="nt">-U</span> postgres <span class="nt">-c</span> <span class="se">\</span>
+  <span class="s2">"SELECT pg_create_logical_replication_slot('migration_slot', 'pgoutput');"</span>
+
+oc <span class="nb">exec</span> <span class="nt">-it</span> postgres-old-0 <span class="nt">-n</span> my-app <span class="nt">--</span> psql <span class="nt">-U</span> postgres <span class="nt">-c</span> <span class="se">\</span>
+  <span class="s2">"CREATE PUBLICATION migration_pub FOR ALL TABLES;"</span>
+
+<span class="c"># On NEW postgres: create subscription</span>
+oc <span class="nb">exec</span> <span class="nt">-it</span> postgres-new-0 <span class="nt">-n</span> my-app <span class="nt">--</span> psql <span class="nt">-U</span> postgres <span class="nt">-c</span> <span class="se">\</span>
+  <span class="s2">"CREATE SUBSCRIPTION migration_sub
+   CONNECTION 'host=postgres-old.my-app.svc port=5432 user=postgres dbname=mydb'
+   PUBLICATION migration_pub
+   WITH (slot_name='migration_slot');"</span>
+
+<span class="c"># Step 3: Monitor lag — wait for replication to catch up</span>
+oc <span class="nb">exec</span> <span class="nt">-it</span> postgres-old-0 <span class="nt">--</span> psql <span class="nt">-U</span> postgres <span class="nt">-c</span> <span class="se">\</span>
+  <span class="s2">"SELECT pg_current_wal_lsn() - confirmed_flush_lsn AS lag
+   FROM pg_replication_slots WHERE slot_name='migration_slot';"</span>
+<span class="c"># Wait until lag = 0</span>
+
+<span class="c"># Step 4: Switch over (brief write pause, seconds only)</span>
+<span class="c"># a) Set app to read-only or brief maintenance</span>
+<span class="c"># b) Wait for 0 lag</span>
+<span class="c"># c) Drop subscription on new (makes it primary)</span>
+<span class="c"># d) Update Service selector to point to new StatefulSet</span>
+oc patch svc postgres <span class="nt">-n</span> my-app <span class="se">\</span>
+  <span class="nt">-p</span> <span class="s1">'{"spec":{"selector":{"app":"postgres-new"}}}'</span>
+
+<span class="c"># Step 5: Verify and clean up</span>
+<span class="c"># Test app connectivity, then remove old StatefulSet + PVCs after 24h observation</span>
+oc delete statefulset postgres-old <span class="nt">-n</span> my-app
+oc delete pvc data-postgres-old-0 <span class="nt">-n</span> my-app
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-scenario-13-cicd-pipeline-security-audit-finding">🔵 Scenario 13: CI/CD Pipeline Security Audit Finding</h3>
+
+<p><em>“A security audit finds your CI/CD pipeline service account has cluster-admin. How do you remediate this while keeping pipelines working?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Step 1: Audit what the pipeline SA actually does</span>
+<span class="c"># Review all pipeline scripts — list every oc/kubectl command used</span>
+
+<span class="c"># Typical CI/CD actions needed:</span>
+<span class="c"># - oc set image deployment/x  → needs: update deployments in target NS</span>
+<span class="c"># - oc rollout status          → needs: get deployments in target NS</span>
+<span class="c"># - oc start-build             → needs: create builds in build NS</span>
+<span class="c"># - oc get pods                → needs: list pods</span>
+
+<span class="c"># Step 2: Create a minimal Role with only those permissions</span>
+kubectl apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: cicd-deployer
+  namespace: production
+rules:
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get", "list", "watch", "patch", "update"]
+- apiGroups: [""]
+  resources: ["pods", "pods/log"]
+  verbs: ["get", "list", "watch"]
+- apiGroups: [""]
+  resources: ["replicationcontrollers"]
+  verbs: ["get", "list"]
+- apiGroups: ["image.openshift.io"]
+  resources: ["imagestreams", "imagestreamtags"]
+  verbs: ["get", "list"]
+</span><span class="no">EOF
+
+</span><span class="c"># Step 3: Bind the SA to the minimal role</span>
+kubectl create rolebinding cicd-deployer-binding <span class="se">\</span>
+  <span class="nt">--role</span><span class="o">=</span>cicd-deployer <span class="se">\</span>
+  <span class="nt">--serviceaccount</span><span class="o">=</span>cicd:pipeline-sa <span class="se">\</span>
+  <span class="nt">-n</span> production
+
+<span class="c"># Step 4: Remove cluster-admin</span>
+oc adm policy remove-cluster-role-from-user cluster-admin <span class="se">\</span>
+  <span class="nt">-z</span> pipeline-sa <span class="nt">-n</span> cicd
+
+<span class="c"># Step 5: Test pipeline</span>
+<span class="c"># Run pipeline in dry-run / staging first to verify all steps pass</span>
+
+<span class="c"># Step 6: Verify permissions are minimal</span>
+oc auth can-i <span class="nt">--list</span> <span class="se">\</span>
+  <span class="nt">--as</span><span class="o">=</span>system:serviceaccount:cicd:pipeline-sa <span class="se">\</span>
+  <span class="nt">-n</span> production
+<span class="c"># Confirm no cluster-level resources appear</span>
+
+oc auth can-i delete secrets <span class="se">\</span>
+  <span class="nt">--as</span><span class="o">=</span>system:serviceaccount:cicd:pipeline-sa <span class="se">\</span>
+  <span class="nt">-n</span> production
+<span class="c"># Expected: no</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-scenario-14-high-availability-incident--one-master-node-failed">🔵 Scenario 14: High Availability Incident — One Master Node Failed</h3>
+
+<p><em>“One of your three OpenShift master nodes has failed. The cluster is still running but you’ve lost quorum redundancy. What do you do?”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Step 1: Assess the situation</span>
+oc get nodes
+<span class="c"># master-1: Ready, master-2: NotReady, master-3: Ready</span>
+<span class="c"># Cluster still functional (2 of 3 masters = quorum maintained)</span>
+
+oc get co | <span class="nb">grep</span> <span class="nt">-v</span> <span class="s2">"True.*False.*False"</span>   <span class="c"># All operators still healthy?</span>
+
+<span class="c"># Step 2: Check etcd health</span>
+oc rsh <span class="nt">-n</span> openshift-etcd etcd-master-1 <span class="nt">--</span> <span class="se">\</span>
+  etcdctl member list <span class="nt">--write-out</span><span class="o">=</span>table
+<span class="c"># Should show: master-1 started, master-2 failed, master-3 started</span>
+<span class="c"># etcd quorum: 2/3 still present → cluster is healthy but not resilient</span>
+
+<span class="c"># Step 3: Diagnose the failed master</span>
+oc describe node master-2
+<span class="c"># Check if VM is still running (check cloud console / vCenter)</span>
+
+<span class="c"># If VM is running — SSH and check:</span>
+<span class="c"># systemctl status kubelet</span>
+<span class="c"># journalctl -u kubelet -n 50</span>
+<span class="c"># crictl ps — is API server container running?</span>
+
+<span class="c"># Step 4a: If node is recoverable (kubelet died)</span>
+<span class="c"># SSH to master-2 and restart:</span>
+systemctl restart kubelet
+<span class="c"># Watch node come back</span>
+oc get nodes <span class="nt">-w</span>
+
+<span class="c"># Step 4b: If node is unrecoverable (hardware failure / VM deleted)</span>
+<span class="c"># OpenShift has a Machine API to replace it automatically</span>
+
+<span class="c"># Check the Machine object</span>
+oc get machines <span class="nt">-n</span> openshift-machine-api | <span class="nb">grep </span>master-2
+
+<span class="c"># Delete the failed machine — MachineSet will create a replacement</span>
+oc delete machine master-2-xxxxx <span class="nt">-n</span> openshift-machine-api
+<span class="c"># Replacement machine provisions in ~10-15 min</span>
+
+<span class="c"># Watch new machine join</span>
+oc get machines <span class="nt">-n</span> openshift-machine-api <span class="nt">-w</span>
+oc get nodes <span class="nt">-w</span>
+
+<span class="c"># Step 5: After new node joins, verify etcd is healthy</span>
+oc rsh <span class="nt">-n</span> openshift-etcd etcd-master-1 <span class="nt">--</span> <span class="se">\</span>
+  etcdctl endpoint health <span class="nt">--cluster</span>
+
+<span class="c"># Step 6: Approve any pending CSRs for the new node</span>
+oc get csr | <span class="nb">grep </span>Pending
+oc adm certificate approve &lt;csr-name&gt;
+
+<span class="c"># Step 7: Verify all cluster operators are healthy</span>
+oc get co | <span class="nb">grep</span> <span class="nt">-v</span> <span class="s2">"True.*False.*False"</span>
+
+<span class="c"># Step 8: Incident review</span>
+<span class="c"># Why did master-2 fail? Hardware? Network? Disk?</span>
+<span class="c"># Update monitoring to alert on master node failures immediately</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-scenario-15-new-jd-role--your-first-90-days-plan">🔵 Scenario 15: New JD Role — Your First 90 Days Plan</h3>
+
+<p><em>“You’ve just joined as a DevOps engineer in this role. Describe your 90-day plan.”</em></p>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Days 1–30 (Learn &amp; Observe):</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Week 1–2:
+  ✓ Set up local toolchain: oc, kubectl, helm, terraform, ansible, tkn
+  ✓ Review existing architecture documentation
+  ✓ Shadow oncall rotation — observe incident response
+  ✓ Read through all existing Jenkinsfiles/GitLab CI pipelines
+  ✓ Review cluster topology, node counts, resource quotas
+
+Week 3–4:
+  ✓ Map the application portfolio — which apps exist, which teams own them
+  ✓ Review monitoring dashboards — identify gaps (missing alerts, no runbooks)
+  ✓ Inventory SCC usage — any team using privileged unnecessarily?
+  ✓ Review RBAC — any overly-broad role bindings?
+  ✓ Measure DORA metrics baseline (deployment frequency, lead time, MTTR)
+</code></pre></div></div>
+
+<p><strong>Days 31–60 (Small wins &amp; trust-building):</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ✓ Fix the most critical monitoring gaps — add missing alerts with runbooks
+  ✓ Automate one manual task (e.g., namespace onboarding)
+  ✓ Improve slowest pipeline (caching, parallelization)
+  ✓ Document one undocumented runbook
+  ✓ Propose and implement one security improvement (e.g., least-privilege RBAC for pipeline SA)
+  ✓ Set up Velero/etcd backup validation (verify backups are restorable)
+</code></pre></div></div>
+
+<p><strong>Days 61–90 (Strategic improvements):</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ✓ Design and implement GitOps for production deployments (if not yet in place)
+  ✓ Implement SLOs + error budget tracking for the top 3 services
+  ✓ Propose cluster upgrade plan to latest OCP version
+  ✓ Conduct a full security audit (Compliance Operator, RBAC review)
+  ✓ Present DORA metric improvement plan to management
+  ✓ Define team standards: Helm chart template, NetworkPolicy defaults, SCC policy
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <p><strong>Next:</strong> <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral.html">Behavioral Questions →</a></p>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

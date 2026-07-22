@@ -1,3 +1,9 @@
+---
+layout: default
+title: "⚙️ Ansible — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # ⚙️ Ansible — DevOps Interview Guide
 
 > [← Terraform](./Terraform.md) | [Main Index](./README.md) | [AWS →](./AWS.md)

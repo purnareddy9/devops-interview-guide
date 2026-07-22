@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+render_with_liquid: false
 ---
 
 <div class="hero">

@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🔄 CI/CD — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🔄 CI/CD — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/CICD.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🔄 CI/CD — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🔄 CI/CD — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🔄 CI/CD — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/CICD.html" />
+<meta property="og:url" content="/devops-interview-guide/CICD.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🔄 CI/CD — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🔄 CI/CD — DevOps Interview Guide","url":"/devops-interview-guide/CICD.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🔄 CI/CD — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-cicd--devops-interview-guide">🔄 CI/CD — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/GCP.html">← GCP</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Monitoring.html">Monitoring →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#cicd-fundamentals">CI/CD Fundamentals</a></li>
+  <li><a href="#pipeline-design-patterns">Pipeline Design Patterns</a></li>
+  <li><a href="#deployment-strategies">Deployment Strategies</a></li>
+  <li><a href="#gitops">GitOps</a></li>
+  <li><a href="#argocd">ArgoCD</a></li>
+  <li><a href="#fluxcd">FluxCD</a></li>
+  <li><a href="#github-actions">GitHub Actions</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="cicd-fundamentals">CI/CD Fundamentals</h2>
+
+<h3 id="what-is-cicd">What is CI/CD?</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Continuous Integration (CI)
+  → Developers merge code frequently
+  → Automated build + test on every commit
+  → Catch bugs early, reduce integration problems
+
+Continuous Delivery (CD)
+  → Every passing build is deployable
+  → Deployment to production is a manual decision
+  → Release is always possible
+
+Continuous Deployment (CD)
+  → Every passing build IS deployed to production automatically
+  → No human gate
+  → Requires very strong automated testing
+</code></pre></div></div>
+
+<h3 id="the-cicd-pipeline">The CI/CD Pipeline</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Code Commit
+    │
+    ▼
+Source Control Trigger (webhook)
+    │
+    ▼
+CI Pipeline
+├── Build (compile, package)
+├── Unit Tests
+├── Code Quality (lint, SAST)
+├── Security Scan (deps, SBOM)
+└── Build &amp; Push Artifact/Image
+    │
+    ▼
+CD Pipeline
+├── Deploy to Dev (auto)
+├── Integration/E2E Tests
+├── Deploy to Staging (auto)
+├── Performance Tests
+├── Approval Gate (manual / automatic)
+└── Deploy to Production
+    │
+    ▼
+Post-Deployment
+├── Smoke Tests
+├── Monitor Metrics
+└── Rollback if needed
+</code></pre></div></div>
+
+<h3 id="key-metrics">Key Metrics</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Description</th>
+      <th>Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Lead Time</strong></td>
+      <td>Code commit → production</td>
+      <td>Hours (elite)</td>
+    </tr>
+    <tr>
+      <td><strong>Deployment Frequency</strong></td>
+      <td>How often you deploy</td>
+      <td>Multiple/day (elite)</td>
+    </tr>
+    <tr>
+      <td><strong>MTTR</strong></td>
+      <td>Mean Time To Restore</td>
+      <td>&lt; 1 hour (elite)</td>
+    </tr>
+    <tr>
+      <td><strong>Change Failure Rate</strong></td>
+      <td>% of deploys causing incidents</td>
+      <td>&lt; 5% (elite)</td>
+    </tr>
+    <tr>
+      <td><strong>Build Duration</strong></td>
+      <td>How long CI takes</td>
+      <td>&lt; 10 minutes</td>
+    </tr>
+    <tr>
+      <td><strong>Test Coverage</strong></td>
+      <td>% of code tested</td>
+      <td>&gt; 80%</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="pipeline-design-patterns">Pipeline Design Patterns</h2>
+
+<h3 id="trunk-based-ci-pipeline-github-actions">Trunk-Based CI Pipeline (GitHub Actions)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .github/workflows/ci.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">CI</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">]</span>
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">]</span>
+
+<span class="na">env</span><span class="pi">:</span>
+  <span class="na">REGISTRY</span><span class="pi">:</span> <span class="s">ghcr.io</span>
+  <span class="na">IMAGE_NAME</span><span class="pi">:</span> <span class="s">${{ github.repository }}</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build-test</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">outputs</span><span class="pi">:</span>
+      <span class="na">image_tag</span><span class="pi">:</span> <span class="s">${{ steps.meta.outputs.tags }}</span>
+      <span class="na">image_digest</span><span class="pi">:</span> <span class="s">${{ steps.build.outputs.digest }}</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up Go</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-go@v5</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">go-version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1.21'</span>
+        <span class="na">cache</span><span class="pi">:</span> <span class="kc">true</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run tests</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">go test ./... -v -coverprofile=coverage.out</span>
+        <span class="s">go tool cover -func=coverage.out</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Upload coverage</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">codecov/codecov-action@v4</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">file</span><span class="pi">:</span> <span class="s">./coverage.out</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run golangci-lint</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">golangci/golangci-lint-action@v4</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Security scan (Gosec)</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">securego/gosec@master</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">args</span><span class="pi">:</span> <span class="s1">'</span><span class="s">./...'</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build binary</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="s">go build -ldflags="-s -w" -o ./dist/myapp ./cmd/myapp</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up Docker Buildx</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/setup-buildx-action@v3</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Log in to GitHub Container Registry</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/login-action@v3</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">registry</span><span class="pi">:</span> <span class="s">${{ env.REGISTRY }}</span>
+        <span class="na">username</span><span class="pi">:</span> <span class="s">${{ github.actor }}</span>
+        <span class="na">password</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Docker metadata</span>
+      <span class="na">id</span><span class="pi">:</span> <span class="s">meta</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/metadata-action@v5</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">images</span><span class="pi">:</span> <span class="s">${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}</span>
+        <span class="na">tags</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">type=sha,prefix=,suffix=,format=short</span>
+          <span class="s">type=ref,event=branch</span>
+          <span class="s">type=semver,pattern={{version}}</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build and push</span>
+      <span class="na">id</span><span class="pi">:</span> <span class="s">build</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/build-push-action@v5</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">context</span><span class="pi">:</span> <span class="s">.</span>
+        <span class="na">push</span><span class="pi">:</span> <span class="s">${{ github.event_name != 'pull_request' }}</span>
+        <span class="na">tags</span><span class="pi">:</span> <span class="s">${{ steps.meta.outputs.tags }}</span>
+        <span class="na">labels</span><span class="pi">:</span> <span class="s">${{ steps.meta.outputs.labels }}</span>
+        <span class="na">cache-from</span><span class="pi">:</span> <span class="s">type=gha</span>
+        <span class="na">cache-to</span><span class="pi">:</span> <span class="s">type=gha,mode=max</span>
+        <span class="na">sbom</span><span class="pi">:</span> <span class="kc">true</span>
+        <span class="na">provenance</span><span class="pi">:</span> <span class="kc">true</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Scan image with Trivy</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">aquasecurity/trivy-action@master</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">image-ref</span><span class="pi">:</span> <span class="s">${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}</span>
+        <span class="na">format</span><span class="pi">:</span> <span class="s">sarif</span>
+        <span class="na">output</span><span class="pi">:</span> <span class="s">trivy-results.sarif</span>
+        <span class="na">exit-code</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+        <span class="na">severity</span><span class="pi">:</span> <span class="s1">'</span><span class="s">CRITICAL,HIGH'</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Upload Trivy results to GitHub Security</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">github/codeql-action/upload-sarif@v3</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">sarif_file</span><span class="pi">:</span> <span class="s">trivy-results.sarif</span>
+
+  <span class="na">deploy-staging</span><span class="pi">:</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">build-test</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">if</span><span class="pi">:</span> <span class="s">github.ref == 'refs/heads/main'</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">staging</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s">https://staging.myapp.example.com</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure AWS credentials (OIDC)</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">aws-actions/configure-aws-credentials@v4</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">role-to-assume</span><span class="pi">:</span> <span class="s">arn:aws:iam::123456789:role/github-actions-staging</span>
+        <span class="na">aws-region</span><span class="pi">:</span> <span class="s">us-east-1</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to staging EKS</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">aws eks update-kubeconfig --name staging-cluster --region us-east-1</span>
+        <span class="s">helm upgrade --install myapp ./helm/myapp \</span>
+          <span class="s">--namespace staging \</span>
+          <span class="s">--set image.tag=${{ github.sha }} \</span>
+          <span class="s">--atomic --timeout 5m</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run smoke tests</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">curl -f https://staging.myapp.example.com/health</span>
+        <span class="s">npm run test:smoke -- --url=https://staging.myapp.example.com</span>
+
+  <span class="na">deploy-production</span><span class="pi">:</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">deploy-staging</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">production</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s">https://myapp.example.com</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure AWS credentials (OIDC)</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">aws-actions/configure-aws-credentials@v4</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">role-to-assume</span><span class="pi">:</span> <span class="s">arn:aws:iam::123456789:role/github-actions-production</span>
+        <span class="na">aws-region</span><span class="pi">:</span> <span class="s">us-east-1</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to production EKS</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">aws eks update-kubeconfig --name prod-cluster --region us-east-1</span>
+        <span class="s">helm upgrade --install myapp ./helm/myapp \</span>
+          <span class="s">--namespace production \</span>
+          <span class="s">--set image.tag=${{ github.sha }} \</span>
+          <span class="s">--set replicaCount=5 \</span>
+          <span class="s">--atomic --timeout 10m</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Verify deployment</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">kubectl rollout status deployment/myapp -n production --timeout=5m</span>
+        <span class="s">curl -f https://myapp.example.com/health</span>
+</code></pre></div></div>
+
+<h3 id="reusable-workflows">Reusable Workflows</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .github/workflows/reusable-deploy.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Reusable Deploy</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">workflow_call</span><span class="pi">:</span>
+    <span class="na">inputs</span><span class="pi">:</span>
+      <span class="na">environment</span><span class="pi">:</span>
+        <span class="na">required</span><span class="pi">:</span> <span class="kc">true</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+      <span class="na">image_tag</span><span class="pi">:</span>
+        <span class="na">required</span><span class="pi">:</span> <span class="kc">true</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+      <span class="na">replica_count</span><span class="pi">:</span>
+        <span class="na">default</span><span class="pi">:</span> <span class="m">2</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+    <span class="na">secrets</span><span class="pi">:</span>
+      <span class="na">role_arn</span><span class="pi">:</span>
+        <span class="na">required</span><span class="pi">:</span> <span class="kc">true</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">environment</span><span class="pi">:</span> <span class="s">${{ inputs.environment }}</span>
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure AWS credentials</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">aws-actions/configure-aws-credentials@v4</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">role-to-assume</span><span class="pi">:</span> <span class="s">${{ secrets.role_arn }}</span>
+        <span class="na">aws-region</span><span class="pi">:</span> <span class="s">us-east-1</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy</span>
+      <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">helm upgrade --install myapp ./helm/myapp \</span>
+          <span class="s">--namespace ${{ inputs.environment }} \</span>
+          <span class="s">--set image.tag=${{ inputs.image_tag }} \</span>
+          <span class="s">--set replicaCount=${{ inputs.replica_count }} \</span>
+          <span class="s">--atomic</span>
+
+<span class="c1"># Calling the reusable workflow</span>
+<span class="c1"># .github/workflows/main.yml</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">deploy-prod</span><span class="pi">:</span>
+    <span class="na">uses</span><span class="pi">:</span> <span class="s">./.github/workflows/reusable-deploy.yml</span>
+    <span class="na">with</span><span class="pi">:</span>
+      <span class="na">environment</span><span class="pi">:</span> <span class="s">production</span>
+      <span class="na">image_tag</span><span class="pi">:</span> <span class="s">${{ github.sha }}</span>
+      <span class="na">replica_count</span><span class="pi">:</span> <span class="m">5</span>
+    <span class="na">secrets</span><span class="pi">:</span>
+      <span class="na">role_arn</span><span class="pi">:</span> <span class="s">${{ secrets.PROD_ROLE_ARN }}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="deployment-strategies">Deployment Strategies</h2>
+
+<h3 id="strategy-comparison">Strategy Comparison</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Strategy</th>
+      <th>Downtime</th>
+      <th>Risk</th>
+      <th>Rollback</th>
+      <th>Resource Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Recreate</strong></td>
+      <td>Yes</td>
+      <td>High</td>
+      <td>Redeploy</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td><strong>Rolling Update</strong></td>
+      <td>No</td>
+      <td>Medium</td>
+      <td>Rollback cmd</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td><strong>Blue-Green</strong></td>
+      <td>No</td>
+      <td>Low</td>
+      <td>Traffic switch</td>
+      <td>2x</td>
+    </tr>
+    <tr>
+      <td><strong>Canary</strong></td>
+      <td>No</td>
+      <td>Very Low</td>
+      <td>Traffic shift</td>
+      <td>Slightly higher</td>
+    </tr>
+    <tr>
+      <td><strong>A/B Testing</strong></td>
+      <td>No</td>
+      <td>Very Low</td>
+      <td>Traffic shift</td>
+      <td>Slightly higher</td>
+    </tr>
+    <tr>
+      <td><strong>Shadow</strong></td>
+      <td>No</td>
+      <td>None</td>
+      <td>N/A</td>
+      <td>2x</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="rolling-update">Rolling Update</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Kubernetes Deployment with rolling update</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">6</span>
+  <span class="na">strategy</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">RollingUpdate</span>
+    <span class="na">rollingUpdate</span><span class="pi">:</span>
+      <span class="na">maxSurge</span><span class="pi">:</span> <span class="m">2</span>           <span class="c1"># Can have 2 extra pods during update</span>
+      <span class="na">maxUnavailable</span><span class="pi">:</span> <span class="m">0</span>     <span class="c1"># Zero downtime — never reduce below desired count</span>
+</code></pre></div></div>
+
+<h3 id="canary-deployment-with-argo-rollouts">Canary Deployment with Argo Rollouts</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">argoproj.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Rollout</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">10</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+        <span class="na">image</span><span class="pi">:</span> <span class="s">myapp:stable</span>
+        <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">requests</span><span class="pi">:</span> <span class="pi">{</span> <span class="nv">cpu</span><span class="pi">:</span> <span class="nv">100m</span><span class="pi">,</span> <span class="nv">memory</span><span class="pi">:</span> <span class="nv">128Mi</span> <span class="pi">}</span>
+
+  <span class="na">strategy</span><span class="pi">:</span>
+    <span class="na">canary</span><span class="pi">:</span>
+      <span class="na">canaryService</span><span class="pi">:</span> <span class="s">myapp-canary</span>
+      <span class="na">stableService</span><span class="pi">:</span> <span class="s">myapp-stable</span>
+      <span class="na">trafficRouting</span><span class="pi">:</span>
+        <span class="na">nginx</span><span class="pi">:</span>
+          <span class="na">stableIngress</span><span class="pi">:</span> <span class="s">myapp-ingress</span>
+      <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">setWeight</span><span class="pi">:</span> <span class="m">5</span>           <span class="c1"># 5% traffic to canary</span>
+      <span class="pi">-</span> <span class="na">pause</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">duration</span><span class="pi">:</span> <span class="nv">5m</span><span class="pi">}</span>  <span class="c1"># Wait 5 minutes</span>
+      <span class="pi">-</span> <span class="na">analysis</span><span class="pi">:</span>              <span class="c1"># Automated analysis</span>
+          <span class="na">templates</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">templateName</span><span class="pi">:</span> <span class="s">success-rate</span>
+          <span class="na">args</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">service-name</span>
+            <span class="na">value</span><span class="pi">:</span> <span class="s">myapp-canary</span>
+      <span class="pi">-</span> <span class="na">setWeight</span><span class="pi">:</span> <span class="m">20</span>
+      <span class="pi">-</span> <span class="na">pause</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">duration</span><span class="pi">:</span> <span class="nv">10m</span><span class="pi">}</span>
+      <span class="pi">-</span> <span class="na">setWeight</span><span class="pi">:</span> <span class="m">50</span>
+      <span class="pi">-</span> <span class="na">pause</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">duration</span><span class="pi">:</span> <span class="nv">10m</span><span class="pi">}</span>
+      <span class="pi">-</span> <span class="na">setWeight</span><span class="pi">:</span> <span class="m">100</span>         <span class="c1"># Full rollout</span>
+      <span class="na">maxSurge</span><span class="pi">:</span> <span class="s2">"</span><span class="s">20%"</span>
+      <span class="na">maxUnavailable</span><span class="pi">:</span> <span class="m">0</span>
+
+  <span class="na">revisionHistoryLimit</span><span class="pi">:</span> <span class="m">5</span>
+</code></pre></div></div>
+
+<h3 id="blue-green-with-argo-rollouts">Blue-Green with Argo Rollouts</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">strategy</span><span class="pi">:</span>
+  <span class="na">blueGreen</span><span class="pi">:</span>
+    <span class="na">activeService</span><span class="pi">:</span> <span class="s">myapp-active</span>      <span class="c1"># Production traffic</span>
+    <span class="na">previewService</span><span class="pi">:</span> <span class="s">myapp-preview</span>    <span class="c1"># New version (blue)</span>
+    <span class="na">autoPromotionEnabled</span><span class="pi">:</span> <span class="kc">false</span>      <span class="c1"># Manual promotion</span>
+    <span class="na">scaleDownDelaySeconds</span><span class="pi">:</span> <span class="m">600</span>       <span class="c1"># Keep old version 10 min for rollback</span>
+    <span class="na">prePromotionAnalysis</span><span class="pi">:</span>
+      <span class="na">templates</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">templateName</span><span class="pi">:</span> <span class="s">smoke-tests</span>
+    <span class="na">postPromotionAnalysis</span><span class="pi">:</span>
+      <span class="na">templates</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">templateName</span><span class="pi">:</span> <span class="s">error-rate</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="gitops">GitOps</h2>
+
+<h3 id="gitops-principles">GitOps Principles</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Declarative: entire system described declaratively in Git
+2. Versioned: all desired state stored in Git (immutable, versioned)
+3. Pulled automatically: approved changes are automatically applied
+4. Continuously reconciled: software agents ensure actual state matches desired
+</code></pre></div></div>
+
+<h3 id="gitops-repository-structure">GitOps Repository Structure</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gitops-repo/
+├── apps/
+│   ├── base/              # Shared base manifests
+│   │   ├── deployment.yaml
+│   │   ├── service.yaml
+│   │   └── kustomization.yaml
+│   └── overlays/
+│       ├── staging/       # Staging-specific patches
+│       │   ├── replicas-patch.yaml
+│       │   └── kustomization.yaml
+│       └── production/    # Production-specific patches
+│           ├── replicas-patch.yaml
+│           ├── resources-patch.yaml
+│           └── kustomization.yaml
+├── infrastructure/
+│   ├── cert-manager/
+│   ├── nginx-ingress/
+│   └── prometheus-stack/
+└── clusters/
+    ├── staging/
+    │   └── flux-system/
+    └── production/
+        └── flux-system/
+</code></pre></div></div>
+
+<h3 id="kustomize-overlay-example">Kustomize Overlay Example</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># apps/base/deployment.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+        <span class="na">image</span><span class="pi">:</span> <span class="s">myapp:latest</span>
+        <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">requests</span><span class="pi">:</span>
+            <span class="na">cpu</span><span class="pi">:</span> <span class="s">100m</span>
+            <span class="na">memory</span><span class="pi">:</span> <span class="s">128Mi</span>
+
+<span class="nn">---</span>
+<span class="c1"># apps/overlays/production/kustomization.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kustomize.config.k8s.io/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Kustomization</span>
+
+<span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+
+<span class="na">resources</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">../../base</span>
+
+<span class="na">images</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+    <span class="na">newTag</span><span class="pi">:</span> <span class="s2">"</span><span class="s">abc123"</span>           <span class="c1"># Updated by CI pipeline</span>
+
+<span class="na">patches</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">path</span><span class="pi">:</span> <span class="s">replicas-patch.yaml</span>
+
+<span class="nn">---</span>
+<span class="c1"># apps/overlays/production/replicas-patch.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">5</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+        <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">requests</span><span class="pi">:</span>
+            <span class="na">cpu</span><span class="pi">:</span> <span class="s">500m</span>
+            <span class="na">memory</span><span class="pi">:</span> <span class="s">512Mi</span>
+          <span class="na">limits</span><span class="pi">:</span>
+            <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1"</span>
+            <span class="na">memory</span><span class="pi">:</span> <span class="s">1Gi</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="argocd">ArgoCD</h2>
+
+<h3 id="argocd-architecture">ArgoCD Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ArgoCD runs in Kubernetes cluster
+├── API Server   — gRPC/REST API, web UI backend
+├── Repository Server — clones repos, generates manifests
+├── Application Controller — reconciliation loop
+└── ApplicationSet Controller — generates Applications
+
+ArgoCD watches Git repos → applies to Kubernetes
+"Desired state in Git" = "Actual state in cluster"
+</code></pre></div></div>
+
+<h3 id="application-definition">Application Definition</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># argocd-application.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">argoproj.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Application</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-production</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">argocd</span>
+  <span class="na">finalizers</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">resources-finalizer.argocd.argoproj.io</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">project</span><span class="pi">:</span> <span class="s">production</span>
+
+  <span class="na">source</span><span class="pi">:</span>
+    <span class="na">repoURL</span><span class="pi">:</span> <span class="s">https://github.com/org/gitops-repo</span>
+    <span class="na">targetRevision</span><span class="pi">:</span> <span class="s">main</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">apps/overlays/production</span>
+
+  <span class="na">destination</span><span class="pi">:</span>
+    <span class="na">server</span><span class="pi">:</span> <span class="s">https://kubernetes.default.svc</span>
+    <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+
+  <span class="na">syncPolicy</span><span class="pi">:</span>
+    <span class="na">automated</span><span class="pi">:</span>
+      <span class="na">prune</span><span class="pi">:</span> <span class="kc">true</span>          <span class="c1"># Delete resources removed from Git</span>
+      <span class="na">selfHeal</span><span class="pi">:</span> <span class="kc">true</span>       <span class="c1"># Revert manual changes</span>
+      <span class="na">allowEmpty</span><span class="pi">:</span> <span class="kc">false</span>    <span class="c1"># Never sync empty state</span>
+    <span class="na">syncOptions</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">CreateNamespace=true</span>
+      <span class="pi">-</span> <span class="s">PrunePropagationPolicy=foreground</span>
+      <span class="pi">-</span> <span class="s">ApplyOutOfSyncOnly=true</span>
+    <span class="na">retry</span><span class="pi">:</span>
+      <span class="na">limit</span><span class="pi">:</span> <span class="m">5</span>
+      <span class="na">backoff</span><span class="pi">:</span>
+        <span class="na">duration</span><span class="pi">:</span> <span class="s">5s</span>
+        <span class="na">factor</span><span class="pi">:</span> <span class="m">2</span>
+        <span class="na">maxDuration</span><span class="pi">:</span> <span class="s">3m</span>
+
+  <span class="na">revisionHistoryLimit</span><span class="pi">:</span> <span class="m">10</span>
+</code></pre></div></div>
+
+<h3 id="applicationset-multi-cluster">ApplicationSet (Multi-Cluster)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">argoproj.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ApplicationSet</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">argocd</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">generators</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">list</span><span class="pi">:</span>
+      <span class="na">elements</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">cluster</span><span class="pi">:</span> <span class="s">staging</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s">https://staging-k8s.example.com</span>
+        <span class="na">env</span><span class="pi">:</span> <span class="s">staging</span>
+        <span class="na">replicas</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2"</span>
+      <span class="pi">-</span> <span class="na">cluster</span><span class="pi">:</span> <span class="s">production</span>
+        <span class="na">url</span><span class="pi">:</span> <span class="s">https://prod-k8s.example.com</span>
+        <span class="na">env</span><span class="pi">:</span> <span class="s">production</span>
+        <span class="na">replicas</span><span class="pi">:</span> <span class="s2">"</span><span class="s">5"</span>
+
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">myapp-{{cluster}}'</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">project</span><span class="pi">:</span> <span class="s">default</span>
+      <span class="na">source</span><span class="pi">:</span>
+        <span class="na">repoURL</span><span class="pi">:</span> <span class="s">https://github.com/org/gitops-repo</span>
+        <span class="na">targetRevision</span><span class="pi">:</span> <span class="s">main</span>
+        <span class="na">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">apps/overlays/{{env}}'</span>
+      <span class="na">destination</span><span class="pi">:</span>
+        <span class="na">server</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{{url}}'</span>
+        <span class="na">namespace</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{{env}}'</span>
+      <span class="na">syncPolicy</span><span class="pi">:</span>
+        <span class="na">automated</span><span class="pi">:</span>
+          <span class="na">prune</span><span class="pi">:</span> <span class="kc">true</span>
+          <span class="na">selfHeal</span><span class="pi">:</span> <span class="kc">true</span>
+</code></pre></div></div>
+
+<h3 id="argocd-cli">ArgoCD CLI</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install ArgoCD</span>
+kubectl create namespace argocd
+kubectl apply <span class="nt">-n</span> argocd <span class="nt">-f</span> https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+<span class="c"># Login</span>
+argocd login argocd.example.com <span class="nt">--sso</span>
+
+<span class="c"># App management</span>
+argocd app list
+argocd app get myapp-production
+argocd app <span class="nb">sync </span>myapp-production
+argocd app diff myapp-production
+argocd app <span class="nb">history </span>myapp-production
+argocd app rollback myapp-production 3
+
+<span class="c"># Manual sync with dry-run</span>
+argocd app <span class="nb">sync </span>myapp-production <span class="nt">--dry-run</span>
+
+<span class="c"># Force sync (ignore resource differences)</span>
+argocd app <span class="nb">sync </span>myapp-production <span class="nt">--force</span>
+
+<span class="c"># Refresh (re-fetch from Git without syncing)</span>
+argocd app get myapp-production <span class="nt">--refresh</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="fluxcd">FluxCD</h2>
+
+<h3 id="flux-bootstrap">Flux Bootstrap</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Bootstrap Flux to GitHub</span>
+flux bootstrap github <span class="se">\</span>
+  <span class="nt">--owner</span><span class="o">=</span>my-org <span class="se">\</span>
+  <span class="nt">--repository</span><span class="o">=</span>gitops-fleet <span class="se">\</span>
+  <span class="nt">--branch</span><span class="o">=</span>main <span class="se">\</span>
+  <span class="nt">--path</span><span class="o">=</span>clusters/production <span class="se">\</span>
+  <span class="nt">--personal</span>
+
+<span class="c"># Check status</span>
+flux check
+flux get all
+flux get kustomizations
+flux get helmreleases
+</code></pre></div></div>
+
+<h3 id="flux-components">Flux Components</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># GitRepository source</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">source.toolkit.fluxcd.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">GitRepository</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">gitops-repo</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">flux-system</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">interval</span><span class="pi">:</span> <span class="s">1m</span>
+  <span class="na">url</span><span class="pi">:</span> <span class="s">https://github.com/org/gitops-repo</span>
+  <span class="na">ref</span><span class="pi">:</span>
+    <span class="na">branch</span><span class="pi">:</span> <span class="s">main</span>
+  <span class="na">secretRef</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">github-pat</span>
+
+<span class="nn">---</span>
+<span class="c1"># Kustomization (applies manifests)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kustomize.toolkit.fluxcd.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Kustomization</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">apps</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">flux-system</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">interval</span><span class="pi">:</span> <span class="s">10m</span>
+  <span class="na">path</span><span class="pi">:</span> <span class="s">./apps/overlays/production</span>
+  <span class="na">prune</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="na">sourceRef</span><span class="pi">:</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">GitRepository</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">gitops-repo</span>
+  <span class="na">targetNamespace</span><span class="pi">:</span> <span class="s">production</span>
+  <span class="na">healthChecks</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+    <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+  <span class="na">timeout</span><span class="pi">:</span> <span class="s">5m</span>
+
+<span class="nn">---</span>
+<span class="c1"># HelmRelease</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">helm.toolkit.fluxcd.io/v2</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">HelmRelease</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">interval</span><span class="pi">:</span> <span class="s">10m</span>
+  <span class="na">chart</span><span class="pi">:</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">chart</span><span class="pi">:</span> <span class="s">myapp</span>
+      <span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&gt;=1.0.0</span><span class="nv"> </span><span class="s">&lt;2.0.0'</span>
+      <span class="na">sourceRef</span><span class="pi">:</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">HelmRepository</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">mycompany-charts</span>
+  <span class="na">values</span><span class="pi">:</span>
+    <span class="na">replicaCount</span><span class="pi">:</span> <span class="m">5</span>
+    <span class="na">image</span><span class="pi">:</span>
+      <span class="na">tag</span><span class="pi">:</span> <span class="s">abc123</span>
+  <span class="na">upgrade</span><span class="pi">:</span>
+    <span class="na">remediation</span><span class="pi">:</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">3</span>
+  <span class="na">rollback</span><span class="pi">:</span>
+    <span class="na">timeout</span><span class="pi">:</span> <span class="s">1m</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="github-actions">GitHub Actions</h2>
+
+<h3 id="complete-workflow-patterns">Complete Workflow Patterns</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Matrix build strategy</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">test</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">strategy</span><span class="pi">:</span>
+      <span class="na">matrix</span><span class="pi">:</span>
+        <span class="na">node-version</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">18</span><span class="pi">,</span> <span class="nv">20</span><span class="pi">,</span> <span class="nv">21</span><span class="pi">]</span>
+        <span class="na">os</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">ubuntu-latest</span><span class="pi">,</span> <span class="nv">windows-latest</span><span class="pi">]</span>
+      <span class="na">fail-fast</span><span class="pi">:</span> <span class="kc">false</span>    <span class="c1"># Don't cancel other matrix jobs on failure</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+    <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-node@v4</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">node-version</span><span class="pi">:</span> <span class="s">${{ matrix.node-version }}</span>
+    <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">npm test</span>
+
+<span class="c1"># Conditional jobs</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">needs-approval</span><span class="pi">:</span>
+    <span class="na">if</span><span class="pi">:</span> <span class="s">github.event_name == 'push' &amp;&amp; github.ref == 'refs/heads/main'</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+
+<span class="c1"># Environment secrets</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">production</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s">https://myapp.com</span>
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy</span>
+      <span class="na">env</span><span class="pi">:</span>
+        <span class="na">API_TOKEN</span><span class="pi">:</span> <span class="s">${{ secrets.PRODUCTION_API_TOKEN }}</span>
+
+<span class="c1"># Caching</span>
+<span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/cache@v4</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">~/.npm</span>
+    <span class="na">key</span><span class="pi">:</span> <span class="s">${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}</span>
+    <span class="na">restore-keys</span><span class="pi">:</span> <span class="s">${{ runner.os }}-npm-</span>
+
+<span class="c1"># Artifacts</span>
+<span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/upload-artifact@v4</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">test-results</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">test-results/</span>
+    <span class="na">retention-days</span><span class="pi">:</span> <span class="m">30</span>
+
+<span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/download-artifact@v4</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">test-results</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between Continuous Integration, Delivery, and Deployment?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>CI</strong>: Automatically build and test every code commit — catch bugs early</li>
+    <li><strong>CD (Delivery)</strong>: Every CI-passing build is ready to deploy; deployment to production is a human decision</li>
+    <li><strong>CD (Deployment)</strong>: Every CI-passing build is automatically deployed to production — no human gate; requires very robust automated testing
+Most teams do CI + Continuous Delivery; Continuous Deployment is rare and requires mature testing.</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q2: What is a deployment pipeline and what should it include?</strong></p>
+
+<blockquote>
+  <p>A deployment pipeline automates the path from code commit to production. Key stages:</p>
+  <ol>
+    <li>Source trigger (webhook on push/PR)</li>
+    <li>Build (compile, package)</li>
+    <li>Unit + integration tests</li>
+    <li>Code quality (lint, coverage, static analysis)</li>
+    <li>Security scanning (SAST, dependency check, container scan)</li>
+    <li>Artifact publishing (Docker image, JAR, npm package)</li>
+    <li>Deploy to dev/staging</li>
+    <li>Automated acceptance/E2E tests</li>
+    <li>Approval gate (manual or automated)</li>
+    <li>Deploy to production</li>
+    <li>Smoke tests + monitoring</li>
+  </ol>
+</blockquote>
+
+<p><strong>Q3: What is GitOps?</strong></p>
+
+<blockquote>
+  <p>GitOps uses Git as the <strong>single source of truth</strong> for infrastructure and application state. All desired state is declared in Git. An agent (ArgoCD, Flux) continuously reconciles the cluster state to match Git. Changes are made by PRs — providing audit trail, review, and rollback capability. Key benefit: you can restore the entire cluster from Git. “If it’s not in Git, it doesn’t exist.”</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: Explain the difference between Blue-Green and Canary deployments.</strong></p>
+
+<blockquote>
+  <p><strong>Blue-Green</strong>: two identical environments; all traffic switches from old (blue) to new (green) at once. Instant rollback by switching back. Requires 2x resources. <strong>Canary</strong>: gradually shift traffic from old to new (5% → 20% → 50% → 100%); monitor metrics at each step; rollback by returning traffic. Catches issues affecting a percentage of users before full rollout. Canary is more sophisticated and requires traffic splitting capability (Nginx, Istio, Argo Rollouts).</p>
+</blockquote>
+
+<p><strong>Q5: How would you implement automatic rollback in a CI/CD pipeline?</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Example: Rollback if error rate spikes after deploy</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy and monitor</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">helm upgrade myapp ./helm/myapp --set image.tag=$SHA --atomic --timeout 5m</span>
+    <span class="s"># --atomic: if any hook or release fails, rollback automatically</span>
+
+<span class="c1"># For more sophisticated rollback with metrics:</span>
+<span class="c1"># 1. Deploy canary with Argo Rollouts</span>
+<span class="c1"># 2. Set up AnalysisTemplate with Prometheus query</span>
+<span class="c1"># 3. If error rate &gt; 1%, Argo auto-aborts and rolls back</span>
+</code></pre></div></div>
+
+<p><strong>Q6: What is a feature flag and how does it relate to CI/CD?</strong></p>
+
+<blockquote>
+  <p>A feature flag (toggle) lets you deploy code to production without activating it. The code path is gated by a flag value (in config/database/LaunchDarkly). Benefits for CI/CD: enables <strong>trunk-based development</strong> (incomplete features deployed but hidden), <strong>gradual rollout</strong> (enable for 5% of users), <strong>instant rollback</strong> (disable flag instead of redeploying), <strong>A/B testing</strong> (different behavior for segments). Tools: LaunchDarkly, Unleash, AWS AppConfig, Azure App Configuration.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: How do you secure a CI/CD pipeline?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Secrets management</strong>: Never hardcode secrets; use OIDC/Workload Identity instead of long-lived keys; rotate secrets regularly</li>
+    <li><strong>Least-privilege</strong>: CI agent has only permissions needed for its job; separate roles per environment</li>
+    <li><strong>Signed artifacts</strong>: Sign images with Cosign; verify signatures before deployment</li>
+    <li><strong>Supply chain security</strong>: Pin action versions to full SHA; use Dependabot for dependency updates</li>
+    <li><strong>SBOM generation</strong>: Track all dependencies for vulnerability management</li>
+    <li><strong>Branch protection</strong>: Require PR reviews, signed commits, passing CI before merge</li>
+    <li><strong>Artifact scanning</strong>: Trivy/Snyk in pipeline; block on CRITICAL vulnerabilities</li>
+    <li><strong>Audit logs</strong>: Every pipeline run logged with who triggered it and what changed</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q8: How would you design a CI/CD system for 500 microservices?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Mono-repo or poly-repo with path-based triggers</strong>: only rebuild services that changed</li>
+    <li><strong>Shared CI templates/reusable workflows</strong>: DRY pipeline definitions</li>
+    <li><strong>Separate CI and CD</strong>: CI per service repo; CD via GitOps (ArgoCD ApplicationSet)</li>
+    <li><strong>Build caching</strong>: Docker layer cache, npm/Maven dependency cache; per-service cache keys</li>
+    <li><strong>Test parallelism</strong>: parallel jobs, distributed test execution</li>
+    <li><strong>Progressive delivery</strong>: canary by default; teams control rollout via Argo Rollouts</li>
+    <li><strong>Platform team owns</strong>: shared pipeline templates, registry, GitOps repo structure</li>
+    <li><strong>Self-service</strong>: teams create new service → template generates pipeline automatically</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-production-deployment-caused-outage">🔵 Scenario 1: Production Deployment Caused Outage</h3>
+
+<p><em>“Your latest deployment caused a 500 error spike. What do you do?”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. IMMEDIATE: Rollback (don't investigate yet — restore service first)</span>
+kubectl rollout undo deployment/myapp <span class="nt">-n</span> production
+<span class="c"># or</span>
+helm rollback myapp <span class="nt">-n</span> production
+<span class="c"># or (GitOps) revert the PR in the gitops repo and ArgoCD will auto-sync</span>
+
+<span class="c"># 2. Verify rollback succeeded</span>
+kubectl rollout status deployment/myapp <span class="nt">-n</span> production
+curl <span class="nt">-f</span> https://myapp.example.com/health
+
+<span class="c"># 3. Investigate (post-incident)</span>
+kubectl logs deployment/myapp <span class="nt">-n</span> production <span class="nt">--previous</span>
+kubectl describe pod <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>myapp <span class="nt">-n</span> production
+
+<span class="c"># 4. Find the problematic change</span>
+git log <span class="nt">--oneline</span> <span class="nt">-10</span>
+git diff v1.2.3..v1.2.4  <span class="c"># Diff between versions</span>
+
+<span class="c"># 5. Write incident report</span>
+<span class="c"># - What happened</span>
+<span class="c"># - Timeline</span>
+<span class="c"># - Root cause</span>
+<span class="c"># - What we'll do to prevent recurrence</span>
+</code></pre></div></div>
+
+<h3 id="-scenario-2-ci-pipeline-is-too-slow">🔵 Scenario 2: CI Pipeline is Too Slow</h3>
+
+<p><em>“Your CI pipeline takes 45 minutes. Developers are complaining.”</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Analyze the pipeline stages:
+1. Checkout (fast ~10s)
+2. npm install (4 min) → CACHE node_modules
+3. Build (8 min) → PARALLELIZE by module
+4. Unit tests (12 min) → SHARD across multiple runners
+5. Integration tests (10 min) → Run in parallel with unit tests
+6. Docker build (8 min) → Use BuildKit cache
+7. Push to registry (3 min) → Already fast
+
+Optimizations:
+- Cache node_modules: -8 minutes
+- Parallel unit test shards: -8 minutes
+- Parallel integration with unit: -10 minutes
+- Docker cache hits: -5 minutes
+Target: ~14 minutes total
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-github-actions-with-docker">Lab 1: GitHub Actions with Docker</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .github/workflows/docker-ci.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Docker CI</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">]</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build-push</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">permissions</span><span class="pi">:</span>
+      <span class="na">contents</span><span class="pi">:</span> <span class="s">read</span>
+      <span class="na">packages</span><span class="pi">:</span> <span class="s">write</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up Docker Buildx</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/setup-buildx-action@v3</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Login to GHCR</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/login-action@v3</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">registry</span><span class="pi">:</span> <span class="s">ghcr.io</span>
+        <span class="na">username</span><span class="pi">:</span> <span class="s">${{ github.actor }}</span>
+        <span class="na">password</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
+
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build and Push</span>
+      <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/build-push-action@v5</span>
+      <span class="na">with</span><span class="pi">:</span>
+        <span class="na">context</span><span class="pi">:</span> <span class="s">.</span>
+        <span class="na">push</span><span class="pi">:</span> <span class="kc">true</span>
+        <span class="na">tags</span><span class="pi">:</span> <span class="s">ghcr.io/${{ github.repository }}:${{ github.sha }}</span>
+        <span class="na">cache-from</span><span class="pi">:</span> <span class="s">type=gha</span>
+        <span class="na">cache-to</span><span class="pi">:</span> <span class="s">type=gha,mode=max</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── ARGO CD ──────────────────────────────────────────</span>
+argocd app list
+argocd app <span class="nb">sync </span>myapp
+argocd app diff myapp
+argocd app rollback myapp <span class="o">[</span>revision]
+argocd app <span class="nb">history </span>myapp
+
+<span class="c"># ─── FLUX ─────────────────────────────────────────────</span>
+flux get all
+flux reconcile kustomization apps
+flux reconcile <span class="nb">source </span>git gitops-repo
+flux logs <span class="nt">--follow</span>
+flux <span class="nb">suspend </span>kustomization apps    <span class="c"># Pause sync</span>
+flux resume kustomization apps     <span class="c"># Resume sync</span>
+
+<span class="c"># ─── HELM ─────────────────────────────────────────────</span>
+helm list <span class="nt">-A</span>
+helm upgrade <span class="nt">--install</span> app ./chart <span class="nt">--atomic</span> <span class="nt">--timeout</span> 5m
+helm rollback app 2
+helm <span class="nb">history </span>app
+helm diff upgrade app ./chart <span class="nt">-f</span> values.yaml
+
+<span class="c"># ─── KUBECTL ROLLOUT ──────────────────────────────────</span>
+kubectl rollout status deployment/myapp
+kubectl rollout <span class="nb">history </span>deployment/myapp
+kubectl rollout undo deployment/myapp
+kubectl rollout undo deployment/myapp <span class="nt">--to-revision</span><span class="o">=</span>3
+kubectl <span class="nb">set </span>image deployment/myapp <span class="nv">myapp</span><span class="o">=</span>myapp:v2
+
+<span class="c"># ─── KUSTOMIZE ────────────────────────────────────────</span>
+kubectl apply <span class="nt">-k</span> apps/overlays/production
+kubectl diff <span class="nt">-k</span> apps/overlays/production
+kustomize build apps/overlays/production | kubectl apply <span class="nt">-f</span> -
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/GCP.html">← GCP</a></td>
+        <td><a href="/devops-interview-guide/Monitoring.html">Monitoring →</a></td>
+        <td><a href="/devops-interview-guide/Jenkins.html">Jenkins (CI engine) →</a></td>
+        <td><a href="/devops-interview-guide/Kubernetes.html">Kubernetes (deployment target) →</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security (pipeline security) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🔒 Module 3 — Security & Compliance · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🔒 Module 3 — Security & Compliance · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🔒 Module 3 — Security & Compliance · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🔒 Module 3 — Security &amp; Compliance | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🔒 Module 3 — Security &amp; Compliance" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance.html" />
+<meta property="og:url" content="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🔒 Module 3 — Security &amp; Compliance" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🔒 Module 3 — Security &amp; Compliance","url":"/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         aria-current="page">
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link active"
+       aria-current="page">
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span class="breadcrumb-part">Jd openshift k8s engineer</span>
+            
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🔒 Module 3 — Security & Compliance</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <p>{% raw %}</p>
+
+<h1 id="-module-3--security--compliance">🔒 Module 3 — Security &amp; Compliance</h1>
+
+<blockquote>
+  <p><strong>JD Alignment:</strong> “Implement security best practices for containerized environments. Ensure compliance with security standards and implement necessary controls.”</p>
+</blockquote>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines.html">← CI/CD Pipelines</a></td>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/README.html">README</a></td>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting.html">Monitoring &amp; Troubleshooting →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#container-security-fundamentals">Container Security Fundamentals</a></li>
+  <li><a href="#openshift-scc--pod-security">OpenShift SCC &amp; Pod Security</a></li>
+  <li><a href="#rbac">RBAC</a></li>
+  <li><a href="#network-security">Network Security</a></li>
+  <li><a href="#secrets-management">Secrets Management</a></li>
+  <li><a href="#image-security--supply-chain">Image Security &amp; Supply Chain</a></li>
+  <li><a href="#compliance--audit">Compliance &amp; Audit</a></li>
+</ol>
+
+<hr />
+
+<h2 id="container-security-fundamentals">Container Security Fundamentals</h2>
+
+<hr />
+
+<h3 id="-q1-what-is-the-principle-of-least-privilege-in-a-containerized-environment">🟢 Q1. What is the principle of least privilege in a containerized environment?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>Least privilege means every component — container, service account, user, network connection — has only the permissions it needs to do its job and nothing more.</p>
+
+<p><strong>Applied to containers:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spec</span><span class="pi">:</span>
+  <span class="na">serviceAccountName</span><span class="pi">:</span> <span class="s">myapp-sa</span>     <span class="c1"># Dedicated SA — not default</span>
+  <span class="na">automountServiceAccountToken</span><span class="pi">:</span> <span class="kc">false</span>   <span class="c1"># Don't mount SA token unless needed</span>
+
+  <span class="na">securityContext</span><span class="pi">:</span>
+    <span class="na">runAsNonRoot</span><span class="pi">:</span> <span class="kc">true</span>             <span class="c1"># Never run as root</span>
+    <span class="na">runAsUser</span><span class="pi">:</span> <span class="m">1001</span>                <span class="c1"># Specific non-root UID</span>
+    <span class="na">runAsGroup</span><span class="pi">:</span> <span class="m">1001</span>
+    <span class="na">fsGroup</span><span class="pi">:</span> <span class="m">1001</span>
+    <span class="na">seccompProfile</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">RuntimeDefault</span>         <span class="c1"># Restrict syscalls to safe set</span>
+
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">app</span>
+    <span class="na">securityContext</span><span class="pi">:</span>
+      <span class="na">allowPrivilegeEscalation</span><span class="pi">:</span> <span class="kc">false</span>    <span class="c1"># Cannot gain more privileges</span>
+      <span class="na">readOnlyRootFilesystem</span><span class="pi">:</span> <span class="kc">true</span>       <span class="c1"># Immutable filesystem</span>
+      <span class="na">capabilities</span><span class="pi">:</span>
+        <span class="na">drop</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">ALL"</span><span class="pi">]</span>                    <span class="c1"># Drop ALL Linux capabilities</span>
+        <span class="na">add</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">NET_BIND_SERVICE"</span><span class="pi">]</span>        <span class="c1"># Add only what's needed (if port &lt; 1024)</span>
+</code></pre></div></div>
+
+<p><strong>Applied to service accounts:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Minimal RBAC — only what the app needs</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">rbac.authorization.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Role</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-role</span>
+<span class="na">rules</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">apiGroups</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">"</span><span class="pi">]</span>
+  <span class="na">resources</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">configmaps"</span><span class="pi">]</span>
+  <span class="na">resourceNames</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">myapp-config"</span><span class="pi">]</span>     <span class="c1"># Only this specific ConfigMap</span>
+  <span class="na">verbs</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">get"</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q2-what-is-devsecops-and-how-do-you-integrate-security-into-a-cicd-pipeline">🟡 Q2. What is DevSecOps and how do you integrate security into a CI/CD pipeline?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>DevSecOps (“shift-left security”) integrates security checks throughout the pipeline instead of at the end:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Code           → Secrets detection (Gitleaks, GitGuardian)
+               → IDE security plugins (SonarLint)
+               ↓
+Build          → SAST (SonarQube, Semgrep, Checkmarx)
+               → Dependency scan (Snyk, OWASP Dependency-Check, Trivy fs)
+               ↓
+Container      → Image vulnerability scan (Trivy, Clair, Grype)
+               → Dockerfile linting (Hadolint)
+               → CIS Benchmark check (Dockle)
+               ↓
+Deploy         → Kubernetes manifest validation (Kyverno, OPA/Gatekeeper)
+               → RBAC audit
+               → Network policy verification
+               ↓
+Runtime        → Runtime security (Falco)
+               → Compliance scanning (OpenSCAP, kube-bench)
+               → Penetration testing (DAST — OWASP ZAP)
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># GitLab CI integration: Trivy + Gitleaks</span>
+<span class="na">gitleaks-scan</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">pre-build</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">zricethezav/gitleaks:latest</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">gitleaks detect --source=. --exit-code=1</span>
+
+<span class="na">trivy-image-scan</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">post-build</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">aquasec/trivy:latest</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">trivy image</span>
+        <span class="s">--format json</span>
+        <span class="s">--output trivy-report.json</span>
+        <span class="s">--exit-code </span><span class="m">1</span>
+        <span class="s">--severity CRITICAL</span>
+        <span class="s">$IMAGE</span>
+  <span class="na">artifacts</span><span class="pi">:</span>
+    <span class="na">reports</span><span class="pi">:</span>
+      <span class="na">container_scanning</span><span class="pi">:</span> <span class="s">trivy-report.json</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="openshift-scc--pod-security">OpenShift SCC &amp; Pod Security</h2>
+
+<hr />
+
+<h3 id="-q3-walk-through-all-the-built-in-sccs-in-openshift-and-their-use-cases">🟡 Q3. Walk through all the built-in SCCs in OpenShift and their use cases.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>SCC</th>
+      <th>Root</th>
+      <th>Privilege Escalation</th>
+      <th>Capabilities</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">restricted-v2</code></td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>Drop ALL</td>
+      <td>Default for apps — most secure</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">restricted</code></td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>Drop ALL</td>
+      <td>Legacy (pre 4.11) — same as restricted-v2 without seccomp</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">nonroot-v2</code></td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>Drop ALL</td>
+      <td>Apps that set their own non-root UID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">nonroot</code></td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>None</td>
+      <td>Legacy nonroot</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">baseline</code></td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>Limited set</td>
+      <td>Mapped from K8s PodSecurity baseline</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">anyuid</code></td>
+      <td>❌ (any UID)</td>
+      <td>❌</td>
+      <td>None</td>
+      <td>Legacy apps needing specific UIDs</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">privileged</code></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>ALL</td>
+      <td>Node-level operators, CNI plugins</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hostnetwork-v2</code></td>
+      <td>❌</td>
+      <td>❌</td>
+      <td><code class="language-plaintext highlighter-rouge">NET_BIND_SERVICE</code></td>
+      <td>Pods needing host network namespace</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hostaccess</code></td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>None</td>
+      <td>Pods needing host paths</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Identify the minimum SCC needed</span>
+oc adm policy scc-subject-review <span class="nt">-f</span> my-deployment.yaml
+<span class="c"># Output shows: "AllowedBy: restricted-v2" or "DeniedBy: ..." with reason</span>
+
+<span class="c"># Audit: find pods using overly-permissive SCCs</span>
+oc get pods <span class="nt">--all-namespaces</span> <span class="se">\</span>
+  <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*]}{.metadata.namespace}{"\t"}{.metadata.name}{"\t"}{.metadata.annotations.openshift\.io/scc}{"\n"}{end}'</span> <span class="se">\</span>
+  | <span class="nb">grep</span> <span class="nt">-E</span> <span class="s1">'privileged|anyuid'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q4-how-do-you-design-a-custom-scc-for-a-specific-application-requirement">🔴 Q4. How do you design a custom SCC for a specific application requirement?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Example: An app that needs to bind port 443 (requires <code class="language-plaintext highlighter-rouge">NET_BIND_SERVICE</code>) but nothing else.</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">security.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">SecurityContextConstraints</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">net-bind-only-scc</span>
+  <span class="na">annotations</span><span class="pi">:</span>
+    <span class="na">kubernetes.io/description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Allows</span><span class="nv"> </span><span class="s">NET_BIND_SERVICE</span><span class="nv"> </span><span class="s">only</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">TLS</span><span class="nv"> </span><span class="s">termination</span><span class="nv"> </span><span class="s">apps"</span>
+
+<span class="c1"># Core restrictions</span>
+<span class="na">allowPrivilegedContainer</span><span class="pi">:</span> <span class="kc">false</span>
+<span class="na">allowPrivilegeEscalation</span><span class="pi">:</span> <span class="kc">false</span>
+<span class="na">defaultAllowPrivilegeEscalation</span><span class="pi">:</span> <span class="kc">false</span>
+
+<span class="c1"># Capabilities</span>
+<span class="na">allowedCapabilities</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">NET_BIND_SERVICE</span>
+<span class="na">defaultAddCapabilities</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">requiredDropCapabilities</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">ALL</span>
+
+<span class="c1"># User/Group restrictions</span>
+<span class="na">runAsUser</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">MustRunAsRange</span>          <span class="c1"># Use namespace-assigned UID range</span>
+<span class="na">seLinuxContext</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">MustRunAs</span>
+<span class="na">fsGroup</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">MustRunAs</span>
+  <span class="na">ranges</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">min</span><span class="pi">:</span> <span class="m">1000</span>
+    <span class="na">max</span><span class="pi">:</span> <span class="m">65535</span>
+<span class="na">supplementalGroups</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">RunAsAny</span>
+
+<span class="c1"># Volume restrictions</span>
+<span class="na">volumes</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">configMap</span>
+<span class="pi">-</span> <span class="s">secret</span>
+<span class="pi">-</span> <span class="s">emptyDir</span>
+<span class="pi">-</span> <span class="s">persistentVolumeClaim</span>
+<span class="pi">-</span> <span class="s">projected</span>
+
+<span class="c1"># Network</span>
+<span class="na">allowHostNetwork</span><span class="pi">:</span> <span class="kc">false</span>
+<span class="na">allowHostPID</span><span class="pi">:</span> <span class="kc">false</span>
+<span class="na">allowHostIPC</span><span class="pi">:</span> <span class="kc">false</span>
+<span class="na">allowHostPorts</span><span class="pi">:</span> <span class="kc">false</span>
+
+<span class="c1"># SecComp</span>
+<span class="na">seccompProfiles</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">runtime/default</span>
+
+<span class="na">users</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">groups</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">priority</span><span class="pi">:</span> <span class="kc">null</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Grant to service account</span>
+oc adm policy add-scc-to-user net-bind-only-scc <span class="se">\</span>
+  <span class="nt">-z</span> myapp-sa <span class="nt">-n</span> my-app
+
+<span class="c"># Verify pod uses correct SCC</span>
+oc get pod myapp-xyz <span class="se">\</span>
+  <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.metadata.annotations.openshift\.io/scc}'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="rbac">RBAC</h2>
+
+<hr />
+
+<h3 id="-q5-how-do-you-implement-least-privilege-rbac-for-a-cicd-service-account">🟡 Q5. How do you implement least-privilege RBAC for a CI/CD service account?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>A CI/CD service account (e.g., Jenkins or Tekton pipeline SA) needs to deploy to specific namespaces — nothing more.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Service account for CI/CD in ci-cd namespace</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ServiceAccount</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cicd-deployer</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">cicd</span>
+
+<span class="nn">---</span>
+<span class="c1"># Role in each target namespace — only what deploy needs</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">rbac.authorization.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Role</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">deployer-role</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">rules</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">apiGroups</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">apps"</span><span class="pi">]</span>
+  <span class="na">resources</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">deployments"</span><span class="pi">]</span>
+  <span class="na">verbs</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">get"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">list"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">patch"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">update"</span><span class="pi">]</span>
+<span class="pi">-</span> <span class="na">apiGroups</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">"</span><span class="pi">]</span>
+  <span class="na">resources</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">pods"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">pods/log"</span><span class="pi">]</span>
+  <span class="na">verbs</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">get"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">list"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">watch"</span><span class="pi">]</span>
+<span class="pi">-</span> <span class="na">apiGroups</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">"</span><span class="pi">]</span>
+  <span class="na">resources</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">services"</span><span class="pi">]</span>
+  <span class="na">verbs</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">get"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">list"</span><span class="pi">]</span>
+
+<span class="nn">---</span>
+<span class="c1"># Bind the cicd SA (from cicd namespace) to the role in production</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">rbac.authorization.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">RoleBinding</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cicd-deployer-binding</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">subjects</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">kind</span><span class="pi">:</span> <span class="s">ServiceAccount</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cicd-deployer</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">cicd</span>               <span class="c1"># SA lives in a different namespace</span>
+<span class="na">roleRef</span><span class="pi">:</span>
+  <span class="na">kind</span><span class="pi">:</span> <span class="s">Role</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">deployer-role</span>
+  <span class="na">apiGroup</span><span class="pi">:</span> <span class="s">rbac.authorization.k8s.io</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Verify: what can this SA do?</span>
+oc auth can-i <span class="nt">--list</span> <span class="se">\</span>
+  <span class="nt">--as</span><span class="o">=</span>system:serviceaccount:cicd:cicd-deployer <span class="se">\</span>
+  <span class="nt">-n</span> production
+
+<span class="c"># Confirm it CANNOT delete pods (not in the Role)</span>
+oc auth can-i delete pods <span class="se">\</span>
+  <span class="nt">--as</span><span class="o">=</span>system:serviceaccount:cicd:cicd-deployer <span class="se">\</span>
+  <span class="nt">-n</span> production
+<span class="c"># Expected: no</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q6-how-do-you-audit-rbac-permissions-in-a-running-openshift-cluster">🟡 Q6. How do you audit RBAC permissions in a running OpenShift cluster?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Who has cluster-admin?</span>
+oc get clusterrolebindings <span class="se">\</span>
+  <span class="nt">-o</span> json | jq <span class="s1">'.items[] | select(.roleRef.name=="cluster-admin") | .subjects'</span>
+
+<span class="c"># 2. List all role bindings in a namespace</span>
+oc get rolebindings,clusterrolebindings <span class="se">\</span>
+  <span class="nt">--all-namespaces</span> <span class="se">\</span>
+  <span class="nt">-o</span> custom-columns<span class="o">=</span><span class="s1">'NAMESPACE:.metadata.namespace,NAME:.metadata.name,ROLE:.roleRef.name,SUBJECTS:.subjects[*].name'</span>
+
+<span class="c"># 3. What can user alice do?</span>
+oc auth can-i <span class="nt">--list</span> <span class="nt">--as</span><span class="o">=</span>alice <span class="nt">-n</span> my-app
+
+<span class="c"># 4. Who can exec into pods? (common privilege escalation path)</span>
+oc policy who-can create pods/exec <span class="nt">-n</span> my-app
+oc policy who-can get secrets <span class="nt">-n</span> my-app
+
+<span class="c"># 5. Check for overly-broad wildcards</span>
+oc get clusterroles <span class="nt">-o</span> json | <span class="se">\</span>
+  jq <span class="s1">'.items[] | select(.rules[].verbs[]? == "*") | .metadata.name'</span>
+
+<span class="c"># 6. kube-bench (CIS benchmark RBAC audit)</span>
+oc apply <span class="nt">-f</span> https://raw.githubusercontent.com/aquasecurity/kube-bench/main/job-openshift.yaml
+oc logs job/kube-bench | <span class="nb">grep </span>FAIL
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="network-security">Network Security</h2>
+
+<hr />
+
+<h3 id="-q7-how-do-you-implement-networkpolicies-for-micro-segmentation-in-openshift">🟡 Q7. How do you implement NetworkPolicies for micro-segmentation in OpenShift?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Default-deny all, then selectively allow — “zero trust networking”:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Step 1: Default deny all ingress and egress in a namespace</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">default-deny-all</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span> <span class="pi">{}</span>      <span class="c1"># Applies to ALL pods in the namespace</span>
+  <span class="na">policyTypes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">Ingress</span>
+  <span class="pi">-</span> <span class="s">Egress</span>
+
+<span class="nn">---</span>
+<span class="c1"># Step 2: Allow ingress from the Route/HAProxy router only</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">allow-from-router</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">ingress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">from</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">namespaceSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">network.openshift.io/policy-group</span><span class="pi">:</span> <span class="s">ingress</span>
+
+<span class="nn">---</span>
+<span class="c1"># Step 3: Allow app pods to reach the database</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">allow-app-to-db</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">postgres</span>
+  <span class="na">ingress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">from</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">podSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">5432</span>
+
+<span class="nn">---</span>
+<span class="c1"># Step 4: Allow DNS egress (required for all pods)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">allow-dns</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span> <span class="pi">{}</span>
+  <span class="na">egress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">protocol</span><span class="pi">:</span> <span class="s">UDP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">53</span>
+    <span class="pi">-</span> <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">53</span>
+
+<span class="nn">---</span>
+<span class="c1"># Step 5: Allow monitoring scrape from Prometheus</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">allow-monitoring</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">ingress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">from</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">namespaceSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">openshift-monitoring</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">8080</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q8-what-is-an-egressnetworkpolicy-egressfirewall-in-openshift">🟡 Q8. What is an EgressNetworkPolicy (EgressFirewall) in OpenShift?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>EgressNetworkPolicy</strong> (called <code class="language-plaintext highlighter-rouge">EgressFirewall</code> in OVN-Kubernetes) controls which external IPs/DNS names pods in a namespace can reach. This enforces outbound network segmentation.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># With OVN-Kubernetes (default in OCP 4.12+): EgressFirewall</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">k8s.ovn.org/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">EgressFirewall</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">egress-firewall</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">egress</span><span class="pi">:</span>
+  <span class="c1"># Allow internal services</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">Allow</span>
+    <span class="na">to</span><span class="pi">:</span>
+      <span class="na">cidrSelector</span><span class="pi">:</span> <span class="s">10.0.0.0/8</span>
+
+  <span class="c1"># Allow specific external APIs</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">Allow</span>
+    <span class="na">to</span><span class="pi">:</span>
+      <span class="na">dnsName</span><span class="pi">:</span> <span class="s">api.github.com</span>
+
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">Allow</span>
+    <span class="na">to</span><span class="pi">:</span>
+      <span class="na">dnsName</span><span class="pi">:</span> <span class="s">registry.redhat.io</span>
+
+  <span class="c1"># Block everything else</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">Deny</span>
+    <span class="na">to</span><span class="pi">:</span>
+      <span class="na">cidrSelector</span><span class="pi">:</span> <span class="s">0.0.0.0/0</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check egress firewall status</span>
+oc get egressfirewall <span class="nt">-n</span> my-app
+oc describe egressfirewall egress-firewall <span class="nt">-n</span> my-app
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="secrets-management">Secrets Management</h2>
+
+<hr />
+
+<h3 id="-q9-what-are-the-security-risks-of-using-kubernetes-secrets-and-how-do-you-mitigate-them">🔴 Q9. What are the security risks of using Kubernetes Secrets and how do you mitigate them?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Kubernetes Secret risks:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Risk</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Base64 ≠ encryption</strong></td>
+      <td>Secrets are base64-encoded by default — anyone who can <code class="language-plaintext highlighter-rouge">get secret</code> can decode them</td>
+    </tr>
+    <tr>
+      <td><strong>etcd at-rest encryption</strong></td>
+      <td>Secrets stored unencrypted in etcd unless explicitly configured</td>
+    </tr>
+    <tr>
+      <td><strong>RBAC sprawl</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">get secret</code> in a namespace → access to ALL secrets in that namespace</td>
+    </tr>
+    <tr>
+      <td><strong>Env var exposure</strong></td>
+      <td>Secrets injected as env vars may appear in <code class="language-plaintext highlighter-rouge">kubectl describe pod</code> or logs</td>
+    </tr>
+    <tr>
+      <td><strong>Git leakage</strong></td>
+      <td>Developers accidentally commit Secrets manifests to Git</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Mitigations:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Enable etcd encryption at rest (OpenShift)</span>
+oc get apiserver cluster <span class="nt">-o</span> yaml   <span class="c"># Check encryption config</span>
+oc edit apiserver cluster
+<span class="c"># Set: spec.encryption.type: aescbc  (or aesgcm)</span>
+<span class="c"># OpenShift rotates the encryption key via the API server operator</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 2. Use External Secrets Operator — secrets never stored in Git or etcd long-term</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">external-secrets.io/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ExternalSecret</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">db-credentials</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">refreshInterval</span><span class="pi">:</span> <span class="s">1h</span>
+  <span class="na">secretStoreRef</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">vault-backend</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterSecretStore</span>
+  <span class="na">target</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">db-credentials</span>
+    <span class="na">creationPolicy</span><span class="pi">:</span> <span class="s">Owner</span>
+    <span class="na">deletionPolicy</span><span class="pi">:</span> <span class="s">Delete</span>
+  <span class="na">data</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">secretKey</span><span class="pi">:</span> <span class="s">password</span>
+    <span class="na">remoteRef</span><span class="pi">:</span>
+      <span class="na">key</span><span class="pi">:</span> <span class="s">secret/production/myapp/db</span>
+      <span class="na">property</span><span class="pi">:</span> <span class="s">password</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 3. Mount as file, not env var — files don't appear in pod describe</span>
+<span class="na">volumeMounts</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">db-secret</span>
+  <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/etc/secrets</span>
+  <span class="na">readOnly</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="na">volumes</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">db-secret</span>
+  <span class="na">secret</span><span class="pi">:</span>
+    <span class="na">secretName</span><span class="pi">:</span> <span class="s">db-credentials</span>
+    <span class="na">defaultMode</span><span class="pi">:</span> <span class="m">0400</span>      <span class="c1"># Read-only, owner only</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 4. Restrict RBAC: access only specific secrets by name</span>
+<span class="c"># 5. Scan Git repos for accidental secrets — gitleaks in pre-commit hook</span>
+<span class="c"># 6. Use Vault Agent Injector for zero-secret-in-etcd pattern</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q10-how-do-you-integrate-hashicorp-vault-with-openshift">🔴 Q10. How do you integrate HashiCorp Vault with OpenShift?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Two patterns:</strong></p>
+
+<p><strong>Pattern 1: Vault Agent Injector (sidecar):</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Vault injects secrets as files into pod sidecar — nothing stored in etcd</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">annotations</span><span class="pi">:</span>
+        <span class="na">vault.hashicorp.com/agent-inject</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+        <span class="na">vault.hashicorp.com/role</span><span class="pi">:</span> <span class="s2">"</span><span class="s">myapp-role"</span>
+        <span class="na">vault.hashicorp.com/agent-inject-secret-db-creds</span><span class="pi">:</span> <span class="s2">"</span><span class="s">secret/data/production/myapp/db"</span>
+        <span class="na">vault.hashicorp.com/agent-inject-template-db-creds</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">{{- with secret "secret/data/production/myapp/db" -}}</span>
+          <span class="s">export DB_PASSWORD="{{ .Data.data.password }}"</span>
+          <span class="s">{{- end }}</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">serviceAccountName</span><span class="pi">:</span> <span class="s">myapp-sa</span>
+      <span class="c1"># Vault uses the SA's JWT token to authenticate (Kubernetes auth method)</span>
+</code></pre></div></div>
+
+<p><strong>Pattern 2: External Secrets Operator (ESO):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install Vault operator + configure K8s auth</span>
+vault auth <span class="nb">enable </span>kubernetes
+vault write auth/kubernetes/config <span class="se">\</span>
+  <span class="nv">kubernetes_host</span><span class="o">=</span><span class="s2">"https://kubernetes.default.svc"</span> <span class="se">\</span>
+  <span class="nv">kubernetes_ca_cert</span><span class="o">=</span>@/run/secrets/kubernetes.io/serviceaccount/ca.crt
+
+vault policy write myapp-policy - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+path "secret/data/production/myapp/*" {
+  capabilities = ["read"]
+}
+</span><span class="no">EOF
+
+</span>vault write auth/kubernetes/role/myapp-role <span class="se">\</span>
+  <span class="nv">bound_service_account_names</span><span class="o">=</span>myapp-sa <span class="se">\</span>
+  <span class="nv">bound_service_account_namespaces</span><span class="o">=</span>my-app <span class="se">\</span>
+  <span class="nv">policies</span><span class="o">=</span>myapp-policy <span class="se">\</span>
+  <span class="nv">ttl</span><span class="o">=</span>1h
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="image-security--supply-chain">Image Security &amp; Supply Chain</h2>
+
+<hr />
+
+<h3 id="-q11-how-do-you-enforce-that-only-approved-images-run-in-openshift">🟡 Q11. How do you enforce that only approved images run in OpenShift?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Layer 1 — Image signing with cosign:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Generate signing keys (stored as K8s secret)</span>
+cosign generate-key-pair k8s://cosign-keys/cosign
+
+<span class="c"># Sign image after build in CI pipeline</span>
+cosign sign <span class="se">\</span>
+  <span class="nt">--key</span> k8s://cosign-keys/cosign <span class="se">\</span>
+  <span class="k">${</span><span class="nv">IMAGE</span><span class="k">}</span>@<span class="k">${</span><span class="nv">DIGEST</span><span class="k">}</span>
+</code></pre></div></div>
+
+<p><strong>Layer 2 — Kyverno policy to enforce signed images:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kyverno.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">verify-image-signature</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">validationFailureAction</span><span class="pi">:</span> <span class="s">Enforce</span>
+  <span class="na">rules</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">verify-signature</span>
+    <span class="na">match</span><span class="pi">:</span>
+      <span class="na">any</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">kinds</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Pod</span><span class="pi">]</span>
+          <span class="na">namespaces</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">production</span><span class="pi">,</span> <span class="nv">staging</span><span class="pi">]</span>
+    <span class="na">verifyImages</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">imageReferences</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">image-registry.openshift-image-registry.svc:5000/production/*"</span>
+      <span class="na">attestors</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">entries</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">keys</span><span class="pi">:</span>
+            <span class="na">publicKeys</span><span class="pi">:</span> <span class="pi">|-</span>
+              <span class="s">-----BEGIN PUBLIC KEY-----</span>
+              <span class="s">...</span>
+              <span class="s">-----END PUBLIC KEY-----</span>
+</code></pre></div></div>
+
+<p><strong>Layer 3 — AllowedRegistries policy:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kyverno.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">restrict-image-registries</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">validationFailureAction</span><span class="pi">:</span> <span class="s">Enforce</span>
+  <span class="na">rules</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">allow-only-approved-registries</span>
+    <span class="na">match</span><span class="pi">:</span>
+      <span class="na">any</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">kinds</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Pod</span><span class="pi">]</span>
+    <span class="na">validate</span><span class="pi">:</span>
+      <span class="na">message</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Images</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">come</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">approved</span><span class="nv"> </span><span class="s">registries"</span>
+      <span class="na">pattern</span><span class="pi">:</span>
+        <span class="na">spec</span><span class="pi">:</span>
+          <span class="na">containers</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">image</span><span class="pi">:</span> <span class="s2">"</span><span class="s">image-registry.openshift-image-registry.svc:5000/*</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">registry.redhat.io/*</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">registry.access.redhat.com/*"</span>
+</code></pre></div></div>
+
+<p><strong>Layer 4 — OpenShift image policy (built-in):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Prevent use of :latest tag in production</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: config.openshift.io/v1
+kind: Image
+metadata:
+  name: cluster
+spec:
+  allowedRegistriesForImport:
+  - domainName: image-registry.openshift-image-registry.svc:5000
+    insecure: false
+  - domainName: registry.redhat.io
+  registrySources:
+    blockedRegistries:
+    - docker.io         # Block Docker Hub in production
+</span><span class="no">EOF
+</span></code></pre></div></div>
+
+<hr />
+
+<h3 id="-q12-what-is-an-sbom-and-why-is-it-important-for-container-security">🟡 Q12. What is an SBOM and why is it important for container security?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>SBOM (Software Bill of Materials)</strong> is a complete list of all components, libraries, and dependencies inside a container image — the “ingredients list” for software.</p>
+
+<p><strong>Why it matters:</strong></p>
+<ul>
+  <li>When a new CVE is published (e.g., Log4Shell), you can instantly find which images contain the vulnerable library.</li>
+  <li>Required by US Executive Order 14028 on Cybersecurity for federal systems.</li>
+  <li>Enables faster incident response — no need to scan every image manually.</li>
+</ul>
+
+<p><strong>Generating SBOM in CI pipeline:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Using Syft (generates CycloneDX or SPDX format)</span>
+syft <span class="k">${</span><span class="nv">IMAGE</span><span class="k">}</span> <span class="nt">-o</span> cyclonedx-json <span class="o">&gt;</span> sbom.json
+
+<span class="c"># Attach SBOM to image (stored alongside in registry)</span>
+cosign attach sbom <span class="nt">--sbom</span> sbom.json <span class="k">${</span><span class="nv">IMAGE</span><span class="k">}</span>
+
+<span class="c"># Verify SBOM presence later</span>
+cosign download sbom <span class="k">${</span><span class="nv">IMAGE</span><span class="k">}</span>
+</code></pre></div></div>
+
+<p><strong>Trivy scans against SBOM:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Generate and use SBOM for scanning</span>
+trivy image <span class="nt">--format</span> cyclonedx <span class="k">${</span><span class="nv">IMAGE</span><span class="k">}</span> <span class="o">&gt;</span> sbom.cdx.json
+trivy sbom ./sbom.cdx.json   <span class="c"># Scan the SBOM for vulnerabilities</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="compliance--audit">Compliance &amp; Audit</h2>
+
+<hr />
+
+<h3 id="-q13-what-compliance-frameworks-are-commonly-required-in-containerized-environments">🟡 Q13. What compliance frameworks are commonly required in containerized environments?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Framework</th>
+      <th>Focus</th>
+      <th>How OpenShift helps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CIS Kubernetes Benchmark</strong></td>
+      <td>K8s hardening (API server flags, etcd, kubelet)</td>
+      <td>Compliance Operator with CIS profile</td>
+    </tr>
+    <tr>
+      <td><strong>NIST SP 800-190</strong></td>
+      <td>Container security guidelines</td>
+      <td>SCC, image signing, network policies</td>
+    </tr>
+    <tr>
+      <td><strong>PCI DSS</strong></td>
+      <td>Payment card data — network segmentation, encryption</td>
+      <td>NetworkPolicy, encrypted secrets, audit logs</td>
+    </tr>
+    <tr>
+      <td><strong>HIPAA</strong></td>
+      <td>Healthcare data — access control, audit trails</td>
+      <td>RBAC, audit logging, encryption at rest</td>
+    </tr>
+    <tr>
+      <td><strong>SOC 2 Type II</strong></td>
+      <td>Security, availability, confidentiality</td>
+      <td>Access control, monitoring, incident management</td>
+    </tr>
+    <tr>
+      <td><strong>FedRAMP</strong></td>
+      <td>US government cloud — strict controls</td>
+      <td>OpenShift on GovCloud, FIPS mode</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>OpenShift Compliance Operator:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install Compliance Operator from OperatorHub</span>
+<span class="c"># Runs OpenSCAP scans against CIS/NIST/PCI profiles</span>
+
+<span class="c"># Apply a scan setting</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: compliance.openshift.io/v1alpha1
+kind: ScanSettingBinding
+metadata:
+  name: cis-compliance
+  namespace: openshift-compliance
+spec:
+  profiles:
+  - apiGroup: compliance.openshift.io/v1alpha1
+    kind: Profile
+    name: ocp4-cis
+  - apiGroup: compliance.openshift.io/v1alpha1
+    kind: Profile
+    name: ocp4-cis-node
+  settingsRef:
+    apiGroup: compliance.openshift.io/v1alpha1
+    kind: ScanSetting
+    name: default
+</span><span class="no">EOF
+
+</span><span class="c"># View results</span>
+oc get compliancecheckreports <span class="nt">-n</span> openshift-compliance
+oc get compliancecheckresult <span class="nt">-n</span> openshift-compliance | <span class="nb">grep </span>FAIL
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q14-how-do-you-enable-and-use-kubernetesopenshift-audit-logs">🔴 Q14. How do you enable and use Kubernetes/OpenShift audit logs?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>Audit logs record every request made to the API server — who did what, when, and whether it was allowed.</p>
+
+<p><strong>OpenShift audit policy levels:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>None     → Don't log this request
+Metadata → Log method, URL, user, status (no body)
+Request  → Log metadata + request body
+RequestResponse → Log everything including response body
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Custom audit policy</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">audit.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Policy</span>
+<span class="na">rules</span><span class="pi">:</span>
+<span class="c1"># Don't log routine read-only requests</span>
+<span class="pi">-</span> <span class="na">level</span><span class="pi">:</span> <span class="s">None</span>
+  <span class="na">verbs</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">get"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">list"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">watch"</span><span class="pi">]</span>
+  <span class="na">resources</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">group</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">resources</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">events"</span><span class="pi">]</span>
+
+<span class="c1"># Log all secret access at RequestResponse level</span>
+<span class="pi">-</span> <span class="na">level</span><span class="pi">:</span> <span class="s">RequestResponse</span>
+  <span class="na">resources</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">group</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">resources</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">secrets"</span><span class="pi">]</span>
+
+<span class="c1"># Log all authentication failures</span>
+<span class="pi">-</span> <span class="na">level</span><span class="pi">:</span> <span class="s">Metadata</span>
+  <span class="na">nonResourceURLs</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">/api*"</span><span class="pi">]</span>
+  <span class="na">userGroups</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">system:unauthenticated"</span><span class="pi">]</span>
+
+<span class="c1"># Default: log metadata for everything else</span>
+<span class="pi">-</span> <span class="na">level</span><span class="pi">:</span> <span class="s">Metadata</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># In OpenShift, audit logs are in each API server pod</span>
+oc adm node-logs <span class="nt">--role</span><span class="o">=</span>master <span class="nt">--path</span><span class="o">=</span>openshift-apiserver/audit.log | <span class="nb">head</span> <span class="nt">-50</span>
+
+<span class="c"># Parse with jq</span>
+oc adm node-logs <span class="nt">--role</span><span class="o">=</span>master <span class="nt">--path</span><span class="o">=</span>openshift-apiserver/audit.log | <span class="se">\</span>
+  jq <span class="s1">'select(.verb=="delete" and .objectRef.resource=="secrets")'</span>
+
+<span class="c"># Who accessed secret X?</span>
+oc adm node-logs <span class="nt">--role</span><span class="o">=</span>master <span class="nt">--path</span><span class="o">=</span>openshift-apiserver/audit.log | <span class="se">\</span>
+  jq <span class="s1">'select(.objectRef.resource=="secrets" and .objectRef.name=="db-password")'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q15-how-do-you-use-falco-for-runtime-security-in-openshift">🔴 Q15. How do you use Falco for runtime security in OpenShift?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Falco</strong> is a CNCF runtime security tool that monitors Linux system calls to detect threats at runtime.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Falco DaemonSet on OpenShift (needs privileged SCC)</span>
+<span class="c1"># Install via Helm</span>
+<span class="s">helm install falco falcosecurity/falco \</span>
+  <span class="s">--namespace falco-system \</span>
+  <span class="s">--set falco.jsonOutput=true \</span>
+  <span class="s">--set falco.logLevel=info</span>
+
+<span class="c1"># Grant privileged SCC to Falco SA</span>
+<span class="s">oc adm policy add-scc-to-user privileged \</span>
+  <span class="s">-z falco -n falco-system</span>
+</code></pre></div></div>
+
+<p><strong>Custom Falco rules for container environments:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># falco-rules.yaml</span>
+<span class="pi">-</span> <span class="na">rule</span><span class="pi">:</span> <span class="s">Shell in container</span>
+  <span class="na">desc</span><span class="pi">:</span> <span class="s">Detect shell spawned in a container</span>
+  <span class="na">condition</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">spawned_process and</span>
+    <span class="s">container and</span>
+    <span class="s">shell_procs and</span>
+    <span class="s">not user_known_shell_spawn_activities</span>
+  <span class="na">output</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">Shell in container</span>
+    <span class="s">(user=%user.name container=%container.name</span>
+     <span class="s">image=%container.image.repository</span>
+     <span class="s">command=%proc.cmdline)</span>
+  <span class="na">priority</span><span class="pi">:</span> <span class="s">WARNING</span>
+  <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">container</span><span class="pi">,</span> <span class="nv">shell</span><span class="pi">]</span>
+
+<span class="pi">-</span> <span class="na">rule</span><span class="pi">:</span> <span class="s">Write to /etc in container</span>
+  <span class="na">desc</span><span class="pi">:</span> <span class="s">Detect write to /etc — possible config tampering</span>
+  <span class="na">condition</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">open_write and</span>
+    <span class="s">container and</span>
+    <span class="s">fd.name startswith /etc</span>
+  <span class="na">output</span><span class="pi">:</span> <span class="pi">&gt;</span>
+    <span class="s">Write to /etc</span>
+    <span class="s">(user=%user.name file=%fd.name container=%container.name)</span>
+  <span class="na">priority</span><span class="pi">:</span> <span class="s">ERROR</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># View Falco alerts in real-time</span>
+kubectl logs <span class="nt">-n</span> falco-system <span class="nt">-l</span> app.kubernetes.io/name<span class="o">=</span>falco <span class="nt">-f</span> | <span class="se">\</span>
+  jq <span class="s1">'select(.priority=="CRITICAL" or .priority=="ERROR")'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q16-how-do-you-handle-certificate-management-in-openshift">🟡 Q16. How do you handle certificate management in OpenShift?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Internal certificates (cluster):</strong>
+OpenShift manages its own PKI — the ingress certificate, API server cert, etcd certs, and service-serving certificates are all auto-rotated by operators.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># View cert expiry dates</span>
+oc get secret <span class="nt">-n</span> openshift-ingress-operator <span class="se">\</span>
+  router-ca <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.tls\.crt}'</span> | <span class="nb">base64</span> <span class="nt">-d</span> | openssl x509 <span class="nt">-noout</span> <span class="nt">-dates</span>
+
+<span class="c"># Rotate ingress certificate</span>
+oc delete secret router-certs-default <span class="nt">-n</span> openshift-ingress
+<span class="c"># Operator auto-recreates it</span>
+
+<span class="c"># Replace with custom wildcard cert</span>
+oc create secret tls custom-certs <span class="se">\</span>
+  <span class="nt">--cert</span><span class="o">=</span>wildcard.crt <span class="se">\</span>
+  <span class="nt">--key</span><span class="o">=</span>wildcard.key <span class="se">\</span>
+  <span class="nt">-n</span> openshift-ingress
+
+oc patch ingresscontroller.operator default <span class="se">\</span>
+  <span class="nt">-n</span> openshift-ingress-operator <span class="se">\</span>
+  <span class="nt">--type</span><span class="o">=</span>merge <span class="se">\</span>
+  <span class="nt">-p</span> <span class="s1">'{"spec":{"defaultCertificate":{"name":"custom-certs"}}}'</span>
+</code></pre></div></div>
+
+<p><strong>Application certificates with cert-manager:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># cert-manager Certificate for an app</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">cert-manager.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Certificate</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-tls</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">secretName</span><span class="pi">:</span> <span class="s">myapp-tls-secret</span>
+  <span class="na">duration</span><span class="pi">:</span> <span class="s">2160h</span>          <span class="c1"># 90 days</span>
+  <span class="na">renewBefore</span><span class="pi">:</span> <span class="s">360h</span>        <span class="c1"># Renew 15 days before expiry</span>
+  <span class="na">dnsNames</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">myapp.apps.mycluster.example.com</span>
+  <span class="na">issuerRef</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">letsencrypt-prod</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterIssuer</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q17-how-do-you-enforce-pod-security-policies-organization-wide-using-kyverno-or-opagatekeeper">🔴 Q17. How do you enforce pod security policies organization-wide using Kyverno or OPA/Gatekeeper?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Kyverno</strong> is a Kubernetes-native policy engine (operates as admission webhook).</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Cluster-wide policy: require readOnlyRootFilesystem</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kyverno.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">require-readonly-rootfs</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">validationFailureAction</span><span class="pi">:</span> <span class="s">Enforce</span>
+  <span class="na">background</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="na">rules</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">check-readonly-rootfs</span>
+    <span class="na">match</span><span class="pi">:</span>
+      <span class="na">any</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">kinds</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Pod</span><span class="pi">]</span>
+          <span class="na">namespaces</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">production</span><span class="pi">,</span> <span class="nv">staging</span><span class="pi">]</span>
+    <span class="na">validate</span><span class="pi">:</span>
+      <span class="na">message</span><span class="pi">:</span> <span class="s2">"</span><span class="s">readOnlyRootFilesystem</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">true</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">production"</span>
+      <span class="na">pattern</span><span class="pi">:</span>
+        <span class="na">spec</span><span class="pi">:</span>
+          <span class="na">containers</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">=(securityContext)</span><span class="pi">:</span>
+              <span class="na">readOnlyRootFilesystem</span><span class="pi">:</span> <span class="kc">true</span>
+
+<span class="nn">---</span>
+<span class="c1"># Policy: require resource requests and limits on all containers</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kyverno.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">require-resource-limits</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">validationFailureAction</span><span class="pi">:</span> <span class="s">Enforce</span>
+  <span class="na">rules</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">check-resources</span>
+    <span class="na">match</span><span class="pi">:</span>
+      <span class="na">any</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">kinds</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Pod</span><span class="pi">]</span>
+    <span class="na">validate</span><span class="pi">:</span>
+      <span class="na">message</span><span class="pi">:</span> <span class="s2">"</span><span class="s">CPU</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">memory</span><span class="nv"> </span><span class="s">requests/limits</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">required"</span>
+      <span class="na">pattern</span><span class="pi">:</span>
+        <span class="na">spec</span><span class="pi">:</span>
+          <span class="na">containers</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">resources</span><span class="pi">:</span>
+              <span class="na">requests</span><span class="pi">:</span>
+                <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">?*"</span>
+                <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">?*"</span>
+              <span class="na">limits</span><span class="pi">:</span>
+                <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">?*"</span>
+
+<span class="nn">---</span>
+<span class="c1"># Mutating policy: automatically add labels</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kyverno.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">add-mandatory-labels</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">rules</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">add-labels</span>
+    <span class="na">match</span><span class="pi">:</span>
+      <span class="na">any</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">kinds</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Deployment</span><span class="pi">,</span> <span class="nv">StatefulSet</span><span class="pi">]</span>
+    <span class="na">mutate</span><span class="pi">:</span>
+      <span class="na">patchStrategicMerge</span><span class="pi">:</span>
+        <span class="na">metadata</span><span class="pi">:</span>
+          <span class="na">labels</span><span class="pi">:</span>
+            <span class="na">+(managed-by)</span><span class="pi">:</span> <span class="s2">"</span><span class="s">platform-team"</span>
+            <span class="na">+(environment)</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{request.namespace}}"</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check policy reports</span>
+kubectl get policyreport <span class="nt">-n</span> my-app
+kubectl get clusterpolicyreport
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q18-what-is-fips-mode-in-openshift-and-when-is-it-required">🟡 Q18. What is FIPS mode in OpenShift and when is it required?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>FIPS 140-2/3</strong> (Federal Information Processing Standard) is a US government standard for cryptographic modules. It restricts algorithms to FIPS-approved ones (e.g., AES, SHA-2, RSA) and disables non-approved ones (MD5, DES, RC4).</p>
+
+<p><strong>When required:</strong></p>
+<ul>
+  <li>US Federal government workloads (FedRAMP)</li>
+  <li>Healthcare (HIPAA for some interpretations)</li>
+  <li>Defense/intelligence contracts</li>
+  <li>Payment systems (some PCI interpretations)</li>
+</ul>
+
+<p><strong>Enabling FIPS in OpenShift (must be set at install time — cannot be enabled post-install):</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># install-config.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">fips</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="c1"># ... rest of install config</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Verify FIPS is enabled after install</span>
+oc get cm cluster-config-v1 <span class="nt">-n</span> kube-system <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.install-config}'</span> | <span class="nb">grep </span>fips
+<span class="c"># On a node:</span>
+oc debug node/worker-1 <span class="nt">--</span> fips-mode-setup <span class="nt">--check</span>
+</code></pre></div></div>
+
+<p><strong>Implications:</strong></p>
+<ul>
+  <li>Container images must use FIPS-compliant crypto libraries (OpenSSL in FIPS mode or Go’s FIPS build tags).</li>
+  <li>Red Hat UBI images are FIPS-compatible.</li>
+  <li>Some third-party images may break in FIPS mode.</li>
+</ul>
+
+<hr />
+
+<blockquote>
+  <p><strong>Next:</strong> <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting.html">Monitoring &amp; Troubleshooting →</a></p>
+</blockquote>
+
+<p>{% endraw %}</p>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

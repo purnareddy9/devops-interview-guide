@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🐳 Docker — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🐳 Docker — DevOps Interview Guide
 
 > [← Git](./Git.md) | [Main Index](./README.md) | [Kubernetes →](./Kubernetes.md)

@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🏗️ Terraform — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🏗️ Terraform — DevOps Interview Guide
 
 > [← Jenkins](./Jenkins.md) | [Main Index](./README.md) | [Ansible →](./Ansible.md)

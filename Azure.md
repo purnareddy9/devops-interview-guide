@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🔷 Azure — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🔷 Azure — DevOps Interview Guide
 
 > [← AWS](./AWS.md) | [Main Index](./README.md) | [GCP →](./GCP.md)

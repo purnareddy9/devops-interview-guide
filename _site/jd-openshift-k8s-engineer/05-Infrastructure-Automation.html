@@ -1,0 +1,2069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>⚙️ Module 5 — Infrastructure & Automation · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="⚙️ Module 5 — Infrastructure & Automation · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="⚙️ Module 5 — Infrastructure & Automation · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>⚙️ Module 5 — Infrastructure &amp; Automation | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="⚙️ Module 5 — Infrastructure &amp; Automation" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation.html" />
+<meta property="og:url" content="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="⚙️ Module 5 — Infrastructure &amp; Automation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"⚙️ Module 5 — Infrastructure &amp; Automation","url":"/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         aria-current="page">
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link active"
+       aria-current="page">
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span class="breadcrumb-part">Jd openshift k8s engineer</span>
+            
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">⚙️ Module 5 — Infrastructure & Automation</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <p>{% raw %}</p>
+
+<h1 id="️-module-5--infrastructure--automation">⚙️ Module 5 — Infrastructure &amp; Automation</h1>
+
+<blockquote>
+  <p><strong>JD Alignment:</strong> “Automate infrastructure provisioning and configuration management. Collaborate with cross-functional teams to integrate DevOps best practices. Maintain documentation related to deployment processes and system architecture.”</p>
+</blockquote>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting.html">← Monitoring &amp; Troubleshooting</a></td>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/README.html">README</a></td>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based.html">Scenario-Based →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#terraform">Terraform</a></li>
+  <li><a href="#ansible">Ansible</a></li>
+  <li><a href="#helm">Helm</a></li>
+  <li><a href="#kustomize">Kustomize</a></li>
+  <li><a href="#gitops-at-scale">GitOps at Scale</a></li>
+  <li><a href="#openshift-cluster-provisioning">OpenShift Cluster Provisioning</a></li>
+</ol>
+
+<hr />
+
+<h2 id="terraform">Terraform</h2>
+
+<hr />
+
+<h3 id="-q1-how-do-you-provision-an-openshift-cluster-on-aws-rosa-using-terraform">🟡 Q1. How do you provision an OpenShift cluster on AWS (ROSA) using Terraform?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># main.tf — ROSA cluster via Terraform (using rhcs provider)</span>
+<span class="nx">terraform</span> <span class="p">{</span>
+  <span class="nx">required_providers</span> <span class="p">{</span>
+    <span class="nx">rhcs</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">source</span>  <span class="o">=</span> <span class="s2">"terraform-redhat/rhcs"</span>
+      <span class="nx">version</span> <span class="o">=</span> <span class="s2">"~&gt; 1.5"</span>
+    <span class="p">}</span>
+    <span class="nx">aws</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">source</span>  <span class="o">=</span> <span class="s2">"hashicorp/aws"</span>
+      <span class="nx">version</span> <span class="o">=</span> <span class="s2">"~&gt; 5.0"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nx">backend</span> <span class="s2">"s3"</span> <span class="p">{</span>
+    <span class="nx">bucket</span> <span class="o">=</span> <span class="s2">"my-terraform-state"</span>
+    <span class="nx">key</span>    <span class="o">=</span> <span class="s2">"rosa/terraform.tfstate"</span>
+    <span class="nx">region</span> <span class="o">=</span> <span class="s2">"us-east-1"</span>
+    <span class="nx">encrypt</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">provider</span> <span class="s2">"rhcs"</span> <span class="p">{</span>
+  <span class="nx">token</span> <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">rhcs_token</span>     <span class="c1"># Red Hat cloud.redhat.com token</span>
+  <span class="nx">url</span>   <span class="o">=</span> <span class="s2">"https://api.openshift.com"</span>
+<span class="p">}</span>
+
+<span class="nx">provider</span> <span class="s2">"aws"</span> <span class="p">{</span>
+  <span class="nx">region</span> <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">aws_region</span>
+<span class="p">}</span>
+
+<span class="c1"># VPC</span>
+<span class="nx">module</span> <span class="s2">"vpc"</span> <span class="p">{</span>
+  <span class="nx">source</span>  <span class="o">=</span> <span class="s2">"terraform-aws-modules/vpc/aws"</span>
+  <span class="nx">version</span> <span class="o">=</span> <span class="s2">"~&gt; 5.0"</span>
+  <span class="nx">name</span>    <span class="o">=</span> <span class="s2">"${var.cluster_name}-vpc"</span>
+  <span class="nx">cidr</span>    <span class="o">=</span> <span class="s2">"10.0.0.0/16"</span>
+  <span class="nx">azs</span>     <span class="o">=</span> <span class="p">[</span><span class="s2">"us-east-1a"</span><span class="p">,</span> <span class="s2">"us-east-1b"</span><span class="p">,</span> <span class="s2">"us-east-1c"</span><span class="p">]</span>
+  <span class="nx">private_subnets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"10.0.1.0/24"</span><span class="p">,</span> <span class="s2">"10.0.2.0/24"</span><span class="p">,</span> <span class="s2">"10.0.3.0/24"</span><span class="p">]</span>
+  <span class="nx">public_subnets</span>  <span class="o">=</span> <span class="p">[</span><span class="s2">"10.0.101.0/24"</span><span class="p">,</span> <span class="s2">"10.0.102.0/24"</span><span class="p">,</span> <span class="s2">"10.0.103.0/24"</span><span class="p">]</span>
+  <span class="nx">enable_nat_gateway</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">single_nat_gateway</span> <span class="o">=</span> <span class="kc">false</span>    <span class="c1"># HA: one NAT GW per AZ</span>
+<span class="err">}</span>
+
+<span class="c1"># ROSA Cluster</span>
+<span class="nx">resource</span> <span class="s2">"rhcs_cluster_rosa_classic"</span> <span class="s2">"rosa"</span> <span class="p">{</span>
+  <span class="nx">name</span>               <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">cluster_name</span>
+  <span class="nx">cloud_region</span>       <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">aws_region</span>
+  <span class="nx">multi_az</span>           <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">version</span>            <span class="o">=</span> <span class="s2">"4.14.5"</span>
+  <span class="nx">availability_zones</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"us-east-1a"</span><span class="p">,</span> <span class="s2">"us-east-1b"</span><span class="p">,</span> <span class="s2">"us-east-1c"</span><span class="p">]</span>
+  <span class="nx">aws_account_id</span>     <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">aws_caller_identity</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">account_id</span>
+
+  <span class="nx">sts</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">oidc_config_id</span>       <span class="o">=</span> <span class="nx">rhcs_oidc_config</span><span class="p">.</span><span class="nx">oidc</span><span class="p">.</span><span class="nx">id</span>
+    <span class="nx">operator_role_prefix</span> <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">cluster_name</span>
+    <span class="nx">role_arn</span>             <span class="o">=</span> <span class="nx">aws_iam_role</span><span class="p">.</span><span class="nx">installer</span><span class="p">.</span><span class="nx">arn</span>
+    <span class="nx">support_role_arn</span>     <span class="o">=</span> <span class="nx">aws_iam_role</span><span class="p">.</span><span class="nx">support</span><span class="p">.</span><span class="nx">arn</span>
+    <span class="nx">instance_iam_roles</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">master_role_arn</span> <span class="o">=</span> <span class="nx">aws_iam_role</span><span class="p">.</span><span class="nx">controlplane</span><span class="p">.</span><span class="nx">arn</span>
+      <span class="nx">worker_role_arn</span> <span class="o">=</span> <span class="nx">aws_iam_role</span><span class="p">.</span><span class="nx">worker</span><span class="p">.</span><span class="nx">arn</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">aws_subnet_ids</span> <span class="o">=</span> <span class="nx">concat</span><span class="p">(</span>
+    <span class="nx">module</span><span class="p">.</span><span class="nx">vpc</span><span class="p">.</span><span class="nx">private_subnets</span><span class="p">,</span>
+    <span class="nx">module</span><span class="p">.</span><span class="nx">vpc</span><span class="p">.</span><span class="nx">public_subnets</span>
+  <span class="p">)</span>
+
+  <span class="nx">compute_machine_type</span> <span class="o">=</span> <span class="s2">"m5.xlarge"</span>
+  <span class="nx">replicas</span>             <span class="o">=</span> <span class="mi">3</span>
+
+  <span class="nx">properties</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">rosa_creator_arn</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">aws_caller_identity</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">arn</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># Machine Pool for application workloads</span>
+<span class="nx">resource</span> <span class="s2">"rhcs_machine_pool"</span> <span class="s2">"app_pool"</span> <span class="p">{</span>
+  <span class="nx">cluster</span>      <span class="o">=</span> <span class="nx">rhcs_cluster_rosa_classic</span><span class="p">.</span><span class="nx">rosa</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">name</span>         <span class="o">=</span> <span class="s2">"app-workers"</span>
+  <span class="nx">machine_type</span> <span class="o">=</span> <span class="s2">"m5.2xlarge"</span>
+  <span class="nx">replicas</span>     <span class="o">=</span> <span class="mi">3</span>
+  <span class="nx">labels</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"workload-type"</span> <span class="p">=</span> <span class="s2">"application"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Apply</span>
+terraform init
+terraform plan <span class="nt">-var-file</span><span class="o">=</span>prod.tfvars
+terraform apply <span class="nt">-var-file</span><span class="o">=</span>prod.tfvars
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q2-how-do-you-manage-terraform-state-for-team-based-infrastructure">🟡 Q2. How do you manage Terraform state for team-based infrastructure?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Remote state with locking (S3 + DynamoDB):</strong></p>
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">terraform</span> <span class="p">{</span>
+  <span class="nx">backend</span> <span class="s2">"s3"</span> <span class="p">{</span>
+    <span class="nx">bucket</span>         <span class="o">=</span> <span class="s2">"company-terraform-state"</span>
+    <span class="nx">key</span>            <span class="o">=</span> <span class="s2">"openshift/production/terraform.tfstate"</span>
+    <span class="nx">region</span>         <span class="o">=</span> <span class="s2">"us-east-1"</span>
+    <span class="nx">encrypt</span>        <span class="o">=</span> <span class="kc">true</span>
+    <span class="nx">dynamodb_table</span> <span class="o">=</span> <span class="s2">"terraform-state-lock"</span>   <span class="c1"># Prevents concurrent applies</span>
+    <span class="nx">kms_key_id</span>     <span class="o">=</span> <span class="s2">"arn:aws:kms:us-east-1:123:key/abc123"</span>
+  <span class="err">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Workspace strategy for multi-environment:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Separate state per environment</span>
+terraform workspace new production
+terraform workspace new staging
+terraform workspace <span class="k">select </span>production
+
+<span class="c"># Reference workspace in config</span>
+locals <span class="o">{</span>
+  env_config <span class="o">=</span> <span class="o">{</span>
+    production <span class="o">=</span> <span class="o">{</span> replicas <span class="o">=</span> 6, instance_type <span class="o">=</span> <span class="s2">"m5.2xlarge"</span> <span class="o">}</span>
+    staging    <span class="o">=</span> <span class="o">{</span> replicas <span class="o">=</span> 3, instance_type <span class="o">=</span> <span class="s2">"m5.xlarge"</span> <span class="o">}</span>
+  <span class="o">}</span>
+  config <span class="o">=</span> local.env_config[terraform.workspace]
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Best practices:</strong></p>
+<ul>
+  <li>Never store state in Git — it contains secrets in plaintext.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">-target</code> sparingly — for break-glass scenarios only.</li>
+  <li>Pin provider versions in <code class="language-plaintext highlighter-rouge">required_providers</code> and <code class="language-plaintext highlighter-rouge">terraform.lock.hcl</code> in Git.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">terraform plan -out=tfplan</code> + <code class="language-plaintext highlighter-rouge">terraform apply tfplan</code> in CI — apply the exact same plan that was reviewed.</li>
+  <li>Separate Terraform modules per component (vpc, cluster, dns, monitoring).</li>
+</ul>
+
+<hr />
+
+<h3 id="-q3-how-do-you-handle-terraform-drift-detection-and-remediation">🔴 Q3. How do you handle Terraform drift detection and remediation?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Drift</strong> = actual cloud state diverges from Terraform state (manual changes, auto-scaling, external processes).</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Detect drift</span>
+terraform plan     <span class="c"># Shows any differences between state and real infra</span>
+
+<span class="c"># Refresh state to match reality (without making changes)</span>
+terraform refresh  <span class="c"># Updates state file from real infra; deprecated in TF 1.x</span>
+terraform plan <span class="nt">-refresh-only</span>   <span class="c"># Newer approach: see what refreshed state would be</span>
+
+<span class="c"># Import manually-created resources into state</span>
+terraform import aws_instance.web i-1234567890abcdef0
+
+<span class="c"># Automated drift detection in CI (run nightly)</span>
+terraform plan <span class="nt">-detailed-exitcode</span>
+<span class="c"># Exit code 0: no changes; 1: error; 2: changes detected</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-eq</span> 2 <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span>notify-slack <span class="s2">"DRIFT DETECTED in production infrastructure!"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+<p><strong>In GitOps with Atlantis:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># atlantis.yaml — auto-plan on PR, manual apply</span>
+<span class="na">version</span><span class="pi">:</span> <span class="m">3</span>
+<span class="na">projects</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">openshift-production</span>
+  <span class="na">dir</span><span class="pi">:</span> <span class="s">terraform/openshift</span>
+  <span class="na">workspace</span><span class="pi">:</span> <span class="s">production</span>
+  <span class="na">autoplan</span><span class="pi">:</span>
+    <span class="na">when_modified</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">*.tf"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">*.tfvars"</span><span class="pi">]</span>
+    <span class="na">enabled</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="na">apply_requirements</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">approved</span><span class="pi">,</span> <span class="nv">mergeable</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="ansible">Ansible</h2>
+
+<hr />
+
+<h3 id="-q4-how-do-you-use-ansible-for-openshift-post-installation-configuration">🟡 Q4. How do you use Ansible for OpenShift post-installation configuration?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># playbooks/configure-openshift.yml</span>
+<span class="nn">---</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure OpenShift cluster post-install</span>
+  <span class="na">hosts</span><span class="pi">:</span> <span class="s">localhost</span>
+  <span class="na">connection</span><span class="pi">:</span> <span class="s">local</span>
+  <span class="na">gather_facts</span><span class="pi">:</span> <span class="kc">false</span>
+
+  <span class="na">vars</span><span class="pi">:</span>
+    <span class="na">cluster_api</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://api.mycluster.example.com:6443"</span>
+    <span class="na">kubeconfig</span><span class="pi">:</span> <span class="s2">"</span><span class="s">~/.kube/config"</span>
+
+  <span class="na">tasks</span><span class="pi">:</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create standard namespaces</span>
+    <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+      <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+      <span class="na">definition</span><span class="pi">:</span>
+        <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">project.openshift.io/v1</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">Project</span>
+        <span class="na">metadata</span><span class="pi">:</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">}}"</span>
+          <span class="na">annotations</span><span class="pi">:</span>
+            <span class="na">openshift.io/display-name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">capitalize</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="na">loop</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">production</span>
+      <span class="pi">-</span> <span class="s">staging</span>
+      <span class="pi">-</span> <span class="s">monitoring</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Apply ResourceQuotas to all namespaces</span>
+    <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+      <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+      <span class="na">definition</span><span class="pi">:</span>
+        <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">ResourceQuota</span>
+        <span class="na">metadata</span><span class="pi">:</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">compute-quota</span>
+          <span class="na">namespace</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">}}"</span>
+        <span class="na">spec</span><span class="pi">:</span>
+          <span class="na">hard</span><span class="pi">:</span>
+            <span class="na">pods</span><span class="pi">:</span> <span class="s2">"</span><span class="s">50"</span>
+            <span class="na">requests.cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">10"</span>
+            <span class="na">requests.memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">20Gi"</span>
+            <span class="na">limits.cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">20"</span>
+            <span class="na">limits.memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">40Gi"</span>
+    <span class="na">loop</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">production</span>
+      <span class="pi">-</span> <span class="s">staging</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure HTPasswd identity provider</span>
+    <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+      <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+      <span class="na">definition</span><span class="pi">:</span>
+        <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">config.openshift.io/v1</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">OAuth</span>
+        <span class="na">metadata</span><span class="pi">:</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">cluster</span>
+        <span class="na">spec</span><span class="pi">:</span>
+          <span class="na">identityProviders</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">htpasswd</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">HTPasswd</span>
+            <span class="na">htpasswd</span><span class="pi">:</span>
+              <span class="na">fileData</span><span class="pi">:</span>
+                <span class="na">name</span><span class="pi">:</span> <span class="s">htpasswd-secret</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy cluster-wide NetworkPolicy defaults</span>
+    <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+      <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+      <span class="na">src</span><span class="pi">:</span> <span class="s2">"</span><span class="s">files/networkpolicies/{{</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">}}.yaml"</span>
+    <span class="na">loop</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">deny-other-namespaces</span>
+      <span class="pi">-</span> <span class="s">allow-from-router</span>
+      <span class="pi">-</span> <span class="s">allow-monitoring</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install operators via Subscriptions</span>
+    <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+      <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+      <span class="na">definition</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">lookup('file',</span><span class="nv"> </span><span class="s">'files/subscriptions/'</span><span class="nv"> </span><span class="s">+</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">+</span><span class="nv"> </span><span class="s">'.yaml')</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">from_yaml</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="na">loop</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">openshift-pipelines</span>
+      <span class="pi">-</span> <span class="s">openshift-gitops</span>
+      <span class="pi">-</span> <span class="s">cert-manager</span>
+      <span class="pi">-</span> <span class="s">external-secrets</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure cluster logging</span>
+    <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+      <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+      <span class="na">src</span><span class="pi">:</span> <span class="s">files/logging/clusterlogging-instance.yaml</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set cluster-wide proxy (if needed)</span>
+    <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+      <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+      <span class="na">definition</span><span class="pi">:</span>
+        <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">config.openshift.io/v1</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">Proxy</span>
+        <span class="na">metadata</span><span class="pi">:</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">cluster</span>
+        <span class="na">spec</span><span class="pi">:</span>
+          <span class="na">httpProxy</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">http_proxy</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">default('')</span><span class="nv"> </span><span class="s">}}"</span>
+          <span class="na">httpsProxy</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">https_proxy</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">default('')</span><span class="nv"> </span><span class="s">}}"</span>
+          <span class="na">noProxy</span><span class="pi">:</span> <span class="s2">"</span><span class="s">.cluster.local,.svc,localhost,10.0.0.0/8"</span>
+    <span class="na">when</span><span class="pi">:</span> <span class="s">http_proxy is defined</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Run playbook</span>
+ansible-playbook playbooks/configure-openshift.yml <span class="se">\</span>
+  <span class="nt">-e</span> @vars/production.yml <span class="se">\</span>
+  <span class="nt">--diff</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q5-how-do-you-use-ansible-roles-and-best-practices-for-maintainability">🟡 Q5. How do you use Ansible roles and best practices for maintainability?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roles/
+└── openshift-project/
+    ├── tasks/
+    │   ├── main.yml
+    │   ├── create-project.yml
+    │   └── configure-rbac.yml
+    ├── defaults/
+    │   └── main.yml    # Default variable values
+    ├── vars/
+    │   └── main.yml    # Variables that override defaults
+    ├── templates/
+    │   ├── quota.yaml.j2
+    │   └── rolebinding.yaml.j2
+    ├── files/
+    │   └── networkpolicy.yaml
+    ├── handlers/
+    │   └── main.yml    # Triggered by notify
+    ├── meta/
+    │   └── main.yml    # Role dependencies
+    └── README.md
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># roles/openshift-project/defaults/main.yml</span>
+<span class="na">openshift_project_quota_cpu_requests</span><span class="pi">:</span> <span class="s2">"</span><span class="s">4"</span>
+<span class="na">openshift_project_quota_memory_requests</span><span class="pi">:</span> <span class="s2">"</span><span class="s">8Gi"</span>
+<span class="na">openshift_project_quota_pods</span><span class="pi">:</span> <span class="s2">"</span><span class="s">20"</span>
+<span class="na">openshift_project_admin_users</span><span class="pi">:</span> <span class="pi">[]</span>
+
+<span class="c1"># roles/openshift-project/tasks/main.yml</span>
+<span class="nn">---</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create project</span>
+  <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+    <span class="na">definition</span><span class="pi">:</span>
+      <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">project.openshift.io/v1</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">Project</span>
+      <span class="na">metadata</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">openshift_project_name</span><span class="nv"> </span><span class="s">}}"</span>
+  <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">project</span><span class="pi">]</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Apply quota</span>
+  <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+    <span class="na">template</span><span class="pi">:</span> <span class="s">quota.yaml.j2</span>
+  <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">quota</span><span class="pi">]</span>
+
+<span class="pi">-</span> <span class="na">include_tasks</span><span class="pi">:</span> <span class="s">configure-rbac.yml</span>
+  <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">rbac</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<p><strong>Ansible Vault for secrets:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Encrypt sensitive vars</span>
+ansible-vault encrypt_string <span class="s1">'super-secret-password'</span> <span class="nt">--name</span> <span class="s1">'db_password'</span>
+<span class="c"># Store encrypted value in vars file — safe to commit to Git</span>
+
+<span class="c"># Run playbook with vault password</span>
+ansible-playbook playbook.yml <span class="nt">--ask-vault-pass</span>
+<span class="c"># Or from file:</span>
+ansible-playbook playbook.yml <span class="nt">--vault-password-file</span> ~/.vault-pass
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="helm">Helm</h2>
+
+<hr />
+
+<h3 id="-q6-explain-helm-chart-structure-and-how-you-use-it-for-openshift-deployments">🟡 Q6. Explain Helm chart structure and how you use it for OpenShift deployments.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>my-app-chart/
+├── Chart.yaml           # Chart metadata (name, version, appVersion)
+├── values.yaml          # Default configuration values
+├── values-production.yaml  # Production overrides (in source control)
+├── templates/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   ├── route.yaml       # OpenShift Route
+│   ├── serviceaccount.yaml
+│   ├── rbac.yaml
+│   ├── hpa.yaml
+│   ├── pdb.yaml
+│   ├── _helpers.tpl     # Template helper functions
+│   └── NOTES.txt        # Post-install instructions
+├── charts/              # Chart dependencies (sub-charts)
+└── .helmignore
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Chart.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v2</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">my-nodeapp</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Node.js application for OpenShift</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">application</span>
+<span class="na">version</span><span class="pi">:</span> <span class="s">1.2.3</span>           <span class="c1"># Chart version</span>
+<span class="na">appVersion</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2.0.1"</span>      <span class="c1"># App version being packaged</span>
+
+<span class="c1"># values.yaml</span>
+<span class="na">image</span><span class="pi">:</span>
+  <span class="na">repository</span><span class="pi">:</span> <span class="s">image-registry.openshift-image-registry.svc:5000/my-app/my-nodeapp</span>
+  <span class="na">tag</span><span class="pi">:</span> <span class="s2">"</span><span class="s">latest"</span>
+  <span class="na">pullPolicy</span><span class="pi">:</span> <span class="s">IfNotPresent</span>
+
+<span class="na">replicaCount</span><span class="pi">:</span> <span class="m">2</span>
+
+<span class="na">resources</span><span class="pi">:</span>
+  <span class="na">requests</span><span class="pi">:</span>
+    <span class="na">cpu</span><span class="pi">:</span> <span class="s">100m</span>
+    <span class="na">memory</span><span class="pi">:</span> <span class="s">128Mi</span>
+  <span class="na">limits</span><span class="pi">:</span>
+    <span class="na">cpu</span><span class="pi">:</span> <span class="s">500m</span>
+    <span class="na">memory</span><span class="pi">:</span> <span class="s">512Mi</span>
+
+<span class="na">route</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="na">host</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>               <span class="c1"># Auto-generated if empty</span>
+  <span class="na">tls</span><span class="pi">:</span>
+    <span class="na">termination</span><span class="pi">:</span> <span class="s">edge</span>
+    <span class="na">insecureEdgeTerminationPolicy</span><span class="pi">:</span> <span class="s">Redirect</span>
+
+<span class="na">autoscaling</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="na">minReplicas</span><span class="pi">:</span> <span class="m">2</span>
+  <span class="na">maxReplicas</span><span class="pi">:</span> <span class="m">10</span>
+  <span class="na">targetCPUUtilizationPercentage</span><span class="pi">:</span> <span class="m">70</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># templates/deployment.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="pi">{{</span> <span class="nv">include "my-nodeapp.fullname" .</span> <span class="pi">}}</span>
+  <span class="na">labels</span><span class="pi">:</span> <span class="pi">{{</span> <span class="nv">include "my-nodeapp.labels" . | nindent 4</span> <span class="pi">}}</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="pi">{{</span> <span class="nv">.Values.replicaCount</span> <span class="pi">}}</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span> <span class="pi">{{</span> <span class="nv">include "my-nodeapp.selectorLabels" . | nindent 6</span> <span class="pi">}}</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span> <span class="pi">{{</span> <span class="nv">include "my-nodeapp.selectorLabels" . | nindent 8</span> <span class="pi">}}</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="pi">{{</span> <span class="nv">.Chart.Name</span> <span class="pi">}}</span>
+        <span class="na">image</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">.Values.image.repository</span><span class="nv"> </span><span class="s">}}:{{</span><span class="nv"> </span><span class="s">.Values.image.tag</span><span class="nv"> </span><span class="s">}}"</span>
+        <span class="na">imagePullPolicy</span><span class="pi">:</span> <span class="pi">{{</span> <span class="nv">.Values.image.pullPolicy</span> <span class="pi">}}</span>
+        <span class="na">resources</span><span class="pi">:</span> <span class="pi">{{</span> <span class="nv">toYaml .Values.resources | nindent 10</span> <span class="pi">}}</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install to OpenShift</span>
+helm <span class="nb">install </span>my-nodeapp ./my-app-chart <span class="se">\</span>
+  <span class="nt">-f</span> values-production.yaml <span class="se">\</span>
+  <span class="nt">-n</span> production <span class="se">\</span>
+  <span class="nt">--create-namespace</span>
+
+<span class="c"># Upgrade</span>
+helm upgrade my-nodeapp ./my-app-chart <span class="se">\</span>
+  <span class="nt">-f</span> values-production.yaml <span class="se">\</span>
+  <span class="nt">-n</span> production
+
+<span class="c"># Dry-run before upgrade</span>
+helm upgrade <span class="nt">--dry-run</span> <span class="nt">--debug</span> my-nodeapp ./my-app-chart <span class="nt">-f</span> values-production.yaml
+
+<span class="c"># Rollback</span>
+helm rollback my-nodeapp 2 <span class="nt">-n</span> production
+
+<span class="c"># Diff (helm-diff plugin)</span>
+helm diff upgrade my-nodeapp ./my-app-chart <span class="nt">-f</span> values-production.yaml
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="kustomize">Kustomize</h2>
+
+<hr />
+
+<h3 id="-q7-what-is-kustomize-and-how-does-it-differ-from-helm-when-would-you-choose-each">🟡 Q7. What is Kustomize and how does it differ from Helm? When would you choose each?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Helm</th>
+      <th>Kustomize</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Templating</td>
+      <td>Go templates — full logic</td>
+      <td>JSON/YAML patches — no templates</td>
+    </tr>
+    <tr>
+      <td>Values</td>
+      <td><code class="language-plaintext highlighter-rouge">values.yaml</code></td>
+      <td><code class="language-plaintext highlighter-rouge">kustomization.yaml</code> overlays</td>
+    </tr>
+    <tr>
+      <td>Complexity</td>
+      <td>Higher (Go templating)</td>
+      <td>Lower (YAML patching)</td>
+    </tr>
+    <tr>
+      <td>Packaging</td>
+      <td>Charts — versioned, shareable via registry</td>
+      <td>Directories — Git-native</td>
+    </tr>
+    <tr>
+      <td>K8s integration</td>
+      <td>External tool</td>
+      <td>Built into <code class="language-plaintext highlighter-rouge">kubectl -k</code> and <code class="language-plaintext highlighter-rouge">oc</code></td>
+    </tr>
+    <tr>
+      <td>OpenShift Routes</td>
+      <td>Can template Route YAML</td>
+      <td>Can patch Route YAML</td>
+    </tr>
+    <tr>
+      <td>Best for</td>
+      <td>Complex apps with many configurable options</td>
+      <td>Environment-specific overlays, GitOps</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Kustomize structure:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>k8s/
+├── base/
+│   ├── kustomization.yaml
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── route.yaml
+└── overlays/
+    ├── staging/
+    │   ├── kustomization.yaml
+    │   ├── replica-patch.yaml    # Override replicas
+    │   └── resource-patch.yaml  # Override resources
+    └── production/
+        ├── kustomization.yaml
+        ├── replica-patch.yaml
+        └── image-patch.yaml     # Set production image
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># overlays/production/kustomization.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kustomize.config.k8s.io/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Kustomization</span>
+
+<span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">namePrefix</span><span class="pi">:</span> <span class="s">prod-</span>
+
+<span class="na">resources</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">../../base</span>
+
+<span class="na">images</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">newName</span><span class="pi">:</span> <span class="s">image-registry.openshift-image-registry.svc:5000/production/myapp</span>
+  <span class="na">newTag</span><span class="pi">:</span> <span class="s2">"</span><span class="s">v1.2.3"</span>
+
+<span class="na">patchesStrategicMerge</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">replica-patch.yaml</span>
+
+<span class="na">patches</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">target</span><span class="pi">:</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">patch</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">- op: replace</span>
+      <span class="s">path: /spec/template/spec/containers/0/resources/limits/memory</span>
+      <span class="s">value: 1Gi</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Apply with kustomize</span>
+oc apply <span class="nt">-k</span> k8s/overlays/production/
+
+<span class="c"># Preview output</span>
+oc kustomize k8s/overlays/production/
+
+<span class="c"># ArgoCD uses kustomize natively — just point to the overlay dir</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="gitops-at-scale">GitOps at Scale</h2>
+
+<hr />
+
+<h3 id="-q8-how-do-you-manage-hundreds-of-applications-across-multiple-clusters-with-gitops">🔴 Q8. How do you manage hundreds of applications across multiple clusters with GitOps?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>ApplicationSet</strong> — ArgoCD resource that generates Applications from templates:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ApplicationSet: deploy to all clusters matching labels</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">argoproj.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ApplicationSet</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">all-apps</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-gitops</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">generators</span><span class="pi">:</span>
+  <span class="c1"># Matrix generator: all apps × all clusters</span>
+  <span class="pi">-</span> <span class="na">matrix</span><span class="pi">:</span>
+      <span class="na">generators</span><span class="pi">:</span>
+      <span class="c1"># List of apps from Git directory structure</span>
+      <span class="pi">-</span> <span class="na">git</span><span class="pi">:</span>
+          <span class="na">repoURL</span><span class="pi">:</span> <span class="s">https://github.com/myorg/gitops-config.git</span>
+          <span class="na">revision</span><span class="pi">:</span> <span class="s">main</span>
+          <span class="na">directories</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">path</span><span class="pi">:</span> <span class="s">apps/*</span>
+
+      <span class="c1"># Clusters from ArgoCD cluster secrets</span>
+      <span class="pi">-</span> <span class="na">clusters</span><span class="pi">:</span>
+          <span class="na">selector</span><span class="pi">:</span>
+            <span class="na">matchLabels</span><span class="pi">:</span>
+              <span class="na">environment</span><span class="pi">:</span> <span class="s">production</span>
+
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{path.basename}}-{{name}}"</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">project</span><span class="pi">:</span> <span class="s">default</span>
+      <span class="na">source</span><span class="pi">:</span>
+        <span class="na">repoURL</span><span class="pi">:</span> <span class="s">https://github.com/myorg/gitops-config.git</span>
+        <span class="na">targetRevision</span><span class="pi">:</span> <span class="s">main</span>
+        <span class="na">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{path}}/overlays/production"</span>
+      <span class="na">destination</span><span class="pi">:</span>
+        <span class="na">server</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{server}}"</span>
+        <span class="na">namespace</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{path.basename}}"</span>
+      <span class="na">syncPolicy</span><span class="pi">:</span>
+        <span class="na">automated</span><span class="pi">:</span>
+          <span class="na">prune</span><span class="pi">:</span> <span class="kc">true</span>
+          <span class="na">selfHeal</span><span class="pi">:</span> <span class="kc">true</span>
+</code></pre></div></div>
+
+<p><strong>App-of-Apps pattern:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Root application that manages all other ArgoCD Applications</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">argoproj.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Application</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">root-app</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-gitops</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">source</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">clusters/production/apps</span>    <span class="c1"># Directory of Application manifests</span>
+  <span class="na">syncPolicy</span><span class="pi">:</span>
+    <span class="na">automated</span><span class="pi">:</span>
+      <span class="na">prune</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">selfHeal</span><span class="pi">:</span> <span class="kc">true</span>
+</code></pre></div></div>
+
+<p><strong>Multi-cluster strategy:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gitops-repo/
+├── clusters/
+│   ├── production-us-east-1/
+│   │   ├── apps/           # ArgoCD Applications for this cluster
+│   │   ├── infra/          # Cluster-level infra (monitoring, logging)
+│   │   └── policies/       # Kyverno/OPA policies
+│   ├── production-eu-west-1/
+│   └── staging/
+└── apps/
+    ├── my-nodeapp/
+    │   ├── base/
+    │   └── overlays/
+    └── my-api/
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="openshift-cluster-provisioning">OpenShift Cluster Provisioning</h2>
+
+<hr />
+
+<h3 id="-q9-explain-the-openshift-ipi-vs-upi-installation-methods">🔴 Q9. Explain the OpenShift IPI vs UPI installation methods.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Stands For</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>IPI</strong></td>
+      <td>Installer-Provisioned Infrastructure</td>
+      <td>Installer creates all cloud infra + cluster. Fastest, least control. Good for: AWS, Azure, GCP, vSphere.</td>
+    </tr>
+    <tr>
+      <td><strong>UPI</strong></td>
+      <td>User-Provisioned Infrastructure</td>
+      <td>You provision infra (VMs, LBs, DNS, VPC); installer only creates the OpenShift layer. More control. Required for: bare-metal, restricted networks, custom networking.</td>
+    </tr>
+    <tr>
+      <td><strong>Assisted Installer</strong></td>
+      <td>—</td>
+      <td>Web/API-based installation for bare-metal without existing Kubernetes.</td>
+    </tr>
+    <tr>
+      <td><strong>ACM</strong> (Advanced Cluster Management)</td>
+      <td>—</td>
+      <td>Multi-cluster provisioning and lifecycle management.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>IPI on AWS (install-config.yaml):</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">baseDomain</span><span class="pi">:</span> <span class="s">example.com</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">mycluster</span>
+<span class="na">platform</span><span class="pi">:</span>
+  <span class="na">aws</span><span class="pi">:</span>
+    <span class="na">region</span><span class="pi">:</span> <span class="s">us-east-1</span>
+    <span class="na">userTags</span><span class="pi">:</span>
+      <span class="na">Environment</span><span class="pi">:</span> <span class="s">production</span>
+      <span class="na">Team</span><span class="pi">:</span> <span class="s">platform</span>
+<span class="na">controlPlane</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
+  <span class="na">platform</span><span class="pi">:</span>
+    <span class="na">aws</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">m5.2xlarge</span>
+<span class="na">compute</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">worker</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
+  <span class="na">platform</span><span class="pi">:</span>
+    <span class="na">aws</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">m5.xlarge</span>
+      <span class="na">zones</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">us-east-1a</span><span class="pi">,</span> <span class="nv">us-east-1b</span><span class="pi">,</span> <span class="nv">us-east-1c</span><span class="pi">]</span>
+<span class="na">networking</span><span class="pi">:</span>
+  <span class="na">networkType</span><span class="pi">:</span> <span class="s">OVNKubernetes</span>
+  <span class="na">clusterNetwork</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">cidr</span><span class="pi">:</span> <span class="s">10.128.0.0/14</span>
+    <span class="na">hostPrefix</span><span class="pi">:</span> <span class="m">23</span>
+  <span class="na">serviceNetwork</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">172.30.0.0/16</span>
+  <span class="na">machineNetwork</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">cidr</span><span class="pi">:</span> <span class="s">10.0.0.0/16</span>
+<span class="na">pullSecret</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{"auths":</span><span class="nv"> </span><span class="s">{...}}'</span>
+<span class="na">sshKey</span><span class="pi">:</span> <span class="s1">'</span><span class="s">ssh-rsa</span><span class="nv"> </span><span class="s">AAAA...'</span>
+<span class="na">fips</span><span class="pi">:</span> <span class="kc">false</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Run IPI install</span>
+openshift-install create cluster <span class="nt">--dir</span> ./install-config/
+openshift-install wait-for install-complete <span class="nt">--dir</span> ./install-config/
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q10-how-do-you-implement-gitops-driven-cluster-configuration-with-acm-advanced-cluster-management">🔴 Q10. How do you implement GitOps-driven cluster configuration with ACM (Advanced Cluster Management)?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>Red Hat ACM (Advanced Cluster Management) manages multiple OpenShift clusters from a single hub.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ACM Policy: enforce PodSecurity across all managed clusters</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">policy.open-cluster-management.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Policy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">enforce-pod-security</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">policies</span>
+  <span class="na">annotations</span><span class="pi">:</span>
+    <span class="na">policy.open-cluster-management.io/standards</span><span class="pi">:</span> <span class="s">NIST-CSF</span>
+    <span class="na">policy.open-cluster-management.io/categories</span><span class="pi">:</span> <span class="s">PR.PT</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">remediationAction</span><span class="pi">:</span> <span class="s">enforce</span>   <span class="c1"># or inform (audit-only)</span>
+  <span class="na">disabled</span><span class="pi">:</span> <span class="kc">false</span>
+  <span class="na">policy-templates</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">objectDefinition</span><span class="pi">:</span>
+      <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">policy.open-cluster-management.io/v1</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">ConfigurationPolicy</span>
+      <span class="na">metadata</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">pod-security-restricted</span>
+      <span class="na">spec</span><span class="pi">:</span>
+        <span class="na">remediationAction</span><span class="pi">:</span> <span class="s">enforce</span>
+        <span class="na">severity</span><span class="pi">:</span> <span class="s">high</span>
+        <span class="na">object-templates</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">complianceType</span><span class="pi">:</span> <span class="s">musthave</span>
+          <span class="na">objectDefinition</span><span class="pi">:</span>
+            <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+            <span class="na">kind</span><span class="pi">:</span> <span class="s">Namespace</span>
+            <span class="na">metadata</span><span class="pi">:</span>
+              <span class="na">labels</span><span class="pi">:</span>
+                <span class="na">pod-security.kubernetes.io/enforce</span><span class="pi">:</span> <span class="s">restricted</span>
+
+<span class="nn">---</span>
+<span class="c1"># PolicyBinding: apply to all clusters with label env=production</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">policy.open-cluster-management.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">PlacementBinding</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">pod-security-binding</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">policies</span>
+<span class="na">placementRef</span><span class="pi">:</span>
+  <span class="na">apiGroup</span><span class="pi">:</span> <span class="s">cluster.open-cluster-management.io</span>
+  <span class="na">kind</span><span class="pi">:</span> <span class="s">PlacementRule</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">all-production-clusters</span>
+<span class="na">subjects</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">apiGroup</span><span class="pi">:</span> <span class="s">policy.open-cluster-management.io</span>
+  <span class="na">kind</span><span class="pi">:</span> <span class="s">Policy</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">enforce-pod-security</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check policy compliance across all clusters</span>
+oc get policy <span class="nt">-n</span> policies
+oc get placementdecision <span class="nt">-n</span> policies
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q11-how-do-you-handle-day-2-operations-for-openshift-using-ansible-automation-platform">🟡 Q11. How do you handle Day-2 operations for OpenShift using Ansible Automation Platform?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>Red Hat Ansible Automation Platform (AAP) integrates with OpenShift via the Automation controller (formerly Ansible Tower) and the <code class="language-plaintext highlighter-rouge">kubernetes.core</code> collection.</p>
+
+<p><strong>Common Day-2 tasks automated with AAP:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Job Template: Rotate all service account tokens in a namespace</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Rotate SA tokens</span>
+  <span class="na">hosts</span><span class="pi">:</span> <span class="s">localhost</span>
+  <span class="na">tasks</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Get all service accounts</span>
+    <span class="na">kubernetes.core.k8s_info</span><span class="pi">:</span>
+      <span class="na">api_version</span><span class="pi">:</span> <span class="s">v1</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">ServiceAccount</span>
+      <span class="na">namespace</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">target_namespace</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="na">register</span><span class="pi">:</span> <span class="s">sa_list</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Delete SA secrets to force token rotation</span>
+    <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+      <span class="na">state</span><span class="pi">:</span> <span class="s">absent</span>
+      <span class="na">api_version</span><span class="pi">:</span> <span class="s">v1</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">Secret</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">}}"</span>
+      <span class="na">namespace</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">target_namespace</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="na">loop</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">sa_list.resources</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">map(attribute='secrets')</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">flatten</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">map(attribute='name')</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">}}"</span>
+</code></pre></div></div>
+
+<p><strong>AAP integration with OpenShift:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install AAP operator from OperatorHub</span>
+<span class="c"># Create AutomationController instance</span>
+<span class="c"># Create execution environments (EE) with kubernetes.core collection</span>
+
+<span class="c"># Webhook trigger: trigger Ansible job from OpenShift event</span>
+<span class="c"># (e.g., when new namespace is created → run namespace-bootstrap playbook)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q12-how-do-you-document-infrastructure-and-keep-documentation-current">🟡 Q12. How do you document infrastructure and keep documentation current?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Documentation strategy (living documentation):</strong></p>
+
+<ol>
+  <li><strong>Architecture as code → Architecture as document:</strong>
+```bash
+    <h1 id="generate-architecture-diagram-from-terraform">Generate architecture diagram from Terraform</h1>
+    <p>terraform graph | dot -Tpng &gt; architecture.png</p>
+  </li>
+</ol>
+
+<h1 id="or-use-diagrams-as-code-python-diagrams-library">Or use Diagrams-as-code (Python diagrams library)</h1>
+<h1 id="diagrampy-generates-png-architecture-diagram">diagram.py generates PNG architecture diagram</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+2. **Runbooks in Git alongside code:**
+</code></pre></div></div>
+<p>docs/
+├── runbooks/
+│   ├── cluster-upgrade.md
+│   ├── incident-response.md
+│   ├── node-replacement.md
+│   └── certificate-rotation.md
+├── architecture/
+│   ├── cluster-overview.md
+│   └── network-topology.md
+└── onboarding/
+    └── new-developer-guide.md</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+3. **Automated README generation for Terraform:**
+```bash
+# terraform-docs generates README from module variables/outputs
+terraform-docs markdown table ./modules/openshift-cluster &gt; README.md
+</code></pre></div></div>
+
+<ol>
+  <li><strong>OpenAPI/Swagger for service APIs:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Auto-generate from code annotations</span>
+<span class="c"># Publish to developer portal (Backstage on OpenShift)</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Changelog with conventional commits:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># git cliff generates CHANGELOG.md from conventional commits</span>
+git cliff <span class="nt">--unreleased</span> <span class="nt">--tag</span> v1.2.0 <span class="nt">-o</span> CHANGELOG.md
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p><strong>Measure documentation quality:</strong></p>
+<ul>
+  <li>Link checks in CI (broken links = outdated docs).</li>
+  <li>Alert when runbook URL referenced in a Prometheus alert returns 404.</li>
+  <li>Require runbook link in every new alert PR.</li>
+</ul>
+
+<hr />
+
+<h3 id="-q13-how-do-you-implement-infrastructure-cost-optimization-for-openshift-on-cloud">🔴 Q13. How do you implement infrastructure cost optimization for OpenShift on cloud?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Strategies:</strong></p>
+
+<p><strong>1. Right-size compute with Cluster Autoscaler:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Scale down unused node pools automatically</span>
+<span class="c"># Enable scale-down with short delay for non-critical environments</span>
+oc edit clusterautoscaler default
+<span class="c"># scaleDown.delayAfterAdd: 2m (staging) vs 10m (production)</span>
+</code></pre></div></div>
+
+<p><strong>2. Use spot/preemptible instances for non-critical workloads:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># MachineSet with spot instances (AWS)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">machine.openshift.io/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">MachineSet</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">worker-spot-us-east-1a</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">providerSpec</span><span class="pi">:</span>
+        <span class="na">value</span><span class="pi">:</span>
+          <span class="na">spotMarketOptions</span><span class="pi">:</span>
+            <span class="na">maxPrice</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.10"</span>    <span class="c1"># Max price per hour</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Toleration for spot nodes</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">tolerations</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">key</span><span class="pi">:</span> <span class="s2">"</span><span class="s">spot-instance"</span>
+    <span class="na">operator</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Equal"</span>
+    <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+    <span class="na">effect</span><span class="pi">:</span> <span class="s2">"</span><span class="s">NoSchedule"</span>
+</code></pre></div></div>
+
+<p><strong>3. Cluster hibernation for non-production:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ROSA: hibernate dev/staging clusters during off-hours</span>
+rosa hibernate cluster <span class="nt">-c</span> my-dev-cluster
+
+<span class="c"># Resume Monday morning</span>
+rosa resume cluster <span class="nt">-c</span> my-dev-cluster
+<span class="c"># Saves ~70% cost for 8×5 dev clusters</span>
+</code></pre></div></div>
+
+<p><strong>4. Monitor resource utilization:</strong></p>
+<pre><code class="language-promql"># Identify over-provisioned namespaces
+# CPU requested vs actual usage
+sum(kube_pod_container_resource_requests{resource="cpu",namespace="my-app"})
+  /
+sum(rate(container_cpu_usage_seconds_total{namespace="my-app"}[1h]))
+# If ratio &gt; 5 → pods are over-requesting CPU
+</code></pre>
+
+<p><strong>5. Use Goldilocks + VPA for recommendations:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl label namespace my-app goldilocks.fairwinds.com/enabled<span class="o">=</span><span class="nb">true
+</span>kubectl port-forward svc/goldilocks-dashboard 8080 <span class="nt">-n</span> goldilocks
+<span class="c"># Open http://localhost:8080 → shows VPA recommendations per deployment</span>
+</code></pre></div></div>
+
+<p><strong>6. Storage lifecycle policies:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Delete unused PVCs (orphaned after pod deletion)</span>
+oc get pvc <span class="nt">--all-namespaces</span> | <span class="nb">grep </span>Released
+<span class="c"># EBS volumes remain after PVC deletion — attach lifecycle policy</span>
+
+<span class="c"># S3 storage for internal registry: lifecycle policy to delete old layers</span>
+aws s3api put-bucket-lifecycle-configuration <span class="se">\</span>
+  <span class="nt">--bucket</span> my-registry-bucket <span class="se">\</span>
+  <span class="nt">--lifecycle-configuration</span> file://registry-lifecycle.json
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q14-how-do-you-implement-configuration-management-across-multiple-openshift-clusters">🟡 Q14. How do you implement configuration management across multiple OpenShift clusters?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Using ACM + Git (GitOps at cluster level):</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ACM Channel: points to Git repo</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps.open-cluster-management.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Channel</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">gitops-config-channel</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">Git</span>
+  <span class="na">pathname</span><span class="pi">:</span> <span class="s">https://github.com/myorg/cluster-config.git</span>
+  <span class="na">secretRef</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">github-credentials</span>
+
+<span class="nn">---</span>
+<span class="c1"># Subscription: deploys resources from Git to managed clusters</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps.open-cluster-management.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Subscription</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cluster-base-config</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">channel</span><span class="pi">:</span> <span class="s">default/gitops-config-channel</span>
+  <span class="na">placement</span><span class="pi">:</span>
+    <span class="na">placementRef</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">all-production-clusters</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">PlacementRule</span>
+  <span class="na">packageFilter</span><span class="pi">:</span>
+    <span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&gt;=1.0.0"</span>
+  <span class="na">overrides</span><span class="pi">:</span> <span class="pi">[]</span>
+</code></pre></div></div>
+
+<p><strong>Using SealedSecrets for environment-specific secrets in Git:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Encrypt secret with cluster public key — safe to store in Git</span>
+kubeseal <span class="nt">--controller-namespace</span> kube-system <span class="se">\</span>
+  <span class="nt">--controller-name</span> sealed-secrets <span class="se">\</span>
+  &lt; secret.yaml <span class="o">&gt;</span> sealed-secret.yaml
+
+git add sealed-secret.yaml    <span class="c"># Safe to commit</span>
+<span class="c"># SealedSecrets operator decrypts on the target cluster using its private key</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q15-describe-your-process-for-onboarding-a-new-application-team-onto-openshift">🟡 Q15. Describe your process for onboarding a new application team onto OpenShift.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Onboarding checklist and automation:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ansible playbook: onboard-team.yml</span>
+<span class="c1"># Triggered by: ServiceNow ticket or self-service portal</span>
+<span class="nn">---</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Onboard new application team</span>
+  <span class="na">hosts</span><span class="pi">:</span> <span class="s">localhost</span>
+  <span class="na">vars</span><span class="pi">:</span>
+    <span class="na">team_name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">team_name</span><span class="nv"> </span><span class="s">}}"</span>          <span class="c1"># e.g., "payments-team"</span>
+    <span class="na">app_namespace</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">app_namespace</span><span class="nv"> </span><span class="s">}}"</span>  <span class="c1"># e.g., "payments"</span>
+    <span class="na">team_admins</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">team_admins</span><span class="nv"> </span><span class="s">}}"</span>      <span class="c1"># List of usernames</span>
+    <span class="na">cpu_quota</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">cpu_quota</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">default('8')</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="na">memory_quota</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">memory_quota</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">default('16Gi')</span><span class="nv"> </span><span class="s">}}"</span>
+
+  <span class="na">tasks</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create project (namespace)</span>
+    <span class="na">kubernetes.core.k8s</span><span class="pi">:</span>
+      <span class="na">definition</span><span class="pi">:</span>
+        <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">project.openshift.io/v1</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">Project</span>
+        <span class="na">metadata</span><span class="pi">:</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">app_namespace</span><span class="nv"> </span><span class="s">}}"</span>
+          <span class="na">annotations</span><span class="pi">:</span>
+            <span class="na">openshift.io/display-name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">team_name</span><span class="nv"> </span><span class="s">}}"</span>
+            <span class="na">openshift.io/requester</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">team_admins[0]</span><span class="nv"> </span><span class="s">}}"</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Apply ResourceQuota</span>
+    <span class="c1"># ...</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Apply LimitRange defaults</span>
+    <span class="c1"># ...</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create service accounts</span>
+    <span class="c1"># pipeline-sa, app-sa</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Grant RBAC</span>
+    <span class="c1"># admin role to team_admins</span>
+    <span class="c1"># edit role to team_members</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Configure NetworkPolicies</span>
+    <span class="c1"># deny-other-namespaces, allow-from-router</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up CI/CD service account</span>
+    <span class="c1"># grant pipeline-sa the deployer role</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create default ImagePullSecret</span>
+    <span class="c1"># for pulling from internal registry</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Notify team via Slack</span>
+    <span class="na">community.general.slack</span><span class="pi">:</span>
+      <span class="na">token</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">slack_token</span><span class="nv"> </span><span class="s">}}"</span>
+      <span class="na">channel</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#platform-onboarding"</span>
+      <span class="na">msg</span><span class="pi">:</span> <span class="s2">"</span><span class="s">✅</span><span class="nv"> </span><span class="s">Namespace</span><span class="nv"> </span><span class="s">'{{</span><span class="nv"> </span><span class="s">app_namespace</span><span class="nv"> </span><span class="s">}}'</span><span class="nv"> </span><span class="s">ready</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">team</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">team_name</span><span class="nv"> </span><span class="s">}}"</span>
+</code></pre></div></div>
+
+<p><strong>Self-service portal integration:</strong></p>
+<ul>
+  <li>Backstage Template → form submission → triggers Ansible job → creates namespace.</li>
+  <li>Team receives email/Slack with: cluster URL, namespace name, how to get kubeconfig, documentation links.</li>
+</ul>
+
+<hr />
+
+<h3 id="-q16-how-do-you-use-openshifts-machineconfig-operator-to-customize-node-os-configuration">🔴 Q16. How do you use OpenShift’s MachineConfig Operator to customize node OS configuration?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>The MCO manages RHCOS (Red Hat CoreOS) node configuration declaratively.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Custom kernel arguments for high-performance workloads</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">machineconfiguration.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">MachineConfig</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">99-worker-performance-tuning</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">machineconfiguration.openshift.io/role</span><span class="pi">:</span> <span class="s">worker</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">kernelArguments</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s2">"</span><span class="s">transparent_hugepages=always"</span>
+  <span class="pi">-</span> <span class="s2">"</span><span class="s">numa_balancing=0"</span>
+  <span class="na">kernelType</span><span class="pi">:</span> <span class="s">default</span>
+
+<span class="nn">---</span>
+<span class="c1"># Custom sysctl settings</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">machineconfiguration.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">MachineConfig</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">99-worker-sysctl</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">machineconfiguration.openshift.io/role</span><span class="pi">:</span> <span class="s">worker</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">config</span><span class="pi">:</span>
+    <span class="na">ignition</span><span class="pi">:</span>
+      <span class="na">version</span><span class="pi">:</span> <span class="s">3.2.0</span>
+    <span class="na">storage</span><span class="pi">:</span>
+      <span class="na">files</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">contents</span><span class="pi">:</span>
+          <span class="na">source</span><span class="pi">:</span> <span class="s">data:text/plain;charset=utf-8;base64,bmV0LmlwdjQudGNwX3R3X3JldXNlPTEKbmV0LmNvcmUuc29tYXhibWVtPTI2MjE0NDAK</span>
+          <span class="c1"># net.ipv4.tcp_tw_reuse=1</span>
+          <span class="c1"># net.core.somaxconn=262144</span>
+        <span class="na">mode</span><span class="pi">:</span> <span class="m">0644</span>
+        <span class="na">path</span><span class="pi">:</span> <span class="s">/etc/sysctl.d/99-custom.conf</span>
+
+<span class="nn">---</span>
+<span class="c1"># Add custom CA certificate to all nodes</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">machineconfiguration.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">MachineConfig</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">99-worker-custom-ca</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">machineconfiguration.openshift.io/role</span><span class="pi">:</span> <span class="s">worker</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">config</span><span class="pi">:</span>
+    <span class="na">ignition</span><span class="pi">:</span>
+      <span class="na">version</span><span class="pi">:</span> <span class="s">3.2.0</span>
+    <span class="na">storage</span><span class="pi">:</span>
+      <span class="na">files</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">contents</span><span class="pi">:</span>
+          <span class="na">source</span><span class="pi">:</span> <span class="s">data:text/plain;base64,LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0t...</span>
+        <span class="na">mode</span><span class="pi">:</span> <span class="m">0644</span>
+        <span class="na">path</span><span class="pi">:</span> <span class="s">/etc/pki/ca-trust/source/anchors/my-internal-ca.crt</span>
+  <span class="na">extensions</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">update-ca-trust</span>   <span class="c1"># Runs update-ca-trust after file placement</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Monitor MCO rollout (nodes reboot one by one)</span>
+oc get mcp worker <span class="nt">-w</span>
+<span class="c"># MACHINECOUNT READYMACHINECOUNT UPDATEDMACHINECOUNT DEGRADEDMACHINECOUNT</span>
+<span class="c"># 3            3                 3                   0   ← Done</span>
+
+<span class="c"># Pause MCO to batch changes (apply multiple MachineConfigs, then reboot once)</span>
+oc patch mcp worker <span class="nt">--type</span> merge <span class="nt">-p</span> <span class="s1">'{"spec":{"paused":true}}'</span>
+oc apply <span class="nt">-f</span> mc-1.yaml
+oc apply <span class="nt">-f</span> mc-2.yaml
+oc apply <span class="nt">-f</span> mc-3.yaml
+oc patch mcp worker <span class="nt">--type</span> merge <span class="nt">-p</span> <span class="s1">'{"spec":{"paused":false}}'</span>
+<span class="c"># Nodes now reboot once with all three changes applied</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q17-what-is-the-openshift-node-feature-discovery-nfd-operator-and-how-do-you-use-it">🟡 Q17. What is the OpenShift Node Feature Discovery (NFD) operator and how do you use it?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>NFD</strong> automatically detects hardware features on nodes (CPU capabilities, GPU presence, NIC types, etc.) and adds them as node labels. This enables workloads to be scheduled on nodes with the right hardware.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install NFD operator</span>
+<span class="c"># After installation, NFD labels nodes automatically</span>
+
+<span class="c"># Example labels added by NFD</span>
+kubectl get node worker-gpu-1 <span class="nt">--show-labels</span> | <span class="nb">tr</span> <span class="s1">','</span> <span class="s1">'\n'</span> | <span class="nb">grep </span>feature
+<span class="c"># feature.node.kubernetes.io/cpu-cpuid.AVX512F=true</span>
+<span class="c"># feature.node.kubernetes.io/pci-10de.present=true  ← NVIDIA GPU detected</span>
+<span class="c"># feature.node.kubernetes.io/system-os_release.ID=rhcos</span>
+
+<span class="c"># Schedule GPU workloads using NFD labels</span>
+spec:
+  nodeSelector:
+    feature.node.kubernetes.io/pci-10de.present: <span class="s2">"true"</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># NFD + NVIDIA GPU Operator combination</span>
+<span class="c1"># NFD detects GPU node → NVIDIA operator installs drivers → workload runs</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">tolerations</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">key</span><span class="pi">:</span> <span class="s">nvidia.com/gpu</span>
+    <span class="na">operator</span><span class="pi">:</span> <span class="s">Exists</span>
+    <span class="na">effect</span><span class="pi">:</span> <span class="s">NoSchedule</span>
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">gpu-workload</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">nvcr.io/nvidia/cuda:12.0-base</span>
+    <span class="na">resources</span><span class="pi">:</span>
+      <span class="na">limits</span><span class="pi">:</span>
+        <span class="na">nvidia.com/gpu</span><span class="pi">:</span> <span class="m">1</span>    <span class="c1"># Request 1 GPU</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q18-how-do-you-implement-disaster-recovery-for-an-openshift-cluster">🟡 Q18. How do you implement disaster recovery for an OpenShift cluster?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>RPO/RTO targets define the strategy:</strong></p>
+<ul>
+  <li><strong>RPO</strong> (Recovery Point Objective): How much data loss is acceptable? (hours, minutes?)</li>
+  <li><strong>RTO</strong> (Recovery Time Objective): How quickly must the cluster be restored?</li>
+</ul>
+
+<p><strong>Three tiers:</strong></p>
+
+<p><strong>Tier 1: etcd backup + restore (RTO: 1–2 hours):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Automated etcd backup (should run daily via CronJob)</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: etcd-backup
+  namespace: openshift-etcd
+spec:
+  schedule: "0 2 * * *"    # 2am daily
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          hostNetwork: true
+          nodeSelector:
+            node-role.kubernetes.io/master: ""
+          tolerations:
+          - effect: NoSchedule
+            operator: Exists
+          containers:
+          - name: backup
+            image: registry.redhat.io/openshift4/ose-cli:latest
+            command: ["/bin/bash", "-c"]
+            args:
+            - |
+              /usr/local/bin/cluster-backup.sh /home/core/backup
+              aws s3 cp /home/core/backup/ s3://my-backup-bucket/etcd/ --recursive
+</span><span class="no">EOF
+
+</span><span class="c"># Restore from etcd snapshot</span>
+openshift-install <span class="nt">--dir</span><span class="o">=</span>./backup restore-etcd <span class="se">\</span>
+  <span class="nt">--backup-dir</span><span class="o">=</span>/home/core/backup
+</code></pre></div></div>
+
+<p><strong>Tier 2: Velero backup (application data + PVs):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install Velero with AWS plugin</span>
+velero <span class="nb">install</span> <span class="se">\</span>
+  <span class="nt">--provider</span> aws <span class="se">\</span>
+  <span class="nt">--bucket</span> my-backup-bucket <span class="se">\</span>
+  <span class="nt">--backup-location-config</span> <span class="nv">region</span><span class="o">=</span>us-east-1
+
+<span class="c"># Backup a namespace</span>
+velero backup create my-app-backup <span class="se">\</span>
+  <span class="nt">--include-namespaces</span><span class="o">=</span>my-app <span class="se">\</span>
+  <span class="nt">--wait</span>
+
+<span class="c"># Scheduled backup</span>
+velero schedule create daily-backup <span class="se">\</span>
+  <span class="nt">--schedule</span><span class="o">=</span><span class="s2">"@daily"</span> <span class="se">\</span>
+  <span class="nt">--include-namespaces</span><span class="o">=</span>production,staging
+
+<span class="c"># Restore</span>
+velero restore create <span class="nt">--from-backup</span> my-app-backup
+</code></pre></div></div>
+
+<p><strong>Tier 3: Multi-cluster active-active (RTO: seconds via DNS failover):</strong></p>
+<ul>
+  <li>Two clusters in different regions/clouds.</li>
+  <li>ArgoCD deploys same apps to both clusters.</li>
+  <li>Global LB (Route 53, Cloudflare) does health-check-based failover.</li>
+  <li>Stateful data replicated via ODF stretched cluster or external DB replication.</li>
+</ul>
+
+<hr />
+
+<blockquote>
+  <p><strong>Next:</strong> <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based.html">Scenario-Based Questions →</a></p>
+</blockquote>
+
+<p>{% endraw %}</p>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

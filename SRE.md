@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🎯 SRE — Site Reliability Engineering Interview Guide"
+render_with_liquid: false
+---
+
 # 🎯 SRE — Site Reliability Engineering Interview Guide
 
 > [← Security](./Security.md) | [Main Index](./README.md) | [System Design →](./SystemDesign.md)

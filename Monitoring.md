@@ -1,3 +1,9 @@
+---
+layout: default
+title: "📊 Monitoring — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 📊 Monitoring — DevOps Interview Guide
 
 > [← CI/CD](./CICD.md) | [Main Index](./README.md) | [Logging →](./Logging.md)

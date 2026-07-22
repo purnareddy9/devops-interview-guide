@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🎯 Interview Prep — DevOps Engineer (OpenShift & Kubernetes)"
+render_with_liquid: false
+---
+
 # 🎯 Interview Prep — DevOps Engineer (OpenShift & Kubernetes)
 
 > **Based on Job Description:** DevOps Engineer with expertise in OpenShift, Kubernetes, CI/CD pipelines, Security, Monitoring, and Infrastructure Automation.

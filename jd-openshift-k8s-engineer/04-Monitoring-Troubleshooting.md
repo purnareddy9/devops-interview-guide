@@ -1,3 +1,12 @@
+---
+layout: default
+title: "📊 Module 4 — Monitoring & Troubleshooting"
+
+render_with_liquid: false
+---
+
+{% raw %}
+
 # 📊 Module 4 — Monitoring & Troubleshooting
 
 > **JD Alignment:** "Monitor system performance and troubleshoot issues related to container orchestration. Monitor cluster health and respond to incidents promptly."
@@ -1049,3 +1058,5 @@ spec:
 ---
 
 > **Next:** [Infrastructure & Automation →](./05-Infrastructure-Automation.md)
+
+{% endraw %}

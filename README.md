@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🚀 DevOps Interview Preparation Guide"
+render_with_liquid: false
+---
+
 # 🚀 DevOps Interview Preparation Guide
 
 > 🌐 **Live Site:** [View on GitHub Pages](https://your-username.github.io/devops-interview-guide) *(update URL after first deploy)*

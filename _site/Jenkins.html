@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🔧 Jenkins — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🔧 Jenkins — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Jenkins.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🔧 Jenkins — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🔧 Jenkins — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🔧 Jenkins — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Jenkins.html" />
+<meta property="og:url" content="/devops-interview-guide/Jenkins.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🔧 Jenkins — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🔧 Jenkins — DevOps Interview Guide","url":"/devops-interview-guide/Jenkins.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🔧 Jenkins — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-jenkins--devops-interview-guide">🔧 Jenkins — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Kubernetes.html">← Kubernetes</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Terraform.html">Terraform →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#jenkins-architecture">Jenkins Architecture</a></li>
+  <li><a href="#pipeline-fundamentals">Pipeline Fundamentals</a></li>
+  <li><a href="#declarative-pipeline">Declarative Pipeline</a></li>
+  <li><a href="#scripted-pipeline">Scripted Pipeline</a></li>
+  <li><a href="#shared-libraries">Shared Libraries</a></li>
+  <li><a href="#agents--nodes">Agents &amp; Nodes</a></li>
+  <li><a href="#plugins">Plugins</a></li>
+  <li><a href="#security">Security</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="jenkins-architecture">Jenkins Architecture</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────── Jenkins Master ──────────────────────┐
+│                                                          │
+│  ┌──────────┐  ┌──────────┐  ┌──────────────────────┐  │
+│  │  Web UI  │  │  REST API│  │   Build Queue         │  │
+│  └──────────┘  └──────────┘  └──────────────────────┘  │
+│                                                          │
+│  ┌──────────────────────────────────────────────────┐   │
+│  │  Plugin System (1800+ plugins)                    │   │
+│  └──────────────────────────────────────────────────┘   │
+│                                                          │
+│  ┌──────────────────────────────────────────────────┐   │
+│  │  Job / Pipeline Scheduler                         │   │
+│  └──────────────────────────────────────────────────┘   │
+└──────────────────────┬──────────────────────────────────┘
+                       │  JNLP / SSH
+        ┌──────────────┴──────────────┐
+        ▼                             ▼
+┌── Agent Node 1 ──┐       ┌── Agent Node 2 ──┐
+│  Linux x86_64    │       │  Docker-in-Docker │
+│  (build/test)    │       │  (container jobs) │
+└──────────────────┘       └──────────────────┘
+</code></pre></div></div>
+
+<h3 id="key-concepts">Key Concepts</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Concept</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Job/Project</strong></td>
+      <td>A task Jenkins runs (Freestyle, Pipeline, Multibranch)</td>
+    </tr>
+    <tr>
+      <td><strong>Build</strong></td>
+      <td>A single execution of a job</td>
+    </tr>
+    <tr>
+      <td><strong>Workspace</strong></td>
+      <td>Directory on agent where build runs</td>
+    </tr>
+    <tr>
+      <td><strong>Executor</strong></td>
+      <td>A build slot on an agent</td>
+    </tr>
+    <tr>
+      <td><strong>Artifact</strong></td>
+      <td>Output produced by a build</td>
+    </tr>
+    <tr>
+      <td><strong>Fingerprint</strong></td>
+      <td>MD5 hash tracking artifact usage across jobs</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="pipeline-fundamentals">Pipeline Fundamentals</h2>
+
+<h3 id="pipeline-types">Pipeline Types</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Declarative</strong></td>
+      <td>Structured, opinionated syntax</td>
+      <td>Most pipelines, enforces best practices</td>
+    </tr>
+    <tr>
+      <td><strong>Scripted</strong></td>
+      <td>Full Groovy, flexible</td>
+      <td>Complex logic, conditionals</td>
+    </tr>
+    <tr>
+      <td><strong>Multibranch</strong></td>
+      <td>Auto-detects branches with Jenkinsfile</td>
+      <td>GitFlow, PR pipelines</td>
+    </tr>
+    <tr>
+      <td><strong>Organization Folder</strong></td>
+      <td>Scans all repos in GitHub org</td>
+      <td>Large orgs, auto-discovery</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="declarative-pipeline">Declarative Pipeline</h2>
+
+<h3 id="full-production-grade-example">Full Production-Grade Example</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pipeline</span> <span class="o">{</span>
+    <span class="n">agent</span> <span class="o">{</span>
+        <span class="n">kubernetes</span> <span class="o">{</span>
+            <span class="n">yaml</span> <span class="s1">'''
+                apiVersion: v1
+                kind: Pod
+                spec:
+                  containers:
+                  - name: maven
+                    image: maven:3.9-eclipse-temurin-17
+                    command: ["sleep", "infinity"]
+                  - name: docker
+                    image: docker:24-dind
+                    securityContext:
+                      privileged: true
+            '''</span>
+            <span class="n">defaultContainer</span> <span class="s1">'maven'</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">environment</span> <span class="o">{</span>
+        <span class="n">APP_NAME</span>       <span class="o">=</span> <span class="s1">'myapp'</span>
+        <span class="n">IMAGE_REGISTRY</span> <span class="o">=</span> <span class="s1">'registry.example.com'</span>
+        <span class="n">IMAGE_TAG</span>      <span class="o">=</span> <span class="s2">"${env.GIT_COMMIT[0..7]}"</span>
+        <span class="n">SONAR_TOKEN</span>    <span class="o">=</span> <span class="n">credentials</span><span class="o">(</span><span class="s1">'sonar-token'</span><span class="o">)</span>
+        <span class="n">DOCKER_CREDS</span>   <span class="o">=</span> <span class="n">credentials</span><span class="o">(</span><span class="s1">'registry-creds'</span><span class="o">)</span>
+    <span class="o">}</span>
+
+    <span class="n">options</span> <span class="o">{</span>
+        <span class="n">buildDiscarder</span><span class="o">(</span><span class="n">logRotator</span><span class="o">(</span><span class="nl">numToKeepStr:</span> <span class="s1">'20'</span><span class="o">))</span>
+        <span class="n">timeout</span><span class="o">(</span><span class="nl">time:</span> <span class="mi">30</span><span class="o">,</span> <span class="nl">unit:</span> <span class="s1">'MINUTES'</span><span class="o">)</span>
+        <span class="n">timestamps</span><span class="o">()</span>
+        <span class="n">disableConcurrentBuilds</span><span class="o">(</span><span class="nl">abortPrevious:</span> <span class="kc">true</span><span class="o">)</span>
+        <span class="n">skipDefaultCheckout</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+    <span class="o">}</span>
+
+    <span class="n">triggers</span> <span class="o">{</span>
+        <span class="n">pollSCM</span><span class="o">(</span><span class="s1">'H/5 * * * *'</span><span class="o">)</span>   <span class="c1">// Poll every 5 min (prefer webhooks)</span>
+    <span class="o">}</span>
+
+    <span class="n">stages</span> <span class="o">{</span>
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Checkout'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">checkout</span> <span class="n">scm</span>
+                <span class="n">script</span> <span class="o">{</span>
+                    <span class="n">env</span><span class="o">.</span><span class="na">GIT_AUTHOR</span> <span class="o">=</span> <span class="n">sh</span><span class="o">(</span>
+                        <span class="nl">script:</span> <span class="s1">'git log -1 --format="%an"'</span><span class="o">,</span>
+                        <span class="nl">returnStdout:</span> <span class="kc">true</span>
+                    <span class="o">).</span><span class="na">trim</span><span class="o">()</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">sh</span> <span class="s1">'mvn -B -DskipTests clean package'</span>
+            <span class="o">}</span>
+            <span class="n">post</span> <span class="o">{</span>
+                <span class="n">success</span> <span class="o">{</span>
+                    <span class="n">archiveArtifacts</span> <span class="nl">artifacts:</span> <span class="s1">'target/*.jar'</span><span class="o">,</span> <span class="nl">fingerprint:</span> <span class="kc">true</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Test'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">parallel</span> <span class="o">{</span>
+                <span class="n">stage</span><span class="o">(</span><span class="s1">'Unit Tests'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">steps</span> <span class="o">{</span>
+                        <span class="n">sh</span> <span class="s1">'mvn -B test'</span>
+                    <span class="o">}</span>
+                    <span class="n">post</span> <span class="o">{</span>
+                        <span class="n">always</span> <span class="o">{</span>
+                            <span class="n">junit</span> <span class="s1">'target/surefire-reports/*.xml'</span>
+                        <span class="o">}</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+                <span class="n">stage</span><span class="o">(</span><span class="s1">'Integration Tests'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">steps</span> <span class="o">{</span>
+                        <span class="n">sh</span> <span class="s1">'mvn -B verify -P integration-test'</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Code Quality'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">withSonarQubeEnv</span><span class="o">(</span><span class="s1">'SonarQube'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">sh</span> <span class="s1">'''
+                        mvn sonar:sonar \
+                          -Dsonar.projectKey=${APP_NAME} \
+                          -Dsonar.token=${SONAR_TOKEN}
+                    '''</span>
+                <span class="o">}</span>
+                <span class="n">timeout</span><span class="o">(</span><span class="nl">time:</span> <span class="mi">5</span><span class="o">,</span> <span class="nl">unit:</span> <span class="s1">'MINUTES'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">waitForQualityGate</span> <span class="nl">abortPipeline:</span> <span class="kc">true</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Build &amp; Push Docker Image'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">container</span><span class="o">(</span><span class="s1">'docker'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">sh</span> <span class="s1">'''
+                        echo ${DOCKER_CREDS_PSW} | \
+                            docker login ${IMAGE_REGISTRY} \
+                            -u ${DOCKER_CREDS_USR} --password-stdin
+                        docker build -t ${IMAGE_REGISTRY}/${APP_NAME}:${IMAGE_TAG} .
+                        docker push ${IMAGE_REGISTRY}/${APP_NAME}:${IMAGE_TAG}
+                        docker tag  ${IMAGE_REGISTRY}/${APP_NAME}:${IMAGE_TAG} \
+                                    ${IMAGE_REGISTRY}/${APP_NAME}:latest
+                        docker push ${IMAGE_REGISTRY}/${APP_NAME}:latest
+                    '''</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Deploy to Staging'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">when</span> <span class="o">{</span>
+                <span class="n">branch</span> <span class="s1">'develop'</span>
+            <span class="o">}</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">sh</span> <span class="s2">"""
+                    kubectl set image deployment/${APP_NAME} \
+                        ${APP_NAME}=${IMAGE_REGISTRY}/${APP_NAME}:${IMAGE_TAG} \
+                        -n staging
+                    kubectl rollout status deployment/${APP_NAME} -n staging
+                """</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Deploy to Production'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">when</span> <span class="o">{</span>
+                <span class="n">branch</span> <span class="s1">'main'</span>
+            <span class="o">}</span>
+            <span class="n">input</span> <span class="o">{</span>
+                <span class="n">message</span> <span class="s2">"Deploy ${IMAGE_TAG} to production?"</span>
+                <span class="n">ok</span> <span class="s2">"Deploy"</span>
+                <span class="n">submitter</span> <span class="s2">"ops-team"</span>
+            <span class="o">}</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">sh</span> <span class="s2">"""
+                    kubectl set image deployment/${APP_NAME} \
+                        ${APP_NAME}=${IMAGE_REGISTRY}/${APP_NAME}:${IMAGE_TAG} \
+                        -n production
+                    kubectl rollout status deployment/${APP_NAME} -n production \
+                        --timeout=5m
+                """</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">post</span> <span class="o">{</span>
+        <span class="n">always</span> <span class="o">{</span>
+            <span class="n">cleanWs</span><span class="o">()</span>
+        <span class="o">}</span>
+        <span class="n">success</span> <span class="o">{</span>
+            <span class="n">slackSend</span><span class="o">(</span>
+                <span class="nl">channel:</span> <span class="s1">'#deploys'</span><span class="o">,</span>
+                <span class="nl">color:</span> <span class="s1">'good'</span><span class="o">,</span>
+                <span class="nl">message:</span> <span class="s2">"✅ ${APP_NAME}:${IMAGE_TAG} deployed by ${env.GIT_AUTHOR}"</span>
+            <span class="o">)</span>
+        <span class="o">}</span>
+        <span class="n">failure</span> <span class="o">{</span>
+            <span class="n">slackSend</span><span class="o">(</span>
+                <span class="nl">channel:</span> <span class="s1">'#alerts'</span><span class="o">,</span>
+                <span class="nl">color:</span> <span class="s1">'danger'</span><span class="o">,</span>
+                <span class="nl">message:</span> <span class="s2">"❌ Build failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}"</span>
+            <span class="o">)</span>
+            <span class="n">emailext</span><span class="o">(</span>
+                <span class="nl">to:</span> <span class="s1">'devops@example.com'</span><span class="o">,</span>
+                <span class="nl">subject:</span> <span class="s2">"FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}"</span><span class="o">,</span>
+                <span class="nl">body:</span> <span class="s1">'${DEFAULT_CONTENT}'</span>
+            <span class="o">)</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="scripted-pipeline">Scripted Pipeline</h2>
+
+<h3 id="groovy-dsl-patterns">Groovy DSL Patterns</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Scripted pipeline — full Groovy control</span>
+<span class="n">node</span><span class="o">(</span><span class="s1">'linux-agent'</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">def</span> <span class="n">appVersion</span>
+    <span class="kt">def</span> <span class="n">gitCommit</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Checkout'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">checkout</span> <span class="n">scm</span>
+            <span class="n">gitCommit</span> <span class="o">=</span> <span class="n">sh</span><span class="o">(</span><span class="nl">script:</span> <span class="s1">'git rev-parse --short HEAD'</span><span class="o">,</span> <span class="nl">returnStdout:</span> <span class="kc">true</span><span class="o">).</span><span class="na">trim</span><span class="o">()</span>
+            <span class="n">appVersion</span> <span class="o">=</span> <span class="n">readFile</span><span class="o">(</span><span class="s1">'VERSION'</span><span class="o">).</span><span class="na">trim</span><span class="o">()</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Build'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">docker</span><span class="o">.</span><span class="na">image</span><span class="o">(</span><span class="s1">'maven:3.9'</span><span class="o">).</span><span class="na">inside</span><span class="o">(</span><span class="s1">'-v $HOME/.m2:/root/.m2'</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">sh</span> <span class="s1">'mvn -B clean package -DskipTests'</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Test'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="kt">def</span> <span class="n">testResults</span> <span class="o">=</span> <span class="o">[:]</span>
+
+            <span class="c1">// Dynamic parallel stages</span>
+            <span class="o">[</span><span class="s1">'unit'</span><span class="o">,</span> <span class="s1">'integration'</span><span class="o">,</span> <span class="s1">'contract'</span><span class="o">].</span><span class="na">each</span> <span class="o">{</span> <span class="n">type</span> <span class="o">-&gt;</span>
+                <span class="n">testResults</span><span class="o">[</span><span class="n">type</span><span class="o">]</span> <span class="o">=</span> <span class="o">{</span>
+                    <span class="n">node</span><span class="o">(</span><span class="s1">'linux-agent'</span><span class="o">)</span> <span class="o">{</span>
+                        <span class="n">sh</span> <span class="s2">"mvn -B test -P ${type}"</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="n">parallel</span> <span class="n">testResults</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Publish'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">docker</span><span class="o">.</span><span class="na">withRegistry</span><span class="o">(</span><span class="s1">'https://registry.example.com'</span><span class="o">,</span> <span class="s1">'registry-creds'</span><span class="o">)</span> <span class="o">{</span>
+                <span class="kt">def</span> <span class="n">image</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="na">build</span><span class="o">(</span><span class="s2">"myapp:${gitCommit}"</span><span class="o">)</span>
+                <span class="n">image</span><span class="o">.</span><span class="na">push</span><span class="o">()</span>
+                <span class="n">image</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="s1">'latest'</span><span class="o">)</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">currentBuild</span><span class="o">.</span><span class="na">result</span> <span class="o">=</span> <span class="s1">'FAILURE'</span>
+        <span class="k">throw</span> <span class="n">e</span>
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+        <span class="c1">// Always clean up</span>
+        <span class="n">deleteDir</span><span class="o">()</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="shared-libraries">Shared Libraries</h2>
+
+<h3 id="structure">Structure</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jenkins-shared-library/
+├── vars/                   # Global variables (DSL steps)
+│   ├── deployToK8s.groovy
+│   ├── buildDockerImage.groovy
+│   └── notifySlack.groovy
+├── src/                    # Helper classes
+│   └── com/example/
+│       ├── Docker.groovy
+│       └── Kubernetes.groovy
+└── resources/              # Static resources
+    └── scripts/
+        └── health-check.sh
+</code></pre></div></div>
+
+<h3 id="varsdeploytok8sgroovy">vars/deployToK8s.groovy</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Usage in Jenkinsfile: deployToK8s(app: 'myapp', env: 'production', tag: '1.0')</span>
+<span class="kt">def</span> <span class="nf">call</span><span class="o">(</span><span class="n">Map</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">def</span> <span class="n">app</span>    <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="na">app</span>    <span class="o">?:</span> <span class="n">error</span><span class="o">(</span><span class="s2">"'app' is required"</span><span class="o">)</span>
+    <span class="kt">def</span> <span class="n">env</span>    <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="na">env</span>    <span class="o">?:</span> <span class="s1">'staging'</span>
+    <span class="kt">def</span> <span class="n">tag</span>    <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="na">tag</span>    <span class="o">?:</span> <span class="s1">'latest'</span>
+    <span class="kt">def</span> <span class="n">ns</span>     <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="na">ns</span>     <span class="o">?:</span> <span class="n">env</span>
+    <span class="kt">def</span> <span class="n">timeout</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="na">timeout</span> <span class="o">?:</span> <span class="s1">'5m'</span>
+
+    <span class="n">echo</span> <span class="s2">"Deploying ${app}:${tag} to ${env}"</span>
+
+    <span class="n">sh</span> <span class="s2">"""
+        kubectl set image deployment/${app} \
+            ${app}=${IMAGE_REGISTRY}/${app}:${tag} \
+            -n ${ns}
+        kubectl rollout status deployment/${app} -n ${ns} --timeout=${timeout}
+    """</span>
+
+    <span class="c1">// Verify deployment</span>
+    <span class="kt">def</span> <span class="n">readyReplicas</span> <span class="o">=</span> <span class="n">sh</span><span class="o">(</span>
+        <span class="nl">script:</span> <span class="s2">"kubectl get deployment/${app} -n ${ns} -o jsonpath='{.status.readyReplicas}'"</span><span class="o">,</span>
+        <span class="nl">returnStdout:</span> <span class="kc">true</span>
+    <span class="o">).</span><span class="na">trim</span><span class="o">()</span>
+
+    <span class="n">echo</span> <span class="s2">"Ready replicas: ${readyReplicas}"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="varsnotifyslackgroovy">vars/notifySlack.groovy</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">def</span> <span class="nf">call</span><span class="o">(</span><span class="n">String</span> <span class="n">message</span><span class="o">,</span> <span class="n">String</span> <span class="n">channel</span> <span class="o">=</span> <span class="s1">'#devops'</span><span class="o">,</span> <span class="n">String</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">'good'</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">slackSend</span><span class="o">(</span>
+        <span class="nl">channel:</span> <span class="n">channel</span><span class="o">,</span>
+        <span class="nl">color:</span> <span class="n">color</span><span class="o">,</span>
+        <span class="nl">message:</span> <span class="s2">"${message} | Job: ${env.JOB_NAME} #${env.BUILD_NUMBER} | &lt;${env.BUILD_URL}|Open&gt;"</span>
+    <span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="using-the-shared-library-in-jenkinsfile">Using the Shared Library in Jenkinsfile</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Library</span><span class="o">(</span><span class="s1">'jenkins-shared-library@main'</span><span class="o">)</span> <span class="n">_</span>
+
+<span class="n">pipeline</span> <span class="o">{</span>
+    <span class="n">agent</span> <span class="n">any</span>
+
+    <span class="n">stages</span> <span class="o">{</span>
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Deploy'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">deployToK8s</span><span class="o">(</span>
+                    <span class="nl">app:</span> <span class="s1">'myapp'</span><span class="o">,</span>
+                    <span class="nl">env:</span> <span class="s1">'production'</span><span class="o">,</span>
+                    <span class="nl">tag:</span> <span class="n">env</span><span class="o">.</span><span class="na">IMAGE_TAG</span><span class="o">,</span>
+                    <span class="nl">timeout:</span> <span class="s1">'10m'</span>
+                <span class="o">)</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">post</span> <span class="o">{</span>
+        <span class="n">success</span> <span class="o">{</span> <span class="n">notifySlack</span><span class="o">(</span><span class="s2">"✅ Deployment successful"</span><span class="o">)</span> <span class="o">}</span>
+        <span class="n">failure</span> <span class="o">{</span> <span class="n">notifySlack</span><span class="o">(</span><span class="s2">"❌ Deployment failed"</span><span class="o">,</span> <span class="s1">'#alerts'</span><span class="o">,</span> <span class="s1">'danger'</span><span class="o">)</span> <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="agents--nodes">Agents &amp; Nodes</h2>
+
+<h3 id="static-agent-via-ssh">Static Agent via SSH</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// In Jenkins global config or via JCasC yaml:</span>
+<span class="nl">jenkins:</span>
+  <span class="nl">nodes:</span>
+    <span class="o">-</span> <span class="nl">permanent:</span>
+        <span class="nl">name:</span> <span class="s2">"build-agent-01"</span>
+        <span class="nl">remoteFS:</span> <span class="s2">"/home/jenkins"</span>
+        <span class="nl">launcher:</span>
+          <span class="nl">ssh:</span>
+            <span class="nl">host:</span> <span class="s2">"10.0.1.50"</span>
+            <span class="nl">credentialsId:</span> <span class="s2">"agent-ssh-key"</span>
+            <span class="nl">sshHostKeyVerificationStrategy:</span> <span class="s2">"nonVerifyingKeyVerificationStrategy"</span>
+        <span class="nl">label:</span> <span class="s2">"linux docker maven"</span>
+        <span class="nl">numExecutors:</span> <span class="mi">4</span>
+</code></pre></div></div>
+
+<h3 id="dynamic-kubernetes-agents">Dynamic Kubernetes Agents</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pipeline</span> <span class="o">{</span>
+    <span class="n">agent</span> <span class="o">{</span>
+        <span class="n">kubernetes</span> <span class="o">{</span>
+            <span class="n">cloud</span> <span class="s1">'kubernetes'</span>
+            <span class="n">defaultContainer</span> <span class="s1">'jnlp'</span>
+            <span class="n">yaml</span> <span class="s2">"""
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: jenkins-agent
+spec:
+  serviceAccountName: jenkins-sa
+  containers:
+  - name: jnlp
+    image: jenkins/inbound-agent:latest
+    resources:
+      requests:
+        memory: "256Mi"
+        cpu: "100m"
+  - name: maven
+    image: maven:3.9-eclipse-temurin-17
+    command: ["sleep", "infinity"]
+    resources:
+      requests:
+        memory: "512Mi"
+        cpu: "500m"
+      limits:
+        memory: "2Gi"
+        cpu: "1"
+  - name: trivy
+    image: aquasec/trivy:latest
+    command: ["sleep", "infinity"]
+"""</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="c1">// ...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="plugins">Plugins</h2>
+
+<h3 id="essential-plugins-for-devops">Essential Plugins for DevOps</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plugin</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Pipeline</strong></td>
+      <td>Core pipeline support</td>
+    </tr>
+    <tr>
+      <td><strong>Git</strong></td>
+      <td>Git SCM integration</td>
+    </tr>
+    <tr>
+      <td><strong>GitHub Branch Source</strong></td>
+      <td>Multibranch + GitHub PR builds</td>
+    </tr>
+    <tr>
+      <td><strong>Kubernetes</strong></td>
+      <td>Dynamic K8s agents</td>
+    </tr>
+    <tr>
+      <td><strong>Docker Pipeline</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">docker.build</code>, <code class="language-plaintext highlighter-rouge">docker.withRegistry</code></td>
+    </tr>
+    <tr>
+      <td><strong>Credentials Binding</strong></td>
+      <td>Inject credentials as env vars</td>
+    </tr>
+    <tr>
+      <td><strong>SonarQube Scanner</strong></td>
+      <td>Code quality gate integration</td>
+    </tr>
+    <tr>
+      <td><strong>Slack Notification</strong></td>
+      <td>Slack build notifications</td>
+    </tr>
+    <tr>
+      <td><strong>JUnit</strong></td>
+      <td>Test result publishing</td>
+    </tr>
+    <tr>
+      <td><strong>Blue Ocean</strong></td>
+      <td>Modern pipeline visualization</td>
+    </tr>
+    <tr>
+      <td><strong>Job DSL</strong></td>
+      <td>Programmatically create jobs</td>
+    </tr>
+    <tr>
+      <td><strong>Configuration as Code (JCasC)</strong></td>
+      <td>YAML-based Jenkins config</td>
+    </tr>
+    <tr>
+      <td><strong>Artifactory</strong></td>
+      <td>Artifact management</td>
+    </tr>
+    <tr>
+      <td><strong>AWS Steps</strong></td>
+      <td>AWS SDK integration</td>
+    </tr>
+    <tr>
+      <td><strong>Kubernetes CLI</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">withKubeConfig</code> step</td>
+    </tr>
+    <tr>
+      <td><strong>Prometheus Metrics</strong></td>
+      <td>Expose metrics for Prometheus</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="security">Security</h2>
+
+<h3 id="jenkins-security-hardening">Jenkins Security Hardening</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// JCasC - jenkins.yaml</span>
+<span class="nl">jenkins:</span>
+  <span class="nl">securityRealm:</span>
+    <span class="nl">ldap:</span>
+      <span class="nl">configurations:</span>
+        <span class="o">-</span> <span class="nl">server:</span> <span class="nl">ldap:</span><span class="c1">//ldap.example.com</span>
+          <span class="nl">rootDN:</span> <span class="n">dc</span><span class="o">=</span><span class="n">example</span><span class="o">,</span><span class="n">dc</span><span class="o">=</span><span class="n">com</span>
+          <span class="nl">userSearchBase:</span> <span class="n">ou</span><span class="o">=</span><span class="n">users</span>
+          <span class="nl">groupSearchBase:</span> <span class="n">ou</span><span class="o">=</span><span class="n">groups</span>
+
+  <span class="nl">authorizationStrategy:</span>
+    <span class="nl">roleBased:</span>
+      <span class="nl">roles:</span>
+        <span class="nl">global:</span>
+          <span class="o">-</span> <span class="nl">name:</span> <span class="s2">"admin"</span>
+            <span class="nl">permissions:</span>
+              <span class="o">-</span> <span class="s2">"Overall/Administer"</span>
+            <span class="nl">assignments:</span>
+              <span class="o">-</span> <span class="s2">"jenkins-admins"</span>
+          <span class="o">-</span> <span class="nl">name:</span> <span class="s2">"developer"</span>
+            <span class="nl">permissions:</span>
+              <span class="o">-</span> <span class="s2">"Job/Build"</span>
+              <span class="o">-</span> <span class="s2">"Job/Read"</span>
+              <span class="o">-</span> <span class="s2">"Job/Workspace"</span>
+            <span class="nl">assignments:</span>
+              <span class="o">-</span> <span class="s2">"developers"</span>
+
+  <span class="nl">globalNodeProperties:</span>
+    <span class="o">-</span> <span class="nl">envVars:</span>
+        <span class="nl">env:</span>
+          <span class="o">-</span> <span class="nl">key:</span> <span class="s2">"JAVA_OPTS"</span>
+            <span class="nl">value:</span> <span class="s2">"-Dhudson.model.DirectoryBrowserSupport.CSP=''"</span>
+</code></pre></div></div>
+
+<h3 id="credentials-management">Credentials Management</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Types of credentials</span>
+<span class="c1">// - Secret text: API tokens, passwords</span>
+<span class="c1">// - Username/password: registry creds</span>
+<span class="c1">// - SSH key: agent/server access</span>
+<span class="c1">// - Certificate: PKI</span>
+<span class="c1">// - Secret file: kubeconfig, service account JSON</span>
+
+<span class="c1">// Using credentials in pipeline</span>
+<span class="n">withCredentials</span><span class="o">([</span>
+    <span class="n">usernamePassword</span><span class="o">(</span>
+        <span class="nl">credentialsId:</span> <span class="s1">'registry-creds'</span><span class="o">,</span>
+        <span class="nl">usernameVariable:</span> <span class="s1">'REGISTRY_USER'</span><span class="o">,</span>
+        <span class="nl">passwordVariable:</span> <span class="s1">'REGISTRY_PASS'</span>
+    <span class="o">),</span>
+    <span class="n">string</span><span class="o">(</span><span class="nl">credentialsId:</span> <span class="s1">'sonar-token'</span><span class="o">,</span> <span class="nl">variable:</span> <span class="s1">'SONAR_TOKEN'</span><span class="o">),</span>
+    <span class="n">file</span><span class="o">(</span><span class="nl">credentialsId:</span> <span class="s1">'kubeconfig'</span><span class="o">,</span> <span class="nl">variable:</span> <span class="s1">'KUBECONFIG'</span><span class="o">)</span>
+<span class="o">])</span> <span class="o">{</span>
+    <span class="n">sh</span> <span class="s1">'docker login -u $REGISTRY_USER -p $REGISTRY_PASS'</span>
+    <span class="n">sh</span> <span class="s1">'kubectl --kubeconfig=$KUBECONFIG get pods'</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is a Jenkinsfile and where does it live?</strong></p>
+
+<blockquote>
+  <p>A Jenkinsfile is a text file containing the pipeline definition using the Pipeline DSL (Groovy). It lives in the <strong>root of the source code repository</strong> alongside the application code. This is “Pipeline as Code” — the pipeline is versioned with the code, enabling code review of CI changes, branch-specific pipelines, and auditability.</p>
+</blockquote>
+
+<p><strong>Q2: What is the difference between Declarative and Scripted pipelines?</strong></p>
+
+<blockquote>
+  <p><strong>Declarative</strong> uses a strict, opinionated structure (<code class="language-plaintext highlighter-rouge">pipeline { agent {} stages {} }</code>) — easier to read, has built-in error checking, supports <code class="language-plaintext highlighter-rouge">post</code>, <code class="language-plaintext highlighter-rouge">options</code>, <code class="language-plaintext highlighter-rouge">triggers</code>. <strong>Scripted</strong> is pure Groovy (<code class="language-plaintext highlighter-rouge">node { stage { } }</code>) — more flexible but harder to maintain. Recommendation: always start with Declarative; drop to <code class="language-plaintext highlighter-rouge">script {}</code> block inside Declarative when you need Groovy logic.</p>
+</blockquote>
+
+<p><strong>Q3: What is the <code class="language-plaintext highlighter-rouge">post</code> block used for?</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">post</code> defines actions to run after the pipeline (or stage) finishes. Conditions: <code class="language-plaintext highlighter-rouge">always</code>, <code class="language-plaintext highlighter-rouge">success</code>, <code class="language-plaintext highlighter-rouge">failure</code>, <code class="language-plaintext highlighter-rouge">unstable</code>, <code class="language-plaintext highlighter-rouge">changed</code>, <code class="language-plaintext highlighter-rouge">fixed</code>, <code class="language-plaintext highlighter-rouge">regression</code>, <code class="language-plaintext highlighter-rouge">aborted</code>, <code class="language-plaintext highlighter-rouge">cleanup</code>. Commonly used for: notifications (Slack, email), publishing test results, cleanup (<code class="language-plaintext highlighter-rouge">cleanWs()</code>), archiving artifacts.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: How do you handle secrets in Jenkins pipelines?</strong></p>
+
+<blockquote>
+  <p>Never hardcode secrets. Use:</p>
+  <ol>
+    <li><strong>Credentials plugin</strong>: store in Jenkins Credential Store, inject via <code class="language-plaintext highlighter-rouge">withCredentials</code> or <code class="language-plaintext highlighter-rouge">credentials()</code> binding — Jenkins masks values in logs</li>
+    <li><strong>External vault</strong>: HashiCorp Vault plugin, AWS Secrets Manager, retrieve at runtime</li>
+    <li><strong>Environment-specific configs</strong>: different credentials for staging vs production
+Never use <code class="language-plaintext highlighter-rouge">echo $SECRET</code> (masked but may appear in subprocess output). Prefer <code class="language-plaintext highlighter-rouge">--password-stdin</code> patterns.</li>
+  </ol>
+</blockquote>
+
+<p><strong>Q5: Explain Jenkins shared libraries and their benefits.</strong></p>
+
+<blockquote>
+  <p>Shared libraries are reusable Groovy code stored in a separate Git repository, loaded by multiple Jenkinsfiles via <code class="language-plaintext highlighter-rouge">@Library</code>. Benefits:</p>
+  <ul>
+    <li><strong>DRY</strong>: eliminate duplicate pipeline code across 100s of repos</li>
+    <li><strong>Standardization</strong>: enforce organizational standards (security scans, notifications)</li>
+    <li><strong>Version control</strong>: pin to tag (<code class="language-plaintext highlighter-rouge">@Library('mylib@v2.1')</code>)</li>
+    <li><strong>Testing</strong>: unit-test shared library code with <code class="language-plaintext highlighter-rouge">JenkinsPipelineUnit</code></li>
+  </ul>
+</blockquote>
+
+<p><strong>Q6: What is a multibranch pipeline?</strong></p>
+
+<blockquote>
+  <p>Multibranch Pipeline automatically discovers branches (and PRs) in a repository that contain a Jenkinsfile and creates a sub-project for each. When a branch is deleted, its project is removed. PRs get their own build with merge preview. This enables:</p>
+  <ul>
+    <li>Feature branch isolation</li>
+    <li>PR status checks (blocks merge on failure)</li>
+    <li>Branch-specific behavior via <code class="language-plaintext highlighter-rouge">when { branch 'main' }</code></li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: How do you implement Blue-Green deployments in Jenkins?</strong></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">stage</span><span class="o">(</span><span class="s1">'Blue-Green Deploy'</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">steps</span> <span class="o">{</span>
+        <span class="n">script</span> <span class="o">{</span>
+            <span class="c1">// Determine current active color</span>
+            <span class="kt">def</span> <span class="n">currentColor</span> <span class="o">=</span> <span class="n">sh</span><span class="o">(</span>
+                <span class="nl">script:</span> <span class="s2">"kubectl get svc myapp -n prod -o jsonpath='{.spec.selector.color}'"</span><span class="o">,</span>
+                <span class="nl">returnStdout:</span> <span class="kc">true</span>
+            <span class="o">).</span><span class="na">trim</span><span class="o">()</span>
+            <span class="kt">def</span> <span class="n">newColor</span> <span class="o">=</span> <span class="o">(</span><span class="n">currentColor</span> <span class="o">==</span> <span class="s1">'blue'</span><span class="o">)</span> <span class="o">?</span> <span class="s1">'green'</span> <span class="o">:</span> <span class="s1">'blue'</span>
+
+            <span class="n">echo</span> <span class="s2">"Deploying to ${newColor} (current: ${currentColor})"</span>
+
+            <span class="c1">// Deploy new version to inactive color</span>
+            <span class="n">sh</span> <span class="s2">"""
+                kubectl set image deployment/myapp-${newColor} \
+                    myapp=${IMAGE_REGISTRY}/myapp:${IMAGE_TAG} -n prod
+                kubectl rollout status deployment/myapp-${newColor} \
+                    -n prod --timeout=5m
+            """</span>
+
+            <span class="c1">// Health check</span>
+            <span class="n">sh</span> <span class="s2">"curl -f http://myapp-${newColor}.prod.svc.cluster.local/health"</span>
+
+            <span class="c1">// Switch traffic</span>
+            <span class="n">sh</span> <span class="s2">"""
+                kubectl patch svc myapp -n prod \
+                    -p '{"spec":{"selector":{"color":"${newColor}"}}}'
+            """</span>
+
+            <span class="c1">// Keep old version for quick rollback (scale down after X minutes)</span>
+            <span class="n">sleep</span><span class="o">(</span><span class="nl">time:</span> <span class="mi">10</span><span class="o">,</span> <span class="nl">unit:</span> <span class="s1">'MINUTES'</span><span class="o">)</span>
+            <span class="n">sh</span> <span class="s2">"kubectl scale deployment myapp-${currentColor} --replicas=0 -n prod"</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Q8: How do you scale Jenkins for large organizations?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Kubernetes agents</strong>: Dynamic, ephemeral agents scale to zero — no idle cost</li>
+    <li><strong>Horizontal Controller Scaling</strong>: Jenkins HA with multiple controllers (CloudBees)</li>
+    <li><strong>Folder/Organization structure</strong>: delegate admin to team folders with role-based access</li>
+    <li><strong>Shared libraries</strong>: reduce pipeline code and execution time</li>
+    <li><strong>Artifact caching</strong>: mount Maven/npm cache as persistent volume in K8s agents</li>
+    <li><strong>Build parallelism</strong>: <code class="language-plaintext highlighter-rouge">parallel</code> stages for test splitting</li>
+    <li><strong>Thin client</strong>: Jenkins controller only orchestrates; all heavy work on agents</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-pipeline-fails-intermittently">🔵 Scenario 1: Pipeline Fails Intermittently</h3>
+
+<p><em>“Your CI pipeline fails with ‘connection refused’ on the Docker registry push step — but only sometimes.”</em></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Add retry with backoff</span>
+<span class="n">stage</span><span class="o">(</span><span class="s1">'Push Image'</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">steps</span> <span class="o">{</span>
+        <span class="n">retry</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">script</span> <span class="o">{</span>
+                <span class="k">try</span> <span class="o">{</span>
+                    <span class="n">sh</span> <span class="s1">'docker push ${IMAGE}'</span>
+                <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">sleep</span><span class="o">(</span><span class="nl">time:</span> <span class="mi">10</span><span class="o">,</span> <span class="nl">unit:</span> <span class="s1">'SECONDS'</span><span class="o">)</span>
+                    <span class="k">throw</span> <span class="n">e</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Also check:</span>
+<span class="c1">// - Registry rate limits (Docker Hub: 100 pulls/6h anonymous)</span>
+<span class="c1">// - Network flakiness between Jenkins agent and registry</span>
+<span class="c1">// - Registry health / disk space</span>
+<span class="c1">// - Credentials expiration</span>
+</code></pre></div></div>
+
+<h3 id="-scenario-2-pipeline-runs-taking-too-long">🔵 Scenario 2: Pipeline Runs Taking Too Long</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Before: sequential 45-minute pipeline</span>
+<span class="c1">// After: parallelized 15-minute pipeline</span>
+
+<span class="n">stage</span><span class="o">(</span><span class="s1">'Tests'</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">parallel</span> <span class="o">{</span>
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Unit'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">agent</span> <span class="o">{</span> <span class="n">label</span> <span class="s1">'fast-agent'</span> <span class="o">}</span>
+            <span class="n">steps</span> <span class="o">{</span> <span class="n">sh</span> <span class="s1">'mvn test -pl module-a,module-b'</span> <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Integration'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">agent</span> <span class="o">{</span> <span class="n">label</span> <span class="s1">'fast-agent'</span> <span class="o">}</span>
+            <span class="n">steps</span> <span class="o">{</span> <span class="n">sh</span> <span class="s1">'mvn verify -P integration'</span> <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Security Scan'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">agent</span> <span class="o">{</span> <span class="n">label</span> <span class="s1">'security-agent'</span> <span class="o">}</span>
+            <span class="n">steps</span> <span class="o">{</span> <span class="n">sh</span> <span class="s1">'trivy image ${IMAGE}'</span> <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Lint'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">agent</span> <span class="o">{</span> <span class="n">label</span> <span class="s1">'fast-agent'</span> <span class="o">}</span>
+            <span class="n">steps</span> <span class="o">{</span> <span class="n">sh</span> <span class="s1">'mvn checkstyle:check'</span> <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// Also: use test parallelism plugins</span>
+<span class="c1">// Maven: -T 4 (4 threads), Surefire fork count</span>
+<span class="c1">// JUnit 5: parallel execution config</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-simple-declarative-pipeline">Lab 1: Simple Declarative Pipeline</h3>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Save as Jenkinsfile in a test repo</span>
+<span class="n">pipeline</span> <span class="o">{</span>
+    <span class="n">agent</span> <span class="n">any</span>
+
+    <span class="n">stages</span> <span class="o">{</span>
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Hello'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">echo</span> <span class="s2">"Building ${env.JOB_NAME} #${env.BUILD_NUMBER}"</span>
+                <span class="n">echo</span> <span class="s2">"Branch: ${env.BRANCH_NAME ?: 'unknown'}"</span>
+                <span class="n">sh</span> <span class="s1">'echo "Running on: $(hostname)"'</span>
+                <span class="n">sh</span> <span class="s1">'echo "Docker: $(docker --version)"'</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Test'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">sh</span> <span class="s1">'''
+                    echo "Running tests..."
+                    sleep 2
+                    echo "All tests passed!"
+                '''</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Report'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">script</span> <span class="o">{</span>
+                    <span class="kt">def</span> <span class="n">buildInfo</span> <span class="o">=</span> <span class="o">[</span>
+                        <span class="nl">job:</span> <span class="n">env</span><span class="o">.</span><span class="na">JOB_NAME</span><span class="o">,</span>
+                        <span class="nl">build:</span> <span class="n">env</span><span class="o">.</span><span class="na">BUILD_NUMBER</span><span class="o">,</span>
+                        <span class="nl">url:</span> <span class="n">env</span><span class="o">.</span><span class="na">BUILD_URL</span>
+                    <span class="o">]</span>
+                    <span class="n">echo</span> <span class="s2">"Build info: ${buildInfo}"</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">post</span> <span class="o">{</span>
+        <span class="n">always</span> <span class="o">{</span>
+            <span class="n">echo</span> <span class="s2">"Pipeline finished with status: ${currentBuild.currentResult}"</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ─── ENVIRONMENT ──────────────────────────────────────</span>
+<span class="n">env</span><span class="o">.</span><span class="na">JOB_NAME</span>          <span class="c1">// Job name</span>
+<span class="n">env</span><span class="o">.</span><span class="na">BUILD_NUMBER</span>      <span class="c1">// Build number</span>
+<span class="n">env</span><span class="o">.</span><span class="na">WORKSPACE</span>         <span class="c1">// Agent workspace path</span>
+<span class="n">env</span><span class="o">.</span><span class="na">GIT_BRANCH</span>        <span class="c1">// Current Git branch</span>
+<span class="n">env</span><span class="o">.</span><span class="na">GIT_COMMIT</span>        <span class="c1">// Full commit SHA</span>
+<span class="n">env</span><span class="o">.</span><span class="na">BUILD_URL</span>         <span class="c1">// URL to this build</span>
+
+<span class="c1">// ─── CONDITIONALS ─────────────────────────────────────</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">branch</span> <span class="s1">'main'</span> <span class="o">}</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">environment</span> <span class="nl">name:</span> <span class="s1">'DEPLOY'</span><span class="o">,</span> <span class="nl">value:</span> <span class="s1">'true'</span> <span class="o">}</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">expression</span> <span class="o">{</span> <span class="k">return</span> <span class="n">params</span><span class="o">.</span><span class="na">DEPLOY_TO_PROD</span> <span class="o">}</span> <span class="o">}</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">anyOf</span> <span class="o">{</span> <span class="n">branch</span> <span class="s1">'main'</span><span class="o">;</span> <span class="n">branch</span> <span class="s1">'develop'</span> <span class="o">}</span> <span class="o">}</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">changeset</span> <span class="s2">"**/*.java"</span> <span class="o">}</span>
+
+<span class="c1">// ─── PARAMETERS ───────────────────────────────────────</span>
+<span class="n">parameters</span> <span class="o">{</span>
+    <span class="n">string</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">'IMAGE_TAG'</span><span class="o">,</span> <span class="nl">defaultValue:</span> <span class="s1">'latest'</span><span class="o">)</span>
+    <span class="n">booleanParam</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">'SKIP_TESTS'</span><span class="o">,</span> <span class="nl">defaultValue:</span> <span class="kc">false</span><span class="o">)</span>
+    <span class="n">choice</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">'ENV'</span><span class="o">,</span> <span class="nl">choices:</span> <span class="o">[</span><span class="s1">'staging'</span><span class="o">,</span> <span class="s1">'production'</span><span class="o">])</span>
+<span class="o">}</span>
+
+<span class="c1">// ─── USEFUL STEPS ─────────────────────────────────────</span>
+<span class="n">sh</span> <span class="s1">'command'</span>                           <span class="c1">// Run shell</span>
+<span class="n">sh</span><span class="o">(</span><span class="nl">script:</span> <span class="s1">'cmd'</span><span class="o">,</span> <span class="nl">returnStdout:</span> <span class="kc">true</span><span class="o">)</span>  <span class="c1">// Capture output</span>
+<span class="n">readFile</span><span class="o">(</span><span class="s1">'file.txt'</span><span class="o">)</span>                   <span class="c1">// Read file</span>
+<span class="n">writeFile</span> <span class="nl">file:</span> <span class="s1">'out.txt'</span><span class="o">,</span> <span class="nl">text:</span> <span class="s1">'x'</span>  <span class="c1">// Write file</span>
+<span class="n">archiveArtifacts</span> <span class="s1">'target/*.jar'</span>        <span class="c1">// Archive</span>
+<span class="n">stash</span> <span class="nl">name:</span> <span class="s1">'built'</span><span class="o">,</span> <span class="nl">includes:</span> <span class="s1">'**'</span>   <span class="c1">// Stash files</span>
+<span class="n">unstash</span> <span class="s1">'built'</span>                        <span class="c1">// Retrieve stash</span>
+<span class="n">input</span> <span class="nl">message:</span> <span class="s1">'Proceed?'</span><span class="o">,</span> <span class="nl">ok:</span> <span class="s1">'Yes'</span>  <span class="c1">// Manual gate</span>
+<span class="n">timeout</span><span class="o">(</span><span class="nl">time:</span> <span class="mi">5</span><span class="o">,</span> <span class="nl">unit:</span> <span class="s1">'MINUTES'</span><span class="o">)</span> <span class="o">{}</span>  <span class="c1">// Timeout block</span>
+<span class="n">retry</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="o">{</span> <span class="n">sh</span> <span class="s1">'flaky-command'</span> <span class="o">}</span>       <span class="c1">// Retry block</span>
+<span class="n">sleep</span><span class="o">(</span><span class="nl">time:</span> <span class="mi">30</span><span class="o">,</span> <span class="nl">unit:</span> <span class="s1">'SECONDS'</span><span class="o">)</span>      <span class="c1">// Wait</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Kubernetes.html">← Kubernetes</a></td>
+        <td><a href="/devops-interview-guide/Terraform.html">Terraform →</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">CI/CD patterns →</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security (pipeline security) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

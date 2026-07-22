@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>📊 Monitoring — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="📊 Monitoring — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Monitoring.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="📊 Monitoring — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>📊 Monitoring — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="📊 Monitoring — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Monitoring.html" />
+<meta property="og:url" content="/devops-interview-guide/Monitoring.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="📊 Monitoring — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"📊 Monitoring — DevOps Interview Guide","url":"/devops-interview-guide/Monitoring.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">📊 Monitoring — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-monitoring--devops-interview-guide">📊 Monitoring — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/CICD.html">← CI/CD</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Logging.html">Logging →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#monitoring-fundamentals">Monitoring Fundamentals</a></li>
+  <li><a href="#prometheus">Prometheus</a></li>
+  <li><a href="#grafana">Grafana</a></li>
+  <li><a href="#alerting">Alerting</a></li>
+  <li><a href="#slos--error-budgets">SLOs &amp; Error Budgets</a></li>
+  <li><a href="#distributed-tracing">Distributed Tracing (Jaeger/Tempo)</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="monitoring-fundamentals">Monitoring Fundamentals</h2>
+
+<h3 id="the-four-golden-signals">The Four Golden Signals</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Signal</th>
+      <th>Description</th>
+      <th>Example Metrics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Latency</strong></td>
+      <td>Time to serve a request (success AND error)</td>
+      <td>p50, p95, p99 response time</td>
+    </tr>
+    <tr>
+      <td><strong>Traffic</strong></td>
+      <td>Demand on your system</td>
+      <td>Requests/second, transactions/sec</td>
+    </tr>
+    <tr>
+      <td><strong>Errors</strong></td>
+      <td>Rate of failed requests</td>
+      <td>HTTP 5xx rate, exception count</td>
+    </tr>
+    <tr>
+      <td><strong>Saturation</strong></td>
+      <td>How full your service is</td>
+      <td>CPU %, memory %, queue depth</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="red-method-for-services">RED Method (for services)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rate     → Requests per second
+Errors   → Requests that are failing (per second)
+Duration → Distribution of response times (latency)
+</code></pre></div></div>
+
+<h3 id="use-method-for-resources">USE Method (for resources)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Utilization  → % time the resource is busy
+Saturation   → Amount of queued work (waiting)
+Errors       → Count of error events
+</code></pre></div></div>
+
+<h3 id="observability-pillars">Observability Pillars</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Metrics   → Aggregated numerical data over time (Prometheus, CloudWatch)
+Logs      → Event records with context (Elasticsearch, Loki)
+Traces    → Request flow through distributed systems (Jaeger, Zipkin, Tempo)
+Profiles  → Code-level CPU/memory usage (Pyroscope, pprof)
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="prometheus">Prometheus</h2>
+
+<h3 id="architecture">Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──────────────────────────────────────────────────────┐
+│                    Prometheus Server                   │
+│                                                        │
+│  ┌────────────┐  ┌────────────────┐  ┌────────────┐  │
+│  │  Retrieval │  │   TSDB (Time   │  │  HTTP API  │  │
+│  │ (scrapers) │  │  Series DB)    │  │ + PromQL   │  │
+│  └────────────┘  └────────────────┘  └────────────┘  │
+│  ┌────────────────────────────────────────────────┐   │
+│  │             Alertmanager                        │   │
+│  └────────────────────────────────────────────────┘   │
+└─────────────────────┬────────────────────────────────┘
+                      │ Pull (scrape)
+         ┌────────────┼────────────────────────┐
+         ▼            ▼                        ▼
+   App (metrics)  Node Exporter         kube-state-metrics
+   /metrics        (host metrics)       (K8s object metrics)
+</code></pre></div></div>
+
+<h3 id="prometheusyml-configuration">prometheus.yml Configuration</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">global</span><span class="pi">:</span>
+  <span class="na">scrape_interval</span><span class="pi">:</span> <span class="s">15s</span>
+  <span class="na">evaluation_interval</span><span class="pi">:</span> <span class="s">15s</span>
+  <span class="na">external_labels</span><span class="pi">:</span>
+    <span class="na">cluster</span><span class="pi">:</span> <span class="s">production</span>
+    <span class="na">region</span><span class="pi">:</span> <span class="s">us-east-1</span>
+
+<span class="na">rule_files</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s2">"</span><span class="s">alerts/*.yaml"</span>
+  <span class="pi">-</span> <span class="s2">"</span><span class="s">recording_rules/*.yaml"</span>
+
+<span class="na">alerting</span><span class="pi">:</span>
+  <span class="na">alertmanagers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">static_configs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">targets</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">alertmanager:9093'</span><span class="pi">]</span>
+
+<span class="na">scrape_configs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">job_name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">kubernetes-pods'</span>
+    <span class="na">kubernetes_sd_configs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">pod</span>
+    <span class="na">relabel_configs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">source_labels</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">__meta_kubernetes_pod_annotation_prometheus_io_scrape</span><span class="pi">]</span>
+      <span class="na">action</span><span class="pi">:</span> <span class="s">keep</span>
+      <span class="na">regex</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="pi">-</span> <span class="na">source_labels</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">__meta_kubernetes_pod_annotation_prometheus_io_path</span><span class="pi">]</span>
+      <span class="na">action</span><span class="pi">:</span> <span class="s">replace</span>
+      <span class="na">target_label</span><span class="pi">:</span> <span class="s">__metrics_path__</span>
+      <span class="na">regex</span><span class="pi">:</span> <span class="s">(.+)</span>
+    <span class="pi">-</span> <span class="na">source_labels</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">__address__</span><span class="pi">,</span> <span class="nv">__meta_kubernetes_pod_annotation_prometheus_io_port</span><span class="pi">]</span>
+      <span class="na">action</span><span class="pi">:</span> <span class="s">replace</span>
+      <span class="na">regex</span><span class="pi">:</span> <span class="s">([^:]+)(?::\d+)?;(\d+)</span>
+      <span class="na">replacement</span><span class="pi">:</span> <span class="s">$1:$2</span>
+      <span class="na">target_label</span><span class="pi">:</span> <span class="s">__address__</span>
+
+  <span class="pi">-</span> <span class="na">job_name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">node-exporter'</span>
+    <span class="na">static_configs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">targets</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">node-exporter:9100'</span><span class="pi">]</span>
+
+  <span class="pi">-</span> <span class="na">job_name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">kube-state-metrics'</span>
+    <span class="na">static_configs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">targets</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">kube-state-metrics:8080'</span><span class="pi">]</span>
+
+  <span class="pi">-</span> <span class="na">job_name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">blackbox'</span>
+    <span class="na">metrics_path</span><span class="pi">:</span> <span class="s">/probe</span>
+    <span class="na">params</span><span class="pi">:</span>
+      <span class="na">module</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">http_2xx</span><span class="pi">]</span>
+    <span class="na">static_configs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">targets</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">https://myapp.example.com/health</span>
+      <span class="pi">-</span> <span class="s">https://api.example.com/status</span>
+    <span class="na">relabel_configs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">source_labels</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">__address__</span><span class="pi">]</span>
+      <span class="na">target_label</span><span class="pi">:</span> <span class="s">__param_target</span>
+    <span class="pi">-</span> <span class="na">source_labels</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">__param_target</span><span class="pi">]</span>
+      <span class="na">target_label</span><span class="pi">:</span> <span class="s">instance</span>
+    <span class="pi">-</span> <span class="na">target_label</span><span class="pi">:</span> <span class="s">__address__</span>
+      <span class="na">replacement</span><span class="pi">:</span> <span class="s">blackbox-exporter:9115</span>
+</code></pre></div></div>
+
+<h3 id="promql-query-language">PromQL Query Language</h3>
+
+<pre><code class="language-promql"># ─── BASIC QUERIES ────────────────────────────────────
+# Current value of a metric
+http_requests_total
+
+# Filter by label
+http_requests_total{job="myapp", status="200"}
+
+# Rate (per second over 5 min window)
+rate(http_requests_total[5m])
+
+# Increase (total increase over window)
+increase(http_requests_total[1h])
+
+# ─── AGGREGATIONS ─────────────────────────────────────
+# Sum by label
+sum(rate(http_requests_total[5m])) by (service)
+
+# Average
+avg(node_memory_MemAvailable_bytes) by (node)
+
+# 99th percentile latency
+histogram_quantile(0.99,
+  sum(rate(http_request_duration_seconds_bucket[5m])) by (le, service)
+)
+
+# Top 5 memory consumers
+topk(5, sum(container_memory_working_set_bytes) by (pod))
+
+# ─── ERROR RATE ───────────────────────────────────────
+# HTTP error rate (5xx)
+sum(rate(http_requests_total{status=~"5.."}[5m]))
+/
+sum(rate(http_requests_total[5m]))
+
+# ─── RESOURCE QUERIES ─────────────────────────────────
+# CPU usage per pod
+sum(rate(container_cpu_usage_seconds_total[5m])) by (pod)
+
+# Memory usage
+sum(container_memory_working_set_bytes{container!=""}) by (pod)
+
+# Disk IOPS
+rate(node_disk_io_time_seconds_total[5m])
+
+# ─── RECORDING RULES (pre-computed queries) ───────────
+# In recording_rules/app.yaml:
+groups:
+- name: app_rules
+  interval: 30s
+  rules:
+  - record: job:http_requests:rate5m
+    expr: |
+      sum(rate(http_requests_total[5m])) by (job)
+
+  - record: job:http_errors:rate5m
+    expr: |
+      sum(rate(http_requests_total{status=~"5.."}[5m])) by (job)
+</code></pre>
+
+<h3 id="prometheus-operator-kubernetes">Prometheus Operator (Kubernetes)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ServiceMonitor — tell Prometheus which services to scrape</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">monitoring.coreos.com/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ServiceMonitor</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">endpoints</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="s">metrics</span>
+    <span class="na">interval</span><span class="pi">:</span> <span class="s">30s</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">/metrics</span>
+    <span class="na">honorLabels</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="na">namespaceSelector</span><span class="pi">:</span>
+    <span class="na">matchNames</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">production</span>
+
+<span class="nn">---</span>
+<span class="c1"># PodMonitor — scrape pods directly</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">monitoring.coreos.com/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">PodMonitor</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-pods</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">monitoring</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">podMetricsEndpoints</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="s">metrics</span>
+    <span class="na">interval</span><span class="pi">:</span> <span class="s">15s</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="grafana">Grafana</h2>
+
+<h3 id="dashboard-best-practices">Dashboard Best Practices</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">//</span><span class="w"> </span><span class="err">Grafana</span><span class="w"> </span><span class="err">dashboard</span><span class="w"> </span><span class="err">panel</span><span class="w"> </span><span class="err">structure</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Request Rate"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"timeseries"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"targets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"expr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sum(rate(http_requests_total[5m])) by (service)"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"legendFormat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{{service}}"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"fieldConfig"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reqps"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"min"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"palette-classic"</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"thresholds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"absolute"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"steps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w"> </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"green"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w"> </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yellow"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w"> </span><span class="nl">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span><span class="w"> </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="grafana-provisioning-as-code">Grafana Provisioning (as Code)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># provisioning/datasources/prometheus.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="m">1</span>
+<span class="na">datasources</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Prometheus</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">prometheus</span>
+    <span class="na">access</span><span class="pi">:</span> <span class="s">proxy</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">http://prometheus:9090</span>
+    <span class="na">isDefault</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">jsonData</span><span class="pi">:</span>
+      <span class="na">timeInterval</span><span class="pi">:</span> <span class="s2">"</span><span class="s">15s"</span>
+      <span class="na">exemplarTraceIdDestinations</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">trace_id</span>
+          <span class="na">datasourceUid</span><span class="pi">:</span> <span class="s">tempo</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Loki</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">loki</span>
+    <span class="na">access</span><span class="pi">:</span> <span class="s">proxy</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">http://loki:3100</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Tempo</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">tempo</span>
+    <span class="na">access</span><span class="pi">:</span> <span class="s">proxy</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">http://tempo:3200</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># provisioning/dashboards/dashboard-provider.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="m">1</span>
+<span class="na">providers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">default</span>
+    <span class="na">folder</span><span class="pi">:</span> <span class="s1">'</span><span class="s">'</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">file</span>
+    <span class="na">disableDeletion</span><span class="pi">:</span> <span class="kc">false</span>
+    <span class="na">editable</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">updateIntervalSeconds</span><span class="pi">:</span> <span class="m">30</span>
+    <span class="na">options</span><span class="pi">:</span>
+      <span class="na">path</span><span class="pi">:</span> <span class="s">/var/lib/grafana/dashboards</span>
+      <span class="na">foldersFromFilesStructure</span><span class="pi">:</span> <span class="kc">true</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="alerting">Alerting</h2>
+
+<h3 id="alert-rules">Alert Rules</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># alerts/app.yaml</span>
+<span class="na">groups</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">application</span>
+  <span class="na">rules</span><span class="pi">:</span>
+
+  <span class="c1"># High error rate</span>
+  <span class="pi">-</span> <span class="na">alert</span><span class="pi">:</span> <span class="s">HighErrorRate</span>
+    <span class="na">expr</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">(</span>
+        <span class="s">sum(rate(http_requests_total{status=~"5.."}[5m])) by (service)</span>
+        <span class="s">/</span>
+        <span class="s">sum(rate(http_requests_total[5m])) by (service)</span>
+      <span class="s">) &gt; 0.01</span>
+    <span class="na">for</span><span class="pi">:</span> <span class="s">5m</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">severity</span><span class="pi">:</span> <span class="s">critical</span>
+      <span class="na">team</span><span class="pi">:</span> <span class="s">platform</span>
+    <span class="na">annotations</span><span class="pi">:</span>
+      <span class="na">summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">High</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">rate</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.service</span><span class="nv"> </span><span class="s">}}"</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Error</span><span class="nv"> </span><span class="s">rate</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$value</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">humanizePercentage</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.service</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">(threshold:</span><span class="nv"> </span><span class="s">1%)"</span>
+      <span class="na">runbook</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://wiki.example.com/runbooks/high-error-rate"</span>
+
+  <span class="c1"># High latency</span>
+  <span class="pi">-</span> <span class="na">alert</span><span class="pi">:</span> <span class="s">HighLatency</span>
+    <span class="na">expr</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">histogram_quantile(0.95,</span>
+        <span class="s">sum(rate(http_request_duration_seconds_bucket[5m])) by (le, service)</span>
+      <span class="s">) &gt; 0.5</span>
+    <span class="na">for</span><span class="pi">:</span> <span class="s">10m</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">severity</span><span class="pi">:</span> <span class="s">warning</span>
+    <span class="na">annotations</span><span class="pi">:</span>
+      <span class="na">summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">High</span><span class="nv"> </span><span class="s">p95</span><span class="nv"> </span><span class="s">latency</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.service</span><span class="nv"> </span><span class="s">}}"</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">p95</span><span class="nv"> </span><span class="s">latency</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$value</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">humanizeDuration</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">(threshold:</span><span class="nv"> </span><span class="s">500ms)"</span>
+
+  <span class="c1"># Pod crashlooping</span>
+  <span class="pi">-</span> <span class="na">alert</span><span class="pi">:</span> <span class="s">PodCrashLooping</span>
+    <span class="na">expr</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">rate(kube_pod_container_status_restarts_total[15m]) * 60 * 15 &gt; 0</span>
+    <span class="na">for</span><span class="pi">:</span> <span class="s">15m</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">severity</span><span class="pi">:</span> <span class="s">warning</span>
+    <span class="na">annotations</span><span class="pi">:</span>
+      <span class="na">summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Pod</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.pod</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">crash</span><span class="nv"> </span><span class="s">looping"</span>
+
+  <span class="c1"># Node disk pressure</span>
+  <span class="pi">-</span> <span class="na">alert</span><span class="pi">:</span> <span class="s">NodeDiskUsageHigh</span>
+    <span class="na">expr</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">(</span>
+        <span class="s">(node_filesystem_size_bytes - node_filesystem_avail_bytes)</span>
+        <span class="s">/ node_filesystem_size_bytes</span>
+      <span class="s">) &gt; 0.85</span>
+    <span class="na">for</span><span class="pi">:</span> <span class="s">5m</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">severity</span><span class="pi">:</span> <span class="s">warning</span>
+    <span class="na">annotations</span><span class="pi">:</span>
+      <span class="na">summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">High</span><span class="nv"> </span><span class="s">disk</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.instance</span><span class="nv"> </span><span class="s">}}"</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Disk</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.mountpoint</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$value</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">humanizePercentage</span><span class="nv"> </span><span class="s">}}"</span>
+
+  <span class="c1"># No data / service down</span>
+  <span class="pi">-</span> <span class="na">alert</span><span class="pi">:</span> <span class="s">ServiceDown</span>
+    <span class="na">expr</span><span class="pi">:</span> <span class="s">up{job="myapp"} == </span><span class="m">0</span>
+    <span class="na">for</span><span class="pi">:</span> <span class="s">2m</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">severity</span><span class="pi">:</span> <span class="s">critical</span>
+    <span class="na">annotations</span><span class="pi">:</span>
+      <span class="na">summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Service</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.job</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">down</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.instance</span><span class="nv"> </span><span class="s">}}"</span>
+</code></pre></div></div>
+
+<h3 id="alertmanager-configuration">Alertmanager Configuration</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># alertmanager.yml</span>
+<span class="na">global</span><span class="pi">:</span>
+  <span class="na">smtp_smarthost</span><span class="pi">:</span> <span class="s1">'</span><span class="s">smtp.example.com:587'</span>
+  <span class="na">smtp_from</span><span class="pi">:</span> <span class="s1">'</span><span class="s">alerts@example.com'</span>
+  <span class="na">slack_api_url</span><span class="pi">:</span> <span class="s1">'</span><span class="s">https://hooks.slack.com/services/...'</span>
+
+<span class="na">templates</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s1">'</span><span class="s">/etc/alertmanager/templates/*.tmpl'</span>
+
+<span class="na">route</span><span class="pi">:</span>
+  <span class="na">group_by</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">alertname'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">cluster'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">service'</span><span class="pi">]</span>
+  <span class="na">group_wait</span><span class="pi">:</span> <span class="s">30s</span>       <span class="c1"># Wait for related alerts to group</span>
+  <span class="na">group_interval</span><span class="pi">:</span> <span class="s">5m</span>    <span class="c1"># Wait before sending new group notification</span>
+  <span class="na">repeat_interval</span><span class="pi">:</span> <span class="s">4h</span>   <span class="c1"># Wait before re-sending same alert</span>
+
+  <span class="na">receiver</span><span class="pi">:</span> <span class="s">default</span>
+  <span class="na">routes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">match</span><span class="pi">:</span>
+      <span class="na">severity</span><span class="pi">:</span> <span class="s">critical</span>
+    <span class="na">receiver</span><span class="pi">:</span> <span class="s">pagerduty-critical</span>
+    <span class="na">continue</span><span class="pi">:</span> <span class="kc">true</span>    <span class="c1"># Also send to default</span>
+
+  <span class="pi">-</span> <span class="na">match</span><span class="pi">:</span>
+      <span class="na">severity</span><span class="pi">:</span> <span class="s">warning</span>
+    <span class="na">receiver</span><span class="pi">:</span> <span class="s">slack-warnings</span>
+
+  <span class="pi">-</span> <span class="na">match</span><span class="pi">:</span>
+      <span class="na">team</span><span class="pi">:</span> <span class="s">database</span>
+    <span class="na">receiver</span><span class="pi">:</span> <span class="s">dba-team</span>
+    <span class="na">group_by</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">alertname'</span><span class="pi">]</span>
+
+<span class="na">receivers</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">default</span>
+  <span class="na">slack_configs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">channel</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#alerts'</span>
+    <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{{</span><span class="nv"> </span><span class="s">template</span><span class="nv"> </span><span class="s">"slack.title"</span><span class="nv"> </span><span class="s">.</span><span class="nv"> </span><span class="s">}}'</span>
+    <span class="na">text</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{{</span><span class="nv"> </span><span class="s">template</span><span class="nv"> </span><span class="s">"slack.text"</span><span class="nv"> </span><span class="s">.</span><span class="nv"> </span><span class="s">}}'</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">pagerduty-critical</span>
+  <span class="na">pagerduty_configs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">service_key</span><span class="pi">:</span> <span class="s1">'</span><span class="s">YOUR_PAGERDUTY_KEY'</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">slack-warnings</span>
+  <span class="na">slack_configs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">channel</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#warnings'</span>
+    <span class="na">send_resolved</span><span class="pi">:</span> <span class="kc">true</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">dba-team</span>
+  <span class="na">email_configs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">to</span><span class="pi">:</span> <span class="s1">'</span><span class="s">dba@example.com'</span>
+
+<span class="na">inhibit_rules</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">source_match</span><span class="pi">:</span>
+    <span class="na">severity</span><span class="pi">:</span> <span class="s">critical</span>
+  <span class="na">target_match</span><span class="pi">:</span>
+    <span class="na">severity</span><span class="pi">:</span> <span class="s">warning</span>
+  <span class="na">equal</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">alertname'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">instance'</span><span class="pi">]</span>  <span class="c1"># Suppress warning if critical is firing</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="slos--error-budgets">SLOs &amp; Error Budgets</h2>
+
+<h3 id="defining-slis-slos-slas">Defining SLIs, SLOs, SLAs</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SLI (Service Level Indicator)
+  → Quantitative measure of service performance
+  → Examples: availability, latency, error rate, throughput
+
+SLO (Service Level Objective)
+  → Target value for an SLI
+  → Examples: 99.9% availability, p99 latency &lt; 200ms
+
+SLA (Service Level Agreement)
+  → Contract with consequences for missing SLOs
+  → SLA ≤ SLO (SLO is your internal target; SLA is the customer promise)
+
+Error Budget = 100% - SLO
+  → 99.9% SLO = 0.1% error budget = 43.8 min/month of allowed downtime
+  → When error budget is exhausted → freeze feature deployments, fix reliability
+</code></pre></div></div>
+
+<h3 id="error-budget-burn-rate-alert">Error Budget Burn Rate Alert</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Multi-window burn rate alerting (Google SRE approach)</span>
+<span class="pi">-</span> <span class="na">alert</span><span class="pi">:</span> <span class="s">ErrorBudgetBurnRateFast</span>
+  <span class="na">expr</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">(</span>
+      <span class="s"># 1h rate &gt; 14x budget burn rate</span>
+      <span class="s">sum(rate(http_requests_total{status=~"5.."}[1h])) by (service)</span>
+      <span class="s">/</span>
+      <span class="s">sum(rate(http_requests_total[1h])) by (service)</span>
+    <span class="s">) &gt; 0.14  # 14 * (1 - 0.999) = 14 * 0.001</span>
+    <span class="s">AND</span>
+    <span class="s">(</span>
+      <span class="s"># 5m rate also elevated (prevents false alarms)</span>
+      <span class="s">sum(rate(http_requests_total{status=~"5.."}[5m])) by (service)</span>
+      <span class="s">/</span>
+      <span class="s">sum(rate(http_requests_total[5m])) by (service)</span>
+    <span class="s">) &gt; 0.14</span>
+  <span class="na">for</span><span class="pi">:</span> <span class="s">2m</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">severity</span><span class="pi">:</span> <span class="s">critical</span>
+    <span class="na">page</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="na">annotations</span><span class="pi">:</span>
+    <span class="na">summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Fast</span><span class="nv"> </span><span class="s">burn:</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.service</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">exhaust</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">budget</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;1h"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="distributed-tracing">Distributed Tracing</h2>
+
+<h3 id="opentelemetry-instrumentation">OpenTelemetry Instrumentation</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Python FastAPI with OpenTelemetry
+</span><span class="kn">from</span> <span class="n">opentelemetry</span> <span class="kn">import</span> <span class="n">trace</span>
+<span class="kn">from</span> <span class="n">opentelemetry.exporter.otlp.proto.grpc.trace_exporter</span> <span class="kn">import</span> <span class="n">OTLPSpanExporter</span>
+<span class="kn">from</span> <span class="n">opentelemetry.sdk.trace</span> <span class="kn">import</span> <span class="n">TracerProvider</span>
+<span class="kn">from</span> <span class="n">opentelemetry.sdk.trace.export</span> <span class="kn">import</span> <span class="n">BatchSpanProcessor</span>
+<span class="kn">from</span> <span class="n">opentelemetry.instrumentation.fastapi</span> <span class="kn">import</span> <span class="n">FastAPIInstrumentor</span>
+<span class="kn">from</span> <span class="n">opentelemetry.instrumentation.httpx</span> <span class="kn">import</span> <span class="n">HTTPXClientInstrumentor</span>
+<span class="kn">from</span> <span class="n">opentelemetry.instrumentation.sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemyInstrumentor</span>
+
+<span class="c1"># Setup tracing
+</span><span class="n">provider</span> <span class="o">=</span> <span class="nc">TracerProvider</span><span class="p">(</span>
+    <span class="n">resource</span><span class="o">=</span><span class="n">Resource</span><span class="p">.</span><span class="nf">create</span><span class="p">({</span>
+        <span class="n">SERVICE_NAME</span><span class="p">:</span> <span class="sh">"</span><span class="s">myapp</span><span class="sh">"</span><span class="p">,</span>
+        <span class="n">SERVICE_VERSION</span><span class="p">:</span> <span class="sh">"</span><span class="s">1.0.0</span><span class="sh">"</span><span class="p">,</span>
+        <span class="n">DEPLOYMENT_ENVIRONMENT</span><span class="p">:</span> <span class="sh">"</span><span class="s">production</span><span class="sh">"</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="p">)</span>
+
+<span class="n">provider</span><span class="p">.</span><span class="nf">add_span_processor</span><span class="p">(</span>
+    <span class="nc">BatchSpanProcessor</span><span class="p">(</span>
+        <span class="nc">OTLPSpanExporter</span><span class="p">(</span><span class="n">endpoint</span><span class="o">=</span><span class="sh">"</span><span class="s">http://otel-collector:4317</span><span class="sh">"</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">trace</span><span class="p">.</span><span class="nf">set_tracer_provider</span><span class="p">(</span><span class="n">provider</span><span class="p">)</span>
+
+<span class="c1"># Auto-instrument FastAPI
+</span><span class="n">FastAPIInstrumentor</span><span class="p">.</span><span class="nf">instrument_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<span class="nc">HTTPXClientInstrumentor</span><span class="p">().</span><span class="nf">instrument</span><span class="p">()</span>
+<span class="nc">SQLAlchemyInstrumentor</span><span class="p">().</span><span class="nf">instrument</span><span class="p">(</span><span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="c1"># Manual span
+</span><span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="p">.</span><span class="nf">get_tracer</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">process_order</span><span class="p">(</span><span class="n">order_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">tracer</span><span class="p">.</span><span class="nf">start_as_current_span</span><span class="p">(</span><span class="sh">"</span><span class="s">process_order</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="n">span</span><span class="p">:</span>
+        <span class="n">span</span><span class="p">.</span><span class="nf">set_attribute</span><span class="p">(</span><span class="sh">"</span><span class="s">order.id</span><span class="sh">"</span><span class="p">,</span> <span class="n">order_id</span><span class="p">)</span>
+        <span class="n">span</span><span class="p">.</span><span class="nf">set_attribute</span><span class="p">(</span><span class="sh">"</span><span class="s">order.source</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">api</span><span class="sh">"</span><span class="p">)</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">fetch_order</span><span class="p">(</span><span class="n">order_id</span><span class="p">)</span>
+        <span class="n">span</span><span class="p">.</span><span class="nf">add_event</span><span class="p">(</span><span class="sh">"</span><span class="s">order_fetched</span><span class="sh">"</span><span class="p">,</span> <span class="p">{</span><span class="sh">"</span><span class="s">items</span><span class="sh">"</span><span class="p">:</span> <span class="nf">len</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">items</span><span class="p">)})</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between monitoring and observability?</strong></p>
+
+<blockquote>
+  <p><strong>Monitoring</strong> tells you when something is wrong — it’s about known failure modes you’ve anticipated (alerts on CPU &gt; 90%, 5xx rate spike). <strong>Observability</strong> is the ability to understand the internal state of a system from its external outputs — it lets you investigate <em>unknown</em> failures using metrics, logs, and traces. Monitoring asks “is it down?”; observability asks “why is this happening?” and lets you explore without needing to predict the failure in advance.</p>
+</blockquote>
+
+<p><strong>Q2: What is Prometheus and how does it collect metrics?</strong></p>
+
+<blockquote>
+  <p>Prometheus is an open-source monitoring system using a <strong>pull model</strong> — it scrapes HTTP <code class="language-plaintext highlighter-rouge">/metrics</code> endpoints from targets at a configured interval. Metrics are stored in a time-series database. It uses <strong>PromQL</strong> for querying. Pull model advantages: Prometheus controls scrape rate, can detect if a target is down, easier to debug. Pushgateway exists for short-lived jobs that can’t be scraped.</p>
+</blockquote>
+
+<p><strong>Q3: What are the four types of Prometheus metrics?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Counter</strong>: monotonically increasing value (total requests, total errors). Use <code class="language-plaintext highlighter-rouge">rate()</code> or <code class="language-plaintext highlighter-rouge">increase()</code> to get rate.</li>
+    <li><strong>Gauge</strong>: value that can go up and down (current CPU%, queue depth, temperature)</li>
+    <li><strong>Histogram</strong>: distribution of values in configurable buckets (request latency). Use <code class="language-plaintext highlighter-rouge">histogram_quantile()</code> for percentiles.</li>
+    <li><strong>Summary</strong>: pre-computed percentiles on the client side (less flexible than histogram for aggregation).</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: What is a Grafana datasource vs a dashboard?</strong></p>
+
+<blockquote>
+  <p>A <strong>datasource</strong> is the backend Grafana queries for data: Prometheus, Loki, CloudWatch, InfluxDB, etc. A <strong>dashboard</strong> is a visual collection of panels (graphs, tables, gauges) that query datasources using their respective query languages (PromQL, LogQL, etc.). Dashboards can be version-controlled as JSON, provisioned via config files, and shared via Grafana.com.</p>
+</blockquote>
+
+<p><strong>Q5: Explain SLI, SLO, and error budget with a practical example.</strong></p>
+
+<blockquote>
+  <p>For an e-commerce checkout API:</p>
+  <ul>
+    <li><strong>SLI</strong>: <code class="language-plaintext highlighter-rouge">% of checkout requests completing in &lt; 500ms</code> = <code class="language-plaintext highlighter-rouge">successful_fast_requests / total_requests</code></li>
+    <li><strong>SLO</strong>: That SLI should be ≥ 99.5% over a 30-day rolling window</li>
+    <li><strong>Error budget</strong>: 0.5% = ~3.6 hours of allowed “budget” per month
+If we’ve used 80% of the error budget by day 20, we stop new feature deployments and focus on reliability. If budget is healthy, we can take more deployment risks.</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q6: What is Alertmanager and how does it work with Prometheus?</strong></p>
+
+<blockquote>
+  <p>Prometheus evaluates alert rules and fires alerts to <strong>Alertmanager</strong> when conditions are met. Alertmanager handles: <strong>deduplication</strong> (same alert from multiple Prometheus instances), <strong>grouping</strong> (related alerts into one notification), <strong>silencing</strong> (suppress known maintenance alerts), <strong>inhibition</strong> (suppress low-severity if high-severity firing), <strong>routing</strong> (send to PagerDuty/Slack/email based on labels). Prometheus fires and forgets; Alertmanager manages the notification lifecycle.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: How do you implement multi-window burn rate alerting?</strong></p>
+
+<blockquote>
+  <p>The Google SRE approach: use two time windows to reduce false positives. A <strong>short window</strong> (1h) catches fast-burning issues; a <strong>long window</strong> (6h/24h/72h) catches slow burns. Alert only when both windows exceed a threshold. Burn rate = how fast you’re consuming error budget relative to normal. At 14x burn rate for 1 hour = budget exhausted in ~2 hours = page immediately. At 1x burn rate = budget depletes at normal rate = no alert needed.</p>
+</blockquote>
+
+<p><strong>Q8: How would you monitor a microservices architecture?</strong></p>
+
+<blockquote>
+  <p><strong>Service-level</strong>: RED metrics per service (rate, errors, duration) via Prometheus + service mesh (Istio/Linkerd auto-generates metrics without code changes).
+<strong>Infrastructure</strong>: USE metrics per node (node-exporter), K8s state (kube-state-metrics).
+<strong>Application</strong>: Custom business metrics (orders/min, payment success rate) in code.
+<strong>Distributed tracing</strong>: OpenTelemetry → Tempo/Jaeger for request correlation across services.
+<strong>Dashboards</strong>: Per-service dashboards + cross-service dependency graphs.
+<strong>Alerting</strong>: Alert on SLO burn rates, not individual symptoms.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-alert-fired--5xx-rate-high">🔵 Scenario 1: Alert Fired — 5xx Rate High</h3>
+
+<p><em>“You receive a PagerDuty alert at 3 AM: error rate for checkout service &gt; 5%.”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Check the alert in Alertmanager/Grafana</span>
+<span class="c"># Open runbook link from alert annotation</span>
+
+<span class="c"># 2. Assess impact</span>
+<span class="c"># - How many users affected? (request rate * error %)</span>
+<span class="c"># - Which specific errors? (check logs)</span>
+<span class="c"># - When did it start? (correlate with recent deploys)</span>
+
+<span class="c"># 3. Check service status</span>
+kubectl get pods <span class="nt">-n</span> production <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>checkout
+kubectl logs <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>checkout <span class="nt">-n</span> production <span class="nt">--tail</span><span class="o">=</span>100 | <span class="nb">grep</span> <span class="nt">-i</span> error
+
+<span class="c"># 4. Check dependencies (is it upstream/downstream?)</span>
+<span class="c"># Look at distributed traces for failed requests</span>
+<span class="c"># Check DB connection pool, external API latency</span>
+
+<span class="c"># 5. Check recent deployments</span>
+kubectl rollout <span class="nb">history </span>deployment/checkout <span class="nt">-n</span> production
+
+<span class="c"># 6. Decide: rollback or fix forward</span>
+kubectl rollout undo deployment/checkout <span class="nt">-n</span> production  <span class="c"># If recent deploy</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-deploy-prometheus-stack-with-helm">Lab 1: Deploy Prometheus Stack with Helm</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install kube-prometheus-stack</span>
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+
+helm upgrade <span class="nt">--install</span> monitoring prometheus-community/kube-prometheus-stack <span class="se">\</span>
+  <span class="nt">--namespace</span> monitoring <span class="se">\</span>
+  <span class="nt">--create-namespace</span> <span class="se">\</span>
+  <span class="nt">--set</span> grafana.adminPassword<span class="o">=</span>admin123 <span class="se">\</span>
+  <span class="nt">--set</span> prometheus.prometheusSpec.retention<span class="o">=</span>30d <span class="se">\</span>
+  <span class="nt">--set</span> prometheus.prometheusSpec.resources.limits.memory<span class="o">=</span>4Gi
+
+<span class="c"># Access Grafana</span>
+kubectl port-forward svc/monitoring-grafana 3000:80 <span class="nt">-n</span> monitoring
+
+<span class="c"># Access Prometheus</span>
+kubectl port-forward svc/monitoring-kube-prometheus-prometheus 9090:9090 <span class="nt">-n</span> monitoring
+
+<span class="c"># Access Alertmanager</span>
+kubectl port-forward svc/monitoring-kube-prometheus-alertmanager 9093:9093 <span class="nt">-n</span> monitoring
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<pre><code class="language-promql"># ─── COMMON PROMQL PATTERNS ───────────────────────────
+# Request rate
+rate(http_requests_total[5m])
+
+# Error rate %
+sum(rate(http_requests_total{code=~"5.."}[5m])) /
+sum(rate(http_requests_total[5m]))
+
+# p99 latency
+histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m]))
+
+# CPU by pod
+sum(rate(container_cpu_usage_seconds_total{container!=""}[5m])) by (pod)
+
+# Memory by pod (working set)
+sum(container_memory_working_set_bytes{container!=""}) by (pod)
+
+# Pod restarts
+rate(kube_pod_container_status_restarts_total[15m]) * 60 * 15
+
+# Node disk usage %
+100 - (node_filesystem_avail_bytes / node_filesystem_size_bytes * 100)
+
+# ─── GRAFANA CLI ──────────────────────────────────────
+grafana-cli plugins install grafana-piechart-panel
+grafana-cli admin reset-admin-password newpassword
+
+# ─── PROMETHEUS CLI ───────────────────────────────────
+# Test PromQL
+curl 'localhost:9090/api/v1/query?query=up'
+
+# Check targets
+curl 'localhost:9090/api/v1/targets' | jq '.data.activeTargets[] | {job, health}'
+
+# Reload config
+curl -X POST localhost:9090/-/reload
+</code></pre>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/CICD.html">← CI/CD</a></td>
+        <td><a href="/devops-interview-guide/Logging.html">Logging →</a></td>
+        <td><a href="/devops-interview-guide/SRE.html">SRE (SLOs/error budgets) →</a></td>
+        <td><a href="/devops-interview-guide/Kubernetes.html">Kubernetes (monitoring on K8s) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

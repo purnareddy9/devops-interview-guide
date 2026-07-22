@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🔴 OpenShift — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🔴 OpenShift — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/OpenShift.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🔴 OpenShift — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🔴 OpenShift — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🔴 OpenShift — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/OpenShift.html" />
+<meta property="og:url" content="/devops-interview-guide/OpenShift.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🔴 OpenShift — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🔴 OpenShift — DevOps Interview Guide","url":"/devops-interview-guide/OpenShift.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🔴 OpenShift — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-openshift--devops-interview-guide">🔴 OpenShift — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Kubernetes.html">← Kubernetes</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Jenkins.html">Jenkins →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#what-is-openshift">What is OpenShift?</a></li>
+  <li><a href="#architecture">Architecture</a></li>
+  <li><a href="#openshift-vs-kubernetes">OpenShift vs Kubernetes</a></li>
+  <li><a href="#projects--namespaces">Projects &amp; Namespaces</a></li>
+  <li><a href="#builds--imagestreams">Builds &amp; ImageStreams</a></li>
+  <li><a href="#deploymentconfig-vs-deployment">DeploymentConfig vs Deployment</a></li>
+  <li><a href="#routes--networking">Routes &amp; Networking</a></li>
+  <li><a href="#security-context-constraints-scc">Security Context Constraints (SCC)</a></li>
+  <li><a href="#rbac--users">RBAC &amp; Users</a></li>
+  <li><a href="#operators--operatorhub">Operators &amp; OperatorHub</a></li>
+  <li><a href="#openshift-pipelines-tekton">OpenShift Pipelines (Tekton)</a></li>
+  <li><a href="#openshift-gitops-argocd">OpenShift GitOps (ArgoCD)</a></li>
+  <li><a href="#storage">Storage</a></li>
+  <li><a href="#monitoring--logging">Monitoring &amp; Logging</a></li>
+  <li><a href="#cluster-administration">Cluster Administration</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#oc-cli-cheat-sheet">oc CLI Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="what-is-openshift">What is OpenShift?</h2>
+
+<p><strong>Red Hat OpenShift</strong> is an enterprise Kubernetes platform that adds security hardening, developer tooling, CI/CD pipelines, and an opinionated operational layer on top of upstream Kubernetes.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OpenShift = Kubernetes + Security + Developer Tools + Operations
+</code></pre></div></div>
+
+<h3 id="editions">Editions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Edition</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OCP</strong> (OpenShift Container Platform)</td>
+      <td>On-premises, self-managed</td>
+    </tr>
+    <tr>
+      <td><strong>ROSA</strong> (Red Hat OpenShift Service on AWS)</td>
+      <td>Fully managed on AWS</td>
+    </tr>
+    <tr>
+      <td><strong>ARO</strong> (Azure Red Hat OpenShift)</td>
+      <td>Fully managed on Azure</td>
+    </tr>
+    <tr>
+      <td><strong>OSD</strong> (OpenShift Dedicated)</td>
+      <td>Red Hat-managed on AWS/GCP</td>
+    </tr>
+    <tr>
+      <td><strong>OKD</strong></td>
+      <td>Community-supported, upstream of OCP</td>
+    </tr>
+    <tr>
+      <td><strong>Microshift</strong></td>
+      <td>Edge/single-node variant</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="architecture">Architecture</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──────────────────────────── OpenShift Cluster ──────────────────────────────┐
+│                                                                               │
+│  ┌────────────────────── Control Plane (Masters) ───────────────────────┐   │
+│  │  ┌──────────────┐  ┌─────────────────┐  ┌──────────────────────┐    │   │
+│  │  │  API Server  │  │  etcd (3 nodes) │  │ Controller Manager   │    │   │
+│  │  │  + OAuth     │  │  (quorum-based) │  │ + Scheduler          │    │   │
+│  │  └──────────────┘  └─────────────────┘  └──────────────────────┘    │   │
+│  │  ┌──────────────────────────────────────────────────────────────┐    │   │
+│  │  │           OpenShift Controllers (on top of k8s controllers)   │    │   │
+│  │  │   BuildConfig · ImageStream · Route · DeploymentConfig       │    │   │
+│  │  └──────────────────────────────────────────────────────────────┘    │   │
+│  └──────────────────────────────────────────────────────────────────────┘   │
+│                                                                               │
+│  ┌── Infra Node ──────┐   ┌── Worker Node ─────┐  ┌── Worker Node ─────┐   │
+│  │  Router (HAProxy)  │   │  kubelet            │  │  kubelet           │   │
+│  │  Image Registry    │   │  CRI-O runtime      │  │  CRI-O runtime     │   │
+│  │  Monitoring Stack  │   │  Pods               │  │  Pods              │   │
+│  └────────────────────┘   └─────────────────────┘  └────────────────────┘   │
+│                                                                               │
+│  ┌───────────────────── OpenShift Web Console ──────────────────────────┐   │
+│  │  Developer View · Administrator View · Topology · Pipelines          │   │
+│  └──────────────────────────────────────────────────────────────────────┘   │
+└───────────────────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="key-components">Key Components</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CRI-O</strong></td>
+      <td>Default container runtime (not Docker)</td>
+    </tr>
+    <tr>
+      <td><strong>HAProxy Router</strong></td>
+      <td>Ingress traffic routing via Routes</td>
+    </tr>
+    <tr>
+      <td><strong>Internal Registry</strong></td>
+      <td>Built-in image registry (<code class="language-plaintext highlighter-rouge">image-registry.openshift-image-registry.svc</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>OAuth Server</strong></td>
+      <td>Integrated identity provider / SSO</td>
+    </tr>
+    <tr>
+      <td><strong>MCO</strong> (Machine Config Operator)</td>
+      <td>Manages node OS configuration via MachineConfig</td>
+    </tr>
+    <tr>
+      <td><strong>OLM</strong> (Operator Lifecycle Manager)</td>
+      <td>Manages Operator installation and upgrades</td>
+    </tr>
+    <tr>
+      <td><strong>MachineConfigPool</strong></td>
+      <td>Groups nodes sharing the same OS config</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="openshift-vs-kubernetes">OpenShift vs Kubernetes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Kubernetes</th>
+      <th>OpenShift</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Default runtime</strong></td>
+      <td>containerd</td>
+      <td>CRI-O</td>
+    </tr>
+    <tr>
+      <td><strong>Ingress</strong></td>
+      <td>Ingress object</td>
+      <td>Route (HAProxy)</td>
+    </tr>
+    <tr>
+      <td><strong>Namespaces</strong></td>
+      <td>Namespace</td>
+      <td>Project (namespace + metadata + RBAC)</td>
+    </tr>
+    <tr>
+      <td><strong>Security</strong></td>
+      <td>No default PSP/PSA enforcement</td>
+      <td>SCC enforced by default</td>
+    </tr>
+    <tr>
+      <td><strong>Image building</strong></td>
+      <td>External (Docker/Kaniko)</td>
+      <td>Native BuildConfig (S2I, Docker, custom)</td>
+    </tr>
+    <tr>
+      <td><strong>Pipelines</strong></td>
+      <td>External (Jenkins, etc.)</td>
+      <td>OpenShift Pipelines (Tekton) built-in</td>
+    </tr>
+    <tr>
+      <td><strong>GitOps</strong></td>
+      <td>External ArgoCD</td>
+      <td>OpenShift GitOps (ArgoCD) as operator</td>
+    </tr>
+    <tr>
+      <td><strong>Web console</strong></td>
+      <td>Limited (kuboard, etc.)</td>
+      <td>Full developer + admin console</td>
+    </tr>
+    <tr>
+      <td><strong>User management</strong></td>
+      <td>External IdP needed</td>
+      <td>Built-in OAuth, HTPasswd, LDAP, OIDC</td>
+    </tr>
+    <tr>
+      <td><strong>Operators</strong></td>
+      <td>Manual Helm/kustomize</td>
+      <td>OperatorHub + OLM</td>
+    </tr>
+    <tr>
+      <td><strong>Root containers</strong></td>
+      <td>Allowed by default</td>
+      <td>Blocked by default (SCC restricted-v2)</td>
+    </tr>
+    <tr>
+      <td><strong>Upgrades</strong></td>
+      <td>Manual</td>
+      <td>CVO (Cluster Version Operator) managed</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="projects--namespaces">Projects &amp; Namespaces</h2>
+
+<p>A <strong>Project</strong> is an OpenShift extension of a Kubernetes Namespace with added annotations, display name, description, and default RBAC bindings.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create a project</span>
+oc new-project my-app <span class="se">\</span>
+  <span class="nt">--display-name</span><span class="o">=</span><span class="s2">"My Application"</span> <span class="se">\</span>
+  <span class="nt">--description</span><span class="o">=</span><span class="s2">"Production app workloads"</span>
+
+<span class="c"># Equivalent via YAML</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  name: my-app
+  annotations:
+    openshift.io/display-name: "My Application"
+    openshift.io/description: "Production app workloads"
+</span><span class="no">EOF
+
+</span><span class="c"># Switch projects</span>
+oc project my-app
+oc projects              <span class="c"># List all accessible projects</span>
+
+<span class="c"># Project quotas and limits</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quota
+  namespace: my-app
+spec:
+  hard:
+    pods: "20"
+    requests.cpu: "4"
+    requests.memory: "8Gi"
+    limits.cpu: "8"
+    limits.memory: "16Gi"
+    persistentvolumeclaims: "10"
+    requests.storage: "100Gi"
+</span><span class="no">EOF
+</span></code></pre></div></div>
+
+<h3 id="default-project-templates">Default Project Templates</h3>
+
+<p>OpenShift applies a <strong>project template</strong> to every new project. Admins can customise this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Export default template</span>
+oc adm create-bootstrap-project-template <span class="nt">-o</span> yaml <span class="o">&gt;</span> project-template.yaml
+
+<span class="c"># Edit and apply as custom template</span>
+oc apply <span class="nt">-f</span> project-template.yaml <span class="nt">-n</span> openshift-config
+
+<span class="c"># Configure cluster to use custom template</span>
+oc edit project.config.openshift.io/cluster
+<span class="c"># Set: spec.projectRequestTemplate.name: &lt;template-name&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="builds--imagestreams">Builds &amp; ImageStreams</h2>
+
+<h3 id="source-to-image-s2i">Source-to-Image (S2I)</h3>
+
+<p>S2I is OpenShift’s signature feature: it automatically builds a runnable container image from source code without writing a Dockerfile.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Developer pushes code  →  S2I builder detects language
+→  Injects source into builder image  →  Runs assemble script
+→  Creates application image  →  Pushes to internal registry
+→  Triggers deployment
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># New app from source (OpenShift auto-detects Node.js)</span>
+oc new-app nodejs~https://github.com/myorg/my-nodeapp.git <span class="se">\</span>
+  <span class="nt">--name</span><span class="o">=</span>my-nodeapp <span class="se">\</span>
+  <span class="nt">--env</span><span class="o">=</span><span class="nv">NODE_ENV</span><span class="o">=</span>production
+
+<span class="c"># New app from Dockerfile in repo</span>
+oc new-app https://github.com/myorg/myapp.git <span class="se">\</span>
+  <span class="nt">--strategy</span><span class="o">=</span>docker <span class="se">\</span>
+  <span class="nt">--name</span><span class="o">=</span>myapp
+
+<span class="c"># New app from existing image</span>
+oc new-app nginx:1.25 <span class="nt">--name</span><span class="o">=</span>my-nginx
+</code></pre></div></div>
+
+<h3 id="buildconfig">BuildConfig</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">build.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">BuildConfig</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">my-nodeapp</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">source</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">Git</span>
+    <span class="na">git</span><span class="pi">:</span>
+      <span class="na">uri</span><span class="pi">:</span> <span class="s">https://github.com/myorg/my-nodeapp.git</span>
+      <span class="na">ref</span><span class="pi">:</span> <span class="s">main</span>
+    <span class="na">contextDir</span><span class="pi">:</span> <span class="s">/app</span>
+  <span class="na">strategy</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">Source</span>          <span class="c1"># S2I strategy</span>
+    <span class="na">sourceStrategy</span><span class="pi">:</span>
+      <span class="na">from</span><span class="pi">:</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">ImageStreamTag</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">nodejs:18-ubi8</span>
+        <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift</span>    <span class="c1"># Platform-provided builder images</span>
+      <span class="na">env</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">NPM_MIRROR</span>
+        <span class="na">value</span><span class="pi">:</span> <span class="s">https://registry.npmjs.org</span>
+  <span class="na">output</span><span class="pi">:</span>
+    <span class="na">to</span><span class="pi">:</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">ImageStreamTag</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">my-nodeapp:latest</span>
+  <span class="na">triggers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">GitHub</span>
+    <span class="na">github</span><span class="pi">:</span>
+      <span class="na">secret</span><span class="pi">:</span> <span class="s">my-webhook-secret</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">ImageChange</span>     <span class="c1"># Rebuild when builder image updates</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">ConfigChange</span>    <span class="c1"># Rebuild when BuildConfig changes</span>
+  <span class="na">resources</span><span class="pi">:</span>
+    <span class="na">requests</span><span class="pi">:</span>
+      <span class="na">cpu</span><span class="pi">:</span> <span class="s">500m</span>
+      <span class="na">memory</span><span class="pi">:</span> <span class="s">512Mi</span>
+    <span class="na">limits</span><span class="pi">:</span>
+      <span class="na">cpu</span><span class="pi">:</span> <span class="m">2</span>
+      <span class="na">memory</span><span class="pi">:</span> <span class="s">1Gi</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Start a build manually</span>
+oc start-build my-nodeapp
+
+<span class="c"># Follow build logs</span>
+oc logs <span class="nt">-f</span> bc/my-nodeapp
+
+<span class="c"># Start build from local source</span>
+oc start-build my-nodeapp <span class="nt">--from-dir</span><span class="o">=</span>./src
+
+<span class="c"># Cancel a running build</span>
+oc cancel-build my-nodeapp-3
+</code></pre></div></div>
+
+<h3 id="imagestream">ImageStream</h3>
+
+<p>An <strong>ImageStream</strong> is an OpenShift abstraction that tracks image versions by tag. It decouples deployments from external registry changes.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">image.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ImageStream</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">my-nodeapp</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">lookupPolicy</span><span class="pi">:</span>
+    <span class="na">local</span><span class="pi">:</span> <span class="kc">true</span>    <span class="c1"># Pods in this namespace can reference by short name</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># View image stream tags</span>
+oc get is my-nodeapp
+oc describe is my-nodeapp
+
+<span class="c"># Import an external image into an ImageStream</span>
+oc import-image my-nginx:1.25 <span class="se">\</span>
+  <span class="nt">--from</span><span class="o">=</span>docker.io/nginx:1.25 <span class="se">\</span>
+  <span class="nt">--confirm</span>
+
+<span class="c"># Set up periodic import</span>
+oc import-image my-nginx:1.25 <span class="se">\</span>
+  <span class="nt">--from</span><span class="o">=</span>docker.io/nginx:1.25 <span class="se">\</span>
+  <span class="nt">--confirm</span> <span class="se">\</span>
+  <span class="nt">--scheduled</span><span class="o">=</span><span class="nb">true</span>
+
+<span class="c"># Tag an image</span>
+oc tag my-nodeapp:latest my-nodeapp:v1.2.3
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="deploymentconfig-vs-deployment">DeploymentConfig vs Deployment</h2>
+
+<p>OpenShift originally used <code class="language-plaintext highlighter-rouge">DeploymentConfig</code> (DC). As of OpenShift 4.x, the Kubernetes-native <code class="language-plaintext highlighter-rouge">Deployment</code> is preferred. DCs are still supported but deprecated in favor of Deployments.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Deployment (K8s)</th>
+      <th>DeploymentConfig (OCP)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Standard</strong></td>
+      <td>Kubernetes-native</td>
+      <td>OpenShift-specific CRD</td>
+    </tr>
+    <tr>
+      <td><strong>Rollout controller</strong></td>
+      <td>Controller Manager</td>
+      <td>OpenShift deployer pod</td>
+    </tr>
+    <tr>
+      <td><strong>Triggers</strong></td>
+      <td>Not built-in</td>
+      <td>ImageChange, ConfigChange</td>
+    </tr>
+    <tr>
+      <td><strong>Lifecycle hooks</strong></td>
+      <td>Not built-in</td>
+      <td>pre, mid, post hooks</td>
+    </tr>
+    <tr>
+      <td><strong>Strategy</strong></td>
+      <td>RollingUpdate, Recreate</td>
+      <td>Rolling, Recreate, Custom</td>
+    </tr>
+    <tr>
+      <td><strong>Status</strong></td>
+      <td>Preferred (4.x+)</td>
+      <td>Deprecated</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Modern approach: Use Deployment (preferred in OCP 4.x)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">my-nodeapp</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">my-nodeapp</span>
+  <span class="na">strategy</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">RollingUpdate</span>
+    <span class="na">rollingUpdate</span><span class="pi">:</span>
+      <span class="na">maxSurge</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">maxUnavailable</span><span class="pi">:</span> <span class="m">0</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">my-nodeapp</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">app</span>
+        <span class="na">image</span><span class="pi">:</span> <span class="s">image-registry.openshift-image-registry.svc:5000/my-app/my-nodeapp:latest</span>
+        <span class="na">ports</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">8080</span>
+        <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">requests</span><span class="pi">:</span>
+            <span class="na">cpu</span><span class="pi">:</span> <span class="s">100m</span>
+            <span class="na">memory</span><span class="pi">:</span> <span class="s">128Mi</span>
+          <span class="na">limits</span><span class="pi">:</span>
+            <span class="na">cpu</span><span class="pi">:</span> <span class="s">500m</span>
+            <span class="na">memory</span><span class="pi">:</span> <span class="s">512Mi</span>
+        <span class="na">securityContext</span><span class="pi">:</span>
+          <span class="na">allowPrivilegeEscalation</span><span class="pi">:</span> <span class="kc">false</span>
+          <span class="na">runAsNonRoot</span><span class="pi">:</span> <span class="kc">true</span>
+          <span class="na">capabilities</span><span class="pi">:</span>
+            <span class="na">drop</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">ALL"</span><span class="pi">]</span>
+          <span class="na">seccompProfile</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">RuntimeDefault</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Deployment commands</span>
+oc rollout status deployment/my-nodeapp
+oc rollout undo deployment/my-nodeapp
+oc rollout <span class="nb">history </span>deployment/my-nodeapp
+oc <span class="nb">set </span>image deployment/my-nodeapp <span class="nv">app</span><span class="o">=</span>my-nodeapp:v2
+
+<span class="c"># DeploymentConfig (legacy) commands</span>
+oc rollout latest dc/my-nodeapp
+oc rollout <span class="nb">history </span>dc/my-nodeapp
+oc rollback dc/my-nodeapp
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="routes--networking">Routes &amp; Networking</h2>
+
+<h3 id="route">Route</h3>
+
+<p>A <strong>Route</strong> exposes a Service externally via the OpenShift HAProxy router. Equivalent to Kubernetes Ingress but with more features.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Edge TLS termination route</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">route.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Route</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">my-nodeapp</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">host</span><span class="pi">:</span> <span class="s">my-nodeapp.apps.mycluster.example.com</span>   <span class="c1"># Optional: auto-generated if omitted</span>
+  <span class="na">to</span><span class="pi">:</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">my-nodeapp-svc</span>
+    <span class="na">weight</span><span class="pi">:</span> <span class="m">100</span>
+  <span class="na">port</span><span class="pi">:</span>
+    <span class="na">targetPort</span><span class="pi">:</span> <span class="s">8080-tcp</span>
+  <span class="na">tls</span><span class="pi">:</span>
+    <span class="na">termination</span><span class="pi">:</span> <span class="s">edge</span>          <span class="c1"># edge | passthrough | reencrypt</span>
+    <span class="na">insecureEdgeTerminationPolicy</span><span class="pi">:</span> <span class="s">Redirect</span>
+  <span class="na">wildcardPolicy</span><span class="pi">:</span> <span class="s">None</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Passthrough route (TLS all the way to pod)</span>
+<span class="na">tls</span><span class="pi">:</span>
+  <span class="na">termination</span><span class="pi">:</span> <span class="s">passthrough</span>
+
+<span class="c1"># Re-encrypt route (new TLS between router and pod)</span>
+<span class="na">tls</span><span class="pi">:</span>
+  <span class="na">termination</span><span class="pi">:</span> <span class="s">reencrypt</span>
+  <span class="na">destinationCACertificate</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">-----BEGIN CERTIFICATE-----</span>
+    <span class="s">...</span>
+    <span class="s">-----END CERTIFICATE-----</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Expose a service as a route</span>
+oc expose svc/my-nodeapp-svc
+
+<span class="c"># Expose with custom hostname</span>
+oc expose svc/my-nodeapp-svc <span class="nt">--hostname</span><span class="o">=</span>myapp.example.com
+
+<span class="c"># Create edge TLS route</span>
+oc create route edge my-nodeapp <span class="se">\</span>
+  <span class="nt">--service</span><span class="o">=</span>my-nodeapp-svc <span class="se">\</span>
+  <span class="nt">--cert</span><span class="o">=</span>tls.crt <span class="se">\</span>
+  <span class="nt">--key</span><span class="o">=</span>tls.key <span class="se">\</span>
+  <span class="nt">--ca-cert</span><span class="o">=</span>ca.crt
+
+<span class="c"># Get route URL</span>
+oc get route my-nodeapp <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.host}'</span>
+</code></pre></div></div>
+
+<h3 id="network-architecture">Network Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Internet → External LB → HAProxy Router (Infra node)
+         → Route (host-based matching)
+         → Service (ClusterIP)
+         → Pod
+</code></pre></div></div>
+
+<h3 id="openshift-sdn--ovn-kubernetes">OpenShift SDN / OVN-Kubernetes</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Network Plugin</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>OVN-Kubernetes</strong></td>
+      <td>Default in OCP 4.12+; eBPF-based, superior performance</td>
+    </tr>
+    <tr>
+      <td><strong>OpenShift SDN</strong></td>
+      <td>Legacy plugin (deprecated); VXLAN overlay</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check cluster network type</span>
+oc get network.config.openshift.io/cluster <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.networkType}'</span>
+
+<span class="c"># Network policies (same as K8s)</span>
+oc get networkpolicies <span class="nt">-n</span> my-app
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="security-context-constraints-scc">Security Context Constraints (SCC)</h2>
+
+<p>SCC is OpenShift’s primary pod security mechanism (predates and inspired Kubernetes PodSecurity). Every pod must match an allowed SCC.</p>
+
+<h3 id="built-in-sccs-most-to-least-permissive">Built-in SCCs (most to least permissive)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>SCC</th>
+      <th>Runnable As</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">privileged</code></td>
+      <td>Any UID, root</td>
+      <td>System/node-level operators</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">anyuid</code></td>
+      <td>Any UID</td>
+      <td>Legacy apps needing specific UIDs</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">nonroot</code></td>
+      <td>Any non-root UID</td>
+      <td>Apps that set a non-root UID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">nonroot-v2</code></td>
+      <td>Any non-root UID</td>
+      <td>Stricter nonroot (no privilege escalation)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">restricted</code></td>
+      <td>Random UID from namespace range</td>
+      <td>Default for service accounts</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">restricted-v2</code></td>
+      <td>Random UID, no privilege escalation</td>
+      <td>Default in OCP 4.11+</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># View all SCCs</span>
+oc get scc
+
+<span class="c"># Describe an SCC</span>
+oc describe scc restricted-v2
+
+<span class="c"># Check which SCC a running pod uses</span>
+oc get pod my-pod <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.metadata.annotations.openshift\.io/scc}'</span>
+
+<span class="c"># Grant a service account a specific SCC</span>
+oc adm policy add-scc-to-user anyuid <span class="nt">-z</span> my-service-account <span class="nt">-n</span> my-app
+oc adm policy add-scc-to-group anyuid system:serviceaccounts:my-app
+
+<span class="c"># Remove SCC from service account</span>
+oc adm policy remove-scc-from-user anyuid <span class="nt">-z</span> my-service-account <span class="nt">-n</span> my-app
+
+<span class="c"># Check what SCC a pod would use (dry-run)</span>
+oc adm policy scc-subject-review <span class="nt">-f</span> pod.yaml
+oc adm policy scc-review <span class="nt">-f</span> deployment.yaml
+</code></pre></div></div>
+
+<h3 id="custom-scc">Custom SCC</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">security.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">SecurityContextConstraints</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">my-custom-scc</span>
+<span class="na">allowPrivilegeEscalation</span><span class="pi">:</span> <span class="kc">false</span>
+<span class="na">allowPrivilegedContainer</span><span class="pi">:</span> <span class="kc">false</span>
+<span class="na">allowedCapabilities</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">defaultAddCapabilities</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">requiredDropCapabilities</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">ALL</span>
+<span class="na">fsGroup</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">MustRunAs</span>
+  <span class="na">ranges</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">min</span><span class="pi">:</span> <span class="m">1000</span>
+    <span class="na">max</span><span class="pi">:</span> <span class="m">65535</span>
+<span class="na">runAsUser</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">MustRunAsRange</span>
+  <span class="na">uidRangeMin</span><span class="pi">:</span> <span class="m">1000</span>
+  <span class="na">uidRangeMax</span><span class="pi">:</span> <span class="m">65535</span>
+<span class="na">seLinuxContext</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">MustRunAs</span>
+<span class="na">supplementalGroups</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">RunAsAny</span>
+<span class="na">volumes</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">configMap</span>
+<span class="pi">-</span> <span class="s">secret</span>
+<span class="pi">-</span> <span class="s">emptyDir</span>
+<span class="pi">-</span> <span class="s">persistentVolumeClaim</span>
+<span class="na">users</span><span class="pi">:</span> <span class="pi">[]</span>
+<span class="na">groups</span><span class="pi">:</span> <span class="pi">[]</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="rbac--users">RBAC &amp; Users</h2>
+
+<h3 id="identity-providers">Identity Providers</h3>
+
+<p>OpenShift supports configuring external identity providers:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># HTPasswd (development/testing)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">config.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">OAuth</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cluster</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">identityProviders</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">htpasswd_provider</span>
+    <span class="na">mappingMethod</span><span class="pi">:</span> <span class="s">claim</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">HTPasswd</span>
+    <span class="na">htpasswd</span><span class="pi">:</span>
+      <span class="na">fileData</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">htpasswd-secret</span>   <span class="c1"># Secret in openshift-config namespace</span>
+
+  <span class="c1"># LDAP example</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">ldap_provider</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">LDAP</span>
+    <span class="na">ldap</span><span class="pi">:</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s">ldap://ldap.example.com/ou=users,dc=example,dc=com?uid</span>
+      <span class="na">insecure</span><span class="pi">:</span> <span class="kc">false</span>
+
+  <span class="c1"># OIDC / OAuth2 example (GitHub, GitLab, Okta, etc.)</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">github_provider</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">GitHub</span>
+    <span class="na">github</span><span class="pi">:</span>
+      <span class="na">clientID</span><span class="pi">:</span> <span class="s2">"</span><span class="s">my-client-id"</span>
+      <span class="na">clientSecret</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">github-client-secret</span>
+      <span class="na">organizations</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">myorg</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create HTPasswd secret</span>
+htpasswd <span class="nt">-c</span> <span class="nt">-B</span> <span class="nt">-b</span> users.htpasswd admin secretpass
+oc create secret generic htpasswd-secret <span class="se">\</span>
+  <span class="nt">--from-file</span><span class="o">=</span><span class="nv">htpasswd</span><span class="o">=</span>users.htpasswd <span class="se">\</span>
+  <span class="nt">-n</span> openshift-config
+
+<span class="c"># Add new user to htpasswd secret</span>
+htpasswd <span class="nt">-b</span> users.htpasswd newuser pass123
+oc create secret generic htpasswd-secret <span class="se">\</span>
+  <span class="nt">--from-file</span><span class="o">=</span><span class="nv">htpasswd</span><span class="o">=</span>users.htpasswd <span class="se">\</span>
+  <span class="nt">-n</span> openshift-config <span class="nt">--dry-run</span><span class="o">=</span>client <span class="nt">-o</span> yaml | oc apply <span class="nt">-f</span> -
+</code></pre></div></div>
+
+<h3 id="rbac">RBAC</h3>
+
+<p>OpenShift extends Kubernetes RBAC with <strong>cluster-level</strong> and <strong>local</strong> roles:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Predefined cluster roles</span>
+<span class="c"># cluster-admin  → full cluster access</span>
+<span class="c"># admin          → full project access</span>
+<span class="c"># edit           → create/modify resources, no RBAC changes</span>
+<span class="c"># view           → read-only</span>
+
+<span class="c"># Add admin to project</span>
+oc adm policy add-role-to-user admin alice <span class="nt">-n</span> my-app
+
+<span class="c"># Add view role</span>
+oc adm policy add-role-to-user view bob <span class="nt">-n</span> my-app
+
+<span class="c"># Make cluster-admin</span>
+oc adm policy add-cluster-role-to-user cluster-admin alice
+
+<span class="c"># Remove role</span>
+oc adm policy remove-role-from-user admin alice <span class="nt">-n</span> my-app
+
+<span class="c"># List role bindings in project</span>
+oc get rolebindings <span class="nt">-n</span> my-app
+
+<span class="c"># Impersonate a user (for testing)</span>
+oc get pods <span class="nt">--as</span><span class="o">=</span>alice <span class="nt">-n</span> my-app
+oc auth can-i get pods <span class="nt">--as</span><span class="o">=</span>alice <span class="nt">-n</span> my-app
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="operators--operatorhub">Operators &amp; OperatorHub</h2>
+
+<h3 id="operator-lifecycle-manager-olm">Operator Lifecycle Manager (OLM)</h3>
+
+<p>OLM manages Operator installation, upgrades, and dependency resolution.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OperatorHub (catalog)
+  └── CatalogSource (index of operators)
+       └── Subscription (which operator + channel)
+            └── InstallPlan (resolved set of CSVs to install)
+                 └── ClusterServiceVersion (CSV) — the Operator itself
+                      └── CRDs + Deployments + RBAC
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># List available operators</span>
+oc get packagemanifests <span class="nt">-n</span> openshift-marketplace
+
+<span class="c"># Install an operator (example: cert-manager)</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: cert-manager
+  namespace: openshift-operators
+spec:
+  channel: stable
+  name: cert-manager
+  source: community-operators
+  sourceNamespace: openshift-marketplace
+  installPlanApproval: Automatic    # or Manual
+</span><span class="no">EOF
+
+</span><span class="c"># View installed operators</span>
+oc get csv <span class="nt">-n</span> openshift-operators
+
+<span class="c"># Check operator status</span>
+oc describe csv cert-manager.v1.13.0 <span class="nt">-n</span> openshift-operators
+
+<span class="c"># Manual install plan approval</span>
+oc get installplan <span class="nt">-n</span> openshift-operators
+oc patch installplan install-xyz <span class="se">\</span>
+  <span class="nt">--type</span> merge <span class="se">\</span>
+  <span class="nt">--patch</span> <span class="s1">'{"spec":{"approved":true}}'</span> <span class="se">\</span>
+  <span class="nt">-n</span> openshift-operators
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="openshift-pipelines-tekton">OpenShift Pipelines (Tekton)</h2>
+
+<p>OpenShift Pipelines is the Red Hat distribution of <strong>Tekton</strong> — a Kubernetes-native CI/CD system.</p>
+
+<h3 id="core-objects">Core Objects</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Object</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Task</strong></td>
+      <td>Sequence of Steps (containers) performing a unit of work</td>
+    </tr>
+    <tr>
+      <td><strong>TaskRun</strong></td>
+      <td>Instantiation of a Task</td>
+    </tr>
+    <tr>
+      <td><strong>Pipeline</strong></td>
+      <td>DAG of Tasks</td>
+    </tr>
+    <tr>
+      <td><strong>PipelineRun</strong></td>
+      <td>Instantiation of a Pipeline</td>
+    </tr>
+    <tr>
+      <td><strong>Workspace</strong></td>
+      <td>Shared storage between Tasks</td>
+    </tr>
+    <tr>
+      <td><strong>TriggerTemplate</strong></td>
+      <td>Creates PipelineRuns from events</td>
+    </tr>
+    <tr>
+      <td><strong>EventListener</strong></td>
+      <td>HTTP endpoint receiving webhook events</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Simple Pipeline: build and deploy</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">tekton.dev/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Pipeline</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">build-and-deploy</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">params</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">IMAGE</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">GIT_URL</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+  <span class="na">workspaces</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">shared-workspace</span>
+  <span class="na">tasks</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">fetch-source</span>
+    <span class="na">taskRef</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">git-clone</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterTask</span>
+    <span class="na">workspaces</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">output</span>
+      <span class="na">workspace</span><span class="pi">:</span> <span class="s">shared-workspace</span>
+    <span class="na">params</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">url</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="s">$(params.GIT_URL)</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">build-image</span>
+    <span class="na">taskRef</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">buildah</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterTask</span>
+    <span class="na">runAfter</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">fetch-source</span><span class="pi">]</span>
+    <span class="na">workspaces</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">source</span>
+      <span class="na">workspace</span><span class="pi">:</span> <span class="s">shared-workspace</span>
+    <span class="na">params</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">IMAGE</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="s">$(params.IMAGE)</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">deploy</span>
+    <span class="na">taskRef</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">openshift-client</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterTask</span>
+    <span class="na">runAfter</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">build-image</span><span class="pi">]</span>
+    <span class="na">params</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">SCRIPT</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">oc rollout restart deployment/my-nodeapp -n my-app</span>
+        <span class="s">oc rollout status deployment/my-nodeapp -n my-app</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install OpenShift Pipelines operator (via subscription)</span>
+<span class="c"># Then use tkn CLI or oc</span>
+
+<span class="c"># List pipelines</span>
+oc get pipelines <span class="nt">-n</span> my-app
+tkn pipeline list <span class="nt">-n</span> my-app
+
+<span class="c"># Run a pipeline</span>
+tkn pipeline start build-and-deploy <span class="se">\</span>
+  <span class="nt">-p</span> <span class="nv">IMAGE</span><span class="o">=</span>image-registry.openshift-image-registry.svc:5000/my-app/my-nodeapp:latest <span class="se">\</span>
+  <span class="nt">-p</span> <span class="nv">GIT_URL</span><span class="o">=</span>https://github.com/myorg/my-nodeapp.git <span class="se">\</span>
+  <span class="nt">-w</span> <span class="nv">name</span><span class="o">=</span>shared-workspace,claimName<span class="o">=</span>pipeline-pvc <span class="se">\</span>
+  <span class="nt">-n</span> my-app
+
+<span class="c"># Watch a pipeline run</span>
+tkn pipelinerun logs <span class="nt">-f</span> <span class="nt">-L</span> <span class="nt">-n</span> my-app
+
+<span class="c"># List task runs</span>
+tkn taskrun list <span class="nt">-n</span> my-app
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="openshift-gitops-argocd">OpenShift GitOps (ArgoCD)</h2>
+
+<p>OpenShift GitOps is the Red Hat distribution of <strong>Argo CD</strong>, installed via an Operator.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install OpenShift GitOps operator</span>
+<span class="c"># Creates argocd instance in openshift-gitops namespace automatically</span>
+
+<span class="c"># Access ArgoCD UI</span>
+oc get route openshift-gitops-server <span class="nt">-n</span> openshift-gitops <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.host}'</span>
+
+<span class="c"># Get admin password</span>
+oc get secret openshift-gitops-cluster <span class="se">\</span>
+  <span class="nt">-n</span> openshift-gitops <span class="se">\</span>
+  <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.data.admin\.password}'</span> | <span class="nb">base64</span> <span class="nt">-d</span>
+
+<span class="c"># Create an ArgoCD Application</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/myorg/gitops-repo.git
+    targetRevision: main
+    path: environments/production
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: my-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+</span><span class="no">EOF
+
+</span><span class="c"># Sync manually</span>
+argocd app <span class="nb">sync </span>my-app
+
+<span class="c"># Check sync status</span>
+oc get application my-app <span class="nt">-n</span> openshift-gitops
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="storage">Storage</h2>
+
+<h3 id="storage-classes">Storage Classes</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># View available storage classes</span>
+oc get storageclass
+
+<span class="c"># Default storage classes in common environments</span>
+<span class="c"># AWS ROSA:     gp3-csi (default), gp2-csi</span>
+<span class="c"># Azure ARO:    managed-csi (default), azure-file-csi</span>
+<span class="c"># On-premises:  depends on OCS/ODF or NFS provisioner</span>
+</code></pre></div></div>
+
+<h3 id="openshift-data-foundation-odf">OpenShift Data Foundation (ODF)</h3>
+
+<p>ODF (formerly OpenShift Container Storage / OCS) provides Ceph-based persistent storage:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># After ODF operator installation</span>
+oc get storagecluster <span class="nt">-n</span> openshift-storage
+oc get cephcluster <span class="nt">-n</span> openshift-storage
+
+<span class="c"># Storage classes provided by ODF</span>
+<span class="c"># ocs-storagecluster-ceph-rbd   → Block (RWO)</span>
+<span class="c"># ocs-storagecluster-cephfs     → File (RWX)</span>
+<span class="c"># ocs-storagecluster-ceph-rgw   → Object (S3-compatible)</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># PVC using ODF CephFS (ReadWriteMany for shared access)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">PersistentVolumeClaim</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">shared-data</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">accessModes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">ReadWriteMany</span>
+  <span class="na">storageClassName</span><span class="pi">:</span> <span class="s">ocs-storagecluster-cephfs</span>
+  <span class="na">resources</span><span class="pi">:</span>
+    <span class="na">requests</span><span class="pi">:</span>
+      <span class="na">storage</span><span class="pi">:</span> <span class="s">10Gi</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="monitoring--logging">Monitoring &amp; Logging</h2>
+
+<h3 id="built-in-monitoring-prometheus--grafana--alertmanager">Built-in Monitoring (Prometheus + Grafana + Alertmanager)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Access monitoring stack</span>
+oc get routes <span class="nt">-n</span> openshift-monitoring
+<span class="c"># prometheus-k8s</span>
+<span class="c"># alertmanager-main</span>
+<span class="c"># grafana (if enabled)</span>
+
+<span class="c"># Enable user workload monitoring</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-monitoring-config
+  namespace: openshift-monitoring
+data:
+  config.yaml: |
+    enableUserWorkload: true
+</span><span class="no">EOF
+
+</span><span class="c"># Create ServiceMonitor for your app</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: my-nodeapp
+  namespace: my-app
+spec:
+  endpoints:
+  - interval: 30s
+    path: /metrics
+    port: 8080-tcp
+  selector:
+    matchLabels:
+      app: my-nodeapp
+</span><span class="no">EOF
+</span></code></pre></div></div>
+
+<h3 id="logging-openshift-logging--loki--efk">Logging (OpenShift Logging / Loki / EFK)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># OpenShift Logging operator provides:</span>
+<span class="c"># - log collector (Vector/Fluentd) on every node</span>
+<span class="c"># - log store (Elasticsearch or Loki)</span>
+<span class="c"># - Kibana or Grafana frontend</span>
+
+<span class="c"># Check logging stack</span>
+oc get pods <span class="nt">-n</span> openshift-logging
+
+<span class="c"># Forward logs to external Elasticsearch</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: logging.openshift.io/v1
+kind: ClusterLogForwarder
+metadata:
+  name: instance
+  namespace: openshift-logging
+spec:
+  outputs:
+  - name: elasticsearch-external
+    type: elasticsearch
+    url: https://elasticsearch.example.com:9200
+    secret:
+      name: elasticsearch-creds
+  pipelines:
+  - name: app-logs
+    inputRefs: [application]
+    outputRefs: [elasticsearch-external]
+</span><span class="no">EOF
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="cluster-administration">Cluster Administration</h2>
+
+<h3 id="cluster-version-operator-cvo">Cluster Version Operator (CVO)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check cluster version</span>
+oc get clusterversion
+
+<span class="c"># View available updates</span>
+oc adm upgrade
+
+<span class="c"># Trigger upgrade</span>
+oc adm upgrade <span class="nt">--to-latest</span><span class="o">=</span><span class="nb">true
+</span>oc adm upgrade <span class="nt">--to</span><span class="o">=</span>4.14.5
+
+<span class="c"># Watch upgrade progress</span>
+oc get clusterversion <span class="nt">-w</span>
+oc get clusteroperators    <span class="c"># All operators must be Available=True</span>
+</code></pre></div></div>
+
+<h3 id="machine-config-operator-mco">Machine Config Operator (MCO)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># List machine configs</span>
+oc get mc
+
+<span class="c"># List machine config pools</span>
+oc get mcp
+
+<span class="c"># Custom kernel argument via MachineConfig</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  name: 99-worker-custom-kernel-args
+  labels:
+    machineconfiguration.openshift.io/role: worker
+spec:
+  kernelArguments:
+  - "hugepages=1Gi"
+  - "hugepages-1Gi=4"
+</span><span class="no">EOF
+
+</span><span class="c"># Pause a MachineConfigPool (prevent auto-reboot during changes)</span>
+oc patch mcp worker <span class="nt">--type</span> merge <span class="nt">-p</span> <span class="s1">'{"spec":{"paused":true}}'</span>
+<span class="c"># ... make multiple changes ...</span>
+oc patch mcp worker <span class="nt">--type</span> merge <span class="nt">-p</span> <span class="s1">'{"spec":{"paused":false}}'</span>
+</code></pre></div></div>
+
+<h3 id="node-management">Node Management</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># List nodes</span>
+oc get nodes
+oc get nodes <span class="nt">-o</span> wide
+
+<span class="c"># Cordon and drain</span>
+oc adm cordon &lt;node&gt;
+oc adm drain &lt;node&gt; <span class="nt">--ignore-daemonsets</span> <span class="nt">--delete-emptydir-data</span>
+
+<span class="c"># Uncordon</span>
+oc adm uncordon &lt;node&gt;
+
+<span class="c"># Node debugging (creates privileged pod)</span>
+oc debug node/&lt;node&gt;
+
+<span class="c"># Label / taint nodes</span>
+oc label node worker-1 node-role.kubernetes.io/gpu<span class="o">=</span>
+oc adm taint node worker-1 nvidia.com/gpu<span class="o">=</span>:NoSchedule
+</code></pre></div></div>
+
+<h3 id="certificate-management">Certificate Management</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Approve CSRs (required after node additions)</span>
+oc get csr
+oc adm certificate approve &lt;csr-name&gt;
+oc get csr <span class="nt">-o</span> go-template<span class="o">=</span><span class="s1">'{{range .items}}{{if not .status.certificate}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}'</span> | xargs oc adm certificate approve
+
+<span class="c"># Check cert expiry</span>
+oc <span class="nt">-n</span> openshift-kube-apiserver-operator <span class="se">\</span>
+   get secret kube-apiserver-to-kubelet-signer <span class="se">\</span>
+   <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.metadata.annotations.auth\.openshift\.io/certificate-not-after}'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between OpenShift and Kubernetes?</strong></p>
+
+<blockquote>
+  <p>OpenShift is an enterprise Kubernetes distribution by Red Hat. It adds: built-in Security Context Constraints (SCC) that block root containers by default, S2I builds so developers can build images from source without Dockerfiles, Routes (HAProxy-based ingress), an integrated web console with developer and admin views, built-in OAuth/LDAP identity management, OLM for operator lifecycle management, and a managed upgrade path via the Cluster Version Operator. Kubernetes is the underlying engine; OpenShift wraps it with opinionated security, tooling, and operations.</p>
+</blockquote>
+
+<p><strong>Q2: What is a Route in OpenShift?</strong></p>
+
+<blockquote>
+  <p>A Route exposes a Service externally through the OpenShift HAProxy Router. It supports TLS termination modes: <code class="language-plaintext highlighter-rouge">edge</code> (TLS terminated at router, plain HTTP to pod), <code class="language-plaintext highlighter-rouge">passthrough</code> (TLS all the way to pod, router does not decrypt), and <code class="language-plaintext highlighter-rouge">reencrypt</code> (TLS to router, new TLS to pod). Routes are auto-assigned a hostname in the format <code class="language-plaintext highlighter-rouge">&lt;name&gt;-&lt;namespace&gt;.apps.&lt;cluster-domain&gt;</code> if you don’t specify one. It is the OpenShift equivalent of Kubernetes Ingress, with richer TLS options and tighter integration.</p>
+</blockquote>
+
+<p><strong>Q3: What is SCC and why does OpenShift use it?</strong></p>
+
+<blockquote>
+  <p>SCC (Security Context Constraints) is OpenShift’s pod security model. Every pod must match at least one SCC that the pod’s service account is granted. The default <code class="language-plaintext highlighter-rouge">restricted-v2</code> SCC prevents running as root, prevents privilege escalation, drops all Linux capabilities, and enforces a random UID from the namespace’s assigned range. This “deny-by-default” security posture is what makes OpenShift suitable for enterprise environments. It predates and inspired Kubernetes PodSecurity admission.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: Explain the S2I (Source-to-Image) process.</strong></p>
+
+<blockquote>
+  <p>S2I is a framework for building container images from source code:</p>
+  <ol>
+    <li>Developer provides source code URL (Git) and a builder image (e.g., <code class="language-plaintext highlighter-rouge">nodejs:18-ubi8</code>).</li>
+    <li>OpenShift creates a build pod using the builder image.</li>
+    <li>The <code class="language-plaintext highlighter-rouge">assemble</code> script inside the builder clones the source, installs dependencies, compiles if needed.</li>
+    <li>The resulting filesystem is committed as a new image layer.</li>
+    <li>The new image is pushed to the internal registry and tagged with the ImageStream.</li>
+    <li>An ImageChange trigger fires the Deployment to roll out the new image.</li>
+  </ol>
+
+  <p>Benefits: no Dockerfile needed, reproducible builds, easy language-version upgrades (update builder image → auto-rebuild all apps).</p>
+</blockquote>
+
+<p><strong>Q5: How does OpenShift handle image management differently from vanilla Kubernetes?</strong></p>
+
+<blockquote>
+  <p>OpenShift adds two abstractions: <strong>ImageStreams</strong> and <strong>ImageStreamTags</strong>. Instead of referencing a full registry URL in a Deployment, you reference an ImageStream tag. When the image tag is updated (by a build or <code class="language-plaintext highlighter-rouge">oc tag</code>), the <code class="language-plaintext highlighter-rouge">ImageChange</code> trigger on a DeploymentConfig automatically triggers a rollout. This decouples deployments from the registry — you don’t need to update YAML manifests to deploy a new image version. Additionally, OpenShift’s internal registry (<code class="language-plaintext highlighter-rouge">image-registry.openshift-image-registry.svc:5000</code>) integrates with RBAC so only authorized service accounts can push/pull images.</p>
+</blockquote>
+
+<p><strong>Q6: What is OLM and how does it differ from Helm?</strong></p>
+
+<blockquote>
+  <p>OLM (Operator Lifecycle Manager) manages operators as first-class citizens: it resolves dependencies between operators, handles upgrades channel by channel (stable, fast, candidate), manages CRD lifecycle, and enforces RBAC for operators. A <code class="language-plaintext highlighter-rouge">Subscription</code> declares which operator and channel you want; OLM creates an <code class="language-plaintext highlighter-rouge">InstallPlan</code> and installs the <code class="language-plaintext highlighter-rouge">ClusterServiceVersion</code> (CSV) which packages the operator’s deployment, CRDs, and RBAC.</p>
+
+  <p>Helm is a templating-based package manager for Kubernetes manifests — it doesn’t have the concept of channels, automatic reconciliation, or dependency management. OLM provides a more robust lifecycle for complex, stateful operators that need to manage their own CRDs and upgrades.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: A pod is failing due to “SCC denied” — how do you diagnose and fix it?</strong></p>
+
+<blockquote>
+  <p><strong>Diagnosis:</strong></p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oc describe pod failing-pod    <span class="c"># Look for "Error creating: pods ... is forbidden"</span>
+oc get events <span class="nt">-n</span> my-app <span class="nt">--sort-by</span><span class="o">=</span><span class="s1">'.lastTimestamp'</span>
+<span class="c"># Common message: "unable to validate against any security context constraint"</span>
+
+<span class="c"># Check what the pod requests vs what SCCs allow</span>
+oc adm policy scc-subject-review <span class="nt">-f</span> pod.yaml
+</code></pre></div>  </div>
+
+  <p><strong>Resolution options (least to most privileged):</strong></p>
+  <ol>
+    <li>Fix the application: set <code class="language-plaintext highlighter-rouge">runAsNonRoot: true</code>, drop ALL capabilities, set <code class="language-plaintext highlighter-rouge">allowPrivilegeEscalation: false</code> in the pod spec — this makes it match <code class="language-plaintext highlighter-rouge">restricted-v2</code> without granting anything extra.</li>
+    <li>If the app needs a specific UID: grant <code class="language-plaintext highlighter-rouge">anyuid</code> to the service account: <code class="language-plaintext highlighter-rouge">oc adm policy add-scc-to-user anyuid -z &lt;sa&gt; -n &lt;ns&gt;</code></li>
+    <li>Create a custom SCC that grants only what’s needed — never use <code class="language-plaintext highlighter-rouge">privileged</code> unless absolutely necessary.</li>
+    <li>For system workloads: <code class="language-plaintext highlighter-rouge">oc adm policy add-scc-to-user privileged -z &lt;sa&gt; -n &lt;ns&gt;</code></li>
+  </ol>
+</blockquote>
+
+<p><strong>Q8: How does the Cluster Version Operator (CVO) manage OpenShift upgrades?</strong></p>
+
+<blockquote>
+  <p>The CVO watches the <code class="language-plaintext highlighter-rouge">ClusterVersion</code> object and a release image. It:</p>
+  <ol>
+    <li>Downloads the new release image from <code class="language-plaintext highlighter-rouge">quay.io/openshift-release-dev</code>.</li>
+    <li>Validates the upgrade path is supported (upgrade graph).</li>
+    <li>Applies manifests for cluster operators (API server, etcd, authentication, console, etc.) in the correct order.</li>
+    <li>Each <strong>Cluster Operator</strong> (CO) manages its own component; CVO waits for each CO to report <code class="language-plaintext highlighter-rouge">Available=True, Progressing=False, Degraded=False</code> before moving to the next.</li>
+    <li>Machine Config Operator updates the OS (RHCOS) on each node pool sequentially — nodes reboot with new RHCOS version.</li>
+  </ol>
+
+  <p>The upgrade is rolling and graceful, but you should drain and check <code class="language-plaintext highlighter-rouge">oc get co</code> and <code class="language-plaintext highlighter-rouge">oc get nodes</code> throughout. You cannot skip minor versions (4.12 → 4.14 requires passing through 4.13 unless the upgrade graph explicitly allows it).</p>
+</blockquote>
+
+<p><strong>Q9: How would you set up multi-tenancy in OpenShift?</strong></p>
+
+<blockquote>
+  <p>Multi-tenancy in OpenShift requires several layers:</p>
+  <ol>
+    <li><strong>Projects with ResourceQuotas and LimitRanges</strong> — cap CPU/memory/storage per team.</li>
+    <li><strong>NetworkPolicies</strong> — default-deny all, allow only required cross-project traffic.</li>
+    <li><strong>SCCs</strong> — ensure tenants can’t escalate privileges.</li>
+    <li><strong>RBAC</strong> — <code class="language-plaintext highlighter-rouge">admin</code> role scoped to project; no <code class="language-plaintext highlighter-rouge">cluster-admin</code> for tenants.</li>
+    <li><strong>Dedicated nodes</strong> (optional): use <code class="language-plaintext highlighter-rouge">taints/tolerations</code> and <code class="language-plaintext highlighter-rouge">nodeSelector</code> to isolate critical tenants.</li>
+    <li><strong>HierarchicalNamespaceController</strong> or <strong>OpenShift Project Hierarchies</strong> for organizational grouping.</li>
+    <li><strong>Egress firewall / EgressNetworkPolicy</strong> — control what external IPs projects can reach.</li>
+  </ol>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-deploy-a-nodejs-app-end-to-end-on-openshift">🔵 Scenario 1: Deploy a Node.js App End-to-End on OpenShift</h3>
+
+<p><em>“Walk me through deploying a Node.js app from Git to production on OpenShift.”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Create project</span>
+oc new-project my-nodejs-app <span class="nt">--display-name</span><span class="o">=</span><span class="s2">"Node.js Production App"</span>
+
+<span class="c"># 2. Deploy from source (S2I auto-detects Node.js)</span>
+oc new-app nodejs:18-ubi8~https://github.com/myorg/my-nodeapp.git <span class="se">\</span>
+  <span class="nt">--name</span><span class="o">=</span>my-nodeapp <span class="se">\</span>
+  <span class="nt">--env</span><span class="o">=</span><span class="nv">NODE_ENV</span><span class="o">=</span>production <span class="se">\</span>
+  <span class="nt">--env</span><span class="o">=</span><span class="nv">PORT</span><span class="o">=</span>8080
+
+<span class="c"># 3. Watch build</span>
+oc logs <span class="nt">-f</span> bc/my-nodeapp
+
+<span class="c"># 4. Once build succeeds, expose as a route</span>
+oc expose svc/my-nodeapp
+
+<span class="c"># 5. Get the URL</span>
+oc get route my-nodeapp <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.host}'</span>
+
+<span class="c"># 6. Set up resource limits</span>
+oc <span class="nb">set </span>resources deployment/my-nodeapp <span class="se">\</span>
+  <span class="nt">--requests</span><span class="o">=</span><span class="nv">cpu</span><span class="o">=</span>100m,memory<span class="o">=</span>128Mi <span class="se">\</span>
+  <span class="nt">--limits</span><span class="o">=</span><span class="nv">cpu</span><span class="o">=</span>500m,memory<span class="o">=</span>512Mi
+
+<span class="c"># 7. Auto-scale</span>
+oc autoscale deployment/my-nodeapp <span class="nt">--min</span><span class="o">=</span>2 <span class="nt">--max</span><span class="o">=</span>10 <span class="nt">--cpu-percent</span><span class="o">=</span>70
+
+<span class="c"># 8. Add edge TLS route</span>
+oc create route edge my-nodeapp-tls <span class="se">\</span>
+  <span class="nt">--service</span><span class="o">=</span>my-nodeapp <span class="se">\</span>
+  <span class="nt">--hostname</span><span class="o">=</span>my-nodeapp.example.com
+</code></pre></div></div>
+
+<h3 id="-scenario-2-application-running-as-root--fix-it">🔵 Scenario 2: Application Running as Root — Fix It</h3>
+
+<p><em>“Your application image runs as root (UID 0). It fails on OpenShift. How do you fix it without changing the Dockerfile?”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Option A: Create a dedicated service account and grant anyuid SCC</span>
+oc create serviceaccount my-nodeapp-sa <span class="nt">-n</span> my-nodeapp-app
+
+oc adm policy add-scc-to-user anyuid <span class="se">\</span>
+  <span class="nt">-z</span> my-nodeapp-sa <span class="se">\</span>
+  <span class="nt">-n</span> my-nodeapp-app
+
+<span class="c"># Patch deployment to use that SA</span>
+oc <span class="nb">set </span>serviceaccount deployment/my-nodeapp my-nodeapp-sa
+
+<span class="c"># Option B (better long-term): add USER directive to Dockerfile</span>
+<span class="c"># FROM node:18</span>
+<span class="c"># ...</span>
+<span class="c"># RUN chown -R node:node /app</span>
+<span class="c"># USER node          ← run as non-root node user</span>
+
+<span class="c"># Option C: Override UID in deployment (if app doesn't need root)</span>
+<span class="c"># spec.securityContext.runAsUser: 1001</span>
+</code></pre></div></div>
+
+<h3 id="-scenario-3-debug-a-failing-build">🔵 Scenario 3: Debug a Failing Build</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Check build status</span>
+oc get builds <span class="nt">-n</span> my-app
+
+<span class="c"># 2. View build logs</span>
+oc logs build/my-nodeapp-3
+
+<span class="c"># 3. Common failure: npm install fails</span>
+<span class="c">#    → Check network policies blocking npm registry</span>
+<span class="c">#    → Check if proxy env vars are needed</span>
+oc <span class="nb">set env </span>bc/my-nodeapp <span class="se">\</span>
+  <span class="nv">HTTP_PROXY</span><span class="o">=</span>http://proxy.example.com:3128 <span class="se">\</span>
+  <span class="nv">HTTPS_PROXY</span><span class="o">=</span>http://proxy.example.com:3128 <span class="se">\</span>
+  <span class="nv">NO_PROXY</span><span class="o">=</span>.cluster.local,.svc,localhost
+
+<span class="c"># 4. Re-run build</span>
+oc start-build my-nodeapp
+
+<span class="c"># 5. Check ImageStream after successful build</span>
+oc describe is my-nodeapp
+</code></pre></div></div>
+
+<h3 id="-scenario-4-cluster-upgrade-pre-flight-checks">🔵 Scenario 4: Cluster Upgrade Pre-flight Checks</h3>
+
+<p><em>“How do you prepare for an OpenShift cluster upgrade?”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Check current version and available upgrades</span>
+oc get clusterversion
+oc adm upgrade
+
+<span class="c"># 2. All operators must be healthy</span>
+oc get co | <span class="nb">grep</span> <span class="nt">-v</span> <span class="s2">"True.*False.*False"</span>   <span class="c"># should return nothing if healthy</span>
+
+<span class="c"># 3. All nodes must be Ready</span>
+oc get nodes | <span class="nb">grep</span> <span class="nt">-v</span> Ready
+
+<span class="c"># 4. Check etcd health</span>
+oc get etcd <span class="nt">-o</span> wide
+oc rsh <span class="nt">-n</span> openshift-etcd etcd-master-0 <span class="se">\</span>
+  etcdctl member list <span class="nt">--cacert</span> /etc/kubernetes/static-pod-certs/configmaps/etcd-serving-ca/ca-bundle.crt <span class="se">\</span>
+  <span class="nt">--cert</span> /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-master-0.crt <span class="se">\</span>
+  <span class="nt">--key</span> /etc/kubernetes/static-pod-certs/secrets/etcd-all-certs/etcd-peer-master-0.key
+
+<span class="c"># 5. Check PodDisruptionBudgets that could block node drain</span>
+oc get pdb <span class="nt">--all-namespaces</span>
+
+<span class="c"># 6. Check alerts in monitoring</span>
+oc get prometheusrule <span class="nt">--all-namespaces</span> | <span class="nb">grep</span> <span class="nt">-i</span> critical
+
+<span class="c"># 7. Initiate upgrade</span>
+oc adm upgrade <span class="nt">--to-latest</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-full-app-deployment-with-pipelines">Lab 1: Full App Deployment with Pipelines</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Prerequisites: OpenShift cluster, oc CLI, tkn CLI</span>
+
+<span class="c"># 1. Create namespaces</span>
+oc new-project ci-demo
+
+<span class="c"># 2. Install Pipelines operator (via OperatorHub or CLI)</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: openshift-pipelines-operator
+  namespace: openshift-operators
+spec:
+  channel: latest
+  name: openshift-pipelines-operator-rh
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+</span><span class="no">EOF
+
+</span><span class="c"># 3. Wait for operator</span>
+oc <span class="nb">wait</span> <span class="nt">--for</span><span class="o">=</span><span class="nv">condition</span><span class="o">=</span>Ready pod <span class="nt">-l</span> <span class="nv">name</span><span class="o">=</span>openshift-pipelines-operator <span class="se">\</span>
+  <span class="nt">-n</span> openshift-operators <span class="nt">--timeout</span><span class="o">=</span>120s
+
+<span class="c"># 4. Create a workspace PVC</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pipeline-workspace
+  namespace: ci-demo
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 1Gi
+</span><span class="no">EOF
+
+</span><span class="c"># 5. Create and run a simple pipeline</span>
+tkn pipeline start build-and-deploy <span class="se">\</span>
+  <span class="nt">-p</span> <span class="nv">IMAGE</span><span class="o">=</span>image-registry.openshift-image-registry.svc:5000/ci-demo/my-app:latest <span class="se">\</span>
+  <span class="nt">-p</span> <span class="nv">GIT_URL</span><span class="o">=</span>https://github.com/sclorg/nodejs-ex.git <span class="se">\</span>
+  <span class="nt">-w</span> <span class="nv">name</span><span class="o">=</span>shared-workspace,claimName<span class="o">=</span>pipeline-workspace <span class="se">\</span>
+  <span class="nt">-n</span> ci-demo <span class="nt">--use-param-defaults</span>
+
+<span class="c"># 6. Monitor</span>
+tkn pipelinerun logs <span class="nt">-f</span> <span class="nt">-L</span> <span class="nt">-n</span> ci-demo
+</code></pre></div></div>
+
+<h3 id="lab-2-rbac-and-multi-tenancy">Lab 2: RBAC and Multi-Tenancy</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Create two tenant projects</span>
+oc new-project team-alpha
+oc new-project team-beta
+
+<span class="c"># 2. Create user accounts (htpasswd)</span>
+htpasswd <span class="nt">-c</span> <span class="nt">-B</span> <span class="nt">-b</span> users.htpasswd alice alicepass
+htpasswd <span class="nt">-b</span> users.htpasswd bob bobpass
+
+oc create secret generic htpasswd-secret <span class="se">\</span>
+  <span class="nt">--from-file</span><span class="o">=</span><span class="nv">htpasswd</span><span class="o">=</span>users.htpasswd <span class="se">\</span>
+  <span class="nt">-n</span> openshift-config
+
+<span class="c"># 3. Grant alice admin on team-alpha, view on team-beta</span>
+oc adm policy add-role-to-user admin alice <span class="nt">-n</span> team-alpha
+oc adm policy add-role-to-user view alice <span class="nt">-n</span> team-beta
+
+<span class="c"># 4. Grant bob admin on team-beta only</span>
+oc adm policy add-role-to-user admin bob <span class="nt">-n</span> team-beta
+
+<span class="c"># 5. Set quotas per project</span>
+oc create quota team-quota <span class="se">\</span>
+  <span class="nt">--hard</span><span class="o">=</span><span class="nv">pods</span><span class="o">=</span>10,requests.cpu<span class="o">=</span>2,requests.memory<span class="o">=</span>4Gi <span class="se">\</span>
+  <span class="nt">-n</span> team-alpha
+
+<span class="c"># 6. Default NetworkPolicy (deny all ingress between projects)</span>
+oc apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: deny-other-namespaces
+  namespace: team-alpha
+spec:
+  podSelector: {}
+  ingress:
+  - from:
+    - podSelector: {}   # Only from same namespace
+</span><span class="no">EOF
+
+</span><span class="c"># 7. Verify alice cannot access team-beta's deployments</span>
+oc get deployments <span class="nt">--as</span><span class="o">=</span>alice <span class="nt">-n</span> team-beta   <span class="c"># Should get pods (view role)</span>
+oc delete pod <span class="nt">--as</span><span class="o">=</span>alice <span class="nt">-n</span> team-beta        <span class="c"># Should be forbidden</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="oc-cli-cheat-sheet">oc CLI Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── LOGIN &amp; CONTEXT ─────────────────────────────────</span>
+oc login https://api.mycluster.example.com:6443 <span class="nt">--token</span><span class="o">=</span>&lt;token&gt;
+oc login <span class="nt">-u</span> admin <span class="nt">-p</span> password
+oc <span class="nb">whoami
+</span>oc <span class="nb">whoami</span> <span class="nt">--show-console</span>
+oc config get-contexts
+oc project my-app                        <span class="c"># Switch project</span>
+
+<span class="c"># ─── PROJECTS ────────────────────────────────────────</span>
+oc new-project my-app
+oc projects
+oc get projects
+oc delete project my-app
+
+<span class="c"># ─── APPS &amp; BUILDS ───────────────────────────────────</span>
+oc new-app nodejs~https://github.com/myorg/app.git <span class="nt">--name</span><span class="o">=</span>myapp
+oc new-app <span class="nt">--template</span><span class="o">=</span>mysql-ephemeral
+oc start-build myapp
+oc start-build myapp <span class="nt">--from-dir</span><span class="o">=</span><span class="nb">.</span>
+oc logs <span class="nt">-f</span> bc/myapp                      <span class="c"># Build logs</span>
+oc cancel-build myapp-3
+oc get builds
+oc get bc                                <span class="c"># BuildConfigs</span>
+oc get is                                <span class="c"># ImageStreams</span>
+
+<span class="c"># ─── GET / DESCRIBE ──────────────────────────────────</span>
+oc get all <span class="nt">-n</span> my-app
+oc get pods <span class="nt">-o</span> wide
+oc get pods <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>myapp
+oc get events <span class="nt">--sort-by</span><span class="o">=</span><span class="s1">'.lastTimestamp'</span>
+oc describe pod &lt;name&gt;
+oc describe node &lt;name&gt;
+oc describe route &lt;name&gt;
+
+<span class="c"># ─── LOGS &amp; DEBUG ────────────────────────────────────</span>
+oc logs &lt;pod&gt; <span class="nt">-f</span>
+oc logs &lt;pod&gt; <span class="nt">--previous</span>
+oc rsh &lt;pod&gt;                             <span class="c"># Remote shell</span>
+oc debug &lt;pod&gt;                           <span class="c"># Debug copy of pod</span>
+oc debug node/&lt;node&gt;                     <span class="c"># Node-level debug</span>
+oc <span class="nb">exec</span> <span class="nt">-it</span> &lt;pod&gt; <span class="nt">--</span> bash
+oc port-forward pod/&lt;pod&gt; 8080:8080
+oc port-forward svc/myapp 8080:8080
+
+<span class="c"># ─── ROUTES ──────────────────────────────────────────</span>
+oc expose svc/myapp
+oc expose svc/myapp <span class="nt">--hostname</span><span class="o">=</span>myapp.example.com
+oc get routes
+oc create route edge myapp-tls <span class="nt">--service</span><span class="o">=</span>myapp
+
+<span class="c"># ─── DEPLOYMENT / ROLLOUT ────────────────────────────</span>
+oc rollout status deployment/myapp
+oc rollout undo deployment/myapp
+oc rollout <span class="nb">history </span>deployment/myapp
+oc rollout restart deployment/myapp
+oc <span class="nb">set </span>image deployment/myapp <span class="nv">app</span><span class="o">=</span>myapp:v2
+oc scale deployment/myapp <span class="nt">--replicas</span><span class="o">=</span>5
+oc autoscale deployment/myapp <span class="nt">--min</span><span class="o">=</span>2 <span class="nt">--max</span><span class="o">=</span>10 <span class="nt">--cpu-percent</span><span class="o">=</span>70
+
+<span class="c"># ─── RBAC / POLICY ───────────────────────────────────</span>
+oc adm policy add-role-to-user admin alice <span class="nt">-n</span> my-app
+oc adm policy add-scc-to-user anyuid <span class="nt">-z</span> my-sa <span class="nt">-n</span> my-app
+oc adm policy who-can get pods <span class="nt">-n</span> my-app
+oc auth can-i delete pods <span class="nt">--as</span><span class="o">=</span>alice <span class="nt">-n</span> my-app
+oc get rolebindings <span class="nt">-n</span> my-app
+
+<span class="c"># ─── ADMIN ───────────────────────────────────────────</span>
+oc adm top nodes
+oc adm top pods <span class="nt">-n</span> my-app
+oc adm cordon &lt;node&gt;
+oc adm drain &lt;node&gt; <span class="nt">--ignore-daemonsets</span> <span class="nt">--delete-emptydir-data</span>
+oc adm uncordon &lt;node&gt;
+oc adm upgrade
+oc adm certificate approve &lt;csr&gt;
+oc get clusterversion
+oc get co                                <span class="c"># Cluster Operators</span>
+oc get mcp                               <span class="c"># MachineConfigPools</span>
+oc get mc                                <span class="c"># MachineConfigs</span>
+oc get csr                               <span class="c"># Certificate Signing Requests</span>
+
+<span class="c"># ─── SECRETS &amp; CONFIG ────────────────────────────────</span>
+oc create secret generic my-secret <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">password</span><span class="o">=</span>abc123
+oc create secret docker-registry pull-secret <span class="se">\</span>
+  <span class="nt">--docker-server</span><span class="o">=</span>quay.io <span class="se">\</span>
+  <span class="nt">--docker-username</span><span class="o">=</span>user <span class="se">\</span>
+  <span class="nt">--docker-password</span><span class="o">=</span>pass
+oc create configmap my-config <span class="nt">--from-file</span><span class="o">=</span>config.yaml
+oc <span class="nb">set env </span>deployment/myapp <span class="nv">DB_URL</span><span class="o">=</span>postgres://...
+oc <span class="nb">set env </span>deployment/myapp <span class="nt">--from</span><span class="o">=</span>secret/my-secret
+oc <span class="nb">set </span>resources deployment/myapp <span class="nt">--requests</span><span class="o">=</span><span class="nv">cpu</span><span class="o">=</span>100m,memory<span class="o">=</span>128Mi
+
+<span class="c"># ─── OPERATORS / OLM ─────────────────────────────────</span>
+oc get csv <span class="nt">-n</span> openshift-operators        <span class="c"># ClusterServiceVersions</span>
+oc get subscription <span class="nt">-n</span> openshift-operators
+oc get installplan <span class="nt">-n</span> openshift-operators
+oc get packagemanifests <span class="nt">-n</span> openshift-marketplace
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Kubernetes.html">← Kubernetes</a></td>
+        <td><a href="/devops-interview-guide/Jenkins.html">Jenkins →</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">CI/CD (Tekton/ArgoCD) →</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security (RBAC/SCC) →</a></td>
+        <td><a href="/devops-interview-guide/Monitoring.html">Monitoring →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

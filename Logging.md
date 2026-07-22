@@ -1,3 +1,9 @@
+---
+layout: default
+title: "📝 Logging — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 📝 Logging — DevOps Interview Guide
 
 > [← Monitoring](./Monitoring.md) | [Main Index](./README.md) | [Security →](./Security.md)

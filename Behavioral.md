@@ -1,3 +1,9 @@
+---
+layout: default
+title: "💬 Behavioral Interview Guide — DevOps"
+render_with_liquid: false
+---
+
 # 💬 Behavioral Interview Guide — DevOps
 
 > [← System Design](./SystemDesign.md) | [Main Index](./README.md) | [Learning Roadmap →](./LearningRoadmap.md)

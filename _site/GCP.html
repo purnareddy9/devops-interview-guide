@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🟦 GCP — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🟦 GCP — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/GCP.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🟦 GCP — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🟦 GCP — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🟦 GCP — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/GCP.html" />
+<meta property="og:url" content="/devops-interview-guide/GCP.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🟦 GCP — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🟦 GCP — DevOps Interview Guide","url":"/devops-interview-guide/GCP.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🟦 GCP — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-gcp--devops-interview-guide">🟦 GCP — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Azure.html">← Azure</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">CI/CD →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#gcp-core-concepts">GCP Core Concepts</a></li>
+  <li><a href="#identity--iam">Identity &amp; IAM</a></li>
+  <li><a href="#networking">Networking (VPC, Cloud Load Balancing)</a></li>
+  <li><a href="#compute">Compute (GCE, GKE, Cloud Run)</a></li>
+  <li><a href="#storage">Storage (GCS, Cloud SQL, Spanner)</a></li>
+  <li><a href="#cloud-build--artifact-registry">Cloud Build &amp; Artifact Registry</a></li>
+  <li><a href="#operations">Operations (Cloud Monitoring, Logging)</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="gcp-core-concepts">GCP Core Concepts</h2>
+
+<h3 id="resource-hierarchy">Resource Hierarchy</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Organization (company.com)
+└── Folder (Division / Team)
+    └── Project
+        └── Resources (VMs, GKE, Storage, etc.)
+
+IAM policies are inherited down the hierarchy.
+</code></pre></div></div>
+
+<h3 id="gcp-vs-aws-vs-azure-equivalents">GCP vs AWS vs Azure Equivalents</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>GCP</th>
+      <th>AWS</th>
+      <th>Azure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Project</td>
+      <td>Account</td>
+      <td>Subscription</td>
+    </tr>
+    <tr>
+      <td>VPC</td>
+      <td>VPC</td>
+      <td>VNet</td>
+    </tr>
+    <tr>
+      <td>GCE</td>
+      <td>EC2</td>
+      <td>VM</td>
+    </tr>
+    <tr>
+      <td>GKE</td>
+      <td>EKS</td>
+      <td>AKS</td>
+    </tr>
+    <tr>
+      <td>Cloud Run</td>
+      <td>Fargate/Lambda</td>
+      <td>Container Apps</td>
+    </tr>
+    <tr>
+      <td>GCS</td>
+      <td>S3</td>
+      <td>Blob Storage</td>
+    </tr>
+    <tr>
+      <td>Cloud SQL</td>
+      <td>RDS</td>
+      <td>Azure Database</td>
+    </tr>
+    <tr>
+      <td>Pub/Sub</td>
+      <td>SNS/SQS</td>
+      <td>Service Bus</td>
+    </tr>
+    <tr>
+      <td>Cloud Build</td>
+      <td>CodeBuild</td>
+      <td>Azure Pipelines</td>
+    </tr>
+    <tr>
+      <td>Artifact Registry</td>
+      <td>ECR</td>
+      <td>ACR</td>
+    </tr>
+    <tr>
+      <td>Cloud IAM</td>
+      <td>AWS IAM</td>
+      <td>Azure RBAC/AAD</td>
+    </tr>
+    <tr>
+      <td>Cloud Monitoring</td>
+      <td>CloudWatch</td>
+      <td>Azure Monitor</td>
+    </tr>
+    <tr>
+      <td>BigQuery</td>
+      <td>Redshift</td>
+      <td>Synapse Analytics</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="identity--iam">Identity &amp; IAM</h2>
+
+<h3 id="iam-hierarchy">IAM Hierarchy</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Who (Principal) → Can do What (Role) → On Which Resource
+</code></pre></div></div>
+
+<h3 id="principal-types">Principal Types</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Principal</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Google Account</strong></td>
+      <td>Individual user (person@gmail.com)</td>
+    </tr>
+    <tr>
+      <td><strong>Service Account</strong></td>
+      <td>Non-human identity for apps/VMs</td>
+    </tr>
+    <tr>
+      <td><strong>Google Group</strong></td>
+      <td>Collection of accounts</td>
+    </tr>
+    <tr>
+      <td><strong>Workspace Domain</strong></td>
+      <td>All users in a Google Workspace domain</td>
+    </tr>
+    <tr>
+      <td><strong>allUsers</strong></td>
+      <td>Anyone on the internet (public)</td>
+    </tr>
+    <tr>
+      <td><strong>allAuthenticatedUsers</strong></td>
+      <td>Any authenticated Google account</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="service-accounts">Service Accounts</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create service account</span>
+gcloud iam service-accounts create github-actions-sa <span class="se">\</span>
+  <span class="nt">--display-name</span><span class="o">=</span><span class="s2">"GitHub Actions SA"</span> <span class="se">\</span>
+  <span class="nt">--project</span><span class="o">=</span>my-project
+
+<span class="c"># Grant roles</span>
+gcloud projects add-iam-policy-binding my-project <span class="se">\</span>
+  <span class="nt">--member</span><span class="o">=</span><span class="s2">"serviceAccount:github-actions-sa@my-project.iam.gserviceaccount.com"</span> <span class="se">\</span>
+  <span class="nt">--role</span><span class="o">=</span><span class="s2">"roles/container.developer"</span>
+
+<span class="c"># Workload Identity Federation (OIDC — no key files needed)</span>
+gcloud iam workload-identity-pools create github-pool <span class="se">\</span>
+  <span class="nt">--location</span><span class="o">=</span>global <span class="se">\</span>
+  <span class="nt">--project</span><span class="o">=</span>my-project
+
+gcloud iam workload-identity-pools providers create-oidc github-provider <span class="se">\</span>
+  <span class="nt">--location</span><span class="o">=</span>global <span class="se">\</span>
+  <span class="nt">--workload-identity-pool</span><span class="o">=</span>github-pool <span class="se">\</span>
+  <span class="nt">--issuer-uri</span><span class="o">=</span><span class="s2">"https://token.actions.githubusercontent.com"</span> <span class="se">\</span>
+  <span class="nt">--attribute-mapping</span><span class="o">=</span><span class="s2">"google.subject=assertion.sub,attribute.repository=assertion.repository"</span> <span class="se">\</span>
+  <span class="nt">--project</span><span class="o">=</span>my-project
+
+<span class="c"># Bind pool to service account</span>
+gcloud iam service-accounts add-iam-policy-binding <span class="se">\</span>
+  github-actions-sa@my-project.iam.gserviceaccount.com <span class="se">\</span>
+  <span class="nt">--role</span><span class="o">=</span><span class="s2">"roles/iam.workloadIdentityUser"</span> <span class="se">\</span>
+  <span class="nt">--member</span><span class="o">=</span><span class="s2">"principalSet://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadIdentityPools/github-pool/attribute.repository/my-org/my-repo"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="networking">Networking</h2>
+
+<h3 id="vpc-design">VPC Design</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create custom VPC</span>
+gcloud compute networks create myapp-vpc <span class="se">\</span>
+  <span class="nt">--subnet-mode</span><span class="o">=</span>custom <span class="se">\</span>
+  <span class="nt">--bgp-routing-mode</span><span class="o">=</span>global
+
+<span class="c"># Create subnets with secondary ranges (for GKE pods/services)</span>
+gcloud compute networks subnets create web-subnet <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>myapp-vpc <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--range</span><span class="o">=</span>10.0.1.0/24 <span class="se">\</span>
+  <span class="nt">--secondary-range</span><span class="o">=</span>pod-range<span class="o">=</span>172.16.0.0/14,svc-range<span class="o">=</span>172.20.0.0/20 <span class="se">\</span>
+  <span class="nt">--enable-private-ip-google-access</span>
+
+<span class="c"># Firewall rules</span>
+gcloud compute firewall-rules create allow-internal <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>myapp-vpc <span class="se">\</span>
+  <span class="nt">--allow</span><span class="o">=</span>tcp,udp,icmp <span class="se">\</span>
+  <span class="nt">--source-ranges</span><span class="o">=</span>10.0.0.0/8
+
+gcloud compute firewall-rules create allow-https <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>myapp-vpc <span class="se">\</span>
+  <span class="nt">--allow</span><span class="o">=</span>tcp:443 <span class="se">\</span>
+  <span class="nt">--target-tags</span><span class="o">=</span>https-server
+
+<span class="c"># Cloud NAT (for private instances to access internet)</span>
+gcloud compute routers create myapp-router <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>myapp-vpc <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1
+
+gcloud compute routers nats create myapp-nat <span class="se">\</span>
+  <span class="nt">--router</span><span class="o">=</span>myapp-router <span class="se">\</span>
+  <span class="nt">--auto-allocate-nat-external-ips</span> <span class="se">\</span>
+  <span class="nt">--nat-all-subnet-ip-ranges</span> <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1
+</code></pre></div></div>
+
+<h3 id="cloud-load-balancing">Cloud Load Balancing</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>LB Type</th>
+      <th>Layer</th>
+      <th>Scope</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Global External L7</td>
+      <td>L7</td>
+      <td>Global</td>
+      <td>HTTP(S) with CDN, multi-region</td>
+    </tr>
+    <tr>
+      <td>Regional External L7</td>
+      <td>L7</td>
+      <td>Regional</td>
+      <td>HTTP(S) within region</td>
+    </tr>
+    <tr>
+      <td>Global External L4</td>
+      <td>L4</td>
+      <td>Global</td>
+      <td>TCP/SSL global</td>
+    </tr>
+    <tr>
+      <td>Regional Internal L4</td>
+      <td>L4</td>
+      <td>Regional</td>
+      <td>Internal microservices</td>
+    </tr>
+    <tr>
+      <td>Regional Internal L7</td>
+      <td>L7</td>
+      <td>Regional</td>
+      <td>Internal HTTP APIs</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="compute">Compute</h2>
+
+<h3 id="google-kubernetes-engine-gke">Google Kubernetes Engine (GKE)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create Autopilot cluster (serverless K8s)</span>
+gcloud container clusters create-auto prod-cluster <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--project</span><span class="o">=</span>my-project
+
+<span class="c"># Create Standard cluster</span>
+gcloud container clusters create prod-cluster <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--num-nodes</span><span class="o">=</span>3 <span class="se">\</span>
+  <span class="nt">--machine-type</span><span class="o">=</span>n2-standard-4 <span class="se">\</span>
+  <span class="nt">--disk-size</span><span class="o">=</span>100 <span class="se">\</span>
+  <span class="nt">--enable-ip-alias</span> <span class="se">\</span>
+  <span class="nt">--subnetwork</span><span class="o">=</span>web-subnet <span class="se">\</span>
+  <span class="nt">--cluster-secondary-range-name</span><span class="o">=</span>pod-range <span class="se">\</span>
+  <span class="nt">--services-secondary-range-name</span><span class="o">=</span>svc-range <span class="se">\</span>
+  <span class="nt">--enable-autoscaling</span> <span class="se">\</span>
+  <span class="nt">--min-nodes</span><span class="o">=</span>2 <span class="se">\</span>
+  <span class="nt">--max-nodes</span><span class="o">=</span>20 <span class="se">\</span>
+  <span class="nt">--enable-shielded-nodes</span> <span class="se">\</span>
+  <span class="nt">--workload-pool</span><span class="o">=</span>my-project.svc.id.goog <span class="se">\</span>
+  <span class="nt">--enable-master-authorized-networks</span> <span class="se">\</span>
+  <span class="nt">--master-authorized-networks</span><span class="o">=</span>10.0.0.0/8 <span class="se">\</span>
+  <span class="nt">--project</span><span class="o">=</span>my-project
+
+<span class="c"># Get credentials</span>
+gcloud container clusters get-credentials prod-cluster <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--project</span><span class="o">=</span>my-project
+
+<span class="c"># Node pools</span>
+gcloud container node-pools create spot-pool <span class="se">\</span>
+  <span class="nt">--cluster</span><span class="o">=</span>prod-cluster <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--machine-type</span><span class="o">=</span>n2-standard-4 <span class="se">\</span>
+  <span class="nt">--spot</span> <span class="se">\</span>
+  <span class="nt">--num-nodes</span><span class="o">=</span>0 <span class="se">\</span>
+  <span class="nt">--enable-autoscaling</span> <span class="se">\</span>
+  <span class="nt">--min-nodes</span><span class="o">=</span>0 <span class="se">\</span>
+  <span class="nt">--max-nodes</span><span class="o">=</span>50
+</code></pre></div></div>
+
+<h3 id="workload-identity-gke--iam">Workload Identity (GKE + IAM)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create KSA (Kubernetes Service Account)</span>
+kubectl create serviceaccount myapp-sa <span class="nt">-n</span> production
+
+<span class="c"># Bind KSA to GSA (Google Service Account)</span>
+gcloud iam service-accounts add-iam-policy-binding <span class="se">\</span>
+  myapp-sa@my-project.iam.gserviceaccount.com <span class="se">\</span>
+  <span class="nt">--role</span><span class="o">=</span>roles/iam.workloadIdentityUser <span class="se">\</span>
+  <span class="nt">--member</span><span class="o">=</span><span class="s2">"serviceAccount:my-project.svc.id.goog[production/myapp-sa]"</span>
+
+<span class="c"># Annotate KSA</span>
+kubectl annotate serviceaccount myapp-sa <span class="se">\</span>
+  <span class="nt">--namespace</span><span class="o">=</span>production <span class="se">\</span>
+  iam.gke.io/gcp-service-account<span class="o">=</span>myapp-sa@my-project.iam.gserviceaccount.com
+</code></pre></div></div>
+
+<h3 id="cloud-run">Cloud Run</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Deploy container to Cloud Run</span>
+gcloud run deploy myapp <span class="se">\</span>
+  <span class="nt">--image</span><span class="o">=</span>us-central1-docker.pkg.dev/my-project/myrepo/myapp:latest <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--platform</span><span class="o">=</span>managed <span class="se">\</span>
+  <span class="nt">--allow-unauthenticated</span> <span class="se">\</span>
+  <span class="nt">--min-instances</span><span class="o">=</span>1 <span class="se">\</span>
+  <span class="nt">--max-instances</span><span class="o">=</span>100 <span class="se">\</span>
+  <span class="nt">--concurrency</span><span class="o">=</span>80 <span class="se">\</span>
+  <span class="nt">--cpu</span><span class="o">=</span>2 <span class="se">\</span>
+  <span class="nt">--memory</span><span class="o">=</span>512Mi <span class="se">\</span>
+  <span class="nt">--set-env-vars</span><span class="o">=</span><span class="nv">ENV</span><span class="o">=</span>production <span class="se">\</span>
+  <span class="nt">--service-account</span><span class="o">=</span>myapp-sa@my-project.iam.gserviceaccount.com <span class="se">\</span>
+  <span class="nt">--vpc-connector</span><span class="o">=</span>myapp-connector <span class="se">\</span>
+  <span class="nt">--vpc-egress</span><span class="o">=</span>private-ranges-only
+
+<span class="c"># Update traffic split (canary/blue-green)</span>
+gcloud run services update-traffic myapp <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--to-revisions</span><span class="o">=</span>myapp-v2<span class="o">=</span>10,LATEST<span class="o">=</span>90   <span class="c"># 10% to v2, 90% to latest</span>
+
+gcloud run services update-traffic myapp <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--to-latest</span>                             <span class="c"># All traffic to latest</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="storage">Storage</h2>
+
+<h3 id="google-cloud-storage-gcs">Google Cloud Storage (GCS)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create bucket</span>
+gcloud storage buckets create gs://my-app-data <span class="se">\</span>
+  <span class="nt">--location</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--default-storage-class</span><span class="o">=</span>STANDARD <span class="se">\</span>
+  <span class="nt">--uniform-bucket-level-access</span> <span class="se">\</span>
+  <span class="nt">--public-access-prevention</span><span class="o">=</span>enforced
+
+<span class="c"># Sync directory</span>
+gcloud storage rsync ./local-dir gs://my-app-data/backup <span class="nt">--recursive</span>
+
+<span class="c"># Set lifecycle policy</span>
+gcloud storage buckets update gs://my-app-data <span class="se">\</span>
+  <span class="nt">--lifecycle-file</span><span class="o">=</span>lifecycle.json
+</code></pre></div></div>
+
+<h3 id="cloud-sql">Cloud SQL</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create Cloud SQL for PostgreSQL</span>
+gcloud sql instances create prod-postgres <span class="se">\</span>
+  <span class="nt">--database-version</span><span class="o">=</span>POSTGRES_15 <span class="se">\</span>
+  <span class="nt">--tier</span><span class="o">=</span>db-custom-4-15360 <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--availability-type</span><span class="o">=</span>REGIONAL <span class="se">\</span>
+  <span class="nt">--backup-start-time</span><span class="o">=</span>03:00 <span class="se">\</span>
+  <span class="nt">--enable-point-in-time-recovery</span> <span class="se">\</span>
+  <span class="nt">--deletion-protection</span> <span class="se">\</span>
+  <span class="nt">--database-flags</span><span class="o">=</span><span class="nv">max_connections</span><span class="o">=</span>500 <span class="se">\</span>
+  <span class="nt">--storage-type</span><span class="o">=</span>SSD <span class="se">\</span>
+  <span class="nt">--storage-size</span><span class="o">=</span>100GB <span class="se">\</span>
+  <span class="nt">--storage-auto-increase</span>
+
+<span class="c"># Create private IP connection</span>
+gcloud sql instances patch prod-postgres <span class="se">\</span>
+  <span class="nt">--network</span><span class="o">=</span>myapp-vpc <span class="se">\</span>
+  <span class="nt">--no-assign-ip</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cloud-build--artifact-registry">Cloud Build &amp; Artifact Registry</h2>
+
+<h3 id="cloud-build-pipeline">Cloud Build Pipeline</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># cloudbuild.yaml</span>
+<span class="na">steps</span><span class="pi">:</span>
+  <span class="c1"># Run tests</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">node:20-alpine'</span>
+    <span class="na">entrypoint</span><span class="pi">:</span> <span class="s1">'</span><span class="s">sh'</span>
+    <span class="na">args</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">-c'</span>
+      <span class="pi">-</span> <span class="pi">|</span>
+        <span class="s">npm ci</span>
+        <span class="s">npm test</span>
+    <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">test'</span>
+
+  <span class="c1"># Build Docker image</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">gcr.io/cloud-builders/docker'</span>
+    <span class="na">args</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">build'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">-t'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">us-central1-docker.pkg.dev/$PROJECT_ID/myrepo/myapp:$SHORT_SHA'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">-t'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">us-central1-docker.pkg.dev/$PROJECT_ID/myrepo/myapp:latest'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">--cache-from'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">us-central1-docker.pkg.dev/$PROJECT_ID/myrepo/myapp:latest'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">.'</span>
+    <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">build'</span>
+    <span class="na">waitFor</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">test'</span><span class="pi">]</span>
+
+  <span class="c1"># Scan with Cloud Build vulnerability scanning</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">gcr.io/google.com/cloudsdktool/cloud-sdk'</span>
+    <span class="na">args</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">gcloud'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">artifacts'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">docker'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">images'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">scan'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">us-central1-docker.pkg.dev/$PROJECT_ID/myrepo/myapp:$SHORT_SHA'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">--format=json'</span>
+    <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">scan'</span>
+    <span class="na">waitFor</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">build'</span><span class="pi">]</span>
+
+  <span class="c1"># Push image</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">gcr.io/cloud-builders/docker'</span>
+    <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">push'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">--all-tags'</span><span class="pi">,</span>
+           <span class="s1">'</span><span class="s">us-central1-docker.pkg.dev/$PROJECT_ID/myrepo/myapp'</span><span class="pi">]</span>
+    <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">push'</span>
+    <span class="na">waitFor</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">scan'</span><span class="pi">]</span>
+
+  <span class="c1"># Deploy to GKE</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">gcr.io/google.com/cloudsdktool/cloud-sdk'</span>
+    <span class="na">args</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">gke-deploy'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">run'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">--filename=k8s/'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">--image=us-central1-docker.pkg.dev/$PROJECT_ID/myrepo/myapp:$SHORT_SHA'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">--cluster=prod-cluster'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">--location=us-central1'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">--namespace=production'</span>
+    <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">deploy'</span>
+    <span class="na">waitFor</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">push'</span><span class="pi">]</span>
+
+<span class="na">images</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s1">'</span><span class="s">us-central1-docker.pkg.dev/$PROJECT_ID/myrepo/myapp:$SHORT_SHA'</span>
+  <span class="pi">-</span> <span class="s1">'</span><span class="s">us-central1-docker.pkg.dev/$PROJECT_ID/myrepo/myapp:latest'</span>
+
+<span class="na">options</span><span class="pi">:</span>
+  <span class="na">defaultLogsBucketBehavior</span><span class="pi">:</span> <span class="s">REGIONAL_USER_OWNED_BUCKET</span>
+  <span class="na">machineType</span><span class="pi">:</span> <span class="s">E2_HIGHCPU_8</span>
+  <span class="na">logging</span><span class="pi">:</span> <span class="s">CLOUD_LOGGING_ONLY</span>
+</code></pre></div></div>
+
+<h3 id="artifact-registry">Artifact Registry</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create registry</span>
+gcloud artifacts repositories create myrepo <span class="se">\</span>
+  <span class="nt">--repository-format</span><span class="o">=</span>docker <span class="se">\</span>
+  <span class="nt">--location</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--description</span><span class="o">=</span><span class="s2">"Docker images for myapp"</span>
+
+<span class="c"># Configure Docker auth</span>
+gcloud auth configure-docker us-central1-docker.pkg.dev
+
+<span class="c"># Push image</span>
+docker push us-central1-docker.pkg.dev/my-project/myrepo/myapp:latest
+
+<span class="c"># List images</span>
+gcloud artifacts docker images list <span class="se">\</span>
+  us-central1-docker.pkg.dev/my-project/myrepo
+
+<span class="c"># Set cleanup policy</span>
+gcloud artifacts repositories set-cleanup-policies myrepo <span class="se">\</span>
+  <span class="nt">--location</span><span class="o">=</span>us-central1 <span class="se">\</span>
+  <span class="nt">--policy</span><span class="o">=</span>cleanup-policy.json
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="operations">Operations</h2>
+
+<h3 id="cloud-monitoring">Cloud Monitoring</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create uptime check</span>
+gcloud monitoring <span class="nb">uptime </span>create <span class="se">\</span>
+  <span class="nt">--display-name</span><span class="o">=</span><span class="s2">"MyApp Health Check"</span> <span class="se">\</span>
+  <span class="nt">--resource-type</span><span class="o">=</span>uptime_url <span class="se">\</span>
+  <span class="nt">--host</span><span class="o">=</span>myapp.example.com <span class="se">\</span>
+  <span class="nt">--path</span><span class="o">=</span>/health <span class="se">\</span>
+  <span class="nt">--period</span><span class="o">=</span>60
+
+<span class="c"># Create alerting policy (JSON)</span>
+gcloud alpha monitoring policies create <span class="nt">--policy-from-file</span><span class="o">=</span>alert-policy.json
+</code></pre></div></div>
+
+<h3 id="cloud-logging-queries">Cloud Logging Queries</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Find errors in GKE logs</span>
+<span class="n">resource</span><span class="p">.</span><span class="k">type</span><span class="o">=</span><span class="nv">"k8s_container"</span>
+<span class="n">resource</span><span class="p">.</span><span class="n">labels</span><span class="p">.</span><span class="n">cluster_name</span><span class="o">=</span><span class="nv">"prod-cluster"</span>
+<span class="n">severity</span><span class="o">&gt;=</span><span class="n">ERROR</span>
+<span class="nb">timestamp</span><span class="o">&gt;=</span><span class="nv">"2024-01-01T00:00:00Z"</span>
+
+<span class="c1">-- Slow HTTP requests (&gt; 2 seconds)</span>
+<span class="n">resource</span><span class="p">.</span><span class="k">type</span><span class="o">=</span><span class="nv">"http_load_balancer"</span>
+<span class="n">httpRequest</span><span class="p">.</span><span class="n">latency</span><span class="o">&gt;</span><span class="nv">"2s"</span>
+
+<span class="c1">-- Service account usage</span>
+<span class="n">protoPayload</span><span class="p">.</span><span class="n">authenticationInfo</span><span class="p">.</span><span class="n">serviceAccountEmail</span><span class="o">=</span><span class="nv">"myapp-sa@my-project.iam.gserviceaccount.com"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is a GCP Project and what does it represent?</strong></p>
+
+<blockquote>
+  <p>A Project is the fundamental organizing unit in GCP. It serves as: billing entity (each project has its own billing), API enablement boundary (APIs are enabled per project), resource isolation boundary (VMs, networks, buckets belong to projects), and IAM boundary. Every resource must belong to exactly one project. You organize projects under folders and folders under an organization.</p>
+</blockquote>
+
+<p><strong>Q2: What is the difference between GKE Autopilot and Standard mode?</strong></p>
+
+<blockquote>
+  <p><strong>Standard mode</strong>: You manage worker nodes — choose machine type, disk size, configure node pools, manage node OS patches. Full control, but more operational burden. <strong>Autopilot mode</strong>: GCP manages all node infrastructure — you only deploy workloads. Nodes are provisioned per-pod based on resource requests. You’re billed per pod, not per node. Autopilot has stricter security posture (privileged containers disallowed). Choose Autopilot when you want minimal infrastructure management.</p>
+</blockquote>
+
+<p><strong>Q3: What is Cloud Pub/Sub?</strong></p>
+
+<blockquote>
+  <p>Pub/Sub is a fully managed asynchronous messaging service. Publishers send messages to <strong>topics</strong>; subscribers receive from <strong>subscriptions</strong> (pull or push). Features: at-least-once delivery, message retention (up to 7 days), dead-letter topics, ordering, filtering. Used for decoupling services, event streaming, fanout patterns (one message → multiple subscribers). Equivalent to AWS SNS+SQS or Azure Service Bus.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: Explain Workload Identity in GKE.</strong></p>
+
+<blockquote>
+  <p>Workload Identity allows GKE pods to authenticate to Google Cloud APIs as a Google Service Account without key files. A Kubernetes Service Account (KSA) is annotated with a Google Service Account (GSA) email. The GKE metadata server provides OIDC tokens to the pod, which Google’s IAM exchanges for GSA credentials. This is the recommended way to give GKE workloads access to GCP services — no secrets to manage or rotate.</p>
+</blockquote>
+
+<p><strong>Q5: How does Cloud Run differ from GKE?</strong></p>
+
+<blockquote>
+  <p><strong>Cloud Run</strong> is serverless containers — you provide a container image, Cloud Run handles infrastructure. Scales to zero (no cost when idle), scales horizontally automatically, per-request billing, stateless. <strong>GKE</strong> is managed Kubernetes — full control over pods, deployments, stateful workloads, daemonsets, node configuration, networking, cluster autoscaling. Choose Cloud Run for stateless HTTP services/APIs; GKE for complex microservices, stateful workloads, or when you need Kubernetes-native features.</p>
+</blockquote>
+
+<p><strong>Q6: What is VPC Service Controls?</strong></p>
+
+<blockquote>
+  <p>VPC Service Controls creates a security perimeter around GCP services, preventing data exfiltration. Even if a service account is compromised, it cannot access data outside the perimeter. You define which projects, users, and networks are inside the perimeter. API calls from outside the perimeter (or to services outside) are blocked. Used for sensitive data compliance (HIPAA, PCI, GDPR).</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: How would you architect a multi-region, highly available application on GCP?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Global External Load Balancer</strong>: Anycast IP, routes to nearest healthy backend</li>
+    <li><strong>GKE clusters</strong> in multiple regions (us-central1, europe-west1, asia-east1)</li>
+    <li><strong>Cloud Spanner</strong> or <strong>Firestore</strong> for globally consistent, multi-region database</li>
+    <li><strong>GCS multi-region bucket</strong> for static assets with Cloud CDN</li>
+    <li><strong>Cloud DNS</strong> with geo-routing as fallback</li>
+    <li><strong>Cloud Armor</strong> for DDoS protection and WAF at the LB layer</li>
+    <li><strong>Pub/Sub</strong> for async cross-region event propagation</li>
+    <li><strong>GitOps</strong> (Config Connector / ArgoCD) for consistent deployments across clusters</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q8: How do you implement least-privilege IAM in a large GCP organization?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Organization-level</strong> IAM: only Org Admin role for break-glass accounts</li>
+    <li><strong>Folder-level</strong> roles: team leads get Folder Admin for their division</li>
+    <li><strong>Project-level</strong> RBAC: developers get Viewer/Editor on specific projects</li>
+    <li><strong>Service account least-privilege</strong>: each microservice gets a unique SA with only required roles (Artifact Registry Reader, Cloud SQL Client, etc.)</li>
+    <li><strong>Workload Identity</strong> instead of SA keys</li>
+    <li><strong>VPC Service Controls</strong> for data perimeters</li>
+    <li><strong>IAM Recommender</strong>: ML-based tool suggesting permission reductions based on actual usage</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-cloud-run-service-cold-start-latency">🔵 Scenario 1: Cloud Run Service Cold Start Latency</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Problem: Cloud Run service has ~3s cold starts</span>
+
+<span class="c"># Solutions:</span>
+<span class="c"># 1. Set minimum instances</span>
+gcloud run services update myapp <span class="se">\</span>
+  <span class="nt">--min-instances</span><span class="o">=</span>1 <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1
+<span class="c"># Keep at least 1 instance warm at all times</span>
+
+<span class="c"># 2. Optimize container startup</span>
+<span class="c"># - Defer expensive initialization (lazy loading)</span>
+<span class="c"># - Use multi-stage builds for smaller images</span>
+<span class="c"># - Pre-build JVM classes (JVM languages)</span>
+
+<span class="c"># 3. Use CPU always-on during startup</span>
+gcloud run services update myapp <span class="se">\</span>
+  <span class="nt">--cpu-boost</span> <span class="se">\</span>
+  <span class="nt">--region</span><span class="o">=</span>us-central1
+<span class="c"># Extra CPU during startup phase</span>
+
+<span class="c"># 4. Use startup probes</span>
+<span class="c"># Cloud Run v2 supports startup probes</span>
+
+<span class="c"># Monitoring cold starts</span>
+gcloud logging <span class="nb">read</span> <span class="s1">'resource.type="cloud_run_revision" \
+  textPayload:"Cold start"'</span> <span class="se">\</span>
+  <span class="nt">--freshness</span><span class="o">=</span>1h <span class="se">\</span>
+  <span class="nt">--format</span><span class="o">=</span>json
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── AUTH ─────────────────────────────────────────────</span>
+gcloud auth login
+gcloud auth application-default login
+gcloud config <span class="nb">set </span>project my-project
+gcloud config list
+
+<span class="c"># ─── COMPUTE ──────────────────────────────────────────</span>
+gcloud compute instances list
+gcloud compute instances create myvm <span class="se">\</span>
+  <span class="nt">--zone</span><span class="o">=</span>us-central1-a <span class="nt">--machine-type</span><span class="o">=</span>n2-standard-4
+gcloud compute ssh myvm <span class="nt">--zone</span><span class="o">=</span>us-central1-a
+gcloud compute instances stop/start/delete myvm
+
+<span class="c"># ─── GKE ──────────────────────────────────────────────</span>
+gcloud container clusters list
+gcloud container clusters get-credentials cluster-name <span class="nt">--region</span><span class="o">=</span>us-central1
+gcloud container clusters resize cluster-name <span class="nt">--num-nodes</span><span class="o">=</span>5 <span class="nt">--node-pool</span><span class="o">=</span>default-pool
+
+<span class="c"># ─── CLOUD RUN ────────────────────────────────────────</span>
+gcloud run services list <span class="nt">--region</span><span class="o">=</span>us-central1
+gcloud run services describe myapp <span class="nt">--region</span><span class="o">=</span>us-central1
+gcloud run revisions list <span class="nt">--service</span><span class="o">=</span>myapp <span class="nt">--region</span><span class="o">=</span>us-central1
+
+<span class="c"># ─── STORAGE ──────────────────────────────────────────</span>
+gcloud storage <span class="nb">ls </span>gs://my-bucket/
+gcloud storage <span class="nb">cp </span>file.txt gs://my-bucket/
+gcloud storage rsync ./dir gs://my-bucket/dir <span class="nt">--recursive</span>
+
+<span class="c"># ─── IAM ──────────────────────────────────────────────</span>
+gcloud projects get-iam-policy my-project
+gcloud iam service-accounts list
+gcloud iam service-accounts keys list <span class="se">\</span>
+  <span class="nt">--iam-account</span><span class="o">=</span>sa@my-project.iam.gserviceaccount.com
+
+<span class="c"># ─── LOGS ─────────────────────────────────────────────</span>
+gcloud logging <span class="nb">read</span> <span class="s1">'severity&gt;=ERROR'</span> <span class="nt">--freshness</span><span class="o">=</span>1h
+gcloud logging <span class="nb">tail</span> <span class="s1">'resource.type="gke_container"'</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Azure.html">← Azure</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">CI/CD →</a></td>
+        <td><a href="/devops-interview-guide/Kubernetes.html">Kubernetes (GKE) →</a></td>
+        <td><a href="/devops-interview-guide/Monitoring.html">Monitoring →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

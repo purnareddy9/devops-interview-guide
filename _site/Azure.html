@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🔷 Azure — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🔷 Azure — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Azure.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🔷 Azure — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🔷 Azure — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🔷 Azure — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Azure.html" />
+<meta property="og:url" content="/devops-interview-guide/Azure.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🔷 Azure — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🔷 Azure — DevOps Interview Guide","url":"/devops-interview-guide/Azure.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🔷 Azure — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-azure--devops-interview-guide">🔷 Azure — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/AWS.html">← AWS</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/GCP.html">GCP →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#azure-core-concepts">Azure Core Concepts</a></li>
+  <li><a href="#identity--access">Identity &amp; Access (AAD, RBAC)</a></li>
+  <li><a href="#networking">Networking (VNet, NSG, Load Balancer)</a></li>
+  <li><a href="#compute">Compute (VMs, AKS, Functions)</a></li>
+  <li><a href="#storage">Storage</a></li>
+  <li><a href="#azure-devops">Azure DevOps</a></li>
+  <li><a href="#arm-templates--bicep">ARM Templates &amp; Bicep</a></li>
+  <li><a href="#monitoring">Monitoring (Azure Monitor, Log Analytics)</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="azure-core-concepts">Azure Core Concepts</h2>
+
+<h3 id="azure-global-infrastructure">Azure Global Infrastructure</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Geography (Americas, Europe, Asia Pacific)
+└── Region (East US, West Europe, Southeast Asia)
+    └── Availability Zone (1, 2, 3)
+        └── Data Center(s)
+
+Azure Resource Hierarchy:
+Management Group
+└── Subscription
+    └── Resource Group
+        └── Resources (VMs, Storage, Networks, etc.)
+</code></pre></div></div>
+
+<h3 id="resource-organization">Resource Organization</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Management Group</strong></td>
+      <td>Apply policies/RBAC across multiple subscriptions</td>
+    </tr>
+    <tr>
+      <td><strong>Subscription</strong></td>
+      <td>Billing boundary; logical isolation of resources</td>
+    </tr>
+    <tr>
+      <td><strong>Resource Group</strong></td>
+      <td>Logical container for related resources; lifecycle management</td>
+    </tr>
+    <tr>
+      <td><strong>Resources</strong></td>
+      <td>Individual services (VM, VNet, Storage Account, etc.)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="identity--access">Identity &amp; Access</h2>
+
+<h3 id="azure-active-directory-entra-id">Azure Active Directory (Entra ID)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Azure AD Tenant
+├── Users (internal + external/B2B)
+├── Groups
+├── Service Principals (apps, CI/CD identities)
+├── Managed Identities (Azure resource identities)
+│   ├── System-assigned (tied to resource lifecycle)
+│   └── User-assigned (standalone, reusable)
+├── App Registrations
+└── Enterprise Applications
+</code></pre></div></div>
+
+<h3 id="rbac">RBAC</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Scope</th>
+      <th>Permissions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Owner</strong></td>
+      <td>Any</td>
+      <td>Full access + manage access</td>
+    </tr>
+    <tr>
+      <td><strong>Contributor</strong></td>
+      <td>Any</td>
+      <td>Full access, cannot manage access</td>
+    </tr>
+    <tr>
+      <td><strong>Reader</strong></td>
+      <td>Any</td>
+      <td>View resources only</td>
+    </tr>
+    <tr>
+      <td><strong>User Access Admin</strong></td>
+      <td>Any</td>
+      <td>Manage access (not resources)</td>
+    </tr>
+    <tr>
+      <td>Custom Role</td>
+      <td>Subscription/RG/Resource</td>
+      <td>Granular permissions</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Assign RBAC role</span>
+az role assignment create <span class="se">\</span>
+  <span class="nt">--assignee</span> <span class="s2">"user@example.com"</span> <span class="se">\</span>
+  <span class="nt">--role</span> <span class="s2">"Contributor"</span> <span class="se">\</span>
+  <span class="nt">--scope</span> <span class="s2">"/subscriptions/{subscription-id}/resourceGroups/myapp-rg"</span>
+
+<span class="c"># List role assignments</span>
+az role assignment list <span class="nt">--resource-group</span> myapp-rg <span class="nt">-o</span> table
+
+<span class="c"># Create custom role</span>
+az role definition create <span class="nt">--role-definition</span> @custom-role.json
+
+<span class="c"># Get current user</span>
+az account show
+az ad signed-in-user show
+</code></pre></div></div>
+
+<h3 id="managed-identity-for-cicd">Managed Identity for CI/CD</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create user-assigned managed identity</span>
+az identity create <span class="se">\</span>
+  <span class="nt">--name</span> github-actions-identity <span class="se">\</span>
+  <span class="nt">--resource-group</span> devops-rg
+
+<span class="c"># Federated credentials for GitHub Actions (OIDC)</span>
+az identity federated-credential create <span class="se">\</span>
+  <span class="nt">--name</span> github-actions-fed <span class="se">\</span>
+  <span class="nt">--identity-name</span> github-actions-identity <span class="se">\</span>
+  <span class="nt">--resource-group</span> devops-rg <span class="se">\</span>
+  <span class="nt">--issuer</span> <span class="s2">"https://token.actions.githubusercontent.com"</span> <span class="se">\</span>
+  <span class="nt">--subject</span> <span class="s2">"repo:my-org/my-repo:ref:refs/heads/main"</span> <span class="se">\</span>
+  <span class="nt">--audiences</span> <span class="s2">"api://AzureADTokenExchange"</span>
+
+<span class="c"># Assign role to managed identity</span>
+az role assignment create <span class="se">\</span>
+  <span class="nt">--assignee</span> <span class="nv">$IDENTITY_PRINCIPAL_ID</span> <span class="se">\</span>
+  <span class="nt">--role</span> <span class="s2">"Contributor"</span> <span class="se">\</span>
+  <span class="nt">--scope</span> <span class="s2">"/subscriptions/</span><span class="nv">$SUBSCRIPTION_ID</span><span class="s2">/resourceGroups/myapp-rg"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="networking">Networking</h2>
+
+<h3 id="virtual-network-architecture">Virtual Network Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VNet: 10.0.0.0/16
+├── Subnet: web-tier      10.0.1.0/24  → App Service / VMs
+├── Subnet: app-tier      10.0.2.0/24  → Internal services
+├── Subnet: data-tier     10.0.3.0/24  → Databases (Private Endpoints)
+├── Subnet: AzureBastionSubnet  10.0.4.0/27  → Bastion Host
+└── Subnet: AKS           10.0.5.0/22  → AKS node pools
+
+VNet Peering → Connect to other VNets (cross-region possible)
+VPN Gateway  → Connect to on-premises (IPSec VPN)
+ExpressRoute → Private dedicated link to Azure
+</code></pre></div></div>
+
+<h3 id="nsg-network-security-group">NSG (Network Security Group)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create NSG</span>
+az network nsg create <span class="nt">--name</span> web-nsg <span class="nt">--resource-group</span> myapp-rg
+
+<span class="c"># Add inbound rule — allow HTTPS</span>
+az network nsg rule create <span class="se">\</span>
+  <span class="nt">--nsg-name</span> web-nsg <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--name</span> allow-https <span class="se">\</span>
+  <span class="nt">--priority</span> 100 <span class="se">\</span>
+  <span class="nt">--protocol</span> tcp <span class="se">\</span>
+  <span class="nt">--destination-port-range</span> 443 <span class="se">\</span>
+  <span class="nt">--direction</span> Inbound <span class="se">\</span>
+  <span class="nt">--access</span> Allow
+
+<span class="c"># Deny all other inbound</span>
+az network nsg rule create <span class="se">\</span>
+  <span class="nt">--nsg-name</span> web-nsg <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--name</span> deny-all <span class="se">\</span>
+  <span class="nt">--priority</span> 4000 <span class="se">\</span>
+  <span class="nt">--direction</span> Inbound <span class="se">\</span>
+  <span class="nt">--access</span> Deny
+
+<span class="c"># Associate NSG with subnet</span>
+az network vnet subnet update <span class="se">\</span>
+  <span class="nt">--vnet-name</span> myapp-vnet <span class="se">\</span>
+  <span class="nt">--name</span> web-tier <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--nsg</span> web-nsg
+</code></pre></div></div>
+
+<h3 id="azure-load-balancer-types">Azure Load Balancer Types</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Layer</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Application Gateway</strong></td>
+      <td>L7</td>
+      <td>Web apps, WAF, URL routing, SSL offload</td>
+    </tr>
+    <tr>
+      <td><strong>Azure Load Balancer</strong></td>
+      <td>L4</td>
+      <td>TCP/UDP load balancing, internal/external</td>
+    </tr>
+    <tr>
+      <td><strong>Azure Front Door</strong></td>
+      <td>L7 (global)</td>
+      <td>Global HTTP(S), CDN, WAF, geo-routing</td>
+    </tr>
+    <tr>
+      <td><strong>Traffic Manager</strong></td>
+      <td>DNS</td>
+      <td>DNS-based global routing (failover, performance)</td>
+    </tr>
+    <tr>
+      <td><strong>API Management</strong></td>
+      <td>L7</td>
+      <td>API gateway, rate limiting, policies</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="compute">Compute</h2>
+
+<h3 id="azure-kubernetes-service-aks">Azure Kubernetes Service (AKS)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create AKS cluster</span>
+az aks create <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--name</span> prod-aks <span class="se">\</span>
+  <span class="nt">--location</span> eastus <span class="se">\</span>
+  <span class="nt">--kubernetes-version</span> 1.28 <span class="se">\</span>
+  <span class="nt">--node-count</span> 3 <span class="se">\</span>
+  <span class="nt">--node-vm-size</span> Standard_D4s_v5 <span class="se">\</span>
+  <span class="nt">--enable-managed-identity</span> <span class="se">\</span>
+  <span class="nt">--enable-auto-upgrade</span> <span class="se">\</span>
+  <span class="nt">--network-plugin</span> azure <span class="se">\</span>
+  <span class="nt">--network-plugin-mode</span> overlay <span class="se">\</span>
+  <span class="nt">--zones</span> 1 2 3 <span class="se">\</span>
+  <span class="nt">--enable-azure-monitor-metrics</span>
+
+<span class="c"># Get credentials</span>
+az aks get-credentials <span class="nt">--resource-group</span> myapp-rg <span class="nt">--name</span> prod-aks
+
+<span class="c"># Add node pool</span>
+az aks nodepool add <span class="se">\</span>
+  <span class="nt">--cluster-name</span> prod-aks <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--name</span> gpupool <span class="se">\</span>
+  <span class="nt">--node-vm-size</span> Standard_NC6 <span class="se">\</span>
+  <span class="nt">--node-count</span> 0 <span class="se">\</span>
+  <span class="nt">--enable-cluster-autoscaler</span> <span class="se">\</span>
+  <span class="nt">--min-count</span> 0 <span class="se">\</span>
+  <span class="nt">--max-count</span> 5 <span class="se">\</span>
+  <span class="nt">--node-taints</span> <span class="s2">"gpu=true:NoSchedule"</span>
+
+<span class="c"># Upgrade cluster</span>
+az aks upgrade <span class="nt">--resource-group</span> myapp-rg <span class="nt">--name</span> prod-aks <span class="nt">--kubernetes-version</span> 1.29
+</code></pre></div></div>
+
+<h3 id="azure-container-registry-acr">Azure Container Registry (ACR)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create ACR</span>
+az acr create <span class="se">\</span>
+  <span class="nt">--name</span> mycompanyregistry <span class="se">\</span>
+  <span class="nt">--resource-group</span> devops-rg <span class="se">\</span>
+  <span class="nt">--sku</span> Premium <span class="se">\</span>
+  <span class="nt">--admin-enabled</span> <span class="nb">false</span>
+
+<span class="c"># Build and push from source (ACR Tasks)</span>
+az acr build <span class="se">\</span>
+  <span class="nt">--registry</span> mycompanyregistry <span class="se">\</span>
+  <span class="nt">--image</span> myapp:<span class="si">$(</span>git rev-parse <span class="nt">--short</span> HEAD<span class="si">)</span> <span class="se">\</span>
+  <span class="nb">.</span>
+
+<span class="c"># Integrate ACR with AKS (no secrets needed)</span>
+az aks update <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--name</span> prod-aks <span class="se">\</span>
+  <span class="nt">--attach-acr</span> mycompanyregistry
+
+<span class="c"># Import image from Docker Hub</span>
+az acr import <span class="se">\</span>
+  <span class="nt">--name</span> mycompanyregistry <span class="se">\</span>
+  <span class="nt">--source</span> docker.io/library/nginx:latest <span class="se">\</span>
+  <span class="nt">--image</span> nginx:latest
+</code></pre></div></div>
+
+<h3 id="azure-functions">Azure Functions</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># function_app.py
+</span><span class="kn">import</span> <span class="n">azure.functions</span> <span class="k">as</span> <span class="n">func</span>
+<span class="kn">import</span> <span class="n">logging</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">func</span><span class="p">.</span><span class="nc">FunctionApp</span><span class="p">(</span><span class="n">http_auth_level</span><span class="o">=</span><span class="n">func</span><span class="p">.</span><span class="n">AuthLevel</span><span class="p">.</span><span class="n">FUNCTION</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="n">route</span><span class="o">=</span><span class="sh">"</span><span class="s">process</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">process_message</span><span class="p">(</span><span class="n">req</span><span class="p">:</span> <span class="n">func</span><span class="p">.</span><span class="n">HttpRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">func</span><span class="p">.</span><span class="n">HttpResponse</span><span class="p">:</span>
+    <span class="n">logging</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sh">'</span><span class="s">Processing request</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">req</span><span class="p">.</span><span class="n">params</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">)</span> <span class="ow">or</span> <span class="n">req</span><span class="p">.</span><span class="nf">get_json</span><span class="p">().</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">World</span><span class="sh">'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">.</span><span class="nc">HttpResponse</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">!</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="nd">@app.queue_trigger</span><span class="p">(</span><span class="n">arg_name</span><span class="o">=</span><span class="sh">"</span><span class="s">msg</span><span class="sh">"</span><span class="p">,</span> <span class="n">queue_name</span><span class="o">=</span><span class="sh">"</span><span class="s">myqueue</span><span class="sh">"</span><span class="p">,</span>
+                   <span class="n">connection</span><span class="o">=</span><span class="sh">"</span><span class="s">STORAGE_CONNECTION_STRING</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">queue_processor</span><span class="p">(</span><span class="n">msg</span><span class="p">:</span> <span class="n">func</span><span class="p">.</span><span class="n">QueueMessage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">logging</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Processing message: </span><span class="si">{</span><span class="n">msg</span><span class="p">.</span><span class="nf">get_body</span><span class="p">().</span><span class="nf">decode</span><span class="p">(</span><span class="sh">'</span><span class="s">utf-8</span><span class="sh">'</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="storage">Storage</h2>
+
+<h3 id="storage-account-types">Storage Account Types</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Use Case</th>
+      <th>Redundancy Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Blob Storage</strong></td>
+      <td>Unstructured data, media, backups</td>
+      <td>LRS, ZRS, GRS, GZRS</td>
+    </tr>
+    <tr>
+      <td><strong>Azure Files</strong></td>
+      <td>Shared file system (SMB/NFS)</td>
+      <td>LRS, ZRS, GRS</td>
+    </tr>
+    <tr>
+      <td><strong>Table Storage</strong></td>
+      <td>NoSQL key-value</td>
+      <td>LRS, ZRS, GRS</td>
+    </tr>
+    <tr>
+      <td><strong>Queue Storage</strong></td>
+      <td>Message queuing</td>
+      <td>LRS, ZRS, GRS</td>
+    </tr>
+    <tr>
+      <td><strong>Data Lake Gen2</strong></td>
+      <td>Big data analytics</td>
+      <td>LRS, ZRS, GRS</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create storage account</span>
+az storage account create <span class="se">\</span>
+  <span class="nt">--name</span> myappstorageaccount <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--sku</span> Standard_ZRS <span class="se">\</span>
+  <span class="nt">--kind</span> StorageV2 <span class="se">\</span>
+  <span class="nt">--min-tls-version</span> TLS1_2 <span class="se">\</span>
+  <span class="nt">--allow-blob-public-access</span> <span class="nb">false</span> <span class="se">\</span>
+  <span class="nt">--enable-hierarchical-namespace</span> <span class="nb">true</span>
+
+<span class="c"># Upload blob</span>
+az storage blob upload <span class="se">\</span>
+  <span class="nt">--account-name</span> myappstorageaccount <span class="se">\</span>
+  <span class="nt">--container-name</span> mycontainer <span class="se">\</span>
+  <span class="nt">--name</span> myfile.txt <span class="se">\</span>
+  <span class="nt">--file</span> ./local-file.txt <span class="se">\</span>
+  <span class="nt">--auth-mode</span> login
+
+<span class="c"># Generate SAS token</span>
+az storage blob generate-sas <span class="se">\</span>
+  <span class="nt">--account-name</span> myappstorageaccount <span class="se">\</span>
+  <span class="nt">--container-name</span> mycontainer <span class="se">\</span>
+  <span class="nt">--name</span> myfile.txt <span class="se">\</span>
+  <span class="nt">--permissions</span> r <span class="se">\</span>
+  <span class="nt">--expiry</span> <span class="s2">"2024-12-31T00:00:00Z"</span> <span class="se">\</span>
+  <span class="nt">--auth-mode</span> login <span class="se">\</span>
+  <span class="nt">--as-user</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="azure-devops">Azure DevOps</h2>
+
+<h3 id="pipelines-azure-pipelinesyml">Pipelines (azure-pipelines.yml)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># azure-pipelines.yml</span>
+<span class="na">trigger</span><span class="pi">:</span>
+  <span class="na">branches</span><span class="pi">:</span>
+    <span class="na">include</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">,</span> <span class="nv">develop</span><span class="pi">,</span> <span class="nv">release/*</span><span class="pi">]</span>
+  <span class="na">paths</span><span class="pi">:</span>
+    <span class="na">exclude</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">docs/</span><span class="pi">,</span> <span class="s1">'</span><span class="s">*.md'</span><span class="pi">]</span>
+
+<span class="na">pr</span><span class="pi">:</span>
+  <span class="na">branches</span><span class="pi">:</span>
+    <span class="na">include</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">]</span>
+
+<span class="na">variables</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">group</span><span class="pi">:</span> <span class="s">production-secrets</span>     <span class="c1"># Variable group from Azure DevOps library</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">imageRepository</span>
+    <span class="na">value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">myapp'</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">containerRegistry</span>
+    <span class="na">value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">mycompanyregistry.azurecr.io'</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">tag</span>
+    <span class="na">value</span><span class="pi">:</span> <span class="s1">'</span><span class="s">$(Build.BuildId)'</span>
+
+<span class="na">pool</span><span class="pi">:</span>
+  <span class="na">vmImage</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+
+<span class="na">stages</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">stage</span><span class="pi">:</span> <span class="s">Build</span>
+  <span class="na">displayName</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Build</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Test'</span>
+  <span class="na">jobs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">job</span><span class="pi">:</span> <span class="s">BuildTest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">task</span><span class="pi">:</span> <span class="s">NodeTool@0</span>
+      <span class="na">inputs</span><span class="pi">:</span>
+        <span class="na">versionSpec</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20.x'</span>
+
+    <span class="pi">-</span> <span class="na">script</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">npm ci</span>
+        <span class="s">npm run lint</span>
+        <span class="s">npm run test</span>
+      <span class="na">displayName</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Install,</span><span class="nv"> </span><span class="s">Lint,</span><span class="nv"> </span><span class="s">Test'</span>
+
+    <span class="pi">-</span> <span class="na">task</span><span class="pi">:</span> <span class="s">PublishTestResults@2</span>
+      <span class="na">inputs</span><span class="pi">:</span>
+        <span class="na">testResultsFormat</span><span class="pi">:</span> <span class="s">JUnit</span>
+        <span class="na">testResultsFiles</span><span class="pi">:</span> <span class="s1">'</span><span class="s">**/test-results.xml'</span>
+      <span class="na">condition</span><span class="pi">:</span> <span class="s">succeededOrFailed()</span>
+
+    <span class="pi">-</span> <span class="na">task</span><span class="pi">:</span> <span class="s">PublishCodeCoverageResults@2</span>
+      <span class="na">inputs</span><span class="pi">:</span>
+        <span class="na">summaryFileLocation</span><span class="pi">:</span> <span class="s1">'</span><span class="s">**/coverage/cobertura-coverage.xml'</span>
+
+<span class="pi">-</span> <span class="na">stage</span><span class="pi">:</span> <span class="s">BuildPush</span>
+  <span class="na">displayName</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Build</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Push</span><span class="nv"> </span><span class="s">Image'</span>
+  <span class="na">dependsOn</span><span class="pi">:</span> <span class="s">Build</span>
+  <span class="na">condition</span><span class="pi">:</span> <span class="s">and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))</span>
+  <span class="na">jobs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">job</span><span class="pi">:</span> <span class="s">Docker</span>
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">task</span><span class="pi">:</span> <span class="s">Docker@2</span>
+      <span class="na">displayName</span><span class="pi">:</span> <span class="s">Build and push image</span>
+      <span class="na">inputs</span><span class="pi">:</span>
+        <span class="na">command</span><span class="pi">:</span> <span class="s">buildAndPush</span>
+        <span class="na">repository</span><span class="pi">:</span> <span class="s">$(imageRepository)</span>
+        <span class="na">dockerfile</span><span class="pi">:</span> <span class="s">Dockerfile</span>
+        <span class="na">containerRegistry</span><span class="pi">:</span> <span class="s">$(containerRegistryServiceConnection)</span>
+        <span class="na">tags</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">$(tag)</span>
+          <span class="s">latest</span>
+
+    <span class="pi">-</span> <span class="na">task</span><span class="pi">:</span> <span class="s">AzureContainerApps@1</span>
+      <span class="na">displayName</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Trivy</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Scan'</span>
+      <span class="na">inputs</span><span class="pi">:</span>
+        <span class="na">azureSubscription</span><span class="pi">:</span> <span class="s">$(azureServiceConnection)</span>
+        <span class="na">imageToDeploy</span><span class="pi">:</span> <span class="s1">'</span><span class="s">$(containerRegistry)/$(imageRepository):$(tag)'</span>
+
+<span class="pi">-</span> <span class="na">stage</span><span class="pi">:</span> <span class="s">DeployStaging</span>
+  <span class="na">displayName</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Deploy</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Staging'</span>
+  <span class="na">dependsOn</span><span class="pi">:</span> <span class="s">BuildPush</span>
+  <span class="na">jobs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">deployment</span><span class="pi">:</span> <span class="s">Deploy</span>
+    <span class="na">environment</span><span class="pi">:</span> <span class="s">staging</span>
+    <span class="na">strategy</span><span class="pi">:</span>
+      <span class="na">runOnce</span><span class="pi">:</span>
+        <span class="na">deploy</span><span class="pi">:</span>
+          <span class="na">steps</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">task</span><span class="pi">:</span> <span class="s">HelmDeploy@0</span>
+            <span class="na">inputs</span><span class="pi">:</span>
+              <span class="na">connectionType</span><span class="pi">:</span> <span class="s">Azure Resource Manager</span>
+              <span class="na">azureSubscriptionEndpoint</span><span class="pi">:</span> <span class="s">$(azureServiceConnection)</span>
+              <span class="na">azureResourceGroup</span><span class="pi">:</span> <span class="s">myapp-staging-rg</span>
+              <span class="na">kubernetesCluster</span><span class="pi">:</span> <span class="s">staging-aks</span>
+              <span class="na">namespace</span><span class="pi">:</span> <span class="s">staging</span>
+              <span class="na">command</span><span class="pi">:</span> <span class="s">upgrade</span>
+              <span class="na">chartType</span><span class="pi">:</span> <span class="s">FilePath</span>
+              <span class="na">chartPath</span><span class="pi">:</span> <span class="s">./helm/myapp</span>
+              <span class="na">releaseName</span><span class="pi">:</span> <span class="s">myapp</span>
+              <span class="na">overrideValues</span><span class="pi">:</span> <span class="s1">'</span><span class="s">image.tag=$(tag)'</span>
+              <span class="na">waitForExecution</span><span class="pi">:</span> <span class="kc">true</span>
+
+<span class="pi">-</span> <span class="na">stage</span><span class="pi">:</span> <span class="s">DeployProd</span>
+  <span class="na">displayName</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Deploy</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Production'</span>
+  <span class="na">dependsOn</span><span class="pi">:</span> <span class="s">DeployStaging</span>
+  <span class="na">jobs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">deployment</span><span class="pi">:</span> <span class="s">Deploy</span>
+    <span class="na">environment</span><span class="pi">:</span> <span class="s">production</span>          <span class="c1"># Requires approval in Azure DevOps</span>
+    <span class="na">strategy</span><span class="pi">:</span>
+      <span class="na">runOnce</span><span class="pi">:</span>
+        <span class="na">deploy</span><span class="pi">:</span>
+          <span class="na">steps</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">task</span><span class="pi">:</span> <span class="s">HelmDeploy@0</span>
+            <span class="na">inputs</span><span class="pi">:</span>
+              <span class="na">connectionType</span><span class="pi">:</span> <span class="s">Azure Resource Manager</span>
+              <span class="na">azureSubscriptionEndpoint</span><span class="pi">:</span> <span class="s">$(azureServiceConnection)</span>
+              <span class="na">azureResourceGroup</span><span class="pi">:</span> <span class="s">myapp-prod-rg</span>
+              <span class="na">kubernetesCluster</span><span class="pi">:</span> <span class="s">prod-aks</span>
+              <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+              <span class="na">command</span><span class="pi">:</span> <span class="s">upgrade</span>
+              <span class="na">chartType</span><span class="pi">:</span> <span class="s">FilePath</span>
+              <span class="na">chartPath</span><span class="pi">:</span> <span class="s">./helm/myapp</span>
+              <span class="na">releaseName</span><span class="pi">:</span> <span class="s">myapp</span>
+              <span class="na">overrideValues</span><span class="pi">:</span> <span class="s1">'</span><span class="s">image.tag=$(tag),replicaCount=5'</span>
+              <span class="na">waitForExecution</span><span class="pi">:</span> <span class="kc">true</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="arm-templates--bicep">ARM Templates &amp; Bicep</h2>
+
+<h3 id="bicep-example-modern-iac-for-azure">Bicep Example (Modern IaC for Azure)</h3>
+
+<div class="language-bicep highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// main.bicep</span>
+<span class="nd">@description</span><span class="p">(</span><span class="s1">'Environment name'</span><span class="p">)</span>
+<span class="nd">@allowed</span><span class="p">([</span><span class="s1">'dev'</span><span class="p">,</span> <span class="s1">'staging'</span><span class="p">,</span> <span class="s1">'prod'</span><span class="p">])</span>
+<span class="k">param</span> <span class="nf">environment</span> <span class="kt">string</span>
+
+<span class="nd">@description</span><span class="p">(</span><span class="s1">'Azure region'</span><span class="p">)</span>
+<span class="k">param</span> <span class="n">location</span> <span class="kt">string</span> <span class="p">=</span> <span class="nf">resourceGroup</span><span class="p">().</span><span class="n">location</span>
+
+<span class="k">param</span> <span class="n">appServicePlanSku</span> <span class="kt">object</span> <span class="p">=</span> <span class="pi">{</span>
+  <span class="py">name</span><span class="p">:</span> <span class="nf">environment</span> <span class="o">==</span> <span class="s1">'prod'</span> <span class="err">?</span> <span class="s1">'P2v3'</span> <span class="p">:</span> <span class="s1">'B1'</span>
+  <span class="py">tier</span><span class="p">:</span> <span class="nf">environment</span> <span class="o">==</span> <span class="s1">'prod'</span> <span class="err">?</span> <span class="s1">'PremiumV3'</span> <span class="p">:</span> <span class="s1">'Basic'</span>
+<span class="pi">}</span>
+
+<span class="k">var</span> <span class="n">appName</span> <span class="p">=</span> <span class="s1">'myapp-</span><span class="si">${</span><span class="nf">environment</span><span class="si">}</span><span class="s1">-</span><span class="si">${</span><span class="nf">uniqueString</span><span class="p">(</span><span class="nf">resourceGroup</span><span class="p">().</span><span class="n">id</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span>
+
+<span class="c1">// App Service Plan</span>
+<span class="k">resource</span> <span class="n">appServicePlan</span> <span class="s1">'Microsoft.Web/serverfarms@2022-09-01'</span> <span class="p">=</span> <span class="pi">{</span>
+  <span class="py">name</span><span class="p">:</span> <span class="s1">'</span><span class="si">${</span><span class="n">appName</span><span class="si">}</span><span class="s1">-plan'</span>
+  <span class="py">location</span><span class="p">:</span> <span class="n">location</span>
+  <span class="py">sku</span><span class="p">:</span> <span class="n">appServicePlanSku</span>
+  <span class="py">kind</span><span class="p">:</span> <span class="s1">'linux'</span>
+  <span class="py">properties</span><span class="p">:</span> <span class="pi">{</span>
+    <span class="py">reserved</span><span class="p">:</span> <span class="k">true</span>       <span class="c1">// Required for Linux</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+
+<span class="c1">// App Service</span>
+<span class="k">resource</span> <span class="n">webApp</span> <span class="s1">'Microsoft.Web/sites@2022-09-01'</span> <span class="p">=</span> <span class="pi">{</span>
+  <span class="py">name</span><span class="p">:</span> <span class="n">appName</span>
+  <span class="py">location</span><span class="p">:</span> <span class="n">location</span>
+  <span class="py">properties</span><span class="p">:</span> <span class="pi">{</span>
+    <span class="py">serverFarmId</span><span class="p">:</span> <span class="n">appServicePlan</span><span class="p">.</span><span class="n">id</span>
+    <span class="py">siteConfig</span><span class="p">:</span> <span class="pi">{</span>
+      <span class="py">linuxFxVersion</span><span class="p">:</span> <span class="s1">'NODE|20-lts'</span>
+      <span class="py">minTlsVersion</span><span class="p">:</span> <span class="s1">'1.2'</span>
+      <span class="py">ftpsState</span><span class="p">:</span> <span class="s1">'Disabled'</span>
+      <span class="py">appSettings</span><span class="p">:</span> <span class="p">[</span>
+        <span class="pi">{</span>
+          <span class="py">name</span><span class="p">:</span> <span class="s1">'NODE_ENV'</span>
+          <span class="py">value</span><span class="p">:</span> <span class="nf">environment</span>
+        <span class="pi">}</span>
+        <span class="pi">{</span>
+          <span class="py">name</span><span class="p">:</span> <span class="s1">'APPLICATIONINSIGHTS_CONNECTION_STRING'</span>
+          <span class="py">value</span><span class="p">:</span> <span class="n">appInsights</span><span class="p">.</span><span class="n">properties</span><span class="p">.</span><span class="n">ConnectionString</span>
+        <span class="pi">}</span>
+      <span class="p">]</span>
+    <span class="pi">}</span>
+    <span class="py">httpsOnly</span><span class="p">:</span> <span class="k">true</span>
+  <span class="pi">}</span>
+  <span class="py">identity</span><span class="p">:</span> <span class="pi">{</span>
+    <span class="py">type</span><span class="p">:</span> <span class="s1">'SystemAssigned'</span>        <span class="c1">// Managed identity</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+
+<span class="c1">// Application Insights</span>
+<span class="k">resource</span> <span class="n">appInsights</span> <span class="s1">'Microsoft.Insights/components@2020-02-02'</span> <span class="p">=</span> <span class="pi">{</span>
+  <span class="py">name</span><span class="p">:</span> <span class="s1">'</span><span class="si">${</span><span class="n">appName</span><span class="si">}</span><span class="s1">-insights'</span>
+  <span class="py">location</span><span class="p">:</span> <span class="n">location</span>
+  <span class="py">kind</span><span class="p">:</span> <span class="s1">'web'</span>
+  <span class="py">properties</span><span class="p">:</span> <span class="pi">{</span>
+    <span class="py">Application_Type</span><span class="p">:</span> <span class="s1">'web'</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+
+<span class="c1">// Outputs</span>
+<span class="k">output</span> <span class="n">webAppUrl</span> <span class="kt">string</span> <span class="p">=</span> <span class="s1">'https://</span><span class="si">${</span><span class="n">webApp</span><span class="p">.</span><span class="n">properties</span><span class="p">.</span><span class="n">defaultHostName</span><span class="si">}</span><span class="s1">'</span>
+<span class="k">output</span> <span class="n">webAppPrincipalId</span> <span class="kt">string</span> <span class="p">=</span> <span class="n">webApp</span><span class="p">.</span><span class="n">identity</span><span class="p">.</span><span class="n">principalId</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Deploy Bicep</span>
+az deployment group create <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--template-file</span> main.bicep <span class="se">\</span>
+  <span class="nt">--parameters</span> <span class="nv">environment</span><span class="o">=</span>prod
+
+<span class="c"># What-if (like terraform plan)</span>
+az deployment group what-if <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--template-file</span> main.bicep <span class="se">\</span>
+  <span class="nt">--parameters</span> <span class="nv">environment</span><span class="o">=</span>prod
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="monitoring">Monitoring</h2>
+
+<h3 id="azure-monitor-setup">Azure Monitor Setup</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create Log Analytics Workspace</span>
+az monitor log-analytics workspace create <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--workspace-name</span> myapp-logs <span class="se">\</span>
+  <span class="nt">--sku</span> PerGB2018
+
+<span class="c"># Enable diagnostic settings for AKS</span>
+az monitor diagnostic-settings create <span class="se">\</span>
+  <span class="nt">--resource</span> <span class="si">$(</span>az aks show <span class="nt">-g</span> myapp-rg <span class="nt">-n</span> prod-aks <span class="nt">--query</span> <span class="nb">id</span> <span class="nt">-o</span> tsv<span class="si">)</span> <span class="se">\</span>
+  <span class="nt">--name</span> aks-diagnostics <span class="se">\</span>
+  <span class="nt">--workspace</span> <span class="si">$(</span>az monitor log-analytics workspace show <span class="nt">-g</span> myapp-rg <span class="nt">-n</span> myapp-logs <span class="nt">--query</span> <span class="nb">id</span> <span class="nt">-o</span> tsv<span class="si">)</span> <span class="se">\</span>
+  <span class="nt">--logs</span> <span class="s1">'[{"category":"kube-audit","enabled":true},{"category":"kube-controller-manager","enabled":true}]'</span>
+
+<span class="c"># Create alert rule</span>
+az monitor metrics alert create <span class="se">\</span>
+  <span class="nt">--name</span> <span class="s2">"High CPU Alert"</span> <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--scopes</span> <span class="si">$(</span>az aks show <span class="nt">-g</span> myapp-rg <span class="nt">-n</span> prod-aks <span class="nt">--query</span> <span class="nb">id</span> <span class="nt">-o</span> tsv<span class="si">)</span> <span class="se">\</span>
+  <span class="nt">--condition</span> <span class="s2">"avg Percentage CPU &gt; 80"</span> <span class="se">\</span>
+  <span class="nt">--window-size</span> 5m <span class="se">\</span>
+  <span class="nt">--evaluation-frequency</span> 1m <span class="se">\</span>
+  <span class="nt">--action</span> <span class="si">$(</span>az monitor action-group show <span class="nt">-g</span> myapp-rg <span class="nt">-n</span> my-actions <span class="nt">--query</span> <span class="nb">id</span> <span class="nt">-o</span> tsv<span class="si">)</span>
+</code></pre></div></div>
+
+<h3 id="kql-queries-kusto-query-language">KQL Queries (Kusto Query Language)</h3>
+
+<pre><code class="language-kusto">// Find failed requests in last hour
+requests
+| where timestamp &gt; ago(1h)
+| where success == false
+| summarize count() by resultCode, cloud_RoleName
+| order by count_ desc
+
+// Pod restart count
+KubePodInventory
+| where Namespace == "production"
+| where PodRestartCount &gt; 0
+| summarize max(PodRestartCount) by Name, Namespace
+| order by max_PodRestartCount desc
+
+// Error rate over time
+ContainerLog
+| where LogEntry contains "ERROR"
+| summarize ErrorCount = count() by bin(TimeGenerated, 5m)
+| render timechart
+</code></pre>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between Azure Active Directory and on-premises Active Directory?</strong></p>
+
+<blockquote>
+  <p><strong>Azure AD (Entra ID)</strong> is a cloud-based identity service — manages users, groups, OAuth/OIDC-based application access, conditional access policies, MFA. It communicates via HTTPS/REST. <strong>On-premises AD</strong> is domain services using LDAP/Kerberos/NTLM for traditional workloads. They can be synchronized via <strong>Azure AD Connect</strong>. Azure AD is not a direct replacement — it lacks Group Policy, LDAP, traditional domain join (Azure AD DS is needed for those).</p>
+</blockquote>
+
+<p><strong>Q2: What is a Resource Group in Azure?</strong></p>
+
+<blockquote>
+  <p>A Resource Group is a logical container for Azure resources. It serves as a <strong>management boundary</strong>: you can apply policies, RBAC, tags, and locks at the RG level. Resources in an RG share the same lifecycle — when you delete the RG, all resources inside are deleted. Resources can only belong to one RG. Best practice: group resources that share the same lifecycle and belong to the same application/environment.</p>
+</blockquote>
+
+<p><strong>Q3: What is the difference between Azure Blob Storage tiers?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Hot</strong>: Frequently accessed data — highest storage cost, lowest access cost</li>
+    <li><strong>Cool</strong>: Infrequently accessed (30+ days) — lower storage cost, higher access cost</li>
+    <li><strong>Cold</strong>: Rarely accessed (90+ days) — even lower storage cost</li>
+    <li><strong>Archive</strong>: Rarely accessed (180+ days) — lowest storage cost, but requires rehydration (hours) before access
+Lifecycle management policies automatically move blobs between tiers.</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: What is a Managed Identity and why is it preferred over service principals with keys?</strong></p>
+
+<blockquote>
+  <p>A Managed Identity is an Azure AD identity automatically managed by Azure for an Azure resource (VM, AKS pod, Function, etc.). The platform handles credential rotation automatically — there are <strong>no secrets to store or rotate</strong>. Types: System-assigned (tied to resource, deleted with it) and User-assigned (standalone, can be shared). This eliminates the risk of secret leakage and the toil of secret rotation.</p>
+</blockquote>
+
+<p><strong>Q5: Explain VNet Peering vs Azure VPN Gateway.</strong></p>
+
+<blockquote>
+  <p><strong>VNet Peering</strong>: Direct, private connection between two VNets over Microsoft backbone — low latency, no bandwidth limitations, no gateway required. Can be regional or global (cross-region). Not transitive by default (use Route Server or NVA for hub-spoke transitivity). <strong>VPN Gateway</strong>: IPSec tunnel connecting Azure VNet to on-premises or another cloud — useful for hybrid connectivity, up to 10 Gbps (ExpressRoute for higher throughput).</p>
+</blockquote>
+
+<p><strong>Q6: What is Azure Kubernetes Service (AKS) and what does Azure manage vs what you manage?</strong></p>
+
+<blockquote>
+  <p>AKS is a managed Kubernetes service. <strong>Azure manages</strong>: control plane (API server, etcd, scheduler) — patching, scaling, high availability, certificates. <strong>You manage</strong>: worker node pools, application deployments, networking (CNI plugin), RBAC, monitoring, ingress controllers, and node OS patching (though there are auto-upgrade options).</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: How would you design a zero-downtime deployment pipeline for AKS using Azure DevOps?</strong></p>
+
+<blockquote>
+  <ol>
+    <li><strong>Azure Container Registry</strong> with geo-replication and vulnerability scanning</li>
+    <li><strong>Azure DevOps pipeline</strong> stages: build → test → scan → push → deploy staging → approval gate → deploy prod</li>
+    <li><strong>AKS rolling update</strong> with <code class="language-plaintext highlighter-rouge">maxUnavailable: 0, maxSurge: 1</code> + proper readiness probes</li>
+    <li><strong>Azure Traffic Manager</strong> or <strong>Front Door</strong> for global traffic shifting (blue-green)</li>
+    <li><strong>Deployment environments</strong> in Azure DevOps with required approvals for production</li>
+    <li><strong>Helm + Helmfile</strong> for declarative deployment configuration</li>
+    <li><strong>Azure Monitor + alerts</strong> + auto-rollback pipeline trigger on error rate spike</li>
+  </ol>
+</blockquote>
+
+<p><strong>Q8: How does Azure Policy work and how do you use it for governance?</strong></p>
+
+<blockquote>
+  <p>Azure Policy evaluates resources against rules (policy definitions). Effect types: <code class="language-plaintext highlighter-rouge">Deny</code> (prevent non-compliant resource creation), <code class="language-plaintext highlighter-rouge">Audit</code> (log non-compliance), <code class="language-plaintext highlighter-rouge">Append</code> (add required fields), <code class="language-plaintext highlighter-rouge">DeployIfNotExists</code>/<code class="language-plaintext highlighter-rouge">Modify</code> (auto-remediate). Policies are assigned at management group/subscription/RG scope. <strong>Policy Initiative</strong> (Policy Set) groups related policies. Use cases: enforce tagging, require encryption, restrict allowed VM sizes, mandate private endpoints, require Azure Defender.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-aks-pod-cant-pull-image">🔵 Scenario 1: AKS Pod Can’t Pull Image</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Check pod status</span>
+kubectl describe pod failing-pod <span class="nt">-n</span> production
+<span class="c"># Look for: "Failed to pull image... unauthorized"</span>
+
+<span class="c"># 2. Verify AKS-ACR integration</span>
+az aks check-acr <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--name</span> prod-aks <span class="se">\</span>
+  <span class="nt">--acr</span> mycompanyregistry.azurecr.io
+
+<span class="c"># 3. Re-attach ACR if needed</span>
+az aks update <span class="se">\</span>
+  <span class="nt">--resource-group</span> myapp-rg <span class="se">\</span>
+  <span class="nt">--name</span> prod-aks <span class="se">\</span>
+  <span class="nt">--attach-acr</span> mycompanyregistry
+
+<span class="c"># 4. Check if image exists in ACR</span>
+az acr repository show-tags <span class="se">\</span>
+  <span class="nt">--name</span> mycompanyregistry <span class="se">\</span>
+  <span class="nt">--repository</span> myapp
+
+<span class="c"># 5. Check managed identity role assignment</span>
+<span class="nv">KUBELET_IDENTITY</span><span class="o">=</span><span class="si">$(</span>az aks show <span class="nt">-g</span> myapp-rg <span class="nt">-n</span> prod-aks <span class="se">\</span>
+  <span class="nt">--query</span> identityProfile.kubeletidentity.clientId <span class="nt">-o</span> tsv<span class="si">)</span>
+az role assignment list <span class="nt">--assignee</span> <span class="nv">$KUBELET_IDENTITY</span> <span class="se">\</span>
+  <span class="nt">--scope</span> <span class="si">$(</span>az acr show <span class="nt">-n</span> mycompanyregistry <span class="nt">--query</span> <span class="nb">id</span> <span class="nt">-o</span> tsv<span class="si">)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── AUTH ─────────────────────────────────────────────</span>
+az login
+az account list
+az account <span class="nb">set</span> <span class="nt">--subscription</span> <span class="s2">"My Subscription"</span>
+az ad signed-in-user show
+
+<span class="c"># ─── RESOURCE GROUPS ──────────────────────────────────</span>
+az group create <span class="nt">--name</span> myapp-rg <span class="nt">--location</span> eastus
+az group list <span class="nt">-o</span> table
+az group delete <span class="nt">--name</span> myapp-rg <span class="nt">--yes</span> <span class="nt">--no-wait</span>
+
+<span class="c"># ─── AKS ──────────────────────────────────────────────</span>
+az aks list <span class="nt">-o</span> table
+az aks get-credentials <span class="nt">-g</span> myapp-rg <span class="nt">-n</span> prod-aks
+az aks show <span class="nt">-g</span> myapp-rg <span class="nt">-n</span> prod-aks
+az aks nodepool list <span class="nt">-g</span> myapp-rg <span class="nt">--cluster-name</span> prod-aks
+
+<span class="c"># ─── ACR ──────────────────────────────────────────────</span>
+az acr list <span class="nt">-o</span> table
+az acr login <span class="nt">--name</span> mycompanyregistry
+az acr repository list <span class="nt">--name</span> mycompanyregistry
+
+<span class="c"># ─── STORAGE ──────────────────────────────────────────</span>
+az storage account list <span class="nt">-g</span> myapp-rg <span class="nt">-o</span> table
+az storage container list <span class="nt">--account-name</span> myaccount
+az storage blob list <span class="nt">--container-name</span> mycontainer <span class="nt">--account-name</span> myaccount
+
+<span class="c"># ─── MONITORING ───────────────────────────────────────</span>
+az monitor log-analytics query <span class="se">\</span>
+  <span class="nt">--workspace</span> &lt;workspace-id&gt; <span class="se">\</span>
+  <span class="nt">--analytics-query</span> <span class="s2">"ContainerLog | limit 20"</span>
+az monitor metrics list <span class="nt">--resource</span> &lt;resource-id&gt;
+
+<span class="c"># ─── BICEP ────────────────────────────────────────────</span>
+az bicep build <span class="nt">--file</span> main.bicep          <span class="c"># Compile to ARM</span>
+az deployment group create <span class="nt">-g</span> myapp-rg <span class="nt">--template-file</span> main.bicep
+az deployment group what-if <span class="nt">-g</span> myapp-rg <span class="nt">--template-file</span> main.bicep
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/AWS.html">← AWS</a></td>
+        <td><a href="/devops-interview-guide/GCP.html">GCP →</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">CI/CD (Azure DevOps) →</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security (Azure security) →</a></td>
+        <td><a href="/devops-interview-guide/Kubernetes.html">Kubernetes (AKS) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

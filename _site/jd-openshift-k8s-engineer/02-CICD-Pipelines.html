@@ -1,0 +1,2622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🔄 Module 2 — CI/CD Pipelines · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🔄 Module 2 — CI/CD Pipelines · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🔄 Module 2 — CI/CD Pipelines · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🔄 Module 2 — CI/CD Pipelines | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🔄 Module 2 — CI/CD Pipelines" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines.html" />
+<meta property="og:url" content="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🔄 Module 2 — CI/CD Pipelines" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🔄 Module 2 — CI/CD Pipelines","url":"/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         aria-current="page">
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link active"
+       aria-current="page">
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span class="breadcrumb-part">Jd openshift k8s engineer</span>
+            
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🔄 Module 2 — CI/CD Pipelines</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <p>{% raw %}</p>
+
+<h1 id="-module-2--cicd-pipelines">🔄 Module 2 — CI/CD Pipelines</h1>
+
+<blockquote>
+  <p><strong>JD Alignment:</strong> “Design, implement and maintain CI/CD pipelines for automated application deployment. Build and manage CI/CD pipelines using tools such as Jenkins, GitLab CI or similar.”</p>
+</blockquote>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core.html">← OpenShift &amp; Kubernetes Core</a></td>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/README.html">README</a></td>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance.html">Security &amp; Compliance →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#cicd-fundamentals">CI/CD Fundamentals</a></li>
+  <li><a href="#jenkins-pipelines">Jenkins Pipelines</a></li>
+  <li><a href="#gitlab-cicd">GitLab CI/CD</a></li>
+  <li><a href="#github-actions">GitHub Actions</a></li>
+  <li><a href="#openshift-pipelines-tekton">OpenShift Pipelines (Tekton)</a></li>
+  <li><a href="#gitops--argocd">GitOps &amp; ArgoCD</a></li>
+  <li><a href="#deployment-strategies">Deployment Strategies</a></li>
+</ol>
+
+<hr />
+
+<h2 id="cicd-fundamentals">CI/CD Fundamentals</h2>
+
+<hr />
+
+<h3 id="-q1-what-is-cicd-and-why-is-it-important-in-a-devops-culture">🟢 Q1. What is CI/CD and why is it important in a DevOps culture?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Continuous Integration (CI)
+  Developers merge code to a shared branch frequently (daily or multiple times/day).
+  Every merge triggers an automated pipeline: build → test → scan → artifact.
+  Goal: detect integration problems early, reduce "works on my machine" issues.
+
+Continuous Delivery (CD)
+  Every passing CI build is packaged and ready to deploy to production.
+  Deployment to production is a conscious manual decision (button click or approval gate).
+
+Continuous Deployment (CD — stronger form)
+  Every passing build is automatically deployed to production with no human gate.
+  Requires very high automated test coverage and confidence.
+</code></pre></div></div>
+
+<p><strong>Why it matters (JD context):</strong></p>
+<ul>
+  <li>Reduces time-to-market — code changes reach production in minutes, not weeks.</li>
+  <li>Reduces risk — small, frequent changes are easier to test and roll back.</li>
+  <li>Enables collaboration — Dev and Ops agree on the pipeline definition in Git.</li>
+  <li>Enables compliance — every deployment is traceable, auditable, and reproducible.</li>
+</ul>
+
+<hr />
+
+<h3 id="-q2-what-are-the-essential-stages-in-a-production-grade-cicd-pipeline">🟢 Q2. What are the essential stages in a production-grade CI/CD pipeline?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Code Commit (Git push / Merge Request)
+         │
+         ▼
+    1. SOURCE STAGE
+       ├── Checkout code
+       └── Set version / tag
+
+         │
+         ▼
+    2. BUILD STAGE
+       ├── Compile / transpile
+       ├── Build container image (Buildah / Docker / S2I)
+       └── Push image to registry with Git SHA tag
+
+         │
+         ▼
+    3. TEST STAGE
+       ├── Unit tests + coverage report
+       ├── Integration tests
+       ├── Static code analysis (SonarQube, ESLint)
+       └── Dependency vulnerability scan (Trivy, Snyk, OWASP)
+
+         │
+         ▼
+    4. PUBLISH / PACKAGE STAGE
+       ├── Tag image :latest or :v1.2.3
+       ├── Sign image (cosign / Notary)
+       └── Generate SBOM (Software Bill of Materials)
+
+         │
+         ▼
+    5. DEPLOY — STAGING
+       ├── Update Helm values / Kustomize / GitOps repo
+       ├── Wait for ArgoCD/Flux sync
+       └── Run smoke tests / acceptance tests
+
+         │
+         ▼
+    6. DEPLOY — PRODUCTION (manual gate or automated)
+       ├── Blue/Green swap or Canary release
+       ├── Monitor for errors / rollback threshold
+       └── Notify Slack / PagerDuty
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="jenkins-pipelines">Jenkins Pipelines</h2>
+
+<hr />
+
+<h3 id="-q3-how-do-you-write-a-production-jenkins-declarative-pipeline-for-an-openshift-deployment">🟡 Q3. How do you write a production Jenkins Declarative Pipeline for an OpenShift deployment?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Jenkinsfile</span>
+<span class="n">pipeline</span> <span class="o">{</span>
+    <span class="n">agent</span> <span class="o">{</span>
+        <span class="n">kubernetes</span> <span class="o">{</span>
+            <span class="n">yaml</span> <span class="s2">"""
+apiVersion: v1
+kind: Pod
+spec:
+  serviceAccountName: jenkins-agent-sa
+  containers:
+  - name: buildah
+    image: quay.io/buildah/stable:latest
+    securityContext:
+      privileged: false        # OpenShift: use fuse-overlayfs
+    volumeMounts:
+    - name: varlibcontainers
+      mountPath: /var/lib/containers
+  - name: oc-cli
+    image: registry.redhat.io/openshift4/ose-cli:latest
+    command: [cat]
+    tty: true
+  volumes:
+  - name: varlibcontainers
+    emptyDir: {}
+"""</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">environment</span> <span class="o">{</span>
+        <span class="n">APP_NAME</span>        <span class="o">=</span> <span class="s1">'my-nodeapp'</span>
+        <span class="n">NAMESPACE</span>       <span class="o">=</span> <span class="s1">'production'</span>
+        <span class="n">REGISTRY</span>        <span class="o">=</span> <span class="s1">'image-registry.openshift-image-registry.svc:5000'</span>
+        <span class="n">IMAGE</span>           <span class="o">=</span> <span class="s2">"${REGISTRY}/${NAMESPACE}/${APP_NAME}"</span>
+        <span class="n">SONAR_TOKEN</span>     <span class="o">=</span> <span class="n">credentials</span><span class="o">(</span><span class="s1">'sonar-token'</span><span class="o">)</span>
+        <span class="n">OC_TOKEN</span>        <span class="o">=</span> <span class="n">credentials</span><span class="o">(</span><span class="s1">'openshift-token'</span><span class="o">)</span>
+    <span class="o">}</span>
+
+    <span class="n">stages</span> <span class="o">{</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Checkout'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">checkout</span> <span class="n">scm</span>
+                <span class="n">script</span> <span class="o">{</span>
+                    <span class="n">env</span><span class="o">.</span><span class="na">GIT_COMMIT_SHORT</span> <span class="o">=</span> <span class="n">sh</span><span class="o">(</span><span class="nl">script:</span> <span class="s1">'git rev-parse --short HEAD'</span><span class="o">,</span> <span class="nl">returnStdout:</span> <span class="kc">true</span><span class="o">).</span><span class="na">trim</span><span class="o">()</span>
+                    <span class="n">env</span><span class="o">.</span><span class="na">IMAGE_TAG</span> <span class="o">=</span> <span class="s2">"${APP_NAME}:${env.GIT_COMMIT_SHORT}"</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Unit Tests'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">container</span><span class="o">(</span><span class="s1">'buildah'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">sh</span> <span class="s1">'npm ci &amp;&amp; npm test'</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="n">post</span> <span class="o">{</span>
+                <span class="n">always</span> <span class="o">{</span>
+                    <span class="n">junit</span> <span class="s1">'test-results/*.xml'</span>
+                    <span class="n">publishHTML</span> <span class="nl">target:</span> <span class="o">[</span>
+                        <span class="nl">reportDir:</span> <span class="s1">'coverage'</span><span class="o">,</span>
+                        <span class="nl">reportFiles:</span> <span class="s1">'index.html'</span><span class="o">,</span>
+                        <span class="nl">reportName:</span> <span class="s1">'Coverage Report'</span>
+                    <span class="o">]</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Code Quality'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">withSonarQubeEnv</span><span class="o">(</span><span class="s1">'SonarQube'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">sh</span> <span class="s2">"sonar-scanner -Dsonar.projectKey=${APP_NAME}"</span>
+                <span class="o">}</span>
+                <span class="n">timeout</span><span class="o">(</span><span class="nl">time:</span> <span class="mi">5</span><span class="o">,</span> <span class="nl">unit:</span> <span class="s1">'MINUTES'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">waitForQualityGate</span> <span class="nl">abortPipeline:</span> <span class="kc">true</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Build &amp; Push Image'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">container</span><span class="o">(</span><span class="s1">'buildah'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">sh</span> <span class="s2">"""
+                        buildah bud \
+                          --layers \
+                          --tag ${IMAGE}:${GIT_COMMIT_SHORT} \
+                          --tag ${IMAGE}:latest \
+                          .
+
+                        buildah push \
+                          --creds=serviceaccount:\$(cat /run/secrets/kubernetes.io/serviceaccount/token) \
+                          ${IMAGE}:${GIT_COMMIT_SHORT}
+
+                        buildah push ${IMAGE}:latest
+                    """</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Security Scan'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">sh</span> <span class="s2">"""
+                    trivy image \
+                      --exit-code 1 \
+                      --severity CRITICAL \
+                      --ignore-unfixed \
+                      ${IMAGE}:${GIT_COMMIT_SHORT}
+                """</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Deploy to Staging'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">container</span><span class="o">(</span><span class="s1">'oc-cli'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">sh</span> <span class="s2">"""
+                        oc login --token=${OC_TOKEN} --server=https://api.mycluster.example.com:6443
+                        oc set image deployment/${APP_NAME} \
+                          app=${IMAGE}:${GIT_COMMIT_SHORT} \
+                          -n staging
+                        oc rollout status deployment/${APP_NAME} -n staging --timeout=5m
+                    """</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Approval: Deploy to Production'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">when</span> <span class="o">{</span>
+                <span class="n">branch</span> <span class="s1">'main'</span>
+            <span class="o">}</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">input</span> <span class="nl">message:</span> <span class="s2">"Deploy ${GIT_COMMIT_SHORT} to PRODUCTION?"</span><span class="o">,</span>
+                      <span class="nl">submitter:</span> <span class="s1">'release-approvers'</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Deploy to Production'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">when</span> <span class="o">{</span>
+                <span class="n">branch</span> <span class="s1">'main'</span>
+            <span class="o">}</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">container</span><span class="o">(</span><span class="s1">'oc-cli'</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">sh</span> <span class="s2">"""
+                        oc set image deployment/${APP_NAME} \
+                          app=${IMAGE}:${GIT_COMMIT_SHORT} \
+                          -n production
+                        oc rollout status deployment/${APP_NAME} -n production --timeout=10m
+                    """</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">post</span> <span class="o">{</span>
+        <span class="n">success</span> <span class="o">{</span>
+            <span class="n">slackSend</span> <span class="nl">color:</span> <span class="s1">'good'</span><span class="o">,</span>
+                      <span class="nl">message:</span> <span class="s2">"✅ ${APP_NAME} ${GIT_COMMIT_SHORT} deployed to production"</span>
+        <span class="o">}</span>
+        <span class="n">failure</span> <span class="o">{</span>
+            <span class="n">slackSend</span> <span class="nl">color:</span> <span class="s1">'danger'</span><span class="o">,</span>
+                      <span class="nl">message:</span> <span class="s2">"❌ Pipeline FAILED: ${APP_NAME} ${env.STAGE_NAME}"</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q4-how-do-you-handle-jenkins-shared-libraries">🟡 Q4. How do you handle Jenkins shared libraries?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>Shared libraries allow reusing pipeline logic across multiple Jenkinsfiles.</p>
+
+<p><strong>Directory structure:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jenkins-shared-library/
+├── vars/
+│   ├── buildAndPush.groovy     # global functions (used as steps)
+│   └── deployToOpenShift.groovy
+├── src/
+│   └── org/myorg/Utils.groovy  # Groovy classes
+└── resources/
+    └── k8s/
+        └── agent-pod.yaml
+</code></pre></div></div>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// vars/deployToOpenShift.groovy</span>
+<span class="kt">def</span> <span class="nf">call</span><span class="o">(</span><span class="n">Map</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">def</span> <span class="n">app</span>     <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="na">appName</span>
+    <span class="kt">def</span> <span class="n">ns</span>      <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="na">namespace</span>
+    <span class="kt">def</span> <span class="n">image</span>   <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="na">image</span>
+    <span class="kt">def</span> <span class="n">timeout</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s1">'timeout'</span><span class="o">,</span> <span class="s1">'5m'</span><span class="o">)</span>
+
+    <span class="n">container</span><span class="o">(</span><span class="s1">'oc-cli'</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">sh</span> <span class="s2">"""
+            oc set image deployment/${app} app=${image} -n ${ns}
+            oc rollout status deployment/${app} -n ${ns} --timeout=${timeout}
+        """</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Jenkinsfile consuming the library</span>
+<span class="nd">@Library</span><span class="o">(</span><span class="s1">'my-shared-library@main'</span><span class="o">)</span> <span class="n">_</span>
+
+<span class="n">pipeline</span> <span class="o">{</span>
+    <span class="n">agent</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+    <span class="n">stages</span> <span class="o">{</span>
+        <span class="n">stage</span><span class="o">(</span><span class="s1">'Deploy'</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">steps</span> <span class="o">{</span>
+                <span class="n">deployToOpenShift</span><span class="o">(</span>
+                    <span class="nl">appName:</span> <span class="s1">'my-nodeapp'</span><span class="o">,</span>
+                    <span class="nl">namespace:</span> <span class="s1">'production'</span><span class="o">,</span>
+                    <span class="nl">image:</span> <span class="s2">"registry/my-nodeapp:${GIT_COMMIT_SHORT}"</span>
+                <span class="o">)</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Configure in Jenkins:</strong> Manage Jenkins → System → Global Pipeline Libraries → add Git repo + default version.</p>
+
+<hr />
+
+<h3 id="-q5-how-do-you-manage-jenkins-at-scale-on-openshift-what-are-the-best-practices">🔴 Q5. How do you manage Jenkins at scale on OpenShift? What are the best practices?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Architecture:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Jenkins Controller (1 pod — persistent storage for jobs/config)
+    └── Dynamic agents (ephemeral Kubernetes pods — created per build, deleted after)
+</code></pre></div></div>
+
+<p><strong>Best practices:</strong></p>
+
+<ol>
+  <li><strong>Use Kubernetes plugin for dynamic agents</strong> — no static agents, no waste:
+    <div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">agent</span> <span class="o">{</span>
+ <span class="n">kubernetes</span> <span class="o">{</span>
+     <span class="n">yaml</span> <span class="nf">readFile</span><span class="o">(</span><span class="s1">'ci/agent-pod.yaml'</span><span class="o">)</span>    <span class="err">#</span> <span class="n">Pod</span> <span class="n">template</span> <span class="k">in</span> <span class="n">source</span> <span class="n">control</span>
+     <span class="n">defaultContainer</span> <span class="s1">'builder'</span>
+ <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Controller config-as-code (JCasC):</strong> Store all Jenkins config in YAML managed by Git — no manual UI clicks:
+```yaml
+    <h1 id="jenkinsyaml-jcasc">jenkins.yaml (JCasC)</h1>
+    <p>jenkins:
+  systemMessage: “Managed by JCasC”
+  numExecutors: 0     # No builds on controller
+credentials:
+  system:
+ domainCredentials:</p>
+    <ul>
+      <li>credentials:
+        <ul>
+          <li>usernamePassword:
+  id: “sonar-token”
+  username: “admin”
+  password: “${SONAR_TOKEN}”   # Env var from Secret
+```</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Separate controller and agents onto dedicated infra nodes</strong> — taint infra nodes, use tolerations in agent pod templates.</p>
+  </li>
+  <li>
+    <p><strong>Resource limits on agent pods</strong> — prevent runaway builds from starving the cluster.</p>
+  </li>
+  <li>
+    <p><strong>Pipeline durability:</strong> Use <code class="language-plaintext highlighter-rouge">durabilityHint('PERFORMANCE_OPTIMIZED')</code> for most pipelines; only <code class="language-plaintext highlighter-rouge">MAX_SURVIVABILITY</code> for critical long-running jobs.</p>
+  </li>
+  <li>
+    <p><strong>Shared libraries in Git</strong> — version-controlled, tested, auditable.</p>
+  </li>
+  <li><strong>Backup:</strong> Back up <code class="language-plaintext highlighter-rouge">$JENKINS_HOME/jobs</code> and JCasC YAML regularly.</li>
+</ol>
+
+<hr />
+
+<h2 id="gitlab-cicd">GitLab CI/CD</h2>
+
+<hr />
+
+<h3 id="-q6-write-a-gitlab-ci-pipeline-that-builds-tests-scans-and-deploys-to-openshift">🟡 Q6. Write a GitLab CI pipeline that builds, tests, scans, and deploys to OpenShift.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .gitlab-ci.yml</span>
+<span class="na">stages</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">build</span>
+  <span class="pi">-</span> <span class="s">test</span>
+  <span class="pi">-</span> <span class="s">scan</span>
+  <span class="pi">-</span> <span class="s">deploy-staging</span>
+  <span class="pi">-</span> <span class="s">deploy-production</span>
+
+<span class="na">variables</span><span class="pi">:</span>
+  <span class="na">APP_NAME</span><span class="pi">:</span> <span class="s">my-nodeapp</span>
+  <span class="na">IMAGE</span><span class="pi">:</span> <span class="s">$CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA</span>
+  <span class="na">OCP_SERVER</span><span class="pi">:</span> <span class="s">https://api.mycluster.example.com:6443</span>
+  <span class="na">STAGING_NS</span><span class="pi">:</span> <span class="s">staging</span>
+  <span class="na">PROD_NS</span><span class="pi">:</span> <span class="s">production</span>
+
+<span class="c1"># ── BUILD ─────────────────────────────────────────────</span>
+<span class="na">build-image</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">build</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">quay.io/buildah/stable</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">buildah bud --layers -t $IMAGE .</span>
+    <span class="pi">-</span> <span class="s">buildah push --creds=$CI_REGISTRY_USER:$CI_REGISTRY_PASSWORD $IMAGE</span>
+  <span class="na">only</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">main</span>
+    <span class="pi">-</span> <span class="s">merge_requests</span>
+
+<span class="c1"># ── TEST ──────────────────────────────────────────────</span>
+<span class="na">unit-tests</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">test</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">node:18-alpine</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">npm ci</span>
+    <span class="pi">-</span> <span class="s">npm test -- --coverage</span>
+  <span class="na">coverage</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/Lines\s*:\s*(\d+\.\d+)%/'</span>
+  <span class="na">artifacts</span><span class="pi">:</span>
+    <span class="na">when</span><span class="pi">:</span> <span class="s">always</span>
+    <span class="na">reports</span><span class="pi">:</span>
+      <span class="na">junit</span><span class="pi">:</span> <span class="s">test-results/junit.xml</span>
+      <span class="na">coverage_report</span><span class="pi">:</span>
+        <span class="na">coverage_format</span><span class="pi">:</span> <span class="s">cobertura</span>
+        <span class="na">path</span><span class="pi">:</span> <span class="s">coverage/cobertura-coverage.xml</span>
+
+<span class="na">sonarqube</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">test</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">sonarsource/sonar-scanner-cli</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">sonar-scanner</span>
+      <span class="s">-Dsonar.projectKey=$APP_NAME</span>
+      <span class="s">-Dsonar.host.url=$SONAR_HOST_URL</span>
+      <span class="s">-Dsonar.login=$SONAR_TOKEN</span>
+  <span class="na">allow_failure</span><span class="pi">:</span> <span class="kc">false</span>
+
+<span class="c1"># ── SCAN ──────────────────────────────────────────────</span>
+<span class="na">trivy-scan</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">scan</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">aquasec/trivy:latest</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">trivy image</span>
+        <span class="s">--exit-code </span><span class="m">1</span>
+        <span class="s">--severity CRITICAL,HIGH</span>
+        <span class="s">--ignore-unfixed</span>
+        <span class="s">$IMAGE</span>
+  <span class="na">artifacts</span><span class="pi">:</span>
+    <span class="na">reports</span><span class="pi">:</span>
+      <span class="na">container_scanning</span><span class="pi">:</span> <span class="s">trivy-report.json</span>
+
+<span class="c1"># ── DEPLOY STAGING ─────────────────────────────────────</span>
+<span class="na">deploy-staging</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">deploy-staging</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">registry.redhat.io/openshift4/ose-cli:latest</span>
+  <span class="na">environment</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">staging</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">https://myapp-staging.apps.mycluster.example.com</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">oc login --token=$OCP_TOKEN --server=$OCP_SERVER --insecure-skip-tls-verify</span>
+    <span class="pi">-</span> <span class="s">oc set image deployment/$APP_NAME app=$IMAGE -n $STAGING_NS</span>
+    <span class="pi">-</span> <span class="s">oc rollout status deployment/$APP_NAME -n $STAGING_NS --timeout=5m</span>
+  <span class="na">only</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">main</span>
+
+<span class="c1"># ── DEPLOY PRODUCTION (manual gate) ──────────────────</span>
+<span class="na">deploy-production</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">deploy-production</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">registry.redhat.io/openshift4/ose-cli:latest</span>
+  <span class="na">environment</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">production</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">https://myapp.apps.mycluster.example.com</span>
+  <span class="na">when</span><span class="pi">:</span> <span class="s">manual</span>                <span class="c1"># Requires human approval in GitLab UI</span>
+  <span class="na">script</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">oc login --token=$OCP_TOKEN_PROD --server=$OCP_SERVER</span>
+    <span class="pi">-</span> <span class="s">oc set image deployment/$APP_NAME app=$IMAGE -n $PROD_NS</span>
+    <span class="pi">-</span> <span class="s">oc rollout status deployment/$APP_NAME -n $PROD_NS --timeout=10m</span>
+  <span class="na">only</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">main</span>
+  <span class="na">rules</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">if</span><span class="pi">:</span> <span class="s">$CI_COMMIT_BRANCH == "main"</span>
+      <span class="na">when</span><span class="pi">:</span> <span class="s">manual</span>
+      <span class="na">allow_failure</span><span class="pi">:</span> <span class="kc">false</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q7-what-is-the-difference-between-gitlab-ci-runners-and-jenkins-agents">🟡 Q7. What is the difference between GitLab CI runners and Jenkins agents?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>GitLab Runner</th>
+      <th>Jenkins Agent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Configuration</td>
+      <td><code class="language-plaintext highlighter-rouge">.gitlab-ci.yml</code> in repo</td>
+      <td>Jenkinsfile + Global config</td>
+    </tr>
+    <tr>
+      <td>Executor types</td>
+      <td>Docker, Kubernetes, Shell, SSH, VirtualBox</td>
+      <td>Kubernetes pod, Docker, SSH, Static node</td>
+    </tr>
+    <tr>
+      <td>Agent lifecycle</td>
+      <td>Ephemeral containers (Docker/K8s executor)</td>
+      <td>Ephemeral (K8s plugin) or persistent</td>
+    </tr>
+    <tr>
+      <td>Scaling</td>
+      <td>Runner auto-scales via K8s executor</td>
+      <td>K8s plugin creates pods on demand</td>
+    </tr>
+    <tr>
+      <td>Auth</td>
+      <td>Runner token registered to project/group</td>
+      <td>SA token in Kubernetes plugin</td>
+    </tr>
+    <tr>
+      <td>OpenShift native</td>
+      <td>GitLab Runner image available for OCP</td>
+      <td>Jenkins Operator available in OperatorHub</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>GitLab Runner on OpenShift:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># values.yaml for gitlab-runner Helm chart</span>
+<span class="na">gitlabUrl</span><span class="pi">:</span> <span class="s">https://gitlab.example.com</span>
+<span class="na">runnerRegistrationToken</span><span class="pi">:</span> <span class="s2">"</span><span class="s">your-token"</span>
+<span class="na">runners</span><span class="pi">:</span>
+  <span class="na">executor</span><span class="pi">:</span> <span class="s">kubernetes</span>
+  <span class="na">kubernetes</span><span class="pi">:</span>
+    <span class="na">namespace</span><span class="pi">:</span> <span class="s">gitlab-runners</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">ubuntu:22.04</span>
+    <span class="na">privileged</span><span class="pi">:</span> <span class="kc">false</span>
+    <span class="na">serviceAccountName</span><span class="pi">:</span> <span class="s">gitlab-runner-sa</span>
+    <span class="na">resources</span><span class="pi">:</span>
+      <span class="na">requests</span><span class="pi">:</span>
+        <span class="na">cpu</span><span class="pi">:</span> <span class="s">200m</span>
+        <span class="na">memory</span><span class="pi">:</span> <span class="s">256Mi</span>
+      <span class="na">limits</span><span class="pi">:</span>
+        <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2"</span>
+        <span class="na">memory</span><span class="pi">:</span> <span class="s">2Gi</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="github-actions">GitHub Actions</h2>
+
+<hr />
+
+<h3 id="-q8-what-is-github-actions-and-how-does-it-fit-into-a-cicd-workflow">🟢 Q8. What is GitHub Actions and how does it fit into a CI/CD workflow?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>GitHub Actions is a <strong>native CI/CD platform built into GitHub</strong> that lets you automate workflows triggered by repository events (push, pull request, release, schedule, etc.). Workflows are defined as YAML files stored under <code class="language-plaintext highlighter-rouge">.github/workflows/</code> and consist of <strong>jobs</strong> running on <strong>runners</strong> (GitHub-hosted or self-hosted).</p>
+
+<p><strong>Key concepts:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Concept</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Workflow</strong></td>
+      <td>YAML file describing the automation (<code class="language-plaintext highlighter-rouge">.github/workflows/*.yml</code>)</td>
+    </tr>
+    <tr>
+      <td><strong>Event</strong></td>
+      <td>Trigger — <code class="language-plaintext highlighter-rouge">push</code>, <code class="language-plaintext highlighter-rouge">pull_request</code>, <code class="language-plaintext highlighter-rouge">schedule</code>, <code class="language-plaintext highlighter-rouge">workflow_dispatch</code>, etc.</td>
+    </tr>
+    <tr>
+      <td><strong>Job</strong></td>
+      <td>Set of steps that run on the same runner; jobs run in parallel by default</td>
+    </tr>
+    <tr>
+      <td><strong>Step</strong></td>
+      <td>Individual shell command or reusable <strong>Action</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Action</strong></td>
+      <td>Reusable unit of work (composite, Docker, or JavaScript) from the Marketplace</td>
+    </tr>
+    <tr>
+      <td><strong>Runner</strong></td>
+      <td>VM or container that executes jobs; GitHub-hosted (<code class="language-plaintext highlighter-rouge">ubuntu-latest</code>, <code class="language-plaintext highlighter-rouge">windows-latest</code>) or self-hosted</td>
+    </tr>
+    <tr>
+      <td><strong>Context</strong></td>
+      <td>Runtime variables — <code class="language-plaintext highlighter-rouge">github</code>, <code class="language-plaintext highlighter-rouge">env</code>, <code class="language-plaintext highlighter-rouge">secrets</code>, <code class="language-plaintext highlighter-rouge">vars</code>, <code class="language-plaintext highlighter-rouge">matrix</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Comparison with Jenkins:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>GitHub Actions</th>
+      <th>Jenkins</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Configuration</td>
+      <td>YAML in repo (<code class="language-plaintext highlighter-rouge">.github/workflows/</code>)</td>
+      <td>Groovy <code class="language-plaintext highlighter-rouge">Jenkinsfile</code> in repo or SCM</td>
+    </tr>
+    <tr>
+      <td>Hosting</td>
+      <td>SaaS (GitHub-hosted) or self-hosted runners</td>
+      <td>Self-hosted always</td>
+    </tr>
+    <tr>
+      <td>Marketplace</td>
+      <td>20,000+ reusable Actions</td>
+      <td>Plugin ecosystem (1,800+)</td>
+    </tr>
+    <tr>
+      <td>Secrets</td>
+      <td>Encrypted repo / org / environment secrets</td>
+      <td>Credentials plugin</td>
+    </tr>
+    <tr>
+      <td>Kubernetes support</td>
+      <td>Actions Runner Controller (ARC)</td>
+      <td>Kubernetes plugin</td>
+    </tr>
+    <tr>
+      <td>Maintenance overhead</td>
+      <td>Minimal (GitHub-hosted)</td>
+      <td>High (agents, plugins, upgrades)</td>
+    </tr>
+    <tr>
+      <td>Audit / OIDC</td>
+      <td>Built-in OIDC for cloud auth</td>
+      <td>Manual setup</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="-q9-write-a-production-grade-github-actions-workflow-that-builds-tests-scans-and-deploys-to-openshift">🟡 Q9. Write a production-grade GitHub Actions workflow that builds, tests, scans, and deploys to OpenShift.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .github/workflows/ci-cd.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">CI/CD – Build, Test, Scan &amp; Deploy to OpenShift</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">]</span>
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">]</span>
+
+<span class="na">env</span><span class="pi">:</span>
+  <span class="na">APP_NAME</span><span class="pi">:</span> <span class="s">my-nodeapp</span>
+  <span class="na">REGISTRY</span><span class="pi">:</span> <span class="s">ghcr.io</span>
+  <span class="na">IMAGE</span><span class="pi">:</span> <span class="s">ghcr.io/${{ github.repository }}:${{ github.sha }}</span>
+  <span class="na">OCP_SERVER</span><span class="pi">:</span> <span class="s">https://api.mycluster.example.com:6443</span>
+  <span class="na">STAGING_NS</span><span class="pi">:</span> <span class="s">staging</span>
+  <span class="na">PROD_NS</span><span class="pi">:</span> <span class="s">production</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="c1"># ── BUILD ────────────────────────────────────────────────</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Build &amp; Push Image</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">permissions</span><span class="pi">:</span>
+      <span class="na">contents</span><span class="pi">:</span> <span class="s">read</span>
+      <span class="na">packages</span><span class="pi">:</span> <span class="s">write</span>        <span class="c1"># Required to push to GHCR</span>
+    <span class="na">outputs</span><span class="pi">:</span>
+      <span class="na">image</span><span class="pi">:</span> <span class="s">${{ env.IMAGE }}</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Log in to GHCR</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/login-action@v3</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">registry</span><span class="pi">:</span> <span class="s">${{ env.REGISTRY }}</span>
+          <span class="na">username</span><span class="pi">:</span> <span class="s">${{ github.actor }}</span>
+          <span class="na">password</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up Docker Buildx</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/setup-buildx-action@v3</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build and push image</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">docker/build-push-action@v5</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">context</span><span class="pi">:</span> <span class="s">.</span>
+          <span class="na">push</span><span class="pi">:</span> <span class="s">${{ github.ref == 'refs/heads/main' }}</span>
+          <span class="na">tags</span><span class="pi">:</span> <span class="s">${{ env.IMAGE }}</span>
+          <span class="na">cache-from</span><span class="pi">:</span> <span class="s">type=gha</span>
+          <span class="na">cache-to</span><span class="pi">:</span> <span class="s">type=gha,mode=max</span>
+
+  <span class="c1"># ── TEST ─────────────────────────────────────────────────</span>
+  <span class="na">test</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Unit Tests &amp; Code Coverage</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">build</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up Node.js</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-node@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">node-version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20'</span>
+          <span class="na">cache</span><span class="pi">:</span> <span class="s1">'</span><span class="s">npm'</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install dependencies</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">npm ci</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run tests with coverage</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">npm test -- --coverage --ci</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Upload coverage to Codecov</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">codecov/codecov-action@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">token</span><span class="pi">:</span> <span class="s">${{ secrets.CODECOV_TOKEN }}</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">SonarQube Scan</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">SonarSource/sonarcloud-github-action@master</span>
+        <span class="na">env</span><span class="pi">:</span>
+          <span class="na">GITHUB_TOKEN</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
+          <span class="na">SONAR_TOKEN</span><span class="pi">:</span> <span class="s">${{ secrets.SONAR_TOKEN }}</span>
+
+  <span class="c1"># ── SECURITY SCAN ────────────────────────────────────────</span>
+  <span class="na">scan</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Container Security Scan</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">build</span>
+    <span class="na">permissions</span><span class="pi">:</span>
+      <span class="na">security-events</span><span class="pi">:</span> <span class="s">write</span>  <span class="c1"># Required to upload SARIF to GitHub Security tab</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run Trivy vulnerability scan</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">aquasecurity/trivy-action@master</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">image-ref</span><span class="pi">:</span> <span class="s">${{ env.IMAGE }}</span>
+          <span class="na">format</span><span class="pi">:</span> <span class="s">sarif</span>
+          <span class="na">output</span><span class="pi">:</span> <span class="s">trivy-results.sarif</span>
+          <span class="na">severity</span><span class="pi">:</span> <span class="s">CRITICAL,HIGH</span>
+          <span class="na">exit-code</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1'</span>
+          <span class="na">ignore-unfixed</span><span class="pi">:</span> <span class="kc">true</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Upload Trivy SARIF to GitHub Security</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">github/codeql-action/upload-sarif@v3</span>
+        <span class="na">if</span><span class="pi">:</span> <span class="s">always()</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">sarif_file</span><span class="pi">:</span> <span class="s">trivy-results.sarif</span>
+
+  <span class="c1"># ── DEPLOY STAGING ───────────────────────────────────────</span>
+  <span class="na">deploy-staging</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to Staging</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">test</span><span class="pi">,</span> <span class="nv">scan</span><span class="pi">]</span>
+    <span class="na">if</span><span class="pi">:</span> <span class="s">github.ref == 'refs/heads/main'</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">staging</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s">https://myapp-staging.apps.mycluster.example.com</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install OpenShift CLI</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">redhat-actions/openshift-tools-installer@v1</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">oc</span><span class="pi">:</span> <span class="s">latest</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Authenticate to OpenShift (OIDC)</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">redhat-actions/oc-login@v1</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">openshift_server_url</span><span class="pi">:</span> <span class="s">${{ env.OCP_SERVER }}</span>
+          <span class="na">openshift_token</span><span class="pi">:</span> <span class="s">${{ secrets.OCP_STAGING_TOKEN }}</span>
+          <span class="na">insecure_skip_tls_verify</span><span class="pi">:</span> <span class="kc">false</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Update image and roll out</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">oc set image deployment/${{ env.APP_NAME }} \</span>
+            <span class="s">app=${{ env.IMAGE }} -n ${{ env.STAGING_NS }}</span>
+          <span class="s">oc rollout status deployment/${{ env.APP_NAME }} \</span>
+            <span class="s">-n ${{ env.STAGING_NS }} --timeout=5m</span>
+
+  <span class="c1"># ── DEPLOY PRODUCTION (manual gate) ─────────────────────</span>
+  <span class="na">deploy-production</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to Production</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">deploy-staging</span>
+    <span class="na">if</span><span class="pi">:</span> <span class="s">github.ref == 'refs/heads/main'</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">production</span>            <span class="c1"># Requires a reviewer to approve in GitHub UI</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s">https://myapp.apps.mycluster.example.com</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install OpenShift CLI</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">redhat-actions/openshift-tools-installer@v1</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">oc</span><span class="pi">:</span> <span class="s">latest</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Authenticate to OpenShift (Production)</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">redhat-actions/oc-login@v1</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">openshift_server_url</span><span class="pi">:</span> <span class="s">${{ env.OCP_SERVER }}</span>
+          <span class="na">openshift_token</span><span class="pi">:</span> <span class="s">${{ secrets.OCP_PROD_TOKEN }}</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Update image and roll out</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">oc set image deployment/${{ env.APP_NAME }} \</span>
+            <span class="s">app=${{ env.IMAGE }} -n ${{ env.PROD_NS }}</span>
+          <span class="s">oc rollout status deployment/${{ env.APP_NAME }} \</span>
+            <span class="s">-n ${{ env.PROD_NS }} --timeout=10m</span>
+</code></pre></div></div>
+
+<p><strong>Key best practices applied:</strong></p>
+<ul>
+  <li><strong>OIDC / short-lived tokens</strong> — use <code class="language-plaintext highlighter-rouge">redhat-actions/oc-login</code> with a service-account token stored as an encrypted secret; rotate regularly.</li>
+  <li><strong>Environment protection rules</strong> — the <code class="language-plaintext highlighter-rouge">production</code> environment in GitHub Settings requires a designated reviewer before the job runs.</li>
+  <li><strong>Layer caching</strong> — <code class="language-plaintext highlighter-rouge">cache-from/to: type=gha</code> speeds up repeated builds significantly.</li>
+  <li><strong>SARIF upload</strong> — Trivy findings surface directly in the GitHub Security tab without leaving the platform.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">permissions</code> blocks</strong> — follow the principle of least privilege; each job declares only the token permissions it needs.</li>
+</ul>
+
+<hr />
+
+<h3 id="-q10-how-do-you-use-github-actions-with-self-hosted-runners-on-openshift-actions-runner-controller">🟡 Q10. How do you use GitHub Actions with self-hosted runners on OpenShift (Actions Runner Controller)?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Actions Runner Controller (ARC)</strong> is an operator that manages self-hosted GitHub Actions runners as Kubernetes pods. It supports <strong>ephemeral runners</strong> (scale to zero, one pod per job) which is ideal for OpenShift.</p>
+
+<p><strong>Install ARC via Helm:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helm <span class="nb">install </span>arc <span class="se">\</span>
+  <span class="nt">--namespace</span> arc-systems <span class="se">\</span>
+  <span class="nt">--create-namespace</span> <span class="se">\</span>
+  oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
+</code></pre></div></div>
+
+<p><strong>Deploy a runner scale set:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># runner-scale-set.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">helm.toolkit.fluxcd.io/v2beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">HelmRelease</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">arc-runner-set</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">arc-runners</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">chart</span><span class="pi">:</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">chart</span><span class="pi">:</span> <span class="s">gha-runner-scale-set</span>
+      <span class="na">sourceRef</span><span class="pi">:</span>
+        <span class="na">kind</span><span class="pi">:</span> <span class="s">HelmRepository</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">arc</span>
+      <span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&gt;=0.9.0"</span>
+  <span class="na">values</span><span class="pi">:</span>
+    <span class="na">githubConfigUrl</span><span class="pi">:</span> <span class="s">https://github.com/my-org/my-repo</span>
+    <span class="na">githubConfigSecret</span><span class="pi">:</span> <span class="s">arc-github-secret</span>   <span class="c1"># contains GITHUB_PAT or App credentials</span>
+    <span class="na">minRunners</span><span class="pi">:</span> <span class="m">0</span>
+    <span class="na">maxRunners</span><span class="pi">:</span> <span class="m">10</span>
+    <span class="na">containerMode</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">kubernetes</span>                        <span class="c1"># Kubernetes dind-less mode</span>
+    <span class="na">template</span><span class="pi">:</span>
+      <span class="na">spec</span><span class="pi">:</span>
+        <span class="na">serviceAccountName</span><span class="pi">:</span> <span class="s">arc-runner-sa</span>
+        <span class="na">containers</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">runner</span>
+            <span class="na">image</span><span class="pi">:</span> <span class="s">ghcr.io/actions/actions-runner:latest</span>
+            <span class="na">resources</span><span class="pi">:</span>
+              <span class="na">requests</span><span class="pi">:</span>
+                <span class="na">cpu</span><span class="pi">:</span> <span class="s">500m</span>
+                <span class="na">memory</span><span class="pi">:</span> <span class="s">512Mi</span>
+              <span class="na">limits</span><span class="pi">:</span>
+                <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">2"</span>
+                <span class="na">memory</span><span class="pi">:</span> <span class="s">2Gi</span>
+</code></pre></div></div>
+
+<p><strong>Target the self-hosted runner in a workflow:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">arc-runner-set</span>     <span class="c1"># matches the scale set name</span>
+</code></pre></div></div>
+
+<p><strong>OpenShift-specific considerations:</strong></p>
+<ul>
+  <li>Grant the runner ServiceAccount the <code class="language-plaintext highlighter-rouge">anyuid</code> SCC only if absolutely necessary; prefer <code class="language-plaintext highlighter-rouge">restricted-v2</code>.</li>
+  <li>Use image pull secrets for private registries.</li>
+  <li>Store the GitHub PAT / App private key in an OpenShift <code class="language-plaintext highlighter-rouge">Secret</code>; never in plaintext.</li>
+</ul>
+
+<hr />
+
+<h3 id="-q11-how-do-you-manage-secrets-in-github-actions-securely">🟡 Q11. How do you manage secrets in GitHub Actions securely?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Three tiers of secrets storage:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scope</th>
+      <th>Where set</th>
+      <th>Accessible by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Repository secret</td>
+      <td>Repo → Settings → Secrets</td>
+      <td>All workflows in that repo</td>
+    </tr>
+    <tr>
+      <td>Environment secret</td>
+      <td>Repo → Settings → Environments</td>
+      <td>Jobs targeting that environment</td>
+    </tr>
+    <tr>
+      <td>Organisation secret</td>
+      <td>Org → Settings → Secrets</td>
+      <td>Selected repos in the org</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Best practices:</strong></p>
+<ol>
+  <li><strong>Use OIDC (keyless auth)</strong> — For AWS, Azure, GCP, and Vault, use OIDC federation so no static credentials are stored at all:
+```yaml
+permissions:
+  id-token: write
+  contents: read</li>
+</ol>
+
+<ul>
+  <li>name: Configure AWS credentials via OIDC
+uses: aws-actions/configure-aws-credentials@v4
+with:
+  role-to-assume: arn:aws:iam::123456789:role/github-actions-role
+  aws-region: us-east-1
+```
+    <ol>
+      <li><strong>Mask dynamic secrets</strong> — <code class="language-plaintext highlighter-rouge">echo "::add-mask::$SECRET_VALUE"</code> prevents the value from appearing in logs.</li>
+      <li><strong>Environment protection rules</strong> — Require a manual approval before environment secrets are surfaced to a job.</li>
+      <li><strong>Rotate regularly</strong> — Automated rotation via Vault Dynamic Secrets or AWS Secrets Manager integration.</li>
+      <li><strong>Never echo secrets</strong> — GitHub auto-redacts registered secrets in logs but any derived value is not auto-masked.</li>
+    </ol>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="openshift-pipelines-tekton">OpenShift Pipelines (Tekton)</h2>
+
+<hr />
+
+<h3 id="-q12-what-is-tekton-and-how-does-it-differ-from-jenkins">🟡 Q12. What is Tekton and how does it differ from Jenkins?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Jenkins</th>
+      <th>Tekton (OpenShift Pipelines)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Architecture</td>
+      <td>Controller + agents</td>
+      <td>Pure Kubernetes CRDs + pods</td>
+    </tr>
+    <tr>
+      <td>Pipeline definition</td>
+      <td>Groovy DSL (Jenkinsfile)</td>
+      <td>YAML (Task, Pipeline objects)</td>
+    </tr>
+    <tr>
+      <td>Execution</td>
+      <td>JVM on controller</td>
+      <td>Each Task runs as a Kubernetes Pod</td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td>Stored in Jenkins controller</td>
+      <td>Stored in Kubernetes (TaskRun, PipelineRun CRDs)</td>
+    </tr>
+    <tr>
+      <td>Scaling</td>
+      <td>Depends on Jenkins + K8s plugin</td>
+      <td>Native Kubernetes scaling</td>
+    </tr>
+    <tr>
+      <td>Reuse</td>
+      <td>Shared libraries</td>
+      <td>ClusterTask, Tekton Hub</td>
+    </tr>
+    <tr>
+      <td>Learning curve</td>
+      <td>Groovy + Jenkins knowledge</td>
+      <td>YAML + Kubernetes knowledge</td>
+    </tr>
+    <tr>
+      <td>OpenShift integration</td>
+      <td>Via Jenkins Operator</td>
+      <td>Native, included with OCP</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>When to choose Jenkins:</strong> Existing enterprise adoption, complex Groovy logic, many existing Jenkinsfiles.</p>
+
+<p><strong>When to choose Tekton:</strong> Greenfield, Kubernetes-native CI/CD, OpenShift-first, GitOps-aligned.</p>
+
+<hr />
+
+<h3 id="-q13-write-a-tekton-pipeline-for-building-and-deploying-a-container-image">🟡 Q13. Write a Tekton pipeline for building and deploying a container image.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Task: run unit tests</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">tekton.dev/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Task</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">run-tests</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">workspaces</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">source</span>
+  <span class="na">steps</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">test</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">node:18-alpine</span>
+    <span class="na">workingDir</span><span class="pi">:</span> <span class="s">$(workspaces.source.path)</span>
+    <span class="na">script</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">#!/bin/sh</span>
+      <span class="s">npm ci</span>
+      <span class="s">npm test</span>
+
+<span class="s">---</span>
+<span class="c1"># Pipeline</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">tekton.dev/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Pipeline</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">build-deploy</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">my-app</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">params</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">GIT_URL</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">IMAGE</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">NAMESPACE</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+    <span class="na">default</span><span class="pi">:</span> <span class="s">my-app</span>
+
+  <span class="na">workspaces</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">shared-workspace</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">docker-credentials</span>
+
+  <span class="na">tasks</span><span class="pi">:</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">clone</span>
+    <span class="na">taskRef</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">git-clone</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterTask</span>
+    <span class="na">workspaces</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">output</span>
+      <span class="na">workspace</span><span class="pi">:</span> <span class="s">shared-workspace</span>
+    <span class="na">params</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">url</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="s">$(params.GIT_URL)</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">revision</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="s">main</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">test</span>
+    <span class="na">taskRef</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">run-tests</span>
+    <span class="na">runAfter</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">clone</span><span class="pi">]</span>
+    <span class="na">workspaces</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">source</span>
+      <span class="na">workspace</span><span class="pi">:</span> <span class="s">shared-workspace</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">build-push</span>
+    <span class="na">taskRef</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">buildah</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterTask</span>
+    <span class="na">runAfter</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">test</span><span class="pi">]</span>
+    <span class="na">workspaces</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">source</span>
+      <span class="na">workspace</span><span class="pi">:</span> <span class="s">shared-workspace</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">dockerconfig</span>
+      <span class="na">workspace</span><span class="pi">:</span> <span class="s">docker-credentials</span>
+    <span class="na">params</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">IMAGE</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="s">$(params.IMAGE)</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">DOCKERFILE</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="s">./Dockerfile</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">TLSVERIFY</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">false"</span>     <span class="c1"># Internal registry</span>
+
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">deploy</span>
+    <span class="na">taskRef</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">openshift-client</span>
+      <span class="na">kind</span><span class="pi">:</span> <span class="s">ClusterTask</span>
+    <span class="na">runAfter</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">build-push</span><span class="pi">]</span>
+    <span class="na">params</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">SCRIPT</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="pi">|</span>
+        <span class="s">oc set image deployment/my-nodeapp \</span>
+          <span class="s">app=$(params.IMAGE) \</span>
+          <span class="s">-n $(params.NAMESPACE)</span>
+        <span class="s">oc rollout status deployment/my-nodeapp \</span>
+          <span class="s">-n $(params.NAMESPACE) --timeout=5m</span>
+
+<span class="s">---</span>
+<span class="c1"># Trigger via webhook</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">triggers.tekton.dev/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">EventListener</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">github-listener</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">triggers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">github-push</span>
+    <span class="na">interceptors</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">ref</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">github</span>
+      <span class="na">params</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">secretRef</span>
+        <span class="na">value</span><span class="pi">:</span>
+          <span class="na">secretName</span><span class="pi">:</span> <span class="s">github-webhook-secret</span>
+          <span class="na">secretKey</span><span class="pi">:</span> <span class="s">token</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">eventTypes</span>
+        <span class="na">value</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">push"</span><span class="pi">]</span>
+    <span class="na">bindings</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">ref</span><span class="pi">:</span> <span class="s">github-push-binding</span>
+    <span class="na">template</span><span class="pi">:</span>
+      <span class="na">ref</span><span class="pi">:</span> <span class="s">build-deploy-template</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="gitops--argocd">GitOps &amp; ArgoCD</h2>
+
+<hr />
+
+<h3 id="-q14-what-is-gitops-and-what-are-its-core-principles">🟡 Q14. What is GitOps and what are its core principles?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>GitOps is an operational model where Git is the <strong>single source of truth</strong> for both application code and infrastructure state.</p>
+
+<p><strong>Four core principles:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Principle</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Declarative</strong></td>
+      <td>Desired system state is expressed declaratively (YAML manifests, Helm charts, Kustomize)</td>
+    </tr>
+    <tr>
+      <td><strong>Versioned</strong></td>
+      <td>Desired state is stored in Git — full audit history, rollback via <code class="language-plaintext highlighter-rouge">git revert</code></td>
+    </tr>
+    <tr>
+      <td><strong>Automatically pulled</strong></td>
+      <td>A software agent (ArgoCD, Flux) continuously compares desired state (Git) to actual state (cluster)</td>
+    </tr>
+    <tr>
+      <td><strong>Continuously reconciled</strong></td>
+      <td>Divergence is detected and corrected automatically (self-healing)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>GitOps workflow:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Developer → git push → Git repo (app manifests)
+                           │
+                    ArgoCD/Flux detects diff
+                           │
+                    Syncs to OpenShift cluster
+                           │
+                    Sends notification (Slack/Webhook)
+</code></pre></div></div>
+
+<p><strong>Separation of concerns:</strong></p>
+<ul>
+  <li><strong>CI pipeline</strong> (Jenkins/GitLab): build image → push to registry → update image tag in GitOps repo.</li>
+  <li><strong>CD agent</strong> (ArgoCD): watches GitOps repo → applies changes to cluster.</li>
+</ul>
+
+<hr />
+
+<h3 id="-q15-explain-argocd-sync-policies-and-how-you-would-set-up-a-production-gitops-flow">🟡 Q15. Explain ArgoCD sync policies and how you would set up a production GitOps flow.</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>ArgoCD Application with automated sync:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">argoproj.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Application</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">my-nodeapp-production</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">openshift-gitops</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">project</span><span class="pi">:</span> <span class="s">default</span>
+
+  <span class="na">source</span><span class="pi">:</span>
+    <span class="na">repoURL</span><span class="pi">:</span> <span class="s">https://github.com/myorg/gitops-repo.git</span>
+    <span class="na">targetRevision</span><span class="pi">:</span> <span class="s">main</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">environments/production</span>
+    <span class="c1"># Kustomize overlay</span>
+    <span class="na">kustomize</span><span class="pi">:</span>
+      <span class="na">images</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">myapp=image-registry.openshift-image-registry.svc:5000/prod/myapp:abc1234</span>
+
+  <span class="na">destination</span><span class="pi">:</span>
+    <span class="na">server</span><span class="pi">:</span> <span class="s">https://kubernetes.default.svc</span>
+    <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+
+  <span class="na">syncPolicy</span><span class="pi">:</span>
+    <span class="na">automated</span><span class="pi">:</span>
+      <span class="na">prune</span><span class="pi">:</span> <span class="kc">true</span>          <span class="c1"># Delete resources removed from Git</span>
+      <span class="na">selfHeal</span><span class="pi">:</span> <span class="kc">true</span>       <span class="c1"># Revert manual oc apply / kubectl apply changes</span>
+    <span class="na">syncOptions</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">CreateNamespace=true</span>
+    <span class="pi">-</span> <span class="s">PrunePropagationPolicy=foreground</span>
+    <span class="pi">-</span> <span class="s">ApplyOutOfSyncOnly=true</span>   <span class="c1"># Only sync changed resources (faster)</span>
+    <span class="na">retry</span><span class="pi">:</span>
+      <span class="na">limit</span><span class="pi">:</span> <span class="m">3</span>
+      <span class="na">backoff</span><span class="pi">:</span>
+        <span class="na">duration</span><span class="pi">:</span> <span class="s">5s</span>
+        <span class="na">factor</span><span class="pi">:</span> <span class="m">2</span>
+        <span class="na">maxDuration</span><span class="pi">:</span> <span class="s">3m</span>
+</code></pre></div></div>
+
+<p><strong>GitOps repo structure:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gitops-repo/
+├── base/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   └── kustomization.yaml
+├── environments/
+│   ├── staging/
+│   │   ├── kustomization.yaml     # patches staging-specific values
+│   │   └── replica-patch.yaml
+│   └── production/
+│       ├── kustomization.yaml     # patches production-specific values
+│       └── replica-patch.yaml
+└── apps/
+    └── app-of-apps.yaml           # ArgoCD ApplicationSet
+</code></pre></div></div>
+
+<p><strong>CI pipeline updates image tag in GitOps repo (automated PR or direct push):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># In CI pipeline after successful build</span>
+<span class="nb">cd </span>gitops-repo
+kustomize edit <span class="nb">set </span>image <span class="nv">myapp</span><span class="o">=</span><span class="k">${</span><span class="nv">REGISTRY</span><span class="k">}</span>/myapp:<span class="k">${</span><span class="nv">GIT_SHA</span><span class="k">}</span>
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"ci: update myapp to </span><span class="k">${</span><span class="nv">GIT_SHA</span><span class="k">}</span><span class="s2">"</span>
+git push
+<span class="c"># ArgoCD detects change → syncs to cluster</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="deployment-strategies">Deployment Strategies</h2>
+
+<hr />
+
+<h3 id="-q16-compare-bluegreen-canary-and-rolling-deployment-strategies-when-would-you-use-each">🟡 Q16. Compare Blue/Green, Canary, and Rolling deployment strategies. When would you use each?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Strategy</th>
+      <th>Mechanism</th>
+      <th>Downtime</th>
+      <th>Risk</th>
+      <th>Rollback speed</th>
+      <th>Use case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Rolling</strong></td>
+      <td>Replace pods N at a time</td>
+      <td>Zero</td>
+      <td>Low–Medium</td>
+      <td>~minutes</td>
+      <td>Standard app updates</td>
+    </tr>
+    <tr>
+      <td><strong>Blue/Green</strong></td>
+      <td>Run two full environments; switch LB</td>
+      <td>Zero</td>
+      <td>Low</td>
+      <td>Instant</td>
+      <td>Breaking schema changes, high-stakes releases</td>
+    </tr>
+    <tr>
+      <td><strong>Canary</strong></td>
+      <td>Route % of traffic to new version</td>
+      <td>Zero</td>
+      <td>Very low</td>
+      <td>Instant</td>
+      <td>New features, gradual risk reduction</td>
+    </tr>
+    <tr>
+      <td><strong>Recreate</strong></td>
+      <td>Kill all old pods, start new</td>
+      <td>Yes</td>
+      <td>High</td>
+      <td>~minutes</td>
+      <td>Dev/test only</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Blue/Green on OpenShift:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Two Deployments: blue (current) and green (new)</span>
+oc apply <span class="nt">-f</span> deployment-green.yaml
+
+<span class="c"># Wait for green to be ready</span>
+oc rollout status deployment/myapp-green
+
+<span class="c"># Switch Route traffic from blue to green</span>
+oc patch route myapp <span class="nt">-p</span> <span class="s1">'{"spec":{"to":{"name":"myapp-green-svc"}}}'</span>
+
+<span class="c"># Keep blue running for rollback</span>
+<span class="c"># oc patch route myapp -p '{"spec":{"to":{"name":"myapp-blue-svc"}}}'</span>
+</code></pre></div></div>
+
+<p><strong>Canary on OpenShift (weighted routes):</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Route splits: 90% to stable, 10% to canary</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">route.openshift.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Route</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">to</span><span class="pi">:</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-stable-svc</span>
+    <span class="na">weight</span><span class="pi">:</span> <span class="m">90</span>
+  <span class="na">alternateBackends</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-canary-svc</span>
+    <span class="na">weight</span><span class="pi">:</span> <span class="m">10</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q17-how-do-you-implement-automated-rollback-in-a-cicd-pipeline">🟡 Q17. How do you implement automated rollback in a CI/CD pipeline?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Strategy 1 — Kubernetes rollout undo (fast):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># In pipeline post-deploy health check</span>
+<span class="nv">TIMEOUT</span><span class="o">=</span>120
+<span class="k">for </span>i <span class="k">in</span> <span class="si">$(</span><span class="nb">seq </span>1 <span class="nv">$TIMEOUT</span><span class="si">)</span><span class="p">;</span> <span class="k">do
+    </span><span class="nv">STATUS</span><span class="o">=</span><span class="si">$(</span>oc get deployment myapp <span class="nt">-n</span> production <span class="se">\</span>
+        <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.status.conditions[?(@.type=="Available")].status}'</span><span class="si">)</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$STATUS</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"True"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+        </span><span class="nb">echo</span> <span class="s2">"✅ Deployment healthy"</span>
+        <span class="nb">break
+    </span><span class="k">fi
+    if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$i</span><span class="s2">"</span> <span class="nt">-eq</span> <span class="s2">"</span><span class="nv">$TIMEOUT</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+        </span><span class="nb">echo</span> <span class="s2">"❌ Deployment unhealthy — rolling back"</span>
+        oc rollout undo deployment/myapp <span class="nt">-n</span> production
+        <span class="nb">exit </span>1
+    <span class="k">fi
+    </span><span class="nb">sleep </span>1
+<span class="k">done</span>
+</code></pre></div></div>
+
+<p><strong>Strategy 2 — GitOps revert (auditable):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># In pipeline</span>
+git revert HEAD <span class="nt">--no-edit</span>
+git push
+<span class="c"># ArgoCD detects revert → syncs old image tag → cluster rolls back</span>
+</code></pre></div></div>
+
+<p><strong>Strategy 3 — Argo Rollouts (progressive delivery with auto-rollback):</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">argoproj.io/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Rollout</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">strategy</span><span class="pi">:</span>
+    <span class="na">canary</span><span class="pi">:</span>
+      <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">setWeight</span><span class="pi">:</span> <span class="m">10</span>
+      <span class="pi">-</span> <span class="na">pause</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">duration</span><span class="pi">:</span> <span class="nv">5m</span><span class="pi">}</span>
+      <span class="pi">-</span> <span class="na">setWeight</span><span class="pi">:</span> <span class="m">50</span>
+      <span class="pi">-</span> <span class="na">pause</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">duration</span><span class="pi">:</span> <span class="nv">5m</span><span class="pi">}</span>
+      <span class="pi">-</span> <span class="na">setWeight</span><span class="pi">:</span> <span class="m">100</span>
+      <span class="na">analysis</span><span class="pi">:</span>
+        <span class="na">templates</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">templateName</span><span class="pi">:</span> <span class="s">success-rate</span>
+      <span class="na">args</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">service-name</span>
+        <span class="na">value</span><span class="pi">:</span> <span class="s">myapp-canary-svc</span>
+  <span class="c1"># If success rate &lt; 95%, auto-rollback to previous version</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q18-how-do-you-handle-secrets-in-a-cicd-pipeline-securely">🟡 Q18. How do you handle secrets in a CI/CD pipeline securely?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Anti-patterns to avoid:</strong></p>
+<ul>
+  <li>❌ Hardcoding secrets in Jenkinsfile or <code class="language-plaintext highlighter-rouge">.gitlab-ci.yml</code></li>
+  <li>❌ Storing secrets in Git (even in private repos)</li>
+  <li>❌ Logging secrets in build output</li>
+  <li>❌ Passing secrets as build args in Dockerfiles (they appear in image history)</li>
+</ul>
+
+<p><strong>Correct patterns:</strong></p>
+
+<p><strong>Jenkins Credentials API:</strong></p>
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">withCredentials</span><span class="o">([</span>
+    <span class="n">string</span><span class="o">(</span><span class="nl">credentialsId:</span> <span class="s1">'sonar-token'</span><span class="o">,</span> <span class="nl">variable:</span> <span class="s1">'SONAR_TOKEN'</span><span class="o">),</span>
+    <span class="n">usernamePassword</span><span class="o">(</span><span class="nl">credentialsId:</span> <span class="s1">'registry-creds'</span><span class="o">,</span>
+                     <span class="nl">usernameVariable:</span> <span class="s1">'REG_USER'</span><span class="o">,</span>
+                     <span class="nl">passwordVariable:</span> <span class="s1">'REG_PASS'</span><span class="o">)</span>
+<span class="o">])</span> <span class="o">{</span>
+    <span class="n">sh</span> <span class="s1">'buildah push --creds=$REG_USER:$REG_PASS ${IMAGE}'</span>
+<span class="o">}</span>
+<span class="c1">// $SONAR_TOKEN is masked in logs</span>
+</code></pre></div></div>
+
+<p><strong>GitLab CI protected variables:</strong></p>
+<ul>
+  <li>Defined at project/group level in UI → Settings → CI/CD → Variables.</li>
+  <li><code class="language-plaintext highlighter-rouge">Protected</code> flag: only available on protected branches.</li>
+  <li><code class="language-plaintext highlighter-rouge">Masked</code> flag: value never printed in job logs.</li>
+</ul>
+
+<p><strong>OpenShift Pipelines (Tekton) + Secret:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Mount credentials secret into pipeline workspace</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Secret</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">registry-credentials</span>
+  <span class="na">annotations</span><span class="pi">:</span>
+    <span class="na">tekton.dev/docker-0</span><span class="pi">:</span> <span class="s">image-registry.openshift-image-registry.svc:5000</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">kubernetes.io/dockerconfigjson</span>
+<span class="na">data</span><span class="pi">:</span>
+  <span class="na">.dockerconfigjson</span><span class="pi">:</span> <span class="s">&lt;base64&gt;</span>
+</code></pre></div></div>
+
+<p><strong>Best practice — HashiCorp Vault + Vault Agent Injector or External Secrets Operator:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Secret pulled from Vault at pod startup — never stored in etcd</span>
+<span class="na">annotations</span><span class="pi">:</span>
+  <span class="na">vault.hashicorp.com/agent-inject</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+  <span class="na">vault.hashicorp.com/role</span><span class="pi">:</span> <span class="s2">"</span><span class="s">myapp"</span>
+  <span class="na">vault.hashicorp.com/agent-inject-secret-config</span><span class="pi">:</span> <span class="s2">"</span><span class="s">secret/myapp/production"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q19-how-do-you-implement-multi-environment-promotion-in-a-cicd-pipeline">🔴 Q19. How do you implement multi-environment promotion in a CI/CD pipeline?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Recommended pattern: GitOps with promotion via PR/merge:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Git branches / tags:
+  feature-*  →  dev namespace     (auto-deploy on push)
+  main       →  staging namespace (auto-deploy on merge)
+  release/*  →  production namespace (manual approval + PR to prod branch)
+</code></pre></div></div>
+
+<p><strong>GitOps promotion workflow:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># CI pipeline after successful staging tests:</span>
+
+<span class="c"># 1. Create promotion PR to production GitOps branch</span>
+gh <span class="nb">pr </span>create <span class="se">\</span>
+  <span class="nt">--title</span> <span class="s2">"Promote myapp </span><span class="k">${</span><span class="nv">GIT_SHA</span><span class="k">}</span><span class="s2"> to production"</span> <span class="se">\</span>
+  <span class="nt">--body</span> <span class="s2">"Tested in staging. Trivy scan passed. SonarQube gate passed."</span> <span class="se">\</span>
+  <span class="nt">--base</span> production <span class="se">\</span>
+  <span class="nt">--head</span> main <span class="se">\</span>
+  <span class="nt">--reviewer</span> <span class="s2">"release-approvers"</span>
+
+<span class="c"># 2. Approver reviews diff (just the image tag change) and merges</span>
+<span class="c"># 3. ArgoCD on production cluster detects change → deploys</span>
+</code></pre></div></div>
+
+<p><strong>OpenShift-specific: use separate projects per environment:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>project: dev        (auto-sync from dev branch)
+project: staging    (auto-sync from main branch)
+project: production (manual sync, requires PR approval)
+</code></pre></div></div>
+
+<p><strong>Image promotion (no rebuild for production):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Promote the exact same immutable image SHA from staging to production</span>
+<span class="c"># Never rebuild for production — use the already-tested image</span>
+
+<span class="nv">STAGING_SHA</span><span class="o">=</span><span class="si">$(</span>oc get deployment myapp <span class="nt">-n</span> staging <span class="se">\</span>
+  <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.template.spec.containers[0].image}'</span> | <span class="nb">cut</span> <span class="nt">-d</span>: <span class="nt">-f2</span><span class="si">)</span>
+
+<span class="c"># Tag the staging-tested image as production-approved</span>
+oc tag staging/myapp:<span class="k">${</span><span class="nv">STAGING_SHA</span><span class="k">}</span> production/myapp:production-approved
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q20-how-do-you-measure-cicd-pipeline-performance-and-what-are-the-key-dora-metrics">🔴 Q20. How do you measure CI/CD pipeline performance and what are the key DORA metrics?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>DORA (DevOps Research and Assessment) Metrics:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Definition</th>
+      <th>Elite benchmark</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Deployment Frequency</strong></td>
+      <td>How often you deploy to production</td>
+      <td>Multiple times per day</td>
+    </tr>
+    <tr>
+      <td><strong>Lead Time for Changes</strong></td>
+      <td>Time from code commit to production</td>
+      <td>&lt; 1 hour</td>
+    </tr>
+    <tr>
+      <td><strong>Change Failure Rate</strong></td>
+      <td>% of deployments causing incidents</td>
+      <td>&lt; 5%</td>
+    </tr>
+    <tr>
+      <td><strong>MTTR</strong> (Mean Time to Restore)</td>
+      <td>Time to recover from a failure</td>
+      <td>&lt; 1 hour</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>How to collect:</strong></p>
+<ul>
+  <li><strong>Deployment Frequency:</strong> Track PipelineRun events in Tekton or Jenkins build history; export to Prometheus.</li>
+  <li><strong>Lead Time:</strong> Commit timestamp (Git webhook) → Deployment timestamp (Kubernetes event) — use Pelorus (OpenShift DORA tool).</li>
+  <li><strong>Change Failure Rate:</strong> Link deployments to incidents (PagerDuty/Jira) — # incidents caused by deployments / total deployments.</li>
+  <li><strong>MTTR:</strong> Incident open time → incident close time in incident management tool.</li>
+</ul>
+
+<p><strong>OpenShift Pelorus:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Red Hat's DORA metrics tool for OpenShift</span>
+helm <span class="nb">install </span>pelorus charts/pelorus <span class="se">\</span>
+  <span class="nt">--namespace</span> pelorus <span class="se">\</span>
+  <span class="nt">--set</span> exporters.deployment_frequency.enabled<span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+  <span class="nt">--set</span> exporters.lead_time.enabled<span class="o">=</span><span class="nb">true</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q21-what-is-the-difference-between-docker-build-and-buildah-in-an-openshift-context">🟡 Q21. What is the difference between <code class="language-plaintext highlighter-rouge">docker build</code> and <code class="language-plaintext highlighter-rouge">buildah</code> in an OpenShift context?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>docker build</th>
+      <th>buildah</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Daemon required</td>
+      <td>Yes (Docker daemon)</td>
+      <td>No (daemonless)</td>
+    </tr>
+    <tr>
+      <td>Root required</td>
+      <td>Usually yes</td>
+      <td>No (rootless mode)</td>
+    </tr>
+    <tr>
+      <td>OpenShift compatible</td>
+      <td>Limited (Docker socket not available)</td>
+      <td>Yes (fuse-overlayfs)</td>
+    </tr>
+    <tr>
+      <td>OCI compliance</td>
+      <td>Yes</td>
+      <td>Yes (fully OCI-compliant)</td>
+    </tr>
+    <tr>
+      <td>Build context</td>
+      <td>Docker protocol</td>
+      <td>OCI standard</td>
+    </tr>
+    <tr>
+      <td>Multi-stage</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Why buildah in OpenShift:</strong>
+OpenShift blocks privileged containers by default. Docker-in-Docker (mounting <code class="language-plaintext highlighter-rouge">/var/run/docker.sock</code>) requires <code class="language-plaintext highlighter-rouge">privileged: true</code>. Buildah uses <code class="language-plaintext highlighter-rouge">fuse-overlayfs</code> and works under the <code class="language-plaintext highlighter-rouge">anyuid</code> SCC without full privilege:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Buildah in OpenShift pipeline pod (no privileged needed)</span>
+buildah bud <span class="se">\</span>
+  <span class="nt">--storage-driver</span><span class="o">=</span>vfs <span class="se">\</span>
+  <span class="nt">--format</span><span class="o">=</span>oci <span class="se">\</span>
+  <span class="nt">-t</span> <span class="nv">$IMAGE</span> <span class="se">\</span>
+  <span class="nb">.</span>
+
+buildah push <span class="se">\</span>
+  <span class="nt">--tls-verify</span><span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+  <span class="nv">$IMAGE</span>
+</code></pre></div></div>
+
+<p><strong>Alternative: Kaniko</strong> (also daemonless, runs as unprivileged container):</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">build</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">gcr.io/kaniko-project/executor:latest</span>
+  <span class="na">args</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">--context=dir://$(workspaces.source.path)</span>
+  <span class="pi">-</span> <span class="s">--destination=$(params.IMAGE)</span>
+  <span class="pi">-</span> <span class="s">--insecure</span>          <span class="c1"># for internal registry</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q22-how-do-you-trigger-a-pipeline-on-a-git-push--merge-request-in-openshift-pipelines">🟡 Q22. How do you trigger a pipeline on a git push / merge request in OpenShift Pipelines?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>OpenShift Pipelines uses <strong>Triggers</strong> (Tekton Triggers):</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 1. Secret for webhook validation</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Secret</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">github-webhook-secret</span>
+<span class="na">stringData</span><span class="pi">:</span>
+  <span class="na">token</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mysecrettoken"</span>
+
+<span class="nn">---</span>
+<span class="c1"># 2. TriggerBinding — extract values from the webhook payload</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">triggers.tekton.dev/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">TriggerBinding</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">github-push-binding</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">params</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">git-url</span>
+    <span class="na">value</span><span class="pi">:</span> <span class="s">$(body.repository.clone_url)</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">git-revision</span>
+    <span class="na">value</span><span class="pi">:</span> <span class="s">$(body.head_commit.id)</span>
+
+<span class="nn">---</span>
+<span class="c1"># 3. TriggerTemplate — creates a PipelineRun</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">triggers.tekton.dev/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">TriggerTemplate</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">build-deploy-template</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">params</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">git-url</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">git-revision</span>
+  <span class="na">resourcetemplates</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">tekton.dev/v1</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">PipelineRun</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">generateName</span><span class="pi">:</span> <span class="s">build-deploy-run-</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">pipelineRef</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">build-deploy</span>
+      <span class="na">params</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">GIT_URL</span>
+        <span class="na">value</span><span class="pi">:</span> <span class="s">$(tt.params.git-url)</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">IMAGE</span>
+        <span class="na">value</span><span class="pi">:</span> <span class="s">image-registry.openshift-image-registry.svc:5000/my-app/myapp:$(tt.params.git-revision)</span>
+      <span class="na">workspaces</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">shared-workspace</span>
+        <span class="na">persistentVolumeClaim</span><span class="pi">:</span>
+          <span class="na">claimName</span><span class="pi">:</span> <span class="s">pipeline-pvc</span>
+
+<span class="nn">---</span>
+<span class="c1"># 4. EventListener — HTTP endpoint (becomes a Service + Route)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">triggers.tekton.dev/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">EventListener</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">github-listener</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">serviceAccountName</span><span class="pi">:</span> <span class="s">pipeline</span>
+  <span class="na">triggers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">github-push</span>
+    <span class="na">interceptors</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">ref</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">github</span>
+      <span class="na">params</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">secretRef</span>
+        <span class="na">value</span><span class="pi">:</span>
+          <span class="na">secretName</span><span class="pi">:</span> <span class="s">github-webhook-secret</span>
+          <span class="na">secretKey</span><span class="pi">:</span> <span class="s">token</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">eventTypes</span>
+        <span class="na">value</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">push</span><span class="pi">]</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">branches</span>
+        <span class="na">value</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">]</span>
+    <span class="na">bindings</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">ref</span><span class="pi">:</span> <span class="s">github-push-binding</span>
+    <span class="na">template</span><span class="pi">:</span>
+      <span class="na">ref</span><span class="pi">:</span> <span class="s">build-deploy-template</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Get the EventListener URL to configure in GitHub webhook</span>
+oc get route el-github-listener <span class="nt">-n</span> my-app <span class="nt">-o</span> <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.spec.host}'</span>
+<span class="c"># Set this as the Payload URL in GitHub → Settings → Webhooks</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-q23-how-do-you-ensure-pipeline-idempotency-and-handle-flaky-tests">🔴 Q23. How do you ensure pipeline idempotency and handle flaky tests?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p><strong>Pipeline idempotency</strong> means running the pipeline multiple times with the same input produces the same result — no side effects from partial runs.</p>
+
+<p><strong>Practices:</strong></p>
+<ol>
+  <li><strong>Immutable image tags:</strong> Always tag with Git commit SHA, never overwrite <code class="language-plaintext highlighter-rouge">:latest</code> in CI. <code class="language-plaintext highlighter-rouge">:latest</code> is for convenience only.</li>
+  <li><strong>Declarative deployments:</strong> <code class="language-plaintext highlighter-rouge">oc apply</code> is idempotent — run it 10 times, same result.</li>
+  <li><strong>Database migrations:</strong> Use tools like Flyway/Liquibase with versioned migration scripts — they track which migrations ran.</li>
+  <li><strong>Cleanup steps:</strong> Always clean workspace before build (<code class="language-plaintext highlighter-rouge">git clean -fdx</code>).</li>
+  <li><strong>Retry logic:</strong> Wrap network-dependent steps (image push, deploy) in retry loops.</li>
+</ol>
+
+<p><strong>Handling flaky tests:</strong></p>
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Jenkins: retry flaky test stage</span>
+<span class="n">stage</span><span class="o">(</span><span class="s1">'Integration Tests'</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">retry</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">sh</span> <span class="s1">'npm run test:integration'</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># GitLab CI: retry on failure</span>
+<span class="na">integration-tests</span><span class="pi">:</span>
+  <span class="na">retry</span><span class="pi">:</span>
+    <span class="na">max</span><span class="pi">:</span> <span class="m">2</span>
+    <span class="na">when</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">script_failure</span>
+      <span class="pi">-</span> <span class="s">runner_system_failure</span>
+</code></pre></div></div>
+
+<p><strong>Quarantine pattern:</strong> Flaky tests are moved to a <code class="language-plaintext highlighter-rouge">quarantine</code> suite. They still run but don’t block the pipeline. A separate nightly job tracks quarantine tests.</p>
+
+<hr />
+
+<h3 id="-q24-how-do-you-implement-compliance-gates-in-a-cicd-pipeline">🔴 Q24. How do you implement compliance gates in a CI/CD pipeline?</h3>
+
+<p><strong>Answer:</strong></p>
+
+<p>Compliance gates are mandatory checks that must pass before a deployment proceeds.</p>
+
+<p><strong>Example gates for enterprise environments:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gate</th>
+      <th>Tool</th>
+      <th>Blocking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SAST (static code analysis)</td>
+      <td>SonarQube quality gate</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Container vulnerability scan</td>
+      <td>Trivy, Clair, Snyk</td>
+      <td>Yes (CRITICAL)</td>
+    </tr>
+    <tr>
+      <td>License compliance</td>
+      <td>FOSSA, Black Duck</td>
+      <td>Yes (GPL violations)</td>
+    </tr>
+    <tr>
+      <td>Secret detection</td>
+      <td>Gitleaks, GitGuardian</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Image signing verification</td>
+      <td>cosign + Sigstore</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Change Management ticket</td>
+      <td>ServiceNow API check</td>
+      <td>Yes (prod only)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Jenkins — enforce change ticket before production deploy</span>
+<span class="n">stage</span><span class="o">(</span><span class="s1">'Change Management Gate'</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">when</span> <span class="o">{</span> <span class="n">environment</span> <span class="nl">name:</span> <span class="s1">'DEPLOY_ENV'</span><span class="o">,</span> <span class="nl">value:</span> <span class="s1">'production'</span> <span class="o">}</span>
+    <span class="n">steps</span> <span class="o">{</span>
+        <span class="n">script</span> <span class="o">{</span>
+            <span class="kt">def</span> <span class="n">response</span> <span class="o">=</span> <span class="n">httpRequest</span><span class="o">(</span>
+                <span class="nl">url:</span> <span class="s2">"https://servicenow.example.com/api/now/table/change_request?number=${CHANGE_TICKET}"</span><span class="o">,</span>
+                <span class="nl">authentication:</span> <span class="s1">'snow-credentials'</span>
+            <span class="o">)</span>
+            <span class="kt">def</span> <span class="n">data</span> <span class="o">=</span> <span class="n">readJSON</span> <span class="nl">text:</span> <span class="n">response</span><span class="o">.</span><span class="na">content</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">data</span><span class="o">.</span><span class="na">result</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">state</span> <span class="o">!=</span> <span class="s1">'Implement'</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">error</span><span class="o">(</span><span class="s2">"Change ticket ${CHANGE_TICKET} is not in Implement state — aborting"</span><span class="o">)</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>OpenShift image signing with cosign:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Sign the image after build</span>
+cosign sign <span class="se">\</span>
+  <span class="nt">--key</span> k8s://cosign-namespace/cosign-key <span class="se">\</span>
+  <span class="k">${</span><span class="nv">IMAGE</span><span class="k">}</span>@<span class="k">${</span><span class="nv">IMAGE_DIGEST</span><span class="k">}</span>
+
+<span class="c"># Verify before deploy (enforced by Kyverno policy)</span>
+cosign verify <span class="se">\</span>
+  <span class="nt">--key</span> k8s://cosign-namespace/cosign-key <span class="se">\</span>
+  <span class="k">${</span><span class="nv">IMAGE</span><span class="k">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <p><strong>Next:</strong> <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance.html">Security &amp; Compliance →</a></p>
+</blockquote>
+
+<p>{% endraw %}</p>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

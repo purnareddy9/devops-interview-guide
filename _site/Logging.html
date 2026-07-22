@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>📝 Logging — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="📝 Logging — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Logging.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="📝 Logging — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>📝 Logging — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="📝 Logging — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Logging.html" />
+<meta property="og:url" content="/devops-interview-guide/Logging.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="📝 Logging — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"📝 Logging — DevOps Interview Guide","url":"/devops-interview-guide/Logging.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">📝 Logging — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-logging--devops-interview-guide">📝 Logging — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Monitoring.html">← Monitoring</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#logging-fundamentals">Logging Fundamentals</a></li>
+  <li><a href="#elk-stack">ELK Stack</a></li>
+  <li><a href="#loki--promtail--grafana">Loki + Promtail + Grafana</a></li>
+  <li><a href="#fluentd--fluent-bit">Fluentd / Fluent Bit</a></li>
+  <li><a href="#structured-logging">Structured Logging</a></li>
+  <li><a href="#log-analysis--queries">Log Analysis &amp; Queries</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+</ol>
+
+<hr />
+
+<h2 id="logging-fundamentals">Logging Fundamentals</h2>
+
+<h3 id="log-levels">Log Levels</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Description</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TRACE</td>
+      <td>Most verbose</td>
+      <td>Deep debugging, method entries</td>
+    </tr>
+    <tr>
+      <td>DEBUG</td>
+      <td>Detailed diagnostic info</td>
+      <td>Development debugging</td>
+    </tr>
+    <tr>
+      <td>INFO</td>
+      <td>Normal operation events</td>
+      <td>Application milestones, state changes</td>
+    </tr>
+    <tr>
+      <td>WARN</td>
+      <td>Potential issues, recoverable</td>
+      <td>Deprecated usage, high latency</td>
+    </tr>
+    <tr>
+      <td>ERROR</td>
+      <td>Errors that need attention</td>
+      <td>Failed operations, caught exceptions</td>
+    </tr>
+    <tr>
+      <td>FATAL/CRITICAL</td>
+      <td>System cannot continue</td>
+      <td>Unrecoverable errors, crash</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="structured-vs-unstructured-logs">Structured vs Unstructured Logs</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Unstructured (hard to parse, search, and aggregate)
+2024-01-15 14:23:01 INFO  User john@example.com logged in from 192.168.1.1
+
+# Structured JSON (easy to query, filter, aggregate)
+{
+  "timestamp": "2024-01-15T14:23:01.123Z",
+  "level": "INFO",
+  "message": "User logged in",
+  "user_id": "user_123",
+  "email": "john@example.com",
+  "ip": "192.168.1.1",
+  "duration_ms": 45,
+  "trace_id": "abc123def456",
+  "service": "auth-service",
+  "version": "1.2.3",
+  "env": "production"
+}
+</code></pre></div></div>
+
+<h3 id="logging-architecture">Logging Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Application Pods
+       │ stdout/stderr
+       │
+   Log Collector (Fluent Bit / Promtail)
+   running as DaemonSet on each node
+       │
+       │ (parse, filter, enrich)
+       │
+   Log Aggregator (Logstash / Fluentd)
+   (optional transformation layer)
+       │
+       │ (ship to backend)
+       │
+   Log Storage + Search
+   (Elasticsearch, Loki, Splunk, CloudWatch)
+       │
+       │
+   Visualization + Alerting
+   (Kibana, Grafana, Splunk UI)
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="elk-stack">ELK Stack</h2>
+
+<h3 id="components">Components</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Elasticsearch</strong></td>
+      <td>Distributed search and analytics engine (stores logs)</td>
+    </tr>
+    <tr>
+      <td><strong>Logstash</strong></td>
+      <td>Data pipeline (ingest, transform, ship)</td>
+    </tr>
+    <tr>
+      <td><strong>Kibana</strong></td>
+      <td>Visualization and dashboarding</td>
+    </tr>
+    <tr>
+      <td><strong>Beats</strong> (Filebeat, Metricbeat)</td>
+      <td>Lightweight shippers (modern replacement for Logstash)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="elasticsearch">Elasticsearch</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Index management</span>
+<span class="c"># Create index template</span>
+curl <span class="nt">-X</span> PUT <span class="s2">"localhost:9200/_index_template/logs"</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="nt">-d</span><span class="s1">'
+{
+  "index_patterns": ["logs-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1,
+      "index.lifecycle.name": "logs-policy"
+    },
+    "mappings": {
+      "properties": {
+        "@timestamp": { "type": "date" },
+        "level": { "type": "keyword" },
+        "message": { "type": "text" },
+        "service": { "type": "keyword" },
+        "trace_id": { "type": "keyword" }
+      }
+    }
+  }
+}'</span>
+
+<span class="c"># Search queries</span>
+<span class="c"># Find all errors in last hour</span>
+curl <span class="nt">-X</span> GET <span class="s2">"localhost:9200/logs-*/_search"</span> <span class="nt">-d</span><span class="s1">'
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "term": { "level": "ERROR" } },
+        { "range": { "@timestamp": { "gte": "now-1h" } } }
+      ]
+    }
+  },
+  "sort": [{ "@timestamp": { "order": "desc" } }],
+  "size": 100
+}'</span>
+
+<span class="c"># Aggregations — error count per service</span>
+curl <span class="nt">-X</span> GET <span class="s2">"localhost:9200/logs-*/_search"</span> <span class="nt">-d</span><span class="s1">'
+{
+  "query": { "term": { "level": "ERROR" } },
+  "aggs": {
+    "by_service": {
+      "terms": { "field": "service", "size": 10 }
+    }
+  },
+  "size": 0
+}'</span>
+</code></pre></div></div>
+
+<h3 id="ilm-index-lifecycle-management">ILM (Index Lifecycle Management)</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"policy"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"phases"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"hot"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"min_age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0ms"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"rollover"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"max_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50gb"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"max_age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7d"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"set_priority"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"warm"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"min_age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7d"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"shrink"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"number_of_shards"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"forcemerge"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"max_num_segments"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"set_priority"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"cold"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"min_age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30d"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"freeze"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+          </span><span class="nl">"set_priority"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"delete"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"min_age"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90d"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"delete"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="logstash-pipeline">Logstash Pipeline</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># logstash.conf</span>
+<span class="n">input</span> <span class="p">{</span>
+  <span class="n">beats</span> <span class="p">{</span>
+    <span class="n">port</span> <span class="o">=&gt;</span> <span class="mi">5044</span>
+    <span class="n">ssl</span>  <span class="o">=&gt;</span> <span class="kp">true</span>
+    <span class="n">ssl_certificate</span> <span class="o">=&gt;</span> <span class="s2">"/etc/logstash/certs/logstash.crt"</span>
+    <span class="n">ssl_key</span>         <span class="o">=&gt;</span> <span class="s2">"/etc/logstash/certs/logstash.key"</span>
+  <span class="p">}</span>
+  <span class="n">kafka</span> <span class="p">{</span>
+    <span class="n">bootstrap_servers</span> <span class="o">=&gt;</span> <span class="s2">"kafka:9092"</span>
+    <span class="n">topics</span>            <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">"app-logs"</span><span class="p">]</span>
+    <span class="n">codec</span>             <span class="o">=&gt;</span> <span class="n">json</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">filter</span> <span class="p">{</span>
+  <span class="c1"># Parse JSON logs</span>
+  <span class="k">if</span> <span class="p">[</span><span class="n">message</span><span class="p">]</span> <span class="o">=~</span> <span class="sr">/^\{/</span> <span class="p">{</span>
+    <span class="n">json</span> <span class="p">{</span>
+      <span class="n">source</span> <span class="o">=&gt;</span> <span class="s2">"message"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1"># Parse nginx access logs</span>
+  <span class="k">if</span> <span class="p">[</span><span class="n">fields</span><span class="p">][</span><span class="n">log_type</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"nginx"</span> <span class="p">{</span>
+    <span class="n">grok</span> <span class="p">{</span>
+      <span class="n">match</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="s2">"message"</span> <span class="o">=&gt;</span> <span class="s1">'%{IPORHOST:client_ip} - %{DATA:user} \[%{HTTPDATE:timestamp}\] "%{WORD:method} %{DATA:path} HTTP/%{NUMBER:http_version}" %{NUMBER:response_code} %{NUMBER:bytes} "%{DATA:referrer}" "%{DATA:user_agent}" %{NUMBER:response_time}'</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">mutate</span> <span class="p">{</span>
+      <span class="n">convert</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">"response_code"</span> <span class="o">=&gt;</span> <span class="s2">"integer"</span> <span class="p">}</span>
+      <span class="n">convert</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">"response_time"</span> <span class="o">=&gt;</span> <span class="s2">"float"</span> <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1"># Add geo IP</span>
+  <span class="n">geoip</span> <span class="p">{</span>
+    <span class="n">source</span> <span class="o">=&gt;</span> <span class="s2">"client_ip"</span>
+    <span class="n">target</span> <span class="o">=&gt;</span> <span class="s2">"geoip"</span>
+  <span class="p">}</span>
+
+  <span class="c1"># Drop health check logs (reduce noise)</span>
+  <span class="k">if</span> <span class="p">[</span><span class="n">path</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"/health"</span> <span class="ow">or</span> <span class="p">[</span><span class="n">path</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"/metrics"</span> <span class="p">{</span>
+    <span class="n">drop</span> <span class="p">{</span> <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1"># Add environment tag</span>
+  <span class="n">mutate</span> <span class="p">{</span>
+    <span class="n">add_field</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">"environment"</span> <span class="o">=&gt;</span> <span class="s2">"%{[fields][env]}"</span> <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1"># Remove sensitive fields</span>
+  <span class="n">mutate</span> <span class="p">{</span>
+    <span class="n">remove_field</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="s2">"password"</span><span class="p">,</span> <span class="s2">"token"</span><span class="p">,</span> <span class="s2">"credit_card"</span> <span class="p">]</span>
+  <span class="p">}</span>
+
+  <span class="n">date</span> <span class="p">{</span>
+    <span class="n">match</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="s2">"timestamp"</span><span class="p">,</span> <span class="s2">"dd/MMM/yyyy:HH:mm:ss Z"</span> <span class="p">]</span>
+    <span class="n">target</span> <span class="o">=&gt;</span> <span class="s2">"@timestamp"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">output</span> <span class="p">{</span>
+  <span class="n">elasticsearch</span> <span class="p">{</span>
+    <span class="n">hosts</span>    <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">"https://elasticsearch:9200"</span><span class="p">]</span>
+    <span class="n">user</span>     <span class="o">=&gt;</span> <span class="s2">"logstash_writer"</span>
+    <span class="n">password</span> <span class="o">=&gt;</span> <span class="s2">"${LOGSTASH_PASSWORD}"</span>
+    <span class="n">index</span>    <span class="o">=&gt;</span> <span class="s2">"logs-%{[fields][service]}-%{+YYYY.MM.dd}"</span>
+    <span class="n">ilm_rollover_alias</span> <span class="o">=&gt;</span> <span class="s2">"logs-%{[fields][service]}"</span>
+    <span class="n">ilm_policy</span> <span class="o">=&gt;</span> <span class="s2">"logs-policy"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="kibana-dsl-queries">Kibana DSL Queries</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># KQL (Kibana Query Language — simpler)
+level: "ERROR" AND service: "checkout-service"
+response_code &gt;= 500 AND response_code &lt; 600
+message: "database" AND NOT level: "DEBUG"
+
+# Lucene query syntax
+level:ERROR AND service:checkout*
+@timestamp:[now-1h TO now] AND level:ERROR
+
+# EQL (Event Query Language — sequences)
+sequence by trace_id
+  [any where level == "ERROR"]
+  [any where level == "FATAL"]
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="loki--promtail--grafana">Loki + Promtail + Grafana</h2>
+
+<h3 id="why-loki">Why Loki?</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Prometheus approach applied to logs:
+- Only indexes labels (not full-text indexed like Elasticsearch)
+- Much lower resource usage and cost
+- Native Grafana integration (same interface as metrics)
+- LogQL is similar to PromQL
+- Best for Kubernetes environments (natural label integration)
+- Trade-off: slower full-text search than Elasticsearch
+</code></pre></div></div>
+
+<h3 id="loki-configuration">Loki Configuration</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># loki-config.yaml</span>
+<span class="na">auth_enabled</span><span class="pi">:</span> <span class="kc">false</span>
+
+<span class="na">server</span><span class="pi">:</span>
+  <span class="na">http_listen_port</span><span class="pi">:</span> <span class="m">3100</span>
+
+<span class="na">common</span><span class="pi">:</span>
+  <span class="na">path_prefix</span><span class="pi">:</span> <span class="s">/loki</span>
+  <span class="na">storage</span><span class="pi">:</span>
+    <span class="na">filesystem</span><span class="pi">:</span>
+      <span class="na">chunks_directory</span><span class="pi">:</span> <span class="s">/loki/chunks</span>
+      <span class="na">rules_directory</span><span class="pi">:</span> <span class="s">/loki/rules</span>
+  <span class="na">replication_factor</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">ring</span><span class="pi">:</span>
+    <span class="na">instance_addr</span><span class="pi">:</span> <span class="s">127.0.0.1</span>
+    <span class="na">kvstore</span><span class="pi">:</span>
+      <span class="na">store</span><span class="pi">:</span> <span class="s">inmemory</span>
+
+<span class="na">schema_config</span><span class="pi">:</span>
+  <span class="na">configs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">from</span><span class="pi">:</span> <span class="s">2020-10-24</span>
+      <span class="na">store</span><span class="pi">:</span> <span class="s">boltdb-shipper</span>
+      <span class="na">object_store</span><span class="pi">:</span> <span class="s">filesystem</span>
+      <span class="na">schema</span><span class="pi">:</span> <span class="s">v11</span>
+      <span class="na">index</span><span class="pi">:</span>
+        <span class="na">prefix</span><span class="pi">:</span> <span class="s">index_</span>
+        <span class="na">period</span><span class="pi">:</span> <span class="s">24h</span>
+
+<span class="na">ruler</span><span class="pi">:</span>
+  <span class="na">alertmanager_url</span><span class="pi">:</span> <span class="s">http://alertmanager:9093</span>
+
+<span class="na">limits_config</span><span class="pi">:</span>
+  <span class="na">ingestion_rate_mb</span><span class="pi">:</span> <span class="m">16</span>
+  <span class="na">ingestion_burst_size_mb</span><span class="pi">:</span> <span class="m">32</span>
+  <span class="na">max_entries_limit_per_query</span><span class="pi">:</span> <span class="m">5000</span>
+  <span class="na">retention_period</span><span class="pi">:</span> <span class="s">30d</span>
+</code></pre></div></div>
+
+<h3 id="promtail-configuration-kubernetes">Promtail Configuration (Kubernetes)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># promtail-config.yaml</span>
+<span class="na">server</span><span class="pi">:</span>
+  <span class="na">http_listen_port</span><span class="pi">:</span> <span class="m">9080</span>
+
+<span class="na">positions</span><span class="pi">:</span>
+  <span class="na">filename</span><span class="pi">:</span> <span class="s">/tmp/positions.yaml</span>
+
+<span class="na">clients</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">url</span><span class="pi">:</span> <span class="s">http://loki:3100/loki/api/v1/push</span>
+
+<span class="na">scrape_configs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">job_name</span><span class="pi">:</span> <span class="s">kubernetes-pods</span>
+    <span class="na">kubernetes_sd_configs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">pod</span>
+
+    <span class="na">pipeline_stages</span><span class="pi">:</span>
+    <span class="c1"># Parse JSON logs</span>
+    <span class="pi">-</span> <span class="na">json</span><span class="pi">:</span>
+        <span class="na">expressions</span><span class="pi">:</span>
+          <span class="na">level</span><span class="pi">:</span> <span class="s">level</span>
+          <span class="na">msg</span><span class="pi">:</span> <span class="s">message</span>
+          <span class="na">trace_id</span><span class="pi">:</span> <span class="s">trace_id</span>
+
+    <span class="c1"># Extract log level</span>
+    <span class="pi">-</span> <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">level</span><span class="pi">:</span>
+        <span class="na">trace_id</span><span class="pi">:</span>
+
+    <span class="c1"># Drop debug logs in production</span>
+    <span class="pi">-</span> <span class="na">drop</span><span class="pi">:</span>
+        <span class="na">expression</span><span class="pi">:</span> <span class="s1">'</span><span class="s">.*level=debug.*'</span>
+        <span class="na">drop_counter_reason</span><span class="pi">:</span> <span class="s">debug_log</span>
+
+    <span class="na">relabel_configs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">source_labels</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">__meta_kubernetes_namespace</span><span class="pi">]</span>
+      <span class="na">target_label</span><span class="pi">:</span> <span class="s">namespace</span>
+    <span class="pi">-</span> <span class="na">source_labels</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">__meta_kubernetes_pod_name</span><span class="pi">]</span>
+      <span class="na">target_label</span><span class="pi">:</span> <span class="s">pod</span>
+    <span class="pi">-</span> <span class="na">source_labels</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">__meta_kubernetes_pod_label_app</span><span class="pi">]</span>
+      <span class="na">target_label</span><span class="pi">:</span> <span class="s">app</span>
+    <span class="pi">-</span> <span class="na">source_labels</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">__meta_kubernetes_pod_container_name</span><span class="pi">]</span>
+      <span class="na">target_label</span><span class="pi">:</span> <span class="s">container</span>
+</code></pre></div></div>
+
+<h3 id="logql-queries">LogQL Queries</h3>
+
+<pre><code class="language-logql"># ─── BASIC LOG QUERIES ────────────────────────────────
+# All logs from checkout service
+{app="checkout", namespace="production"}
+
+# Filter for errors
+{app="checkout"} |= "ERROR"
+
+# Exclude health checks
+{app="nginx"} != "/health"
+
+# Regex filter
+{app="myapp"} |~ "error|exception|panic"
+
+# ─── PARSING ──────────────────────────────────────────
+# Parse JSON
+{app="myapp"} | json | level="ERROR"
+
+# Parse logfmt
+{app="myapp"} | logfmt | duration &gt; 100ms
+
+# Pattern matching
+{app="nginx"} | pattern '&lt;ip&gt; - - [&lt;_&gt;] "&lt;method&gt; &lt;path&gt; &lt;_&gt;" &lt;status&gt; &lt;size&gt;'
+    | status &gt;= 500
+
+# ─── METRIC QUERIES (LogQL) ───────────────────────────
+# Error rate per minute
+sum(rate({app="myapp"} |= "ERROR" [1m])) by (pod)
+
+# Request rate from nginx
+sum(rate({app="nginx"}
+    | pattern `&lt;_&gt; - - [&lt;_&gt;] "&lt;_ &lt;_&gt; &lt;_&gt;" &lt;status&gt; &lt;_&gt;`
+    [1m])) by (status)
+
+# Log volume by service
+sum(bytes_over_time({namespace="production"}[1h])) by (app)
+
+# 95th percentile duration
+quantile_over_time(0.95,
+    {app="api"} | json | unwrap duration_ms [5m])
+    by (endpoint)
+</code></pre>
+
+<hr />
+
+<h2 id="fluentd--fluent-bit">Fluentd / Fluent Bit</h2>
+
+<h3 id="fluent-bit-daemonset-on-kubernetes">Fluent Bit (DaemonSet on Kubernetes)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># fluent-bit-config.yaml</span>
+<span class="pi">[</span><span class="nv">SERVICE</span><span class="pi">]</span>
+    <span class="s">Flush         </span><span class="m">5</span>
+    <span class="s">Log_Level     info</span>
+    <span class="s">Daemon        off</span>
+    <span class="s">Parsers_File  parsers.conf</span>
+    <span class="s">HTTP_Server   On</span>
+    <span class="s">HTTP_Listen   0.0.0.0</span>
+    <span class="s">HTTP_Port     </span><span class="m">2020</span>
+
+<span class="pi">[</span><span class="nv">INPUT</span><span class="pi">]</span>
+    <span class="s">Name              tail</span>
+    <span class="s">Tag               kube.*</span>
+    <span class="s">Path              /var/log/containers/*.log</span>
+    <span class="s">Parser            docker</span>
+    <span class="s">DB                /var/log/flb_kube.db</span>
+    <span class="s">Mem_Buf_Limit     50MB</span>
+    <span class="s">Skip_Long_Lines   On</span>
+    <span class="s">Refresh_Interval  </span><span class="m">10</span>
+
+<span class="pi">[</span><span class="nv">FILTER</span><span class="pi">]</span>
+    <span class="s">Name                kubernetes</span>
+    <span class="s">Match               kube.*</span>
+    <span class="s">Kube_URL            https://kubernetes.default.svc:443</span>
+    <span class="s">Kube_CA_File        /var/run/secrets/kubernetes.io/serviceaccount/ca.crt</span>
+    <span class="s">Kube_Token_File     /var/run/secrets/kubernetes.io/serviceaccount/token</span>
+    <span class="s">Kube_Tag_Prefix     kube.var.log.containers.</span>
+    <span class="s">Merge_Log           On</span>
+    <span class="s">Merge_Log_Key       log_processed</span>
+    <span class="s">K8S-Logging.Parser  On</span>
+
+<span class="pi">[</span><span class="nv">FILTER</span><span class="pi">]</span>
+    <span class="s">Name    grep</span>
+    <span class="s">Match   kube.*</span>
+    <span class="s">Exclude log /health|/metrics|/readiness</span>
+
+<span class="pi">[</span><span class="nv">FILTER</span><span class="pi">]</span>
+    <span class="s">Name    record_modifier</span>
+    <span class="s">Match   kube.*</span>
+    <span class="s">Record  cluster production-eks</span>
+    <span class="s">Record  region us-east-1</span>
+
+<span class="pi">[</span><span class="nv">OUTPUT</span><span class="pi">]</span>
+    <span class="s">Name            es</span>
+    <span class="s">Match           kube.*</span>
+    <span class="s">Host            elasticsearch.logging.svc.cluster.local</span>
+    <span class="s">Port            </span><span class="m">9200</span>
+    <span class="s">Logstash_Format On</span>
+    <span class="s">Logstash_Prefix k8s-logs</span>
+    <span class="s">Include_Tag_Key On</span>
+    <span class="s">Time_Key        @timestamp</span>
+    <span class="s">Retry_Limit     </span><span class="m">5</span>
+    <span class="s">tls             On</span>
+    <span class="s">tls.verify      Off</span>
+    <span class="s">HTTP_User       fluent-bit</span>
+    <span class="s">HTTP_Passwd     ${ELASTICSEARCH_PASSWORD}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="structured-logging">Structured Logging</h2>
+
+<h3 id="application-logging-best-practices">Application Logging Best Practices</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Python — structlog
+</span><span class="kn">import</span> <span class="n">structlog</span>
+<span class="kn">import</span> <span class="n">logging</span>
+
+<span class="n">structlog</span><span class="p">.</span><span class="nf">configure</span><span class="p">(</span>
+    <span class="n">processors</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">structlog</span><span class="p">.</span><span class="n">stdlib</span><span class="p">.</span><span class="n">filter_by_level</span><span class="p">,</span>
+        <span class="n">structlog</span><span class="p">.</span><span class="n">stdlib</span><span class="p">.</span><span class="n">add_log_level</span><span class="p">,</span>
+        <span class="n">structlog</span><span class="p">.</span><span class="n">stdlib</span><span class="p">.</span><span class="n">add_logger_name</span><span class="p">,</span>
+        <span class="n">structlog</span><span class="p">.</span><span class="n">processors</span><span class="p">.</span><span class="nc">TimeStamper</span><span class="p">(</span><span class="n">fmt</span><span class="o">=</span><span class="sh">"</span><span class="s">iso</span><span class="sh">"</span><span class="p">),</span>
+        <span class="n">structlog</span><span class="p">.</span><span class="n">processors</span><span class="p">.</span><span class="nc">StackInfoRenderer</span><span class="p">(),</span>
+        <span class="n">structlog</span><span class="p">.</span><span class="n">processors</span><span class="p">.</span><span class="n">format_exc_info</span><span class="p">,</span>
+        <span class="n">structlog</span><span class="p">.</span><span class="n">processors</span><span class="p">.</span><span class="nc">JSONRenderer</span><span class="p">()</span>
+    <span class="p">],</span>
+    <span class="n">context_class</span><span class="o">=</span><span class="nb">dict</span><span class="p">,</span>
+    <span class="n">logger_factory</span><span class="o">=</span><span class="n">structlog</span><span class="p">.</span><span class="n">stdlib</span><span class="p">.</span><span class="nc">LoggerFactory</span><span class="p">(),</span>
+    <span class="n">cache_logger_on_first_use</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">structlog</span><span class="p">.</span><span class="nf">get_logger</span><span class="p">()</span>
+
+<span class="c1"># Request middleware — add trace_id to all logs in request
+</span><span class="k">class</span> <span class="nc">LoggingMiddleware</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">call_next</span><span class="p">):</span>
+        <span class="n">trace_id</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">headers</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">X-Trace-ID</span><span class="sh">"</span><span class="p">,</span> <span class="nf">generate_trace_id</span><span class="p">())</span>
+
+        <span class="c1"># Bind context for all subsequent logs in this request
+</span>        <span class="k">with</span> <span class="n">structlog</span><span class="p">.</span><span class="n">contextvars</span><span class="p">.</span><span class="nf">bound_contextvars</span><span class="p">(</span>
+            <span class="n">trace_id</span><span class="o">=</span><span class="n">trace_id</span><span class="p">,</span>
+            <span class="n">user_id</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">state</span><span class="p">.</span><span class="n">user_id</span> <span class="k">if</span> <span class="nf">hasattr</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">state</span><span class="p">,</span> <span class="sh">'</span><span class="s">user_id</span><span class="sh">'</span><span class="p">)</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+            <span class="n">path</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">url</span><span class="p">.</span><span class="n">path</span><span class="p">,</span>
+            <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">method</span><span class="p">,</span>
+        <span class="p">):</span>
+            <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">call_next</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+            <span class="n">duration_ms</span> <span class="o">=</span> <span class="p">(</span><span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span>
+
+            <span class="n">log</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span>
+                <span class="sh">"</span><span class="s">request_completed</span><span class="sh">"</span><span class="p">,</span>
+                <span class="n">status_code</span><span class="o">=</span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="p">,</span>
+                <span class="n">duration_ms</span><span class="o">=</span><span class="nf">round</span><span class="p">(</span><span class="n">duration_ms</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">response</span>
+</code></pre></div></div>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">// Go — zerolog</span>
+<span class="k">package</span> <span class="n">main</span>
+
+<span class="k">import</span> <span class="p">(</span>
+    <span class="s">"github.com/rs/zerolog"</span>
+    <span class="s">"github.com/rs/zerolog/log"</span>
+    <span class="s">"os"</span>
+    <span class="s">"time"</span>
+<span class="p">)</span>
+
+<span class="k">func</span> <span class="n">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c">// Configure JSON output</span>
+    <span class="n">zerolog</span><span class="o">.</span><span class="n">TimeFieldFormat</span> <span class="o">=</span> <span class="n">zerolog</span><span class="o">.</span><span class="n">TimeFormatUnixMs</span>
+    <span class="n">zerolog</span><span class="o">.</span><span class="n">SetGlobalLevel</span><span class="p">(</span><span class="n">zerolog</span><span class="o">.</span><span class="n">InfoLevel</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">func</span> <span class="n">processOrder</span><span class="p">(</span><span class="n">ctx</span> <span class="n">context</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">orderID</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+    <span class="n">logger</span> <span class="o">:=</span> <span class="n">log</span><span class="o">.</span><span class="n">With</span><span class="p">()</span><span class="o">.</span>
+        <span class="n">Str</span><span class="p">(</span><span class="s">"trace_id"</span><span class="p">,</span> <span class="n">getTraceID</span><span class="p">(</span><span class="n">ctx</span><span class="p">))</span><span class="o">.</span>
+        <span class="n">Str</span><span class="p">(</span><span class="s">"order_id"</span><span class="p">,</span> <span class="n">orderID</span><span class="p">)</span><span class="o">.</span>
+        <span class="n">Logger</span><span class="p">()</span>
+
+    <span class="n">start</span> <span class="o">:=</span> <span class="n">time</span><span class="o">.</span><span class="n">Now</span><span class="p">()</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">Info</span><span class="p">()</span><span class="o">.</span><span class="n">Msg</span><span class="p">(</span><span class="s">"processing order"</span><span class="p">)</span>
+
+    <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">fetchOrder</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">orderID</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">Error</span><span class="p">()</span><span class="o">.</span>
+            <span class="n">Err</span><span class="p">(</span><span class="n">err</span><span class="p">)</span><span class="o">.</span>
+            <span class="n">Dur</span><span class="p">(</span><span class="s">"duration"</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">Since</span><span class="p">(</span><span class="n">start</span><span class="p">))</span><span class="o">.</span>
+            <span class="n">Msg</span><span class="p">(</span><span class="s">"failed to fetch order"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">err</span>
+    <span class="p">}</span>
+
+    <span class="n">logger</span><span class="o">.</span><span class="n">Info</span><span class="p">()</span><span class="o">.</span>
+        <span class="n">Int</span><span class="p">(</span><span class="s">"item_count"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">Items</span><span class="p">))</span><span class="o">.</span>
+        <span class="n">Float64</span><span class="p">(</span><span class="s">"total_amount"</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">Total</span><span class="p">)</span><span class="o">.</span>
+        <span class="n">Dur</span><span class="p">(</span><span class="s">"duration"</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">Since</span><span class="p">(</span><span class="n">start</span><span class="p">))</span><span class="o">.</span>
+        <span class="n">Msg</span><span class="p">(</span><span class="s">"order processed successfully"</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="no">nil</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="log-analysis--queries">Log Analysis &amp; Queries</h2>
+
+<h3 id="common-investigation-patterns">Common Investigation Patterns</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── COMMAND LINE LOG ANALYSIS ───────────────────────</span>
+
+<span class="c"># Count errors per hour</span>
+<span class="nb">awk</span> <span class="s1">'{print $1}'</span> /var/log/app.log | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-rn</span> | <span class="nb">head</span> <span class="nt">-24</span>
+
+<span class="c"># Top 10 error messages</span>
+<span class="nb">grep</span> <span class="s2">"ERROR"</span> /var/log/app.log | <span class="nb">awk</span> <span class="nt">-F</span><span class="s1">'message":"'</span> <span class="s1">'{print $2}'</span> | <span class="se">\</span>
+  <span class="nb">awk</span> <span class="nt">-F</span><span class="s1">'"'</span> <span class="s1">'{print $1}'</span> | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-rn</span> | <span class="nb">head</span> <span class="nt">-10</span>
+
+<span class="c"># Find slow requests (&gt;1s)</span>
+jq <span class="s1">'select(.duration_ms &gt; 1000) | {timestamp, path, duration_ms}'</span> <span class="se">\</span>
+  /var/log/app.log | <span class="nb">head</span> <span class="nt">-20</span>
+
+<span class="c"># Error rate per minute</span>
+<span class="nb">awk</span> <span class="s1">'{print substr($1,1,16)}'</span> /var/log/app.log | <span class="se">\</span>
+  <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">awk</span> <span class="s1">'$2 ~ /ERROR/'</span>
+
+<span class="c"># Unique users with errors</span>
+<span class="nb">grep</span> <span class="s2">"ERROR"</span> /var/log/app.log | jq <span class="nt">-r</span> <span class="s1">'.user_id'</span> | <span class="se">\</span>
+  <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-rn</span> | <span class="nb">head</span> <span class="nt">-10</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between logging and monitoring?</strong></p>
+
+<blockquote>
+  <p><strong>Logging</strong> records discrete events with context — “what happened at this moment” (request received, error thrown, user logged in). Logs are human-readable event records. <strong>Monitoring</strong> aggregates metrics over time — “how is the system performing right now” (CPU 85%, 100 req/s, error rate 0.1%). Logs answer “what happened?”; monitoring answers “how is it going?”. Both are needed — monitoring alerts you to a problem, logs help you diagnose it.</p>
+</blockquote>
+
+<p><strong>Q2: What is the ELK stack?</strong></p>
+
+<blockquote>
+  <p><strong>E</strong>lasticsearch — full-text search and analytics database that stores logs. <strong>L</strong>ogstash — data pipeline that ingests, parses, transforms, and ships logs to Elasticsearch. <strong>K</strong>ibana — web UI for searching, visualizing, and dashboarding Elasticsearch data. Modern deployments often replace Logstash with the lighter <strong>Beats</strong> (Filebeat for logs, Metricbeat for metrics) and the stack is called Elastic Stack.</p>
+</blockquote>
+
+<p><strong>Q3: What is log rotation and why is it important?</strong></p>
+
+<blockquote>
+  <p>Log rotation automatically compresses, archives, and deletes old log files to prevent disk space exhaustion. Without rotation, log files grow indefinitely. Tools: <code class="language-plaintext highlighter-rouge">logrotate</code> (Linux), <code class="language-plaintext highlighter-rouge">systemd</code> journal size limits. Configuration includes: max file size, max age, number of files to retain, compression. In Kubernetes: containers write to stdout/stderr, and the container runtime handles rotation via <code class="language-plaintext highlighter-rouge">--log-opt max-size</code> and <code class="language-plaintext highlighter-rouge">--log-opt max-file</code>.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: How would you centralize logs from a Kubernetes cluster?</strong></p>
+
+<blockquote>
+  <p>Deploy a <strong>DaemonSet</strong> running <strong>Fluent Bit</strong> (lightweight) or <strong>Promtail</strong> on every node. It reads container logs from <code class="language-plaintext highlighter-rouge">/var/log/containers/</code>, enriches them with Kubernetes metadata (namespace, pod, container name, labels), and ships to a centralized backend (Elasticsearch/Loki). Alternatively, use the <strong>sidecar pattern</strong> for applications that can’t write to stdout. Cloud providers have native solutions: AWS CloudWatch Container Insights, GCP Cloud Logging, Azure Monitor.</p>
+</blockquote>
+
+<p><strong>Q5: What is the difference between Loki and Elasticsearch for log storage?</strong></p>
+
+<blockquote>
+  <p><strong>Elasticsearch</strong> indexes the full text of every log line — enables fast full-text search, complex queries, and analytics. Higher resource usage and cost. Best for compliance, security, and complex queries. <strong>Loki</strong> only indexes labels (similar to Prometheus) — much lower resource usage and cost. Full-text search is done by grep-like scanning, which is slower but acceptable for most use cases. Best for Kubernetes environments already using Prometheus/Grafana.</p>
+</blockquote>
+
+<p><strong>Q6: What are structured logs and why are they better than unstructured?</strong></p>
+
+<blockquote>
+  <p>Structured logs are machine-parseable records (JSON, logfmt) with well-defined fields. Benefits: <strong>queryable</strong> (filter by <code class="language-plaintext highlighter-rouge">level=ERROR AND user_id=123</code>), <strong>aggregatable</strong> (count errors by service), <strong>consistent</strong> (all services use same format), <strong>automation-friendly</strong> (dashboards, alerts can use specific fields). Unstructured logs require fragile regex parsing. Always use structured logging in production applications.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: How do you handle sensitive data (PII) in logs?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Prevention</strong>: never log passwords, tokens, credit cards, SSNs at the application level — sanitize before logging</li>
+    <li><strong>Masking</strong>: log pipeline (Logstash filter) removes or masks sensitive fields: <code class="language-plaintext highlighter-rouge">remove_field =&gt; ["password", "token"]</code></li>
+    <li><strong>Hashing</strong>: hash user IDs/emails for correlation without exposing PII: <code class="language-plaintext highlighter-rouge">sha256(user_id)</code></li>
+    <li><strong>Access control</strong>: restrict access to production logs (RBAC on Kibana/Grafana)</li>
+    <li><strong>Retention limits</strong>: comply with GDPR — define log retention based on data sensitivity</li>
+    <li><strong>Audit logs</strong>: separate, protected audit trail for security-sensitive actions</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q8: How would you design a logging system handling 1TB of logs per day?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Ingestion</strong>: Kafka as buffer (handles bursty log ingestion, provides durability)</li>
+    <li><strong>Processing</strong>: Logstash/Flink consumers reading from Kafka, parsing and filtering</li>
+    <li><strong>Hot storage</strong>: Elasticsearch cluster sized for 30-day retention (~30TB); use ILM for warm/cold tiers to S3/GCS</li>
+    <li><strong>Cold storage</strong>: S3/GCS with Parquet format for long-term compliance storage</li>
+    <li><strong>Indexing strategy</strong>: index per service per day, enable forcemerge on old indices</li>
+    <li><strong>Search</strong>: Elasticsearch for interactive queries; Athena/BigQuery for historical analytics</li>
+    <li><strong>Cost control</strong>: filter noise (health checks, debug) before ingestion; compress old indices</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-service-returning-500-errors">🔵 Scenario 1: Service Returning 500 Errors</h3>
+
+<p><em>“Your monitoring shows a spike in 500 errors for the payment service. How do you investigate using logs?”</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Narrow time range to the spike window in Kibana/Grafana
+
+2. Query:
+   {service="payment-service", level="ERROR"}
+   | Time range: last 15 minutes
+
+3. Look for patterns:
+   - Same error message repeating?
+   - Specific endpoint affected?
+   - Specific user IDs?
+   - Specific trace_ids (find the full request trace)?
+
+4. Kibana example query:
+   service: "payment-service" AND level: "ERROR" AND @timestamp: [now-15m TO now]
+
+5. Aggregate to find most common error
+6. Take a trace_id from an error → search it across all services (distributed trace)
+7. Find root cause: was it this service or upstream dependency?
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-run-elk-stack-locally">Lab 1: Run ELK Stack Locally</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># docker-compose.yml for ELK stack</span>
+<span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.8'</span>
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">elasticsearch</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">docker.elastic.co/elasticsearch/elasticsearch:8.11.0</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">discovery.type=single-node</span>
+      <span class="pi">-</span> <span class="s">xpack.security.enabled=false</span>
+      <span class="pi">-</span> <span class="s">ES_JAVA_OPTS=-Xms1g -Xmx1g</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">9200:9200"</span>
+
+  <span class="na">kibana</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">docker.elastic.co/kibana/kibana:8.11.0</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">ELASTICSEARCH_HOSTS=http://elasticsearch:9200</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">5601:5601"</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">elasticsearch</span>
+
+  <span class="na">filebeat</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">docker.elastic.co/beats/filebeat:8.11.0</span>
+    <span class="na">user</span><span class="pi">:</span> <span class="s">root</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro</span>
+      <span class="pi">-</span> <span class="s">/var/lib/docker/containers:/var/lib/docker/containers:ro</span>
+      <span class="pi">-</span> <span class="s">/var/run/docker.sock:/var/run/docker.sock:ro</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">elasticsearch</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># filebeat.yml</span>
+<span class="na">filebeat.inputs</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">container</span>
+  <span class="na">paths</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">/var/lib/docker/containers/*/*.log'</span>
+
+<span class="na">processors</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">add_docker_metadata</span><span class="pi">:</span> <span class="s">~</span>
+<span class="pi">-</span> <span class="na">decode_json_fields</span><span class="pi">:</span>
+    <span class="na">fields</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">message"</span><span class="pi">]</span>
+    <span class="na">target</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+
+<span class="na">output.elasticsearch</span><span class="pi">:</span>
+  <span class="na">hosts</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">elasticsearch:9200"</span><span class="pi">]</span>
+  <span class="na">index</span><span class="pi">:</span> <span class="s2">"</span><span class="s">filebeat-%{+yyyy.MM.dd}"</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Monitoring.html">← Monitoring</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security →</a></td>
+        <td><a href="/devops-interview-guide/Kubernetes.html">Kubernetes (log collection on K8s) →</a></td>
+        <td><a href="/devops-interview-guide/SRE.html">SRE (logging for SLOs) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

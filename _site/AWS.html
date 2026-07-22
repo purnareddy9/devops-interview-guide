@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>☁️ AWS — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="☁️ AWS — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/AWS.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="☁️ AWS — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>☁️ AWS — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="☁️ AWS — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/AWS.html" />
+<meta property="og:url" content="/devops-interview-guide/AWS.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="☁️ AWS — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"☁️ AWS — DevOps Interview Guide","url":"/devops-interview-guide/AWS.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">☁️ AWS — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="️-aws--devops-interview-guide">☁️ AWS — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Ansible.html">← Ansible</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Azure.html">Azure →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#core-services-overview">Core Services Overview</a></li>
+  <li><a href="#vpc--networking">VPC &amp; Networking</a></li>
+  <li><a href="#compute">Compute (EC2, ECS, EKS, Lambda)</a></li>
+  <li><a href="#storage">Storage (S3, EBS, EFS)</a></li>
+  <li><a href="#iam--security">IAM &amp; Security</a></li>
+  <li><a href="#databases">Databases (RDS, DynamoDB, ElastiCache)</a></li>
+  <li><a href="#cloudformation--cdk">CloudFormation &amp; CDK</a></li>
+  <li><a href="#monitoring--logging">Monitoring &amp; Logging</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="core-services-overview">Core Services Overview</h2>
+
+<h3 id="aws-global-infrastructure">AWS Global Infrastructure</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Region (us-east-1)
+├── Availability Zone (us-east-1a)
+│   └── Data center(s)
+├── Availability Zone (us-east-1b)
+└── Availability Zone (us-east-1c)
+
+Edge Location (CloudFront CDN PoPs — 400+)
+Local Zone (low-latency extension of Region)
+Wavelength Zone (5G networks)
+</code></pre></div></div>
+
+<h3 id="service-categories">Service Categories</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Key Services</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Compute</td>
+      <td>EC2, ECS, EKS, Lambda, Fargate, Batch</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>S3, EBS, EFS, FSx, Glacier</td>
+    </tr>
+    <tr>
+      <td>Database</td>
+      <td>RDS, Aurora, DynamoDB, ElastiCache, Redshift</td>
+    </tr>
+    <tr>
+      <td>Networking</td>
+      <td>VPC, Route53, CloudFront, ALB/NLB, Direct Connect</td>
+    </tr>
+    <tr>
+      <td>Security</td>
+      <td>IAM, KMS, Secrets Manager, WAF, Shield, GuardDuty</td>
+    </tr>
+    <tr>
+      <td>DevOps</td>
+      <td>CodePipeline, CodeBuild, CodeDeploy, CodeCommit, ECR</td>
+    </tr>
+    <tr>
+      <td>Monitoring</td>
+      <td>CloudWatch, CloudTrail, X-Ray, Config</td>
+    </tr>
+    <tr>
+      <td>Containers</td>
+      <td>ECR, ECS, EKS, App Mesh</td>
+    </tr>
+    <tr>
+      <td>Messaging</td>
+      <td>SQS, SNS, EventBridge, Kinesis</td>
+    </tr>
+    <tr>
+      <td>IaC</td>
+      <td>CloudFormation, CDK, Service Catalog</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="vpc--networking">VPC &amp; Networking</h2>
+
+<h3 id="well-architected-vpc-design">Well-Architected VPC Design</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──────────────── VPC: 10.0.0.0/16 ───────────────────┐
+│                                                        │
+│  ┌── AZ-1a ─────────────────────────────────────┐    │
+│  │  Public:  10.0.0.0/24  (ALB, NAT GW, Bastion) │    │
+│  │  Private: 10.0.10.0/24 (App servers, EKS)      │    │
+│  │  DB:      10.0.20.0/24 (RDS, ElastiCache)      │    │
+│  └───────────────────────────────────────────────┘    │
+│                                                        │
+│  ┌── AZ-1b ─────────────────────────────────────┐    │
+│  │  Public:  10.0.1.0/24                          │    │
+│  │  Private: 10.0.11.0/24                         │    │
+│  │  DB:      10.0.21.0/24                         │    │
+│  └───────────────────────────────────────────────┘    │
+│                                                        │
+│  Internet Gateway ──&gt; Public subnets                   │
+│  NAT Gateway ──────&gt; Private subnets (outbound only)   │
+│  VPC Endpoints ────&gt; S3, DynamoDB (no NAT needed)      │
+└───────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="vpc-key-components">VPC Key Components</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Internet Gateway</strong></td>
+      <td>Allow public subnet traffic in/out of internet</td>
+    </tr>
+    <tr>
+      <td><strong>NAT Gateway</strong></td>
+      <td>Allow private subnet outbound internet (one-way)</td>
+    </tr>
+    <tr>
+      <td><strong>Route Table</strong></td>
+      <td>Rules directing where traffic goes</td>
+    </tr>
+    <tr>
+      <td><strong>Security Group</strong></td>
+      <td>Stateful firewall at instance/ENI level</td>
+    </tr>
+    <tr>
+      <td><strong>NACL</strong></td>
+      <td>Stateless firewall at subnet level</td>
+    </tr>
+    <tr>
+      <td><strong>VPC Endpoint</strong></td>
+      <td>Private connection to AWS services (no internet)</td>
+    </tr>
+    <tr>
+      <td><strong>VPC Peering</strong></td>
+      <td>Connect two VPCs privately (non-transitive)</td>
+    </tr>
+    <tr>
+      <td><strong>Transit Gateway</strong></td>
+      <td>Hub-and-spoke VPC interconnect</td>
+    </tr>
+    <tr>
+      <td><strong>Direct Connect</strong></td>
+      <td>Dedicated physical link to AWS</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="terraform-vpc--subnets">Terraform: VPC + Subnets</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">resource</span> <span class="s2">"aws_vpc"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">cidr_block</span>           <span class="o">=</span> <span class="s2">"10.0.0.0/16"</span>
+  <span class="nx">enable_dns_hostnames</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">enable_dns_support</span>   <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">tags</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">Name</span> <span class="o">=</span> <span class="s2">"prod-vpc"</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># VPC Flow Logs</span>
+<span class="nx">resource</span> <span class="s2">"aws_flow_log"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">vpc_id</span>          <span class="o">=</span> <span class="nx">aws_vpc</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">traffic_type</span>    <span class="o">=</span> <span class="s2">"ALL"</span>
+  <span class="nx">iam_role_arn</span>    <span class="o">=</span> <span class="nx">aws_iam_role</span><span class="p">.</span><span class="nx">flow_log</span><span class="p">.</span><span class="nx">arn</span>
+  <span class="nx">log_destination</span> <span class="o">=</span> <span class="nx">aws_cloudwatch_log_group</span><span class="p">.</span><span class="nx">flow_log</span><span class="p">.</span><span class="nx">arn</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="compute">Compute</h2>
+
+<h3 id="ec2-key-concepts">EC2 Key Concepts</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Launch EC2 with userdata</span>
+aws ec2 run-instances <span class="se">\</span>
+  <span class="nt">--image-id</span> ami-0c55b159cbfafe1f0 <span class="se">\</span>
+  <span class="nt">--instance-type</span> t3.medium <span class="se">\</span>
+  <span class="nt">--key-name</span> my-key <span class="se">\</span>
+  <span class="nt">--security-group-ids</span> sg-12345678 <span class="se">\</span>
+  <span class="nt">--subnet-id</span> subnet-12345678 <span class="se">\</span>
+  <span class="nt">--iam-instance-profile</span> <span class="nv">Name</span><span class="o">=</span>MyRole <span class="se">\</span>
+  <span class="nt">--user-data</span> file://user_data.sh <span class="se">\</span>
+  <span class="nt">--tag-specifications</span> <span class="s1">'ResourceType=instance,Tags=[{Key=Name,Value=web01}]'</span>
+
+<span class="c"># Instance metadata (from inside EC2)</span>
+curl http://169.254.169.254/latest/meta-data/instance-id
+curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
+curl http://169.254.169.254/latest/dynamic/instance-identity/document
+</code></pre></div></div>
+
+<h3 id="ec2-instance-types-quick-reference">EC2 Instance Types Quick Reference</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Family</th>
+      <th>Optimized For</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>t3/t4g</td>
+      <td>Burstable general purpose</td>
+      <td>Web servers, dev</td>
+    </tr>
+    <tr>
+      <td>m6i/m7g</td>
+      <td>Balanced compute/memory</td>
+      <td>App servers</td>
+    </tr>
+    <tr>
+      <td>c6i/c7g</td>
+      <td>Compute optimized</td>
+      <td>CPU-heavy workloads</td>
+    </tr>
+    <tr>
+      <td>r6i/r7g</td>
+      <td>Memory optimized</td>
+      <td>Databases, caches</td>
+    </tr>
+    <tr>
+      <td>i3/i4i</td>
+      <td>Storage optimized</td>
+      <td>Databases, Elasticsearch</td>
+    </tr>
+    <tr>
+      <td>p3/p4</td>
+      <td>GPU</td>
+      <td>ML training</td>
+    </tr>
+    <tr>
+      <td>inf1/inf2</td>
+      <td>ML inference</td>
+      <td>Real-time predictions</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="auto-scaling-group">Auto Scaling Group</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">resource</span> <span class="s2">"aws_autoscaling_group"</span> <span class="s2">"web"</span> <span class="p">{</span>
+  <span class="nx">name</span>                <span class="o">=</span> <span class="s2">"web-asg"</span>
+  <span class="nx">vpc_zone_identifier</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">vpc</span><span class="p">.</span><span class="nx">private_subnets</span>
+  <span class="nx">min_size</span>            <span class="o">=</span> <span class="mi">2</span>
+  <span class="nx">max_size</span>            <span class="o">=</span> <span class="mi">20</span>
+  <span class="nx">desired_capacity</span>    <span class="o">=</span> <span class="mi">3</span>
+
+  <span class="nx">launch_template</span> <span class="p">{</span>
+    <span class="nx">id</span>      <span class="o">=</span> <span class="nx">aws_launch_template</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">id</span>
+    <span class="nx">version</span> <span class="o">=</span> <span class="s2">"$Latest"</span>
+  <span class="p">}</span>
+
+  <span class="nx">target_group_arns</span> <span class="o">=</span> <span class="p">[</span><span class="nx">aws_lb_target_group</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">arn</span><span class="p">]</span>
+
+  <span class="nx">health_check_type</span>         <span class="o">=</span> <span class="s2">"ELB"</span>
+  <span class="nx">health_check_grace_period</span> <span class="o">=</span> <span class="mi">300</span>
+
+  <span class="nx">instance_refresh</span> <span class="p">{</span>
+    <span class="nx">strategy</span> <span class="o">=</span> <span class="s2">"Rolling"</span>
+    <span class="nx">preferences</span> <span class="p">{</span>
+      <span class="nx">min_healthy_percentage</span> <span class="o">=</span> <span class="mi">90</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">tag</span> <span class="p">{</span>
+    <span class="nx">key</span>                 <span class="o">=</span> <span class="s2">"Name"</span>
+    <span class="nx">value</span>               <span class="o">=</span> <span class="s2">"web-asg-instance"</span>
+    <span class="nx">propagate_at_launch</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_autoscaling_policy"</span> <span class="s2">"scale_out"</span> <span class="p">{</span>
+  <span class="nx">name</span>                   <span class="o">=</span> <span class="s2">"scale-out"</span>
+  <span class="nx">autoscaling_group_name</span> <span class="o">=</span> <span class="nx">aws_autoscaling_group</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">name</span>
+  <span class="nx">policy_type</span>            <span class="o">=</span> <span class="s2">"TargetTrackingScaling"</span>
+
+  <span class="nx">target_tracking_configuration</span> <span class="p">{</span>
+    <span class="nx">predefined_metric_specification</span> <span class="p">{</span>
+      <span class="nx">predefined_metric_type</span> <span class="o">=</span> <span class="s2">"ASGAverageCPUUtilization"</span>
+    <span class="p">}</span>
+    <span class="nx">target_value</span> <span class="o">=</span> <span class="mf">70.0</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="eks">EKS</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create EKS cluster</span>
+eksctl create cluster <span class="se">\</span>
+  <span class="nt">--name</span> prod-cluster <span class="se">\</span>
+  <span class="nt">--region</span> us-east-1 <span class="se">\</span>
+  <span class="nt">--version</span> 1.28 <span class="se">\</span>
+  <span class="nt">--nodegroup-name</span> standard-workers <span class="se">\</span>
+  <span class="nt">--node-type</span> m5.large <span class="se">\</span>
+  <span class="nt">--nodes</span> 3 <span class="se">\</span>
+  <span class="nt">--nodes-min</span> 2 <span class="se">\</span>
+  <span class="nt">--nodes-max</span> 10 <span class="se">\</span>
+  <span class="nt">--managed</span>
+
+<span class="c"># Update kubeconfig</span>
+aws eks update-kubeconfig <span class="nt">--region</span> us-east-1 <span class="nt">--name</span> prod-cluster
+
+<span class="c"># Enable IRSA (IAM Roles for Service Accounts)</span>
+eksctl utils associate-iam-oidc-provider <span class="se">\</span>
+  <span class="nt">--cluster</span> prod-cluster <span class="nt">--approve</span>
+
+eksctl create iamserviceaccount <span class="se">\</span>
+  <span class="nt">--name</span> s3-reader <span class="se">\</span>
+  <span class="nt">--namespace</span> default <span class="se">\</span>
+  <span class="nt">--cluster</span> prod-cluster <span class="se">\</span>
+  <span class="nt">--attach-policy-arn</span> arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess <span class="se">\</span>
+  <span class="nt">--approve</span>
+</code></pre></div></div>
+
+<h3 id="lambda">Lambda</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># lambda_function.py
+</span><span class="kn">import</span> <span class="n">json</span>
+<span class="kn">import</span> <span class="n">boto3</span>
+<span class="kn">import</span> <span class="n">os</span>
+
+<span class="n">dynamodb</span> <span class="o">=</span> <span class="n">boto3</span><span class="p">.</span><span class="nf">resource</span><span class="p">(</span><span class="sh">'</span><span class="s">dynamodb</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">dynamodb</span><span class="p">.</span><span class="nc">Table</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="sh">'</span><span class="s">TABLE_NAME</span><span class="sh">'</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">lambda_handler</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Process SQS messages and store in DynamoDB.</span><span class="sh">"""</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">event</span><span class="p">[</span><span class="sh">'</span><span class="s">Records</span><span class="sh">'</span><span class="p">]:</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">loads</span><span class="p">(</span><span class="n">record</span><span class="p">[</span><span class="sh">'</span><span class="s">body</span><span class="sh">'</span><span class="p">])</span>
+
+        <span class="n">table</span><span class="p">.</span><span class="nf">put_item</span><span class="p">(</span><span class="n">Item</span><span class="o">=</span><span class="p">{</span>
+            <span class="sh">'</span><span class="s">id</span><span class="sh">'</span><span class="p">:</span> <span class="n">record</span><span class="p">[</span><span class="sh">'</span><span class="s">messageId</span><span class="sh">'</span><span class="p">],</span>
+            <span class="sh">'</span><span class="s">data</span><span class="sh">'</span><span class="p">:</span> <span class="n">body</span><span class="p">,</span>
+            <span class="sh">'</span><span class="s">timestamp</span><span class="sh">'</span><span class="p">:</span> <span class="n">context</span><span class="p">.</span><span class="n">aws_request_id</span>
+        <span class="p">})</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="sh">'</span><span class="s">statusCode</span><span class="sh">'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">body</span><span class="sh">'</span><span class="p">:</span> <span class="n">json</span><span class="p">.</span><span class="nf">dumps</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Processed </span><span class="si">{</span><span class="nf">len</span><span class="p">(</span><span class="n">event</span><span class="p">[</span><span class="sh">'</span><span class="s">Records</span><span class="sh">'</span><span class="p">])</span><span class="si">}</span><span class="s"> records</span><span class="sh">"</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Lambda Terraform</span>
+<span class="nx">resource</span> <span class="s2">"aws_lambda_function"</span> <span class="s2">"processor"</span> <span class="p">{</span>
+  <span class="nx">function_name</span> <span class="o">=</span> <span class="s2">"message-processor"</span>
+  <span class="nx">role</span>          <span class="o">=</span> <span class="nx">aws_iam_role</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nx">arn</span>
+  <span class="nx">handler</span>       <span class="o">=</span> <span class="s2">"lambda_function.lambda_handler"</span>
+  <span class="nx">runtime</span>       <span class="o">=</span> <span class="s2">"python3.11"</span>
+  <span class="nx">timeout</span>       <span class="o">=</span> <span class="mi">30</span>
+  <span class="nx">memory_size</span>   <span class="o">=</span> <span class="mi">256</span>
+
+  <span class="nx">filename</span>         <span class="o">=</span> <span class="nx">data</span><span class="err">.</span><span class="nx">archive_file</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nx">output_path</span>
+  <span class="nx">source_code_hash</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">archive_file</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nx">output_base64sha256</span>
+
+  <span class="nx">environment</span> <span class="p">{</span>
+    <span class="nx">variables</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">TABLE_NAME</span> <span class="o">=</span> <span class="nx">aws_dynamodb_table</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">name</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">tracing_config</span> <span class="p">{</span>
+    <span class="nx">mode</span> <span class="o">=</span> <span class="s2">"Active"</span>   <span class="c1"># X-Ray tracing</span>
+  <span class="p">}</span>
+
+  <span class="nx">vpc_config</span> <span class="p">{</span>
+    <span class="nx">subnet_ids</span>         <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">vpc</span><span class="p">.</span><span class="nx">private_subnets</span>
+    <span class="nx">security_group_ids</span> <span class="o">=</span> <span class="p">[</span><span class="nx">aws_security_group</span><span class="p">.</span><span class="nx">lambda</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_lambda_event_source_mapping"</span> <span class="s2">"sqs"</span> <span class="p">{</span>
+  <span class="nx">event_source_arn</span> <span class="o">=</span> <span class="nx">aws_sqs_queue</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">arn</span>
+  <span class="nx">function_name</span>    <span class="o">=</span> <span class="nx">aws_lambda_function</span><span class="p">.</span><span class="nx">processor</span><span class="p">.</span><span class="nx">arn</span>
+  <span class="nx">batch_size</span>       <span class="o">=</span> <span class="mi">10</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="storage">Storage</h2>
+
+<h3 id="s3">S3</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># CLI operations</span>
+aws s3 <span class="nb">ls </span>s3://my-bucket/prefix/
+aws s3 <span class="nb">cp </span>file.txt s3://my-bucket/
+aws s3 <span class="nb">sync</span> ./local-dir s3://my-bucket/backup/ <span class="nt">--delete</span>
+aws s3 presign s3://my-bucket/private-file.pdf <span class="nt">--expires-in</span> 3600
+
+<span class="c"># Multipart upload (large files)</span>
+aws s3 <span class="nb">cp </span>large-file.zip s3://my-bucket/ <span class="nt">--multipart-threshold</span> 100MB
+
+<span class="c"># S3 lifecycle policy</span>
+aws s3api put-bucket-lifecycle-configuration <span class="se">\</span>
+  <span class="nt">--bucket</span> my-bucket <span class="se">\</span>
+  <span class="nt">--lifecycle-configuration</span> file://lifecycle.json
+</code></pre></div></div>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># S3 bucket with security best practices</span>
+<span class="nx">resource</span> <span class="s2">"aws_s3_bucket"</span> <span class="s2">"data"</span> <span class="p">{</span>
+  <span class="nx">bucket</span> <span class="o">=</span> <span class="s2">"my-data-${var.account_id}"</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_s3_bucket_versioning"</span> <span class="s2">"data"</span> <span class="p">{</span>
+  <span class="nx">bucket</span> <span class="o">=</span> <span class="nx">aws_s3_bucket</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">versioning_configuration</span> <span class="p">{</span> <span class="nx">status</span> <span class="o">=</span> <span class="s2">"Enabled"</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_s3_bucket_server_side_encryption_configuration"</span> <span class="s2">"data"</span> <span class="p">{</span>
+  <span class="nx">bucket</span> <span class="o">=</span> <span class="nx">aws_s3_bucket</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">rule</span> <span class="p">{</span>
+    <span class="nx">apply_server_side_encryption_by_default</span> <span class="p">{</span>
+      <span class="nx">sse_algorithm</span>     <span class="o">=</span> <span class="s2">"aws:kms"</span>
+      <span class="nx">kms_master_key_id</span> <span class="o">=</span> <span class="nx">aws_kms_key</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">arn</span>
+    <span class="p">}</span>
+    <span class="nx">bucket_key_enabled</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_s3_bucket_public_access_block"</span> <span class="s2">"data"</span> <span class="p">{</span>
+  <span class="nx">bucket</span>                  <span class="o">=</span> <span class="nx">aws_s3_bucket</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">block_public_acls</span>       <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">block_public_policy</span>     <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">ignore_public_acls</span>      <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">restrict_public_buckets</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="iam--security">IAM &amp; Security</h2>
+
+<h3 id="iam-best-practices">IAM Best Practices</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Root Account        → Only for billing/account-level; MFA mandatory; no access keys
+IAM Users           → For humans (or use SSO/federated identity)
+IAM Roles           → For services, EC2, Lambda, cross-account access
+IAM Groups          → Assign policies to groups, add users to groups
+Service Control Policies (SCP) → Org-level guardrails across all accounts
+</code></pre></div></div>
+
+<h3 id="iam-policy-structure">IAM Policy Structure</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-10-17"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"Statement"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AllowS3ReadOnSpecificBucket"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allow"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"Action"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"s3:GetObject"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"s3:ListBucket"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"Resource"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"arn:aws:s3:::my-app-bucket"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"arn:aws:s3:::my-app-bucket/*"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"Condition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"StringEquals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"aws:RequestedRegion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"us-east-1"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"BoolIfExists"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"aws:MultiFactorAuthPresent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DenyDeleteActions"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deny"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"Action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s3:Delete*"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"Resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="cross-account-access">Cross-Account Access</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># In the target account — trust the source account role</span>
+<span class="nx">resource</span> <span class="s2">"aws_iam_role"</span> <span class="s2">"cross_account"</span> <span class="p">{</span>
+  <span class="nx">name</span> <span class="o">=</span> <span class="s2">"cross-account-deployer"</span>
+
+  <span class="nx">assume_role_policy</span> <span class="o">=</span> <span class="nx">jsonencode</span><span class="p">({</span>
+    <span class="nx">Version</span> <span class="o">=</span> <span class="s2">"2012-10-17"</span>
+    <span class="nx">Statement</span> <span class="o">=</span> <span class="p">[{</span>
+      <span class="nx">Effect</span>    <span class="o">=</span> <span class="s2">"Allow"</span>
+      <span class="nx">Principal</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">AWS</span> <span class="o">=</span> <span class="s2">"arn:aws:iam::SOURCE_ACCOUNT_ID:root"</span> <span class="p">}</span>
+      <span class="nx">Action</span>    <span class="o">=</span> <span class="s2">"sts:AssumeRole"</span>
+      <span class="nx">Condition</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">StringEquals</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="s2">"sts:ExternalId"</span> <span class="p">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">external_id</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}]</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="c1"># In source account — assume the target role</span>
+<span class="nx">aws</span> <span class="nx">sts</span> <span class="nx">assume-role</span> <span class="err">\</span>
+  <span class="o">--</span><span class="nx">role-arn</span> <span class="nx">arn</span><span class="o">:</span><span class="nx">aws</span><span class="o">:</span><span class="nx">iam</span><span class="o">::</span><span class="nx">TARGET_ACCOUNT</span><span class="o">:</span><span class="nx">role</span><span class="o">/</span><span class="nx">cross-account-deployer</span> <span class="err">\</span>
+  <span class="o">--</span><span class="nx">role-session-name</span> <span class="nx">deploy-session</span> <span class="err">\</span>
+  <span class="o">--</span><span class="nx">external-id</span> <span class="nx">my-external-id</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="databases">Databases</h2>
+
+<h3 id="rds">RDS</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">resource</span> <span class="s2">"aws_db_instance"</span> <span class="s2">"postgres"</span> <span class="p">{</span>
+  <span class="nx">identifier</span>        <span class="o">=</span> <span class="s2">"${var.environment}-postgres"</span>
+  <span class="nx">engine</span>            <span class="o">=</span> <span class="s2">"postgres"</span>
+  <span class="nx">engine_version</span>    <span class="o">=</span> <span class="s2">"15.3"</span>
+  <span class="nx">instance_class</span>    <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">environment</span> <span class="o">==</span> <span class="s2">"production"</span> <span class="o">?</span> <span class="s2">"db.r6g.large"</span> <span class="o">:</span> <span class="s2">"db.t3.medium"</span>
+  <span class="nx">allocated_storage</span> <span class="o">=</span> <span class="mi">100</span>
+  <span class="nx">storage_encrypted</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">kms_key_id</span>        <span class="o">=</span> <span class="nx">aws_kms_key</span><span class="p">.</span><span class="nx">rds</span><span class="p">.</span><span class="nx">arn</span>
+
+  <span class="nx">db_name</span>  <span class="o">=</span> <span class="s2">"appdb"</span>
+  <span class="nx">username</span> <span class="o">=</span> <span class="s2">"admin"</span>
+  <span class="nx">password</span> <span class="o">=</span> <span class="nx">random_password</span><span class="p">.</span><span class="nx">db</span><span class="p">.</span><span class="nx">result</span>
+
+  <span class="nx">multi_az</span>               <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">environment</span> <span class="o">==</span> <span class="s2">"production"</span>
+  <span class="nx">db_subnet_group_name</span>   <span class="o">=</span> <span class="nx">aws_db_subnet_group</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">name</span>
+  <span class="nx">vpc_security_group_ids</span> <span class="o">=</span> <span class="p">[</span><span class="nx">aws_security_group</span><span class="p">.</span><span class="nx">rds</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span>
+
+  <span class="nx">backup_retention_period</span> <span class="o">=</span> <span class="mi">7</span>
+  <span class="nx">backup_window</span>           <span class="o">=</span> <span class="s2">"03:00-04:00"</span>
+  <span class="nx">maintenance_window</span>      <span class="o">=</span> <span class="s2">"sun:04:00-sun:05:00"</span>
+
+  <span class="nx">deletion_protection</span>       <span class="o">=</span> <span class="nx">var</span><span class="err">.</span><span class="nx">environment</span> <span class="o">==</span> <span class="s2">"production"</span>
+  <span class="nx">skip_final_snapshot</span>       <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">environment</span> <span class="o">!=</span> <span class="s2">"production"</span>
+  <span class="nx">final_snapshot_identifier</span> <span class="o">=</span> <span class="s2">"${var.environment}-final-snapshot"</span>
+
+  <span class="nx">performance_insights_enabled</span> <span class="o">=</span> <span class="kc">true</span>
+
+  <span class="nx">tags</span> <span class="o">=</span> <span class="nx">local</span><span class="p">.</span><span class="nx">common_tags</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cloudformation--cdk">CloudFormation &amp; CDK</h2>
+
+<h3 id="cloudformation-template-structure">CloudFormation Template Structure</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">AWSTemplateFormatVersion</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2010-09-09'</span>
+<span class="na">Description</span><span class="pi">:</span> <span class="s">Web application stack</span>
+
+<span class="na">Parameters</span><span class="pi">:</span>
+  <span class="na">Environment</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s">String</span>
+    <span class="na">AllowedValues</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">development</span><span class="pi">,</span> <span class="nv">staging</span><span class="pi">,</span> <span class="nv">production</span><span class="pi">]</span>
+  <span class="na">InstanceType</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s">String</span>
+    <span class="na">Default</span><span class="pi">:</span> <span class="s">t3.medium</span>
+
+<span class="na">Mappings</span><span class="pi">:</span>
+  <span class="na">RegionMap</span><span class="pi">:</span>
+    <span class="na">us-east-1</span><span class="pi">:</span>
+      <span class="na">AMI</span><span class="pi">:</span> <span class="s">ami-0c55b159cbfafe1f0</span>
+    <span class="na">eu-west-1</span><span class="pi">:</span>
+      <span class="na">AMI</span><span class="pi">:</span> <span class="s">ami-01f14919ba412de34</span>
+
+<span class="na">Conditions</span><span class="pi">:</span>
+  <span class="na">IsProduction</span><span class="pi">:</span> <span class="kt">!Equals</span> <span class="pi">[</span><span class="kt">!Ref</span> <span class="nv">Environment</span><span class="pi">,</span> <span class="nv">production</span><span class="pi">]</span>
+
+<span class="na">Resources</span><span class="pi">:</span>
+  <span class="na">WebInstance</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s">AWS::EC2::Instance</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">InstanceType</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">InstanceType</span>
+      <span class="na">ImageId</span><span class="pi">:</span> <span class="kt">!FindInMap</span> <span class="pi">[</span><span class="nv">RegionMap</span><span class="pi">,</span> <span class="kt">!Ref</span> <span class="nv">AWS</span><span class="pi">::</span><span class="nv">Region</span><span class="pi">,</span> <span class="nv">AMI</span><span class="pi">]</span>
+      <span class="na">Tags</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Key</span><span class="pi">:</span> <span class="s">Name</span>
+          <span class="na">Value</span><span class="pi">:</span> <span class="kt">!Sub</span> <span class="s2">"</span><span class="s">${Environment}-web"</span>
+
+  <span class="na">WebEIP</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s">AWS::EC2::EIP</span>
+    <span class="na">Condition</span><span class="pi">:</span> <span class="s">IsProduction</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">InstanceId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">WebInstance</span>
+
+<span class="na">Outputs</span><span class="pi">:</span>
+  <span class="na">InstanceId</span><span class="pi">:</span>
+    <span class="na">Value</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">WebInstance</span>
+    <span class="na">Export</span><span class="pi">:</span>
+      <span class="na">Name</span><span class="pi">:</span> <span class="kt">!Sub</span> <span class="s2">"</span><span class="s">${AWS::StackName}-InstanceId"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="monitoring--logging">Monitoring &amp; Logging</h2>
+
+<h3 id="cloudwatch">CloudWatch</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create metric alarm</span>
+aws cloudwatch put-metric-alarm <span class="se">\</span>
+  <span class="nt">--alarm-name</span> <span class="s2">"HighCPU-web-asg"</span> <span class="se">\</span>
+  <span class="nt">--metric-name</span> CPUUtilization <span class="se">\</span>
+  <span class="nt">--namespace</span> AWS/EC2 <span class="se">\</span>
+  <span class="nt">--dimensions</span> <span class="nv">Name</span><span class="o">=</span>AutoScalingGroupName,Value<span class="o">=</span>web-asg <span class="se">\</span>
+  <span class="nt">--period</span> 300 <span class="se">\</span>
+  <span class="nt">--evaluation-periods</span> 3 <span class="se">\</span>
+  <span class="nt">--threshold</span> 80 <span class="se">\</span>
+  <span class="nt">--comparison-operator</span> GreaterThanThreshold <span class="se">\</span>
+  <span class="nt">--alarm-actions</span> arn:aws:sns:us-east-1:123456:alerts <span class="se">\</span>
+  <span class="nt">--statistic</span> Average
+
+<span class="c"># Query CloudWatch Logs Insights</span>
+aws logs start-query <span class="se">\</span>
+  <span class="nt">--log-group-name</span> /aws/lambda/processor <span class="se">\</span>
+  <span class="nt">--start-time</span> <span class="si">$(</span><span class="nb">date</span> <span class="nt">-d</span> <span class="s1">'1 hour ago'</span> +%s<span class="si">)</span> <span class="se">\</span>
+  <span class="nt">--end-time</span> <span class="si">$(</span><span class="nb">date</span> +%s<span class="si">)</span> <span class="se">\</span>
+  <span class="nt">--query-string</span> <span class="s1">'fields @timestamp, @message | filter @message like /ERROR/ | sort @timestamp desc | limit 100'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between a Security Group and a NACL?</strong></p>
+
+<blockquote>
+  <p><strong>Security Group</strong>: stateful instance-level firewall — allows rules only; return traffic automatically allowed; evaluated as a whole (all rules). <strong>NACL</strong>: stateless subnet-level firewall — allows and deny rules; return traffic must be explicitly allowed; rules evaluated in number order (lowest first). In practice: use Security Groups for most cases; NACLs as a coarse subnet-level backstop or for explicit denies.</p>
+</blockquote>
+
+<p><strong>Q2: What is the difference between S3 and EBS?</strong></p>
+
+<blockquote>
+  <p><strong>S3</strong> is object storage — flat key-value, accessed over HTTPS, virtually unlimited, multi-region, best for data lakes, backups, static assets, artifacts. <strong>EBS</strong> is block storage — behaves like a hard disk, attached to one EC2 instance (usually), same AZ, best for databases, OS volumes, files that need POSIX semantics.</p>
+</blockquote>
+
+<p><strong>Q3: Explain the difference between horizontal and vertical scaling in AWS context.</strong></p>
+
+<blockquote>
+  <p><strong>Vertical scaling</strong>: increase instance size (t3.medium → m5.xlarge) — requires downtime, has limits, single point of failure. <strong>Horizontal scaling</strong>: add more instances behind a load balancer — no downtime, theoretically unlimited, requires stateless application design. AWS Auto Scaling Groups automate horizontal scaling. Most cloud-native architectures prefer horizontal.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: How does IAM Role-based access work for EC2 instances?</strong></p>
+
+<blockquote>
+  <p>Attach an <strong>IAM Instance Profile</strong> (wraps an IAM Role) to the EC2 instance. The AWS SDK automatically calls the <strong>Instance Metadata Service</strong> (IMDS) at <code class="language-plaintext highlighter-rouge">169.254.169.254</code> to get temporary credentials. The credentials rotate automatically (typically every 1 hour). No access keys are stored on the instance. Apps use the SDK’s default credential chain, which includes IMDS.</p>
+</blockquote>
+
+<p><strong>Q5: What is an Elastic Load Balancer? Compare ALB vs NLB.</strong></p>
+
+<blockquote>
+  <p><strong>ALB (Application Load Balancer)</strong>: Layer 7, HTTP/HTTPS, content-based routing (path, host, header), WebSocket, gRPC, WAF integration, target groups. <strong>NLB (Network Load Balancer)</strong>: Layer 4, TCP/UDP/TLS, ultra-high performance, static IP per AZ, preserves source IP, handles millions of req/s. Use ALB for web apps and APIs; NLB for TCP-level routing, gaming, IoT, or when a static IP is required.</p>
+</blockquote>
+
+<p><strong>Q6: Explain VPC Peering vs Transit Gateway.</strong></p>
+
+<blockquote>
+  <p><strong>VPC Peering</strong>: direct, private connection between two VPCs (can be cross-account or cross-region). Non-transitive: if A↔B and B↔C, A cannot reach C via B. Scales poorly with many VPCs. <strong>Transit Gateway</strong>: a managed regional router — attach many VPCs and on-premises networks, central routing tables, transitive routing, simpler management for complex topologies. More expensive but far simpler at scale.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: How would you design a multi-region active-active architecture on AWS?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Route53 latency/geolocation routing</strong> → direct users to nearest region</li>
+    <li><strong>Global DynamoDB tables</strong> or Aurora Global Database for data replication</li>
+    <li><strong>S3 Cross-Region Replication</strong> for object data</li>
+    <li><strong>Global Accelerator</strong> for anycast routing and health-based failover</li>
+    <li><strong>Stateless application tier</strong> (session in DynamoDB/ElastiCache, not local)</li>
+    <li><strong>EventBridge</strong> event bus cross-region for async coordination</li>
+    <li><strong>RTO/RPO targets</strong> drive data replication strategy</li>
+    <li>Consider conflict resolution for multi-master writes (last-writer-wins vs business logic)</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q8: How do you secure AWS access in a CI/CD pipeline?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Never use long-lived IAM keys</strong> in CI — use OIDC identity federation</li>
+    <li><strong>GitHub Actions + OIDC</strong>: GitHub issues JWT tokens; AWS verifies via OIDC provider; pipeline assumes a role with <code class="language-plaintext highlighter-rouge">sts:AssumeRoleWithWebIdentity</code></li>
+    <li>Scoped roles: separate role per environment (staging/production) with least-privilege policies</li>
+    <li><strong>Require MFA</strong> for production role assumption</li>
+    <li><strong>CloudTrail</strong> to audit all API calls</li>
+    <li><strong>SCPs</strong> to prevent privilege escalation across the org</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-rds-failover">🔵 Scenario 1: RDS Failover</h3>
+
+<p><em>“Your RDS Multi-AZ primary instance fails. What happens and how do you respond?”</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Automatic: RDS detects failure (~1-2 min) → promotes standby
+         → updates DNS CNAME of endpoint → new primary online
+
+Application impact:
+- Connections in-flight are dropped
+- App must retry connection (use exponential backoff in connection pool)
+- DNS TTL: set to 5-10s for fast failover
+
+Response steps:
+1. Check RDS Events in console (RDS → Events)
+2. Monitor CloudWatch: DatabaseConnections, CPUUtilization
+3. Verify app reconnected (check app logs, metrics)
+4. Post-incident: investigate original failure (check OS/hardware metrics)
+5. Test: test failover regularly with `aws rds reboot-db-instance --force-failover`
+</code></pre></div></div>
+
+<h3 id="-scenario-2-cost-spike-investigation">🔵 Scenario 2: Cost Spike Investigation</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Check Cost Explorer — which service/account?</span>
+aws ce get-cost-and-usage <span class="se">\</span>
+  <span class="nt">--time-period</span> <span class="nv">Start</span><span class="o">=</span>2024-01-01,End<span class="o">=</span>2024-01-31 <span class="se">\</span>
+  <span class="nt">--granularity</span> DAILY <span class="se">\</span>
+  <span class="nt">--metrics</span> BlendedCost <span class="se">\</span>
+  <span class="nt">--group-by</span> <span class="nv">Type</span><span class="o">=</span>DIMENSION,Key<span class="o">=</span>SERVICE
+
+<span class="c"># 2. Common culprits and fixes:</span>
+<span class="c"># - EC2: orphaned instances → tag all resources; use AWS Config rules</span>
+<span class="c"># - NAT Gateway: high data transfer → add S3/DynamoDB VPC endpoints</span>
+<span class="c"># - Data Transfer: cross-AZ traffic → co-locate services in same AZ</span>
+<span class="c"># - Snapshots: accumulation → lifecycle policies</span>
+<span class="c"># - CloudWatch Logs: verbose logging → filter before ingestion; set retention</span>
+<span class="c"># - RDS: right-size via Performance Insights</span>
+
+<span class="c"># 3. Set up billing alerts</span>
+aws cloudwatch put-metric-alarm <span class="se">\</span>
+  <span class="nt">--alarm-name</span> <span class="s2">"MonthlyBillingAlert"</span> <span class="se">\</span>
+  <span class="nt">--metric-name</span> EstimatedCharges <span class="se">\</span>
+  <span class="nt">--namespace</span> AWS/Billing <span class="se">\</span>
+  <span class="nt">--period</span> 86400 <span class="se">\</span>
+  <span class="nt">--threshold</span> 500 <span class="se">\</span>
+  <span class="nt">--comparison-operator</span> GreaterThanThreshold
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── EC2 ──────────────────────────────────────────────</span>
+aws ec2 describe-instances <span class="nt">--filters</span> <span class="s2">"Name=tag:Env,Values=prod"</span>
+aws ec2 start-instances <span class="nt">--instance-ids</span> i-1234
+aws ec2 stop-instances <span class="nt">--instance-ids</span> i-1234
+aws ec2 describe-instance-status <span class="nt">--instance-ids</span> i-1234
+
+<span class="c"># ─── S3 ───────────────────────────────────────────────</span>
+aws s3 <span class="nb">ls </span>s3://bucket/prefix/
+aws s3 <span class="nb">cp </span>src s3://bucket/dst
+aws s3 <span class="nb">sync</span> ./dir s3://bucket/dir
+aws s3api get-bucket-policy <span class="nt">--bucket</span> my-bucket
+
+<span class="c"># ─── IAM ──────────────────────────────────────────────</span>
+aws iam list-roles
+aws iam get-role <span class="nt">--role-name</span> MyRole
+aws iam list-attached-role-policies <span class="nt">--role-name</span> MyRole
+aws sts get-caller-identity        <span class="c"># Who am I?</span>
+aws sts assume-role <span class="nt">--role-arn</span> ARN <span class="nt">--role-session-name</span> session
+
+<span class="c"># ─── EKS ──────────────────────────────────────────────</span>
+aws eks list-clusters
+aws eks update-kubeconfig <span class="nt">--name</span> cluster <span class="nt">--region</span> us-east-1
+aws eks describe-cluster <span class="nt">--name</span> cluster
+
+<span class="c"># ─── LOGS ─────────────────────────────────────────────</span>
+aws logs describe-log-groups
+aws logs <span class="nb">tail</span> /aws/lambda/my-function <span class="nt">--follow</span>
+aws logs filter-log-events <span class="nt">--log-group</span> /aws/ecs/myapp <span class="nt">--filter-pattern</span> ERROR
+
+<span class="c"># ─── SSM (SSH-less access) ─────────────────────────────</span>
+aws ssm start-session <span class="nt">--target</span> i-1234567890abcdef0
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Ansible.html">← Ansible</a></td>
+        <td><a href="/devops-interview-guide/Azure.html">Azure →</a></td>
+        <td><a href="/devops-interview-guide/Terraform.html">Terraform (AWS provider) →</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security (AWS security services) →</a></td>
+        <td><a href="/devops-interview-guide/Monitoring.html">Monitoring (CloudWatch) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

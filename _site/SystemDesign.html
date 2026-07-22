@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🏛️ System Design — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🏛️ System Design — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/SystemDesign.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🏛️ System Design — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🏛️ System Design — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🏛️ System Design — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/SystemDesign.html" />
+<meta property="og:url" content="/devops-interview-guide/SystemDesign.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🏛️ System Design — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🏛️ System Design — DevOps Interview Guide","url":"/devops-interview-guide/SystemDesign.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🏛️ System Design — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="️-system-design--devops-interview-guide">🏛️ System Design — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/SRE.html">← SRE</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Behavioral.html">Behavioral →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#system-design-framework">System Design Framework</a></li>
+  <li><a href="#scalability-fundamentals">Scalability Fundamentals</a></li>
+  <li><a href="#availability--reliability">Availability &amp; Reliability</a></li>
+  <li><a href="#microservices-patterns">Microservices Patterns</a></li>
+  <li><a href="#database-design">Database Design</a></li>
+  <li><a href="#caching-strategies">Caching Strategies</a></li>
+  <li><a href="#message-queues">Message Queues</a></li>
+  <li><a href="#design-case-studies">Design Case Studies</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-design-questions">Scenario-Based Design Questions</a></li>
+</ol>
+
+<hr />
+
+<h2 id="system-design-framework">System Design Framework</h2>
+
+<h3 id="interview-approach-45-minutes">Interview Approach (45 minutes)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Clarify Requirements (5 min)
+   - Functional: what must the system do?
+   - Non-functional: scale, latency, availability, consistency?
+   - Constraints: team size, budget, tech stack?
+   - Scope: what's in/out for today's design?
+
+2. Estimate Scale (5 min)
+   - Users: DAU, peak concurrent
+   - Data: write rate, read rate, storage growth
+   - Bandwidth: inbound, outbound
+   - QPS: queries per second at peak
+
+3. High-Level Architecture (10 min)
+   - Draw major components
+   - Data flow between components
+   - Client → LB → Services → DB
+
+4. Deep Dive (20 min)
+   - Focus on 2-3 critical components
+   - Data model, APIs, algorithms
+   - Trade-offs: consistency vs availability
+   - Bottlenecks and how to address them
+
+5. Identify Bottlenecks &amp; Scale (5 min)
+   - Single points of failure
+   - How does it scale to 10x, 100x?
+   - Failure scenarios
+</code></pre></div></div>
+
+<h3 id="estimation-numbers-to-know">Estimation Numbers to Know</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 KB = 1,000 bytes
+1 MB = 10^6 bytes
+1 GB = 10^9 bytes
+1 TB = 10^12 bytes
+
+Time units:
+1 ms  = 10^-3 seconds
+1 μs  = 10^-6 seconds
+1 ns  = 10^-9 seconds
+
+Latency reference points:
+L1 cache ref:        0.5 ns
+L2 cache ref:        7 ns
+RAM access:          100 ns
+SSD random read:     16 μs
+Network (same DC):   0.5 ms
+Network (cross-AZ):  1-2 ms
+Network (CA→EU):     150 ms
+HDD seek:            10 ms
+
+Traffic estimation:
+1M users × 5 requests/day / 86,400 sec/day ≈ 58 QPS (average)
+Peak is typically 2-10x average → ~580 QPS peak
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="scalability-fundamentals">Scalability Fundamentals</h2>
+
+<h3 id="horizontal-vs-vertical-scaling">Horizontal vs Vertical Scaling</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vertical Scaling (Scale Up):
+- Bigger machine (more CPU, RAM)
+- Simple to implement
+- Limited ceiling
+- Single point of failure
+- Good for: databases (early stage), simple architectures
+
+Horizontal Scaling (Scale Out):
+- More machines
+- Requires load balancing
+- Theoretically unlimited
+- Resilient (no SPOF)
+- Good for: stateless services, read replicas
+
+Hybrid: vertical until pain, then horizontal
+</code></pre></div></div>
+
+<h3 id="load-balancing">Load Balancing</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>L4 Load Balancer (TCP/IP):
+  + Faster, less overhead
+  + Works for any TCP protocol
+  - No application-layer routing
+  Use: high-performance TCP, database proxying
+
+L7 Load Balancer (HTTP):
+  + Content-based routing (URL, headers, cookies)
+  + SSL termination
+  + Health checks at app level
+  + Session affinity (sticky sessions)
+  - Slower than L4 (inspects content)
+  Use: web applications, microservices, APIs
+
+Algorithms:
+- Round Robin: even distribution
+- Weighted RR: proportional to capacity
+- Least Connections: route to least busy server
+- IP Hash: sticky routing by client IP
+- Consistent Hashing: used for cache routing, minimizes remapping
+</code></pre></div></div>
+
+<h3 id="consistent-hashing">Consistent Hashing</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Problem: Adding/removing servers in simple hash causes mass remapping
+  server = hash(key) % num_servers
+  Add server: almost all keys map to different server → cache miss storm
+
+Solution: Consistent hashing
+- Hash servers onto a ring: hash(server_id) → position on 0..2^32 ring
+- Hash keys onto the same ring
+- Key served by first server clockwise on ring
+- Add server: only keys between new server and previous server remapped
+- Remove server: only that server's keys remapped to next server
+
+Virtual nodes: each server has multiple positions on ring
+  → More even distribution
+  → Better handles heterogeneous servers (powerful = more vnodes)
+
+Used by: Cassandra, DynamoDB, memcached, load balancers
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="availability--reliability">Availability &amp; Reliability</h2>
+
+<h3 id="availability-numbers">Availability Numbers</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Availability</th>
+      <th>Downtime/year</th>
+      <th>Downtime/month</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>90% (one nine)</td>
+      <td>36.5 days</td>
+      <td>72 hours</td>
+    </tr>
+    <tr>
+      <td>99% (two nines)</td>
+      <td>3.65 days</td>
+      <td>7.2 hours</td>
+    </tr>
+    <tr>
+      <td>99.9% (three nines)</td>
+      <td>8.77 hours</td>
+      <td>43.8 minutes</td>
+    </tr>
+    <tr>
+      <td>99.99% (four nines)</td>
+      <td>52.6 minutes</td>
+      <td>4.4 minutes</td>
+    </tr>
+    <tr>
+      <td>99.999% (five nines)</td>
+      <td>5.26 minutes</td>
+      <td>26.3 seconds</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="redundancy-patterns">Redundancy Patterns</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Active-Passive (Hot Standby):
+  Primary handles all traffic
+  Standby replicates data, ready to take over
+  Failover: DNS change / VIP switch (30s-2min)
+  Use: databases, simple services
+
+Active-Active:
+  Both instances handle traffic simultaneously
+  Need: session sharing, consistent data
+  Use: stateless services, multi-region
+
+N+1 Redundancy:
+  Minimum: N instances needed, deploy N+1
+  Any single failure: no impact
+
+N+2 Redundancy:
+  Two simultaneous failures tolerated
+  Required for: multi-AZ deployments (AZ failure + rolling deployment)
+</code></pre></div></div>
+
+<h3 id="cap-theorem">CAP Theorem</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In a distributed system, you can only guarantee 2 of 3:
+
+Consistency (C): All nodes see the same data at the same time
+Availability (A): Every request receives a response
+Partition Tolerance (P): System continues operating despite network partitions
+
+Network partitions ALWAYS happen in distributed systems,
+so the real choice is:
+
+CP (Consistency + Partition Tolerance):
+  During partition, refuse some requests to maintain consistency
+  Examples: ZooKeeper, HBase, etcd
+  Use: financial transactions, coordination services
+
+AP (Availability + Partition Tolerance):
+  During partition, continue serving (possibly stale) data
+  Eventually consistent when partition heals
+  Examples: CouchDB, DynamoDB, Cassandra
+  Use: shopping carts, social feeds, DNS
+
+CA (Consistency + Availability):
+  Only works without partitions (single datacenter)
+  Examples: Traditional RDBMS (PostgreSQL, MySQL)
+  Not truly distributed
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="microservices-patterns">Microservices Patterns</h2>
+
+<h3 id="service-communication">Service Communication</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Synchronous (request-response):
+  REST over HTTP/HTTPS
+  gRPC (binary, HTTP/2, streaming, code generation)
+  GraphQL (flexible querying)
+  
+  Pros: simple, familiar, immediate feedback
+  Cons: tight coupling, cascading failures, blocking
+
+Asynchronous (event-driven):
+  Message queues (RabbitMQ, SQS, Kafka)
+  Pub/Sub patterns
+  
+  Pros: loose coupling, resilient, scalable
+  Cons: eventual consistency, harder to debug
+</code></pre></div></div>
+
+<h3 id="circuit-breaker-pattern">Circuit Breaker Pattern</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>States:
+  Closed → Normal operation, requests pass through
+  Open   → Failure threshold exceeded, requests fail immediately
+  Half-Open → Test requests allowed to check if service recovered
+
+Implementation (pseudocode):
+  class CircuitBreaker:
+    state = CLOSED
+    failures = 0
+    threshold = 5      # Open after 5 failures
+    timeout = 30s      # Try again after 30s
+    
+    def call(fn):
+      if state == OPEN:
+        if time_since_opened &gt; timeout:
+          state = HALF_OPEN
+        else:
+          raise CircuitOpenException()
+      
+      try:
+        result = fn()
+        if state == HALF_OPEN:
+          reset()
+        return result
+      except:
+        failures++
+        if failures &gt;= threshold or state == HALF_OPEN:
+          open_circuit()
+        raise
+
+Tools: Hystrix (Java), Resilience4j, Istio (service mesh level)
+</code></pre></div></div>
+
+<h3 id="api-gateway-pattern">API Gateway Pattern</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Client → API Gateway → Microservices
+
+API Gateway handles:
+- Authentication/Authorization (verify JWT, API keys)
+- Rate limiting (per user, per IP, global)
+- Request routing (path-based to services)
+- SSL termination
+- Request/response transformation
+- Aggregation (combine multiple service responses)
+- Caching
+- Observability (logging, tracing headers)
+
+Options:
+- Kong, Nginx, Envoy (self-managed)
+- AWS API Gateway, Azure API Management
+- Traefik (Kubernetes-native)
+</code></pre></div></div>
+
+<h3 id="saga-pattern-distributed-transactions">Saga Pattern (Distributed Transactions)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Problem: Microservices transactions can't use ACID across services
+
+Saga: sequence of local transactions, each publishing events/messages
+  On failure: compensating transactions undo previous steps
+
+Example: Order Service Saga
+  1. Create Order (Order Service)
+  2. Reserve Inventory (Inventory Service)
+  3. Process Payment (Payment Service)
+  4. Ship Order (Shipping Service)
+
+If Payment fails at step 3:
+  Compensate step 2: Release inventory reservation
+  Compensate step 1: Cancel order
+
+Choreography: each service reacts to events (decentralized)
+Orchestration: central saga orchestrator tells each service what to do
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="database-design">Database Design</h2>
+
+<h3 id="sql-vs-nosql">SQL vs NoSQL</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>SQL (Relational)</th>
+      <th>NoSQL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Schema</strong></td>
+      <td>Fixed, enforced</td>
+      <td>Flexible, dynamic</td>
+    </tr>
+    <tr>
+      <td><strong>Transactions</strong></td>
+      <td>ACID guarantees</td>
+      <td>Eventual consistency (mostly)</td>
+    </tr>
+    <tr>
+      <td><strong>Scaling</strong></td>
+      <td>Vertical primary; horizontal complex</td>
+      <td>Horizontal native</td>
+    </tr>
+    <tr>
+      <td><strong>Query</strong></td>
+      <td>Complex JOINs, aggregations</td>
+      <td>Limited, simple lookups</td>
+    </tr>
+    <tr>
+      <td><strong>Use cases</strong></td>
+      <td>Financial, e-commerce, ERP</td>
+      <td>Social feeds, catalogs, analytics</td>
+    </tr>
+    <tr>
+      <td><strong>Examples</strong></td>
+      <td>PostgreSQL, MySQL, SQL Server</td>
+      <td>MongoDB, Cassandra, DynamoDB</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="database-scaling-patterns">Database Scaling Patterns</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Read Replicas:
+  Write to primary → replicate to N read replicas
+  Direct reads to replicas
+  Lag: typically &lt;1 second (sometimes 10s of seconds)
+  Use for: read-heavy workloads, analytics queries
+
+Sharding (Horizontal Partitioning):
+  Partition data across multiple databases
+  Shard key: user_id, tenant_id, geographic region
+  Range-based: users 1-1M → shard 1; 1M-2M → shard 2
+  Hash-based: hash(user_id) % num_shards
+  Challenges: cross-shard queries, rebalancing, hotspots
+
+Connection Pooling:
+  Database connections are expensive (100-200ms to establish)
+  Pool maintains warm connections (PgBouncer, HikariCP)
+  Limits: max_connections = 100; pool size = 20 per app instance
+
+CQRS (Command Query Responsibility Segregation):
+  Separate read and write models
+  Writes: normalized, consistent, optimized for writes
+  Reads: denormalized, fast, optimized for specific queries
+  Event sourcing often paired with CQRS
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="caching-strategies">Caching Strategies</h2>
+
+<h3 id="cache-patterns">Cache Patterns</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cache-Aside (Lazy Loading):
+  1. Check cache
+  2. Cache miss: read from DB, write to cache
+  3. Return data
+  
+  Pros: only cache what's needed; cache failures don't break app
+  Cons: cache miss penalty; potential stale data
+
+Write-Through:
+  1. Write to cache AND DB synchronously
+  2. Always consistent
+  
+  Pros: cache always fresh
+  Cons: write penalty; cache populated even for infrequently read data
+
+Write-Behind (Write-Back):
+  1. Write to cache immediately (return to caller)
+  2. Asynchronously write to DB
+  
+  Pros: fast writes
+  Cons: risk of data loss if cache fails before DB write
+
+Read-Through:
+  Cache sits in front of DB
+  Cache automatically loads from DB on miss
+  App only talks to cache
+  
+  Pros: transparent to application
+  Cons: cold start problem
+</code></pre></div></div>
+
+<h3 id="cache-eviction-policies">Cache Eviction Policies</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Policy</th>
+      <th>Description</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>LRU</strong> (Least Recently Used)</td>
+      <td>Evict oldest accessed item</td>
+      <td>General purpose</td>
+    </tr>
+    <tr>
+      <td><strong>LFU</strong> (Least Frequently Used)</td>
+      <td>Evict least accessed item</td>
+      <td>Long-running caches</td>
+    </tr>
+    <tr>
+      <td><strong>FIFO</strong></td>
+      <td>First in, first out</td>
+      <td>Simple queue-like caches</td>
+    </tr>
+    <tr>
+      <td><strong>TTL</strong> (Time-To-Live)</td>
+      <td>Evict after expiry</td>
+      <td>Session data, API responses</td>
+    </tr>
+    <tr>
+      <td><strong>Random</strong></td>
+      <td>Evict random item</td>
+      <td>Simple, low overhead</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="message-queues">Message Queues</h2>
+
+<h3 id="queue-vs-pubsub">Queue vs Pub/Sub</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Message Queue (SQS, RabbitMQ):
+  Producer → Queue → Consumer (exactly one consumer per message)
+  Point-to-point
+  Use: task distribution, work queues, async processing
+
+Pub/Sub (SNS, Kafka, Pub/Sub):
+  Publisher → Topic → Multiple Subscribers (fanout)
+  Each subscriber gets a copy of each message
+  Use: notifications, event streaming, decoupled microservices
+
+Kafka:
+  Distributed log — messages persisted, replayable
+  Consumer groups: each message delivered once per group
+  Topics → Partitions → Offsets
+  Retention: configurable (days, weeks, forever)
+  Use: event streaming, audit log, stream processing
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="design-case-studies">Design Case Studies</h2>
+
+<h3 id="design-a-url-shortener">Design a URL Shortener</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Requirements:
+  - Shorten URL: http://long-url.com → http://short.ly/abc123
+  - Redirect: short URL → original URL
+  - Scale: 100M URLs created/day, 10B redirects/day
+
+Estimation:
+  Creates: 100M/day = 1,160 writes/sec
+  Redirects: 10B/day = 116,000 reads/sec (100:1 read:write ratio)
+  Storage: 100M × 0.5KB = 50GB/day
+
+Architecture:
+  Client → CDN (cache redirects) → API Gateway → 
+  Redirect Service → Cache (Redis) → DB (read replicas)
+  Write Service → DB primary
+
+Short code generation:
+  Option 1: hash(long_url + salt) → take first 7 chars (base62)
+  Option 2: global counter → encode in base62 (guarantees uniqueness)
+  Option 3: random + check uniqueness in DB
+
+Data model:
+  CREATE TABLE urls (
+    short_code VARCHAR(10) PRIMARY KEY,
+    long_url TEXT NOT NULL,
+    created_at TIMESTAMP,
+    user_id INT,
+    click_count INT
+  );
+
+Scaling:
+  - CDN caches popular redirects (90% cache hit rate)
+  - Redis cache with TTL for hot short codes
+  - DB read replicas for redirect lookups
+  - Partitioned by short_code (consistent hashing)
+</code></pre></div></div>
+
+<h3 id="design-a-cicd-system">Design a CI/CD System</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Requirements:
+  - Trigger builds from Git events (push, PR)
+  - Run tests in parallel
+  - Store artifacts
+  - Deploy to multiple environments
+  - Scale to 10,000 builds/day
+
+Architecture:
+  Git (webhook) → API Gateway → Build Queue (Kafka) →
+  Build Workers (ephemeral K8s pods) →
+  Artifact Storage (S3/GCS) →
+  CD Controller (ArgoCD/Flux) → Target Clusters
+
+Build Worker lifecycle:
+  1. Dequeue build job from Kafka
+  2. Spin up isolated pod/container
+  3. Clone repo (shallow, sparse)
+  4. Run build stages (parallel via DAG)
+  5. Publish artifacts
+  6. Report status back via API
+  7. Pod destroyed
+
+Artifact storage:
+  - Docker images → Container Registry (ECR/ACR/GCR)
+  - Binaries → S3 with lifecycle policy
+  - Test results → S3 + dashboard
+
+Key design decisions:
+  - Ephemeral workers: no state, security isolation, auto-scale
+  - DAG execution: stages with dependencies, max parallelism
+  - Build caching: layer cache, dependency cache (Redis/S3)
+  - Secrets: vault injection per build, scoped to pipeline
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is horizontal scaling and when do you use it?</strong></p>
+
+<blockquote>
+  <p><strong>Horizontal scaling</strong> (scaling out) means adding more instances of a service behind a load balancer. You use it when you need to handle more traffic beyond what a single machine can handle, when you need high availability (no single point of failure), or when you need to handle traffic spikes. Requires stateless services (sessions stored externally, in Redis or a database).</p>
+</blockquote>
+
+<p><strong>Q2: What is a CDN and why do DevOps engineers care about it?</strong></p>
+
+<blockquote>
+  <p>A CDN (Content Delivery Network) distributes static content (images, CSS, JS, videos) to edge nodes close to users, reducing latency and origin server load. DevOps engineers configure CDN behavior: cache TTLs, cache invalidation on deployments, origin failover, SSL certificates, and WAF rules. AWS CloudFront, Fastly, and Cloudflare are common options.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q3: Explain the Circuit Breaker pattern.</strong></p>
+
+<blockquote>
+  <p>Circuit Breaker prevents cascading failures. In the <strong>closed</strong> state, requests flow normally. After N consecutive failures, it <strong>opens</strong> — all requests fail immediately without trying the downstream service (fast fail). After a timeout, it enters <strong>half-open</strong> — allows a test request to see if the service recovered. Success → close; failure → open again. Used with Hystrix, Resilience4j, or at the service mesh layer (Istio).</p>
+</blockquote>
+
+<p><strong>Q4: What is eventual consistency and when is it acceptable?</strong></p>
+
+<blockquote>
+  <p>Eventual consistency means all nodes will converge to the same value, but at any given moment, different nodes may return different values. Acceptable when: reading from social feeds (slightly stale OK), shopping cart (reads from nearest replica), DNS propagation, product catalog. Not acceptable for: bank transactions, inventory decrement (can’t oversell), authentication tokens.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q5: Design the data architecture for a multi-region active-active system.</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Application tier</strong>: stateless services behind global load balancer (AWS Global Accelerator / CloudFlare)</li>
+    <li><strong>Session data</strong>: geo-distributed Redis (Redis Enterprise with Active-Active geo-replication) or JWT tokens (stateless)</li>
+    <li><strong>Database</strong>: Global DynamoDB (multi-master, auto-replication) or Spanner (global ACID) or CockroachDB</li>
+    <li><strong>Conflict resolution</strong>: last-write-wins with vector clocks, or CRDT data structures for merge-friendly types</li>
+    <li><strong>Write routing</strong>: write to local region; async replicate to others (eventual consistency)</li>
+    <li><strong>Read routing</strong>: read from local region (may be slightly stale, within seconds)</li>
+    <li><strong>Failover</strong>: detect region failure via health checks; reroute DNS/traffic in &lt; 60 seconds</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-design-questions">Scenario-Based Design Questions</h2>
+
+<h3 id="-design-a-kubernetes-based-deployment-platform">🔵 Design a Kubernetes-based Deployment Platform</h3>
+
+<p><em>“Design a platform where 200 engineering teams can deploy microservices to Kubernetes without managing infrastructure.”</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Requirements:
+  - Self-service: teams create namespaces, deploy apps
+  - Multi-tenancy: teams isolated from each other
+  - Guardrails: resource limits, security policies
+  - GitOps: Git as source of truth
+  - Observability: logs, metrics, traces per team
+
+Architecture:
+
+1. Cluster topology
+   - Multiple clusters: production (dedicated), non-prod (shared)
+   - Teams: separate namespaces with resource quotas
+
+2. Onboarding (self-service)
+   - Team creates PR to gitops repo → automated namespace creation
+   - Terraform/Crossplane creates: namespace, RBAC roles, 
+     resource quota, network policies, service account
+
+3. Deployment workflow
+   - Team writes Helm chart + values
+   - PR review → CI validates → ArgoCD syncs
+   - Deployment notifications → Slack
+
+4. Policy enforcement (OPA Gatekeeper)
+   - All images must be from approved registry
+   - All containers must have resource limits
+   - No privileged containers
+   - Required labels on all resources
+
+5. Observability
+   - Namespace-scoped Grafana dashboards per team
+   - Loki log filtering by namespace labels
+   - Jaeger traces with service-level access
+
+6. Cost allocation
+   - Resource tags per team/namespace
+   - Kubecost or custom tooling for cost reports
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/SRE.html">← SRE</a></td>
+        <td><a href="/devops-interview-guide/Behavioral.html">Behavioral →</a></td>
+        <td><a href="/devops-interview-guide/Kubernetes.html">Kubernetes (platform design) →</a></td>
+        <td><a href="/devops-interview-guide/AWS.html">AWS (cloud architecture) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

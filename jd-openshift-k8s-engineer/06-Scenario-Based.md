@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🔵 Module 6 — Scenario-Based Questions"
+render_with_liquid: false
+---
+
 # 🔵 Module 6 — Scenario-Based Questions
 
 > **JD Alignment:** Real-world production problems spanning all JD areas — CI/CD, OpenShift/K8s operations, security, monitoring, automation, and cross-team collaboration.

@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>☸️ Kubernetes — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="☸️ Kubernetes — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Kubernetes.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="☸️ Kubernetes — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>☸️ Kubernetes — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="☸️ Kubernetes — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Kubernetes.html" />
+<meta property="og:url" content="/devops-interview-guide/Kubernetes.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="☸️ Kubernetes — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"☸️ Kubernetes — DevOps Interview Guide","url":"/devops-interview-guide/Kubernetes.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">☸️ Kubernetes — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="️-kubernetes--devops-interview-guide">☸️ Kubernetes — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Docker.html">← Docker</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Jenkins.html">Jenkins →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#architecture">Architecture</a></li>
+  <li><a href="#core-objects">Core Objects</a></li>
+  <li><a href="#workloads">Workloads</a></li>
+  <li><a href="#services--networking">Services &amp; Networking</a></li>
+  <li><a href="#storage">Storage</a></li>
+  <li><a href="#configuration--secrets">Configuration &amp; Secrets</a></li>
+  <li><a href="#rbac--security">RBAC &amp; Security</a></li>
+  <li><a href="#helm">Helm</a></li>
+  <li><a href="#troubleshooting">Troubleshooting</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#kubectl-cheat-sheet">kubectl Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="architecture">Architecture</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌────────────────────── Kubernetes Cluster ──────────────────────┐
+│                                                                  │
+│  ┌─────────────── Control Plane ─────────────────┐             │
+│  │  ┌──────────────┐  ┌───────────────────────┐  │             │
+│  │  │  API Server  │  │  Controller Manager   │  │             │
+│  │  │  (kube-api)  │  │  (reconciliation loop)│  │             │
+│  │  └──────┬───────┘  └───────────────────────┘  │             │
+│  │         │          ┌───────────────────────┐  │             │
+│  │  ┌──────▼───────┐  │       Scheduler       │  │             │
+│  │  │     etcd     │  │  (pod → node binding) │  │             │
+│  │  │  (key-value) │  └───────────────────────┘  │             │
+│  │  └──────────────┘                             │             │
+│  └───────────────────────────────────────────────┘             │
+│                                                                  │
+│  ┌── Worker Node 1 ──┐  ┌── Worker Node 2 ──┐                  │
+│  │  ┌─────────────┐  │  │  ┌─────────────┐  │                  │
+│  │  │   kubelet   │  │  │  │   kubelet   │  │                  │
+│  │  ├─────────────┤  │  │  ├─────────────┤  │                  │
+│  │  │  kube-proxy │  │  │  │  kube-proxy │  │                  │
+│  │  ├─────────────┤  │  │  ├─────────────┤  │                  │
+│  │  │ Pod│Pod│Pod │  │  │  │ Pod│Pod│Pod │  │                  │
+│  │  └─────────────┘  │  │  └─────────────┘  │                  │
+│  └───────────────────┘  └───────────────────┘                  │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="control-plane-components">Control Plane Components</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>kube-apiserver</strong></td>
+      <td>All API requests, authentication, admission control</td>
+    </tr>
+    <tr>
+      <td><strong>etcd</strong></td>
+      <td>Distributed key-value store — the source of truth</td>
+    </tr>
+    <tr>
+      <td><strong>kube-scheduler</strong></td>
+      <td>Assigns pods to nodes based on resources/constraints</td>
+    </tr>
+    <tr>
+      <td><strong>kube-controller-manager</strong></td>
+      <td>Runs control loops (ReplicaSet, Node, Job controllers)</td>
+    </tr>
+    <tr>
+      <td><strong>cloud-controller-manager</strong></td>
+      <td>Cloud-provider specific (LB, volumes, routes)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="node-components">Node Components</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>kubelet</strong></td>
+      <td>Pod lifecycle management on the node</td>
+    </tr>
+    <tr>
+      <td><strong>kube-proxy</strong></td>
+      <td>Network rules (iptables/IPVS) for Services</td>
+    </tr>
+    <tr>
+      <td><strong>Container runtime</strong></td>
+      <td>CRI-compliant runtime (containerd, CRI-O)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="core-objects">Core Objects</h2>
+
+<h3 id="pod">Pod</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Pod</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+    <span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1.0"</span>
+  <span class="na">annotations</span><span class="pi">:</span>
+    <span class="na">team</span><span class="pi">:</span> <span class="s">platform</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">app</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">myapp:1.0</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">8080</span>
+    <span class="na">resources</span><span class="pi">:</span>
+      <span class="na">requests</span><span class="pi">:</span>
+        <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">128Mi"</span>
+        <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">250m"</span>
+      <span class="na">limits</span><span class="pi">:</span>
+        <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">512Mi"</span>
+        <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">500m"</span>
+    <span class="na">env</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">DB_URL</span>
+      <span class="na">valueFrom</span><span class="pi">:</span>
+        <span class="na">secretKeyRef</span><span class="pi">:</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">db-secret</span>
+          <span class="na">key</span><span class="pi">:</span> <span class="s">url</span>
+    <span class="na">livenessProbe</span><span class="pi">:</span>
+      <span class="na">httpGet</span><span class="pi">:</span>
+        <span class="na">path</span><span class="pi">:</span> <span class="s">/health/live</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="m">8080</span>
+      <span class="na">initialDelaySeconds</span><span class="pi">:</span> <span class="m">30</span>
+      <span class="na">periodSeconds</span><span class="pi">:</span> <span class="m">10</span>
+      <span class="na">failureThreshold</span><span class="pi">:</span> <span class="m">3</span>
+    <span class="na">readinessProbe</span><span class="pi">:</span>
+      <span class="na">httpGet</span><span class="pi">:</span>
+        <span class="na">path</span><span class="pi">:</span> <span class="s">/health/ready</span>
+        <span class="na">port</span><span class="pi">:</span> <span class="m">8080</span>
+      <span class="na">initialDelaySeconds</span><span class="pi">:</span> <span class="m">5</span>
+      <span class="na">periodSeconds</span><span class="pi">:</span> <span class="m">5</span>
+    <span class="na">volumeMounts</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">config</span>
+      <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/etc/myapp</span>
+      <span class="na">readOnly</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="na">volumes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">config</span>
+    <span class="na">configMap</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-config</span>
+  <span class="na">serviceAccountName</span><span class="pi">:</span> <span class="s">myapp-sa</span>
+  <span class="na">securityContext</span><span class="pi">:</span>
+    <span class="na">runAsNonRoot</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">runAsUser</span><span class="pi">:</span> <span class="m">1000</span>
+    <span class="na">fsGroup</span><span class="pi">:</span> <span class="m">2000</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="workloads">Workloads</h2>
+
+<h3 id="deployment">Deployment</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">strategy</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">RollingUpdate</span>
+    <span class="na">rollingUpdate</span><span class="pi">:</span>
+      <span class="na">maxSurge</span><span class="pi">:</span> <span class="m">1</span>           <span class="c1"># Extra pods during rollout</span>
+      <span class="na">maxUnavailable</span><span class="pi">:</span> <span class="m">0</span>     <span class="c1"># Zero downtime</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">affinity</span><span class="pi">:</span>
+        <span class="na">podAntiAffinity</span><span class="pi">:</span>    <span class="c1"># Spread across nodes</span>
+          <span class="na">preferredDuringSchedulingIgnoredDuringExecution</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">weight</span><span class="pi">:</span> <span class="m">100</span>
+            <span class="na">podAffinityTerm</span><span class="pi">:</span>
+              <span class="na">labelSelector</span><span class="pi">:</span>
+                <span class="na">matchLabels</span><span class="pi">:</span>
+                  <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+              <span class="na">topologyKey</span><span class="pi">:</span> <span class="s">kubernetes.io/hostname</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">app</span>
+        <span class="na">image</span><span class="pi">:</span> <span class="s">myapp:1.0</span>
+        <span class="na">resources</span><span class="pi">:</span>
+          <span class="na">requests</span><span class="pi">:</span>
+            <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">256Mi"</span>
+            <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">100m"</span>
+          <span class="na">limits</span><span class="pi">:</span>
+            <span class="na">memory</span><span class="pi">:</span> <span class="s2">"</span><span class="s">512Mi"</span>
+            <span class="na">cpu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">500m"</span>
+</code></pre></div></div>
+
+<h3 id="statefulset">StatefulSet</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">StatefulSet</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">postgres</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">serviceName</span><span class="pi">:</span> <span class="s">postgres</span>     <span class="c1"># Required for stable DNS</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">postgres</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">postgres</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">postgres</span>
+        <span class="na">image</span><span class="pi">:</span> <span class="s">postgres:15</span>
+        <span class="na">env</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">POSTGRES_PASSWORD</span>
+          <span class="na">valueFrom</span><span class="pi">:</span>
+            <span class="na">secretKeyRef</span><span class="pi">:</span>
+              <span class="na">name</span><span class="pi">:</span> <span class="s">postgres-secret</span>
+              <span class="na">key</span><span class="pi">:</span> <span class="s">password</span>
+        <span class="na">volumeMounts</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">data</span>
+          <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/var/lib/postgresql/data</span>
+  <span class="na">volumeClaimTemplates</span><span class="pi">:</span>     <span class="c1"># PVC per pod (postgres-0, postgres-1, etc.)</span>
+  <span class="pi">-</span> <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">data</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">accessModes</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">ReadWriteOnce"</span><span class="pi">]</span>
+      <span class="na">resources</span><span class="pi">:</span>
+        <span class="na">requests</span><span class="pi">:</span>
+          <span class="na">storage</span><span class="pi">:</span> <span class="s">10Gi</span>
+</code></pre></div></div>
+
+<h3 id="daemonset">DaemonSet</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Runs one pod per node — useful for logging agents, monitoring</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">DaemonSet</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">fluentd</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">fluentd</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">fluentd</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">tolerations</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">key</span><span class="pi">:</span> <span class="s">node-role.kubernetes.io/control-plane</span>
+        <span class="na">effect</span><span class="pi">:</span> <span class="s">NoSchedule</span>     <span class="c1"># Run on master nodes too</span>
+      <span class="na">containers</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">fluentd</span>
+        <span class="na">image</span><span class="pi">:</span> <span class="s">fluent/fluentd-kubernetes-daemonset:v1</span>
+        <span class="na">volumeMounts</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">varlog</span>
+          <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/var/log</span>
+      <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">varlog</span>
+        <span class="na">hostPath</span><span class="pi">:</span>
+          <span class="na">path</span><span class="pi">:</span> <span class="s">/var/log</span>
+</code></pre></div></div>
+
+<h3 id="hpa-horizontal-pod-autoscaler">HPA (Horizontal Pod Autoscaler)</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">autoscaling/v2</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">HorizontalPodAutoscaler</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-hpa</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">scaleTargetRef</span><span class="pi">:</span>
+    <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+    <span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">minReplicas</span><span class="pi">:</span> <span class="m">2</span>
+  <span class="na">maxReplicas</span><span class="pi">:</span> <span class="m">20</span>
+  <span class="na">metrics</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">Resource</span>
+    <span class="na">resource</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">cpu</span>
+      <span class="na">target</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">Utilization</span>
+        <span class="na">averageUtilization</span><span class="pi">:</span> <span class="m">70</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">Resource</span>
+    <span class="na">resource</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">memory</span>
+      <span class="na">target</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">Utilization</span>
+        <span class="na">averageUtilization</span><span class="pi">:</span> <span class="m">80</span>
+  <span class="na">behavior</span><span class="pi">:</span>
+    <span class="na">scaleDown</span><span class="pi">:</span>
+      <span class="na">stabilizationWindowSeconds</span><span class="pi">:</span> <span class="m">300</span>    <span class="c1"># Wait 5 min before scale down</span>
+      <span class="na">policies</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">Percent</span>
+        <span class="na">value</span><span class="pi">:</span> <span class="m">10</span>
+        <span class="na">periodSeconds</span><span class="pi">:</span> <span class="m">60</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="services--networking">Services &amp; Networking</h2>
+
+<h3 id="service-types">Service Types</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>ClusterIP</strong></td>
+      <td>Virtual IP within cluster</td>
+      <td>Internal service-to-service</td>
+    </tr>
+    <tr>
+      <td><strong>NodePort</strong></td>
+      <td>Exposes on node IP:port (30000-32767)</td>
+      <td>Dev/testing, basic external access</td>
+    </tr>
+    <tr>
+      <td><strong>LoadBalancer</strong></td>
+      <td>Cloud LB provisioned</td>
+      <td>Production external traffic</td>
+    </tr>
+    <tr>
+      <td><strong>ExternalName</strong></td>
+      <td>DNS CNAME alias</td>
+      <td>External service abstraction</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ClusterIP (default)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-svc</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">ports</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">80</span>
+    <span class="na">targetPort</span><span class="pi">:</span> <span class="m">8080</span>
+    <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+
+<span class="c1"># LoadBalancer</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-lb</span>
+  <span class="na">annotations</span><span class="pi">:</span>
+    <span class="na">service.beta.kubernetes.io/aws-load-balancer-type</span><span class="pi">:</span> <span class="s">nlb</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">LoadBalancer</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">myapp</span>
+  <span class="na">ports</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">443</span>
+    <span class="na">targetPort</span><span class="pi">:</span> <span class="m">8080</span>
+</code></pre></div></div>
+
+<h3 id="ingress">Ingress</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Ingress</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-ingress</span>
+  <span class="na">annotations</span><span class="pi">:</span>
+    <span class="na">nginx.ingress.kubernetes.io/rewrite-target</span><span class="pi">:</span> <span class="s">/</span>
+    <span class="na">nginx.ingress.kubernetes.io/ssl-redirect</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+    <span class="na">cert-manager.io/cluster-issuer</span><span class="pi">:</span> <span class="s">letsencrypt-prod</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">ingressClassName</span><span class="pi">:</span> <span class="s">nginx</span>
+  <span class="na">tls</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">hosts</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">myapp.example.com</span>
+    <span class="na">secretName</span><span class="pi">:</span> <span class="s">myapp-tls</span>
+  <span class="na">rules</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">host</span><span class="pi">:</span> <span class="s">myapp.example.com</span>
+    <span class="na">http</span><span class="pi">:</span>
+      <span class="na">paths</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">path</span><span class="pi">:</span> <span class="s">/api</span>
+        <span class="na">pathType</span><span class="pi">:</span> <span class="s">Prefix</span>
+        <span class="na">backend</span><span class="pi">:</span>
+          <span class="na">service</span><span class="pi">:</span>
+            <span class="na">name</span><span class="pi">:</span> <span class="s">api-service</span>
+            <span class="na">port</span><span class="pi">:</span>
+              <span class="na">number</span><span class="pi">:</span> <span class="m">80</span>
+      <span class="pi">-</span> <span class="na">path</span><span class="pi">:</span> <span class="s">/</span>
+        <span class="na">pathType</span><span class="pi">:</span> <span class="s">Prefix</span>
+        <span class="na">backend</span><span class="pi">:</span>
+          <span class="na">service</span><span class="pi">:</span>
+            <span class="na">name</span><span class="pi">:</span> <span class="s">frontend-service</span>
+            <span class="na">port</span><span class="pi">:</span>
+              <span class="na">number</span><span class="pi">:</span> <span class="m">80</span>
+</code></pre></div></div>
+
+<h3 id="networkpolicy">NetworkPolicy</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Only allow traffic from frontend namespace to backend</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">networking.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkPolicy</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">allow-frontend-to-backend</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">backend</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">podSelector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">tier</span><span class="pi">:</span> <span class="s">backend</span>
+  <span class="na">policyTypes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">Ingress</span>
+  <span class="na">ingress</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">from</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">namespaceSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">name</span><span class="pi">:</span> <span class="s">frontend</span>
+      <span class="na">podSelector</span><span class="pi">:</span>
+        <span class="na">matchLabels</span><span class="pi">:</span>
+          <span class="na">tier</span><span class="pi">:</span> <span class="s">frontend</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">8080</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="storage">Storage</h2>
+
+<h3 id="persistentvolume--pvc">PersistentVolume &amp; PVC</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># StorageClass (dynamic provisioning)</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">storage.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">StorageClass</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">fast-ssd</span>
+<span class="na">provisioner</span><span class="pi">:</span> <span class="s">kubernetes.io/aws-ebs</span>
+<span class="na">parameters</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">gp3</span>
+  <span class="na">iops</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3000"</span>
+  <span class="na">throughput</span><span class="pi">:</span> <span class="s2">"</span><span class="s">125"</span>
+<span class="na">reclaimPolicy</span><span class="pi">:</span> <span class="s">Retain</span>
+<span class="na">allowVolumeExpansion</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="na">volumeBindingMode</span><span class="pi">:</span> <span class="s">WaitForFirstConsumer</span>
+
+<span class="nn">---</span>
+<span class="c1"># PersistentVolumeClaim</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">PersistentVolumeClaim</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-data</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">storageClassName</span><span class="pi">:</span> <span class="s">fast-ssd</span>
+  <span class="na">accessModes</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">ReadWriteOnce</span>
+  <span class="na">resources</span><span class="pi">:</span>
+    <span class="na">requests</span><span class="pi">:</span>
+      <span class="na">storage</span><span class="pi">:</span> <span class="s">20Gi</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="configuration--secrets">Configuration &amp; Secrets</h2>
+
+<h3 id="configmap">ConfigMap</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ConfigMap</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">myapp-config</span>
+<span class="na">data</span><span class="pi">:</span>
+  <span class="na">APP_ENV</span><span class="pi">:</span> <span class="s">production</span>
+  <span class="na">LOG_LEVEL</span><span class="pi">:</span> <span class="s">info</span>
+  <span class="na">config.yaml</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">server:</span>
+      <span class="s">port: 8080</span>
+    <span class="s">database:</span>
+      <span class="s">pool_size: 10</span>
+</code></pre></div></div>
+
+<h3 id="secret">Secret</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create secret imperatively</span>
+kubectl create secret generic db-creds <span class="se">\</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">username</span><span class="o">=</span>admin <span class="se">\</span>
+  <span class="nt">--from-literal</span><span class="o">=</span><span class="nv">password</span><span class="o">=</span>supersecret <span class="se">\</span>
+  <span class="nt">--from-file</span><span class="o">=</span>tls.crt<span class="o">=</span>./cert.pem
+
+<span class="c"># Seal secrets with Sealed Secrets (GitOps-safe)</span>
+kubeseal <span class="nt">--format</span> yaml &lt; secret.yaml <span class="o">&gt;</span> sealed-secret.yaml
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="rbac--security">RBAC &amp; Security</h2>
+
+<h3 id="rbac-structure">RBAC Structure</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ServiceAccount  ──bind──&gt;  Role/ClusterRole
+                           (verbs on resources)
+
+Role          = namespace-scoped
+ClusterRole   = cluster-wide
+
+RoleBinding         = binds Role to subject in namespace
+ClusterRoleBinding  = binds ClusterRole cluster-wide
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ServiceAccount</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ServiceAccount</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">deploy-sa</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+
+<span class="nn">---</span>
+<span class="c1"># Role</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">rbac.authorization.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Role</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">pod-reader</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">rules</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">apiGroups</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">"</span><span class="pi">]</span>
+  <span class="na">resources</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">pods"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">pods/log"</span><span class="pi">]</span>
+  <span class="na">verbs</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">get"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">list"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">watch"</span><span class="pi">]</span>
+<span class="pi">-</span> <span class="na">apiGroups</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">apps"</span><span class="pi">]</span>
+  <span class="na">resources</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">deployments"</span><span class="pi">]</span>
+  <span class="na">verbs</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">get"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">list"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">watch"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">update"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">patch"</span><span class="pi">]</span>
+
+<span class="nn">---</span>
+<span class="c1"># RoleBinding</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">rbac.authorization.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">RoleBinding</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">deploy-sa-binding</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">subjects</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">kind</span><span class="pi">:</span> <span class="s">ServiceAccount</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">deploy-sa</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span>
+<span class="na">roleRef</span><span class="pi">:</span>
+  <span class="na">kind</span><span class="pi">:</span> <span class="s">Role</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">pod-reader</span>
+  <span class="na">apiGroup</span><span class="pi">:</span> <span class="s">rbac.authorization.k8s.io</span>
+</code></pre></div></div>
+
+<h3 id="podsecuritycontext">PodSecurityContext</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spec</span><span class="pi">:</span>
+  <span class="na">securityContext</span><span class="pi">:</span>
+    <span class="na">runAsNonRoot</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">runAsUser</span><span class="pi">:</span> <span class="m">1000</span>
+    <span class="na">runAsGroup</span><span class="pi">:</span> <span class="m">3000</span>
+    <span class="na">fsGroup</span><span class="pi">:</span> <span class="m">2000</span>
+    <span class="na">seccompProfile</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">RuntimeDefault</span>
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">app</span>
+    <span class="na">securityContext</span><span class="pi">:</span>
+      <span class="na">allowPrivilegeEscalation</span><span class="pi">:</span> <span class="kc">false</span>
+      <span class="na">readOnlyRootFilesystem</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">capabilities</span><span class="pi">:</span>
+        <span class="na">drop</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">ALL"</span><span class="pi">]</span>
+        <span class="na">add</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">NET_BIND_SERVICE"</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="helm">Helm</h2>
+
+<h3 id="helm-concepts">Helm Concepts</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Chart        = Package (templates + values + metadata)
+Release      = Instance of a chart deployed in a cluster
+Repository   = Collection of charts
+Values       = Configuration overrides for templates
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install/upgrade</span>
+helm <span class="nb">install </span>myapp ./mychart <span class="nt">-n</span> production
+helm <span class="nb">install </span>myapp ./mychart <span class="nt">-f</span> values-prod.yaml
+helm upgrade myapp ./mychart <span class="nt">--atomic</span> <span class="nt">--timeout</span> 5m0s
+helm upgrade <span class="nt">--install</span> myapp ./mychart  <span class="c"># Idempotent</span>
+
+<span class="c"># Inspect</span>
+helm list <span class="nt">-A</span>
+helm status myapp
+helm <span class="nb">history </span>myapp
+helm get values myapp
+
+<span class="c"># Rollback</span>
+helm rollback myapp 2
+
+<span class="c"># Template debugging</span>
+helm template myapp ./mychart <span class="nt">-f</span> values.yaml
+helm lint ./mychart
+helm diff upgrade myapp ./mychart <span class="nt">-f</span> values.yaml  <span class="c"># plugin</span>
+
+<span class="c"># Repositories</span>
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm search repo nginx
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="pod-troubleshooting-checklist">Pod Troubleshooting Checklist</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Step 1: Check pod status</span>
+kubectl get pods <span class="nt">-n</span> namespace
+kubectl describe pod &lt;pod-name&gt; <span class="nt">-n</span> namespace    <span class="c"># Events section!</span>
+
+<span class="c"># Common issues from Events:</span>
+<span class="c"># - ErrImagePull/ImagePullBackOff → image not found or auth issue</span>
+<span class="c"># - Pending → no nodes fit (resources, affinity, taints)</span>
+<span class="c"># - CrashLoopBackOff → container keeps crashing</span>
+<span class="c"># - OOMKilled → out of memory</span>
+
+<span class="c"># Step 2: Check logs</span>
+kubectl logs &lt;pod&gt; <span class="nt">-n</span> namespace
+kubectl logs &lt;pod&gt; <span class="nt">-n</span> namespace <span class="nt">--previous</span>    <span class="c"># Previous instance</span>
+kubectl logs &lt;pod&gt; <span class="nt">-n</span> namespace <span class="nt">-c</span> container  <span class="c"># Specific container</span>
+
+<span class="c"># Step 3: Exec into pod</span>
+kubectl <span class="nb">exec</span> <span class="nt">-it</span> &lt;pod&gt; <span class="nt">-n</span> namespace <span class="nt">--</span> bash
+kubectl <span class="nb">exec</span> <span class="nt">-it</span> &lt;pod&gt; <span class="nt">-n</span> namespace <span class="nt">--</span> sh  <span class="c"># For alpine</span>
+
+<span class="c"># Step 4: Check resource usage</span>
+kubectl top pods <span class="nt">-n</span> namespace
+kubectl top nodes
+
+<span class="c"># Step 5: Check node</span>
+kubectl describe node &lt;node-name&gt;  <span class="c"># Conditions, capacity, events</span>
+
+<span class="c"># Pending pod: check</span>
+kubectl describe pod &lt;pod&gt; | <span class="nb">grep</span> <span class="nt">-A</span> 10 Events
+<span class="c"># - Insufficient CPU/memory: scale nodes or reduce requests</span>
+<span class="c"># - NodeSelector/affinity mismatch: check labels</span>
+<span class="c"># - Taints: add toleration or untaint node</span>
+</code></pre></div></div>
+
+<h3 id="common-error-resolution">Common Error Resolution</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Error</th>
+      <th>Cause</th>
+      <th>Fix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ImagePullBackOff</code></td>
+      <td>Wrong image name, auth failure</td>
+      <td>Verify image exists; check imagePullSecret</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">CrashLoopBackOff</code></td>
+      <td>App error, bad config, OOM</td>
+      <td>Check logs with <code class="language-plaintext highlighter-rouge">--previous</code> flag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Pending</code></td>
+      <td>Insufficient resources, no nodes match</td>
+      <td>Check node capacity, affinity, taints</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Evicted</code></td>
+      <td>Node disk/memory pressure</td>
+      <td>Clean up node; add resource limits</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">OOMKilled</code></td>
+      <td>Container exceeded memory limit</td>
+      <td>Increase memory limit</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Error: container runtime</code></td>
+      <td>CRI issue on node</td>
+      <td>Check containerd/kubelet status</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between a Pod and a Deployment?</strong></p>
+
+<blockquote>
+  <p>A <strong>Pod</strong> is the smallest deployable unit — one or more containers sharing network/storage. A <strong>Deployment</strong> manages Pods declaratively: desired state, rolling updates, replica count, rollback. Deployments create ReplicaSets which create Pods. In practice, you always use Deployments (or StatefulSets), not bare Pods.</p>
+</blockquote>
+
+<p><strong>Q2: What is the difference between <code class="language-plaintext highlighter-rouge">ClusterIP</code>, <code class="language-plaintext highlighter-rouge">NodePort</code>, and <code class="language-plaintext highlighter-rouge">LoadBalancer</code>?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>ClusterIP</strong>: Virtual IP reachable only within the cluster — for internal service communication</li>
+    <li><strong>NodePort</strong>: Opens a port (30000-32767) on every node — external traffic can reach it, but requires knowing node IP</li>
+    <li><strong>LoadBalancer</strong>: Provisions a cloud load balancer (AWS ALB/NLB, GCP LB) — production-grade external access</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q3: What are liveness and readiness probes?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Liveness probe</strong>: Checks if the container is alive. Failure → container is restarted. Use for deadlock detection.</li>
+    <li><strong>Readiness probe</strong>: Checks if the container is ready to serve traffic. Failure → removed from Service endpoints (no traffic). Use for startup and overload scenarios.</li>
+    <li><strong>Startup probe</strong> (newer): Gives slow-starting containers time to start before liveness kicks in.</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: How does Kubernetes service discovery work?</strong></p>
+
+<blockquote>
+  <p>Kubernetes injects environment variables for each Service at Pod creation time. More powerfully, kube-dns (CoreDNS) provides DNS resolution: a Service named <code class="language-plaintext highlighter-rouge">myapp</code> in namespace <code class="language-plaintext highlighter-rouge">production</code> is reachable at <code class="language-plaintext highlighter-rouge">myapp.production.svc.cluster.local</code> (or just <code class="language-plaintext highlighter-rouge">myapp</code> within the same namespace). The format is: <code class="language-plaintext highlighter-rouge">&lt;service&gt;.&lt;namespace&gt;.svc.&lt;cluster-domain&gt;</code>.</p>
+</blockquote>
+
+<p><strong>Q5: Explain the difference between StatefulSet and Deployment.</strong></p>
+
+<blockquote>
+  <table>
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Deployment</th>
+        <th>StatefulSet</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pod identity</td>
+        <td>Random names</td>
+        <td>Stable, ordered names (pod-0, pod-1)</td>
+      </tr>
+      <tr>
+        <td>Storage</td>
+        <td>Shared or none</td>
+        <td>Unique PVC per pod</td>
+      </tr>
+      <tr>
+        <td>Scaling</td>
+        <td>Any order</td>
+        <td>Ordered (pod-0 before pod-1)</td>
+      </tr>
+      <tr>
+        <td>DNS</td>
+        <td>Single service</td>
+        <td>Unique DNS per pod</td>
+      </tr>
+      <tr>
+        <td>Use case</td>
+        <td>Stateless apps</td>
+        <td>Databases, queues, ZooKeeper</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<p><strong>Q6: What is a Kubernetes Operator?</strong></p>
+
+<blockquote>
+  <p>An Operator extends Kubernetes with <strong>custom resources</strong> (CRDs) and a <strong>controller</strong> that encodes operational knowledge. Instead of a human running <code class="language-plaintext highlighter-rouge">kubectl</code> commands, the Operator watches the custom resource and reconciles the actual state to match desired state. Examples: Prometheus Operator, cert-manager, database operators (PostgreSQL, MongoDB). Built with Operator SDK or kubebuilder.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: Explain Kubernetes scheduler decision-making.</strong></p>
+
+<blockquote>
+  <p>Scheduler selects a node via two phases:</p>
+  <ol>
+    <li><strong>Filtering</strong>: removes nodes that don’t satisfy Pod requirements: resource requests, nodeSelector, affinity/anti-affinity, taints/tolerations, PVC availability</li>
+    <li><strong>Scoring</strong>: ranks remaining nodes: resource balance, image locality, pod affinity preferences, spread constraints
+The highest-scoring node is selected. Custom schedulers or scheduler plugins can extend this.</li>
+  </ol>
+</blockquote>
+
+<p><strong>Q8: How do you debug a networking issue in Kubernetes?</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Verify service endpoints exist</span>
+kubectl get endpoints myapp-svc
+
+<span class="c"># 2. Test pod-to-pod directly (bypass Service)</span>
+kubectl <span class="nb">exec</span> <span class="nt">-it</span> debug-pod <span class="nt">--</span> curl http://10.244.1.5:8080
+
+<span class="c"># 3. Test via ClusterIP</span>
+kubectl <span class="nb">exec</span> <span class="nt">-it</span> debug-pod <span class="nt">--</span> curl http://myapp-svc.production.svc.cluster.local
+
+<span class="c"># 4. Check CoreDNS</span>
+kubectl <span class="nb">exec</span> <span class="nt">-it</span> debug-pod <span class="nt">--</span> nslookup myapp-svc.production.svc.cluster.local
+
+<span class="c"># 5. Check kube-proxy iptables rules</span>
+kubectl get pods <span class="nt">-n</span> kube-system | <span class="nb">grep </span>kube-proxy
+kubectl logs &lt;kube-proxy-pod&gt; <span class="nt">-n</span> kube-system
+
+<span class="c"># 6. Network policy blocking?</span>
+kubectl get networkpolicies <span class="nt">-n</span> production
+
+<span class="c"># 7. Use netshoot for advanced debugging</span>
+kubectl run tmp-debug <span class="nt">--rm</span> <span class="nt">-i</span> <span class="nt">--tty</span> <span class="se">\</span>
+  <span class="nt">--image</span> nicolaka/netshoot <span class="nt">--</span> bash
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-deploy-with-zero-downtime">🔵 Scenario 1: Deploy with Zero Downtime</h3>
+
+<p><em>“Deploy a new version of your application to production without any downtime.”</em></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Deployment update strategy</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">strategy</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">RollingUpdate</span>
+    <span class="na">rollingUpdate</span><span class="pi">:</span>
+      <span class="na">maxSurge</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">maxUnavailable</span><span class="pi">:</span> <span class="m">0</span>   <span class="c1"># Zero downtime</span>
+
+  <span class="c1"># Readiness probe ensures traffic only goes to ready pods</span>
+  <span class="na">readinessProbe</span><span class="pi">:</span>
+    <span class="na">httpGet</span><span class="pi">:</span>
+      <span class="na">path</span><span class="pi">:</span> <span class="s">/health/ready</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">8080</span>
+    <span class="na">initialDelaySeconds</span><span class="pi">:</span> <span class="m">5</span>
+    <span class="na">periodSeconds</span><span class="pi">:</span> <span class="m">3</span>
+    <span class="na">failureThreshold</span><span class="pi">:</span> <span class="m">3</span>
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Update image</span>
+kubectl <span class="nb">set </span>image deployment/myapp <span class="nv">app</span><span class="o">=</span>myapp:v2 <span class="nt">-n</span> production
+
+<span class="c"># Watch rollout</span>
+kubectl rollout status deployment/myapp <span class="nt">-n</span> production
+
+<span class="c"># If something goes wrong</span>
+kubectl rollout undo deployment/myapp <span class="nt">-n</span> production
+kubectl rollout undo deployment/myapp <span class="nt">--to-revision</span><span class="o">=</span>3
+</code></pre></div></div>
+
+<h3 id="-scenario-2-pod-stuck-in-pending">🔵 Scenario 2: Pod Stuck in Pending</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl describe pod stuck-pod
+
+<span class="c"># Events show:</span>
+<span class="c"># 0/5 nodes are available: 5 Insufficient cpu</span>
+<span class="c"># Fix: check node resources</span>
+kubectl top nodes
+kubectl describe node node-1 | <span class="nb">grep</span> <span class="nt">-A</span> 5 <span class="s2">"Allocated resources"</span>
+
+<span class="c"># Options:</span>
+<span class="c"># 1. Reduce resource requests in deployment</span>
+<span class="c"># 2. Scale node group (AWS: update ASG)</span>
+<span class="c"># 3. Add node with autoscaler annotation</span>
+kubectl annotate node node-1 cluster-autoscaler.kubernetes.io/safe-to-evict<span class="o">=</span><span class="nb">true</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-deploy-a-full-stack-application">Lab 1: Deploy a Full Stack Application</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Create namespace</span>
+kubectl create namespace demo
+
+<span class="c"># 2. Deploy PostgreSQL</span>
+kubectl apply <span class="nt">-f</span> - <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:15-alpine
+        env:
+        - name: POSTGRES_PASSWORD
+          value: "password123"
+        - name: POSTGRES_DB
+          value: "mydb"
+        ports:
+        - containerPort: 5432
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  namespace: demo
+spec:
+  selector:
+    app: postgres
+  ports:
+  - port: 5432
+    targetPort: 5432
+</span><span class="no">EOF
+
+</span><span class="c"># 3. Watch everything</span>
+kubectl get all <span class="nt">-n</span> demo <span class="nt">-w</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="kubectl-cheat-sheet">kubectl Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── GET ─────────────────────────────────────────────</span>
+kubectl get all <span class="nt">-n</span> namespace
+kubectl get pods <span class="nt">-o</span> wide
+kubectl get pods <span class="nt">--sort-by</span><span class="o">=</span>.status.startTime
+kubectl get pods <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>myapp
+kubectl get events <span class="nt">-n</span> namespace <span class="nt">--sort-by</span><span class="o">=</span><span class="s1">'.lastTimestamp'</span>
+
+<span class="c"># ─── DESCRIBE ────────────────────────────────────────</span>
+kubectl describe pod &lt;name&gt;
+kubectl describe node &lt;name&gt;
+kubectl describe svc &lt;name&gt;
+
+<span class="c"># ─── LOGS ────────────────────────────────────────────</span>
+kubectl logs &lt;pod&gt; <span class="nt">-f</span>
+kubectl logs &lt;pod&gt; <span class="nt">--previous</span> <span class="nt">-c</span> &lt;container&gt;
+kubectl logs <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>myapp <span class="nt">--all-containers</span><span class="o">=</span><span class="nb">true</span>
+
+<span class="c"># ─── EXEC ────────────────────────────────────────────</span>
+kubectl <span class="nb">exec</span> <span class="nt">-it</span> &lt;pod&gt; <span class="nt">--</span> bash
+kubectl port-forward pod/&lt;pod&gt; 8080:80
+kubectl port-forward svc/myapp-svc 8080:80
+
+<span class="c"># ─── APPLY/SCALE ─────────────────────────────────────</span>
+kubectl apply <span class="nt">-f</span> manifest.yaml
+kubectl delete <span class="nt">-f</span> manifest.yaml
+kubectl scale deployment myapp <span class="nt">--replicas</span><span class="o">=</span>5
+kubectl rollout restart deployment/myapp
+kubectl rollout status deployment/myapp
+kubectl rollout <span class="nb">history </span>deployment/myapp
+kubectl rollout undo deployment/myapp
+
+<span class="c"># ─── DEBUG ───────────────────────────────────────────</span>
+kubectl run tmp <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">--image</span> busybox <span class="nt">--</span> sh
+kubectl debug node/&lt;node&gt; <span class="nt">-it</span> <span class="nt">--image</span> ubuntu
+kubectl top pods <span class="nt">--containers</span>
+
+<span class="c"># ─── CONTEXT ─────────────────────────────────────────</span>
+kubectl config get-contexts
+kubectl config use-context prod-cluster
+kubectl config set-context <span class="nt">--current</span> <span class="nt">--namespace</span><span class="o">=</span>production
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Docker.html">← Docker</a></td>
+        <td><a href="/devops-interview-guide/Jenkins.html">Jenkins →</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">Helm (Kubernetes package manager) →</a></td>
+        <td><a href="/devops-interview-guide/Monitoring.html">Monitoring (Prometheus/Grafana on K8s) →</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security (K8s RBAC) →</a></td>
+        <td><a href="/devops-interview-guide/OpenShift.html">OpenShift (enterprise Kubernetes) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

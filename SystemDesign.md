@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🏛️ System Design — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🏛️ System Design — DevOps Interview Guide
 
 > [← SRE](./SRE.md) | [Main Index](./README.md) | [Behavioral →](./Behavioral.md)

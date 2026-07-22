@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🏗️ Terraform — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🏗️ Terraform — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Terraform.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🏗️ Terraform — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🏗️ Terraform — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🏗️ Terraform — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Terraform.html" />
+<meta property="og:url" content="/devops-interview-guide/Terraform.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🏗️ Terraform — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🏗️ Terraform — DevOps Interview Guide","url":"/devops-interview-guide/Terraform.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🏗️ Terraform — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="️-terraform--devops-interview-guide">🏗️ Terraform — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Jenkins.html">← Jenkins</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Ansible.html">Ansible →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#core-concepts">Core Concepts</a></li>
+  <li><a href="#hcl-syntax">HCL Syntax</a></li>
+  <li><a href="#providers--resources">Providers &amp; Resources</a></li>
+  <li><a href="#state-management">State Management</a></li>
+  <li><a href="#variables--outputs">Variables &amp; Outputs</a></li>
+  <li><a href="#modules">Modules</a></li>
+  <li><a href="#workspaces">Workspaces</a></li>
+  <li><a href="#backends">Backends</a></li>
+  <li><a href="#terraform-cloud--enterprise">Terraform Cloud &amp; Enterprise</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="core-concepts">Core Concepts</h2>
+
+<h3 id="terraform-workflow">Terraform Workflow</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Write HCL  →  terraform init  →  terraform plan  →  terraform apply  →  terraform destroy
+               (init providers)   (preview changes)   (apply changes)    (tear down)
+</code></pre></div></div>
+
+<h3 id="how-terraform-works">How Terraform Works</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌──────────────────────────────────────────────────────┐
+│                   .tf Files (desired state)           │
+└───────────────────────────┬──────────────────────────┘
+                            │
+                    terraform plan
+                            │ compares against
+                            ▼
+┌──────────────────────────────────────────────────────┐
+│              terraform.tfstate (current state)        │
+│               (local file or remote backend)          │
+└───────────────────────────┬──────────────────────────┘
+                            │ diffs → API calls
+                            ▼
+┌──────────────────────────────────────────────────────┐
+│            Cloud Provider API (AWS/Azure/GCP)         │
+└──────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="resource-lifecycle">Resource Lifecycle</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Create → Read → Update → Delete
+  │        │       │        │
+  └────────┴───────┴────────┘
+         CRUD operations via provider
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hcl-syntax">HCL Syntax</h2>
+
+<h3 id="building-blocks">Building Blocks</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ─── TERRAFORM BLOCK ──────────────────────────────────</span>
+<span class="nx">terraform</span> <span class="p">{</span>
+  <span class="nx">required_version</span> <span class="o">=</span> <span class="s2">"&gt;= 1.6.0"</span>
+
+  <span class="nx">required_providers</span> <span class="p">{</span>
+    <span class="nx">aws</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">source</span>  <span class="o">=</span> <span class="s2">"hashicorp/aws"</span>
+      <span class="nx">version</span> <span class="o">=</span> <span class="s2">"~&gt; 5.0"</span>       <span class="c1"># &gt;= 5.0.0, &lt; 6.0.0</span>
+    <span class="p">}</span>
+    <span class="nx">kubernetes</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">source</span>  <span class="o">=</span> <span class="s2">"hashicorp/kubernetes"</span>
+      <span class="nx">version</span> <span class="o">=</span> <span class="s2">"~&gt; 2.23"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">backend</span> <span class="s2">"s3"</span> <span class="p">{</span>
+    <span class="nx">bucket</span>         <span class="o">=</span> <span class="s2">"my-tfstate-bucket"</span>
+    <span class="nx">key</span>            <span class="o">=</span> <span class="s2">"production/terraform.tfstate"</span>
+    <span class="nx">region</span>         <span class="o">=</span> <span class="s2">"us-east-1"</span>
+    <span class="nx">encrypt</span>        <span class="o">=</span> <span class="kc">true</span>
+    <span class="nx">dynamodb_table</span> <span class="o">=</span> <span class="s2">"terraform-state-lock"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># ─── PROVIDER ─────────────────────────────────────────</span>
+<span class="nx">provider</span> <span class="s2">"aws"</span> <span class="p">{</span>
+  <span class="nx">region</span>  <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">aws_region</span>
+  <span class="nx">profile</span> <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">aws_profile</span>
+
+  <span class="nx">default_tags</span> <span class="p">{</span>
+    <span class="nx">tags</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">ManagedBy</span>   <span class="o">=</span> <span class="s2">"terraform"</span>
+      <span class="nx">Environment</span> <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">environment</span>
+      <span class="nx">Team</span>        <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">team</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># ─── RESOURCE ─────────────────────────────────────────</span>
+<span class="nx">resource</span> <span class="s2">"aws_instance"</span> <span class="s2">"web"</span> <span class="p">{</span>
+  <span class="nx">ami</span>           <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">aws_ami</span><span class="p">.</span><span class="nx">ubuntu</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">instance_type</span> <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">instance_type</span>
+
+  <span class="nx">vpc_security_group_ids</span> <span class="o">=</span> <span class="p">[</span><span class="nx">aws_security_group</span><span class="p">.</span><span class="nx">web</span><span class="p">.</span><span class="nx">id</span><span class="p">]</span>
+  <span class="nx">subnet_id</span>              <span class="o">=</span> <span class="nx">aws_subnet</span><span class="p">.</span><span class="nx">public</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">key_name</span>               <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">key_name</span>
+
+  <span class="nx">user_data</span> <span class="o">=</span> <span class="nx">templatefile</span><span class="p">(</span><span class="s2">"${path.module}/user_data.sh.tpl"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">app_version</span> <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">app_version</span>
+  <span class="p">})</span>
+
+  <span class="nx">tags</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">Name</span> <span class="o">=</span> <span class="s2">"${var.environment}-web-${count.index + 1}"</span>
+  <span class="p">}</span>
+
+  <span class="nx">lifecycle</span> <span class="p">{</span>
+    <span class="nx">create_before_destroy</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="nx">ignore_changes</span>        <span class="o">=</span> <span class="p">[</span><span class="nx">ami</span><span class="p">]</span>        <span class="c1"># Don't replace if AMI changes</span>
+    <span class="nx">prevent_destroy</span>       <span class="o">=</span> <span class="kc">true</span>         <span class="c1"># Refuse to destroy this resource</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># ─── DATA SOURCE ──────────────────────────────────────</span>
+<span class="nx">data</span> <span class="s2">"aws_ami"</span> <span class="s2">"ubuntu"</span> <span class="p">{</span>
+  <span class="nx">most_recent</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">owners</span>      <span class="o">=</span> <span class="p">[</span><span class="s2">"099720109477"</span><span class="p">]</span>  <span class="c1"># Canonical</span>
+
+  <span class="nx">filter</span> <span class="p">{</span>
+    <span class="nx">name</span>   <span class="o">=</span> <span class="s2">"name"</span>
+    <span class="nx">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"ubuntu/images/hvm-ssd/ubuntu-*-22.04-amd64-server-*"</span><span class="p">]</span>
+  <span class="p">}</span>
+
+  <span class="nx">filter</span> <span class="p">{</span>
+    <span class="nx">name</span>   <span class="o">=</span> <span class="s2">"virtualization-type"</span>
+    <span class="nx">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"hvm"</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># ─── LOCAL VALUES ─────────────────────────────────────</span>
+<span class="nx">locals</span> <span class="p">{</span>
+  <span class="nx">name_prefix</span>  <span class="o">=</span> <span class="s2">"${var.project}-${var.environment}"</span>
+  <span class="nx">common_tags</span>  <span class="o">=</span> <span class="nx">merge</span><span class="p">(</span><span class="nx">var</span><span class="p">.</span><span class="nx">tags</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Environment</span> <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">environment</span> <span class="p">})</span>
+  <span class="nx">is_prod</span>      <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">environment</span> <span class="o">==</span> <span class="s2">"production"</span>
+  <span class="nx">azs</span>          <span class="o">=</span> <span class="nx">slice</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">aws_availability_zones</span><span class="p">.</span><span class="nx">available</span><span class="p">.</span><span class="nx">names</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="providers--resources">Providers &amp; Resources</h2>
+
+<h3 id="aws-vpc-module-example-complete">AWS VPC Module Example (Complete)</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># vpc.tf — Full VPC with public/private subnets</span>
+<span class="nx">resource</span> <span class="s2">"aws_vpc"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">cidr_block</span>           <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">vpc_cidr</span>
+  <span class="nx">enable_dns_hostnames</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">enable_dns_support</span>   <span class="o">=</span> <span class="kc">true</span>
+
+  <span class="nx">tags</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">Name</span> <span class="o">=</span> <span class="s2">"${local.name_prefix}-vpc"</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_subnet"</span> <span class="s2">"public"</span> <span class="p">{</span>
+  <span class="nx">count</span> <span class="o">=</span> <span class="nx">length</span><span class="p">(</span><span class="nx">local</span><span class="p">.</span><span class="nx">azs</span><span class="p">)</span>
+
+  <span class="nx">vpc_id</span>                  <span class="o">=</span> <span class="nx">aws_vpc</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">cidr_block</span>              <span class="o">=</span> <span class="nx">cidrsubnet</span><span class="p">(</span><span class="nx">var</span><span class="p">.</span><span class="nx">vpc_cidr</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="nx">count</span><span class="p">.</span><span class="nx">index</span><span class="p">)</span>
+  <span class="nx">availability_zone</span>       <span class="o">=</span> <span class="nx">local</span><span class="p">.</span><span class="nx">azs</span><span class="p">[</span><span class="nx">count</span><span class="p">.</span><span class="nx">index</span><span class="p">]</span>
+  <span class="nx">map_public_ip_on_launch</span> <span class="o">=</span> <span class="kc">true</span>
+
+  <span class="nx">tags</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">Name</span> <span class="o">=</span> <span class="s2">"${local.name_prefix}-public-${local.azs[count.index]}"</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_subnet"</span> <span class="s2">"private"</span> <span class="p">{</span>
+  <span class="nx">count</span> <span class="o">=</span> <span class="nx">length</span><span class="p">(</span><span class="nx">local</span><span class="p">.</span><span class="nx">azs</span><span class="p">)</span>
+
+  <span class="nx">vpc_id</span>            <span class="o">=</span> <span class="nx">aws_vpc</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">cidr_block</span>        <span class="o">=</span> <span class="nx">cidrsubnet</span><span class="p">(</span><span class="nx">var</span><span class="p">.</span><span class="nx">vpc_cidr</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="nx">count</span><span class="p">.</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span>
+  <span class="nx">availability_zone</span> <span class="o">=</span> <span class="nx">local</span><span class="p">.</span><span class="nx">azs</span><span class="p">[</span><span class="nx">count</span><span class="p">.</span><span class="nx">index</span><span class="p">]</span>
+
+  <span class="nx">tags</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">Name</span> <span class="o">=</span> <span class="s2">"${local.name_prefix}-private-${local.azs[count.index]}"</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_internet_gateway"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">vpc_id</span> <span class="o">=</span> <span class="nx">aws_vpc</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">tags</span>   <span class="o">=</span> <span class="p">{</span> <span class="nx">Name</span> <span class="o">=</span> <span class="s2">"${local.name_prefix}-igw"</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_eip"</span> <span class="s2">"nat"</span> <span class="p">{</span>
+  <span class="nx">count</span>  <span class="o">=</span> <span class="nx">local</span><span class="p">.</span><span class="nx">is_prod</span> <span class="o">?</span> <span class="nx">length</span><span class="p">(</span><span class="nx">local</span><span class="p">.</span><span class="nx">azs</span><span class="p">)</span> <span class="o">:</span> <span class="mi">1</span>
+  <span class="nx">domain</span> <span class="o">=</span> <span class="s2">"vpc"</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_nat_gateway"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">count</span>         <span class="o">=</span> <span class="nx">local</span><span class="p">.</span><span class="nx">is_prod</span> <span class="o">?</span> <span class="nx">length</span><span class="p">(</span><span class="nx">local</span><span class="p">.</span><span class="nx">azs</span><span class="p">)</span> <span class="o">:</span> <span class="mi">1</span>
+  <span class="nx">allocation_id</span> <span class="o">=</span> <span class="nx">aws_eip</span><span class="p">.</span><span class="nx">nat</span><span class="p">[</span><span class="nx">count</span><span class="p">.</span><span class="nx">index</span><span class="p">].</span><span class="nx">id</span>
+  <span class="nx">subnet_id</span>     <span class="o">=</span> <span class="nx">aws_subnet</span><span class="p">.</span><span class="nx">public</span><span class="p">[</span><span class="nx">count</span><span class="p">.</span><span class="nx">index</span><span class="p">].</span><span class="nx">id</span>
+  <span class="nx">depends_on</span>    <span class="o">=</span> <span class="p">[</span><span class="nx">aws_internet_gateway</span><span class="p">.</span><span class="nx">main</span><span class="p">]</span>
+  <span class="nx">tags</span>          <span class="o">=</span> <span class="p">{</span> <span class="nx">Name</span> <span class="o">=</span> <span class="s2">"${local.name_prefix}-nat-${count.index}"</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_route_table"</span> <span class="s2">"public"</span> <span class="p">{</span>
+  <span class="nx">vpc_id</span> <span class="o">=</span> <span class="nx">aws_vpc</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">id</span>
+
+  <span class="nx">route</span> <span class="p">{</span>
+    <span class="nx">cidr_block</span> <span class="o">=</span> <span class="s2">"0.0.0.0/0"</span>
+    <span class="nx">gateway_id</span> <span class="o">=</span> <span class="nx">aws_internet_gateway</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">id</span>
+  <span class="p">}</span>
+
+  <span class="nx">tags</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">Name</span> <span class="o">=</span> <span class="s2">"${local.name_prefix}-public-rt"</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_route_table_association"</span> <span class="s2">"public"</span> <span class="p">{</span>
+  <span class="nx">count</span>          <span class="o">=</span> <span class="nx">length</span><span class="p">(</span><span class="nx">aws_subnet</span><span class="p">.</span><span class="nx">public</span><span class="p">)</span>
+  <span class="nx">subnet_id</span>      <span class="o">=</span> <span class="nx">aws_subnet</span><span class="p">.</span><span class="nx">public</span><span class="p">[</span><span class="nx">count</span><span class="p">.</span><span class="nx">index</span><span class="p">].</span><span class="nx">id</span>
+  <span class="nx">route_table_id</span> <span class="o">=</span> <span class="nx">aws_route_table</span><span class="p">.</span><span class="nx">public</span><span class="p">.</span><span class="nx">id</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_route_table"</span> <span class="s2">"private"</span> <span class="p">{</span>
+  <span class="nx">count</span>  <span class="o">=</span> <span class="nx">local</span><span class="p">.</span><span class="nx">is_prod</span> <span class="o">?</span> <span class="nx">length</span><span class="p">(</span><span class="nx">local</span><span class="p">.</span><span class="nx">azs</span><span class="p">)</span> <span class="o">:</span> <span class="mi">1</span>
+  <span class="nx">vpc_id</span> <span class="o">=</span> <span class="nx">aws_vpc</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">id</span>
+
+  <span class="nx">route</span> <span class="p">{</span>
+    <span class="nx">cidr_block</span>     <span class="o">=</span> <span class="s2">"0.0.0.0/0"</span>
+    <span class="nx">nat_gateway_id</span> <span class="o">=</span> <span class="nx">aws_nat_gateway</span><span class="p">.</span><span class="nx">main</span><span class="p">[</span><span class="nx">local</span><span class="p">.</span><span class="nx">is_prod</span> <span class="o">?</span> <span class="nx">count</span><span class="p">.</span><span class="nx">index</span> <span class="o">:</span> <span class="mi">0</span><span class="p">].</span><span class="nx">id</span>
+  <span class="p">}</span>
+
+  <span class="nx">tags</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">Name</span> <span class="o">=</span> <span class="s2">"${local.name_prefix}-private-rt-${count.index}"</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="state-management">State Management</h2>
+
+<h3 id="state-commands">State Commands</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># View state</span>
+terraform state list                         <span class="c"># All resources</span>
+terraform state show aws_instance.web        <span class="c"># Resource detail</span>
+
+<span class="c"># Manipulate state</span>
+terraform state <span class="nb">mv </span>aws_instance.web aws_instance.app  <span class="c"># Rename</span>
+terraform state <span class="nb">rm </span>aws_instance.web                    <span class="c"># Remove (unmanage)</span>
+terraform import aws_instance.web i-1234567890abcdef0  <span class="c"># Import existing</span>
+
+<span class="c"># Pull/push remote state</span>
+terraform state pull <span class="o">&gt;</span> backup.tfstate
+terraform state push backup.tfstate
+
+<span class="c"># Refresh (re-read real world into state)</span>
+terraform refresh
+
+<span class="c"># Force unlock (if another process crashed)</span>
+terraform force-unlock LOCK-ID
+</code></pre></div></div>
+
+<h3 id="state-locking">State Locking</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># DynamoDB table for state locking (prevents concurrent applies)</span>
+<span class="nx">resource</span> <span class="s2">"aws_dynamodb_table"</span> <span class="s2">"terraform_lock"</span> <span class="p">{</span>
+  <span class="nx">name</span>         <span class="o">=</span> <span class="s2">"terraform-state-lock"</span>
+  <span class="nx">billing_mode</span> <span class="o">=</span> <span class="s2">"PAY_PER_REQUEST"</span>
+  <span class="nx">hash_key</span>     <span class="o">=</span> <span class="s2">"LockID"</span>
+
+  <span class="nx">attribute</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="o">=</span> <span class="s2">"LockID"</span>
+    <span class="nx">type</span> <span class="o">=</span> <span class="s2">"S"</span>
+  <span class="p">}</span>
+
+  <span class="nx">tags</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">Purpose</span> <span class="o">=</span> <span class="s2">"TerraformStateLocking"</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_s3_bucket"</span> <span class="s2">"tfstate"</span> <span class="p">{</span>
+  <span class="nx">bucket</span> <span class="o">=</span> <span class="s2">"my-terraform-state-${var.account_id}"</span>
+
+  <span class="nx">lifecycle</span> <span class="p">{</span>
+    <span class="nx">prevent_destroy</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_s3_bucket_versioning"</span> <span class="s2">"tfstate"</span> <span class="p">{</span>
+  <span class="nx">bucket</span> <span class="o">=</span> <span class="nx">aws_s3_bucket</span><span class="p">.</span><span class="nx">tfstate</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">versioning_configuration</span> <span class="p">{</span> <span class="nx">status</span> <span class="o">=</span> <span class="s2">"Enabled"</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"aws_s3_bucket_server_side_encryption_configuration"</span> <span class="s2">"tfstate"</span> <span class="p">{</span>
+  <span class="nx">bucket</span> <span class="o">=</span> <span class="nx">aws_s3_bucket</span><span class="p">.</span><span class="nx">tfstate</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">rule</span> <span class="p">{</span>
+    <span class="nx">apply_server_side_encryption_by_default</span> <span class="p">{</span>
+      <span class="nx">sse_algorithm</span> <span class="o">=</span> <span class="s2">"AES256"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="variables--outputs">Variables &amp; Outputs</h2>
+
+<h3 id="variable-types-and-validation">Variable Types and Validation</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># variables.tf</span>
+<span class="nx">variable</span> <span class="s2">"environment"</span> <span class="p">{</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"Deployment environment"</span>
+  <span class="nx">type</span>        <span class="o">=</span> <span class="nx">string</span>
+
+  <span class="nx">validation</span> <span class="p">{</span>
+    <span class="nx">condition</span>     <span class="o">=</span> <span class="nx">contains</span><span class="p">([</span><span class="s2">"development"</span><span class="p">,</span> <span class="s2">"staging"</span><span class="p">,</span> <span class="s2">"production"</span><span class="p">],</span> <span class="nx">var</span><span class="p">.</span><span class="nx">environment</span><span class="p">)</span>
+    <span class="nx">error_message</span> <span class="o">=</span> <span class="s2">"Environment must be: development, staging, or production."</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">"instance_count"</span> <span class="p">{</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"Number of instances"</span>
+  <span class="nx">type</span>        <span class="o">=</span> <span class="nx">number</span>
+  <span class="nx">default</span>     <span class="o">=</span> <span class="mi">2</span>
+
+  <span class="nx">validation</span> <span class="p">{</span>
+    <span class="nx">condition</span>     <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">instance_count</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">var</span><span class="p">.</span><span class="nx">instance_count</span> <span class="o">&lt;=</span> <span class="mi">20</span>
+    <span class="nx">error_message</span> <span class="o">=</span> <span class="s2">"Instance count must be between 1 and 20."</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">"allowed_ips"</span> <span class="p">{</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"CIDR blocks allowed to access the app"</span>
+  <span class="nx">type</span>        <span class="o">=</span> <span class="nx">list</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span>
+  <span class="nx">default</span>     <span class="o">=</span> <span class="p">[</span><span class="s2">"10.0.0.0/8"</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">"tags"</span> <span class="p">{</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"Additional resource tags"</span>
+  <span class="nx">type</span>        <span class="o">=</span> <span class="nx">map</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span>
+  <span class="nx">default</span>     <span class="o">=</span> <span class="p">{}</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">"database_config"</span> <span class="p">{</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"Database configuration"</span>
+  <span class="nx">type</span> <span class="o">=</span> <span class="nx">object</span><span class="p">({</span>
+    <span class="nx">engine</span>         <span class="o">=</span> <span class="nx">string</span>
+    <span class="nx">engine_version</span> <span class="o">=</span> <span class="nx">string</span>
+    <span class="nx">instance_class</span> <span class="o">=</span> <span class="nx">string</span>
+    <span class="nx">storage_gb</span>     <span class="o">=</span> <span class="nx">number</span>
+    <span class="nx">multi_az</span>       <span class="o">=</span> <span class="nx">bool</span>
+  <span class="err">})</span>
+  <span class="nx">default</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">engine</span>         <span class="o">=</span> <span class="s2">"postgres"</span>
+    <span class="nx">engine_version</span> <span class="o">=</span> <span class="s2">"15.3"</span>
+    <span class="nx">instance_class</span> <span class="o">=</span> <span class="s2">"db.t3.micro"</span>
+    <span class="nx">storage_gb</span>     <span class="o">=</span> <span class="mi">20</span>
+    <span class="nx">multi_az</span>       <span class="o">=</span> <span class="kc">false</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># Sensitive variable — never printed in logs</span>
+<span class="nx">variable</span> <span class="s2">"db_password"</span> <span class="p">{</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"Database password"</span>
+  <span class="nx">type</span>        <span class="o">=</span> <span class="nx">string</span>
+  <span class="nx">sensitive</span>   <span class="o">=</span> <span class="kc">true</span>
+<span class="p">}</span>
+
+<span class="c1"># outputs.tf</span>
+<span class="nx">output</span> <span class="s2">"vpc_id"</span> <span class="p">{</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"ID of the VPC"</span>
+  <span class="nx">value</span>       <span class="o">=</span> <span class="nx">aws_vpc</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">id</span>
+<span class="p">}</span>
+
+<span class="nx">output</span> <span class="s2">"public_subnet_ids"</span> <span class="p">{</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"IDs of public subnets"</span>
+  <span class="nx">value</span>       <span class="o">=</span> <span class="nx">aws_subnet</span><span class="p">.</span><span class="nx">public</span><span class="p">[*].</span><span class="nx">id</span>
+<span class="p">}</span>
+
+<span class="nx">output</span> <span class="s2">"db_endpoint"</span> <span class="p">{</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"Database connection endpoint"</span>
+  <span class="nx">value</span>       <span class="o">=</span> <span class="nx">aws_db_instance</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">endpoint</span>
+  <span class="nx">sensitive</span>   <span class="o">=</span> <span class="kc">true</span>     <span class="c1"># Won't print in plan/apply output</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="variable-precedence-lowest--highest">Variable Precedence (lowest → highest)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Default in variable block
+2. terraform.tfvars
+3. terraform.tfvars.json
+4. *.auto.tfvars (alphabetical order)
+5. -var-file flag
+6. -var flag
+7. TF_VAR_* environment variables
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="modules">Modules</h2>
+
+<h3 id="module-structure">Module Structure</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modules/
+└── vpc/
+    ├── main.tf         # Resources
+    ├── variables.tf    # Input variables
+    ├── outputs.tf      # Output values
+    ├── versions.tf     # Provider requirements
+    └── README.md       # Documentation
+</code></pre></div></div>
+
+<h3 id="calling-a-module">Calling a Module</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># root/main.tf</span>
+<span class="nx">module</span> <span class="s2">"vpc"</span> <span class="p">{</span>
+  <span class="nx">source</span>  <span class="o">=</span> <span class="s2">"terraform-aws-modules/vpc/aws"</span>
+  <span class="nx">version</span> <span class="o">=</span> <span class="s2">"~&gt; 5.0"</span>
+
+  <span class="nx">name</span> <span class="o">=</span> <span class="nx">local</span><span class="p">.</span><span class="nx">name_prefix</span>
+  <span class="nx">cidr</span> <span class="o">=</span> <span class="s2">"10.0.0.0/16"</span>
+
+  <span class="nx">azs</span>             <span class="o">=</span> <span class="nx">local</span><span class="p">.</span><span class="nx">azs</span>
+  <span class="nx">private_subnets</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"10.0.1.0/24"</span><span class="p">,</span> <span class="s2">"10.0.2.0/24"</span><span class="p">,</span> <span class="s2">"10.0.3.0/24"</span><span class="p">]</span>
+  <span class="nx">public_subnets</span>  <span class="o">=</span> <span class="p">[</span><span class="s2">"10.0.101.0/24"</span><span class="p">,</span> <span class="s2">"10.0.102.0/24"</span><span class="p">,</span> <span class="s2">"10.0.103.0/24"</span><span class="p">]</span>
+
+  <span class="nx">enable_nat_gateway</span>   <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">single_nat_gateway</span>   <span class="o">=</span> <span class="o">!</span><span class="nx">local</span><span class="p">.</span><span class="nx">is_prod</span>
+  <span class="nx">enable_dns_hostnames</span> <span class="o">=</span> <span class="kc">true</span>
+
+  <span class="nx">tags</span> <span class="o">=</span> <span class="nx">local</span><span class="p">.</span><span class="nx">common_tags</span>
+<span class="p">}</span>
+
+<span class="c1"># Use module outputs</span>
+<span class="nx">module</span> <span class="s2">"eks"</span> <span class="p">{</span>
+  <span class="nx">source</span>  <span class="o">=</span> <span class="s2">"terraform-aws-modules/eks/aws"</span>
+  <span class="nx">version</span> <span class="o">=</span> <span class="s2">"~&gt; 19.0"</span>
+
+  <span class="nx">cluster_name</span>    <span class="o">=</span> <span class="s2">"${local.name_prefix}-eks"</span>
+  <span class="nx">cluster_version</span> <span class="o">=</span> <span class="s2">"1.28"</span>
+
+  <span class="nx">vpc_id</span>     <span class="o">=</span> <span class="nx">module</span><span class="err">.</span><span class="nx">vpc</span><span class="p">.</span><span class="nx">vpc_id</span>
+  <span class="nx">subnet_ids</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">vpc</span><span class="p">.</span><span class="nx">private_subnets</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="module-versioning">Module Versioning</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Local path (development)</span>
+<span class="nx">source</span> <span class="o">=</span> <span class="s2">"./modules/vpc"</span>
+
+<span class="c1"># Git repository</span>
+<span class="nx">source</span> <span class="o">=</span> <span class="s2">"git::https://github.com/org/terraform-modules.git//vpc?ref=v2.1.0"</span>
+
+<span class="c1"># Terraform Registry (public)</span>
+<span class="nx">source</span>  <span class="o">=</span> <span class="s2">"hashicorp/consul/aws"</span>
+<span class="nx">version</span> <span class="o">=</span> <span class="s2">"0.1.0"</span>
+
+<span class="c1"># Private registry</span>
+<span class="nx">source</span>  <span class="o">=</span> <span class="s2">"app.terraform.io/my-org/vpc/aws"</span>
+<span class="nx">version</span> <span class="o">=</span> <span class="s2">"~&gt; 2.0"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="workspaces">Workspaces</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Workspaces = separate state files per workspace</span>
+terraform workspace new staging
+terraform workspace new production
+terraform workspace list
+terraform workspace <span class="k">select </span>staging
+terraform workspace show      <span class="c"># Current workspace</span>
+
+<span class="c"># Use in code</span>
+resource <span class="s2">"aws_instance"</span> <span class="s2">"web"</span> <span class="o">{</span>
+  instance_type <span class="o">=</span> terraform.workspace <span class="o">==</span> <span class="s2">"production"</span> ? <span class="s2">"t3.large"</span> : <span class="s2">"t3.micro"</span>
+<span class="o">}</span>
+
+locals <span class="o">{</span>
+  env_config <span class="o">=</span> <span class="o">{</span>
+    production  <span class="o">=</span> <span class="o">{</span> instance_type <span class="o">=</span> <span class="s2">"t3.large"</span>,  min_size <span class="o">=</span> 3 <span class="o">}</span>
+    staging     <span class="o">=</span> <span class="o">{</span> instance_type <span class="o">=</span> <span class="s2">"t3.small"</span>,  min_size <span class="o">=</span> 1 <span class="o">}</span>
+    development <span class="o">=</span> <span class="o">{</span> instance_type <span class="o">=</span> <span class="s2">"t3.micro"</span>,  min_size <span class="o">=</span> 1 <span class="o">}</span>
+  <span class="o">}</span>
+  config <span class="o">=</span> local.env_config[terraform.workspace]
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="backends">Backends</h2>
+
+<h3 id="remote-backend-options">Remote Backend Options</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Backend</th>
+      <th>State</th>
+      <th>Locking</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>local</strong> (default)</td>
+      <td>Local file</td>
+      <td>No</td>
+      <td>Solo dev, learning</td>
+    </tr>
+    <tr>
+      <td><strong>S3 + DynamoDB</strong></td>
+      <td>S3</td>
+      <td>DynamoDB</td>
+      <td>AWS teams</td>
+    </tr>
+    <tr>
+      <td><strong>Azure Blob</strong></td>
+      <td>Azure Storage</td>
+      <td>Blob lease</td>
+      <td>Azure teams</td>
+    </tr>
+    <tr>
+      <td><strong>GCS</strong></td>
+      <td>GCS bucket</td>
+      <td>GCS native</td>
+      <td>GCP teams</td>
+    </tr>
+    <tr>
+      <td><strong>Terraform Cloud</strong></td>
+      <td>HCP Terraform</td>
+      <td>Yes</td>
+      <td>Teams, enterprises</td>
+    </tr>
+    <tr>
+      <td><strong>GitLab</strong></td>
+      <td>GitLab managed</td>
+      <td>Yes</td>
+      <td>GitLab users</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is Terraform state and why is it important?</strong></p>
+
+<blockquote>
+  <p>Terraform state (<code class="language-plaintext highlighter-rouge">terraform.tfstate</code>) is a JSON file mapping your configuration resources to real infrastructure. It stores IDs, attributes, and metadata. It’s important because:</p>
+  <ul>
+    <li>Terraform uses it to <strong>detect drift</strong> (real world ≠ config)</li>
+    <li>Enables <strong>incremental updates</strong> (only change what needs changing)</li>
+    <li>Tracks <strong>resource dependencies</strong> for correct ordering</li>
+    <li>Stores <strong>sensitive values</strong> (encrypted in remote backends)
+Without state, Terraform can’t know what it manages.</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q2: What is the difference between <code class="language-plaintext highlighter-rouge">terraform plan</code> and <code class="language-plaintext highlighter-rouge">terraform apply</code>?</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">terraform plan</code> is a <strong>dry run</strong> — it reads state, queries the provider API, computes a diff, and shows what would change (<code class="language-plaintext highlighter-rouge">+</code> create, <code class="language-plaintext highlighter-rouge">~</code> update, <code class="language-plaintext highlighter-rouge">-</code> destroy). Nothing changes in the real world. <code class="language-plaintext highlighter-rouge">terraform apply</code> <strong>executes</strong> those changes after prompting for confirmation. In automation, use <code class="language-plaintext highlighter-rouge">terraform plan -out=tfplan</code> then <code class="language-plaintext highlighter-rouge">terraform apply tfplan</code> to guarantee what gets applied matches what was reviewed.</p>
+</blockquote>
+
+<p><strong>Q3: What is a Terraform provider?</strong></p>
+
+<blockquote>
+  <p>A provider is a plugin that handles API communication with a specific platform (AWS, Azure, GCP, GitHub, Datadog, etc.). Providers translate HCL resource blocks into API calls. Each provider has its own authentication configuration. Providers are versioned and downloaded during <code class="language-plaintext highlighter-rouge">terraform init</code> from the Terraform Registry.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: How do you manage Terraform state in a team?</strong></p>
+
+<blockquote>
+  <ul>
+    <li>Use a <strong>remote backend</strong> (S3+DynamoDB, Terraform Cloud) — single source of truth, not a local file committed to Git</li>
+    <li>Enable <strong>state locking</strong> — DynamoDB for S3, preventing concurrent applies that would corrupt state</li>
+    <li>Enable <strong>versioning and encryption</strong> on the state bucket</li>
+    <li>Use <strong>separate state files per environment</strong> (via workspaces or separate backend configs)</li>
+    <li>Never manually edit <code class="language-plaintext highlighter-rouge">tfstate</code> — use <code class="language-plaintext highlighter-rouge">terraform state</code> commands</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q5: Explain <code class="language-plaintext highlighter-rouge">count</code> vs <code class="language-plaintext highlighter-rouge">for_each</code> and when to use each.</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">count</code> uses an integer — creates N identical resources, indexed by <code class="language-plaintext highlighter-rouge">count.index</code>. Problem: if you remove item 0, all higher-indexed resources are recreated (order-dependent). <code class="language-plaintext highlighter-rouge">for_each</code> uses a map or set of strings — creates resources keyed by value, order-independent. Removing one key only removes that resource.</p>
+  <div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># count — risky for lists that change</span>
+<span class="nx">resource</span> <span class="s2">"aws_subnet"</span> <span class="s2">"pub"</span> <span class="p">{</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">3</span> <span class="p">}</span>
+
+<span class="c1"># for_each — safe, stable keys</span>
+<span class="nx">resource</span> <span class="s2">"aws_subnet"</span> <span class="s2">"pub"</span> <span class="p">{</span>
+  <span class="nx">for_each</span> <span class="o">=</span> <span class="nx">toset</span><span class="p">([</span><span class="s2">"us-east-1a"</span><span class="p">,</span> <span class="s2">"us-east-1b"</span><span class="p">,</span> <span class="s2">"us-east-1c"</span><span class="p">])</span>
+  <span class="nx">availability_zone</span> <span class="o">=</span> <span class="nx">each</span><span class="p">.</span><span class="nx">key</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<p><strong>Q6: What is <code class="language-plaintext highlighter-rouge">terraform taint</code> (now <code class="language-plaintext highlighter-rouge">terraform apply -replace</code>)?</strong></p>
+
+<blockquote>
+  <p>Forces recreation of a specific resource even if its config hasn’t changed. Used when a resource is in a broken state but Terraform doesn’t detect it (e.g., corrupted EC2 instance). Modern syntax: <code class="language-plaintext highlighter-rouge">terraform apply -replace="aws_instance.web"</code>. The old <code class="language-plaintext highlighter-rouge">terraform taint</code> command was deprecated in Terraform 0.15.2.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: How would you refactor Terraform code to use modules without destroying resources?</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Problem: moved resources into a module, now Terraform wants to destroy+recreate</span>
+
+<span class="c"># Solution: terraform state mv</span>
+<span class="c"># Original address: aws_vpc.main</span>
+<span class="c"># New module address: module.network.aws_vpc.main</span>
+
+terraform state <span class="nb">mv</span> <span class="se">\</span>
+  <span class="s1">'aws_vpc.main'</span> <span class="se">\</span>
+  <span class="s1">'module.network.aws_vpc.main'</span>
+
+terraform state <span class="nb">mv</span> <span class="se">\</span>
+  <span class="s1">'aws_subnet.public[0]'</span> <span class="se">\</span>
+  <span class="s1">'module.network.aws_subnet.public[0]'</span>
+
+<span class="c"># Verify plan shows no changes</span>
+terraform plan
+<span class="c"># Should show: No changes. Infrastructure is up-to-date.</span>
+</code></pre></div></div>
+
+<p><strong>Q8: Explain Terraform’s dependency graph and how to handle circular dependencies.</strong></p>
+
+<blockquote>
+  <p>Terraform builds a <strong>directed acyclic graph (DAG)</strong> of resources based on explicit references (<code class="language-plaintext highlighter-rouge">aws_subnet.main.id</code>) and <code class="language-plaintext highlighter-rouge">depends_on</code>. It applies resources in parallel when no dependency exists. Circular dependencies are a configuration error. Fixes:</p>
+  <ul>
+    <li>Extract a resource to break the cycle</li>
+    <li>Use <code class="language-plaintext highlighter-rouge">data</code> sources instead of resource references where possible</li>
+    <li>Use <code class="language-plaintext highlighter-rouge">depends_on</code> carefully (it’s a full dependency, not just ordering)</li>
+    <li>Split into separate Terraform configurations communicating via remote state: <code class="language-plaintext highlighter-rouge">data "terraform_remote_state"</code></li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-production-state-corruption">🔵 Scenario 1: Production State Corruption</h3>
+
+<p><em>“Someone ran <code class="language-plaintext highlighter-rouge">terraform apply</code> with the wrong workspace. Resources were accidentally destroyed. How do you recover?”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. STOP: don't run any more terraform commands</span>
+
+<span class="c"># 2. Identify what was destroyed from the plan output in CI logs</span>
+
+<span class="c"># 3. Restore state from S3 versioning</span>
+aws s3api list-object-versions <span class="se">\</span>
+  <span class="nt">--bucket</span> my-tfstate-bucket <span class="se">\</span>
+  <span class="nt">--prefix</span> production/terraform.tfstate
+
+aws s3api get-object <span class="se">\</span>
+  <span class="nt">--bucket</span> my-tfstate-bucket <span class="se">\</span>
+  <span class="nt">--key</span> production/terraform.tfstate <span class="se">\</span>
+  <span class="nt">--version-id</span> &lt;version-id-before-incident&gt; <span class="se">\</span>
+  restored.tfstate
+
+terraform state push restored.tfstate
+
+<span class="c"># 4. Import any resources that still exist but were removed from state</span>
+terraform import aws_instance.web i-1234567890abcdef0
+
+<span class="c"># 5. Plan to verify state matches reality</span>
+terraform plan   <span class="c"># Should show no changes if import was complete</span>
+
+<span class="c"># 6. For truly deleted resources: re-create via apply</span>
+
+<span class="c"># Prevention:</span>
+<span class="c"># - Enable prevent_destroy on critical resources</span>
+<span class="c"># - Require PR review for production applies</span>
+<span class="c"># - Separate state files per environment</span>
+<span class="c"># - Enable S3 versioning + MFA delete on tfstate bucket</span>
+</code></pre></div></div>
+
+<h3 id="-scenario-2-drift-detection">🔵 Scenario 2: Drift Detection</h3>
+
+<p><em>“An engineer made manual changes in the AWS console. How do you detect and reconcile?”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Check for drift</span>
+terraform plan     <span class="c"># Will show changes needed to match config</span>
+
+<span class="c"># 2. Options:</span>
+<span class="c"># A) Accept manual changes — import into state and update .tf files</span>
+terraform import aws_security_group_rule.ssh sgr-abc123
+<span class="c"># Then edit .tf to reflect new config</span>
+
+<span class="c"># B) Reject manual changes — run apply to revert</span>
+terraform apply    <span class="c"># Reverts to declared config</span>
+
+<span class="c"># 3. Automated drift detection in CI</span>
+<span class="c"># Run terraform plan on a schedule (daily cron in GitHub Actions)</span>
+<span class="c"># Alert if plan output is non-empty</span>
+terraform plan <span class="nt">-detailed-exitcode</span>
+<span class="c"># Exit code 0 = no changes, 1 = error, 2 = changes pending</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-bootstrap-remote-state">Lab 1: Bootstrap Remote State</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Step 1: Bootstrap with local state, then migrate</span>
+<span class="c"># bootstrap/main.tf</span>
+terraform <span class="o">{</span>
+  required_providers <span class="o">{</span>
+    aws <span class="o">=</span> <span class="o">{</span> <span class="nb">source</span> <span class="o">=</span> <span class="s2">"hashicorp/aws"</span> <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+resource <span class="s2">"aws_s3_bucket"</span> <span class="s2">"tfstate"</span> <span class="o">{</span>
+  bucket <span class="o">=</span> <span class="s2">"tfstate-</span><span class="k">${</span><span class="nv">data</span><span class="p">.aws_caller_identity.current.account_id</span><span class="k">}</span><span class="s2">"</span>
+<span class="o">}</span>
+
+resource <span class="s2">"aws_s3_bucket_versioning"</span> <span class="s2">"tfstate"</span> <span class="o">{</span>
+  bucket <span class="o">=</span> aws_s3_bucket.tfstate.id
+  versioning_configuration <span class="o">{</span> status <span class="o">=</span> <span class="s2">"Enabled"</span> <span class="o">}</span>
+<span class="o">}</span>
+
+resource <span class="s2">"aws_dynamodb_table"</span> <span class="s2">"lock"</span> <span class="o">{</span>
+  name         <span class="o">=</span> <span class="s2">"terraform-state-lock"</span>
+  billing_mode <span class="o">=</span> <span class="s2">"PAY_PER_REQUEST"</span>
+  hash_key     <span class="o">=</span> <span class="s2">"LockID"</span>
+  attribute <span class="o">{</span> name <span class="o">=</span> <span class="s2">"LockID"</span><span class="p">;</span> <span class="nb">type</span> <span class="o">=</span> <span class="s2">"S"</span> <span class="o">}</span>
+<span class="o">}</span>
+
+data <span class="s2">"aws_caller_identity"</span> <span class="s2">"current"</span> <span class="o">{}</span>
+
+<span class="c"># Step 2: Apply with local state</span>
+terraform init <span class="o">&amp;&amp;</span> terraform apply
+
+<span class="c"># Step 3: Add backend block and re-init to migrate state</span>
+<span class="c"># terraform init -migrate-state</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── INIT / FORMAT / VALIDATE ─────────────────────────</span>
+terraform init                    <span class="c"># Initialize + download providers</span>
+terraform init <span class="nt">-upgrade</span>           <span class="c"># Upgrade provider versions</span>
+terraform <span class="nb">fmt</span> <span class="nt">-recursive</span>          <span class="c"># Format all .tf files</span>
+terraform validate                <span class="c"># Syntax + config validation</span>
+
+<span class="c"># ─── PLAN / APPLY / DESTROY ───────────────────────────</span>
+terraform plan
+terraform plan <span class="nt">-out</span><span class="o">=</span>tfplan        <span class="c"># Save plan</span>
+terraform plan <span class="nt">-var-file</span><span class="o">=</span>prod.tfvars
+terraform apply
+terraform apply tfplan            <span class="c"># Apply saved plan</span>
+terraform apply <span class="nt">-auto-approve</span>     <span class="c"># Skip confirmation (CI only)</span>
+terraform apply <span class="nt">-target</span><span class="o">=</span>aws_instance.web  <span class="c"># Target single resource</span>
+terraform destroy <span class="nt">-auto-approve</span>
+
+<span class="c"># ─── STATE ────────────────────────────────────────────</span>
+terraform state list
+terraform state show &lt;resource&gt;
+terraform state <span class="nb">mv</span> &lt;src&gt; &lt;dst&gt;
+terraform state <span class="nb">rm</span> &lt;resource&gt;
+terraform import &lt;resource&gt; &lt;<span class="nb">id</span><span class="o">&gt;</span>
+
+<span class="c"># ─── WORKSPACE ────────────────────────────────────────</span>
+terraform workspace new dev
+terraform workspace <span class="k">select </span>prod
+terraform workspace list
+
+<span class="c"># ─── OUTPUT / CONSOLE ─────────────────────────────────</span>
+terraform output
+terraform output vpc_id
+terraform console              <span class="c"># Interactive expression evaluation</span>
+
+<span class="c"># ─── GRAPH ────────────────────────────────────────────</span>
+terraform graph | dot <span class="nt">-Tsvg</span> <span class="o">&gt;</span> graph.svg
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Jenkins.html">← Jenkins</a></td>
+        <td><a href="/devops-interview-guide/Ansible.html">Ansible →</a></td>
+        <td><a href="/devops-interview-guide/AWS.html">AWS (cloud resources) →</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">CI/CD (Terraform in pipelines) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

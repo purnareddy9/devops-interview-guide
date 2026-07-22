@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🔀 Git — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🔀 Git — DevOps Interview Guide
 
 > [← Networking](./Networking.md) | [Main Index](./README.md) | [Docker →](./Docker.md)

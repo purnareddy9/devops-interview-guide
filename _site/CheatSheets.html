@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>⚡ Cheat Sheets — DevOps Quick Reference · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="⚡ Cheat Sheets — DevOps Quick Reference · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/CheatSheets.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="⚡ Cheat Sheets — DevOps Quick Reference · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>⚡ Cheat Sheets — DevOps Quick Reference | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="⚡ Cheat Sheets — DevOps Quick Reference" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/CheatSheets.html" />
+<meta property="og:url" content="/devops-interview-guide/CheatSheets.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="⚡ Cheat Sheets — DevOps Quick Reference" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"⚡ Cheat Sheets — DevOps Quick Reference","url":"/devops-interview-guide/CheatSheets.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">⚡ Cheat Sheets — DevOps Quick Reference</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-cheat-sheets--devops-quick-reference">⚡ Cheat Sheets — DevOps Quick Reference</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/LearningRoadmap.html">← Learning Roadmap</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<blockquote>
+  <p><strong>Tip</strong>: Bookmark this file. Review it the day before your interview.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#linux-cheat-sheet">Linux Cheat Sheet</a></li>
+  <li><a href="#git-cheat-sheet">Git Cheat Sheet</a></li>
+  <li><a href="#docker-cheat-sheet">Docker Cheat Sheet</a></li>
+  <li><a href="#kubernetes-kubectl-cheat-sheet">Kubernetes (kubectl) Cheat Sheet</a></li>
+  <li><a href="#terraform-cheat-sheet">Terraform Cheat Sheet</a></li>
+  <li><a href="#ansible-cheat-sheet">Ansible Cheat Sheet</a></li>
+  <li><a href="#aws-cli-cheat-sheet">AWS CLI Cheat Sheet</a></li>
+  <li><a href="#prometheuspromql-cheat-sheet">Prometheus/PromQL Cheat Sheet</a></li>
+  <li><a href="#jenkins-pipeline-cheat-sheet">Jenkins Pipeline Cheat Sheet</a></li>
+  <li><a href="#security-cheat-sheet">Security Cheat Sheet</a></li>
+  <li><a href="#networking-quick-reference">Networking Quick Reference</a></li>
+  <li><a href="#sre-quick-reference">SRE Quick Reference</a></li>
+</ol>
+
+<hr />
+
+<h2 id="linux-cheat-sheet">Linux Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── FILE SYSTEM ──────────────────────────────────────</span>
+<span class="nb">ls</span> <span class="nt">-lah</span>                      <span class="c"># List with sizes</span>
+find / <span class="nt">-name</span> <span class="s2">"*.conf"</span> <span class="nt">-type</span> f 2&gt;/dev/null
+find /var/log <span class="nt">-mtime</span> <span class="nt">-1</span>      <span class="c"># Modified in last day</span>
+<span class="nb">du</span> <span class="nt">-sh</span> /var/log/<span class="k">*</span>            <span class="c"># Disk usage per dir</span>
+<span class="nb">df</span> <span class="nt">-h</span>                        <span class="c"># Disk free all filesystems</span>
+<span class="nb">df</span> <span class="nt">-i</span>                        <span class="c"># Inode usage</span>
+
+<span class="c"># ─── PERMISSIONS ──────────────────────────────────────</span>
+<span class="nb">chmod </span>755 file               <span class="c"># rwxr-xr-x</span>
+<span class="nb">chmod</span> +x script.sh           <span class="c"># Add execute bit</span>
+<span class="nb">chmod</span> <span class="nt">-R</span> 644 /var/www/       <span class="c"># Recursive</span>
+<span class="nb">chown </span>user:group file        <span class="c"># Change owner</span>
+<span class="c"># Permission bits: 4=read 2=write 1=execute</span>
+<span class="c"># 755 = rwxr-xr-x (owner:all, group:rx, other:rx)</span>
+<span class="c"># 644 = rw-r--r-- (owner:rw, rest:r)</span>
+
+<span class="c"># ─── PROCESSES ────────────────────────────────────────</span>
+ps aux                       <span class="c"># All processes</span>
+ps aux | <span class="nb">grep </span>nginx          <span class="c"># Filter</span>
+top <span class="nt">-b</span> <span class="nt">-n1</span> | <span class="nb">head</span> <span class="nt">-20</span>        <span class="c"># Top snapshot</span>
+<span class="nb">kill</span> <span class="nt">-9</span> PID                  <span class="c"># Force kill</span>
+<span class="nb">kill</span> <span class="nt">-15</span> PID                 <span class="c"># Graceful (SIGTERM)</span>
+pgrep <span class="nt">-a</span> nginx               <span class="c"># Find PID by name</span>
+lsof <span class="nt">-i</span> :80                  <span class="c"># Who uses port 80</span>
+
+<span class="c"># ─── NETWORKING ───────────────────────────────────────</span>
+ip addr show                 <span class="c"># IP addresses</span>
+ss <span class="nt">-tulnp</span>                    <span class="c"># Active listeners (preferred)</span>
+netstat <span class="nt">-tulnp</span>               <span class="c"># Legacy</span>
+ping <span class="nt">-c</span> 4 host               <span class="c"># ICMP test</span>
+traceroute host              <span class="c"># Trace hops</span>
+dig domain.com               <span class="c"># DNS lookup</span>
+dig +short domain.com        <span class="c"># IP only</span>
+nc <span class="nt">-zv</span> host 443              <span class="c"># Test TCP port</span>
+
+<span class="c"># ─── SYSTEM ───────────────────────────────────────────</span>
+<span class="nb">uptime</span>                       <span class="c"># Load averages</span>
+free <span class="nt">-h</span>                      <span class="c"># Memory</span>
+iostat <span class="nt">-xz</span> 1                 <span class="c"># Disk I/O</span>
+journalctl <span class="nt">-xe</span>               <span class="c"># Systemd journal errors</span>
+journalctl <span class="nt">-u</span> nginx <span class="nt">-f</span>       <span class="c"># Follow service logs</span>
+systemctl status nginx       <span class="c"># Service status</span>
+systemctl restart nginx      <span class="c"># Restart service</span>
+
+<span class="c"># ─── USEFUL ONE-LINERS ────────────────────────────────</span>
+<span class="nb">tail</span> <span class="nt">-f</span> /var/log/app.log | <span class="nb">grep</span> <span class="nt">-i</span> error
+<span class="nb">grep</span> <span class="nt">-r</span> <span class="s2">"pattern"</span> /etc/ 2&gt;/dev/null
+<span class="nb">awk</span> <span class="s1">'{print $1}'</span> access.log | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-rn</span> | <span class="nb">head
+sed</span> <span class="nt">-i</span> <span class="s1">'s/old/new/g'</span> config.conf
+find <span class="nb">.</span> <span class="nt">-name</span> <span class="s2">"*.log"</span> <span class="nt">-mtime</span> +7 <span class="nt">-delete</span>
+<span class="nb">tar</span> <span class="nt">-czvf</span> backup.tar.gz /path/to/dir
+<span class="nb">tar</span> <span class="nt">-xzvf</span> backup.tar.gz <span class="nt">-C</span> /dest/
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="git-cheat-sheet">Git Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── SETUP ────────────────────────────────────────────</span>
+git config <span class="nt">--global</span> user.name <span class="s2">"Name"</span>
+git config <span class="nt">--global</span> user.email <span class="s2">"email@example.com"</span>
+git config <span class="nt">--global</span> core.editor vim
+git config <span class="nt">--global</span> pull.rebase <span class="nb">true</span>
+
+<span class="c"># ─── BRANCH ───────────────────────────────────────────</span>
+git switch <span class="nt">-c</span> feature/new     <span class="c"># Create + switch (modern)</span>
+git checkout <span class="nt">-b</span> feature/new   <span class="c"># Create + switch (classic)</span>
+git branch <span class="nt">-a</span>                 <span class="c"># All branches</span>
+git branch <span class="nt">-d</span> feature         <span class="c"># Delete (safe)</span>
+git branch <span class="nt">-D</span> feature         <span class="c"># Force delete</span>
+git push origin <span class="nt">--delete</span> feature  <span class="c"># Delete remote</span>
+
+<span class="c"># ─── STAGING &amp; COMMITS ────────────────────────────────</span>
+git add <span class="nt">-p</span>                    <span class="c"># Interactive hunk staging</span>
+git status <span class="nt">-s</span>                 <span class="c"># Short status</span>
+git diff HEAD                 <span class="c"># All changes since last commit</span>
+git diff <span class="nt">--staged</span>             <span class="c"># Staged changes</span>
+git commit <span class="nt">-m</span> <span class="s2">"feat: add login"</span>
+git commit <span class="nt">--amend</span>            <span class="c"># Fix last commit</span>
+
+<span class="c"># ─── SYNC ─────────────────────────────────────────────</span>
+git fetch <span class="nt">--prune</span>             <span class="c"># Fetch + remove stale refs</span>
+git pull <span class="nt">--rebase</span> origin main
+git push <span class="nt">--force-with-lease</span>   <span class="c"># Safe force push</span>
+
+<span class="c"># ─── UNDO ─────────────────────────────────────────────</span>
+git restore file.py           <span class="c"># Discard working changes</span>
+git restore <span class="nt">--staged</span> file.py  <span class="c"># Unstage</span>
+git revert SHA                <span class="c"># Safe undo (creates new commit)</span>
+git reset <span class="nt">--soft</span> HEAD~1       <span class="c"># Undo commit, keep staged</span>
+git reset <span class="nt">--hard</span> HEAD~1       <span class="c"># Undo commit, discard everything</span>
+
+<span class="c"># ─── HISTORY ──────────────────────────────────────────</span>
+git log <span class="nt">--oneline</span> <span class="nt">--graph</span> <span class="nt">--all</span>
+git log <span class="nt">--author</span><span class="o">=</span><span class="s2">"Alice"</span> <span class="nt">--since</span><span class="o">=</span><span class="s2">"2 weeks ago"</span>
+git blame file.py
+git reflog                    <span class="c"># All HEAD movements (lifesaver)</span>
+git bisect start              <span class="c"># Binary search for bug</span>
+
+<span class="c"># ─── STASH ────────────────────────────────────────────</span>
+git stash push <span class="nt">-m</span> <span class="s2">"WIP: login"</span>
+git stash list
+git stash pop
+git stash apply stash@<span class="o">{</span>1<span class="o">}</span>
+
+<span class="c"># ─── REBASE ───────────────────────────────────────────</span>
+git rebase main               <span class="c"># Rebase feature onto main</span>
+git rebase <span class="nt">-i</span> HEAD~4          <span class="c"># Interactive (squash, reorder)</span>
+git rebase <span class="nt">--abort</span>
+git rebase <span class="nt">--continue</span>         <span class="c"># After resolving conflict</span>
+
+<span class="c"># ─── ALIASES ──────────────────────────────────────────</span>
+git config <span class="nt">--global</span> alias.lg <span class="s2">"log --oneline --graph --all"</span>
+git config <span class="nt">--global</span> alias.undo <span class="s2">"reset --soft HEAD~1"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="docker-cheat-sheet">Docker Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── BUILD ────────────────────────────────────────────</span>
+docker build <span class="nt">-t</span> name:tag <span class="nb">.</span>
+docker build <span class="nt">--build-arg</span> <span class="nv">ENV</span><span class="o">=</span>prod <span class="nt">-t</span> name:tag <span class="nb">.</span>
+docker build <span class="nt">--target</span> stage_name <span class="nt">-t</span> name:tag <span class="nb">.</span>
+
+<span class="c"># ─── RUN ──────────────────────────────────────────────</span>
+docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span class="nt">--name</span> myapp nginx
+docker run <span class="nt">-it</span> <span class="nt">--rm</span> ubuntu bash
+docker run <span class="nt">-v</span> /host:/container <span class="nt">-e</span> <span class="nv">KEY</span><span class="o">=</span>val myapp
+
+<span class="c"># ─── LIFECYCLE ────────────────────────────────────────</span>
+docker ps                     <span class="c"># Running</span>
+docker ps <span class="nt">-a</span>                  <span class="c"># All</span>
+docker stop/start/restart myapp
+docker <span class="nb">rm </span>myapp               <span class="c"># Remove stopped</span>
+docker <span class="nb">rm</span> <span class="nt">-f</span> myapp            <span class="c"># Force remove running</span>
+
+<span class="c"># ─── INSPECT ──────────────────────────────────────────</span>
+docker logs <span class="nt">-f</span> <span class="nt">--tail</span> 100 myapp
+docker <span class="nb">exec</span> <span class="nt">-it</span> myapp bash
+docker inspect myapp
+docker stats myapp
+docker top myapp
+docker diff myapp             <span class="c"># Changed files in container</span>
+
+<span class="c"># ─── IMAGES ───────────────────────────────────────────</span>
+docker images
+docker pull nginx:1.25
+docker push user/app:tag
+docker rmi myapp:old
+docker <span class="nb">history </span>myapp
+docker save myapp <span class="o">&gt;</span> myapp.tar
+docker load &lt; myapp.tar
+
+<span class="c"># ─── CLEANUP ──────────────────────────────────────────</span>
+docker system prune <span class="nt">-a</span>        <span class="c"># Remove ALL unused</span>
+docker container prune
+docker image prune <span class="nt">-a</span>
+docker volume prune
+docker network prune
+
+<span class="c"># ─── COMPOSE ──────────────────────────────────────────</span>
+docker compose up <span class="nt">-d</span>          <span class="c"># Start detached</span>
+docker compose up <span class="nt">--build</span>     <span class="c"># Rebuild first</span>
+docker compose down           <span class="c"># Stop + remove</span>
+docker compose down <span class="nt">-v</span>        <span class="c"># Also remove volumes</span>
+docker compose ps
+docker compose logs <span class="nt">-f</span> app
+docker compose <span class="nb">exec </span>app bash
+docker compose run <span class="nt">--rm</span> app pytest
+
+<span class="c"># ─── REGISTRY ─────────────────────────────────────────</span>
+docker login
+docker tag myapp user/myapp:v1
+<span class="c"># ECR login:</span>
+aws ecr get-login-password | docker login <span class="nt">--username</span> AWS <span class="se">\</span>
+  <span class="nt">--password-stdin</span> ACCOUNT.dkr.ecr.REGION.amazonaws.com
+
+<span class="c"># ─── MULTI-ARCH ───────────────────────────────────────</span>
+docker buildx create <span class="nt">--use</span>
+docker buildx build <span class="nt">--platform</span> linux/amd64,linux/arm64 <span class="se">\</span>
+  <span class="nt">-t</span> user/app:latest <span class="nt">--push</span> <span class="nb">.</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="kubernetes-kubectl-cheat-sheet">Kubernetes (kubectl) Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── CONTEXT ──────────────────────────────────────────</span>
+kubectl config get-contexts
+kubectl config use-context prod-cluster
+kubectl config set-context <span class="nt">--current</span> <span class="nt">--namespace</span><span class="o">=</span>production
+kubectx               <span class="c"># kubectx plugin for fast switching</span>
+kubens                <span class="c"># kubens plugin for namespace switching</span>
+
+<span class="c"># ─── GET ──────────────────────────────────────────────</span>
+kubectl get all <span class="nt">-n</span> namespace
+kubectl get pods <span class="nt">-o</span> wide
+kubectl get pods <span class="nt">-w</span>               <span class="c"># Watch</span>
+kubectl get pods <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>myapp     <span class="c"># Label selector</span>
+kubectl get pods <span class="nt">--sort-by</span><span class="o">=</span>.status.startTime
+kubectl get events <span class="nt">-n</span> ns <span class="nt">--sort-by</span><span class="o">=</span><span class="s1">'.lastTimestamp'</span> | <span class="nb">tail</span> <span class="nt">-20</span>
+kubectl get nodes <span class="nt">-o</span> wide
+
+<span class="c"># ─── DESCRIBE / LOGS ──────────────────────────────────</span>
+kubectl describe pod myapp-abc <span class="nt">-n</span> production
+kubectl describe node worker-1
+kubectl logs myapp-abc <span class="nt">-f</span>
+kubectl logs myapp-abc <span class="nt">--previous</span> <span class="nt">-c</span> container-name
+kubectl logs <span class="nt">-l</span> <span class="nv">app</span><span class="o">=</span>myapp <span class="nt">--all-containers</span><span class="o">=</span><span class="nb">true</span> <span class="nt">-f</span>
+kubectl top pods <span class="nt">-n</span> production <span class="nt">--containers</span>
+
+<span class="c"># ─── EXEC / PORT-FORWARD ──────────────────────────────</span>
+kubectl <span class="nb">exec</span> <span class="nt">-it</span> myapp-abc <span class="nt">--</span> bash
+kubectl <span class="nb">exec</span> <span class="nt">-it</span> myapp-abc <span class="nt">-c</span> sidecar <span class="nt">--</span> sh
+kubectl port-forward pod/myapp-abc 8080:80
+kubectl port-forward svc/myapp-svc 8080:80
+
+<span class="c"># ─── APPLY / DELETE ───────────────────────────────────</span>
+kubectl apply <span class="nt">-f</span> manifest.yaml
+kubectl apply <span class="nt">-k</span> overlays/production
+kubectl delete <span class="nt">-f</span> manifest.yaml
+kubectl delete pod myapp-abc <span class="nt">--grace-period</span><span class="o">=</span>0 <span class="nt">--force</span>
+
+<span class="c"># ─── SCALE / ROLLOUT ──────────────────────────────────</span>
+kubectl scale deployment myapp <span class="nt">--replicas</span><span class="o">=</span>5
+kubectl rollout status deployment/myapp
+kubectl rollout <span class="nb">history </span>deployment/myapp
+kubectl rollout undo deployment/myapp
+kubectl rollout undo deployment/myapp <span class="nt">--to-revision</span><span class="o">=</span>3
+kubectl rollout restart deployment/myapp
+kubectl <span class="nb">set </span>image deployment/myapp <span class="nv">myapp</span><span class="o">=</span>myapp:v2
+
+<span class="c"># ─── LABELS / ANNOTATIONS ─────────────────────────────</span>
+kubectl label pod myapp-abc <span class="nb">env</span><span class="o">=</span>production
+kubectl annotate pod myapp-abc <span class="nv">team</span><span class="o">=</span>platform
+kubectl get pods <span class="nt">--show-labels</span>
+
+<span class="c"># ─── DEBUG ────────────────────────────────────────────</span>
+kubectl run tmp <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">--image</span><span class="o">=</span>nicolaka/netshoot <span class="nt">--</span> bash
+kubectl debug node/worker-1 <span class="nt">-it</span> <span class="nt">--image</span><span class="o">=</span>ubuntu
+kubectl auth can-i get pods <span class="nt">--namespace</span><span class="o">=</span>production
+kubectl get rolebindings <span class="nt">-A</span> <span class="nt">-o</span> wide
+
+<span class="c"># ─── HELM ─────────────────────────────────────────────</span>
+helm list <span class="nt">-A</span>
+helm upgrade <span class="nt">--install</span> app ./chart <span class="nt">-n</span> ns <span class="nt">--atomic</span> <span class="nt">--timeout</span> 5m
+helm rollback app 2 <span class="nt">-n</span> ns
+helm <span class="nb">history </span>app <span class="nt">-n</span> ns
+helm diff upgrade app ./chart <span class="nt">-f</span> values.yaml    <span class="c"># requires diff plugin</span>
+helm template app ./chart <span class="nt">-f</span> values.yaml
+helm lint ./chart
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="terraform-cheat-sheet">Terraform Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── INIT / FORMAT / VALIDATE ─────────────────────────</span>
+terraform init
+terraform init <span class="nt">-upgrade</span>           <span class="c"># Update providers</span>
+terraform <span class="nb">fmt</span> <span class="nt">-recursive</span>          <span class="c"># Format .tf files</span>
+terraform validate                <span class="c"># Check syntax</span>
+
+<span class="c"># ─── PLAN / APPLY ─────────────────────────────────────</span>
+terraform plan
+terraform plan <span class="nt">-out</span><span class="o">=</span>tfplan
+terraform plan <span class="nt">-var-file</span><span class="o">=</span>prod.tfvars
+terraform apply
+terraform apply tfplan
+terraform apply <span class="nt">-auto-approve</span>     <span class="c"># No confirmation (CI only)</span>
+terraform apply <span class="nt">-target</span><span class="o">=</span>aws_instance.web
+terraform destroy <span class="nt">-auto-approve</span>
+
+<span class="c"># ─── STATE ────────────────────────────────────────────</span>
+terraform state list
+terraform state show aws_instance.web
+terraform state <span class="nb">mv </span>old.path new.path
+terraform state <span class="nb">rm </span>resource.to.unmanage
+terraform import aws_instance.web i-1234567890
+terraform refresh
+terraform force-unlock LOCK-ID
+
+<span class="c"># ─── WORKSPACE ────────────────────────────────────────</span>
+terraform workspace list
+terraform workspace new dev
+terraform workspace <span class="k">select </span>prod
+terraform workspace show
+
+<span class="c"># ─── OUTPUT / CONSOLE ─────────────────────────────────</span>
+terraform output
+terraform output <span class="nt">-json</span> | jq
+terraform console                 <span class="c"># Interactive</span>
+
+<span class="c"># ─── LINTING / SCANNING ───────────────────────────────</span>
+tflint                           <span class="c"># Linting</span>
+tfsec <span class="nb">.</span>                          <span class="c"># Security scan</span>
+checkov <span class="nt">-d</span> <span class="nb">.</span> <span class="nt">--framework</span> terraform
+infracost breakdown <span class="nt">--path</span> <span class="nb">.</span>     <span class="c"># Cost estimation</span>
+
+<span class="c"># ─── HCL QUICK REFERENCE ──────────────────────────────</span>
+<span class="c"># count</span>
+resource <span class="s2">"aws_instance"</span> <span class="s2">"app"</span> <span class="o">{</span> count <span class="o">=</span> 3 <span class="o">}</span>
+<span class="c"># for_each</span>
+resource <span class="s2">"aws_subnet"</span> <span class="s2">"main"</span> <span class="o">{</span> for_each <span class="o">=</span> toset<span class="o">(</span>var.azs<span class="o">)</span> <span class="o">}</span>
+<span class="c"># dynamic block</span>
+dynamic <span class="s2">"ingress"</span> <span class="o">{</span> for_each <span class="o">=</span> var.ports<span class="p">;</span> content <span class="o">{</span> port <span class="o">=</span> ingress.value <span class="o">}</span> <span class="o">}</span>
+<span class="c"># locals</span>
+locals <span class="o">{</span> name <span class="o">=</span> <span class="s2">"</span><span class="k">${</span><span class="nv">var</span><span class="p">.env</span><span class="k">}</span><span class="s2">-</span><span class="k">${</span><span class="nv">var</span><span class="p">.app</span><span class="k">}</span><span class="s2">"</span> <span class="o">}</span>
+<span class="c"># data source</span>
+data <span class="s2">"aws_ami"</span> <span class="s2">"latest"</span> <span class="o">{</span> most_recent <span class="o">=</span> <span class="nb">true</span> <span class="o">}</span>
+<span class="c"># output</span>
+output <span class="s2">"vpc_id"</span> <span class="o">{</span> value <span class="o">=</span> aws_vpc.main.id<span class="p">;</span> sensitive <span class="o">=</span> <span class="nb">false</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="ansible-cheat-sheet">Ansible Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── AD-HOC ───────────────────────────────────────────</span>
+ansible all <span class="nt">-m</span> ping
+ansible webservers <span class="nt">-m</span> setup              <span class="c"># Gather facts</span>
+ansible webservers <span class="nt">-m</span> shell <span class="nt">-a</span> <span class="s2">"df -h"</span>
+ansible webservers <span class="nt">-m</span> copy <span class="nt">-a</span> <span class="s2">"src=file dest=/tmp/"</span>
+ansible webservers <span class="nt">-m</span> service <span class="nt">-a</span> <span class="s2">"name=nginx state=restarted"</span> <span class="nt">--become</span>
+ansible webservers <span class="nt">-m</span> apt <span class="nt">-a</span> <span class="s2">"name=nginx state=present"</span> <span class="nt">--become</span>
+
+<span class="c"># ─── PLAYBOOK ─────────────────────────────────────────</span>
+ansible-playbook site.yml
+ansible-playbook site.yml <span class="nt">-i</span> inventory/
+ansible-playbook site.yml <span class="nt">--tags</span> deploy
+ansible-playbook site.yml <span class="nt">--skip-tags</span> <span class="nb">test
+</span>ansible-playbook site.yml <span class="nt">--limit</span> webservers
+ansible-playbook site.yml <span class="nt">--limit</span> web01
+ansible-playbook site.yml <span class="nt">--check</span>         <span class="c"># Dry run</span>
+ansible-playbook site.yml <span class="nt">--diff</span>          <span class="c"># Show file diffs</span>
+ansible-playbook site.yml <span class="nt">-e</span> <span class="s2">"version=2.0"</span>
+ansible-playbook site.yml <span class="nt">-v</span>/-vv/-vvv     <span class="c"># Verbosity levels</span>
+ansible-playbook site.yml <span class="nt">--start-at-task</span> <span class="s2">"Deploy app"</span>
+ansible-playbook site.yml <span class="nt">--step</span>          <span class="c"># Interactive step-through</span>
+
+<span class="c"># ─── INVENTORY ────────────────────────────────────────</span>
+ansible-inventory <span class="nt">--list</span>
+ansible-inventory <span class="nt">--graph</span>
+ansible-inventory <span class="nt">-i</span> inventory/aws_ec2.yml <span class="nt">--list</span>
+
+<span class="c"># ─── VAULT ────────────────────────────────────────────</span>
+ansible-vault encrypt vars/secrets.yml
+ansible-vault decrypt vars/secrets.yml
+ansible-vault edit vars/secrets.yml
+ansible-vault view vars/secrets.yml
+ansible-vault encrypt_string <span class="s1">'secret'</span> <span class="nt">--name</span> <span class="s1">'db_pass'</span>
+ansible-playbook site.yml <span class="nt">--ask-vault-pass</span>
+ansible-playbook site.yml <span class="nt">--vault-password-file</span> .vault_pass
+
+<span class="c"># ─── GALAXY ───────────────────────────────────────────</span>
+ansible-galaxy role init myrole
+ansible-galaxy <span class="nb">install </span>geerlingguy.nginx
+ansible-galaxy collection <span class="nb">install </span>community.docker
+ansible-galaxy <span class="nb">install</span> <span class="nt">-r</span> requirements.yml
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="aws-cli-cheat-sheet">AWS CLI Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── AUTH ─────────────────────────────────────────────</span>
+aws configure                        <span class="c"># Set credentials</span>
+aws sts get-caller-identity          <span class="c"># Who am I?</span>
+aws sts assume-role <span class="nt">--role-arn</span> ARN <span class="nt">--role-session-name</span> s
+
+<span class="c"># ─── EC2 ──────────────────────────────────────────────</span>
+aws ec2 describe-instances <span class="nt">--filters</span> <span class="s2">"Name=tag:Name,Values=web*"</span> <span class="se">\</span>
+  <span class="nt">--query</span> <span class="s1">'Reservations[].Instances[].{ID:InstanceId,IP:PrivateIpAddress,State:State.Name}'</span>
+aws ec2 start-instances <span class="nt">--instance-ids</span> i-1234
+aws ec2 stop-instances <span class="nt">--instance-ids</span> i-1234
+aws ssm start-session <span class="nt">--target</span> i-1234     <span class="c"># SSH-less access</span>
+
+<span class="c"># ─── S3 ───────────────────────────────────────────────</span>
+aws s3 <span class="nb">ls </span>s3://bucket/prefix/
+aws s3 <span class="nb">cp </span>file.txt s3://bucket/
+aws s3 <span class="nb">sync</span> ./local s3://bucket/remote <span class="nt">--delete</span>
+aws s3 presign s3://bucket/file <span class="nt">--expires-in</span> 3600
+
+<span class="c"># ─── EKS ──────────────────────────────────────────────</span>
+aws eks list-clusters
+aws eks update-kubeconfig <span class="nt">--name</span> cluster <span class="nt">--region</span> us-east-1
+aws eks describe-cluster <span class="nt">--name</span> cluster
+
+<span class="c"># ─── IAM ──────────────────────────────────────────────</span>
+aws iam list-roles | jq <span class="s1">'.Roles[].RoleName'</span>
+aws iam get-role <span class="nt">--role-name</span> MyRole
+aws iam list-attached-role-policies <span class="nt">--role-name</span> MyRole
+
+<span class="c"># ─── LOGS ─────────────────────────────────────────────</span>
+aws logs <span class="nb">tail</span> /aws/lambda/fn <span class="nt">--follow</span>
+aws logs filter-log-events <span class="nt">--log-group</span> /app <span class="nt">--filter-pattern</span> ERROR
+
+<span class="c"># ─── SECRETSMANAGER ───────────────────────────────────</span>
+aws secretsmanager get-secret-value <span class="nt">--secret-id</span> prod/myapp/db
+aws secretsmanager create-secret <span class="nt">--name</span> prod/db <span class="nt">--secret-string</span> <span class="s1">'{}'</span>
+
+<span class="c"># ─── HELPFUL ──────────────────────────────────────────</span>
+aws configure list-profiles
+aws ec2 describe-regions <span class="nt">--output</span> table
+<span class="nb">export </span><span class="nv">AWS_PROFILE</span><span class="o">=</span>production
+<span class="nb">export </span><span class="nv">AWS_DEFAULT_REGION</span><span class="o">=</span>us-east-1
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="prometheuspromql-cheat-sheet">Prometheus/PromQL Cheat Sheet</h2>
+
+<pre><code class="language-promql"># ─── BASICS ───────────────────────────────────────────
+up                                          # Scrape success (1/0)
+up{job="myapp"}                            # Filter by label
+rate(http_requests_total[5m])              # Rate per second
+increase(http_requests_total[1h])          # Total increase
+
+# ─── AGGREGATIONS ─────────────────────────────────────
+sum(metric) by (label)                     # Sum grouped by label
+avg(metric) without (label)               # Avg, drop label
+count(metric)                              # Count time series
+topk(5, metric)                            # Top 5
+min_over_time(metric[1h])                  # Min in time range
+
+# ─── LATENCY ──────────────────────────────────────────
+histogram_quantile(0.99,
+  sum(rate(http_request_duration_seconds_bucket[5m])) by (le))
+
+# ─── ERROR RATE ───────────────────────────────────────
+sum(rate(http_requests_total{code=~"5.."}[5m])) /
+sum(rate(http_requests_total[5m]))
+
+# ─── COMMON RESOURCE QUERIES ──────────────────────────
+# CPU per pod
+sum(rate(container_cpu_usage_seconds_total{container!=""}[5m])) by (pod)
+
+# Memory per pod (working set)
+sum(container_memory_working_set_bytes{container!=""}) by (pod)
+
+# Node disk usage %
+100 - (node_filesystem_avail_bytes / node_filesystem_size_bytes * 100)
+
+# Pod restarts
+rate(kube_pod_container_status_restarts_total[15m]) * 60 * 15
+
+# ─── RECORDING RULES ──────────────────────────────────
+# In rules YAML:
+# - record: job:http_requests:rate5m
+#   expr: sum(rate(http_requests_total[5m])) by (job)
+</code></pre>
+
+<hr />
+
+<h2 id="jenkins-pipeline-cheat-sheet">Jenkins Pipeline Cheat Sheet</h2>
+
+<div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ─── ENVIRONMENT ──────────────────────────────────────</span>
+<span class="n">env</span><span class="o">.</span><span class="na">JOB_NAME</span>          <span class="c1">// Job name</span>
+<span class="n">env</span><span class="o">.</span><span class="na">BUILD_NUMBER</span>      <span class="c1">// Build #</span>
+<span class="n">env</span><span class="o">.</span><span class="na">WORKSPACE</span>         <span class="c1">// Agent workspace</span>
+<span class="n">env</span><span class="o">.</span><span class="na">GIT_COMMIT</span>        <span class="c1">// Full SHA</span>
+<span class="n">env</span><span class="o">.</span><span class="na">GIT_BRANCH</span>        <span class="c1">// Current branch</span>
+<span class="n">env</span><span class="o">.</span><span class="na">BUILD_URL</span>         <span class="c1">// Link to this build</span>
+
+<span class="c1">// ─── CONDITIONALS ─────────────────────────────────────</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">branch</span> <span class="s1">'main'</span> <span class="o">}</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">not</span> <span class="o">{</span> <span class="n">branch</span> <span class="s1">'main'</span> <span class="o">}</span> <span class="o">}</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">anyOf</span> <span class="o">{</span> <span class="n">branch</span> <span class="s1">'main'</span><span class="o">;</span> <span class="n">branch</span> <span class="s1">'develop'</span> <span class="o">}</span> <span class="o">}</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">environment</span> <span class="nl">name:</span> <span class="s1">'DEPLOY'</span><span class="o">,</span> <span class="nl">value:</span> <span class="s1">'true'</span> <span class="o">}</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">expression</span> <span class="o">{</span> <span class="k">return</span> <span class="n">params</span><span class="o">.</span><span class="na">DEPLOY</span> <span class="o">}</span> <span class="o">}</span>
+<span class="n">when</span> <span class="o">{</span> <span class="n">changeset</span> <span class="s2">"**/*.java"</span> <span class="o">}</span>
+
+<span class="c1">// ─── CREDENTIALS ──────────────────────────────────────</span>
+<span class="n">withCredentials</span><span class="o">([</span>
+  <span class="n">usernamePassword</span><span class="o">(</span><span class="nl">credentialsId:</span> <span class="s1">'id'</span><span class="o">,</span> <span class="nl">usernameVariable:</span> <span class="s1">'USR'</span><span class="o">,</span> <span class="nl">passwordVariable:</span> <span class="s1">'PWD'</span><span class="o">),</span>
+  <span class="n">string</span><span class="o">(</span><span class="nl">credentialsId:</span> <span class="s1">'token'</span><span class="o">,</span> <span class="nl">variable:</span> <span class="s1">'TOKEN'</span><span class="o">),</span>
+  <span class="n">file</span><span class="o">(</span><span class="nl">credentialsId:</span> <span class="s1">'kube'</span><span class="o">,</span> <span class="nl">variable:</span> <span class="s1">'KUBECONFIG'</span><span class="o">)</span>
+<span class="o">])</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+
+<span class="c1">// ─── COMMON STEPS ─────────────────────────────────────</span>
+<span class="n">sh</span> <span class="s1">'command'</span>
+<span class="n">sh</span><span class="o">(</span><span class="nl">script:</span> <span class="s1">'cmd'</span><span class="o">,</span> <span class="nl">returnStdout:</span> <span class="kc">true</span><span class="o">).</span><span class="na">trim</span><span class="o">()</span>
+<span class="n">archiveArtifacts</span> <span class="nl">artifacts:</span> <span class="s1">'**/*.jar'</span>
+<span class="n">junit</span> <span class="s1">'target/surefire-reports/*.xml'</span>
+<span class="n">stash</span> <span class="nl">name:</span> <span class="s1">'built'</span><span class="o">,</span> <span class="nl">includes:</span> <span class="s1">'dist/**'</span>
+<span class="n">unstash</span> <span class="s1">'built'</span>
+<span class="n">input</span> <span class="nl">message:</span> <span class="s1">'Deploy?'</span><span class="o">,</span> <span class="nl">ok:</span> <span class="s1">'Yes'</span><span class="o">,</span> <span class="nl">submitter:</span> <span class="s1">'ops'</span>
+<span class="n">timeout</span><span class="o">(</span><span class="nl">time:</span> <span class="mi">10</span><span class="o">,</span> <span class="nl">unit:</span> <span class="s1">'MINUTES'</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+<span class="n">retry</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+<span class="n">sleep</span><span class="o">(</span><span class="nl">time:</span> <span class="mi">30</span><span class="o">,</span> <span class="nl">unit:</span> <span class="s1">'SECONDS'</span><span class="o">)</span>
+<span class="n">cleanWs</span><span class="o">()</span>
+
+<span class="c1">// ─── POST ──────────────────────────────────────────────</span>
+<span class="n">post</span> <span class="o">{</span>
+  <span class="n">always</span>   <span class="o">{</span> <span class="n">cleanWs</span><span class="o">()</span> <span class="o">}</span>
+  <span class="n">success</span>  <span class="o">{</span> <span class="n">slackSend</span> <span class="s2">"✅ Done"</span> <span class="o">}</span>
+  <span class="n">failure</span>  <span class="o">{</span> <span class="n">emailext</span> <span class="nl">to:</span> <span class="s1">'ops@...'</span><span class="o">,</span> <span class="nl">subject:</span> <span class="s2">"FAILED: ${JOB_NAME}"</span> <span class="o">}</span>
+  <span class="n">unstable</span> <span class="o">{</span> <span class="n">echo</span> <span class="s2">"Tests failed"</span> <span class="o">}</span>
+  <span class="n">changed</span>  <span class="o">{</span> <span class="n">echo</span> <span class="s2">"Status changed"</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="security-cheat-sheet">Security Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── IMAGE SCANNING ───────────────────────────────────</span>
+trivy image myapp:latest
+trivy image <span class="nt">--severity</span> HIGH,CRITICAL myapp:latest
+trivy fs <span class="nb">.</span>
+docker scout cves myapp:latest
+snyk container <span class="nb">test </span>myapp:latest
+
+<span class="c"># ─── SECRET SCANNING ──────────────────────────────────</span>
+gitleaks detect <span class="nt">--source</span> <span class="nb">.</span>
+detect-secrets scan <span class="o">&gt;</span> .secrets.baseline
+trufflehog git https://github.com/org/repo
+
+<span class="c"># ─── INFRA SCANNING ───────────────────────────────────</span>
+checkov <span class="nt">-d</span> <span class="nb">.</span> <span class="nt">--framework</span> terraform,dockerfile,kubernetes
+tfsec <span class="nb">.</span>
+kics scan <span class="nt">-p</span> <span class="nb">.</span>
+
+<span class="c"># ─── K8S SECURITY ─────────────────────────────────────</span>
+kubectl auth can-i <span class="nt">--list</span>
+kubectl auth can-i get pods <span class="nt">--as</span><span class="o">=</span>system:serviceaccount:ns:sa
+kubectl get rolebindings,clusterrolebindings <span class="nt">-A</span> <span class="nt">-o</span> wide | <span class="nb">grep </span>sa-name
+kubesec scan pod.yaml
+kube-bench run <span class="nt">--targets</span> node
+
+<span class="c"># ─── VAULT ────────────────────────────────────────────</span>
+vault kv get secret/myapp
+vault kv put secret/myapp <span class="nv">db_pass</span><span class="o">=</span>secret
+vault token lookup
+vault policy list
+vault auth list
+
+<span class="c"># ─── CONTAINER HARDENING ──────────────────────────────</span>
+docker run <span class="se">\</span>
+  <span class="nt">--read-only</span> <span class="se">\</span>
+  <span class="nt">--tmpfs</span> /tmp <span class="se">\</span>
+  <span class="nt">--cap-drop</span><span class="o">=</span>ALL <span class="se">\</span>
+  <span class="nt">--security-opt</span><span class="o">=</span>no-new-privileges:true <span class="se">\</span>
+  <span class="nt">--pids-limit</span><span class="o">=</span>100 <span class="se">\</span>
+  <span class="nt">--memory</span><span class="o">=</span>512m <span class="se">\</span>
+  myapp
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="networking-quick-reference">Networking Quick Reference</h2>
+
+<h3 id="osi-model-mnemonics">OSI Model Mnemonics</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>All People Seem To Need Data Processing
+Layer 7: Application   (HTTP, DNS, FTP)
+Layer 6: Presentation  (SSL/TLS, encoding)
+Layer 5: Session       (NetBIOS, RPC)
+Layer 4: Transport     (TCP, UDP, ports)
+Layer 3: Network       (IP, ICMP, routing)
+Layer 2: Data Link     (MAC, Ethernet)
+Layer 1: Physical      (cables, signals)
+</code></pre></div></div>
+
+<h3 id="common-ports">Common Ports</h3>
+<p>| Port | Protocol | Service |
+|——|———-|———|
+| 22 | TCP | SSH |
+| 25 | TCP | SMTP |
+| 53 | TCP/UDP | DNS |
+| 80 | TCP | HTTP |
+| 443 | TCP | HTTPS |
+| 3306 | TCP | MySQL |
+| 5432 | TCP | PostgreSQL |
+| 6379 | TCP | Redis |
+| 9200 | TCP | Elasticsearch |
+| 9090 | TCP | Prometheus |
+| 3000 | TCP | Grafana |</p>
+
+<h3 id="subnet-quick-math">Subnet Quick Math</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/32 = 1 host
+/30 = 2 hosts
+/29 = 6 hosts
+/28 = 14 hosts
+/27 = 30 hosts
+/26 = 62 hosts
+/25 = 126 hosts
+/24 = 254 hosts
+/23 = 510 hosts
+/22 = 1022 hosts
+/21 = 2046 hosts
+/20 = 4094 hosts
+/16 = 65,534 hosts
+
+Formula: hosts = 2^(32-prefix) - 2
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="sre-quick-reference">SRE Quick Reference</h2>
+
+<h3 id="dora-metrics-elite-performance">DORA Metrics (Elite Performance)</h3>
+<p>| Metric | Elite | High | Medium | Low |
+|——–|——-|——|——–|—–|
+| Deploy Frequency | Multiple/day | Once/week | Once/month | Once/6 months |
+| Lead Time | &lt; 1 hour | 1 day–1 week | 1 week–1 month | &gt; 6 months |
+| MTTR | &lt; 1 hour | &lt; 1 day | &lt; 1 week | &gt; 6 months |
+| Change Failure Rate | &lt; 5% | 5–10% | 10–30% | &gt; 30% |</p>
+
+<h3 id="slo-error-budget">SLO Error Budget</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SLO → Error Budget/month
+99.999% → 26.3 seconds
+99.99%  → 4.4 minutes
+99.9%   → 43.8 minutes
+99.5%   → 3.65 hours
+99.0%   → 7.3 hours
+98.0%   → 14.6 hours
+</code></pre></div></div>
+
+<h3 id="incident-severity">Incident Severity</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SEV-1: Complete outage, data loss     → Page immediately, all hands
+SEV-2: Partial outage, major feature  → Page on-call
+SEV-3: Degraded, workaround exists    → Slack, fix in hours
+SEV-4: Minor, cosmetic                → Ticket, next sprint
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <p><strong>Good luck! 🚀</strong> You’ve got this. Review the relevant topic files for deep dives, and use this cheat sheet for quick day-of-interview review.</p>
+</blockquote>
+
+<p><em><a href="/devops-interview-guide/README.html">← Back to Main Index</a></em></p>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

@@ -1,3 +1,9 @@
+---
+layout: default
+title: "☸️ Kubernetes — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # ☸️ Kubernetes — DevOps Interview Guide
 
 > [← Docker](./Docker.md) | [Main Index](./README.md) | [Jenkins →](./Jenkins.md)

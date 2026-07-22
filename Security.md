@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🔐 Security — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🔐 Security — DevOps Interview Guide
 
 > [← Logging](./Logging.md) | [Main Index](./README.md) | [SRE →](./SRE.md)

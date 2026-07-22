@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🐧 Linux — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🐧 Linux — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Linux.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🐧 Linux — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🐧 Linux — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🐧 Linux — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Linux.html" />
+<meta property="og:url" content="/devops-interview-guide/Linux.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🐧 Linux — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🐧 Linux — DevOps Interview Guide","url":"/devops-interview-guide/Linux.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🐧 Linux — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-linux--devops-interview-guide">🐧 Linux — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>Back to <a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td>Next: <a href="/devops-interview-guide/Networking.html">Networking →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#core-concepts">Core Concepts</a></li>
+  <li><a href="#file-system">File System</a></li>
+  <li><a href="#process-management">Process Management</a></li>
+  <li><a href="#user--permission-management">User &amp; Permission Management</a></li>
+  <li><a href="#networking-commands">Networking Commands</a></li>
+  <li><a href="#shell-scripting">Shell Scripting</a></li>
+  <li><a href="#performance--troubleshooting">Performance &amp; Troubleshooting</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#command-reference">Command Reference</a></li>
+</ol>
+
+<hr />
+
+<h2 id="core-concepts">Core Concepts</h2>
+
+<h3 id="linux-architecture">Linux Architecture</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────┐
+│         User Applications        │
+├─────────────────────────────────┤
+│          Shell / CLI             │
+├─────────────────────────────────┤
+│        System Libraries          │
+├─────────────────────────────────┤
+│           Linux Kernel           │
+│  (Process, Memory, I/O, FS Mgmt) │
+├─────────────────────────────────┤
+│           Hardware               │
+└─────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="key-distributions-for-devops">Key Distributions for DevOps</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Distro</th>
+      <th>Use Case</th>
+      <th>Package Manager</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ubuntu/Debian</td>
+      <td>General, containers</td>
+      <td><code class="language-plaintext highlighter-rouge">apt</code></td>
+    </tr>
+    <tr>
+      <td>CentOS/RHEL</td>
+      <td>Enterprise servers</td>
+      <td><code class="language-plaintext highlighter-rouge">yum</code> / <code class="language-plaintext highlighter-rouge">dnf</code></td>
+    </tr>
+    <tr>
+      <td>Alpine</td>
+      <td>Docker images (tiny)</td>
+      <td><code class="language-plaintext highlighter-rouge">apk</code></td>
+    </tr>
+    <tr>
+      <td>Amazon Linux</td>
+      <td>AWS environments</td>
+      <td><code class="language-plaintext highlighter-rouge">yum</code> / <code class="language-plaintext highlighter-rouge">dnf</code></td>
+    </tr>
+    <tr>
+      <td>Arch Linux</td>
+      <td>Bleeding edge</td>
+      <td><code class="language-plaintext highlighter-rouge">pacman</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="file-system">File System</h2>
+
+<h3 id="linux-directory-structure">Linux Directory Structure</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/
+├── bin/      → Essential user binaries (ls, cp, mv)
+├── sbin/     → System binaries (iptables, fdisk)
+├── etc/      → Configuration files
+├── home/     → User home directories
+├── var/      → Variable data (logs, spool, databases)
+├── tmp/      → Temporary files (cleared on reboot)
+├── opt/      → Optional software packages
+├── usr/      → User programs and data
+│   ├── bin/  → Non-essential binaries
+│   ├── lib/  → Libraries
+│   └── local/→ Locally compiled software
+├── proc/     → Virtual FS for process/kernel info
+├── sys/      → Virtual FS for device/driver info
+├── dev/      → Device files
+└── mnt/      → Mount points
+</code></pre></div></div>
+
+<h3 id="essential-file-commands">Essential File Commands</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Navigation</span>
+<span class="nb">ls</span> <span class="nt">-lah</span>                    <span class="c"># List with human-readable sizes</span>
+<span class="nb">ls</span> <span class="nt">-lt</span>                     <span class="c"># Sort by modification time</span>
+find / <span class="nt">-name</span> <span class="s2">"*.conf"</span> <span class="nt">-type</span> f 2&gt;/dev/null   <span class="c"># Find files</span>
+find /var/log <span class="nt">-mtime</span> <span class="nt">-7</span>    <span class="c"># Files modified in last 7 days</span>
+locate nginx.conf          <span class="c"># Fast file search (uses DB)</span>
+
+<span class="c"># File Operations</span>
+<span class="nb">cp</span> <span class="nt">-rp</span> /src /dest          <span class="c"># Copy preserving permissions</span>
+<span class="nb">mv</span> /old /new               <span class="c"># Move/rename</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> /path               <span class="c"># Force recursive delete (CAUTION)</span>
+<span class="nb">ln</span> <span class="nt">-s</span> /target /link        <span class="c"># Symbolic link</span>
+<span class="nb">ln</span> /target /link           <span class="c"># Hard link</span>
+
+<span class="c"># Viewing Files</span>
+<span class="nb">cat </span>file.txt               <span class="c"># Print file</span>
+less file.txt              <span class="c"># Paginate (q to quit)</span>
+<span class="nb">head</span> <span class="nt">-20</span> file.txt          <span class="c"># First 20 lines</span>
+<span class="nb">tail</span> <span class="nt">-f</span> /var/log/syslog    <span class="c"># Follow live logs</span>
+<span class="nb">grep</span> <span class="nt">-r</span> <span class="s2">"error"</span> /var/log/  <span class="c"># Recursive search</span>
+
+<span class="c"># File info</span>
+<span class="nb">stat </span>file.txt              <span class="c"># Detailed file metadata</span>
+file /bin/bash             <span class="c"># Determine file type</span>
+<span class="nb">wc</span> <span class="nt">-l</span> file.txt             <span class="c"># Count lines</span>
+<span class="nb">du</span> <span class="nt">-sh</span> /var/log/           <span class="c"># Disk usage of directory</span>
+<span class="nb">df</span> <span class="nt">-h</span>                      <span class="c"># Disk free (all filesystems)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="process-management">Process Management</h2>
+
+<h3 id="understanding-processes">Understanding Processes</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># List processes</span>
+ps aux                     <span class="c"># All processes</span>
+ps aux | <span class="nb">grep </span>nginx        <span class="c"># Filter by name</span>
+pstree                     <span class="c"># Process tree</span>
+top                        <span class="c"># Real-time process monitor</span>
+htop                       <span class="c"># Enhanced top (interactive)</span>
+
+<span class="c"># Process control</span>
+<span class="nb">kill</span> <span class="nt">-9</span> &lt;PID&gt;              <span class="c"># Force kill</span>
+<span class="nb">kill</span> <span class="nt">-15</span> &lt;PID&gt;             <span class="c"># Graceful termination (SIGTERM)</span>
+killall nginx              <span class="c"># Kill by name</span>
+pkill <span class="nt">-f</span> <span class="s2">"python script"</span>   <span class="c"># Kill by pattern</span>
+
+<span class="c"># Background/foreground</span>
+./long_script.sh &amp;         <span class="c"># Run in background</span>
+<span class="nb">jobs</span>                       <span class="c"># List background jobs</span>
+<span class="nb">fg</span> %1                      <span class="c"># Bring job 1 to foreground</span>
+<span class="nb">bg</span> %1                      <span class="c"># Resume job 1 in background</span>
+<span class="nb">nohup</span> ./script.sh &amp;        <span class="c"># Run immune to hangup</span>
+
+<span class="c"># Process priority</span>
+<span class="nb">nice</span> <span class="nt">-n</span> 10 ./script.sh     <span class="c"># Start with lower priority</span>
+renice <span class="nt">-n</span> <span class="nt">-5</span> <span class="nt">-p</span> &lt;PID&gt;      <span class="c"># Change priority of running proc</span>
+</code></pre></div></div>
+
+<h3 id="process-states">Process States</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Symbol</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Running</td>
+      <td>R</td>
+      <td>Actively using CPU</td>
+    </tr>
+    <tr>
+      <td>Sleeping</td>
+      <td>S</td>
+      <td>Waiting for event</td>
+    </tr>
+    <tr>
+      <td>Uninterruptible Sleep</td>
+      <td>D</td>
+      <td>Waiting for I/O</td>
+    </tr>
+    <tr>
+      <td>Zombie</td>
+      <td>Z</td>
+      <td>Finished but not reaped</td>
+    </tr>
+    <tr>
+      <td>Stopped</td>
+      <td>T</td>
+      <td>Paused (Ctrl+Z)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="user--permission-management">User &amp; Permission Management</h2>
+
+<h3 id="file-permissions">File Permissions</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-rwxr-xr--  1  owner  group  size  date  filename
+│││││││││└─ other: read only
+││││││└──── group: read + execute
+│││└─────── owner: read + write + execute
+││└──────── special bits
+│└───────── type: - file, d dir, l symlink
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Permission commands</span>
+<span class="nb">chmod </span>755 file.sh          <span class="c"># rwxr-xr-x</span>
+<span class="nb">chmod</span> +x script.sh         <span class="c"># Add execute</span>
+<span class="nb">chmod</span> <span class="nt">-R</span> 644 /var/www/     <span class="c"># Recursive</span>
+<span class="nb">chown </span>user:group file      <span class="c"># Change owner</span>
+<span class="nb">chown</span> <span class="nt">-R</span> www-data /var/www <span class="c"># Recursive ownership</span>
+
+<span class="c"># Special permissions</span>
+<span class="nb">chmod </span>4755 binary          <span class="c"># SetUID (runs as owner)</span>
+<span class="nb">chmod </span>2755 directory       <span class="c"># SetGID (inherits group)</span>
+<span class="nb">chmod </span>1777 /tmp            <span class="c"># Sticky bit (only owner deletes)</span>
+
+<span class="c"># ACLs (more granular)</span>
+setfacl <span class="nt">-m</span> u:bob:rw file   <span class="c"># Grant bob read/write</span>
+getfacl file               <span class="c"># View ACLs</span>
+</code></pre></div></div>
+
+<h3 id="user-management">User Management</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Users</span>
+useradd <span class="nt">-m</span> <span class="nt">-s</span> /bin/bash bob  <span class="c"># Create user with home + shell</span>
+usermod <span class="nt">-aG</span> docker bob        <span class="c"># Add to docker group</span>
+passwd bob                     <span class="c"># Set password</span>
+userdel <span class="nt">-r</span> bob                 <span class="c"># Delete user + home dir</span>
+
+<span class="c"># Groups</span>
+groupadd devops
+groupmod <span class="nt">-n</span> newname devops
+<span class="nb">groups </span>bob                     <span class="c"># Show user's groups</span>
+
+<span class="c"># Sudo</span>
+visudo                         <span class="c"># Edit sudoers safely</span>
+<span class="c"># Add: bob ALL=(ALL) NOPASSWD: ALL</span>
+
+<span class="c"># Switch user</span>
+su - bob                       <span class="c"># Switch to bob</span>
+<span class="nb">sudo</span> <span class="nt">-u</span> bob <span class="nb">command</span>            <span class="c"># Run command as bob</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="networking-commands">Networking Commands</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Interface info</span>
+ip addr show                   <span class="c"># IP addresses</span>
+ip <span class="nb">link </span>show                   <span class="c"># Interface status</span>
+ifconfig <span class="nt">-a</span>                    <span class="c"># Legacy (deprecated)</span>
+
+<span class="c"># Routing</span>
+ip route show                  <span class="c"># Routing table</span>
+ip route add 10.0.0.0/8 via 192.168.1.1
+traceroute google.com          <span class="c"># Trace hops</span>
+tracepath google.com           <span class="c"># Similar, no root needed</span>
+
+<span class="c"># Connectivity</span>
+ping <span class="nt">-c</span> 4 google.com           <span class="c"># ICMP test</span>
+curl <span class="nt">-I</span> https://example.com    <span class="c"># HTTP headers</span>
+wget <span class="nt">-O</span> /dev/null http://test  <span class="c"># Download test</span>
+telnet host 22                 <span class="c"># TCP connectivity test</span>
+nc <span class="nt">-zv</span> host 443                <span class="c"># Netcat port check</span>
+
+<span class="c"># DNS</span>
+dig google.com                 <span class="c"># DNS lookup</span>
+dig +short google.com          <span class="c"># Short output</span>
+nslookup google.com            <span class="c"># Legacy DNS lookup</span>
+host google.com                <span class="c"># Simple DNS</span>
+
+<span class="c"># Ports &amp; connections</span>
+ss <span class="nt">-tulnp</span>                      <span class="c"># Active sockets (preferred)</span>
+netstat <span class="nt">-tulnp</span>                 <span class="c"># Legacy equivalent</span>
+lsof <span class="nt">-i</span> :80                    <span class="c"># Who is using port 80</span>
+fuser 80/tcp                   <span class="c"># PID using port</span>
+
+<span class="c"># Firewall</span>
+iptables <span class="nt">-L</span> <span class="nt">-n</span>                 <span class="c"># List rules</span>
+ufw status                     <span class="c"># UFW status (Ubuntu)</span>
+firewall-cmd <span class="nt">--list-all</span>        <span class="c"># Firewalld (RHEL/CentOS)</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="shell-scripting">Shell Scripting</h2>
+
+<h3 id="script-fundamentals">Script Fundamentals</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># Script: deploy.sh</span>
+<span class="nb">set</span> <span class="nt">-euo</span> pipefail              <span class="c"># Exit on error, unset var, pipe fail</span>
+<span class="nv">IFS</span><span class="o">=</span><span class="s1">$'</span><span class="se">\n\t</span><span class="s1">'</span>                    <span class="c"># Safe word splitting</span>
+
+<span class="c"># Variables</span>
+<span class="nv">APP_NAME</span><span class="o">=</span><span class="s2">"myapp"</span>
+<span class="nv">VERSION</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">latest</span><span class="k">}</span><span class="s2">"</span>         <span class="c"># Default to 'latest' if no arg</span>
+<span class="nb">readonly </span><span class="nv">MAX_RETRIES</span><span class="o">=</span>3
+
+<span class="c"># Arrays</span>
+<span class="nv">SERVERS</span><span class="o">=(</span><span class="s2">"web01"</span> <span class="s2">"web02"</span> <span class="s2">"web03"</span><span class="o">)</span>
+<span class="k">for </span>server <span class="k">in</span> <span class="s2">"</span><span class="k">${</span><span class="nv">SERVERS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span><span class="p">;</span> <span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"Deploying to </span><span class="nv">$server</span><span class="s2">"</span>
+<span class="k">done</span>
+
+<span class="c"># Functions</span>
+log<span class="o">()</span> <span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">"[</span><span class="si">$(</span><span class="nb">date</span> <span class="s1">'+%Y-%m-%d %H:%M:%S'</span><span class="si">)</span><span class="s2">] </span><span class="nv">$*</span><span class="s2">"</span>
+<span class="o">}</span>
+
+check_command<span class="o">()</span> <span class="o">{</span>
+    <span class="nb">command</span> <span class="nt">-v</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> <span class="o">&gt;</span>/dev/null 2&gt;&amp;1 <span class="o">||</span> <span class="o">{</span>
+        log <span class="s2">"ERROR: </span><span class="nv">$1</span><span class="s2"> is not installed"</span>
+        <span class="nb">exit </span>1
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c"># Conditionals</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nt">-f</span> <span class="s2">"/etc/nginx/nginx.conf"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+    </span>log <span class="s2">"Nginx config found"</span>
+<span class="k">elif</span> <span class="o">[[</span> <span class="nt">-d</span> <span class="s2">"/etc/apache2"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+    </span>log <span class="s2">"Apache found"</span>
+<span class="k">else
+    </span>log <span class="s2">"No web server config found"</span>
+<span class="k">fi</span>
+
+<span class="c"># String operations</span>
+<span class="nv">str</span><span class="o">=</span><span class="s2">"hello world"</span>
+<span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">str</span><span class="p">^^</span><span class="k">}</span><span class="s2">"</span>               <span class="c"># HELLO WORLD (uppercase)</span>
+<span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">str</span>:0:5<span class="k">}</span><span class="s2">"</span>             <span class="c"># hello (substring)</span>
+<span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">str</span><span class="p">/world/DevOps</span><span class="k">}</span><span class="s2">"</span>    <span class="c"># hello DevOps (replace)</span>
+
+<span class="c"># Arithmetic</span>
+<span class="nv">count</span><span class="o">=</span>0
+<span class="o">((</span>count++<span class="o">))</span>
+<span class="nv">result</span><span class="o">=</span><span class="k">$((</span><span class="m">10</span> <span class="o">*</span> <span class="m">3</span> <span class="o">+</span> <span class="m">2</span><span class="k">))</span>
+
+<span class="c"># Error handling</span>
+<span class="nb">trap</span> <span class="s1">'log "Error on line $LINENO"'</span> ERR
+<span class="nb">trap</span> <span class="s1">'cleanup'</span> EXIT
+
+cleanup<span class="o">()</span> <span class="o">{</span>
+    <span class="nb">rm</span> <span class="nt">-f</span> /tmp/deploy.lock
+<span class="o">}</span>
+
+<span class="c"># Read input</span>
+<span class="nb">read</span> <span class="nt">-r</span> <span class="nt">-p</span> <span class="s2">"Enter environment: "</span> ENV
+<span class="nb">read</span> <span class="nt">-r</span> <span class="nt">-s</span> <span class="nt">-p</span> <span class="s2">"Enter password: "</span> PASS   <span class="c"># Silent input</span>
+
+<span class="c"># Here document</span>
+<span class="nb">cat</span> <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh"> &gt; /tmp/config.txt
+server=</span><span class="k">${</span><span class="nv">APP_NAME</span><span class="k">}</span><span class="sh">
+version=</span><span class="k">${</span><span class="nv">VERSION</span><span class="k">}</span><span class="sh">
+</span><span class="no">EOF
+</span></code></pre></div></div>
+
+<h3 id="useful-one-liners">Useful One-Liners</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Find and replace in multiple files</span>
+find <span class="nb">.</span> <span class="nt">-name</span> <span class="s2">"*.conf"</span> <span class="nt">-exec</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/old/new/g'</span> <span class="o">{}</span> <span class="se">\;</span>
+
+<span class="c"># Count occurrences</span>
+<span class="nb">grep</span> <span class="nt">-c</span> <span class="s2">"ERROR"</span> /var/log/app.log
+
+<span class="c"># Sort and unique</span>
+<span class="nb">sort </span>file.txt | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-rn</span>
+
+<span class="c"># Extract columns (awk)</span>
+<span class="nb">awk</span> <span class="s1">'{print $1, $3}'</span> access.log
+<span class="nb">awk</span> <span class="nt">-F</span>: <span class="s1">'{print $1}'</span> /etc/passwd | <span class="nb">head</span>
+
+<span class="c"># Process CSV</span>
+<span class="nb">awk</span> <span class="nt">-F</span><span class="s1">','</span> <span class="s1">'NR&gt;1 {sum+=$3} END {print "Total:", sum}'</span> data.csv
+
+<span class="c"># Check last N lines matching pattern</span>
+<span class="nb">tail</span> <span class="nt">-n</span> 1000 /var/log/app.log | <span class="nb">grep</span> <span class="nt">-i</span> <span class="s2">"error"</span>
+
+<span class="c"># Extract IP addresses</span>
+<span class="nb">grep</span> <span class="nt">-Eo</span> <span class="s1">'([0-9]{1,3}\.){3}[0-9]{1,3}'</span> /var/log/nginx/access.log
+
+<span class="c"># Monitor file changes</span>
+watch <span class="nt">-n</span> 2 <span class="s1">'tail -20 /var/log/app.log'</span>
+
+<span class="c"># Parallel execution</span>
+<span class="nb">echo</span> <span class="s2">"server1 server2 server3"</span> | xargs <span class="nt">-P3</span> <span class="nt">-n1</span> ssh <span class="nt">-n</span> user@<span class="o">{}</span> <span class="nb">uptime</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="performance--troubleshooting">Performance &amp; Troubleshooting</h2>
+
+<h3 id="system-performance-analysis">System Performance Analysis</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># CPU</span>
+top <span class="nt">-b</span> <span class="nt">-n1</span>                     <span class="c"># Snapshot of top</span>
+mpstat <span class="nt">-P</span> ALL 1                <span class="c"># Per-CPU stats</span>
+vmstat 1 10                    <span class="c"># CPU, memory, I/O overview</span>
+sar <span class="nt">-u</span> 1 5                     <span class="c"># CPU utilization history</span>
+lscpu                          <span class="c"># CPU architecture info</span>
+
+<span class="c"># Memory</span>
+free <span class="nt">-h</span>                        <span class="c"># Memory usage</span>
+<span class="nb">cat</span> /proc/meminfo              <span class="c"># Detailed memory info</span>
+vmstat <span class="nt">-s</span>                      <span class="c"># Memory stats</span>
+slabtop                        <span class="c"># Kernel slab cache</span>
+
+<span class="c"># Disk I/O</span>
+iostat <span class="nt">-xz</span> 1                   <span class="c"># Disk I/O statistics</span>
+iotop                          <span class="c"># Per-process disk I/O</span>
+lsblk                          <span class="c"># Block devices</span>
+blkid                          <span class="c"># Block device attributes</span>
+fdisk <span class="nt">-l</span>                       <span class="c"># Partition table</span>
+
+<span class="c"># Network</span>
+iftop                          <span class="c"># Network bandwidth per connection</span>
+nethogs                        <span class="c"># Per-process network usage</span>
+sar <span class="nt">-n</span> DEV 1                   <span class="c"># Network device stats</span>
+tcpdump <span class="nt">-i</span> eth0 port 80        <span class="c"># Packet capture</span>
+ss <span class="nt">-s</span>                          <span class="c"># Socket statistics summary</span>
+
+<span class="c"># System load</span>
+<span class="nb">uptime</span>                         <span class="c"># Load average (1, 5, 15 min)</span>
+w                              <span class="c"># Who is logged in + load</span>
+dmesg | <span class="nb">tail</span> <span class="nt">-20</span>               <span class="c"># Kernel ring buffer</span>
+journalctl <span class="nt">-xe</span>                 <span class="c"># Systemd journal errors</span>
+</code></pre></div></div>
+
+<h3 id="load-average-explained">Load Average Explained</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Load Average: 0.5, 1.2, 0.8
+              │    │    └── 15-minute average
+              │    └─────── 5-minute average
+              └──────────── 1-minute average
+
+Rule: Load avg should be &lt; number of CPU cores
+4-core system: load avg of 4.0 means 100% utilized
+</code></pre></div></div>
+
+<h3 id="troubleshooting-high-cpu">Troubleshooting High CPU</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Step 1: Identify high CPU process</span>
+top <span class="nt">-b</span> <span class="nt">-n1</span> <span class="nt">-o</span> %CPU | <span class="nb">head</span> <span class="nt">-20</span>
+
+<span class="c"># Step 2: Get PID details</span>
+ps <span class="nt">-p</span> &lt;PID&gt; <span class="nt">-o</span> pid,ppid,cmd,%cpu,%mem,etime
+
+<span class="c"># Step 3: Check what it's doing</span>
+strace <span class="nt">-p</span> &lt;PID&gt; <span class="nt">-c</span>          <span class="c"># Syscall summary</span>
+lsof <span class="nt">-p</span> &lt;PID&gt;               <span class="c"># Open files</span>
+<span class="nb">cat</span> /proc/&lt;PID&gt;/status       <span class="c"># Process status</span>
+<span class="nb">cat</span> /proc/&lt;PID&gt;/cmdline      <span class="c"># Full command</span>
+
+<span class="c"># Step 4: Check threads</span>
+ps <span class="nt">-p</span> &lt;PID&gt; <span class="nt">-L</span> <span class="nt">-o</span> pid,tid,%cpu,comm
+</code></pre></div></div>
+
+<h3 id="troubleshooting-disk-full">Troubleshooting Disk Full</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Find what's using space</span>
+<span class="nb">du</span> <span class="nt">-sh</span> /<span class="k">*</span> 2&gt;/dev/null | <span class="nb">sort</span> <span class="nt">-hr</span> | <span class="nb">head</span> <span class="nt">-20</span>
+<span class="nb">du</span> <span class="nt">-sh</span> /var/<span class="k">*</span> | <span class="nb">sort</span> <span class="nt">-hr</span>
+find / <span class="nt">-size</span> +100M <span class="nt">-type</span> f 2&gt;/dev/null
+
+<span class="c"># Check for deleted but open files</span>
+lsof | <span class="nb">grep </span>deleted | <span class="nb">awk</span> <span class="s1">'{print $7, $1, $2}'</span> | <span class="nb">sort</span> <span class="nt">-hr</span>
+
+<span class="c"># Truncate log safely (don't delete open files)</span>
+<span class="o">&gt;</span> /var/log/huge.log           <span class="c"># Truncate to zero</span>
+<span class="nb">truncate</span> <span class="nt">-s</span> 0 /var/log/huge.log
+
+<span class="c"># Inode exhaustion (no space but df shows space)</span>
+<span class="nb">df</span> <span class="nt">-i</span>                          <span class="c"># Check inode usage</span>
+find /tmp <span class="nt">-type</span> f | <span class="nb">wc</span> <span class="nt">-l</span>     <span class="c"># Count files in /tmp</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between a process and a thread?</strong></p>
+
+<blockquote>
+  <p>A <strong>process</strong> is an independent program in execution with its own memory space, file handles, and resources. A <strong>thread</strong> is a lightweight unit of execution within a process that shares the same memory space. Processes are isolated (crash in one doesn’t affect another); threads within the same process share memory, making communication easier but crashes more dangerous.</p>
+</blockquote>
+
+<p><strong>Q2: Explain the Linux boot process.</strong></p>
+
+<blockquote>
+  <ol>
+    <li><strong>BIOS/UEFI</strong> — firmware runs POST, finds bootable device</li>
+    <li><strong>Bootloader (GRUB2)</strong> — loads kernel into memory</li>
+    <li><strong>Kernel</strong> — initializes hardware, mounts initramfs</li>
+    <li><strong>initramfs</strong> — temporary root FS, loads modules needed to mount real root</li>
+    <li><strong>init/systemd (PID 1)</strong> — starts all user-space services</li>
+    <li><strong>Runlevel/Target</strong> — reaches target (multi-user, graphical)</li>
+    <li><strong>Login prompt</strong></li>
+  </ol>
+</blockquote>
+
+<p><strong>Q3: What does <code class="language-plaintext highlighter-rouge">chmod 755</code> mean?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>7 (owner)</strong>: rwx = 4+2+1 = read, write, execute</li>
+    <li><strong>5 (group)</strong>: r-x = 4+0+1 = read, execute</li>
+    <li><strong>5 (others)</strong>: r-x = read, execute
+Typical for executable scripts and directories.</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q4: What is the difference between <code class="language-plaintext highlighter-rouge">&gt;</code> and <code class="language-plaintext highlighter-rouge">&gt;&gt;</code>?</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">&gt;</code> <strong>redirects</strong> output, overwriting the file. <code class="language-plaintext highlighter-rouge">&gt;&gt;</code> <strong>appends</strong> output to the file. Example: <code class="language-plaintext highlighter-rouge">echo "log" &gt;&gt; /var/log/myapp.log</code> adds a line without losing existing content.</p>
+</blockquote>
+
+<p><strong>Q5: Explain hard links vs symbolic links.</strong></p>
+
+<blockquote>
+  <p>A <strong>hard link</strong> is a second directory entry pointing to the same inode (same data blocks). Deleting the original doesn’t affect the hard link. Limited to same filesystem, cannot link directories.
+A <strong>symbolic (soft) link</strong> is a pointer (shortcut) to another file by path. Can cross filesystems, can link directories, but breaks if the target is deleted.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q6: How does the Linux kernel handle memory management?</strong></p>
+
+<blockquote>
+  <p>The kernel uses <strong>virtual memory</strong> with paging. Each process gets its own virtual address space mapped to physical RAM via page tables. The kernel handles:</p>
+  <ul>
+    <li><strong>Demand paging</strong>: loads pages only when accessed</li>
+    <li><strong>Swap</strong>: moves inactive pages to disk when RAM is full</li>
+    <li><strong>OOM killer</strong>: kills processes when memory is critically low</li>
+    <li><strong>Huge pages</strong>: 2MB pages for performance-critical workloads</li>
+    <li><strong>Buddy system + slab allocator</strong>: for kernel memory management</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q7: What is the difference between <code class="language-plaintext highlighter-rouge">ps aux</code> and <code class="language-plaintext highlighter-rouge">ps -ef</code>?</strong></p>
+
+<blockquote>
+  <p>Both show all processes. <code class="language-plaintext highlighter-rouge">ps aux</code> (BSD syntax) shows CPU/mem % and the full command. <code class="language-plaintext highlighter-rouge">ps -ef</code> (Unix syntax) shows PPID, start time, and CMD. In practice for DevOps, <code class="language-plaintext highlighter-rouge">ps aux | grep &lt;name&gt;</code> is most common. <code class="language-plaintext highlighter-rouge">ps -ef --forest</code> shows parent-child relationships.</p>
+</blockquote>
+
+<p><strong>Q8: Explain <code class="language-plaintext highlighter-rouge">inode</code> in Linux.</strong></p>
+
+<blockquote>
+  <p>An <strong>inode</strong> is a data structure that stores file metadata: permissions, owner, size, timestamps, and pointers to data blocks. <strong>Not</strong> the filename (directory entries map names → inodes). Each filesystem has a fixed number of inodes. You can run out of inodes even with free disk space (<code class="language-plaintext highlighter-rouge">df -i</code> to check). Hard links share the same inode.</p>
+</blockquote>
+
+<p><strong>Q9: What is <code class="language-plaintext highlighter-rouge">systemd</code> and how does it differ from <code class="language-plaintext highlighter-rouge">init</code>?</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">systemd</code> is a modern init system (PID 1) that:</p>
+  <ul>
+    <li>Starts services in <strong>parallel</strong> (faster boot vs sequential init)</li>
+    <li>Uses <strong>unit files</strong> (<code class="language-plaintext highlighter-rouge">.service</code>, <code class="language-plaintext highlighter-rouge">.socket</code>, <code class="language-plaintext highlighter-rouge">.timer</code>) instead of shell scripts</li>
+    <li>Provides <code class="language-plaintext highlighter-rouge">journalctl</code> for <strong>centralized logging</strong></li>
+    <li>Manages <strong>dependencies</strong> between services declaratively</li>
+    <li>Supports <strong>cgroups</strong> for resource control per service</li>
+    <li>Has socket activation (start service on first connection)</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q10: How would you find all files modified in the last 24 hours?</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find / <span class="nt">-mtime</span> <span class="nt">-1</span> <span class="nt">-type</span> f 2&gt;/dev/null
+<span class="c"># -mtime -1: less than 1 day ago</span>
+<span class="c"># For minutes: -mmin -60 (last 60 min)</span>
+<span class="c"># For access time: -atime</span>
+<span class="c"># For change time (metadata): -ctime</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q11: Explain Linux namespaces and cgroups (foundation of containers).</strong></p>
+
+<blockquote>
+  <p><strong>Namespaces</strong> provide <strong>isolation</strong> — each namespace gives processes a different view of the system:</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">pid</code>: isolated process IDs (PID 1 inside container)</li>
+    <li><code class="language-plaintext highlighter-rouge">net</code>: isolated network stack (interfaces, routes, iptables)</li>
+    <li><code class="language-plaintext highlighter-rouge">mnt</code>: isolated mount points (filesystem view)</li>
+    <li><code class="language-plaintext highlighter-rouge">uts</code>: isolated hostname/domain name</li>
+    <li><code class="language-plaintext highlighter-rouge">ipc</code>: isolated inter-process communication</li>
+    <li><code class="language-plaintext highlighter-rouge">user</code>: isolated user/group IDs (UID mapping)</li>
+    <li><code class="language-plaintext highlighter-rouge">cgroup</code>: isolated cgroup hierarchy</li>
+  </ul>
+
+  <p><strong>cgroups (Control Groups)</strong> provide <strong>resource limits</strong>:</p>
+  <ul>
+    <li>Limit CPU, memory, disk I/O, network bandwidth per process group</li>
+    <li>Used by Docker to enforce container resource limits (<code class="language-plaintext highlighter-rouge">--memory</code>, <code class="language-plaintext highlighter-rouge">--cpus</code>)</li>
+    <li><code class="language-plaintext highlighter-rouge">systemd</code> uses cgroups for service resource management</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q12: What is the difference between TCP and UDP at the OS level?</strong></p>
+
+<blockquote>
+  <p>At the socket level: <code class="language-plaintext highlighter-rouge">SOCK_STREAM</code> (TCP) vs <code class="language-plaintext highlighter-rouge">SOCK_DGRAM</code> (UDP). TCP uses <code class="language-plaintext highlighter-rouge">connect()</code>, <code class="language-plaintext highlighter-rouge">accept()</code>, and maintains state in the kernel’s TCP state machine (SYN_SENT, ESTABLISHED, TIME_WAIT, etc.). The kernel buffers data, handles retransmission, and manages the sliding window. UDP just sends datagrams with no connection state — lower overhead, no delivery guarantee.</p>
+</blockquote>
+
+<p><strong>Q13: How would you diagnose and fix a system with high iowait?</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Diagnose</span>
+iostat <span class="nt">-xz</span> 1 10              <span class="c"># Look for high %await, %util</span>
+iotop <span class="nt">-a</span>                     <span class="c"># Find which process is doing I/O</span>
+pidstat <span class="nt">-d</span> 1                 <span class="c"># Per-process disk stats</span>
+<span class="nb">cat</span> /proc/&lt;PID&gt;/io           <span class="c"># Raw I/O for specific PID</span>
+blktrace <span class="nt">-d</span> /dev/sda         <span class="c"># Deep block device tracing</span>
+
+<span class="c"># Common causes &amp; fixes</span>
+<span class="c"># 1. Swap thrashing → add RAM, reduce swappiness</span>
+<span class="nb">echo </span>10 <span class="o">&gt;</span> /proc/sys/vm/swappiness
+
+<span class="c"># 2. Slow disk → check for failing drive</span>
+smartctl <span class="nt">-a</span> /dev/sda
+
+<span class="c"># 3. Database checkpoint storms → tune DB flush settings</span>
+
+<span class="c"># 4. Log rotation → compress logs, archive to slower storage</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-server-is-unreachable">🔵 Scenario 1: Server is Unreachable</h3>
+
+<p><em>“Your production server suddenly becomes unreachable. How do you investigate?”</em></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Check monitoring/alerting dashboard
+2. Try ping from multiple locations (rule out network issue)
+3. Check cloud console — is the VM running?
+4. Try alternate access: serial console, VNC, AWS SSM
+5. If accessible via console:
+   - Check: dmesg | tail -50 (kernel panics, OOM)
+   - Check: systemctl status (failed services)
+   - Check: netstat -tulnp | grep sshd (SSH running?)
+   - Check: iptables -L (firewall blocking SSH?)
+   - Check: df -h (disk full? — can prevent SSH login)
+6. Review cloud security group / ACL rules
+7. Check recent deployments or cron jobs
+</code></pre></div></div>
+
+<h3 id="-scenario-2-application-oom-kill">🔵 Scenario 2: Application OOM Kill</h3>
+
+<p><em>“Your Java application keeps getting OOM killed. What do you do?”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Confirm OOM kill</span>
+dmesg | <span class="nb">grep</span> <span class="nt">-i</span> <span class="s2">"out of memory"</span>
+journalctl <span class="nt">-xe</span> | <span class="nb">grep</span> <span class="nt">-i</span> oom
+<span class="nb">grep</span> <span class="s2">"Killed process"</span> /var/log/syslog
+
+<span class="c"># 2. See what was killed and what triggered it</span>
+dmesg | <span class="nb">grep</span> <span class="s2">"oom_kill_process"</span> <span class="nt">-A</span> 20
+
+<span class="c"># 3. Analyze memory usage trend</span>
+free <span class="nt">-h</span><span class="p">;</span> vmstat 1 10
+
+<span class="c"># 4. For JVM: enable GC logging and heap dump</span>
+<span class="c"># Add to JVM args:</span>
+<span class="nt">-Xmx2g</span> <span class="nt">-XX</span>:+HeapDumpOnOutOfMemoryError
+<span class="nt">-XX</span>:HeapDumpPath<span class="o">=</span>/tmp/heapdump.hprof
+
+<span class="c"># 5. Solutions:</span>
+<span class="c"># - Increase container/VM memory limits</span>
+<span class="c"># - Fix memory leak (analyze heap dump with MAT/VisualVM)</span>
+<span class="c"># - Add swap as buffer (not recommended for production)</span>
+<span class="c"># - Tune JVM heap size appropriately</span>
+</code></pre></div></div>
+
+<h3 id="-scenario-3-disk-space-alert">🔵 Scenario 3: Disk Space Alert</h3>
+
+<p><em>“You receive a disk space alert at 95% on /var. How do you respond?”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Step 1: Quantify</span>
+<span class="nb">df</span> <span class="nt">-h</span> /var
+
+<span class="c"># Step 2: Find large consumers</span>
+<span class="nb">du</span> <span class="nt">-sh</span> /var/<span class="k">*</span> | <span class="nb">sort</span> <span class="nt">-hr</span> | <span class="nb">head</span> <span class="nt">-10</span>
+<span class="nb">du</span> <span class="nt">-sh</span> /var/log/<span class="k">*</span> | <span class="nb">sort</span> <span class="nt">-hr</span>
+
+<span class="c"># Step 3: Check for deleted-but-open files (common in logs)</span>
+lsof +L1 | <span class="nb">grep</span> /var    <span class="c"># +L1 = link count &lt; 1 (deleted)</span>
+
+<span class="c"># Step 4: Quick wins</span>
+<span class="c"># - Rotate logs</span>
+logrotate <span class="nt">-f</span> /etc/logrotate.conf
+<span class="c"># - Clear old journal logs</span>
+journalctl <span class="nt">--vacuum-size</span><span class="o">=</span>500M
+<span class="c"># - Clean package cache</span>
+apt-get clean   <span class="c"># or yum clean all</span>
+<span class="c"># - Remove old Docker images</span>
+docker system prune <span class="nt">-af</span>
+
+<span class="c"># Step 5: Long-term</span>
+<span class="c"># - Add log rotation policy</span>
+<span class="c"># - Move /var/log to separate partition</span>
+<span class="c"># - Set up monitoring with threshold alerts at 80%</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-process-investigation-script">Lab 1: Process Investigation Script</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># Script to investigate high resource usage</span>
+
+<span class="nb">echo</span> <span class="s2">"=== TOP 5 CPU CONSUMERS ==="</span>
+ps aux <span class="nt">--sort</span><span class="o">=</span>-%cpu | <span class="nb">head</span> <span class="nt">-6</span>
+
+<span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">=== TOP 5 MEMORY CONSUMERS ==="</span>
+ps aux <span class="nt">--sort</span><span class="o">=</span>-%mem | <span class="nb">head</span> <span class="nt">-6</span>
+
+<span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">=== DISK USAGE ==="</span>
+<span class="nb">df</span> <span class="nt">-h</span> | <span class="nb">grep</span> <span class="nt">-v</span> tmpfs
+
+<span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">=== DISK I/O ==="</span>
+iostat <span class="nt">-x</span> 1 3 | <span class="nb">tail</span> <span class="nt">-15</span>
+
+<span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">=== NETWORK CONNECTIONS ==="</span>
+ss <span class="nt">-s</span>
+</code></pre></div></div>
+
+<h3 id="lab-2-user-and-permissions-setup">Lab 2: User and Permissions Setup</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create a web deployment user</span>
+<span class="nb">sudo </span>useradd <span class="nt">-r</span> <span class="nt">-s</span> /bin/false <span class="nt">-d</span> /var/www/myapp deploy_user
+<span class="nb">sudo mkdir</span> <span class="nt">-p</span> /var/www/myapp
+<span class="nb">sudo chown </span>deploy_user:deploy_user /var/www/myapp
+<span class="nb">sudo chmod </span>750 /var/www/myapp
+
+<span class="c"># Allow deploy_user to restart nginx only</span>
+<span class="nb">echo</span> <span class="s2">"deploy_user ALL=(ALL) NOPASSWD: /bin/systemctl restart nginx"</span> <span class="se">\</span>
+  | <span class="nb">sudo tee</span> /etc/sudoers.d/deploy_user
+
+<span class="c"># Verify</span>
+<span class="nb">sudo</span> <span class="nt">-u</span> deploy_user <span class="nb">sudo </span>systemctl restart nginx
+</code></pre></div></div>
+
+<h3 id="lab-3-log-analysis">Lab 3: Log Analysis</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Parse nginx access log for top IPs and status codes</span>
+<span class="nb">awk</span> <span class="s1">'{print $1}'</span> /var/log/nginx/access.log | <span class="se">\</span>
+    <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-rn</span> | <span class="nb">head</span> <span class="nt">-20</span>
+
+<span class="c"># Count HTTP status codes</span>
+<span class="nb">awk</span> <span class="s1">'{print $9}'</span> /var/log/nginx/access.log | <span class="se">\</span>
+    <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="nb">sort</span> <span class="nt">-rn</span>
+
+<span class="c"># Find slowest requests (if response time logged)</span>
+<span class="nb">awk</span> <span class="s1">'$NF &gt; 1.0 {print $NF, $7}'</span> /var/log/nginx/access.log | <span class="se">\</span>
+    <span class="nb">sort</span> <span class="nt">-rn</span> | <span class="nb">head</span> <span class="nt">-10</span>
+
+<span class="c"># Live error monitoring</span>
+<span class="nb">tail</span> <span class="nt">-f</span> /var/log/nginx/error.log | <span class="nb">grep</span> <span class="nt">-E</span> <span class="s2">"error|crit|alert|emerg"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="command-reference">Command Reference</h2>
+
+<h3 id="essential-commands-quick-table">Essential Commands Quick Table</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Command</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Files</td>
+      <td><code class="language-plaintext highlighter-rouge">find / -name "*.log" -mtime -1</code></td>
+      <td>Find recent logs</td>
+    </tr>
+    <tr>
+      <td>Files</td>
+      <td><code class="language-plaintext highlighter-rouge">rsync -avz src/ dst/</code></td>
+      <td>Sync directories</td>
+    </tr>
+    <tr>
+      <td>Process</td>
+      <td><code class="language-plaintext highlighter-rouge">kill -l</code></td>
+      <td>List all signals</td>
+    </tr>
+    <tr>
+      <td>Process</td>
+      <td><code class="language-plaintext highlighter-rouge">pgrep -a nginx</code></td>
+      <td>Find PID by name</td>
+    </tr>
+    <tr>
+      <td>Network</td>
+      <td><code class="language-plaintext highlighter-rouge">ss -tulnp</code></td>
+      <td>Active listeners</td>
+    </tr>
+    <tr>
+      <td>Network</td>
+      <td><code class="language-plaintext highlighter-rouge">tcpdump -i any -w dump.pcap</code></td>
+      <td>Capture traffic</td>
+    </tr>
+    <tr>
+      <td>Disk</td>
+      <td><code class="language-plaintext highlighter-rouge">lsblk -f</code></td>
+      <td>Filesystems on devices</td>
+    </tr>
+    <tr>
+      <td>Disk</td>
+      <td><code class="language-plaintext highlighter-rouge">mount -t ext4 /dev/sdb1 /mnt</code></td>
+      <td>Mount partition</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td><code class="language-plaintext highlighter-rouge">sysctl -a</code></td>
+      <td>Kernel parameters</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td><code class="language-plaintext highlighter-rouge">ulimit -a</code></td>
+      <td>User limits</td>
+    </tr>
+    <tr>
+      <td>Logs</td>
+      <td><code class="language-plaintext highlighter-rouge">journalctl -u nginx -f</code></td>
+      <td>Follow service logs</td>
+    </tr>
+    <tr>
+      <td>Logs</td>
+      <td><code class="language-plaintext highlighter-rouge">tail -f /var/log/syslog</code></td>
+      <td>Follow syslog</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sed--awk-quick-reference">Sed &amp; Awk Quick Reference</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># sed — stream editor</span>
+<span class="nb">sed</span> <span class="nt">-n</span> <span class="s1">'10,20p'</span> file.txt          <span class="c"># Print lines 10-20</span>
+<span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/foo/bar/g'</span> file.txt     <span class="c"># In-place replace</span>
+<span class="nb">sed</span> <span class="s1">'/^#/d'</span> file.conf             <span class="c"># Delete comment lines</span>
+<span class="nb">sed</span> <span class="s1">'s/[[:space:]]*$//'</span> file.txt  <span class="c"># Remove trailing whitespace</span>
+
+<span class="c"># awk — pattern scanning</span>
+<span class="nb">awk</span> <span class="s1">'NR==5'</span> file.txt              <span class="c"># Print line 5</span>
+<span class="nb">awk</span> <span class="s1">'$3 &gt; 100'</span> file.txt           <span class="c"># Lines where field 3 &gt; 100</span>
+<span class="nb">awk</span> <span class="s1">'{sum+=$1} END{print sum}'</span>    <span class="c"># Sum column 1</span>
+<span class="nb">awk</span> <span class="s1">'!seen[$0]++'</span>                 <span class="c"># Remove duplicate lines</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Networking.html">Networking →</a></td>
+        <td><a href="/devops-interview-guide/Docker.html">Docker (uses Linux namespaces) →</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security →</a></td>
+        <td><a href="/devops-interview-guide/Monitoring.html">Monitoring →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

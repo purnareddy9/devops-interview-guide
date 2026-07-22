@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🟦 GCP — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🟦 GCP — DevOps Interview Guide
 
 > [← Azure](./Azure.md) | [Main Index](./README.md) | [CI/CD →](./CICD.md)

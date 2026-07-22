@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🔄 CI/CD — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🔄 CI/CD — DevOps Interview Guide
 
 > [← GCP](./GCP.md) | [Main Index](./README.md) | [Monitoring →](./Monitoring.md)

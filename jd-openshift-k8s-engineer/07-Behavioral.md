@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🟣 Module 7 — Behavioral Questions"
+render_with_liquid: false
+---
+
 # 🟣 Module 7 — Behavioral Questions
 
 > **JD Alignment:** All behavioral questions are mapped to specific JD requirements. Answers follow the **STAR method**: Situation → Task → Action → Result.

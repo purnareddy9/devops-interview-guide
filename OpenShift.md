@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🔴 OpenShift — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🔴 OpenShift — DevOps Interview Guide
 
 > [← Kubernetes](./Kubernetes.md) | [Main Index](./README.md) | [Jenkins →](./Jenkins.md)

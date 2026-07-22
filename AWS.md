@@ -1,3 +1,9 @@
+---
+layout: default
+title: "☁️ AWS — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # ☁️ AWS — DevOps Interview Guide
 
 > [← Ansible](./Ansible.md) | [Main Index](./README.md) | [Azure →](./Azure.md)

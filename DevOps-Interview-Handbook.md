@@ -1,3 +1,9 @@
+---
+layout: default
+title: "📘 DevOps Interview Handbook — Complete Question Bank"
+render_with_liquid: false
+---
+
 # 📘 DevOps Interview Handbook — Complete Question Bank
 
 > **Scope:** 47 real interview questions across 7 domains · Each question answered with 16 sections including production examples, troubleshooting, Mermaid diagrams, hands-on labs, and company-specific variations.  

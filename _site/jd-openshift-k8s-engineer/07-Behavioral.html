@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🟣 Module 7 — Behavioral Questions · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🟣 Module 7 — Behavioral Questions · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🟣 Module 7 — Behavioral Questions · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🟣 Module 7 — Behavioral Questions | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🟣 Module 7 — Behavioral Questions" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral.html" />
+<meta property="og:url" content="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🟣 Module 7 — Behavioral Questions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🟣 Module 7 — Behavioral Questions","url":"/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         aria-current="page">
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link active"
+       aria-current="page">
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+            <span class="breadcrumb-sep" aria-hidden="true">›</span>
+            <span class="breadcrumb-part">Jd openshift k8s engineer</span>
+            
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🟣 Module 7 — Behavioral Questions</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-module-7--behavioral-questions">🟣 Module 7 — Behavioral Questions</h1>
+
+<blockquote>
+  <p><strong>JD Alignment:</strong> All behavioral questions are mapped to specific JD requirements. Answers follow the <strong>STAR method</strong>: Situation → Task → Action → Result.</p>
+</blockquote>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based.html">← Scenario-Based</a></td>
+        <td><a href="/devops-interview-guide/jd-openshift-k8s-engineer/README.html">README</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="how-to-use-star">How to Use STAR</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>What to say</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>S</strong>ituation</td>
+      <td>Set the context — where, when, what was at stake</td>
+    </tr>
+    <tr>
+      <td><strong>T</strong>ask</td>
+      <td>Your specific responsibility in the situation</td>
+    </tr>
+    <tr>
+      <td><strong>A</strong>ction</td>
+      <td>The concrete steps YOU took (use “I”, not “we”)</td>
+    </tr>
+    <tr>
+      <td><strong>R</strong>esult</td>
+      <td>Quantifiable outcome + what you learned</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Tips:</strong></p>
+<ul>
+  <li>Keep each answer 2–3 minutes when spoken aloud.</li>
+  <li>Quantify results: “reduced deployment time by 60%”, “achieved 99.9% uptime”.</li>
+  <li>Always end with what you learned or how you’d do it differently.</li>
+  <li>Prepare 2 versions of each story — one for positive outcomes, one for “failure/learning”.</li>
+</ul>
+
+<hr />
+
+<h2 id="questions-by-jd-area">Questions by JD Area</h2>
+
+<hr />
+
+<h3 id="-jd-design-implement-and-maintain-cicd-pipelines">🟣 JD: “Design, implement and maintain CI/CD pipelines”</h3>
+
+<p><strong>Q1: Tell me about a CI/CD pipeline you designed from scratch. What were the challenges and how did you overcome them?</strong></p>
+
+<p><strong>Strong Answer Framework:</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> At [Company], the team was deploying manually — developers emailed ZIP files to ops, who manually SSH’d to servers. Deployments took 4 hours and had a 30% failure rate. We were on-call every time.</p>
+
+  <p><strong>Task:</strong> I was asked to design and implement an automated CI/CD pipeline for 12 microservices deploying to OpenShift.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>I started by mapping the current manual process to identify all the implicit steps — dependency installation, test execution, image build, registry push, deployment, smoke test. This became the pipeline template.</li>
+    <li>I chose GitLab CI + OpenShift Pipelines (Tekton) because GitLab was already used for source control and Tekton was native to OCP.</li>
+    <li>I created a shared pipeline template in GitLab that teams could inherit with 3 lines of YAML — reducing duplication across 12 services.</li>
+    <li>The hardest part: several legacy services ran as root, which OpenShift’s SCC blocked. I worked with each team to fix their Dockerfiles — <code class="language-plaintext highlighter-rouge">USER 1001</code> directive. For two services with genuine OS-level needs, I created a custom SCC granting only what was needed.</li>
+    <li>I added automated rollback: if the post-deploy health check failed within 5 minutes, the pipeline automatically ran <code class="language-plaintext highlighter-rouge">oc rollout undo</code>.</li>
+  </ol>
+
+  <p><strong>Result:</strong> Deployment time dropped from 4 hours to 8 minutes. Failure rate went from 30% to under 3%. The team stopped being on-call for deployments. We went from 2 deploys/week to 15+/week.</p>
+
+  <p><strong>Lesson:</strong> The technical work was 40% of the effort. The other 60% was working with teams to fix their applications and change their habits — communication matters as much as the tooling.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Q2: Describe a time a pipeline failed in production. What happened and what did you do?</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> A Tekton pipeline deployed a new image to production that passed all automated tests in staging but caused 500 errors in production due to a database schema migration that wasn’t backward-compatible.</p>
+
+  <p><strong>Task:</strong> Restore service as quickly as possible and prevent recurrence.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Immediately ran <code class="language-plaintext highlighter-rouge">oc rollout undo deployment/payment-api</code> — service restored in 90 seconds.</li>
+    <li>Coordinated with the database team to roll back the migration (this was the harder part — we had to write a reverse migration script on the fly).</li>
+    <li>Did a post-mortem: the root cause was that staging used a 1-week-old copy of the production database, so the schema difference wasn’t caught.</li>
+    <li>Implemented a fix: added a migration compatibility test to the pipeline — the new version starts alongside the old version (expand phase), both must serve requests; only then does the old version shut down (contract phase — Expand/Contract pattern).</li>
+    <li>Also updated staging to refresh with a production snapshot every 24 hours.</li>
+  </ol>
+
+  <p><strong>Result:</strong> Zero recurrence of schema-related production incidents in the following 18 months. The expand/contract pattern became a company standard.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-jd-manage-and-administer-openshift-and-kubernetes-clusters-to-ensure-high-availability-and-scalability">🟣 JD: “Manage and administer OpenShift and Kubernetes clusters to ensure high availability and scalability”</h3>
+
+<p><strong>Q3: Tell me about the most complex OpenShift cluster issue you’ve resolved.</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> During a peak traffic event (Black Friday), our production OpenShift cluster started experiencing cascading pod evictions — 40% of pods across 3 namespaces were evicted within 10 minutes.</p>
+
+  <p><strong>Task:</strong> As the on-call platform engineer, I needed to stabilize the cluster and restore service during the highest-traffic window of the year.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Immediate: opened war-room Slack channel, looped in app teams to know which services were impacted.</li>
+    <li>Ran <code class="language-plaintext highlighter-rouge">oc adm top nodes</code> — all 6 worker nodes were showing &gt;95% memory.</li>
+    <li>The trigger was a batch job that had been mistakenly scheduled with no resource limits — it consumed all available memory on 3 nodes within minutes.</li>
+    <li>I deleted the runaway batch job immediately: <code class="language-plaintext highlighter-rouge">oc delete job runaway-job -n processing</code>.</li>
+    <li>Nodes were still under pressure — ran <code class="language-plaintext highlighter-rouge">oc rollout restart</code> on the most critical services to get them rescheduled on the partially-recovered nodes.</li>
+    <li>Added 3 nodes to the cluster via MachineSet to absorb the load while the existing nodes recovered.</li>
+  </ol>
+
+  <p><strong>Result:</strong> Full service restoration in 22 minutes. Revenue impact was contained.</p>
+
+  <p><strong>Long-term:</strong> I implemented LimitRange defaults so no container could be created without resource limits. Added a Kyverno policy to reject any Job/CronJob without limits in production. Added node memory alert at 80% (not 95%) to give earlier warning.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Q4: How have you ensured high availability in a containerized environment?</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> My team was running a critical payment processing service with a 99.9% SLA requirement.</p>
+
+  <p><strong>Task:</strong> Design the deployment architecture to meet the SLA and survive node failures and cluster upgrades without downtime.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Set <code class="language-plaintext highlighter-rouge">replicas: 3</code> with <code class="language-plaintext highlighter-rouge">podAntiAffinity</code> requiring pods to be on different availability zones.</li>
+    <li>Implemented <code class="language-plaintext highlighter-rouge">PodDisruptionBudget</code> with <code class="language-plaintext highlighter-rouge">minAvailable: 2</code> — ensuring at least 2 pods always running during node drains.</li>
+    <li>Configured <code class="language-plaintext highlighter-rouge">maxUnavailable: 0</code> in the rolling update strategy — never reduces below 3 during deployments.</li>
+    <li>Added readiness probe that checks DB connectivity — pod only receives traffic when truly ready.</li>
+    <li>Prepped a runbook for the quarterly Chaos Engineering exercise — randomly killing pods, draining nodes, and verifying the SLA held.</li>
+  </ol>
+
+  <p><strong>Result:</strong> Achieved 99.97% uptime over 12 months. Successfully survived two planned cluster upgrades with zero downtime.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-jd-collaborate-with-development-and-operations-teams-to-streamline-software-delivery">🟣 JD: “Collaborate with development and operations teams to streamline software delivery”</h3>
+
+<p><strong>Q5: Describe a time you had to influence a team to adopt a DevOps practice they were resistant to.</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> Our development team was resistant to adding security scanning (Trivy) to the CI pipeline. They argued it would slow down the pipeline and “we don’t have vulnerabilities.”</p>
+
+  <p><strong>Task:</strong> Get the security scan adopted without creating adversarial friction.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Rather than mandating the scan, I first ran Trivy against all existing production images and presented the results — 3 images had CRITICAL CVEs, including Log4Shell.</li>
+    <li>This created urgency. The conversation shifted from “we don’t need this” to “how do we fix these?”</li>
+    <li>I made the scan non-blocking initially — warnings only, no pipeline failure. This gave teams time to fix images without feeling blocked.</li>
+    <li>After 4 weeks, I made it block on CRITICAL only (not HIGH or MEDIUM). This was an agreed-upon threshold with the security team.</li>
+    <li>I created a shared Trivy configuration and <code class="language-plaintext highlighter-rouge">.trivyignore</code> file template so teams could suppress false positives properly.</li>
+  </ol>
+
+  <p><strong>Result:</strong> 100% of pipelines have Trivy scanning within 8 weeks. All CRITICAL CVEs were remediated. The team that was most resistant later said it had saved them during a supply chain incident — they were able to identify affected images in minutes instead of hours.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Q6: Tell me about a time you had to work with a difficult stakeholder.</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> A senior developer consistently bypassed the GitOps deployment process by running <code class="language-plaintext highlighter-rouge">oc apply</code> directly to production. This created configuration drift and caused two incidents where ArgoCD reverted his manual changes mid-traffic.</p>
+
+  <p><strong>Task:</strong> Align on a process that worked for both parties without creating conflict.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>I started by understanding his reason. The root cause: the GitOps PR review process took 2–4 hours, which was too slow for hotfixes.</li>
+    <li>Instead of issuing a policy mandate, I worked with him to design a “hotfix lane” — a fast-track GitOps path that could go from commit to production in &lt; 15 minutes with a single approver.</li>
+    <li>I also enabled ArgoCD’s <code class="language-plaintext highlighter-rouge">allow_direct_apply</code> annotation for his service account in break-glass scenarios, but with audit logging and a mandatory incident ticket requirement.</li>
+    <li>I presented both options to the team and let them choose — buy-in came from participation in the solution.</li>
+  </ol>
+
+  <p><strong>Result:</strong> Manual <code class="language-plaintext highlighter-rouge">oc apply</code> incidents dropped to zero. The hotfix lane was adopted by 4 other teams. The developer became an advocate for GitOps.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-jd-monitor-system-performance-and-troubleshoot-issues">🟣 JD: “Monitor system performance and troubleshoot issues”</h3>
+
+<p><strong>Q7: Tell me about a time you reduced MTTR (Mean Time to Recovery) for your team.</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> When I joined, the team’s MTTR was ~90 minutes. The main bottleneck: on-call engineers spent 30–40 minutes just figuring out which service was broken and on which host.</p>
+
+  <p><strong>Task:</strong> Reduce MTTR by improving observability and runbooks.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Audited every alert — 60% had no runbook link. I added runbook links to all alerts as a mandatory CI check (alert PR without runbook link = rejected).</li>
+    <li>Created a “service health dashboard” in Grafana showing all 12 services in one view — traffic, errors, latency, pod count, and last deployment time.</li>
+    <li>Implemented distributed tracing (Jaeger) across the top 5 services — now engineers could trace a slow/failing request across services in one click.</li>
+    <li>Wrote and rehearsed incident response playbooks — monthly “fire drills” where we intentionally killed services and timed recovery.</li>
+  </ol>
+
+  <p><strong>Result:</strong> MTTR dropped from 90 minutes to 18 minutes over 6 months. Alert-to-runbook coverage reached 100%. The fire drills uncovered 3 gaps in our recovery procedures before they became real incidents.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-jd-implement-security-best-practices-for-containerized-environments">🟣 JD: “Implement security best practices for containerized environments”</h3>
+
+<p><strong>Q8: Describe a security incident you handled in a containerized environment. What did you do and what did you learn?</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> Falco detected a cryptocurrency miner running inside a pod in our development namespace. The pod had no resource limits and was maxing out a worker node’s CPU.</p>
+
+  <p><strong>Task:</strong> Contain the incident, investigate the compromise, and prevent recurrence.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Isolated the pod immediately with a deny-all NetworkPolicy.</li>
+    <li>Captured forensics: pod logs, process list, network connections before deleting.</li>
+    <li>Investigation: the attacker had exploited a publicly-known RCE in an outdated nginx version used as a sidecar. The image had been pulled from Docker Hub without version pinning — <code class="language-plaintext highlighter-rouge">:latest</code> was 6 months behind.</li>
+    <li>Remediation: patched all images, enabled <code class="language-plaintext highlighter-rouge">imagePullPolicy: Always</code> with SHA pinning (<code class="language-plaintext highlighter-rouge">nginx@sha256:abc123</code>).</li>
+    <li>Prevention: blocked Docker Hub registry in production via OpenShift image policy, mandated Trivy scans blocking on HIGH+ CVEs, added Kyverno policy requiring pinned image digests in production.</li>
+  </ol>
+
+  <p><strong>Result:</strong> No further compromise. The incident led to a company-wide “pin your images” initiative. We also implemented Falco across all namespaces with Slack alerting, which has caught 3 additional anomalies in the following year.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-jd-automate-infrastructure-provisioning-and-configuration-management">🟣 JD: “Automate infrastructure provisioning and configuration management”</h3>
+
+<p><strong>Q9: Tell me about the most impactful automation you implemented.</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> Onboarding a new application team to OpenShift required 2 days of manual platform-team work: creating namespaces, configuring RBAC, setting up network policies, creating service accounts, configuring pipelines, and documenting everything.</p>
+
+  <p><strong>Task:</strong> Reduce onboarding from 2 days to &lt; 1 hour.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Mapped every manual step into an Ansible role: <code class="language-plaintext highlighter-rouge">openshift_project</code>, <code class="language-plaintext highlighter-rouge">openshift_rbac</code>, <code class="language-plaintext highlighter-rouge">openshift_networking</code>, <code class="language-plaintext highlighter-rouge">openshift_cicd</code>.</li>
+    <li>Created a Backstage self-service template — developers fill in a form (team name, namespace, language, GitHub URL, approver email). This triggers an Ansible job via AAP.</li>
+    <li>The entire provisioning (namespace + quota + RBAC + NetworkPolicy + SA + BuildConfig + ArgoCD Application) completes in ~8 minutes.</li>
+    <li>Auto-generated onboarding email includes cluster URL, namespace name, how to get kubeconfig, and link to team documentation.</li>
+  </ol>
+
+  <p><strong>Result:</strong> Onboarding time: 2 days → 8 minutes. Platform team capacity freed up by ~15 hours/week. Developer satisfaction survey score for “time to first deployment” went from 2.1/5 to 4.6/5.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Q10: Describe a time you used infrastructure-as-code to solve a problem.</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> The team had 3 OpenShift clusters (dev, staging, prod) that had slowly diverged in configuration over 18 months of manual <code class="language-plaintext highlighter-rouge">oc apply</code> changes. No one knew exactly what was different between environments, causing “works in staging, fails in prod” incidents weekly.</p>
+
+  <p><strong>Task:</strong> Reconcile all three environments and prevent future drift.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Used <code class="language-plaintext highlighter-rouge">oc export</code> to dump current state of all three clusters.</li>
+    <li>Used <code class="language-plaintext highlighter-rouge">diff</code> to identify differences — found 47 meaningful divergences.</li>
+    <li>Triaged: which divergences were intentional (prod has more replicas — correct) vs accidental (staging has debug logging enabled in prod config — wrong)?</li>
+    <li>Created a Kustomize base + overlays structure in Git. The base = shared config; overlays = environment-specific overrides.</li>
+    <li>Deployed ArgoCD to all three clusters pointing at their respective overlay directories. ArgoCD <code class="language-plaintext highlighter-rouge">selfHeal: true</code> would immediately correct any manual drift.</li>
+  </ol>
+
+  <p><strong>Result:</strong> Drift incidents dropped to zero. When a developer asks “why does prod behave differently?” the answer is always in Git. Onboarding new environments takes &lt; 30 minutes.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-jd-provide-technical-support-and-guidance-to-development-teams">🟣 JD: “Provide technical support and guidance to development teams”</h3>
+
+<p><strong>Q11: Tell me about a time you mentored a developer on containerization or DevOps practices.</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> A backend developer was trying to containerize a Java Spring Boot app for the first time. Their Dockerfile was pulling a full JDK image (800MB), running as root, and the app was taking 90 seconds to start — failing readiness probes.</p>
+
+  <p><strong>Task:</strong> Help them build a production-quality container image.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Pair-programmed the Dockerfile with them rather than just rewriting it — this was a teaching moment.</li>
+    <li>Walked through multi-stage builds: compile stage with full JDK, runtime stage with JRE only → image size: 800MB → 120MB.</li>
+    <li>Explained why running as root fails on OpenShift (SCC) and showed how to add <code class="language-plaintext highlighter-rouge">RUN useradd -u 1001 appuser &amp;&amp; chown -R appuser /app</code> + <code class="language-plaintext highlighter-rouge">USER 1001</code>.</li>
+    <li>Diagnosed the slow start: Spring Boot’s classpath scanning. Fixed with <code class="language-plaintext highlighter-rouge">-Dspring.jmx.enabled=false</code> and a startup probe (separate from readiness) with 120 seconds initial delay.</li>
+  </ol>
+
+  <p><strong>Result:</strong> Image size: 800MB → 120MB. Startup: 90s → 12s. Passed SCC without any special grants. The developer went on to write an internal blog post about it — spread the knowledge to 8 other Java teams.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-cross-cutting-behavioral-questions">🟣 Cross-cutting Behavioral Questions</h3>
+
+<p><strong>Q12: Tell me about a mistake you made in production and what you learned from it.</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> Early in my career, I accidentally ran <code class="language-plaintext highlighter-rouge">oc delete deployment --all -n production</code> thinking I was in the staging namespace. I had forgotten to switch context.</p>
+
+  <p><strong>Task:</strong> Recover all production deployments as quickly as possible.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Immediately told my manager — transparency first.</li>
+    <li>All deployments were in Git (GitOps), so recovery was: <code class="language-plaintext highlighter-rouge">oc apply -k gitops/overlays/production/</code> — back in 4 minutes.</li>
+    <li>Data was not affected (stateful services had their PVCs intact).</li>
+    <li>Wrote a post-mortem focused on systems, not blame.</li>
+  </ol>
+
+  <p><strong>Result:</strong> Full restoration in 8 minutes. Zero data loss.</p>
+
+  <p><strong>What I changed immediately:</strong></p>
+  <ol>
+    <li>Set <code class="language-plaintext highlighter-rouge">PS1</code> in my shell to prominently show the current <code class="language-plaintext highlighter-rouge">kubectl</code> context and namespace in red when <code class="language-plaintext highlighter-rouge">prod</code> or <code class="language-plaintext highlighter-rouge">production</code> is in the name.</li>
+    <li>Added a namespace confirmation prompt for destructive commands (<code class="language-plaintext highlighter-rouge">kubectl delete</code>/<code class="language-plaintext highlighter-rouge">oc delete</code>) via a shell alias.</li>
+    <li>Implemented RBAC so the CI/CD service account (which I was using) had more limited permissions than <code class="language-plaintext highlighter-rouge">cluster-admin</code>.</li>
+  </ol>
+
+  <p><strong>Lesson:</strong> Assume humans will make mistakes. Build systems that are hard to break accidentally. GitOps was the hero — without it, recovery would have taken hours.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Q13: Describe a time you had competing priorities and how you handled them.</strong></p>
+
+<blockquote>
+  <p><strong>Situation:</strong> I was mid-way through implementing the cluster autoscaler project (2-week effort) when a critical security CVE (Log4Shell) was disclosed. All production images needed to be patched within 48 hours per our security policy.</p>
+
+  <p><strong>Task:</strong> Balance the ongoing project with the emergency security response.</p>
+
+  <p><strong>Action:</strong></p>
+  <ol>
+    <li>Immediately triaged: which services use Log4j? Used Trivy SBOM scan to identify affected images in &lt; 30 minutes.</li>
+    <li>Communicated to management: “Log4Shell affects 6 of our 12 services. I’m pausing the autoscaler project to focus on this for 48 hours.”</li>
+    <li>Prioritized by risk: internet-facing services first (3 services patched in 12 hours), internal services next.</li>
+    <li>Updated the CI pipeline to block any new deployment if Trivy found Log4j with the vulnerable version — preventing teams from accidentally deploying more vulnerable images.</li>
+    <li>After 48 hours, returned to autoscaler project and completed it within the original week.</li>
+  </ol>
+
+  <p><strong>Result:</strong> All 6 services patched within 36 hours. Zero exploitation detected. Autoscaler delivered on time. Management appreciated the transparent communication about reprioritization.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Q14: Where do you see the DevOps/Platform Engineering field heading in the next 3–5 years?</strong></p>
+
+<blockquote>
+  <p><strong>Strong talking points for 2024-2026:</strong></p>
+
+  <ol>
+    <li>
+      <p><strong>Platform Engineering maturity:</strong> Internal Developer Platforms (IDP) — tools like Backstage — will become standard. The platform team’s job shifts from “running infra” to “building a product for developers”. Golden paths replace DIY.</p>
+    </li>
+    <li>
+      <p><strong>GitOps everywhere:</strong> The boundary between CI and CD will blur. ArgoCD/Flux patterns will extend to infrastructure (OpenTofu, Terraform) and policy (Kyverno, OPA). The entire system state — apps, infra, security policies — is in Git.</p>
+    </li>
+    <li>
+      <p><strong>eBPF and kernel-level observability:</strong> Tools like Cilium, Hubble, and Tetragon will replace kube-proxy and enable pod-level network observability with near-zero overhead. Falco-like runtime security becomes ubiquitous.</p>
+    </li>
+    <li>
+      <p><strong>AI-assisted operations:</strong> LLMs will help with root cause analysis, runbook generation, and alert triaging — but humans will remain in the loop for production decisions. “AI-augmented DevOps”, not “AI-replaced DevOps”.</p>
+    </li>
+    <li>
+      <p><strong>Supply chain security (SLSA):</strong> Image signing, SBOM generation, and provenance attestation will become regulatory requirements (US EO 14028, EU CRA). OpenShift’s Tekton Chains addresses this.</p>
+    </li>
+    <li>
+      <p><strong>Edge computing:</strong> Kubernetes (MicroShift) and OpenShift at the edge — factories, retail, vehicles. Brings new challenges: low bandwidth, intermittent connectivity, physical security.</p>
+    </li>
+  </ol>
+
+  <p><strong>My positioning:</strong> I’m investing in platform engineering skills (Backstage, IDP patterns), GitOps at scale (ACM, ApplicationSets), and supply chain security (cosign, SLSA). These are where the industry is heading.</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+  <p>✅ <strong>End of Module 7 — You’re fully prepared!</strong></p>
+
+  <p><strong>Recommended final preparation:</strong></p>
+  <ol>
+    <li>Record yourself answering Q1, Q3, Q7, Q9, Q12 — watch for filler words and time each answer.</li>
+    <li>Do a mock technical interview covering one question from each module.</li>
+    <li>Review the <a href="/devops-interview-guide/OpenShift.html#oc-cli-cheat-sheet">oc CLI Cheat Sheet</a> and <a href="/devops-interview-guide/Kubernetes.html#kubectl-cheat-sheet">kubectl Cheat Sheet</a> the morning of the interview.</li>
+    <li>Prepare 5 questions to ask the interviewer: their tech stack, on-call structure, biggest current challenge, team topology, how success is measured in the first 90 days.</li>
+  </ol>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

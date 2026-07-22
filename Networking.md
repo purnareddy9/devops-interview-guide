@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🌐 Networking — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🌐 Networking — DevOps Interview Guide
 
 > [← Linux](./Linux.md) | [Main Index](./README.md) | [Git →](./Git.md)

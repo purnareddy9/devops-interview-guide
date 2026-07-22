@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🔧 Jenkins — DevOps Interview Guide"
+render_with_liquid: false
+---
+
 # 🔧 Jenkins — DevOps Interview Guide
 
 > [← Kubernetes](./Kubernetes.md) | [Main Index](./README.md) | [Terraform →](./Terraform.md)

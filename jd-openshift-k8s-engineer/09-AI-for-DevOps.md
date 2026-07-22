@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🤖 Module 9 — AI for DevOps"
+render_with_liquid: false
+---
+
 # 🤖 Module 9 — AI for DevOps
 
 > **JD Alignment:** "Leverage AI-assisted tooling, intelligent automation, and ML-powered observability to increase pipeline velocity, reduce toil, and improve system reliability."

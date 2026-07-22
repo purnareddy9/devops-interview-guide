@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🌐 Networking — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🌐 Networking — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Networking.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🌐 Networking — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🌐 Networking — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🌐 Networking — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Networking.html" />
+<meta property="og:url" content="/devops-interview-guide/Networking.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🌐 Networking — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🌐 Networking — DevOps Interview Guide","url":"/devops-interview-guide/Networking.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🌐 Networking — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-networking--devops-interview-guide">🌐 Networking — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Linux.html">← Linux</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Git.html">Git →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#osi-model">OSI Model</a></li>
+  <li><a href="#tcpip-suite">TCP/IP Suite</a></li>
+  <li><a href="#ip-addressing--subnetting">IP Addressing &amp; Subnetting</a></li>
+  <li><a href="#dns-deep-dive">DNS Deep Dive</a></li>
+  <li><a href="#httphttps">HTTP/HTTPS</a></li>
+  <li><a href="#load-balancing">Load Balancing</a></li>
+  <li><a href="#firewalls--security-groups">Firewalls &amp; Security Groups</a></li>
+  <li><a href="#vpn--tunneling">VPN &amp; Tunneling</a></li>
+  <li><a href="#network-troubleshooting">Network Troubleshooting</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+</ol>
+
+<hr />
+
+<h2 id="osi-model">OSI Model</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Layer 7 — Application   → HTTP, HTTPS, DNS, FTP, SMTP
+Layer 6 — Presentation  → SSL/TLS, encoding, compression
+Layer 5 — Session       → Session management, NetBIOS
+Layer 4 — Transport     → TCP, UDP, ports, segmentation
+Layer 3 — Network       → IP, ICMP, routing, packets
+Layer 2 — Data Link     → MAC addresses, Ethernet, switches, frames
+Layer 1 — Physical      → Cables, fiber, signals, bits
+</code></pre></div></div>
+
+<h3 id="why-devops-engineers-need-osi-knowledge">Why DevOps Engineers Need OSI Knowledge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Layer</th>
+      <th>DevOps Relevance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>L7</td>
+      <td>Debugging API failures, reverse proxies (nginx), WAFs</td>
+    </tr>
+    <tr>
+      <td>L4</td>
+      <td>Load balancer health checks, TCP timeouts, port conflicts</td>
+    </tr>
+    <tr>
+      <td>L3</td>
+      <td>Routing between VPCs, subnet design, cloud networking</td>
+    </tr>
+    <tr>
+      <td>L2</td>
+      <td>Container networking (bridge/overlay), VLAN segmentation</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="tcpip-suite">TCP/IP Suite</h2>
+
+<h3 id="tcp-three-way-handshake">TCP Three-Way Handshake</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Client                    Server
+  │                          │
+  │──── SYN (seq=x) ────────&gt;│
+  │                          │
+  │&lt;─── SYN-ACK (seq=y,     │
+  │          ack=x+1) ───────│
+  │                          │
+  │──── ACK (ack=y+1) ──────&gt;│
+  │                          │
+  │ ── Connection Established ──
+</code></pre></div></div>
+
+<h3 id="tcp-vs-udp-comparison">TCP vs UDP Comparison</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>TCP</th>
+      <th>UDP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Connection</td>
+      <td>Connection-oriented</td>
+      <td>Connectionless</td>
+    </tr>
+    <tr>
+      <td>Reliability</td>
+      <td>Guaranteed delivery, ordering</td>
+      <td>No guarantee</td>
+    </tr>
+    <tr>
+      <td>Speed</td>
+      <td>Slower (overhead)</td>
+      <td>Faster</td>
+    </tr>
+    <tr>
+      <td>Use cases</td>
+      <td>HTTP, SSH, FTP, databases</td>
+      <td>DNS, video streaming, gaming</td>
+    </tr>
+    <tr>
+      <td>Header size</td>
+      <td>20-60 bytes</td>
+      <td>8 bytes</td>
+    </tr>
+    <tr>
+      <td>Flow control</td>
+      <td>Yes (sliding window)</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Congestion control</td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="tcp-states">TCP States</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CLOSED → LISTEN → SYN_RCVD → ESTABLISHED → FIN_WAIT_1 →
+FIN_WAIT_2 → TIME_WAIT → CLOSED
+
+# Check TCP connections by state
+ss -an | awk '{print $1}' | sort | uniq -c | sort -rn
+
+# TIME_WAIT: normal, connection recently closed, waiting 2*MSL
+# CLOSE_WAIT: application hasn't closed its end (potential bug)
+# SYN_RECV: many = potential SYN flood attack
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="ip-addressing--subnetting">IP Addressing &amp; Subnetting</h2>
+
+<h3 id="ipv4-classes">IPv4 Classes</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Range</th>
+      <th>Default Subnet</th>
+      <th>Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>1.0.0.0 – 126.255.255.255</td>
+      <td>/8 (255.0.0.0)</td>
+      <td>Large networks</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>128.0.0.0 – 191.255.255.255</td>
+      <td>/16</td>
+      <td>Medium networks</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>192.0.0.0 – 223.255.255.255</td>
+      <td>/24</td>
+      <td>Small networks</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>224.0.0.0 – 239.255.255.255</td>
+      <td>N/A</td>
+      <td>Multicast</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>240.0.0.0 – 255.255.255.255</td>
+      <td>N/A</td>
+      <td>Reserved</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="private-ip-ranges-rfc-1918">Private IP Ranges (RFC 1918)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Range</th>
+      <th>CIDR</th>
+      <th>Addresses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10.0.0.0 – 10.255.255.255</td>
+      <td>10.0.0.0/8</td>
+      <td>~16.7M</td>
+    </tr>
+    <tr>
+      <td>172.16.0.0 – 172.31.255.255</td>
+      <td>172.16.0.0/12</td>
+      <td>~1M</td>
+    </tr>
+    <tr>
+      <td>192.168.0.0 – 192.168.255.255</td>
+      <td>192.168.0.0/16</td>
+      <td>65,536</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cidr-subnet-quick-reference">CIDR Subnet Quick Reference</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>CIDR</th>
+      <th>Subnet Mask</th>
+      <th>Hosts</th>
+      <th>Typical Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/32</td>
+      <td>255.255.255.255</td>
+      <td>1</td>
+      <td>Single host</td>
+    </tr>
+    <tr>
+      <td>/30</td>
+      <td>255.255.255.252</td>
+      <td>2</td>
+      <td>Point-to-point links</td>
+    </tr>
+    <tr>
+      <td>/29</td>
+      <td>255.255.255.248</td>
+      <td>6</td>
+      <td>Small teams</td>
+    </tr>
+    <tr>
+      <td>/28</td>
+      <td>255.255.255.240</td>
+      <td>14</td>
+      <td>Small subnets</td>
+    </tr>
+    <tr>
+      <td>/27</td>
+      <td>255.255.255.224</td>
+      <td>30</td>
+      <td>Small subnets</td>
+    </tr>
+    <tr>
+      <td>/24</td>
+      <td>255.255.255.0</td>
+      <td>254</td>
+      <td>Standard LAN</td>
+    </tr>
+    <tr>
+      <td>/22</td>
+      <td>255.255.252.0</td>
+      <td>1022</td>
+      <td>Medium network</td>
+    </tr>
+    <tr>
+      <td>/16</td>
+      <td>255.255.0.0</td>
+      <td>65,534</td>
+      <td>Large VPC</td>
+    </tr>
+    <tr>
+      <td>/8</td>
+      <td>255.0.0.0</td>
+      <td>16,777,214</td>
+      <td>Huge network</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="subnetting-example">Subnetting Example</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Network: 192.168.10.0/24 — Need 4 equal subnets
+
+Borrowing 2 bits: /24 + 2 = /26
+Each subnet: 64 addresses, 62 usable
+
+Subnet 1: 192.168.10.0/26   → hosts: .1 to .62,  broadcast: .63
+Subnet 2: 192.168.10.64/26  → hosts: .65 to .126, broadcast: .127
+Subnet 3: 192.168.10.128/26 → hosts: .129 to .190, broadcast: .191
+Subnet 4: 192.168.10.192/26 → hosts: .193 to .254, broadcast: .255
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="dns-deep-dive">DNS Deep Dive</h2>
+
+<h3 id="dns-resolution-process">DNS Resolution Process</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Browser                Recursive Resolver     Root NS    TLD NS    Auth NS
+  │                           │                  │          │         │
+  │── query: example.com ────&gt;│                  │          │         │
+  │                           │── root query ──&gt;│          │         │
+  │                           │&lt;── .com NS ──────│          │         │
+  │                           │── .com query ──────────────&gt;│         │
+  │                           │&lt;── example.com NS ──────────│         │
+  │                           │── example.com query ─────────────────&gt;│
+  │                           │&lt;── A: 93.184.216.34 ─────────────────│
+  │&lt;── A: 93.184.216.34 ──────│
+</code></pre></div></div>
+
+<h3 id="dns-record-types">DNS Record Types</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Record</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>IPv4 address</td>
+      <td><code class="language-plaintext highlighter-rouge">example.com → 93.184.216.34</code></td>
+    </tr>
+    <tr>
+      <td>AAAA</td>
+      <td>IPv6 address</td>
+      <td><code class="language-plaintext highlighter-rouge">example.com → 2606:2800::</code></td>
+    </tr>
+    <tr>
+      <td>CNAME</td>
+      <td>Alias to another name</td>
+      <td><code class="language-plaintext highlighter-rouge">www → example.com</code></td>
+    </tr>
+    <tr>
+      <td>MX</td>
+      <td>Mail server</td>
+      <td><code class="language-plaintext highlighter-rouge">@ → mail.example.com (priority 10)</code></td>
+    </tr>
+    <tr>
+      <td>TXT</td>
+      <td>Text data (SPF, DKIM, verification)</td>
+      <td><code class="language-plaintext highlighter-rouge">"v=spf1 include:..."</code></td>
+    </tr>
+    <tr>
+      <td>NS</td>
+      <td>Authoritative name servers</td>
+      <td><code class="language-plaintext highlighter-rouge">@ → ns1.example.com</code></td>
+    </tr>
+    <tr>
+      <td>PTR</td>
+      <td>Reverse DNS (IP → name)</td>
+      <td><code class="language-plaintext highlighter-rouge">34.216.184.93.in-addr.arpa → example.com</code></td>
+    </tr>
+    <tr>
+      <td>SRV</td>
+      <td>Service location</td>
+      <td><code class="language-plaintext highlighter-rouge">_http._tcp.example.com</code></td>
+    </tr>
+    <tr>
+      <td>SOA</td>
+      <td>Zone authority info</td>
+      <td>Start of Authority</td>
+    </tr>
+    <tr>
+      <td>CAA</td>
+      <td>CA authorization</td>
+      <td>Controls who can issue TLS certs</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="dns-troubleshooting-commands">DNS Troubleshooting Commands</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Basic lookup</span>
+dig example.com
+dig example.com A        <span class="c"># Specific record type</span>
+dig example.com MX       <span class="c"># Mail records</span>
+dig @8.8.8.8 example.com <span class="c"># Query specific DNS server</span>
+dig +short example.com   <span class="c"># IP only</span>
+
+<span class="c"># Trace full resolution</span>
+dig +trace example.com
+
+<span class="c"># Reverse lookup</span>
+dig <span class="nt">-x</span> 93.184.216.34
+
+<span class="c"># Check DNS propagation</span>
+dig @ns1.example.com example.com  <span class="c"># Query authoritative server</span>
+nslookup example.com 8.8.8.8      <span class="c"># Using Google DNS</span>
+
+<span class="c"># TTL info</span>
+dig example.com | <span class="nb">grep</span> <span class="nt">-i</span> ttl
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="httphttps">HTTP/HTTPS</h2>
+
+<h3 id="http-requestresponse">HTTP Request/Response</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /api/users HTTP/1.1
+Host: api.example.com
+Authorization: Bearer eyJhbGci...
+Content-Type: application/json
+Accept: application/json
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+X-Request-ID: abc123
+Cache-Control: no-cache
+
+{"users": [...]}
+</code></pre></div></div>
+
+<h3 id="http-status-codes">HTTP Status Codes</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Range</th>
+      <th>Category</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1xx</td>
+      <td>Informational</td>
+      <td>100 Continue, 101 Switching Protocols</td>
+    </tr>
+    <tr>
+      <td>2xx</td>
+      <td>Success</td>
+      <td>200 OK, 201 Created, 204 No Content</td>
+    </tr>
+    <tr>
+      <td>3xx</td>
+      <td>Redirection</td>
+      <td>301 Permanent, 302 Temporary, 304 Not Modified</td>
+    </tr>
+    <tr>
+      <td>4xx</td>
+      <td>Client Error</td>
+      <td>400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Too Many Requests</td>
+    </tr>
+    <tr>
+      <td>5xx</td>
+      <td>Server Error</td>
+      <td>500 Internal Error, 502 Bad Gateway, 503 Service Unavailable, 504 Gateway Timeout</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="tls-handshake-simplified">TLS Handshake (simplified)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Client                              Server
+  │                                    │
+  │──── ClientHello (TLS version, ────&gt;│
+  │      cipher suites, random) ────── │
+  │                                    │
+  │&lt;─── ServerHello (chosen cipher,    │
+  │      Certificate, random) ─────────│
+  │                                    │
+  │── Verify cert chain                │
+  │── Generate pre-master secret       │
+  │──── ClientKeyExchange ────────────&gt;│
+  │──── ChangeCipherSpec ─────────────&gt;│
+  │──── Finished (encrypted) ─────────&gt;│
+  │                                    │
+  │&lt;─── ChangeCipherSpec ──────────────│
+  │&lt;─── Finished (encrypted) ──────────│
+  │                                    │
+  │ ═══════ Encrypted HTTP ═══════════ │
+</code></pre></div></div>
+
+<h3 id="http2-vs-http11">HTTP/2 vs HTTP/1.1</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>HTTP/1.1</th>
+      <th>HTTP/2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Multiplexing</td>
+      <td>No (1 req/connection)</td>
+      <td>Yes (multiple streams)</td>
+    </tr>
+    <tr>
+      <td>Header compression</td>
+      <td>No</td>
+      <td>Yes (HPACK)</td>
+    </tr>
+    <tr>
+      <td>Server push</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Binary protocol</td>
+      <td>No (text)</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Connection</td>
+      <td>Multiple connections needed</td>
+      <td>Single connection</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="load-balancing">Load Balancing</h2>
+
+<h3 id="load-balancing-algorithms">Load Balancing Algorithms</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Algorithm</th>
+      <th>Description</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Round Robin</td>
+      <td>Requests distributed sequentially</td>
+      <td>Equal capacity servers</td>
+    </tr>
+    <tr>
+      <td>Weighted Round Robin</td>
+      <td>Servers get % of traffic by weight</td>
+      <td>Different capacity servers</td>
+    </tr>
+    <tr>
+      <td>Least Connections</td>
+      <td>Route to server with fewest active connections</td>
+      <td>Long-lived connections</td>
+    </tr>
+    <tr>
+      <td>IP Hash</td>
+      <td>Client IP determines server (sticky)</td>
+      <td>Sessions without shared state</td>
+    </tr>
+    <tr>
+      <td>Random</td>
+      <td>Randomly select server</td>
+      <td>Simple, low overhead</td>
+    </tr>
+    <tr>
+      <td>Least Response Time</td>
+      <td>Fastest responding server</td>
+      <td>Latency-sensitive apps</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="layer-4-vs-layer-7-load-balancing">Layer 4 vs Layer 7 Load Balancing</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>L4 (Transport)</th>
+      <th>L7 (Application)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Operates on</td>
+      <td>TCP/UDP</td>
+      <td>HTTP/HTTPS</td>
+    </tr>
+    <tr>
+      <td>Routing basis</td>
+      <td>IP + port</td>
+      <td>URL, headers, cookies</td>
+    </tr>
+    <tr>
+      <td>Performance</td>
+      <td>Higher (less inspection)</td>
+      <td>Lower (more work)</td>
+    </tr>
+    <tr>
+      <td>SSL termination</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Content-based routing</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Examples</td>
+      <td>AWS NLB, HAProxy (TCP mode)</td>
+      <td>nginx, AWS ALB, HAProxy (HTTP)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="nginx-load-balancer-config">Nginx Load Balancer Config</h3>
+
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">upstream</span> <span class="s">backend</span> <span class="p">{</span>
+    <span class="kn">least_conn</span><span class="p">;</span>
+    <span class="kn">server</span> <span class="nf">10.0.0.1</span><span class="p">:</span><span class="mi">8080</span> <span class="s">weight=3</span><span class="p">;</span>
+    <span class="kn">server</span> <span class="nf">10.0.0.2</span><span class="p">:</span><span class="mi">8080</span> <span class="s">weight=1</span><span class="p">;</span>
+    <span class="kn">server</span> <span class="nf">10.0.0.3</span><span class="p">:</span><span class="mi">8080</span> <span class="s">backup</span><span class="p">;</span>    <span class="c1"># Standby</span>
+    <span class="kn">keepalive</span> <span class="mi">32</span><span class="p">;</span>                   <span class="c1"># Connection pool</span>
+<span class="p">}</span>
+
+<span class="k">server</span> <span class="p">{</span>
+    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+    
+    <span class="kn">location</span> <span class="n">/api/</span> <span class="p">{</span>
+        <span class="kn">proxy_pass</span> <span class="s">http://backend</span><span class="p">;</span>
+        <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$host</span><span class="p">;</span>
+        <span class="kn">proxy_set_header</span> <span class="s">X-Real-IP</span> <span class="nv">$remote_addr</span><span class="p">;</span>
+        <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-For</span> <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+        <span class="kn">proxy_connect_timeout</span> <span class="s">5s</span><span class="p">;</span>
+        <span class="kn">proxy_read_timeout</span> <span class="s">30s</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1"># Health check</span>
+    <span class="kn">location</span> <span class="n">/health</span> <span class="p">{</span>
+        <span class="kn">return</span> <span class="mi">200</span> <span class="s">"healthy</span><span class="err">\</span><span class="s">n"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="firewalls--security-groups">Firewalls &amp; Security Groups</h2>
+
+<h3 id="iptables">iptables</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># View rules</span>
+iptables <span class="nt">-L</span> <span class="nt">-n</span> <span class="nt">-v</span> <span class="nt">--line-numbers</span>
+
+<span class="c"># Allow established connections</span>
+iptables <span class="nt">-A</span> INPUT <span class="nt">-m</span> state <span class="nt">--state</span> ESTABLISHED,RELATED <span class="nt">-j</span> ACCEPT
+
+<span class="c"># Allow SSH</span>
+iptables <span class="nt">-A</span> INPUT <span class="nt">-p</span> tcp <span class="nt">--dport</span> 22 <span class="nt">-s</span> 10.0.0.0/8 <span class="nt">-j</span> ACCEPT
+
+<span class="c"># Allow HTTP/HTTPS</span>
+iptables <span class="nt">-A</span> INPUT <span class="nt">-p</span> tcp <span class="nt">-m</span> multiport <span class="nt">--dports</span> 80,443 <span class="nt">-j</span> ACCEPT
+
+<span class="c"># Block an IP</span>
+iptables <span class="nt">-A</span> INPUT <span class="nt">-s</span> 1.2.3.4 <span class="nt">-j</span> DROP
+
+<span class="c"># Rate limiting (DDoS protection)</span>
+iptables <span class="nt">-A</span> INPUT <span class="nt">-p</span> tcp <span class="nt">--dport</span> 80 <span class="nt">-m</span> limit <span class="nt">--limit</span> 100/min <span class="se">\</span>
+  <span class="nt">--limit-burst</span> 200 <span class="nt">-j</span> ACCEPT
+
+<span class="c"># NAT (masquerade for outbound traffic)</span>
+iptables <span class="nt">-t</span> nat <span class="nt">-A</span> POSTROUTING <span class="nt">-o</span> eth0 <span class="nt">-j</span> MASQUERADE
+
+<span class="c"># Save rules</span>
+iptables-save <span class="o">&gt;</span> /etc/iptables/rules.v4
+</code></pre></div></div>
+
+<h3 id="security-groups-vs-nacls-aws">Security Groups vs NACLs (AWS)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Security Group</th>
+      <th>Network ACL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Level</td>
+      <td>Instance (ENI)</td>
+      <td>Subnet</td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td>Stateful</td>
+      <td>Stateless</td>
+    </tr>
+    <tr>
+      <td>Rules</td>
+      <td>Allow only</td>
+      <td>Allow + Deny</td>
+    </tr>
+    <tr>
+      <td>Evaluation</td>
+      <td>All rules evaluated</td>
+      <td>Rules evaluated in order</td>
+    </tr>
+    <tr>
+      <td>Default</td>
+      <td>Deny all inbound</td>
+      <td>Allow all</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="vpn--tunneling">VPN &amp; Tunneling</h2>
+
+<h3 id="vpn-types">VPN Types</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Use Case</th>
+      <th>Protocol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Site-to-Site</td>
+      <td>Connect two networks</td>
+      <td>IPSec, GRE</td>
+    </tr>
+    <tr>
+      <td>Client-to-Site</td>
+      <td>Remote access</td>
+      <td>OpenVPN, WireGuard, L2TP</td>
+    </tr>
+    <tr>
+      <td>SSL VPN</td>
+      <td>Browser-based</td>
+      <td>TLS</td>
+    </tr>
+    <tr>
+      <td>SD-WAN</td>
+      <td>Enterprise WAN</td>
+      <td>Proprietary + IPSec</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ssh-tunneling">SSH Tunneling</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Local port forwarding (access remote service locally)</span>
+<span class="c"># Access remote DB at 5432 via local port 5433</span>
+ssh <span class="nt">-L</span> 5433:db-server:5432 jump-host <span class="nt">-N</span> <span class="nt">-f</span>
+
+<span class="c"># Remote port forwarding (expose local service remotely)</span>
+ssh <span class="nt">-R</span> 8080:localhost:3000 remote-server <span class="nt">-N</span> <span class="nt">-f</span>
+
+<span class="c"># Dynamic (SOCKS proxy)</span>
+ssh <span class="nt">-D</span> 1080 remote-server <span class="nt">-N</span> <span class="nt">-f</span>
+<span class="c"># Then configure browser to use SOCKS5 proxy on 127.0.0.1:1080</span>
+
+<span class="c"># Jump host (ProxyJump)</span>
+ssh <span class="nt">-J</span> jump-host target-host
+<span class="c"># Or in ~/.ssh/config:</span>
+<span class="c"># Host target</span>
+<span class="c">#   ProxyJump jump-host</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="network-troubleshooting">Network Troubleshooting</h2>
+
+<h3 id="systematic-approach">Systematic Approach</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Problem: Can't reach service at http://app.example.com:8080
+
+Step 1 — DNS
+  dig app.example.com → resolves to 10.0.1.50?
+
+Step 2 — ICMP reachability
+  ping 10.0.1.50 → responds?
+
+Step 3 — Port reachability
+  nc -zv 10.0.1.50 8080 → connection refused or success?
+  telnet 10.0.1.50 8080
+
+Step 4 — Routing
+  traceroute 10.0.1.50 → where does it stop?
+
+Step 5 — Firewall
+  iptables -L, security groups, NACLs
+
+Step 6 — Service listening
+  ss -tulnp | grep 8080 → is something listening?
+
+Step 7 — Application logs
+  journalctl -u myapp -f
+</code></pre></div></div>
+
+<h3 id="packet-analysis-with-tcpdump">Packet Analysis with tcpdump</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Capture all traffic on eth0</span>
+tcpdump <span class="nt">-i</span> eth0
+
+<span class="c"># Capture to file (analyze with Wireshark)</span>
+tcpdump <span class="nt">-i</span> eth0 <span class="nt">-w</span> /tmp/capture.pcap
+
+<span class="c"># Filter by host and port</span>
+tcpdump <span class="nt">-i</span> eth0 host 10.0.0.1 and port 80
+
+<span class="c"># HTTP requests only</span>
+tcpdump <span class="nt">-i</span> eth0 <span class="nt">-A</span> <span class="nt">-s0</span> <span class="s1">'tcp port 80 and (((ip[2:2] - ((ip[0]&amp;0xf)&lt;&lt;2)) - ((tcp[12]&amp;0xf0)&gt;&gt;2)) != 0)'</span>
+
+<span class="c"># DNS queries</span>
+tcpdump <span class="nt">-i</span> eth0 port 53
+
+<span class="c"># SYN packets only (new connections)</span>
+tcpdump <span class="nt">-i</span> eth0 <span class="s1">'tcp[tcpflags] &amp; (tcp-syn) != 0'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between a switch and a router?</strong></p>
+
+<blockquote>
+  <p>A <strong>switch</strong> operates at Layer 2 (Data Link), forwarding frames based on MAC addresses within a single network segment (LAN). A <strong>router</strong> operates at Layer 3 (Network), forwarding packets between different networks based on IP addresses. In cloud environments, virtual switches and routers are implemented in software (AWS VPC, Azure VNet).</p>
+</blockquote>
+
+<p><strong>Q2: What is NAT and why is it used?</strong></p>
+
+<blockquote>
+  <p><strong>Network Address Translation (NAT)</strong> maps private IP addresses to a public IP for outbound internet traffic. Used because IPv4 addresses are scarce — millions of private devices share a handful of public IPs. In AWS: Internet Gateway + route tables perform NAT for public subnets; NAT Gateway for private subnets to reach the internet without being directly reachable.</p>
+</blockquote>
+
+<p><strong>Q3: What is a subnet and why do we use them?</strong></p>
+
+<blockquote>
+  <p>A <strong>subnet</strong> is a logical subdivision of an IP network. We use them to:</p>
+  <ul>
+    <li><strong>Organize</strong> resources by function (web, app, DB tiers)</li>
+    <li><strong>Isolate</strong> resources for security (DB in private subnet)</li>
+    <li><strong>Control</strong> traffic with routing and firewall rules per subnet</li>
+    <li><strong>Reduce</strong> broadcast domain size</li>
+  </ul>
+</blockquote>
+
+<p><strong>Q4: Explain what happens when you type a URL in a browser.</strong></p>
+
+<blockquote>
+  <ol>
+    <li><strong>DNS resolution</strong>: Browser checks cache, OS cache, recursive resolver → gets IP</li>
+    <li><strong>TCP connection</strong>: 3-way handshake to port 80/443</li>
+    <li><strong>TLS handshake</strong> (HTTPS): certificate exchange, session key</li>
+    <li><strong>HTTP request</strong>: GET / HTTP/1.1 with headers</li>
+    <li><strong>Server processing</strong>: web server, app server, database</li>
+    <li><strong>HTTP response</strong>: HTML content returned</li>
+    <li><strong>Browser rendering</strong>: parse HTML, CSS, JS; fetch additional resources</li>
+    <li><strong>Page displayed</strong></li>
+  </ol>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q5: How does BGP work and where is it used in DevOps?</strong></p>
+
+<blockquote>
+  <p><strong>BGP (Border Gateway Protocol)</strong> is the routing protocol of the internet — it exchanges routing information between Autonomous Systems (AS). In DevOps: AWS uses BGP for Direct Connect and Transit Gateways; Kubernetes uses BGP (via Calico/MetalLB) for advertising Pod CIDRs to physical routers; multi-cloud SD-WAN solutions use BGP for routing.</p>
+</blockquote>
+
+<p><strong>Q6: Explain VXLAN and why containers use it.</strong></p>
+
+<blockquote>
+  <p><strong>VXLAN (Virtual Extensible LAN)</strong> encapsulates Layer 2 frames inside UDP packets (port 4789). It extends Layer 2 networks over Layer 3 infrastructure. Kubernetes overlay networks (Flannel, Calico overlay mode) use VXLAN to allow pods on different nodes to communicate as if on the same LAN, encapsulating pod traffic in UDP/IP packets.</p>
+</blockquote>
+
+<p><strong>Q7: What is the difference between a reverse proxy and a forward proxy?</strong></p>
+
+<blockquote>
+  <p>A <strong>forward proxy</strong> sits in front of clients — clients send requests through it to the internet (used for filtering, caching, anonymity). A <strong>reverse proxy</strong> sits in front of servers — clients talk to it, it routes to backend servers (used for load balancing, SSL termination, caching, hiding internal topology). In DevOps: nginx, Traefik, HAProxy are reverse proxies.</p>
+</blockquote>
+
+<p><strong>Q8: Explain anycast and how CloudFlare/CDNs use it.</strong></p>
+
+<blockquote>
+  <p>In <strong>anycast</strong>, the same IP address is announced from multiple geographic locations simultaneously. BGP routing delivers packets to the nearest (topologically) location. CDNs use this so <code class="language-plaintext highlighter-rouge">1.1.1.1</code> (CloudFlare DNS) routes you to the nearest CloudFlare datacenter automatically — no DNS-based load balancing needed.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q9: How does Kubernetes networking work end-to-end?</strong></p>
+
+<blockquote>
+  <p>Every Pod gets a unique IP. CNI plugin (Calico, Flannel, WeaveNet) is responsible for:</p>
+  <ol>
+    <li>Allocating IP from the pod CIDR</li>
+    <li>Setting up veth pair (pod ↔ node bridge)</li>
+    <li>Programming routes/overlay so pods can reach each other across nodes</li>
+    <li>kube-proxy programs iptables/IPVS rules for Service IP → Pod IP translation</li>
+    <li>NodePort opens port on all nodes → forwards to ClusterIP → Pod</li>
+    <li>Ingress controller is a reverse proxy managing L7 routing</li>
+  </ol>
+</blockquote>
+
+<p><strong>Q10: Describe a CDN and how you’d configure cache invalidation.</strong></p>
+
+<blockquote>
+  <p>A <strong>CDN</strong> (Content Delivery Network) caches content at edge nodes globally, reducing latency and origin load. Cache control headers: <code class="language-plaintext highlighter-rouge">Cache-Control: max-age=86400</code> (1 day). Invalidation strategies:</p>
+  <ul>
+    <li><strong>TTL-based</strong>: short TTL for dynamic, long TTL for static</li>
+    <li><strong>Versioned URLs</strong>: <code class="language-plaintext highlighter-rouge">app.js?v=abc123</code> — new version = new cache key</li>
+    <li><strong>API invalidation</strong>: CloudFront <code class="language-plaintext highlighter-rouge">create-invalidation</code>, Fastly Purge API</li>
+    <li><strong>Surrogate keys</strong>: tag content, purge by tag (Fastly, Varnish)</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-connection-refused">🔵 Scenario 1: Connection Refused</h3>
+
+<p><em>“Users report ‘Connection refused’ on port 443. How do you troubleshoot?”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Is the service running?</span>
+systemctl status nginx
+ss <span class="nt">-tulnp</span> | <span class="nb">grep</span> :443
+
+<span class="c"># 2. Is the port open in firewall?</span>
+iptables <span class="nt">-L</span> INPUT <span class="nt">-n</span> | <span class="nb">grep </span>443
+<span class="c"># AWS: check security group and NACL</span>
+
+<span class="c"># 3. Is the certificate valid?</span>
+openssl s_client <span class="nt">-connect</span> yoursite.com:443 <span class="nt">-servername</span> yoursite.com
+
+<span class="c"># 4. Test from different network (rule out local issue)</span>
+curl <span class="nt">-v</span> https://yoursite.com from another server
+
+<span class="c"># 5. Check nginx logs</span>
+<span class="nb">tail</span> <span class="nt">-50</span> /var/log/nginx/error.log
+
+<span class="c"># Common causes:</span>
+<span class="c"># - Service crashed: restart + investigate root cause</span>
+<span class="c"># - Certificate expired: renew cert</span>
+<span class="c"># - Firewall rule blocking 443: add allow rule</span>
+<span class="c"># - Listening on 127.0.0.1 only: change to 0.0.0.0</span>
+</code></pre></div></div>
+
+<h3 id="-scenario-2-intermittent-packet-loss">🔵 Scenario 2: Intermittent Packet Loss</h3>
+
+<p><em>“Users report intermittent connectivity to the application. Monitoring shows sporadic packet loss.”</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Confirm and measure packet loss</span>
+ping <span class="nt">-c</span> 100 target_host | <span class="nb">tail</span> <span class="nt">-5</span>
+mtr <span class="nt">-n</span> <span class="nt">-r</span> <span class="nt">-c</span> 100 target_host   <span class="c"># traceroute + ping combined</span>
+
+<span class="c"># 2. Check interface errors</span>
+ip <span class="nt">-s</span> <span class="nb">link </span>show eth0
+ethtool <span class="nt">-S</span> eth0 | <span class="nb">grep </span>error
+
+<span class="c"># 3. Check kernel ring buffer for NIC errors</span>
+dmesg | <span class="nb">grep</span> <span class="nt">-i</span> <span class="s2">"eth0</span><span class="se">\|</span><span class="s2">nic</span><span class="se">\|</span><span class="s2">transmit</span><span class="se">\|</span><span class="s2">receive"</span>
+
+<span class="c"># 4. Check for duplex mismatch</span>
+ethtool eth0 | <span class="nb">grep </span>Duplex
+
+<span class="c"># 5. Cloud-specific: check if instance is being throttled</span>
+<span class="c"># AWS: CloudWatch NetworkIn/Out, check for burst limits</span>
+
+<span class="c"># 6. MTU issues (black hole routing)</span>
+ping <span class="nt">-M</span> <span class="k">do</span> <span class="nt">-s</span> 1472 target_host  <span class="c"># Don't fragment, size=1472</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-subnet-calculator-script">Lab 1: Subnet Calculator Script</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># Simple subnet calculator</span>
+<span class="c"># Usage: ./subnet.sh 192.168.1.0/24</span>
+
+<span class="nv">CIDR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+<span class="nv">IP</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">CIDR</span><span class="p">%/*</span><span class="k">}</span><span class="s2">"</span>
+<span class="nv">PREFIX</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">CIDR</span><span class="p">#*/</span><span class="k">}</span><span class="s2">"</span>
+
+<span class="c"># Convert IP to integer</span>
+ip_to_int<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">IFS</span><span class="o">=</span><span class="s1">'.'</span> <span class="nb">read</span> <span class="nt">-r</span> a b c d <span class="o">&lt;&lt;&lt;</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+    <span class="nb">echo</span> <span class="k">$((</span> <span class="o">(</span>a <span class="o">&lt;&lt;</span> <span class="no">24</span><span class="sh">) + (b &lt;&lt; 16) + (c &lt;&lt; 8) + d ))
+}
+
+int_to_ip() {
+    echo "</span><span class="k">$((</span> <span class="o">(</span><span class="nv">$1</span> <span class="o">&gt;&gt;</span> <span class="m">24</span><span class="o">)</span> <span class="o">&amp;</span> <span class="m">255</span> <span class="k">))</span><span class="sh">.</span><span class="k">$((</span> <span class="o">(</span><span class="nv">$1</span> <span class="o">&gt;&gt;</span> <span class="m">16</span><span class="o">)</span> <span class="o">&amp;</span> <span class="m">255</span> <span class="k">))</span><span class="sh">.</span><span class="k">$((</span> <span class="o">(</span><span class="nv">$1</span> <span class="o">&gt;&gt;</span> <span class="m">8</span><span class="o">)</span> <span class="o">&amp;</span> <span class="m">255</span> <span class="k">))</span><span class="sh">.</span><span class="k">$((</span> <span class="nv">$1</span> <span class="o">&amp;</span> <span class="m">255</span> <span class="k">))</span><span class="sh">"
+}
+
+ip_int=</span><span class="si">$(</span>ip_to_int <span class="s2">"</span><span class="nv">$IP</span><span class="s2">"</span><span class="si">)</span><span class="sh">
+mask=</span><span class="k">$((</span> <span class="m">0</span>xFFFFFFFF &lt;&lt; <span class="o">(</span><span class="m">32</span> <span class="o">-</span> PREFIX<span class="o">)</span> <span class="o">&amp;</span> <span class="m">0</span>xFFFFFFFF <span class="k">))</span><span class="sh">
+network=</span><span class="k">$((</span> ip_int <span class="o">&amp;</span> mask <span class="k">))</span><span class="sh">
+broadcast=</span><span class="k">$((</span> network <span class="o">|</span> <span class="o">(</span>~mask <span class="o">&amp;</span> <span class="m">0</span>xFFFFFFFF<span class="o">)</span> <span class="k">))</span><span class="sh">
+hosts=</span><span class="k">$((</span> broadcast <span class="o">-</span> network <span class="o">-</span> <span class="m">1</span> <span class="k">))</span><span class="sh">
+
+echo "Network:   </span><span class="si">$(</span>int_to_ip <span class="nv">$network</span><span class="si">)</span><span class="sh">/</span><span class="nv">$PREFIX</span><span class="sh">"
+echo "Broadcast: </span><span class="si">$(</span>int_to_ip <span class="nv">$broadcast</span><span class="si">)</span><span class="sh">"
+echo "First Host:</span><span class="si">$(</span>int_to_ip <span class="k">$((</span>network <span class="o">+</span> <span class="m">1</span><span class="k">))</span><span class="si">)</span><span class="sh">"
+echo "Last Host: </span><span class="si">$(</span>int_to_ip <span class="k">$((</span>broadcast <span class="o">-</span> <span class="m">1</span><span class="k">))</span><span class="si">)</span><span class="sh">"
+echo "Hosts:     </span><span class="nv">$hosts</span><span class="sh">"
+</span></code></pre></div></div>
+
+<h3 id="lab-2-port-scanner-script">Lab 2: Port Scanner Script</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># Basic port scanner</span>
+<span class="nv">HOST</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+<span class="nv">START</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">2</span><span class="k">:-</span><span class="nv">1</span><span class="k">}</span><span class="s2">"</span>
+<span class="nv">END</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">3</span><span class="k">:-</span><span class="nv">1024</span><span class="k">}</span><span class="s2">"</span>
+
+<span class="nb">echo</span> <span class="s2">"Scanning </span><span class="nv">$HOST</span><span class="s2"> ports </span><span class="nv">$START</span><span class="s2">-</span><span class="nv">$END</span><span class="s2">"</span>
+<span class="k">for </span>port <span class="k">in</span> <span class="si">$(</span><span class="nb">seq</span> <span class="s2">"</span><span class="nv">$START</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$END</span><span class="s2">"</span><span class="si">)</span><span class="p">;</span> <span class="k">do</span>
+    <span class="o">(</span><span class="nb">echo</span> <span class="o">&gt;</span>/dev/tcp/<span class="s2">"</span><span class="nv">$HOST</span><span class="s2">"</span>/<span class="s2">"</span><span class="nv">$port</span><span class="s2">"</span><span class="o">)</span> 2&gt;/dev/null <span class="o">&amp;&amp;</span> <span class="se">\</span>
+        <span class="nb">echo</span> <span class="s2">"Port </span><span class="nv">$port</span><span class="s2">: OPEN"</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<h3 id="lab-3-dns-checker">Lab 3: DNS Checker</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># Check DNS propagation across multiple servers</span>
+<span class="nv">DOMAIN</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+<span class="nv">DNS_SERVERS</span><span class="o">=(</span><span class="s2">"8.8.8.8"</span> <span class="s2">"1.1.1.1"</span> <span class="s2">"208.67.222.222"</span> <span class="s2">"9.9.9.9"</span><span class="o">)</span>
+
+<span class="k">for </span>ns <span class="k">in</span> <span class="s2">"</span><span class="k">${</span><span class="nv">DNS_SERVERS</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span><span class="p">;</span> <span class="k">do
+    </span><span class="nv">result</span><span class="o">=</span><span class="si">$(</span>dig +short <span class="s2">"@</span><span class="nv">$ns</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$DOMAIN</span><span class="s2">"</span> 2&gt;/dev/null<span class="si">)</span>
+    <span class="nb">printf</span> <span class="s2">"%-20s %s</span><span class="se">\n</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$ns</span><span class="s2">"</span> <span class="s2">"</span><span class="k">${</span><span class="nv">result</span><span class="k">:-</span><span class="nv">FAILED</span><span class="k">}</span><span class="s2">"</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Linux.html">← Linux</a></td>
+        <td><a href="/devops-interview-guide/Git.html">Git →</a></td>
+        <td><a href="/devops-interview-guide/Docker.html">Docker networking →</a></td>
+        <td><a href="/devops-interview-guide/Kubernetes.html">Kubernetes networking →</a></td>
+        <td><a href="/devops-interview-guide/AWS.html">AWS VPC →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

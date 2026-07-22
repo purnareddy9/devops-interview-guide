@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0f1117" />
+
+<title>🐳 Docker — DevOps Interview Guide · DevOps Interview Guide</title>
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="🐳 Docker — DevOps Interview Guide · DevOps Interview Guide" />
+<meta property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta property="og:url"         content="/devops-interview-guide/Docker.html" />
+<meta name="twitter:card"       content="summary" />
+<meta name="twitter:title"      content="🐳 Docker — DevOps Interview Guide · DevOps Interview Guide" />
+
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>🐳 Docker — DevOps Interview Guide | DevOps Interview Guide</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="🐳 Docker — DevOps Interview Guide" />
+<meta name="author" content="DevOps Interview Guide" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<meta name="twitter:description" property="og:description" content="A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers." />
+<link rel="canonical" href="/devops-interview-guide/Docker.html" />
+<meta property="og:url" content="/devops-interview-guide/Docker.html" />
+<meta property="og:site_name" content="DevOps Interview Guide" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="🐳 Docker — DevOps Interview Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DevOps Interview Guide"},"description":"A comprehensive interview preparation guide covering OpenShift, Kubernetes, CI/CD, Security, Monitoring, Python, and AI for DevOps — 500+ questions with full answers.","headline":"🐳 Docker — DevOps Interview Guide","url":"/devops-interview-guide/Docker.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/devops-interview-guide/assets/css/style.css" />
+
+<!-- Fonts — Inter (UI) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+
+</head>
+<body>
+
+  <header class="topbar" id="top">
+  <div class="topbar-inner">
+
+    <!-- Brand -->
+    <a class="topbar-brand" href="/devops-interview-guide/">
+      <span class="brand-icon">🚀</span>
+      <span class="brand-text">DevOps Interview Guide</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="topbar-links" aria-label="Primary navigation">
+      <a href="/devops-interview-guide/"
+         >
+        Home
+      </a>
+      <a href="/devops-interview-guide/README"
+         >
+        Full Guide
+      </a>
+      <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+         >
+        OpenShift JD Prep
+      </a>
+
+      <!-- Search hint -->
+      <span class="topbar-search-hint" aria-hidden="true">
+        <kbd>Ctrl</kbd><kbd>F</kbd> to search
+      </span>
+
+      <!-- GitHub link -->
+      <a href="https://github.com/your-username/devops-interview-guide"
+         target="_blank" rel="noopener noreferrer"
+         class="topbar-github"
+         aria-label="View source on GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                   0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                   -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                   .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                   -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+                   1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7
+                   1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+                   0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+                   C22 6.484 17.522 2 12 2z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+
+  <!-- ── FULL GUIDE SECTION ────────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">📚 Full Guide</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/README"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏠</span>
+      Overview
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Linux"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🐧</span>
+      Linux
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Networking"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🌐</span>
+      Networking
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Git"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔀</span>
+      Git
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Docker"
+       class="sidebar-link active"
+       aria-current="page">
+      <span class="sidebar-icon" aria-hidden="true">🐳</span>
+      Docker
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Kubernetes"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☸️</span>
+      Kubernetes
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Jenkins"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏗️</span>
+      Jenkins
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Terraform"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏔️</span>
+      Terraform
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Ansible"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">⚙️</span>
+      Ansible
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/AWS"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">☁️</span>
+      AWS
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Azure"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔷</span>
+      Azure
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/GCP"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🟡</span>
+      GCP
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CICD"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔄</span>
+      CI/CD
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Monitoring"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📊</span>
+      Monitoring
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Logging"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📋</span>
+      Logging
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Security"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔒</span>
+      Security
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SRE"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🛡️</span>
+      SRE
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/SystemDesign"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🏛️</span>
+      System Design
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/Behavioral"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🗣️</span>
+      Behavioral
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/OpenShift"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">🔴</span>
+      OpenShift
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/CheatSheets"
+       class="sidebar-link"
+       >
+      <span class="sidebar-icon" aria-hidden="true">📌</span>
+      Cheat Sheets
+    </a>
+    
+  </div>
+
+  <hr class="sidebar-divider" />
+
+  <!-- ── OCP JD PREP SECTION ───────────────────────── -->
+  <div class="sidebar-section">
+    <div class="sidebar-label">🎯 OpenShift JD Prep</div>
+
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/README"
+       class="sidebar-link"
+       >
+      📋 Overview
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/01-OpenShift-Kubernetes-Core"
+       class="sidebar-link"
+       >
+      01 · OpenShift & K8s Core
+      
+      <span class="badge badge-red" aria-label="25 questions">25</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/02-CICD-Pipelines"
+       class="sidebar-link"
+       >
+      02 · CI/CD Pipelines
+      
+      <span class="badge badge-blue" aria-label="24 questions">24</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/03-Security-Compliance"
+       class="sidebar-link"
+       >
+      03 · Security & Compliance
+      
+      <span class="badge badge-orange" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/04-Monitoring-Troubleshooting"
+       class="sidebar-link"
+       >
+      04 · Monitoring & Troubleshooting
+      
+      <span class="badge badge-green" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/05-Infrastructure-Automation"
+       class="sidebar-link"
+       >
+      05 · Infrastructure & Automation
+      
+      <span class="badge badge-purple" aria-label="18 questions">18</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/06-Scenario-Based"
+       class="sidebar-link"
+       >
+      06 · Scenario-Based
+      
+      <span class="badge badge-teal" aria-label="15 questions">15</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/07-Behavioral"
+       class="sidebar-link"
+       >
+      07 · Behavioral
+      
+      <span class="badge badge-pink" aria-label="14 questions">14</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/08-Python-Scripting"
+       class="sidebar-link"
+       >
+      08 · Python Scripting
+      
+      <span class="badge badge-yellow" aria-label="20 questions">20</span>
+      
+    </a>
+    
+    
+    
+    <a href="/devops-interview-guide/jd-openshift-k8s-engineer/09-AI-for-DevOps"
+       class="sidebar-link"
+       >
+      09 · AI for DevOps
+      
+      <span class="badge badge-indigo" aria-label="15 questions">15</span>
+      
+    </a>
+    
+  </div>
+
+  <!-- ── DIFFICULTY LEGEND ─────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">🏷️ Difficulty</div>
+    <div class="sidebar-legend">
+      <span class="legend-item"><span class="legend-dot green"></span>Beginner</span>
+      <span class="legend-item"><span class="legend-dot yellow"></span>Intermediate</span>
+      <span class="legend-item"><span class="legend-dot red"></span>Advanced</span>
+      <span class="legend-item"><span class="legend-dot blue"></span>Scenario</span>
+      <span class="legend-item"><span class="legend-dot purple"></span>Behavioral</span>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS TRACKER ──────────────────────────── -->
+  <hr class="sidebar-divider" />
+  <div class="sidebar-section">
+    <div class="sidebar-label">📈 Progress</div>
+    <div class="sidebar-progress-wrap">
+      <div class="sidebar-progress-label">
+        <span>Modules read</span>
+        <span class="progress-count" id="progressCount">0 / 9</span>
+      </div>
+      <div class="sidebar-progress-bar">
+        <div class="sidebar-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <button class="reset-btn" id="resetProgress">reset</button>
+    </div>
+  </div>
+
+</aside>
+
+
+    <!-- ── MAIN CONTENT ──────────────────────────── -->
+    <main class="main-content" id="main-content">
+      <div class="content-wrapper">
+
+        <!-- Breadcrumb -->
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/devops-interview-guide/">Home</a>
+          
+          
+            
+          
+          
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current" aria-current="page">🐳 Docker — DevOps Interview Guide</span>
+          
+        </nav>
+        
+
+        <!-- Article -->
+        <article class="markdown-body">
+          <h1 id="-docker--devops-interview-guide">🐳 Docker — DevOps Interview Guide</h1>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><a href="/devops-interview-guide/Git.html">← Git</a></td>
+        <td><a href="/devops-interview-guide/README.html">Main Index</a></td>
+        <td><a href="/devops-interview-guide/Kubernetes.html">Kubernetes →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#docker-architecture">Docker Architecture</a></li>
+  <li><a href="#images--containers">Images &amp; Containers</a></li>
+  <li><a href="#dockerfile-best-practices">Dockerfile Best Practices</a></li>
+  <li><a href="#networking">Networking</a></li>
+  <li><a href="#volumes--storage">Volumes &amp; Storage</a></li>
+  <li><a href="#docker-compose">Docker Compose</a></li>
+  <li><a href="#registry--image-management">Registry &amp; Image Management</a></li>
+  <li><a href="#security">Security</a></li>
+  <li><a href="#interview-questions">Interview Questions</a></li>
+  <li><a href="#scenario-based-questions">Scenario-Based Questions</a></li>
+  <li><a href="#hands-on-labs">Hands-On Labs</a></li>
+  <li><a href="#cheat-sheet">Cheat Sheet</a></li>
+</ol>
+
+<hr />
+
+<h2 id="docker-architecture">Docker Architecture</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────┐
+│                  Docker Client (CLI)                  │
+│            docker build / run / push / pull           │
+└────────────────────┬────────────────────────────────┘
+                     │  REST API (Unix socket / TCP)
+┌────────────────────▼────────────────────────────────┐
+│                 Docker Daemon (dockerd)               │
+│                                                       │
+│  ┌──────────────┐  ┌─────────────────────────────┐  │
+│  │  Image Store │  │    Container Runtime         │  │
+│  │  (layers)    │  │    (containerd → runc)       │  │
+│  └──────────────┘  └─────────────────────────────┘  │
+└─────────────────────────────────────────────────────┘
+                     │
+         Linux Kernel (namespaces + cgroups)
+</code></pre></div></div>
+
+<h3 id="container-vs-vm">Container vs VM</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Container</th>
+      <th>Virtual Machine</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Boot time</td>
+      <td>Seconds</td>
+      <td>Minutes</td>
+    </tr>
+    <tr>
+      <td>Overhead</td>
+      <td>Minimal (shares kernel)</td>
+      <td>High (full OS)</td>
+    </tr>
+    <tr>
+      <td>Isolation</td>
+      <td>Process-level</td>
+      <td>Hardware-level</td>
+    </tr>
+    <tr>
+      <td>Portability</td>
+      <td>High</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>MB</td>
+      <td>GB</td>
+    </tr>
+    <tr>
+      <td>Security boundary</td>
+      <td>Weaker</td>
+      <td>Stronger</td>
+    </tr>
+    <tr>
+      <td>Use case</td>
+      <td>Microservices, apps</td>
+      <td>Full OS isolation</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="images--containers">Images &amp; Containers</h2>
+
+<h3 id="essential-commands">Essential Commands</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── IMAGES ──────────────────────────────────────────</span>
+docker images                       <span class="c"># List local images</span>
+docker pull nginx:1.25              <span class="c"># Pull specific version</span>
+docker inspect nginx                <span class="c"># Full metadata JSON</span>
+docker <span class="nb">history </span>nginx                <span class="c"># Show image layers</span>
+docker image prune <span class="nt">-a</span>               <span class="c"># Remove unused images</span>
+docker save nginx <span class="o">&gt;</span> nginx.tar       <span class="c"># Export to tarball</span>
+docker load &lt; nginx.tar             <span class="c"># Import from tarball</span>
+
+<span class="c"># ─── CONTAINERS ──────────────────────────────────────</span>
+docker ps                           <span class="c"># Running containers</span>
+docker ps <span class="nt">-a</span>                        <span class="c"># All containers</span>
+docker run <span class="nt">-d</span> <span class="nt">--name</span> web nginx      <span class="c"># Detached named container</span>
+docker run <span class="nt">-it</span> ubuntu bash          <span class="c"># Interactive shell</span>
+docker run <span class="nt">--rm</span> alpine <span class="nb">echo </span>hello   <span class="c"># Auto-remove after run</span>
+
+<span class="c"># Run with resource limits</span>
+docker run <span class="nt">-d</span> <span class="se">\</span>
+  <span class="nt">--name</span> myapp <span class="se">\</span>
+  <span class="nt">--memory</span><span class="o">=</span><span class="s2">"512m"</span> <span class="se">\</span>
+  <span class="nt">--cpus</span><span class="o">=</span><span class="s2">"0.5"</span> <span class="se">\</span>
+  <span class="nt">--restart</span><span class="o">=</span>unless-stopped <span class="se">\</span>
+  <span class="nt">-p</span> 8080:80 <span class="se">\</span>
+  <span class="nt">-e</span> <span class="nv">ENV</span><span class="o">=</span>production <span class="se">\</span>
+  <span class="nt">-v</span> /data:/app/data <span class="se">\</span>
+  myapp:latest
+
+<span class="c"># Container lifecycle</span>
+docker stop myapp                   <span class="c"># Graceful stop (SIGTERM → SIGKILL after 10s)</span>
+docker <span class="nb">kill </span>myapp                   <span class="c"># Immediate SIGKILL</span>
+docker start myapp                  <span class="c"># Start stopped container</span>
+docker restart myapp                <span class="c"># Stop + start</span>
+docker <span class="nb">rm </span>myapp                     <span class="c"># Remove stopped container</span>
+docker <span class="nb">rm</span> <span class="nt">-f</span> myapp                  <span class="c"># Force remove running container</span>
+
+<span class="c"># Container interaction</span>
+docker <span class="nb">exec</span> <span class="nt">-it</span> myapp bash          <span class="c"># Exec into running container</span>
+docker <span class="nb">exec </span>myapp <span class="nb">env</span>               <span class="c"># Run non-interactive command</span>
+docker logs myapp                   <span class="c"># View logs</span>
+docker logs <span class="nt">-f</span> <span class="nt">--tail</span> 100 myapp     <span class="c"># Follow logs</span>
+docker <span class="nb">cp </span>myapp:/app/logs /tmp/     <span class="c"># Copy files from container</span>
+docker stats myapp                  <span class="c"># Live resource usage</span>
+docker top myapp                    <span class="c"># Processes in container</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="dockerfile-best-practices">Dockerfile Best Practices</h2>
+
+<h3 id="multi-stage-build-production-pattern">Multi-Stage Build (Production Pattern)</h3>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Stage 1: Build</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">node:20-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">COPY</span><span class="s"> package*.json ./</span>
+<span class="k">RUN </span>npm ci <span class="nt">--only</span><span class="o">=</span>production
+<span class="k">COPY</span><span class="s"> . .</span>
+<span class="k">RUN </span>npm run build
+
+<span class="c"># Stage 2: Production image</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">node:20-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">production</span>
+<span class="c"># Security: run as non-root</span>
+<span class="k">RUN </span>addgroup <span class="nt">-S</span> appgroup <span class="o">&amp;&amp;</span> adduser <span class="nt">-S</span> appuser <span class="nt">-G</span> appgroup
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+
+<span class="c"># Copy only what's needed from builder</span>
+<span class="k">COPY</span><span class="s"> --from=builder --chown=appuser:appgroup /app/dist ./dist</span>
+<span class="k">COPY</span><span class="s"> --from=builder --chown=appuser:appgroup /app/node_modules ./node_modules</span>
+
+<span class="k">USER</span><span class="s"> appuser</span>
+<span class="k">EXPOSE</span><span class="s"> 3000</span>
+<span class="k">HEALTHCHECK</span><span class="s"> --interval=30s --timeout=10s --start-period=5s --retries=3 \</span>
+  CMD wget -qO- http://localhost:3000/health || exit 1
+
+<span class="k">ENTRYPOINT</span><span class="s"> ["node"]</span>
+<span class="k">CMD</span><span class="s"> ["dist/server.js"]</span>
+</code></pre></div></div>
+
+<h3 id="dockerfile-optimization-rules">Dockerfile Optimization Rules</h3>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ✅ DO: Order layers from least to most frequently changing</span>
+<span class="k">COPY</span><span class="s"> package.json ./      # Rarely changes → cache hit</span>
+<span class="k">RUN </span>npm <span class="nb">install</span>
+<span class="k">COPY</span><span class="s"> . .                  # Changes often → cache miss here only</span>
+
+<span class="c"># ✅ DO: Combine RUN commands to reduce layers</span>
+<span class="k">RUN </span>apt-get update <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    apt-get <span class="nb">install</span> <span class="nt">-y</span> curl wget git <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    apt-get clean <span class="o">&amp;&amp;</span> <span class="se">\
+</span>    <span class="nb">rm</span> <span class="nt">-rf</span> /var/lib/apt/lists/<span class="k">*</span>
+
+<span class="c"># ✅ DO: Use specific tags, not 'latest'</span>
+<span class="k">FROM</span><span class="s"> python:3.11.7-slim-bookworm</span>
+
+<span class="c"># ✅ DO: Use .dockerignore</span>
+<span class="c"># .dockerignore content:</span>
+<span class="c"># .git</span>
+<span class="c"># node_modules</span>
+<span class="c"># *.log</span>
+<span class="c"># .env</span>
+<span class="c"># tests/</span>
+<span class="c"># docs/</span>
+
+<span class="c"># ✅ DO: COPY specific files instead of context</span>
+<span class="k">COPY</span><span class="s"> src/ ./src/</span>
+<span class="k">COPY</span><span class="s"> config/ ./config/</span>
+
+<span class="c"># ❌ DON'T: COPY . . at the start (invalidates all cache)</span>
+<span class="c"># ❌ DON'T: Store secrets in layers (they persist even if deleted)</span>
+<span class="c"># ❌ DON'T: Run as root</span>
+<span class="c"># ❌ DON'T: Use latest tag in production</span>
+</code></pre></div></div>
+
+<h3 id="python-app-dockerfile">Python App Dockerfile</h3>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> python:3.11-slim</span>
+
+<span class="c"># Security and best practices</span>
+<span class="k">ENV</span><span class="s"> PYTHONDONTWRITEBYTECODE=1 \</span>
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+
+<span class="c"># System dependencies</span>
+<span class="k">RUN </span>apt-get update <span class="o">&amp;&amp;</span> apt-get <span class="nb">install</span> <span class="nt">-y</span> <span class="nt">--no-install-recommends</span> <span class="se">\
+</span>    gcc libpq-dev <span class="se">\
+</span>    <span class="o">&amp;&amp;</span> apt-get clean <span class="o">&amp;&amp;</span> <span class="nb">rm</span> <span class="nt">-rf</span> /var/lib/apt/lists/<span class="k">*</span>
+
+<span class="c"># Python dependencies</span>
+<span class="k">COPY</span><span class="s"> requirements.txt .</span>
+<span class="k">RUN </span>pip <span class="nb">install</span> <span class="nt">--no-cache-dir</span> <span class="nt">-r</span> requirements.txt
+
+<span class="c"># Application code</span>
+<span class="k">COPY</span><span class="s"> --chown=nobody:nogroup . .</span>
+
+<span class="k">USER</span><span class="s"> nobody</span>
+<span class="k">EXPOSE</span><span class="s"> 8000</span>
+
+<span class="k">CMD</span><span class="s"> ["gunicorn", "app:create_app()", "--bind", "0.0.0.0:8000", "--workers", "4"]</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="networking">Networking</h2>
+
+<h3 id="network-modes">Network Modes</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mode</th>
+      <th>Description</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>bridge</strong> (default)</td>
+      <td>Isolated virtual network on host</td>
+      <td>Multi-container apps</td>
+    </tr>
+    <tr>
+      <td><strong>host</strong></td>
+      <td>Container uses host network directly</td>
+      <td>Performance, host-level access</td>
+    </tr>
+    <tr>
+      <td><strong>none</strong></td>
+      <td>No network</td>
+      <td>Isolated compute tasks</td>
+    </tr>
+    <tr>
+      <td><strong>overlay</strong></td>
+      <td>Multi-host networking (Swarm)</td>
+      <td>Distributed applications</td>
+    </tr>
+    <tr>
+      <td><strong>macvlan</strong></td>
+      <td>Container gets its own MAC/IP</td>
+      <td>Legacy apps needing direct LAN access</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create custom bridge network</span>
+docker network create <span class="se">\</span>
+  <span class="nt">--driver</span> bridge <span class="se">\</span>
+  <span class="nt">--subnet</span> 172.20.0.0/16 <span class="se">\</span>
+  <span class="nt">--ip-range</span> 172.20.240.0/20 <span class="se">\</span>
+  mynet
+
+<span class="c"># Run containers in same network (they can resolve by name)</span>
+docker run <span class="nt">-d</span> <span class="nt">--network</span> mynet <span class="nt">--name</span> db postgres
+docker run <span class="nt">-d</span> <span class="nt">--network</span> mynet <span class="nt">--name</span> app myapp
+<span class="c"># app can connect to: postgres://db:5432/mydb</span>
+
+<span class="c"># Inspect network</span>
+docker network inspect mynet
+docker network <span class="nb">ls
+</span>docker network connect mynet existing-container
+</code></pre></div></div>
+
+<h3 id="container-dns">Container DNS</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Container 'app' can reach container 'db' by:
+- Container name: db
+- Service name (in Compose): db
+- Full DNS: db.mynet (custom bridge)
+- IP address: 172.20.x.x
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="volumes--storage">Volumes &amp; Storage</h2>
+
+<h3 id="storage-types">Storage Types</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── VOLUMES (managed by Docker, preferred) ──────────</span>
+docker volume create mydata
+docker volume <span class="nb">ls
+</span>docker volume inspect mydata
+docker run <span class="nt">-v</span> mydata:/app/data myapp
+docker volume <span class="nb">rm </span>mydata
+docker volume prune                <span class="c"># Remove unused volumes</span>
+
+<span class="c"># ─── BIND MOUNTS (host path → container) ─────────────</span>
+docker run <span class="nt">-v</span> /host/path:/container/path myapp
+docker run <span class="nt">-v</span> <span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span>:/app myapp   <span class="c"># Mount current directory</span>
+
+<span class="c"># ─── TMPFS (in-memory, not persisted) ────────────────</span>
+docker run <span class="nt">--tmpfs</span> /tmp:rw,size<span class="o">=</span>100m myapp
+
+<span class="c"># Volume in docker run</span>
+docker run <span class="nt">-d</span> <span class="se">\</span>
+  <span class="nt">-v</span> db_data:/var/lib/postgresql/data <span class="se">\ </span>  <span class="c"># Named volume</span>
+  <span class="nt">-v</span> /etc/ssl/certs:/etc/ssl/certs:ro <span class="se">\ </span> <span class="c"># Read-only bind mount</span>
+  postgres:15
+</code></pre></div></div>
+
+<h3 id="when-to-use-each">When to Use Each</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Persistence</th>
+      <th>Performance</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Volume</td>
+      <td>Yes</td>
+      <td>Good</td>
+      <td>Database data, app state</td>
+    </tr>
+    <tr>
+      <td>Bind mount</td>
+      <td>Yes (host)</td>
+      <td>Best</td>
+      <td>Dev: hot-reload, config files</td>
+    </tr>
+    <tr>
+      <td>tmpfs</td>
+      <td>No</td>
+      <td>Best</td>
+      <td>Sensitive data, caches</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="docker-compose">Docker Compose</h2>
+
+<h3 id="production-grade-compose-file">Production-Grade Compose File</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.9"</span>
+
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">app</span><span class="pi">:</span>
+    <span class="na">build</span><span class="pi">:</span>
+      <span class="na">context</span><span class="pi">:</span> <span class="s">.</span>
+      <span class="na">dockerfile</span><span class="pi">:</span> <span class="s">Dockerfile</span>
+      <span class="na">target</span><span class="pi">:</span> <span class="s">production</span>
+      <span class="na">args</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">BUILD_VERSION=${BUILD_VERSION:-latest}</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">myapp:${BUILD_VERSION:-latest}</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">8080:3000"</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">NODE_ENV=production</span>
+      <span class="pi">-</span> <span class="s">DATABASE_URL=postgresql://db/mydb</span>
+    <span class="na">env_file</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">.env.production</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="na">db</span><span class="pi">:</span>
+        <span class="na">condition</span><span class="pi">:</span> <span class="s">service_healthy</span>
+      <span class="na">redis</span><span class="pi">:</span>
+        <span class="na">condition</span><span class="pi">:</span> <span class="s">service_started</span>
+    <span class="na">healthcheck</span><span class="pi">:</span>
+      <span class="na">test</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">CMD"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">wget"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">-qO-"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">http://localhost:3000/health"</span><span class="pi">]</span>
+      <span class="na">interval</span><span class="pi">:</span> <span class="s">30s</span>
+      <span class="na">timeout</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">3</span>
+      <span class="na">start_period</span><span class="pi">:</span> <span class="s">10s</span>
+    <span class="na">deploy</span><span class="pi">:</span>
+      <span class="na">resources</span><span class="pi">:</span>
+        <span class="na">limits</span><span class="pi">:</span>
+          <span class="na">cpus</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0.50"</span>
+          <span class="na">memory</span><span class="pi">:</span> <span class="s">512M</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">app_logs:/app/logs</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">frontend</span>
+      <span class="pi">-</span> <span class="s">backend</span>
+    <span class="na">logging</span><span class="pi">:</span>
+      <span class="na">driver</span><span class="pi">:</span> <span class="s2">"</span><span class="s">json-file"</span>
+      <span class="na">options</span><span class="pi">:</span>
+        <span class="na">max-size</span><span class="pi">:</span> <span class="s2">"</span><span class="s">10m"</span>
+        <span class="na">max-file</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3"</span>
+
+  <span class="na">db</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">postgres:15-alpine</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">POSTGRES_DB</span><span class="pi">:</span> <span class="s">mydb</span>
+      <span class="na">POSTGRES_USER</span><span class="pi">:</span> <span class="s">appuser</span>
+      <span class="na">POSTGRES_PASSWORD_FILE</span><span class="pi">:</span> <span class="s">/run/secrets/db_password</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">db_data:/var/lib/postgresql/data</span>
+      <span class="pi">-</span> <span class="s">./init-db.sql:/docker-entrypoint-initdb.d/init.sql:ro</span>
+    <span class="na">healthcheck</span><span class="pi">:</span>
+      <span class="na">test</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">CMD-SHELL"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">pg_isready</span><span class="nv"> </span><span class="s">-U</span><span class="nv"> </span><span class="s">appuser"</span><span class="pi">]</span>
+      <span class="na">interval</span><span class="pi">:</span> <span class="s">10s</span>
+      <span class="na">timeout</span><span class="pi">:</span> <span class="s">5s</span>
+      <span class="na">retries</span><span class="pi">:</span> <span class="m">5</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">backend</span>
+    <span class="na">secrets</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">db_password</span>
+
+  <span class="na">redis</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">redis:7-alpine</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">command</span><span class="pi">:</span> <span class="s">redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">redis_data:/data</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">backend</span>
+
+  <span class="na">nginx</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">nginx:1.25-alpine</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">80:80"</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">443:443"</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./nginx.conf:/etc/nginx/nginx.conf:ro</span>
+      <span class="pi">-</span> <span class="s">./ssl:/etc/nginx/ssl:ro</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">app</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">frontend</span>
+
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">db_data</span><span class="pi">:</span>
+  <span class="na">redis_data</span><span class="pi">:</span>
+  <span class="na">app_logs</span><span class="pi">:</span>
+
+<span class="na">networks</span><span class="pi">:</span>
+  <span class="na">frontend</span><span class="pi">:</span>
+  <span class="na">backend</span><span class="pi">:</span>
+    <span class="na">internal</span><span class="pi">:</span> <span class="kc">true</span>       <span class="c1"># Not accessible from outside</span>
+
+<span class="na">secrets</span><span class="pi">:</span>
+  <span class="na">db_password</span><span class="pi">:</span>
+    <span class="na">file</span><span class="pi">:</span> <span class="s">./secrets/db_password.txt</span>
+</code></pre></div></div>
+
+<h3 id="compose-commands">Compose Commands</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up <span class="nt">-d</span>                   <span class="c"># Start in background</span>
+docker compose up <span class="nt">--build</span>              <span class="c"># Rebuild and start</span>
+docker compose down                    <span class="c"># Stop and remove containers</span>
+docker compose down <span class="nt">-v</span>                 <span class="c"># Also remove volumes</span>
+docker compose ps                      <span class="c"># Status</span>
+docker compose logs <span class="nt">-f</span> app             <span class="c"># Follow service logs</span>
+docker compose <span class="nb">exec </span>app bash           <span class="c"># Shell in running service</span>
+docker compose scale <span class="nv">app</span><span class="o">=</span>3             <span class="c"># Scale service (legacy)</span>
+docker compose run <span class="nt">--rm</span> app pytest     <span class="c"># One-off command</span>
+docker compose config                  <span class="c"># Validate + show config</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="registry--image-management">Registry &amp; Image Management</h2>
+
+<h3 id="working-with-registries">Working with Registries</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Docker Hub</span>
+docker login
+docker tag myapp:latest username/myapp:1.0
+docker push username/myapp:1.0
+
+<span class="c"># AWS ECR</span>
+aws ecr get-login-password <span class="nt">--region</span> us-east-1 | <span class="se">\</span>
+  docker login <span class="nt">--username</span> AWS <span class="nt">--password-stdin</span> <span class="se">\</span>
+  123456789.dkr.ecr.us-east-1.amazonaws.com
+
+docker tag myapp:latest <span class="se">\</span>
+  123456789.dkr.ecr.us-east-1.amazonaws.com/myapp:1.0
+docker push 123456789.dkr.ecr.us-east-1.amazonaws.com/myapp:1.0
+
+<span class="c"># GCR / Artifact Registry</span>
+gcloud auth configure-docker
+docker push gcr.io/project-id/myapp:1.0
+
+<span class="c"># Scan image for vulnerabilities</span>
+docker scout cves nginx:latest
+trivy image nginx:latest
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="security">Security</h2>
+
+<h3 id="container-security-best-practices">Container Security Best Practices</h3>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Non-root user</span>
+<span class="k">RUN </span>useradd <span class="nt">-r</span> <span class="nt">-u</span> 1001 appuser
+<span class="k">USER</span><span class="s"> 1001</span>
+
+<span class="c"># 2. Read-only filesystem</span>
+docker run --read-only --tmpfs /tmp myapp
+
+<span class="c"># 3. Drop capabilities</span>
+docker run --cap-drop=ALL --cap-add=NET_BIND_SERVICE myapp
+
+<span class="c"># 4. No privileged containers</span>
+<span class="c"># NEVER: docker run --privileged myapp (gives root on host!)</span>
+
+<span class="c"># 5. Seccomp profile</span>
+docker run --security-opt seccomp=default.json myapp
+
+<span class="c"># 6. AppArmor</span>
+docker run --security-opt apparmor=docker-default myapp
+
+<span class="c"># 7. Resource limits (prevent DoS)</span>
+docker run --memory=512m --cpu-quota=50000 myapp
+</code></pre></div></div>
+
+<h3 id="docker-bench-security">Docker Bench Security</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Run Docker Bench for Security</span>
+docker run <span class="nt">-it</span> <span class="nt">--net</span> host <span class="nt">--pid</span> host <span class="nt">--userns</span> host <span class="nt">--cap-add</span> audit_control <span class="se">\</span>
+    <span class="nt">-e</span> <span class="nv">DOCKER_CONTENT_TRUST</span><span class="o">=</span><span class="nv">$DOCKER_CONTENT_TRUST</span> <span class="se">\</span>
+    <span class="nt">-v</span> /etc:/etc:ro <span class="se">\</span>
+    <span class="nt">-v</span> /lib/systemd/system:/lib/systemd/system:ro <span class="se">\</span>
+    <span class="nt">-v</span> /usr/bin/containerd:/usr/bin/containerd:ro <span class="se">\</span>
+    <span class="nt">-v</span> /usr/bin/runc:/usr/bin/runc:ro <span class="se">\</span>
+    <span class="nt">-v</span> /usr/lib/systemd:/usr/lib/systemd:ro <span class="se">\</span>
+    <span class="nt">-v</span> /var/lib:/var/lib:ro <span class="se">\</span>
+    <span class="nt">-v</span> /var/run/docker.sock:/var/run/docker.sock:ro <span class="se">\</span>
+    docker/docker-bench-security
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="interview-questions">Interview Questions</h2>
+
+<h3 id="-beginner">🟢 Beginner</h3>
+
+<p><strong>Q1: What is the difference between an image and a container?</strong></p>
+
+<blockquote>
+  <p>An <strong>image</strong> is an immutable, read-only template — a snapshot of a filesystem and configuration. A <strong>container</strong> is a running instance of an image — it adds a writable layer on top. Multiple containers can run from the same image. When the container is deleted, its writable layer is gone (unless using volumes).</p>
+</blockquote>
+
+<p><strong>Q2: What is a Dockerfile <code class="language-plaintext highlighter-rouge">ENTRYPOINT</code> vs <code class="language-plaintext highlighter-rouge">CMD</code>?</strong></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">ENTRYPOINT</code> defines the <strong>command that always runs</strong> (the executable). <code class="language-plaintext highlighter-rouge">CMD</code> provides <strong>default arguments</strong> to ENTRYPOINT or a default command if no ENTRYPOINT.</p>
+  <div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ENTRYPOINT</span><span class="s"> ["nginx"]     # Always runs nginx</span>
+<span class="k">CMD</span><span class="s"> ["-g", "daemon off;"] # Default arg; can be overridden</span>
+</code></pre></div>  </div>
+  <p><code class="language-plaintext highlighter-rouge">docker run myimage -c /etc/nginx/custom.conf</code> would override CMD.
+If both are shell form, CMD args are ignored by shell form ENTRYPOINT.</p>
+</blockquote>
+
+<p><strong>Q3: Explain Docker layer caching.</strong></p>
+
+<blockquote>
+  <p>Each Dockerfile instruction creates a layer. Docker caches layers; if nothing changed in a layer or its dependencies, it reuses the cache. Cache is <strong>invalidated</strong> when instruction content changes, a <code class="language-plaintext highlighter-rouge">COPY</code>/<code class="language-plaintext highlighter-rouge">ADD</code> source file changes, or a parent layer is invalidated. Order instructions from least-changed to most-changed to maximize cache hits.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-intermediate">🟡 Intermediate</h3>
+
+<p><strong>Q4: How do you reduce Docker image size?</strong></p>
+
+<blockquote>
+  <ul>
+    <li>Use <strong>minimal base images</strong> (alpine, distroless, scratch for static binaries)</li>
+    <li><strong>Multi-stage builds</strong> — don’t ship build tools in production</li>
+    <li><strong>Combine RUN commands</strong> to squash layers</li>
+    <li><strong>Remove caches</strong> in same RUN: <code class="language-plaintext highlighter-rouge">apt-get clean &amp;&amp; rm -rf /var/lib/apt/lists/*</code></li>
+    <li>Use <code class="language-plaintext highlighter-rouge">.dockerignore</code> to exclude unnecessary files</li>
+    <li>Don’t install documentation or extras: <code class="language-plaintext highlighter-rouge">--no-install-recommends</code></li>
+  </ul>
+</blockquote>
+
+<p><strong>Q5: What is Docker’s overlay filesystem?</strong></p>
+
+<blockquote>
+  <p>Docker uses OverlayFS (or overlay2 storage driver) to implement image layers. Each layer is a directory of changes. When a container starts, Docker creates a merged view: all image layers (read-only) + container layer (read-write) appear as one filesystem. Copy-on-write: when a container modifies a file, it’s copied to the writable layer first.</p>
+</blockquote>
+
+<p><strong>Q6: How does Docker networking work for containers on the same host?</strong></p>
+
+<blockquote>
+  <p>Default <strong>bridge network</strong> (<code class="language-plaintext highlighter-rouge">docker0</code>): Each container gets a veth pair — one end in container namespace (eth0), one end on the docker0 bridge. The bridge handles intra-host routing. NAT (iptables MASQUERADE) handles outbound internet. Port publishing (<code class="language-plaintext highlighter-rouge">-p 8080:80</code>) adds an iptables DNAT rule. Custom bridge networks add DNS resolution by container name.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="-advanced">🔴 Advanced</h3>
+
+<p><strong>Q7: How would you implement zero-downtime deployments with Docker?</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Strategy 1: Blue-Green with nginx upstream swap</span>
+<span class="c"># Deploy new version as new container</span>
+docker run <span class="nt">-d</span> <span class="nt">--name</span> app-green myapp:v2
+
+<span class="c"># Health check</span>
+<span class="k">until </span>curl <span class="nt">-f</span> http://localhost:8081/health<span class="p">;</span> <span class="k">do </span><span class="nb">sleep </span>2<span class="p">;</span> <span class="k">done</span>
+
+<span class="c"># Update nginx upstream</span>
+<span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/app-blue/app-green/g'</span> /etc/nginx/sites-enabled/app
+nginx <span class="nt">-s</span> reload
+
+<span class="c"># Remove old version</span>
+docker stop app-blue <span class="o">&amp;&amp;</span> docker <span class="nb">rm </span>app-blue
+
+<span class="c"># Strategy 2: Docker Compose rolling update</span>
+docker compose up <span class="nt">-d</span> <span class="nt">--no-deps</span> <span class="nt">--scale</span> <span class="nv">app</span><span class="o">=</span>2 app
+<span class="c"># Wait for new containers to be healthy</span>
+docker compose up <span class="nt">-d</span> <span class="nt">--no-deps</span> app
+</code></pre></div></div>
+
+<p><strong>Q8: How do you handle secrets in Docker securely?</strong></p>
+
+<blockquote>
+  <ul>
+    <li><strong>Docker Secrets</strong> (Swarm): secrets mounted as files in <code class="language-plaintext highlighter-rouge">/run/secrets/</code>, never in env vars or layers</li>
+    <li><strong>External secret managers</strong>: HashiCorp Vault, AWS Secrets Manager — inject at runtime</li>
+    <li><strong>Environment files</strong> (<code class="language-plaintext highlighter-rouge">.env</code>): acceptable for dev, not production — not committed to git</li>
+    <li><strong>Never</strong>: hardcode in Dockerfile, pass via <code class="language-plaintext highlighter-rouge">--build-arg</code> (visible in <code class="language-plaintext highlighter-rouge">docker history</code>), put in environment variables that end up in logs</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="scenario-based-questions">Scenario-Based Questions</h2>
+
+<h3 id="-scenario-1-container-keeps-restarting">🔵 Scenario 1: Container Keeps Restarting</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Check restart count and last exit code</span>
+docker ps <span class="nt">-a</span>                          <span class="c"># Exit code in STATUS column</span>
+docker inspect myapp | jq <span class="s1">'.[0].State'</span>
+
+<span class="c"># 2. Check logs</span>
+docker logs myapp <span class="nt">--tail</span> 50
+docker logs <span class="nt">--since</span> 5m myapp
+
+<span class="c"># 3. Exit code meanings:</span>
+<span class="c"># 0  = Success</span>
+<span class="c"># 1  = App error</span>
+<span class="c"># 137 = OOM killed (128 + 9)</span>
+<span class="c"># 139 = Segfault (128 + 11)</span>
+<span class="c"># 143 = SIGTERM (128 + 15)</span>
+
+<span class="c"># 4. If OOM: check memory</span>
+docker stats myapp
+docker inspect myapp | jq <span class="s1">'.[0].HostConfig.Memory'</span>
+<span class="c"># Fix: increase memory limit or fix memory leak</span>
+
+<span class="c"># 5. Run interactively to see error</span>
+docker run <span class="nt">--rm</span> <span class="nt">-it</span> myapp bash
+</code></pre></div></div>
+
+<h3 id="-scenario-2-image-vulnerabilities-in-ci">🔵 Scenario 2: Image Vulnerabilities in CI</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># In CI pipeline, scan before push</span>
+trivy image <span class="nt">--exit-code</span> 1 <span class="nt">--severity</span> HIGH,CRITICAL myapp:latest
+
+<span class="c"># Generate SBOM</span>
+docker sbom myapp:latest
+
+<span class="c"># Policy: fail on HIGH+ for production</span>
+<span class="c"># Allow LOW/MEDIUM with review</span>
+
+<span class="c"># Add to Dockerfile for known-good base</span>
+FROM node:20.10.0-alpine3.18@sha256:abc123...  <span class="c"># Pin digest</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="hands-on-labs">Hands-On Labs</h2>
+
+<h3 id="lab-1-multi-stage-build-optimization">Lab 1: Multi-Stage Build Optimization</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create a simple Go app</span>
+<span class="nb">mkdir </span>docker-lab <span class="o">&amp;&amp;</span> <span class="nb">cd </span>docker-lab
+<span class="nb">cat</span> <span class="o">&gt;</span> main.go <span class="o">&lt;&lt;</span> <span class="sh">'</span><span class="no">EOF</span><span class="sh">'
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main() {
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Hello from Docker!")
+    })
+    http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+        w.WriteHeader(200)
+    })
+    http.ListenAndServe(":8080", nil)
+}
+</span><span class="no">EOF
+
+</span><span class="c"># Naive Dockerfile (large image)</span>
+<span class="nb">cat</span> <span class="o">&gt;</span> Dockerfile.large <span class="o">&lt;&lt;</span> <span class="sh">'</span><span class="no">EOF</span><span class="sh">'
+FROM golang:1.21
+WORKDIR /app
+COPY . .
+RUN go build -o server .
+EXPOSE 8080
+CMD ["./server"]
+</span><span class="no">EOF
+
+</span><span class="c"># Multi-stage Dockerfile (tiny image)</span>
+<span class="nb">cat</span> <span class="o">&gt;</span> Dockerfile <span class="o">&lt;&lt;</span> <span class="sh">'</span><span class="no">EOF</span><span class="sh">'
+FROM golang:1.21 AS builder
+WORKDIR /app
+COPY . .
+RUN CGO_ENABLED=0 go build -ldflags="-s -w" -o server .
+
+FROM scratch
+COPY --from=builder /app/server /server
+EXPOSE 8080
+CMD ["/server"]
+</span><span class="no">EOF
+
+</span>docker build <span class="nt">-t</span> myapp-large <span class="nt">-f</span> Dockerfile.large <span class="nb">.</span>
+docker build <span class="nt">-t</span> myapp-small <span class="nb">.</span>
+
+<span class="nb">echo</span> <span class="s2">"Size comparison:"</span>
+docker images | <span class="nb">grep </span>myapp
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ─── BUILD ────────────────────────────────────────────</span>
+docker build <span class="nt">-t</span> name:tag <span class="nb">.</span>
+docker build <span class="nt">--build-arg</span> <span class="nv">KEY</span><span class="o">=</span>val <span class="nt">-t</span> name:tag <span class="nb">.</span>
+docker build <span class="nt">--target</span> stage_name <span class="nt">-t</span> name:tag <span class="nb">.</span>
+
+<span class="c"># ─── RUN ──────────────────────────────────────────────</span>
+docker run <span class="nt">-d</span> <span class="nt">-p</span> 8080:80 <span class="nt">--name</span> c1 nginx
+docker run <span class="nt">-it</span> <span class="nt">--rm</span> ubuntu bash
+docker run <span class="nt">-v</span> vol:/data <span class="nt">-e</span> <span class="nv">KEY</span><span class="o">=</span>val image
+
+<span class="c"># ─── DEBUG ────────────────────────────────────────────</span>
+docker logs <span class="nt">-f</span> <span class="nt">--tail</span> 100 c1
+docker <span class="nb">exec</span> <span class="nt">-it</span> c1 sh
+docker inspect c1
+docker stats c1
+docker top c1
+
+<span class="c"># ─── CLEANUP ──────────────────────────────────────────</span>
+docker system prune <span class="nt">-a</span>          <span class="c"># Remove all unused</span>
+docker container prune          <span class="c"># Remove stopped containers</span>
+docker image prune <span class="nt">-a</span>           <span class="c"># Remove unused images</span>
+docker volume prune             <span class="c"># Remove unused volumes</span>
+
+<span class="c"># ─── MULTI-ARCH ───────────────────────────────────────</span>
+docker buildx create <span class="nt">--use</span>
+docker buildx build <span class="nt">--platform</span> linux/amd64,linux/arm64 <span class="se">\</span>
+  <span class="nt">-t</span> user/app:latest <span class="nt">--push</span> <span class="nb">.</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Cross-links:</strong> <a href="/devops-interview-guide/Git.html">← Git</a></td>
+        <td><a href="/devops-interview-guide/Kubernetes.html">Kubernetes →</a></td>
+        <td><a href="/devops-interview-guide/CICD.html">CI/CD (Docker in pipelines) →</a></td>
+        <td><a href="/devops-interview-guide/Security.html">Security (container security) →</a></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+        </article>
+
+        <!-- Page footer -->
+        <footer class="page-footer">
+          <div class="page-footer-inner">
+            <span class="footer-copy">© 2026 DevOps Interview Guide</span>
+            <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+          </div>
+        </footer>
+
+      </div>
+    </main>
+
+  </div><!-- /.layout -->
+
+  <script>
+(function () {
+  'use strict';
+
+  // ── 1. MOBILE SIDEBAR TOGGLE ──────────────────────
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  function openSidebar()  { sidebar.classList.add('open');    menuBtn.setAttribute('aria-expanded', 'true');  menuBtn.classList.add('active'); }
+  function closeSidebar() { sidebar.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.classList.remove('active'); }
+
+  menuBtn && menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+
+  // Close on sidebar link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.addEventListener('click', () => { if (window.innerWidth < 900) closeSidebar(); });
+  });
+
+  // Close on outside click (mobile)
+  document.addEventListener('click', e => {
+    if (window.innerWidth < 900 && sidebar.classList.contains('open') &&
+        !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeSidebar();
+    }
+  });
+
+  // ── 2. COPY BUTTONS ON CODE BLOCKS ───────────────
+  document.querySelectorAll('pre code').forEach(block => {
+    const pre = block.parentElement;
+    pre.style.position = 'relative';
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'copy';
+    btn.setAttribute('aria-label', 'Copy code to clipboard');
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.innerText.trim()).then(() => {
+        btn.textContent = 'copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = block.innerText.trim();
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'copied!';
+        setTimeout(() => { btn.textContent = 'copy'; }, 2000);
+      });
+    });
+    pre.appendChild(btn);
+  });
+
+  // ── 3. COLLAPSIBLE Q&A (H3 headings) ─────────────
+  document.querySelectorAll('.markdown-body h3').forEach(h3 => {
+    const siblings = [];
+    let next = h3.nextElementSibling;
+    while (next && !['H2', 'H3'].includes(next.tagName)) {
+      siblings.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!siblings.length) return;
+
+    h3.style.cursor = 'pointer';
+    h3.setAttribute('role', 'button');
+    h3.setAttribute('tabindex', '0');
+    h3.setAttribute('title', 'Click to expand / collapse answer');
+
+    const toggle = document.createElement('span');
+    toggle.className = 'h3-toggle';
+    toggle.setAttribute('aria-hidden', 'true');
+    toggle.textContent = ' ▾';
+    h3.appendChild(toggle);
+
+    const collapse = () => {
+      toggle.textContent = ' ▸';
+      siblings.forEach(el => { el.style.display = 'none'; });
+      h3.setAttribute('aria-expanded', 'false');
+    };
+    const expand = () => {
+      toggle.textContent = ' ▾';
+      siblings.forEach(el => { el.style.display = ''; });
+      h3.setAttribute('aria-expanded', 'true');
+    };
+
+    h3.setAttribute('aria-expanded', 'true');
+    h3.addEventListener('click', () => {
+      toggle.textContent === ' ▸' ? expand() : collapse();
+    });
+    h3.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h3.click(); }
+    });
+  });
+
+  // ── 4. SCROLL-SPY: ACTIVE HEADING IN TOC ─────────
+  const headings = document.querySelectorAll('.markdown-body h2[id], .markdown-body h3[id]');
+  const tocLinks = document.querySelectorAll('a[href^="#"]');
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('toc-active'));
+        const match = document.querySelector(`a[href="#${e.target.id}"]`);
+        match && match.classList.add('toc-active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+
+  headings.forEach(h => spy.observe(h));
+
+  // ── 5. PROGRESS TRACKER ───────────────────────────
+  const TOTAL_MODULES = 9;
+  const STORAGE_KEY = 'devops-guide-visited';
+  const currentPath = window.location.pathname;
+
+  const OCP_MODULES = [
+    '01-OpenShift-Kubernetes-Core',
+    '02-CICD-Pipelines',
+    '03-Security-Compliance',
+    '04-Monitoring-Troubleshooting',
+    '05-Infrastructure-Automation',
+    '06-Scenario-Based',
+    '07-Behavioral',
+    '08-Python-Scripting',
+    '09-AI-for-DevOps',
+  ];
+
+  function loadVisited() {
+    try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')); }
+    catch { return new Set(); }
+  }
+
+  function saveVisited(s) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])); } catch {}
+  }
+
+  function updateProgressUI(visited) {
+    const count = visited.size;
+    const pct   = Math.round((count / TOTAL_MODULES) * 100);
+    const countEl = document.getElementById('progressCount');
+    const fillEl  = document.getElementById('progressFill');
+    if (countEl) countEl.textContent = `${count} / ${TOTAL_MODULES}`;
+    if (fillEl)  fillEl.style.width  = `${pct}%`;
+
+    // Colour the progress bar based on completion
+    if (fillEl) {
+      fillEl.style.background = pct >= 100 ? '#34d399' : pct >= 50 ? '#22d3ee' : '#6366f1';
+    }
+
+    // Tick visited modules in the sidebar
+    OCP_MODULES.forEach(mod => {
+      const link = document.querySelector(`.sidebar-link[href*="${mod}"]`);
+      if (link) {
+        link.classList.toggle('visited', visited.has(mod));
+        if (visited.has(mod) && !link.querySelector('.visited-tick')) {
+          const tick = document.createElement('span');
+          tick.className = 'visited-tick';
+          tick.setAttribute('aria-label', 'Visited');
+          tick.textContent = '✓';
+          link.appendChild(tick);
+        }
+      }
+    });
+  }
+
+  // Mark current module visited
+  const visited = loadVisited();
+  OCP_MODULES.forEach(mod => {
+    if (currentPath.includes(mod)) {
+      visited.add(mod);
+      saveVisited(visited);
+    }
+  });
+  updateProgressUI(visited);
+
+  // Reset button
+  const resetBtn = document.getElementById('resetProgress');
+  resetBtn && resetBtn.addEventListener('click', () => {
+    if (confirm('Reset all progress?')) {
+      localStorage.removeItem(STORAGE_KEY);
+      updateProgressUI(new Set());
+      document.querySelectorAll('.visited-tick').forEach(t => t.remove());
+      document.querySelectorAll('.sidebar-link.visited').forEach(l => l.classList.remove('visited'));
+    }
+  });
+
+  // ── 6. KEYBOARD SHORTCUT: / to focus search ───────
+  document.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      // Browsers: Ctrl+F is native — just show a brief visual hint
+      const hint = document.querySelector('.topbar-search-hint');
+      if (hint) {
+        hint.style.opacity = '1';
+        hint.style.color = '#22d3ee';
+        setTimeout(() => { hint.style.color = ''; }, 1200);
+      }
+    }
+  });
+
+  // ── 7. SMOOTH ANCHOR SCROLL (offset for fixed topbar) ─
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        const offset = 72; // topbar height + margin
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', `#${id}`);
+      }
+    });
+  });
+
+})();
+</script>
+
+
+</body>
+</html>

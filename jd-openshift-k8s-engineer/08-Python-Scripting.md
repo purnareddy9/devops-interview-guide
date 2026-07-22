@@ -1,3 +1,9 @@
+---
+layout: default
+title: "🐍 Module 8 — Python Scripting for DevOps"
+render_with_liquid: false
+---
+
 # 🐍 Module 8 — Python Scripting for DevOps
 
 > **JD Alignment:** "Automate infrastructure provisioning and configuration management. Build tooling to support CI/CD pipelines, cluster operations, and observability workflows."
