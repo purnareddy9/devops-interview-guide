@@ -146,84 +146,84 @@ title: Home
 
 <div class="module-grid">
 
-  <a href="{{ '/Linux' | relative_url }}" class="module-card card-green">
+  <a href="/devops-interview-guide/Linux" class="module-card card-green">
     <div class="module-card-icon">🐧</div>
     <div class="module-card-title">Linux</div>
     <div class="module-card-desc">File system, processes, networking, shell scripting, and performance tuning.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/Networking' | relative_url }}" class="module-card card-blue">
+  <a href="/devops-interview-guide/Networking" class="module-card card-blue">
     <div class="module-card-icon">🌐</div>
     <div class="module-card-title">Networking</div>
     <div class="module-card-desc">OSI model, TCP/IP, DNS, HTTP/S, load balancing, and firewall rules.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/Docker' | relative_url }}" class="module-card card-teal">
+  <a href="/devops-interview-guide/Docker" class="module-card card-teal">
     <div class="module-card-icon">🐳</div>
     <div class="module-card-title">Docker</div>
     <div class="module-card-desc">Images, containers, Dockerfile best practices, networking, volumes, Compose.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/Kubernetes' | relative_url }}" class="module-card card-red">
+  <a href="/devops-interview-guide/Kubernetes" class="module-card card-red">
     <div class="module-card-icon">☸️</div>
     <div class="module-card-title">Kubernetes</div>
     <div class="module-card-desc">Pods, deployments, services, RBAC, Helm, autoscaling, and troubleshooting.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/Terraform' | relative_url }}" class="module-card card-purple">
+  <a href="/devops-interview-guide/Terraform" class="module-card card-purple">
     <div class="module-card-icon">🏔️</div>
     <div class="module-card-title">Terraform</div>
     <div class="module-card-desc">HCL, state management, modules, workspaces, providers, and best practices.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/Ansible' | relative_url }}" class="module-card card-orange">
+  <a href="/devops-interview-guide/Ansible" class="module-card card-orange">
     <div class="module-card-icon">⚙️</div>
     <div class="module-card-title">Ansible</div>
     <div class="module-card-desc">Playbooks, roles, inventory, variables, Vault, and dynamic inventory.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/AWS' | relative_url }}" class="module-card card-yellow">
+  <a href="/devops-interview-guide/AWS" class="module-card card-yellow">
     <div class="module-card-icon">☁️</div>
     <div class="module-card-title">AWS</div>
     <div class="module-card-desc">EC2, S3, VPC, IAM, EKS, Lambda, RDS, CloudFormation, and Well-Architected.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/Monitoring' | relative_url }}" class="module-card card-green">
+  <a href="/devops-interview-guide/Monitoring" class="module-card card-green">
     <div class="module-card-icon">📊</div>
     <div class="module-card-title">Monitoring</div>
     <div class="module-card-desc">Prometheus, Grafana, alerting, SLOs, dashboards, and observability patterns.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/Security' | relative_url }}" class="module-card card-orange">
+  <a href="/devops-interview-guide/Security" class="module-card card-orange">
     <div class="module-card-icon">🔒</div>
     <div class="module-card-title">Security</div>
     <div class="module-card-desc">DevSecOps, SAST/DAST, secrets management, RBAC, zero-trust, and compliance.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/SRE' | relative_url }}" class="module-card card-indigo">
+  <a href="/devops-interview-guide/SRE" class="module-card card-indigo">
     <div class="module-card-icon">🛡️</div>
     <div class="module-card-title">SRE</div>
     <div class="module-card-desc">SLIs/SLOs/SLAs, error budgets, toil reduction, and incident management.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/SystemDesign' | relative_url }}" class="module-card card-blue">
+  <a href="/devops-interview-guide/SystemDesign" class="module-card card-blue">
     <div class="module-card-icon">🏛️</div>
     <div class="module-card-title">System Design</div>
     <div class="module-card-desc">Scalability, availability, microservices, caching, messaging, and resilience patterns.</div>
     <div class="module-card-meta"><span class="module-card-arrow">→</span></div>
   </a>
 
-  <a href="{{ '/CheatSheets' | relative_url }}" class="module-card card-pink">
+  <a href="/devops-interview-guide/CheatSheets" class="module-card card-pink">
     <div class="module-card-icon">📌</div>
     <div class="module-card-title">Cheat Sheets</div>
     <div class="module-card-desc">Quick reference for kubectl, docker, git, terraform, ansible, and more — bookmark for interview day.</div>
