@@ -5,8 +5,6 @@ title: "🔒 Module 3 — Security & Compliance"
 
 ---
 
-{% raw %}
-
 # 🔒 Module 3 — Security & Compliance
 
 > **JD Alignment:** "Implement security best practices for containerized environments. Ensure compliance with security standards and implement necessary controls."
@@ -1055,5 +1053,3 @@ oc debug node/worker-1 -- fips-mode-setup --check
 ---
 
 > **Next:** [Monitoring & Troubleshooting →](./04-Monitoring-Troubleshooting.md)
-
-{% endraw %}
